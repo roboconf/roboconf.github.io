@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% capture locale %}{{ page.url | truncate: 3, "" | replace: "/", "" }}{% endcapture %}
+{% if locale == "" or site.locales[locale] == null %}locale: {% assign locale = site.default-locale %}{% endif %}
+<html lang="{{ locale }}">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{{ page.title }}</title>
+  
+	<!-- link rel="shortcut icon" href="../../assets/ico/favicon.png" -->
+	<link type="text/css" rel="stylesheet" media="all" href="/resources/css/style.css" />
+	<link href="/resources/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+	{{content}}
+	
+	<div id="welcome-separator"></div>
+	<div id="welcome-ep">	
+		<a class="button ep index-ep" href="/{{locale}}/{{ site.locales[locale].news }}.html">
+			<span class="glyphicon glyphicon-flash"></span> {{ site.locales[locale].menu-project }}
+		</a>
+		<a class="button ep index-ep" href="/{{locale}}/{{ site.locales[locale].download }}.html">
+			<span class="glyphicon glyphicon-user"></span> {{ site.locales[locale].menu-users }}
+		</a>
+		<a class="button ep index-ep" href="/{{locale}}/{{ site.locales[locale].sources }}.html">
+			<span class="glyphicon glyphicon-wrench"></span> {{ site.locales[locale].menu-developers }}
+		</a>
+	</div>
+</body>
+</html>

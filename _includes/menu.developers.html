@@ -1,0 +1,9 @@
+{% capture locale %}{{ page.url | truncate: 3, "" | replace: "/", "" }}{% endcapture %}
+{% if locale == "" or site.locales[locale] == null %}{% assign locale = site.default-locale %}{% endif %}
+
+<ul>
+	<li{% if page.sub-menu == "sources" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].sources }}.html">Source Code</a></li>
+	<li{% if page.sub-menu == "team" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].team }}.html">Team</a></li>
+	<li{% if page.sub-menu == "graphics" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].graphics }}.html">Graphics</a></li>
+	<li{% if page.sub-menu == "issues" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].issues }}.html">Issue Tracker</a></li>
+</ul>

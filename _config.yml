@@ -1,0 +1,63 @@
+markdown: rdiscount
+pygments: true
+rdiscount:
+  extensions: [smart]
+
+#
+# In case of problem with UTF-8 characters, use...
+# 	set LC_ALL=fr_FR.UTF-8
+# 	set LANG=fr_FR.UTF-8
+# ... before launching Jekyll
+#
+
+default-locale: en
+locales:
+  en:
+    footer-bb: Built by
+    footer-and: and
+    footer-hb: Hosted by
+    menu-lang: Language
+    menu-project: Project
+    menu-users: Users
+    menu-developers: Developers
+    menu-search: Search...
+    sources: sources
+    team: team
+    roadmap: roadmap
+    graphics: graphics
+    issues: issues
+    news: news
+    what-is-roboconf: roboconf
+    license: license
+    links: links
+    download: download
+    getting-started: getting-started
+    older-versions: older-versions
+    support: support
+    user-guide: user-guide
+    dir: user-guide
+
+  fr:
+    footer-bb: Réalisé avec
+    footer-and: et
+    footer-hb: Hébergé par
+    menu-lang: Lanage
+    menu-project: Projet
+    menu-users: Utilisateurs
+    menu-developers: Développeurs
+    menu-search: Rechercher...
+    sources: sources
+    team: equipe
+    roadmap: roadmap
+    graphics: ressources-graphiques
+    issues: tickets
+    news: nouveautes
+    what-is-roboconf: roboconf
+    license: licence
+    links: liens
+    download: telecharger
+    getting-started: debuter
+    older-versions: anciennes-versions
+    support: support
+    user-guide: guide-utilisateur
+    dir: guide-utilisateur

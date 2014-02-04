@@ -1,0 +1,10 @@
+{% capture locale %}{{ page.url | truncate: 3, "" | replace: "/", "" }}{% endcapture %}
+{% if locale == "" or site.locales[locale] == null %}{% assign locale = site.default-locale %}{% endif %}
+
+<ul>
+	<li{% if page.sub-menu == "download" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].download }}.html">Download</a></li>
+	<li{% if page.sub-menu == "getting-started" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].getting-started }}.html">Getting Started</a></li>
+	<li{% if page.sub-menu == "user-guide" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].dir }}/{{ site.locales[locale].user-guide }}.html">User Guide</a></li>
+	<li{% if page.sub-menu == "support" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].support }}.html">Support</a></li>
+	<li{% if page.sub-menu == "older-versions" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].older-versions }}.html">Older Versions</a></li>
+</ul>
