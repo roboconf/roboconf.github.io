@@ -2,9 +2,19 @@
 {% if locale == "" or site.locales[locale] == null %}{% assign locale = site.default-locale %}{% endif %}
 
 <ul>
-	<li{% if page.sub-menu == "download" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].download }}.html">Download</a></li>
-	<li{% if page.sub-menu == "getting-started" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].getting-started }}.html">Getting Started</a></li>
-	<li{% if page.sub-menu == "user-guide" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].dir }}/{{ site.locales[locale].user-guide }}.html">User Guide</a></li>
-	<li{% if page.sub-menu == "support" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].support }}.html">Support</a></li>
-	<li{% if page.sub-menu == "older-versions" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].older-versions }}.html">Older Versions</a></li>
+	<li{% if page.sub-menu == "download" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].download }}.html">
+		{{ site.locales[locale].s-menu-download }}
+	</a></li>
+	<li{% if page.sub-menu == "user-guide" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].user-guide }}/{{ site.locales[locale].user-guide }}.html">
+		{{ site.locales[locale].s-menu-user-guide }}
+	</a></li>
+	<li{% if page.sub-menu == "support" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].support }}.html">
+		{{ site.locales[locale].s-menu-support }}
+	</a></li>
+	<li{% if page.sub-menu == "older-versions" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].older-versions }}.html">
+		{{ site.locales[locale].s-menu-older-versions }}
+	</a></li>
+	<li{% if page.sub-menu == "links" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].links }}.html">
+		{{ site.locales[locale].s-menu-links }}
+	</a></li>
 </ul>

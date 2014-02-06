@@ -1,6 +1,6 @@
 ---
-layout: page
 title: "License"
+layout: page
 id: "license"
 menu: "project"
 sub-menu: "license"

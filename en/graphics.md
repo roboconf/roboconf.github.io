@@ -1,6 +1,6 @@
 ---
-layout: page
 title: "Graphics"
+layout: page
 id: "graphics"
 menu: "developers"
 sub-menu: "graphics"

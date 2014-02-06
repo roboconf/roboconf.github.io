@@ -13,51 +13,46 @@ rdiscount:
 default-locale: en
 locales:
   en:
-    footer-bb: Built by
+    # Footer
+    footer-bb: Built with
     footer-and: and
     footer-hb: Hosted by
+    
+    # Menus
     menu-lang: Language
     menu-project: Project
     menu-users: Users
     menu-developers: Developers
     menu-search: Search...
+    s-menu-download: Download
+    s-menu-user-guide: User Guide
+    s-menu-support: Support
+    s-menu-older-versions: Older Versions
+    s-menu-news: News
+    s-menu-what-is-roboconf: What is Roboconf?
+    s-menu-license: License
+    s-menu-roadmap: Roadmap
+    s-menu-use-cases: Use Cases
+    s-menu-source-code: Source Code
+    s-menu-team: Team
+    s-menu-graphics: Graphics
+    s-menu-links: Links
+    s-menu-dev-guide: Developer Guide
+    
+    # Page names
     sources: sources
     team: team
     roadmap: roadmap
     graphics: graphics
-    issues: issues
     news: news
     what-is-roboconf: roboconf
     license: license
     links: links
     download: download
-    getting-started: getting-started
     older-versions: older-versions
     support: support
     user-guide: user-guide
-    dir: user-guide
+    dev-guide: developer-guide
+    use-cases: use-cases
 
   fr:
-    footer-bb: Réalisé avec
-    footer-and: et
-    footer-hb: Hébergé par
-    menu-lang: Lanage
-    menu-project: Projet
-    menu-users: Utilisateurs
-    menu-developers: Développeurs
-    menu-search: Rechercher...
-    sources: sources
-    team: equipe
-    roadmap: roadmap
-    graphics: ressources-graphiques
-    issues: tickets
-    news: nouveautes
-    what-is-roboconf: roboconf
-    license: licence
-    links: liens
-    download: telecharger
-    getting-started: debuter
-    older-versions: anciennes-versions
-    support: support
-    user-guide: guide-utilisateur
-    dir: guide-utilisateur

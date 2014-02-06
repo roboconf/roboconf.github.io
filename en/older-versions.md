@@ -1,6 +1,6 @@
 ---
-layout: page
 title: "Older Versions"
+layout: page
 id: "older-versions"
 menu: "users"
 sub-menu: "older-versions"

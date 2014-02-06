@@ -1,6 +1,6 @@
 ---
-layout: page
 title: "Source Code"
+layout: page
 id: "sources"
 menu: "developers"
 sub-menu: "sources"

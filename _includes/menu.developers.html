@@ -2,8 +2,16 @@
 {% if locale == "" or site.locales[locale] == null %}{% assign locale = site.default-locale %}{% endif %}
 
 <ul>
-	<li{% if page.sub-menu == "sources" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].sources }}.html">Source Code</a></li>
-	<li{% if page.sub-menu == "team" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].team }}.html">Team</a></li>
-	<li{% if page.sub-menu == "graphics" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].graphics }}.html">Graphics</a></li>
-	<li{% if page.sub-menu == "issues" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].issues }}.html">Issue Tracker</a></li>
+	<li{% if page.sub-menu == "sources" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].sources }}.html">
+		{{ site.locales[locale].s-menu-source-code }}
+	</a></li>
+	<li{% if page.sub-menu == "developer-guide" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].dev-guide }}/{{ site.locales[locale].dev-guide }}.html">
+		{{ site.locales[locale].s-menu-dev-guide }}
+	</a></li>
+	<li{% if page.sub-menu == "team" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].team }}.html">
+		{{ site.locales[locale].s-menu-team }}
+	</a></li>
+	<li{% if page.sub-menu == "graphics" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].graphics }}.html">
+		{{ site.locales[locale].s-menu-graphics }}
+	</a></li>
 </ul>

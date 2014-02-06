@@ -1,6 +1,6 @@
 ---
-layout: page
 title: "Team"
+layout: page
 id: "team"
 menu: "developers"
 sub-menu: "team"

@@ -1,6 +1,6 @@
 ---
-layout: page
 title: "Download"
+layout: page
 id: "download"
 menu: "users"
 sub-menu: "download"

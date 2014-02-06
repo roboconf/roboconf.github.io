@@ -12,15 +12,15 @@
 	</form>	
 			
 	<ul class="nav navbar-nav navbar-right" id="top-menu">
-		<li><a href="news.html" class="{% if page.menu == "project" %}ep-selected{% else %}ep{% endif %}">
+		<li><a href="/{{ locale }}/{{ site.locales[locale].news }}.html" class="{% if page.menu == "project" %}ep-selected{% else %}ep{% endif %}">
 			<span class="glyphicon glyphicon-flash"></span> {{ site.locales[locale].menu-project }}
 		</a></li>
 	
-		<li><a href="download.html" class="{% if page.menu == "users" %}ep-selected{% else %}ep{% endif %}">
+		<li><a href="/{{ locale }}/{{ site.locales[locale].download }}.html" class="{% if page.menu == "users" %}ep-selected{% else %}ep{% endif %}">
 			<span class="glyphicon glyphicon-user"></span> {{ site.locales[locale].menu-users }}
 		</a></li>
 		
-		<li><a href="sources.html" class="{% if page.menu == "developers" %}ep-selected{% else %}ep{% endif %}">
+		<li><a href="/{{ locale }}/{{ site.locales[locale].sources }}.html" class="{% if page.menu == "developers" %}ep-selected{% else %}ep{% endif %}">
 			<span class="glyphicon glyphicon-wrench"></span> {{ site.locales[locale].menu-developers }}
 		</a></li>
 		

@@ -1,8 +1,8 @@
 ---
-layout: page
 title: "Links"
+layout: page
 id: "links"
-menu: "project"
+menu: "developers"
 sub-menu: "links"
 ---
 

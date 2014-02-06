@@ -1,6 +1,6 @@
 ---
-layout: page
 title: "Support"
+layout: page
 id: "support"
 menu: "users"
 sub-menu: "support"

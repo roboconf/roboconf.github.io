@@ -1,6 +1,6 @@
 ---
-layout: welcome
 title: "Roboconf"
+layout: welcome
 id: "home"
 ---
 

@@ -2,9 +2,19 @@
 {% if locale == "" or site.locales[locale] == null %}{% assign locale = site.default-locale %}{% endif %}
 
 <ul>
-	<li{% if page.sub-menu == "news" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].news }}.html">News</a></li>
-	<li{% if page.sub-menu == "what-is-roboconf" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].roboconf }}.html">What is Roboconf?</a></li>
-	<li{% if page.sub-menu == "roadmap" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].roadmap }}.html">Roadmap</a></li>
-	<li{% if page.sub-menu == "license" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].license }}.html">License</a></li>
-	<li{% if page.sub-menu == "links" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].links }}.html">Links</a></li>
+	<li{% if page.sub-menu == "news" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].news }}.html">
+		{{ site.locales[locale].s-menu-news }}
+	</a></li>
+	<li{% if page.sub-menu == "what-is-roboconf" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].what-is-roboconf }}.html">
+		{{ site.locales[locale].s-menu-what-is-roboconf }}
+	</a></li>
+	<li{% if page.sub-menu == "use-cases" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].use-cases }}.html">
+		{{ site.locales[locale].s-menu-use-cases }}
+	</a></li>
+	<li{% if page.sub-menu == "roadmap" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].roadmap }}.html">
+		{{ site.locales[locale].s-menu-roadmap }}
+	</a></li>
+	<li{% if page.sub-menu == "license" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].license }}.html">
+		{{ site.locales[locale].s-menu-license }}
+	</a></li>
 </ul>

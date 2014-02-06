@@ -1,6 +1,6 @@
 ---
-layout: page
 title: "News"
+layout: page
 id: "news"
 menu: "project"
 sub-menu: "news"

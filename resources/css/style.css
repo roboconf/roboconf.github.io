@@ -44,9 +44,9 @@ html, body {
 /* Welcome Page */
 
 #welcome-dl {
-	float: right;
-	margin-right: 15%;
-	margin-top: 6%;
+	position: absolute;
+	right: 15%;
+	top: 7%;
 }
 
 #welcome-dl p {
@@ -55,7 +55,7 @@ html, body {
 }
 
 #welcome-logo {
-	margin-top: 80px;
+	padding-top: 16%; /* 6% when there is an effective logo */
 	text-align: center;
 }
 
@@ -151,7 +151,7 @@ img.flag {
 }
 
 .dropdown-menu > li > a:hover {
-	background-color: red !important;
+	background-color: #ff0000 !important;
 	color: white !important;
 }
 
