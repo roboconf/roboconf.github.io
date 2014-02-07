@@ -1,0 +1,11 @@
+{% capture locale %}{{ page.url | truncate: 8, "" | replace: "/html/", "" }}{% endcapture %}
+{% if locale == "" or site.locales[locale] == null %}{% assign locale = site.default-locale %}{% endif %}
+
+<div id="footer">
+	<p>
+		{{ site.locales[locale].footer-bb }} <a href="http://jekyllrb.com/">Jekyll</a>, 
+		<a href="http://getbootstrap.com/">Twitter Bootstrap</a> {{ site.locales[locale].footer-and }} 
+		<a href="http://glyphicons.com/">Glyph Icons</a>.
+		{{ site.locales[locale].footer-hb }} <a href="https://github.com/">GitHub</a>.
+	</p>
+</div>

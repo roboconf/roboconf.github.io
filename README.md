@@ -1,4 +1,1 @@
-roboconf.github.io
-==================
-
-Roboconf Web Site
+The web site for [Roboconf](https://github.com/roboconf/roboconf).
