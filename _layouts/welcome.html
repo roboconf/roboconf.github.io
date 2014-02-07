@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% capture locale %}{{ page.url | truncate: 3, "" | replace: "/", "" }}{% endcapture %}
-{% if locale == "" or site.locales[locale] == null %}locale: {% assign locale = site.default-locale %}{% endif %}
+{% if locale == "" or site.locales[locale] == null %}{% assign locale = site.default-locale %}{% endif %}
 <html lang="{{ locale }}">
 <head>
 	<meta charset="utf-8" />
