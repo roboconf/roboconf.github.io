@@ -6,21 +6,10 @@
 	<title>Roboconf</title>
   
 	<!-- link rel="shortcut icon" href="../../assets/ico/favicon.png" -->
-	<link type="text/css" rel="stylesheet" media="all" href="/resources/css/style.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="resources/css/style.css" />
 </head>
 
 <body>
-	<div id="my-welcome">
-		<h1>Roboconf</h1>
-	
-		<p>You should be redirected automatically.</p>
-		<p>If not, please, select your language.</p>
-		<ul>
-			<li><a href="/en/index.html"><img src="/resources/img/gb.png" alt="English" /> English</a></li>
-			<li><a href="/fr/index.html"><img src="/resources/img/fr.png" alt="Français" /> Français</a></li>
-		</ul>
-	</div>
-	
 	<script type="text/javascript" language="JavaScript">
 		var userLang = navigator.language || navigator.userLanguage; 
 		var locale = "en";
@@ -30,7 +19,20 @@
 			//	locale = "fr";
 		}
 		
-		window.location = "/" + locale + "/index.html";
+		setTimeout( function() {
+			window.location = "/" + locale + "/index.html";
+		}, 2000);
 	</script>
+
+	<div id="first-index">
+		<img src="resources/img/roboconf.png" alt="Roboconf" id="logo" />
+	
+		<p>You should be redirected automatically.</p>
+		<p>If not, please, select your language.</p>
+		<ul>
+			<li><a href="en/index.html"><img src="resources/img/gb.png" alt="English" /> English</a></li>
+			<li><a href="fr/index.html"><img src="resources/img/fr.png" alt="Français" /> Français</a></li>
+		</ul>
+	</div>
 </body>
 </html>
