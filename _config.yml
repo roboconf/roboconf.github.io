@@ -27,7 +27,6 @@ locales:
     s-menu-download: Download
     s-menu-user-guide: User Guide
     s-menu-support: Support
-    s-menu-older-versions: Older Versions
     s-menu-news: News
     s-menu-what-is-roboconf: What is Roboconf?
     s-menu-license: License
@@ -35,11 +34,13 @@ locales:
     s-menu-use-cases: Use Cases
     s-menu-source-code: Source Code
     s-menu-team: Team
+    s-menu-events: Events
     s-menu-graphics: Graphics
     s-menu-links: Links
     s-menu-dev-guide: Developer Guide
     
     # Page names
+    events: events
     sources: sources
     team: team
     roadmap: roadmap
@@ -49,7 +50,6 @@ locales:
     license: license
     links: links
     download: download
-    older-versions: older-versions
     support: support
     user-guide: user-guide
     dev-guide: developer-guide
