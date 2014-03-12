@@ -10,6 +10,7 @@ graph/ contains:
 
 instances/ contains a .instances file (whose name is specified in application.properties), that lists all instances for initial deployment (= to be deployed when starting the application for the 1st time).
 
+```
 MyApp/
 ├── descriptor
 │   └── application.properties (main roboconf config file)
@@ -18,6 +19,7 @@ MyApp/
 │   ├── One directory for each component...
 └── instances
     └── initial-deployment.instances (instances to deploy at startup)
+```
 
 # Example
 
@@ -25,6 +27,7 @@ Let's assume you wish to deploy an application called "MyApp", using bash script
 
 Roboconf configuration files should be organized as follows :
 
+```
 MyApp/
 ├── descriptor
 │   └── application.properties
@@ -43,6 +46,7 @@ MyApp/
 │           └── update.sh
 └── instances
     └── initial-deployment.instances
+```
 
 Content of "application.properties":
 
