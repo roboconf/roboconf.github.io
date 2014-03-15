@@ -23,5 +23,5 @@ Slides can help to understand the project and its uses cases.
 
 * May 17<sup>th</sup>, 2013
 * [Event's page](http://france.osgiusers.org/Meeting/201305)
-* Slides: http://fr.slideshare.net/ougf/roboconf-osgiougf
-* Video: https://www.youtube.com/watch?v=rL7K354lOPg
+* Slides on [Slideshare](http://fr.slideshare.net/ougf/roboconf-osgiougf)
+* Video on [Youtube](http://www.youtube.com/watch?v=rL7K354lOPg)
