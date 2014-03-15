@@ -6,8 +6,6 @@ menu: "users"
 sub-menu: "links"
 ---
 
-## Project Links
-
 * Roboconf's [main repository](https://github.com/roboconf/roboconf) @ GitHub
 * Roboconf's [organization](https://github.com/roboconf) @ GitHub
 

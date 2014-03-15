@@ -1,3 +1,11 @@
+---
+title: "Configuration File"
+layout: page
+id: "ug-configuration-files"
+menu: "users"
+sub-menu: "user-guide"
+---
+
 # Outline
 
 An application, let's say "MyApp", should provide 3 directories:

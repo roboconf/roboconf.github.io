@@ -8,9 +8,9 @@ sub-menu: "user-guide"
 
 ## Getting Started
 
-* [What is Roboconf ?](WhatIsRoboconf.md)
+* [What is Roboconf ?](what-is-roboconf.html)
 * [Roboconf Concepts]()
-* [Configuration Files]()
+* [Configuration Files](configuration-files.html)
 * [Example: a LAMP application]()
 
 ## Installing Roboconf

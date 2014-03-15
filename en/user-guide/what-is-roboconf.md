@@ -1,3 +1,10 @@
+---
+title: "What is Roboconf"
+layout: page
+id: "ug-what-is-roboconf"
+menu: "users"
+sub-menu: "user-guide"
+---
 
 # What is it?
 Roboconf is a deployment tool for the cloud : taking as input the description of a whole application

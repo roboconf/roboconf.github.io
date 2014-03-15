@@ -17,5 +17,3 @@ In addition, the following tasks are planned for the next months.
 * Publish project examples.
 * Study a migration to OSGi for the deployment manager and the agents.
 * Implement a Chief plug-in.
-
-A more-precise roadmap will be published soon.
