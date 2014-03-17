@@ -20,7 +20,9 @@ Roboconf enables to define a model of the application that one wants to deploy.
 It then offers a vision of this model during deployment and at runtime.
 The model and the use of Roboconf are designed to be simple.
 It uses known technologies: Puppet, AMQP, Bash, REST/JSON web services.
-It is asynchronous : the application can be deployed in any order.
+It is asynchronous (the application can be deployed in any order) and IaaS-agnostic (provides plugins for
+many well-known IaaS, including OpenStack, Amazon WS, Azure, VMWare, as well as a "local" deployment plugin for
+on-premise hosts).
 
 # What are the differences between Roboconf and...
 
