@@ -6,4 +6,4 @@ menu: "users"
 sub-menu: "download"
 ---
 
-Roboconf is not yet available for download.
+Roboconf is not yet available for download, except in [source code](sources.html) form.
