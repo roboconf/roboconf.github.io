@@ -9,7 +9,7 @@ sub-menu: "user-guide"
 ## Getting Started
 
 * [What is Roboconf ?](what-is-roboconf.html)
-* [Roboconf Concepts]()
+* [Roboconf Concepts](roboconf-concepts.html)
 * [Configuration Files](configuration-files.html)
 * [Example: a LAMP application](lamp-example.html)
 
