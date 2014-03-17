@@ -11,6 +11,7 @@ sub-menu: "user-guide"
 Deploy Tomcat with a webapp that uses a MySQL database, with Apache + mod-proxy to serve web requests.
 
 This example illustrates a more complex configuration:
+
 * Dependencies between components: the Tomcat node depends on the MySQL node because it needs the MySQL
 IP/port + database credentials, and the Apache node depends on the Tomcat node because it needs
 the Tomcat IP/port to configure mod_proxy).
