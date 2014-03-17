@@ -1,5 +1,5 @@
 ---
-title: "Configuration File"
+title: "Configuration Files"
 layout: page
 id: "ug-configuration-files"
 menu: "users"
