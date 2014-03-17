@@ -11,7 +11,7 @@ sub-menu: "user-guide"
 * [What is Roboconf ?](what-is-roboconf.html)
 * [Roboconf Concepts]()
 * [Configuration Files](configuration-files.html)
-* [Example: a LAMP application]()
+* [Example: a LAMP application](lamp-example.html)
 
 ## Installing Roboconf
 
