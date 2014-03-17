@@ -12,6 +12,16 @@ in terms of "components" and "instances", it takes the burden of launching VMs, 
 resolving dependencies between software components installed to complete their configuration, and starting the whole stuff
 when ready.
 
+Roboconf's main constituents are:
+
+* The "deployment manager", generally associated to a management webapp.
+* At least one "agent": an agent must be deployed on each deployment target (eg. a VM on a IaaS), prior to using Roboconf.
+
+Roboconf users (clients) deploy applications on Roboconf's deployment manager, using REST/JSON APIs: the "deployment manager" webapp provides a web interface on top of these APIs.
+
+Roboconf agents talk to each other (and to the deployment manager as well) using RabbitMQ message queues.
+
+
 # What are its key points ?
 Roboconf enables to define a model of the application that one wants to deploy.
 It then offers a vision of this model during deployment and at runtime.
