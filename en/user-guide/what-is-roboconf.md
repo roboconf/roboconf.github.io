@@ -12,6 +12,8 @@ in terms of "components" and "instances", it takes the burden of launching VMs, 
 resolving dependencies between software components installed to complete their configuration, and starting the whole stuff
 when ready.
 
+Roboconf also handles the application lifecycle: hot reconfiguration (eg. for elasticity issues) and consistency (eg. maintaining a consistent state when a component starts or stops, even accidentally).
+
 
 # What are its key points ?
 Roboconf enables to define a model of the application that one wants to deploy.
