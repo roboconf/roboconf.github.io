@@ -8,8 +8,8 @@ sub-menu: "user-guide"
 
 ## Install prerequisites
 
-The puppet plugin enables puppet deployment with roboconf: it uses [puppet]() to deploy and configure software
-on target platforms.
+The puppet plugin enables puppet deployment with roboconf: it uses [puppet](http://www.puppetlabs.com)
+to deploy and configure software on target platforms.
 
 Puppet has to be installed on every target platform for deployment: on a IaaS, it should be deployed in the
 virtual machine image (eg. EC2 AMI or OpenStack snapshot) that contains the roboconf agent.
@@ -22,3 +22,6 @@ sudo apt-get install rubygems
 sudo gem install facter
 sudo gem install puppet
 ```
+Note you may also "apt-get install puppet", but make sure the version on the official repositories is
+recent enough.
+
