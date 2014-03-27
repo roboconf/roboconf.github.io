@@ -1,9 +1,8 @@
 ---
 title: "Roboconf concepts"
 layout: page
-id: "ug-roboconf-concepts"
-menu: "users"
-sub-menu: "user-guide"
+id: "ug.snapshot.roboconf-concepts"
+menus: [ "users", "user-guide" ]
 ---
 
 # Overview

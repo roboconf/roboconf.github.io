@@ -10,15 +10,18 @@ rdiscount:
 # ... before launching Jekyll
 #
 
+##########################
+# The web site structure.
+# Mainly menu names.
+##########################
+
+# New locale => translate all the keys.
+
 default-locale: en
 locales:
   en:
-    # Footer
-    footer-bb: Built with
-    footer-and: and
-    footer-hb: Hosted by
-    
-    # Menus
+    icon: gb.png
+    language: English
     menu-lang: Language
     menu-project: Project
     menu-users: Users
@@ -38,21 +41,63 @@ locales:
     s-menu-graphics: Graphics
     s-menu-links: Links
     s-menu-dev-guide: Developer Guide
-    
-    # Page names
-    events: events
-    sources: sources
-    team: team
-    roadmap: roadmap
-    graphics: graphics
-    news: news
-    what-is-roboconf: roboconf
-    license: license
-    links: links
-    download: download
-    support: support
-    user-guide: user-guide
-    dev-guide: developer-guide
-    use-cases: use-cases
-
+  
   fr:
+
+
+###################################
+# Internationalize pages URLs.
+# Page URL = Markdown file's name.
+###################################
+
+# Translation can be done progressively, page by page
+urls:
+  
+  #
+  # User Guide 1.0
+  #
+  
+  #
+  # Main pages
+  #
+  main.events:
+    en: events
+  
+  main.sources:
+    en: sources
+  
+  main.team:
+    en: team
+  
+  main.roadmap:
+    en: roadmap
+  
+  main.graphics:
+    en: graphics
+  
+  main.news:
+    en: news
+  
+  main.what-is-roboconf:
+    en: roboconf
+  
+  main.license:
+    en: license
+  
+  main.links:
+    en: links
+  
+  main.download:
+    en: download
+  
+  main.support:
+    en: support
+  
+  main.user-guide:
+    en: user-guide
+  
+  main.dev-guide:
+    en: developer-guide
+  
+  main.use-cases:
+    en: use-cases

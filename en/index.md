@@ -16,6 +16,6 @@ id: "home"
 		<img src="/resources/img/roboconf.png" alt="Roboconf" />
 	</p>
 	<p class="welcome-desc">
-		A Solution for Massive and Elastic Deployments
+		A Solution for Elastic Deployments
 	</p>
 </div>

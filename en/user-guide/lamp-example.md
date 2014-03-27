@@ -1,9 +1,8 @@
 ---
 title: "LAMP example, based on Apache + Tomcat + MySQL"
 layout: page
-id: "ug-lamp-example"
-menu: "users"
-sub-menu: "user-guide"
+id: "ug.snapshot.lamp-example"
+menus: [ "users", "user-guide" ]
 ---
 
 Deploy Tomcat with a webapp that uses a MySQL database, with Apache + mod-proxy to serve web requests.

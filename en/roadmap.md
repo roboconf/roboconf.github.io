@@ -1,9 +1,8 @@
 ---
 title: "Roadmap"
 layout: page
-id: "roadmap"
-menu: "project"
-sub-menu: "roadmap"
+id: "main.roadmap"
+menus: [ "project", "roadmap" ]
 ---
 
 Roboconf is currently under industrialization.  

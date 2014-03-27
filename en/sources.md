@@ -1,9 +1,8 @@
 ---
 title: "Source Code"
 layout: page
-id: "sources"
-menu: "developers"
-sub-menu: "sources"
+id: "main.sources"
+menus: [ "developers", "sources" ]
 ---
 
 Roboconf's source code is hosted on GitHub.  

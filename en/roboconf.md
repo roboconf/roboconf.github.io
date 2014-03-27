@@ -1,9 +1,8 @@
 ---
 title: "What is Roboconf?"
 layout: page
-id: "what-is-roboconf"
-menu: "project"
-sub-menu: "what-is-roboconf"
+id: "main.what-is-roboconf"
+menus: [ "project", "what-is-roboconf" ]
 ---
 
 Roboconf is a deployment tool for the cloud : taking as input the description of a whole application in terms of "components" and "instances", it takes the burden of launching VMs, deploying software on them, resolving dependencies between software components installed to complete their configuration, and starting the whole stuff when ready.

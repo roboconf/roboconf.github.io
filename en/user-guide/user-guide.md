@@ -1,9 +1,8 @@
 ---
 title: "User Guide"
 layout: page
-id: "ug"
-menu: "users"
-sub-menu: "user-guide"
+id: "ug.snapshot.index"
+menus: [ "users", "user-guide" ]
 ---
 
 ## Getting Started

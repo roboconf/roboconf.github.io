@@ -1,20 +1,27 @@
-{% capture locale %}{{ page.url | truncate: 3, "" | replace: "/", "" }}{% endcapture %}
-{% if locale == "" or site.locales[locale] == null %}{% assign locale = site.default-locale %}{% endif %}
 
 <ul>
-	<li{% if page.sub-menu == "news" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].news }}.html">
-		{{ site.locales[locale].s-menu-news }}
-	</a></li>
-	<li{% if page.sub-menu == "what-is-roboconf" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].what-is-roboconf }}.html">
-		{{ site.locales[locale].s-menu-what-is-roboconf }}
-	</a></li>
-	<li{% if page.sub-menu == "use-cases" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].use-cases }}.html">
-		{{ site.locales[locale].s-menu-use-cases }}
-	</a></li>
-	<li{% if page.sub-menu == "roadmap" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].roadmap }}.html">
-		{{ site.locales[locale].s-menu-roadmap }}
-	</a></li>
-	<li{% if page.sub-menu == "license" %} class="active"{% endif %}><a href="/{{ locale }}/{{ site.locales[locale].license }}.html">
-		{{ site.locales[locale].s-menu-license }}
-	</a></li>
+	<li{% if page.menus[1] == "news" %} class="active"{% endif %}>
+		<a href="/{{ include.locale }}/{{ site.urls['main.news'][include.locale] }}.html">
+		{{ site.locales[locale].s-menu-news }}</a>
+	</li>
+	
+	<li{% if page.menus[1] == "what-is-roboconf" %} class="active"{% endif %}>
+		<a href="/{{ include.locale }}/{{ site.urls['main.what-is-roboconf'][include.locale] }}.html">
+		{{ site.locales[locale].s-menu-what-is-roboconf }}</a>
+	</li>
+	
+	<li{% if page.menus[1] == "use-cases" %} class="active"{% endif %}>
+		<a href="/{{ include.locale }}/{{ site.urls['main.use-cases'][include.locale] }}.html">
+		{{ site.locales[locale].s-menu-use-cases }}</a>
+	</li>
+	
+	<li{% if page.menus[1] == "roadmap" %} class="active"{% endif %}>
+		<a href="/{{ include.locale }}/{{ site.urls['main.roadmap'][include.locale] }}.html">
+		{{ site.locales[locale].s-menu-roadmap }}</a>
+	</li>
+	
+	<li{% if page.menus[1] == "license" %} class="active"{% endif %}>
+		<a href="/{{ include.locale }}/{{ site.urls['main.license'][include.locale] }}.html">
+		{{ site.locales[locale].s-menu-license }}</a>
+	</li>
 </ul>

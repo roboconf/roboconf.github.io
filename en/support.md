@@ -1,9 +1,8 @@
 ---
 title: "Support"
 layout: page
-id: "support"
-menu: "users"
-sub-menu: "support"
+id: "main.support"
+menus: [ "users", "support" ]
 ---
 
 Do you need help? Do you have a question?  

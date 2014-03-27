@@ -1,9 +1,8 @@
 ---
 title: "Links"
 layout: page
-id: "links"
-menu: "users"
-sub-menu: "links"
+id: "main.links"
+menus: [ "users", "links" ]
 ---
 
 * Roboconf's [main repository](https://github.com/roboconf/roboconf) @ GitHub

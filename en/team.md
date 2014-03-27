@@ -1,9 +1,8 @@
 ---
 title: "Team"
 layout: page
-id: "team"
-menu: "developers"
-sub-menu: "team"
+id: "main.team"
+menus: [ "developers", "team" ]
 ---
 
 Roboconf's team is made up of the following persons.

@@ -1,9 +1,8 @@
 ---
 title: "Configuration Files"
 layout: page
-id: "ug-configuration-files"
-menu: "users"
-sub-menu: "user-guide"
+id: "ug.snapshot.configuration-files"
+menus: [ "users", "user-guide" ]
 ---
 
 # Outline

@@ -1,9 +1,8 @@
 ---
 title: "What is Roboconf"
 layout: page
-id: "ug-what-is-roboconf"
-menu: "users"
-sub-menu: "user-guide"
+id: "ug.snapshot.what-is-roboconf"
+menus: [ "users", "user-guide" ]
 ---
 
 # What is it?

@@ -1,9 +1,8 @@
 ---
 title: "Use Cases"
 layout: page
-id: "use-cases"
-menu: "project"
-sub-menu: "use-cases"
+id: "main.use-cases"
+menus: [ "project", "use-cases" ]
 ---
 
 Some use cases to illustrate Roboconf benefits.

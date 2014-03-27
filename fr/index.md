@@ -1,7 +1,6 @@
 ---
 layout: welcome
 title: "Roboconf"
-id: "home"
 ---
 
 <div id="welcome-dl" class="button">
@@ -16,6 +15,6 @@ id: "home"
 		<img src="/resources/img/roboconf.png" alt="Roboconf" />
 	</p>
 	<p class="welcome-desc">
-		Une Solution pour des Déploiements Massifs et Elastiques
+		Une Solution pour des Déploiements Elastiques
 	</p>
 </div>

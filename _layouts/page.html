@@ -16,11 +16,53 @@
 </head>
 
 <body>
-	{% include header.html %}
+	<nav class="navbar-rbcf" role="navigation">
+		<a href="/{{ locale }}/index.html"><img id="header-img" src="/resources/img/roboconf.png" alt="Roboconf" /></a>
+	
+		<form class="navbar-form navbar-right" role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="{{ site.locales[locale].menu-search }}">
+			</div>
+			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+		</form>	
+
+		<ul class="nav navbar-nav navbar-right" id="top-menu">
+			<li><a href="/{{ locale }}/{{ site.urls['main.news'][locale] }}.html" class="{% if page.menus[0] == "project" %}ep-selected{% else %}ep{% endif %}">
+				<span class="glyphicon glyphicon-flash"></span> {{ site.locales[locale].menu-project }}
+			</a></li>
+		
+			<li><a href="/{{ locale }}/{{ site.urls['main.download'][locale] }}.html" class="{% if page.menus[0] == "users" %}ep-selected{% else %}ep{% endif %}">
+				<span class="glyphicon glyphicon-user"></span> {{ site.locales[locale].menu-users }}
+			</a></li>
+			
+			<li><a href="/{{ locale }}/{{ site.urls['main.sources'][locale] }}.html" class="{% if page.menus[0] == "developers" %}ep-selected{% else %}ep{% endif %}">
+				<span class="glyphicon glyphicon-wrench"></span> {{ site.locales[locale].menu-developers }}
+			</a></li>
+			
+			<li class="dropdown">
+				<a class="dropdown-toggle ep" data-toggle="dropdown" href="#">
+					<span class="glyphicon glyphicon-globe"></span> {{ site.locales[locale].menu-lang }} 
+					<span class="glyphicon glyphicon-chevron-down little"></span>
+				</a>
+				
+				<ul class="dropdown-menu">
+				{% for l in site.locales %}
+					{% capture the_locale %}{{ l[0] }}{% endcapture %}
+					{% capture page_url %}{{ site.urls[page.id][the_locale] }}{% endcapture %}
+					{% if page_url != "" and page_url != null %}
+					<li><a href="/{{ the_locale }}/{{ page_url }}.html"><img src="/resources/img/{{ site.locales[the_locale].icon}}" alt="{{ site.locales[the_locale].language }}" class="flag" /> {{ site.locales[the_locale].language }}</a></li>
+					{% endif %}
+				{% endfor %}
+				</ul>
+			</li>
+		</ul>
+		
+		<p style="clear: both; display: inline;"></p>
+	</nav>
 	
 	<div class="menu">
-		{% capture my_menu %}{{ my_menu | append: 'menu.' | append: page.menu | append: '.html' }}{% endcapture %}
-		{% include {{my_menu}} %}
+		{% capture the_menu %}{{ page.menus[0] | prepend: 'menu.' | append: '.html' }}{% endcapture %}
+		{% include {{the_menu}} locale=locale %}
 	</div>
 	<div class="content">
 		<h1>{{ page.title }}</h1>

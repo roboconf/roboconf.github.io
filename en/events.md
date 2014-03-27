@@ -1,9 +1,8 @@
 ---
-title: "Events"
+title: "Events and Publications"
 layout: page
-id: "events"
-menu: "users"
-sub-menu: "events"
+id: "main.events"
+menus: [ "users", "events" ]
 ---
 
 Various events where Roboconf was shown.  

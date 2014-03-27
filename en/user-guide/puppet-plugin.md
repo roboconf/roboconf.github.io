@@ -1,9 +1,8 @@
 ---
 title: "Puppet plugin"
 layout: page
-id: "ug"
-menu: "users"
-sub-menu: "user-guide"
+id: "ug.snapshot.puppet"
+menus: [ "users", "user-guide" ]
 ---
 
 ## Install prerequisites

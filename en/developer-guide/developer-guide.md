@@ -1,9 +1,8 @@
 ---
 title: "Developer Guide"
 layout: page
-id: "developer-guide"
-menu: "developers"
-sub-menu: "developer-guide"
+id: "dg.snapshot.index"
+menus: [ "developers", "developer-guide" ]
 ---
 
 ## Roboconf Model

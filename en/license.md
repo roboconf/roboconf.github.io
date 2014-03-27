@@ -1,9 +1,8 @@
 ---
 title: "License"
 layout: page
-id: "license"
-menu: "project"
-sub-menu: "license"
+id: "main.license"
+menus: [ "project", "license" ]
 ---
 
 Roboconf is open-source Software.  

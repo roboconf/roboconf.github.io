@@ -1,9 +1,8 @@
 ---
 title: "News"
 layout: page
-id: "news"
-menu: "project"
-sub-menu: "news"
+id: "main.news"
+menus: [ "project", "news" ]
 ---
 
 <a class="twitter-timeline"  href="https://twitter.com/Roboconf" data-widget-id="441926112260526081">Tweets de @Roboconf</a>
