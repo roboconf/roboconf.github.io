@@ -229,7 +229,7 @@ img.flag {
 
 .content {
 	margin-left: 250px;
-	margin-right: 24px;
+	margin-right: 34px;
 	margin-bottom: 4em;
 }
 
@@ -257,6 +257,21 @@ img.flag {
 .content ul {
 	list-style-type: square;
 	padding-left: 40px;
+}
+
+.content ul > li > ul {
+	list-style-type: disc;
+	margin-bottom: 18px;
+	margin-top: -6px;
+}
+
+.content pre {
+	margin-bottom: 18px;
+}
+
+.content .floated {
+	float: left;
+	width: 360px;
 }
 
 /* Twitter */

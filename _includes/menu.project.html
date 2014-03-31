@@ -10,14 +10,14 @@
 		{{ site.locales[locale].s-menu-what-is-roboconf }}</a>
 	</li>
 	
-	<li{% if page.menus[1] == "use-cases" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.use-cases'][include.locale] }}.html">
-		{{ site.locales[locale].s-menu-use-cases }}</a>
-	</li>
-	
 	<li{% if page.menus[1] == "roadmap" %} class="active"{% endif %}>
 		<a href="/{{ include.locale }}/{{ site.urls['main.roadmap'][include.locale] }}.html">
 		{{ site.locales[locale].s-menu-roadmap }}</a>
+	</li>
+	
+	<li{% if page.menus[1] == "events" %} class="active"{% endif %}>
+		<a href="/{{ include.locale }}/{{ site.urls['main.events'][include.locale] }}.html">
+		{{ site.locales[locale].s-menu-events }}</a>
 	</li>
 	
 	<li{% if page.menus[1] == "license" %} class="active"{% endif %}>

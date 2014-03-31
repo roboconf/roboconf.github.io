@@ -34,7 +34,6 @@ locales:
     s-menu-what-is-roboconf: What is Roboconf?
     s-menu-license: License
     s-menu-roadmap: Roadmap
-    s-menu-use-cases: Use Cases
     s-menu-source-code: Source Code
     s-menu-team: Team
     s-menu-events: Events & Publications
@@ -54,7 +53,55 @@ locales:
 urls:
   
   #
-  # User Guide 1.0
+  # User Guide Snapshot
+  #
+  ug.snapshot.installing-the-deployment-manager:
+    en: installing-the-deployment-manager
+  
+  ug.snapshot.installing-the-messaging-server:
+    en: installing-the-messaging-server
+  
+  ug.snapshot.launching-the-web-administration:
+    en: launching-the-web-administration
+  
+  ug.snapshot.preparing-virtual-images-with-the-agent:
+    en: preparing-virtual-images-with-the-agent
+  
+  ug.snapshot.iaas-support:
+    en: iaas-support
+  
+  ug.snapshot.iaas-openstack:
+    en: iaas-openstack
+  
+  ug.snapshot.iaas-aws:
+    en: iaas-aws
+  
+  ug.snapshot.iaas-vmware:
+    en: iaas-vmware
+  
+  ug.snapshot.iaas-azure:
+    en: iaas-azure
+  
+  ug.snapshot.iaas-localhost:
+    en: iaas-localhost
+  
+  ug.snapshot.plugins:
+    en: plugins
+  
+  ug.snapshot.plugin-logger:
+    en: plugin-logger
+  
+  ug.snapshot.plugin-bash:
+    en: plugin-bash
+  
+  ug.snapshot.plugin-puppet:
+    en: plugin-puppet
+  
+  ug.snapshot.editors:
+    en: editors
+  
+  #
+  # Dev' Guide Snapshot
   #
   
   #
@@ -98,6 +145,3 @@ urls:
   
   main.dev-guide:
     en: developer-guide
-  
-  main.use-cases:
-    en: use-cases

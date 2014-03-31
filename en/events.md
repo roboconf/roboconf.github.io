@@ -2,7 +2,7 @@
 title: "Events and Publications"
 layout: page
 id: "main.events"
-menus: [ "users", "events" ]
+menus: [ "project", "events" ]
 ---
 
 Various events where Roboconf was shown.  
@@ -16,6 +16,7 @@ Slides can help to understand the project and its uses cases.
 * Roboconf slides: 
 [PDF](/slides/eclipse-iot-2014/Roboconf--Cloud-Deployment--Eclipse-IoT--Grenoble-2014.pdf) / 
 [ODP](/slides/eclipse-iot-2014/Roboconf--Cloud-Deployment--Eclipse-IoT--Grenoble-2014.odp)
+* Video on [Youtube](http://www.youtube.com/watch?v=h2FvWRtDoGM)
 
 
 ## &laquo; OSGi Users' Group France &raquo;

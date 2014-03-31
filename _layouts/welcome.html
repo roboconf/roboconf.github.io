@@ -17,13 +17,13 @@
 	
 	<div id="welcome-separator"></div>
 	<div id="welcome-ep">	
-		<a class="button ep index-ep" href="/{{locale}}/{{ site.locales[locale].news }}.html">
+		<a class="button ep index-ep" href="/{{locale}}/{{ site.urls['main.news'][locale] }}.html">
 			<span class="glyphicon glyphicon-flash"></span> {{ site.locales[locale].menu-project }}
 		</a>
-		<a class="button ep index-ep" href="/{{locale}}/{{ site.locales[locale].download }}.html">
+		<a class="button ep index-ep" href="/{{locale}}/{{ site.urls['main.download'][locale] }}.html">
 			<span class="glyphicon glyphicon-user"></span> {{ site.locales[locale].menu-users }}
 		</a>
-		<a class="button ep index-ep" href="/{{locale}}/{{ site.locales[locale].sources }}.html">
+		<a class="button ep index-ep" href="/{{locale}}/{{ site.urls['main.sources'][locale] }}.html">
 			<span class="glyphicon glyphicon-wrench"></span> {{ site.locales[locale].menu-developers }}
 		</a>
 	</div>
