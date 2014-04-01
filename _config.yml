@@ -112,7 +112,7 @@ urls:
   ug.snapshot.instances-description:
     en: instances-description
   
-  ug.snapshot.graph-definition;
+  ug.snapshot.graph-definition:
     en: graph-definition
   
   #
