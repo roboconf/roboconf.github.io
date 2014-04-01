@@ -1,0 +1,47 @@
+---
+title: "Instances Description"
+layout: page
+id: "ug.snapshot.instances-description"
+menus: [ "users", "user-guide" ]
+---
+
+A Roboconf project may contain an **instances** directory with the definition of instances.  
+An instance is a concrete component. Like a Java class, a Roboconf component is only a definition.
+It needs to be instantiated to be used.
+
+Predefined instances aims at gaining some time when one wants to deploy application parts.  
+The fact they are defined does not mean they will be deployed or started automatically. But they
+will be already defined and configured, ready to be deployed.
+
+By convention, instances definitions are expected in files with the **instances** extension.
+The parser will not be difficult if you use another extension. However, notice that tools
+may rely on the extension (such as editors, to provide syntax highlighting).
+
+An instance starts with the keyword **instanceof** followed by the name of the component.  
+Instances must be defined hierarchically. If the graph defines a root component R with a 
+child C, then an instance of C must be defined in an instance of R.
+
+Let's see a concrete example.
+
+	instanceof Vm_Tomcat {
+		name: Tomcat VM1;
+	
+		instanceof Tomcat {
+			name: Tomcat;
+		}
+	}
+
+The Tomcat instance is defined inside a VM instance.  
+Defining it else where would result in an error.
+
+An instance must have the **name** property, which is the instance name. It must be unique among its parent.
+The instance may also declare properties to override component properties. As an example, if a component export
+an *port* property with the default value 8080, the instance may decide to override it (e.g. with 8081).
+
+	instanceof Tomcat {
+		name: Tomcat;
+		port: 8081;
+	}
+
+> Instances definition can be splitted into several files.  
+> The import mechanism will be documented later.

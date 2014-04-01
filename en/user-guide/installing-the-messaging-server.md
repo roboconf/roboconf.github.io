@@ -11,3 +11,6 @@ RabbitMQ itself. Follow the instructions on [RabbitMQ's web site](https://www.ra
 
 It is recommended to install a version 3.x.  
 These versions come with a [management plug-in](https://www.rabbitmq.com/management.html) which may be very useful.
+
+> The messaging server should be accessible through a public IP.  
+> The most simple solution is generally to put it in a public cloud infrastructure.

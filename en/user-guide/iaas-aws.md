@@ -14,18 +14,20 @@ This address will be used by other components which resolve their dependencies t
 Sample **iaas.properties**.  
 Just copy / paste and edit.
 
-	# Configuration file for EC2
-	iaas.type = ec2
-	
-	# EC2 URL
-	ec2.endpoint = 
-	
-	# Credentials to connect
-	ec2.access.key = 
-	ec2.secret.key = 
-	
-	# VM configuration
-	ami.vm.node	= 
-	vm.instance.type = t1.micro
-	ssh.key.name = 
-	security.group.name	= 
+``` properties
+# Configuration file for EC2
+iaas.type = ec2
+
+# EC2 URL
+ec2.endpoint = 
+
+# Credentials to connect
+ec2.access.key = 
+ec2.secret.key = 
+
+# VM configuration
+ami.vm.node	= 
+vm.instance.type = t1.micro
+ssh.key.name = 
+security.group.name	= 
+```

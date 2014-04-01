@@ -47,11 +47,13 @@ menus: [ "users", "user-guide" ]
 </div>
 
 <div class="floated">
-	<h2>Tools</h2>
+	<h2>Configuration Files</h2>
 
 	<ul>
-	<li><a href="">Web Administration</a></li>
-	<li><a href="editors.html">Editors</a></li>
+	<li><a href="application-descriptor.html">The Application Descriptor</a></li>
+	<li><a href="graph-definition.html">The Graph</a></li>
+	<li><a href="graph-resources.html">The Graph Resources</a></li>
+	<li><a href="instances-description.html">The Instances</a></li>
 	<ul>
 </div>
 <div class="clear"></div>
@@ -80,6 +82,18 @@ menus: [ "users", "user-guide" ]
 	<li><a href="plugin-bash.html">The Bash Plug-in</a></li>
 	<li><a href="plugin-puppet.html">The Puppet Plug-in</a></li>
 	<li><a href="plugin-logger.html">The Logger Plug-in</a></li>
+	<ul>
+</div>
+<div class="clear"></div>
+
+
+
+<div class="floated">
+	<h2>Tools</h2>
+
+	<ul>
+	<li><a href="">Web Administration</a></li>
+	<li><a href="editors.html">Editors</a></li>
 	<ul>
 </div>
 <div class="clear"></div>

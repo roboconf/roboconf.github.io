@@ -21,3 +21,7 @@ and go to
 The REST services are exposed at
 
 	http://localhost:8080/roboconf-dm-webapp/rest/
+
+> Although the DM could be deployed anywhere, a good practice is to keep it in your internal information system.  
+> Indeed, the DM is just an interface to transmit orders to agents through the messaging server. Putting it in
+> the cloud will require an extra effort to make it secured.

@@ -27,3 +27,6 @@ The dynamic part is located inside the Javascript code.
 You can also prefer using another REST client.  
 Mozilla Firefox and Google Chrome have extensions to invoke REST services.  
 Roboconf's REST API is documented in the [developer guide](/developer-guide/developer-guide.html).
+
+> This application should run in your internal information system, or even on a local machine.  
+> This is the best way to have it secured.

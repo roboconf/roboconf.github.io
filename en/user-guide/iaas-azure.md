@@ -13,5 +13,7 @@ It only supports the creation of *compute* VMs.
 Sample **iaas.properties**.  
 Just copy / paste and edit.
 
-	# Configuration file for Azure
-	iaas.type = azure 
+``` properties
+# Configuration file for Azure
+iaas.type = azure 
+```

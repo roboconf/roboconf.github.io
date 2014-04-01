@@ -5,8 +5,11 @@ id: "main.what-is-roboconf"
 menus: [ "project", "what-is-roboconf" ]
 ---
 
-Roboconf is a deployment tool for the cloud, but not only.  
-Its main force is the support of dynamic (re)configuration. This provides a lot of flexibility and allows elastic deployments.
+Roboconf is a distributed solution to deploy distributed applications.  
+Said differently, Roboconf is a deployment tool for the cloud, but not only. It allows to describe distributed applications
+and handles deployment automatically of the entire application, or of a part of it. Consequently, Roboconf supports scale-up
+and scale-down natively. Its main force is the support of dynamic (re)configuration. This provides a lot of flexibility and 
+allows elastic deployments.
 
 Roboconf takes as input the description of a whole application in terms of "components" and "instances".  
 From this model, it then takes the burden of launching Virtual Machines (VMs), deploying software on them, resolving dependencies 

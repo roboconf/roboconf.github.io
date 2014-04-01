@@ -279,3 +279,13 @@ img.flag {
 #twitter-widget-0 {
  	width: 80%;
 }
+
+/* Syntax Highlighting with Pygment */
+
+.c {
+	color: green;
+}
+
+.na {
+	font-weight: bold;
+}

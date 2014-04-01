@@ -22,23 +22,25 @@ with respect to this. It is assumed the administrator knows what he does.
 Sample **iaas.properties**.  
 Just copy / paste and edit.
 
-	# Configuration file for OpenStack
-	iaas.type = openstack
-	
-	# The keystone URL
-	openstack.identityUrl = 
-	
-	# The nova URL
-	openstack.computeUrl = 
-	
-	# Credentials to connect
-	openstack.tenantId = 
-	openstack.user = 
-	openstack.password = 
-	openstack.keypair = 
-	
-	# VM configuration
-	openstack.image = 
-	openstack.flavor = m1.small
-	openstack.securityGroup = default
-	openstack.floatingIpPool = public
+``` properties
+# Configuration file for OpenStack
+iaas.type = openstack
+
+# The keystone URL
+openstack.identityUrl = 
+
+# The nova URL
+openstack.computeUrl = 
+
+# Credentials to connect
+openstack.tenantId = 
+openstack.user = 
+openstack.password = 
+openstack.keypair = 
+
+# VM configuration
+openstack.image = 
+openstack.flavor = m1.small
+openstack.securityGroup = default
+openstack.floatingIpPool = public
+```
