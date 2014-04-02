@@ -92,7 +92,7 @@ menus: [ "users", "user-guide" ]
 	<h2>Tools</h2>
 
 	<ul>
-	<li><a href="">Web Administration</a></li>
+	<li><a href="web-administration.html">Web Administration</a></li>
 	<li><a href="editors.html">Editors</a></li>
 	<ul>
 </div>

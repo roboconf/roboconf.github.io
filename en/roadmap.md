@@ -29,7 +29,7 @@ The roadmap for the next months covers several aspects.
 
 * **Extensibility**
 
-    * Implement a Chief plug-in.
+    * Implement a Chef plug-in.
     * Implement a Puppet plug-in for Puppet masters.
     * Implement an ANT plug-in.
 

@@ -23,6 +23,8 @@ child C, then an instance of C must be defined in an instance of R.
 
 Let's see a concrete example.
 
+	# This is a comment
+	# There are only in-line comments
 	instanceof Vm_Tomcat {
 		name: Tomcat VM1;
 	
@@ -35,8 +37,8 @@ The Tomcat instance is defined inside a VM instance.
 Defining it else where would result in an error.
 
 An instance must have the **name** property, which is the instance name. It must be unique among its parent.
-The instance may also declare properties to override component properties. As an example, if a component export
-an *port* property with the default value 8080, the instance may decide to override it (e.g. with 8081).
+The instance may also declare properties to override component properties. As an example, if a component exports
+a *port* property with the default value 8080, the instance may override it (e.g. with 8081).
 
 	instanceof Tomcat {
 		name: Tomcat;

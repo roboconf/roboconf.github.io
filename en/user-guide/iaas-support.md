@@ -54,12 +54,12 @@ VM or an AWS VM, you will have the following graph definition.
 
 And the resources directories.
 
-	graph
+	graph/
 	├── your-graph-model.graph
 	├── ...
 	├── VM_Open_Stack/
 	|   └── iaas.properties
-	└── VM_AWS
+	└── VM_AWS/
 		└── iaas.properties
 
 Where will be instantiated the *x* component will depend on the definition of initial instances

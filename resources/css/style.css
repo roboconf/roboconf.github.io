@@ -274,6 +274,11 @@ img.flag {
 	width: 360px;
 }
 
+p > img.illustration {
+	width: 400px;
+	margin: 10px auto;
+}
+
 /* Twitter */
 
 #twitter-widget-0 {

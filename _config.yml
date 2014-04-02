@@ -1,3 +1,4 @@
+encoding: utf-8
 markdown: redcarpet
 
 #
@@ -39,6 +40,26 @@ locales:
     s-menu-dev-guide: Developer Guide
   
   fr:
+    icon: fr.png
+    language: Français
+    menu-lang: Langage
+    menu-project: Projet
+    menu-users: Utilisateurs
+    menu-developers: Développeurs
+    menu-search: Rechercher...
+    s-menu-download: Télécharger
+    s-menu-user-guide: Guide Utilisateur
+    s-menu-support: Support
+    s-menu-news: Nouveautés
+    s-menu-what-is-roboconf: Roboconf
+    s-menu-license: Licence
+    s-menu-roadmap: Roadmap
+    s-menu-source-code: Code Source
+    s-menu-team: Equipe
+    s-menu-events: Evénements & Publications
+    s-menu-graphics: Ressources Graphiques
+    s-menu-links: Liens
+    s-menu-dev-guide: Guide Développeur
 
 
 ###################################
@@ -115,6 +136,15 @@ urls:
   ug.snapshot.graph-definition:
     en: graph-definition
   
+  ug.snapshot.graph-resources:
+    en: graph-resources
+  
+  ug.snapshot.web-administration:
+    en: web-administration
+  
+  ug.snapshot.lamp-example:
+    en: lamp-example
+  
   #
   # Dev' Guide Snapshot
   #
@@ -124,39 +154,52 @@ urls:
   #
   main.events:
     en: events
+    fr: evenements
   
   main.sources:
     en: sources
+    fr: sources
   
   main.team:
     en: team
+    fr: equipe
   
   main.roadmap:
     en: roadmap
+    fr: roadmap
   
   main.graphics:
     en: graphics
+    fr: ressources-graphiques
   
   main.news:
     en: news
+    fr: nouveautes
   
   main.what-is-roboconf:
     en: roboconf
+    fr: roboconf
   
   main.license:
     en: license
+    fr: licence
   
   main.links:
     en: links
+    fr: liens
   
   main.download:
     en: download
+    fr: telecharger
   
   main.support:
     en: support
+    fr: support
   
   main.user-guide:
     en: user-guide
+    fr: guide-utilisateur
   
   main.dev-guide:
     en: developer-guide
+    fr: guide-developpeur
