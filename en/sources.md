@@ -7,11 +7,12 @@ menus: [ "developers", "sources" ]
 
 Roboconf's source code is hosted on GitHub.  
 See [https://github.com/roboconf/roboconf](https://github.com/roboconf/roboconf)  
-Related projects can be found [here]().
+Related projects can be found [here](https://github.com/roboconf).
 
 # Building Roboconf
 
 You must have [Maven](http://maven.apache.org/) installed to build Roboconf.  
+Maven 3 is generally used, but it should also work with Maven 2.  
 Clone the main repository and execute
 
 	mvn clean install

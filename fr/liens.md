@@ -8,7 +8,7 @@ menus: [ "users", "links" ]
 ## Sources &amp; Réseaux Sociaux
 
 * [Principal dépôt de sources](https://github.com/roboconf/roboconf)
-* [L'organization](https://github.com/roboconf) Roboconf sur GitHub
+* [L'organisation](https://github.com/roboconf) Roboconf sur GitHub
 
 <!-- -->
 

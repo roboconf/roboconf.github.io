@@ -6,7 +6,7 @@ menus: [ "project", "what-is-roboconf" ]
 ---
 
 Roboconf is a distributed solution to deploy distributed applications.  
-Said differently, Roboconf is a deployment tool for the cloud, but not only. It allows to describe distributed applications
+It is a deployment tool for the cloud, but not only. It allows to describe distributed applications
 and handles deployment automatically of the entire application, or of a part of it. Consequently, Roboconf supports scale-up
 and scale-down natively. Its main force is the support of dynamic (re)configuration. This provides a lot of flexibility and 
 allows elastic deployments.
@@ -17,9 +17,12 @@ between software components, updating their configuration and starting the whole
 
 Roboconf handles application life cycle: hot reconfiguration (e.g. for elasticity issues) and consistency 
 (e.g. maintaining a consistent state when a component starts or stops, even accidentally). This relies on a messaging queue 
-(currently [Rabbit MQ](https://www.rabbitmq.com)). Application parts know what they expose to and what they depend on from other parts. 
-They use the message queue to communicate and take the appropriate actions depending on what is deployed or started. These *appropriate* 
-actions are executed by plug-ins (such as bash or [Puppet](puppetlabs.com)). 
+(currently [Rabbit MQ](https://www.rabbitmq.com)). Application parts know what they expose to and what they depend on from other parts.
+The global idea is to apply to applications the concepts used in component technologies like OSGi. Roboconf achieves this in a non-intrusive
+way, so that it can work with legacy Software.
+
+Application parts use the message queue to communicate and take the appropriate actions depending on what is deployed or started.
+These *appropriate* actions are executed by plug-ins (such as bash or [Puppet](puppetlabs.com)). 
 
 Roboconf is distributed technology, based on AMQP 
 and REST / JSon. It is IaaS-agnostic, and supports many well-known IaaS (including OpenStack, Amazon Web Services, Microsoft Azure, VMWare, 

@@ -34,7 +34,7 @@ locales:
     s-menu-roadmap: Roadmap
     s-menu-source-code: Source Code
     s-menu-team: Team
-    s-menu-events: Events & Publications
+    s-menu-events: Events &amp; Publications
     s-menu-graphics: Graphics
     s-menu-links: Links
     s-menu-dev-guide: Developer Guide
@@ -55,8 +55,8 @@ locales:
     s-menu-license: Licence
     s-menu-roadmap: Roadmap
     s-menu-source-code: Code Source
-    s-menu-team: Equipe
-    s-menu-events: Evénements & Publications
+    s-menu-team: Équipe
+    s-menu-events: Événements &amp; Publications
     s-menu-graphics: Ressources Graphiques
     s-menu-links: Liens
     s-menu-dev-guide: Guide Développeur
@@ -74,80 +74,88 @@ urls:
   # User Guide Snapshot
   #
   ug.snapshot.installing-the-deployment-manager:
-    en: installing-the-deployment-manager
+    en: user-guide/installing-the-deployment-manager
   
   ug.snapshot.installing-the-messaging-server:
-    en: installing-the-messaging-server
+    en: user-guide/installing-the-messaging-server
   
   ug.snapshot.launching-the-web-administration:
-    en: launching-the-web-administration
+    en: user-guide/launching-the-web-administration
   
   ug.snapshot.preparing-virtual-images-with-the-agent:
-    en: preparing-virtual-images-with-the-agent
+    en: user-guide/preparing-virtual-images-with-the-agent
   
   ug.snapshot.iaas-support:
-    en: iaas-support
+    en: user-guide/iaas-support
   
   ug.snapshot.iaas-openstack:
-    en: iaas-openstack
+    en: user-guide/iaas-openstack
   
   ug.snapshot.iaas-aws:
-    en: iaas-aws
+    en: user-guide/iaas-aws
   
   ug.snapshot.iaas-vmware:
-    en: iaas-vmware
+    en: user-guide/iaas-vmware
   
   ug.snapshot.iaas-azure:
-    en: iaas-azure
+    en: user-guide/iaas-azure
   
   ug.snapshot.iaas-localhost:
-    en: iaas-localhost
+    en: user-guide/iaas-localhost
   
   ug.snapshot.plugins:
-    en: plugins
+    en: user-guide/plugins
   
   ug.snapshot.plugin-logger:
-    en: plugin-logger
+    en: user-guide/plugin-logger
   
   ug.snapshot.plugin-bash:
-    en: plugin-bash
+    en: user-guide/plugin-bash
   
   ug.snapshot.plugin-puppet:
-    en: plugin-puppet
+    en: user-guide/plugin-puppet
   
   ug.snapshot.editors:
-    en: editors
+    en: user-guide/editors
   
   ug.snapshot.configuration-files:
-    en: configuration-files
+    en: user-guide/configuration-files
   
   ug.snapshot.faq:
-    en: faq
+    en: user-guide/faq
   
   ug.snapshot.roboconf-concepts:
-    en: roboconf-concepts
+    en: user-guide/roboconf-concepts
   
   ug.snapshot.application-descriptor:
-    en: application-descriptor
+    en: user-guide/application-descriptor
   
   ug.snapshot.instances-description:
-    en: instances-description
+    en: user-guide/instances-description
   
   ug.snapshot.graph-definition:
-    en: graph-definition
+    en: user-guide/graph-definition
   
   ug.snapshot.graph-resources:
-    en: graph-resources
+    en: user-guide/graph-resources
   
   ug.snapshot.web-administration:
-    en: web-administration
+    en: user-guide/web-administration
   
   ug.snapshot.lamp-example:
-    en: lamp-example
+    en: user-guide/lamp-example
+  
+  ug.snapshot.index:
+    en: user-guide/user-guide
+    fr: guide-utilisateur/guide-utilisateur
   
   #
   # Dev' Guide Snapshot
   #
+  
+  dg.snapshot.index:
+    en: developer-guide/developer-guide
+    fr: guide-developpeur/guide-developpeur
   
   #
   # Main pages
@@ -197,9 +205,9 @@ urls:
     fr: support
   
   main.user-guide:
-    en: user-guide
-    fr: guide-utilisateur
+    en: user-guide/user-guide
+    fr: guide-utilisateur/guide-utilisateur
   
   main.dev-guide:
-    en: developer-guide
-    fr: guide-developpeur
+    en: developer-guide/developer-guide
+    fr: guide-developpeur/guide-developpeur

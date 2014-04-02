@@ -1,44 +1,56 @@
 ---
-title: "What is Roboconf?"
+title: "Qu'est-ce que Roboconf ?"
 layout: page
 id: "main.what-is-roboconf"
 menus: [ "project", "what-is-roboconf" ]
 ---
 
-Roboconf is a distributed solution to deploy distributed applications.  
-Said differently, Roboconf is a deployment tool for the cloud, but not only. It allows to describe distributed applications
-and handles deployment automatically of the entire application, or of a part of it. Consequently, Roboconf supports scale-up
-and scale-down natively. Its main force is the support of dynamic (re)configuration. This provides a lot of flexibility and 
-allows elastic deployments.
+Roboconf est une plateforme pour déployer des applications réparties.  
+C'est une solution adaptée pour les déploiements dans le *cloud*, mais pas seulement. Roboconf permet
+de décrire une application répartie et se charge ensuite de la déployer automatiquement, de manière intégrale
+ou en partie, selon le choix de l'administrateur. Roboconf est conçu pour supporter nativement les passages à l'échelle
+(qu'ils soient ascendants ou descendants). Son point fort est donc la reconfiguration dynamique, ce qui offre
+une grande flexibilité et autorise des déploiements élastiques. 
 
-Roboconf takes as input the description of a whole application in terms of "components" and "instances".  
-From this model, it then takes the burden of launching Virtual Machines (VMs), deploying software on them, resolving dependencies 
-between software components, updating their configuration and starting the whole stuff when ready.
+Roboconf prend en entrée la description d'une application en termes de "compoosants" et "d'instances".  
+A partir de ce modèle, la plateforme prend en charge le lancement de machines virtuelles (VMs), le déploiement
+de composants logiciels sur ces mêmes VMs, leur configuration et leur démarrage.
 
-Roboconf handles application life cycle: hot reconfiguration (e.g. for elasticity issues) and consistency 
-(e.g. maintaining a consistent state when a component starts or stops, even accidentally). This relies on a messaging queue 
-(currently [Rabbit MQ](https://www.rabbitmq.com)). Application parts know what they expose to and what they depend on from other parts. 
-They use the message queue to communicate and take the appropriate actions depending on what is deployed or started. These *appropriate* 
-actions are executed by plug-ins (such as bash or [Puppet](puppetlabs.com)). 
+Roboconf gère le cycle de vie des applications. Cela passe par la reconfiguration à chaud (pour s'adapter aux phases
+d'élasticité) ainsi que la consistence globale (s'assurer que l'état de l'aplication répartie reste cohérent, même
+quand un de ses constituants vient à s'arrêter, que ce soit accidentel ou non). Ces propriétés reposent sur l'utilisation
+d'un serveur de messagerie (actuellement, [Rabbit MQ](https://www.rabbitmq.com)). Les constituants de l'application répartie
+savent ce qu'ils exposent et ce dont ils dépendent vis-à-vis des autres parties. Globalement, l'idée est de retranscrire à
+un niveau applicatif, les concepts que l'on retrouve dans des modèles à composants comme OSGi, le tout de manière non-invasive.
+Cela permet notamment d'utiliser Roboconf sur des systèmes pré-existants.
 
-Roboconf is distributed technology, based on AMQP 
-and REST / JSon. It is IaaS-agnostic, and supports many well-known IaaS (including OpenStack, Amazon Web Services, Microsoft Azure, VMWare, 
-as well as a "local" deployment plug-in for on-premise hosts).
+Ainsi, un serveur d'application a connaissance
+des bases de données. Cette information est relayée via la messagerie. Roboconf se charge de prendre les décisions adéquates
+en fonction des messages qui transitent. Ces actions, effectuées par Roboconf, sont en réalité exécutées au travers d'extensions
+(ou de plug-ins). Il y a par exemple un plug-in Bash, ainsi qu'un plug-in [Puppet](puppetlabs.com). 
 
-## Use Cases
+Roboconf est elle-même une application répartie, basée sur AMQP et REST / JSon. Elle supporte plusieurs IaaS (dont
+ OpenStack, Amazon Web Services, Microsoft Azure, VMWare, ainsi qu'un déploiement "local" pour des hôtes pré-existants, voire
+ même pour de l'embarqué).
 
-The following are use cases Roboconf has illustrated through samples.  
-The sources for these samples will be soon available on GitHub.
+## Cas d'Usage
 
-* **Legacy LAMP**: a classic web application based on an Apache load balancer, a web application deployed on Tomcat and MySQL as the database.  
-The interest is to see how it is easy to add and remove new Tomcat servers. Tomcat instances are configured right after deployment. The connection
-to MySQL is established at runtime and the load balancing configuration is updated on the fly.
+Les cas d'usage suivants ont été validés et prototypés avec Roboconf.  
+Les sources des prototypes seront bientôt mises à disposition sur GitHub.
 
-* **M2M / IoT**: deploy and interconnect Software elements on embedded devices and in the cloud.  
-The use case that was studied is about home sensors that send big data to analysis tools (such as [Hadoop](http://hadoop.apache.org/) or 
-[Storm](http://storm.incubator.apache.org/) for real-time computation) deployed on the cloud. New devices can appear
-or disappear and everything gets reconfigured in consequence. As a reminder, M2M means *machine to machine* and IoT *Internet of Things*.
+* **LAMP Patrimonial** : un cas classique, avec un équilibreur de charge basé sur un serveur Apache, une application web
+déployée sur Tomcat, et une base de données MySQL. L'intérêt de ce cas réside la facilité avec laquelle on peut rajouter
+ou enlever des instance de Tomcat. La connexion avec MySQL est configurée par Roboconf, tandis que l'équilibeur de charge
+prend en compte l'arrivée ou la suppression des Tomcat à chaud.
 
-* **Open PaaS**: an open-source Social Networking Service deployed in the cloud.  
-[Open PaaS](http://research.linagora.com/display/openpaas) is a project which aims at developing a web collaboration suite for companies and organizations. 
-It uses [NodeJS](http://nodejs.org/), [NPM](http://www.npmjs.org/) and various other Software ([Redis](http://redis.io/), [MongoDB](http://www.mongodb.org/), LDAP, etc).
+* **M2M / IoT** : il s'agît ici de déployer et d'inter-connecter de l'embarqué et des éléments déployées dans un *cloud*.  
+Le cas d'usage nominal met en oeuvre des capteurs domestiques qui envoient, de par leur nombre, de gros volumes de données
+à des outils d'analyse déployés dans le nuage. On parle ici d'outils comme [Hadoop](http://hadoop.apache.org/) ou 
+[Storm](http://storm.incubator.apache.org/) pour du calcul en temps réel. Que des capteurs apparaissent ou disparaissent,
+Roboconf prend en charge la reconfiguration de l'ensmeble. Pour rappel, M2M signifie *machine to machine* et IoT *Internet of Things*.
+
+* **Open PaaS** : [Open PaaS](http://research.linagora.com/display/openpaas) est un Réseau Social d'Entreprise (RSE) open-source 
+et adapté à l'ère du *cloud*.  
+Présenté autrement, il s'agît d'une plateforme web pour faciliter et améliorer la collaboration au sein d'entreprises, et plus généralement,
+au sein d'organisations. Open PaaS s'appuie sur de nombreuses technologies, telles que [NodeJS](http://nodejs.org/), [NPM](http://www.npmjs.org/),
+ [Redis](http://redis.io/), [MongoDB](http://www.mongodb.org/), LDAP, etc.

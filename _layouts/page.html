@@ -50,7 +50,9 @@
 					{% capture the_locale %}{{ l[0] }}{% endcapture %}
 					{% capture page_url %}{{ site.urls[page.id][the_locale] }}{% endcapture %}
 					{% if page_url != "" and page_url != null %}
-					<li><a href="/{{ the_locale }}/{{ page_url }}.html"><img src="/resources/img/{{ site.locales[the_locale].icon}}" alt="{{ site.locales[the_locale].language }}" class="flag" /> {{ site.locales[the_locale].language }}</a></li>
+					<li><a href="/{{ the_locale }}/{{ page_url }}.html">
+						<img src="/resources/img/{{ site.locales[the_locale].icon}}" alt="{{ site.locales[the_locale].language }}" class="flag" /> {{ site.locales[the_locale].language }}
+					</a></li>
 					{% endif %}
 				{% endfor %}
 				</ul>
