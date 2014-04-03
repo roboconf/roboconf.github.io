@@ -27,7 +27,7 @@ This file lists all the initial instances. It means graph components will be pre
 	│   ├── .graph file (describes components and their dependencies)
 	│   ├── One directory for each component...
 	└── instances
-    	└── initial-deployment.instances (instances to load at startup)
+    	└── init.instances (instances to load at startup)
 
 # Example
 

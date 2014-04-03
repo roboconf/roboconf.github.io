@@ -142,12 +142,18 @@ urls:
   ug.snapshot.web-administration:
     en: user-guide/web-administration
   
-  ug.snapshot.lamp-example:
-    en: user-guide/lamp-example
+  ug.snapshot.lamp-example-part-1:
+    en: user-guide/lamp-example-part-1
+  
+  ug.snapshot.lamp-example-part-2:
+    en: user-guide/lamp-example-part-2
   
   ug.snapshot.index:
     en: user-guide/user-guide
     fr: guide-utilisateur/guide-utilisateur
+  
+  ug.snapshot.working-with-roboconf:
+    en: user-guide/working-with-roboconf
   
   #
   # Dev' Guide Snapshot
@@ -156,6 +162,21 @@ urls:
   dg.snapshot.index:
     en: developer-guide/developer-guide
     fr: guide-developpeur/guide-developpeur
+  
+  dg.snapshot.roboconf-model:
+    en: roboconf-model
+  
+  dg.snapshot.maven-modules:
+    en: maven-modules
+  
+  dg.snapshot.rest-api:
+    en: rest-api
+  
+  dg.snapshot.rest-application:
+    en: rest-application
+  
+  dg.snapshot.rest-management:
+    en: rest-management
   
   #
   # Main pages

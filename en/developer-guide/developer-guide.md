@@ -5,16 +5,19 @@ id: "dg.snapshot.index"
 menus: [ "developers", "developer-guide" ]
 ---
 
-## Roboconf Model
-
-* [Model Organization]()
-* [Configuration Files]()
-
 ## Roboconf Platform
 
-* [Understanding the relations between the DM and Agents]()
+* [Maven Modules](maven-modules.html)
+* [Roboconf Model](roboconf-model.html)
+* [Messaging with RabbitMQ]()
+
+## REST API
+
+* [Init](rest-api-init.html)
+* [Management](rest-api-management.html)
+* [Application](rest-api-application.html)
 
 ## Documentation and Website
 
-* [Website Organization]()
+* [Web Site Organization]()
 * [Documenting a new Version]()

@@ -14,9 +14,13 @@ menus: [ "users", "user-guide" ]
 	<h2>Getting Started</h2>
 	
 	<ul>
-	<li><a href="lamp-example.html">Understanding Roboconf with an Example</a></li>
+	<li>Understanding Roboconf: 
+		<a href="lamp-example-part-1.html">part 1</a>
+		- <a href="lamp-example-part-2.html">part 2</a>
+	</li>
 	<li><a href="roboconf-concepts.html">Roboconf Concepts</a></li>
 	<li><a href="configuration-files.html">Configuration Files</a></li>
+	<li><a href="working-with-roboconf.html">Working with Roboconf</a></li>
 	<li><a href="faq.html">FAQ</a></li>
 	<ul>
 </div>
@@ -37,16 +41,6 @@ menus: [ "users", "user-guide" ]
 
 
 <div class="floated">
-	<h2>Working with Roboconf</h2>
-
-	<ul>
-	<li><a href="">Creating a New Application</a></li>
-	<li><a href="">Deploying and Managing an Application</a></li>
-	<li><a href="">Monitoring an Application</a></li>
-	<ul>
-</div>
-
-<div class="floated">
 	<h2>Configuration Files</h2>
 
 	<ul>
@@ -56,9 +50,16 @@ menus: [ "users", "user-guide" ]
 	<li><a href="instances-description.html">The Instances</a></li>
 	<ul>
 </div>
+
+<div class="floated">
+	<h2>Tools</h2>
+
+	<ul>
+	<li><a href="web-administration.html">Web Administration</a></li>
+	<li><a href="editors.html">Editors</a></li>
+	<ul>
+</div>
 <div class="clear"></div>
-
-
 
 	
 <div class="floated">
@@ -82,18 +83,6 @@ menus: [ "users", "user-guide" ]
 	<li><a href="plugin-bash.html">The Bash Plug-in</a></li>
 	<li><a href="plugin-puppet.html">The Puppet Plug-in</a></li>
 	<li><a href="plugin-logger.html">The Logger Plug-in</a></li>
-	<ul>
-</div>
-<div class="clear"></div>
-
-
-
-<div class="floated">
-	<h2>Tools</h2>
-
-	<ul>
-	<li><a href="web-administration.html">Web Administration</a></li>
-	<li><a href="editors.html">Editors</a></li>
 	<ul>
 </div>
 <div class="clear"></div>

@@ -39,7 +39,7 @@ Les cas d'usage suivants ont été validés et prototypés avec Roboconf.
 Les sources des prototypes seront bientôt mises à disposition sur GitHub.
 
 * **LAMP Patrimonial** : un cas classique, avec un équilibreur de charge basé sur un serveur Apache, une application web
-déployée sur Tomcat, et une base de données MySQL. L'intérêt de ce cas réside la facilité avec laquelle on peut rajouter
+déployée sur Tomcat, et une base de données MySQL. L'intérêt de ce cas réside dans la facilité avec laquelle on peut rajouter
 ou enlever des instance de Tomcat. La connexion avec MySQL est configurée par Roboconf, tandis que l'équilibeur de charge
 prend en compte l'arrivée ou la suppression des Tomcat à chaud.
 
