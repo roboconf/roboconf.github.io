@@ -9,7 +9,8 @@ menus: [ "developers", "developer-guide" ]
 
 * [Maven Modules](maven-modules.html)
 * [Roboconf Model](roboconf-model.html)
-* [Messaging with RabbitMQ]()
+* [Understand the Messaging with RabbitMQ](understand-the-messaging-with-rabbit-mq.html)
+* [Debugging Roboconf]()
 
 ## REST API
 
@@ -19,5 +20,5 @@ menus: [ "developers", "developer-guide" ]
 
 ## Documentation and Website
 
-* [Web Site Organization]()
-* [Documenting a new Version]()
+* [Web Site Organization](web-site-organization.html)
+* [Documenting a New Version](documenting-a-new-version.html)

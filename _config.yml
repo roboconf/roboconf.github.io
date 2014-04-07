@@ -1,12 +1,6 @@
 encoding: utf-8
 markdown: redcarpet
 
-#
-# In case of problem with UTF-8 characters, use...
-# 	set LC_ALL=fr_FR.UTF-8
-# 	set LANG=fr_FR.UTF-8
-# ... before launching Jekyll
-#
 
 ##########################
 # The web site structure.
@@ -177,6 +171,15 @@ urls:
   
   dg.snapshot.rest-management:
     en: rest-management
+  
+  dg.snapshot.web-site-organization:
+    en: web-site-organization
+  
+  dg.snapshot.documenting-a-new-version:
+    en: documenting-a-new-version
+  
+  dg.snapshot.understand-the-messaging-with-rabbit-mq:
+    en: understand-the-messaging-with-rabbit-mq
   
   #
   # Main pages

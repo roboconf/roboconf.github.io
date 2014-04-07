@@ -43,6 +43,7 @@ recent enough.
 
 ## Best Practices and Examples
 
+The configuration for the Puppet plug-in must be a valid [Puppet module](http://docs.puppetlabs.com/learning/modules1.html).  
 This page will be updated to illustrate the good practices to write a suitable Puppet module for Roboconf.
 
 
