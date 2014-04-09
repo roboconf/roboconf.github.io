@@ -181,6 +181,9 @@ urls:
   dg.snapshot.understand-the-messaging-with-rabbit-mq:
     en: understand-the-messaging-with-rabbit-mq
   
+  dg.snapshot.debugging-roboconf:
+    en: debugging-roboconf
+  
   #
   # Main pages
   #

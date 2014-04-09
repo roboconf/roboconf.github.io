@@ -10,7 +10,7 @@ menus: [ "developers", "developer-guide" ]
 * [Maven Modules](maven-modules.html)
 * [Roboconf Model](roboconf-model.html)
 * [Understand the Messaging with RabbitMQ](understand-the-messaging-with-rabbit-mq.html)
-* [Debugging Roboconf]()
+* [Debugging Roboconf](debugging-roboconf.html)
 
 ## REST API
 
