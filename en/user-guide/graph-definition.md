@@ -106,6 +106,9 @@ Components can be defined in any order.
 		imports: Tomcat.portAJP, Tomcat.ip;
 	}
 
+> Important!  
+> Every component property must be defined on a single line.
+
 Components can be defined in separate files (think to
 the case where you have several graphs in your graph model, you could have one file per graph). 
 
@@ -132,6 +135,20 @@ by Roboconf. All the other variables should specify a default value.
 * **imports** lists the variables this components needs to be resolved before starting.  
 Variable names are separated by commas. They are also prefixed by the component that exports them. As an example,
 if Tomcat exports the *ip* variable, then a depending component will import *Tomcat.ip*.
+
+> A component instance will not be able to start until all its runtime dependencies are resolved.  
+> It means all the variable it imports must be exported by another instance. If one variable has no value,
+> then it cannot start.
+
+Import can also be marked as **optional**.  
+In this case, the instance will be able to start even if the imported variables are not resolved.
+As an example, if you think to a cluster mode, a cluster member may need to know where are the other members.
+
+	ClusterMember {
+		alias: a Cluster member;
+		exports: varA, varB;
+		imports: ClusterMember.varA (optional), ClusterMember.varB (optional);
+	}
 
 
 ## Facets
@@ -202,9 +219,9 @@ Let's take a look at an example.
 	# However, it shows what can be seen as a good practice for bigger VM deployments.
 
 A component lists the facets it uses with the property named **facets**.  
-It will inherit all the imported and exported variables, as well as the children and installer name. If, by any chance,
-a component inherits several installers, then it picks up the first one by alphabetical order. Otherwise, the most simple solution
-is to override the installer in the component rather than inherit it. There can be only one installer.
+It will inherit all the imported and exported variables, as well as the children and installer name. If
+a component inherits several installers, and does not specify one, then an error is thrown. In case of ambiguity
+in the inheritance, the component has to override the installer. There can be only one installer.
 
 Imported and exported variables are only added to the component.  
 A facet supports the following properties: **children**, **exports**, **imports** and **installer**.
@@ -212,4 +229,26 @@ A facet supports the following properties: **children**, **exports**, **imports*
 > Facets are only a way to group properties.  
 > At runtime, there is no "facet" object in Roboconf's internal model. This is a parsing commodity
 > to reduce the size of configuration files.
-	
+
+
+## System Requirements
+
+The graph model allows define multi-container and distributed topologies.  
+We can go from the machine (VM, device...) to an application module (e.g. a Web Application). However, and even if
+the model could support it, it is not considered as a good practice to define system requirements as graph nodes.
+
+What does it mean?  
+Let's take an example.
+
+If an application server needs a JVM or a library to run (such as Python), you should not rely on Roboconf
+to install it. It is not that you could not achieve it with a Bash script or something else. But it may be better
+to pre-install and configure such dependencies directly in the virtual images. As an example, there are mechanisms
+in Java Virtual Machines such as endorsed and policies that would be painful to configure with Roboconf. And, again,
+the problem here is not Roboconf, but the way you would implement it with a Roboconf plug-in (Bash, Puppet...).
+
+This has been experimented with NodeJS application.  
+Write a Bash script that respect Roboconf's requirements (be idem-potent) that installs NodeJS and NPM was quite painful to do.
+Pre-installing them on virtual images was much more convenient.
+
+> System requirements should not be deployed with Roboconf.  
+> They should be deployed and configured in the virtual images.

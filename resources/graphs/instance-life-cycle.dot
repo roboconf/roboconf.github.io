@@ -1,0 +1,13 @@
+# Use http://graphviz-dev.appspot.com/ to visualize the graph
+digraph g {
+
+      "not deployed" -> deploying -> "deployed - stopped" -> starting;
+      starting -> "deployed - started" -> stopping -> "deployed - stopped";
+      "deployed - started" -> starting;
+      "deployed - stopped" -> undeploying -> "not deployed";
+      problem;
+
+      "not deployed" [ fillcolor="bisque", style="filled" ];
+      "deployed - started" [ fillcolor="bisque", style="filled" ];
+      "deployed - stopped" [ fillcolor="bisque", style="filled" ];
+}

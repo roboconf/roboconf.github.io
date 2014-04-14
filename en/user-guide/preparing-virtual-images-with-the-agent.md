@@ -21,7 +21,7 @@ the agent will already be there.
 
 The creation of a virtual image depends on the IaaS you use.  
 You may also define virtual appliances with [OVF](http://en.wikipedia.org/wiki/Open_Virtualization_Format) 
-or solutions like [UShareSoft](http://www.usharesoft.com).
+or solutions like [UShareSoft](http://www.usharesoft.com) or [Kameleon](https://github.com/oar-team/kameleon).
 
 > Although we generally test Roboconf with Ubuntu systems, there is no reason it does
 > not work on other systems.  

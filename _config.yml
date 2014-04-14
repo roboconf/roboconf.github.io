@@ -184,6 +184,9 @@ urls:
   dg.snapshot.debugging-roboconf:
     en: debugging-roboconf
   
+  dg.snapshot.life-cycle:
+    en: life-cycle
+  
   #
   # Main pages
   #
