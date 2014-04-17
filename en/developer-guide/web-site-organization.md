@@ -11,9 +11,25 @@ the web site is built by [Jekyll](http://jekyllrb.com/) and published on
 [GitHub pages](https://help.github.com/pages/).
 
 Jekyll generates static HTML files.  
-The key file in the **roboconf.github.io** repository is the **_config.yml** file.
-It is used by Jekyll to configure the generation. It also contains information for i18n.
+As a reminder, to build the web site locally, you must:
 
+* Clone the web site repository from GitHub.
+* Make sure you have installed Ruby and Jekyll.
+* Go into the project's directory.
+* Open a terminal and type in one of the following commands.
+
+``` bash
+# Simply build the web site.
+# The generated files will be located under _site
+jekyll build
+
+# Continuously build the web site.
+# The web site can be visited at http://localhost:4000
+jekyll serve -w
+```
+
+The key file in the **roboconf.github.io** repository is the **_config.yml** file.  
+It is used by Jekyll to configure the generation. It also contains information for i18n.
 
 ## General Organization
 
