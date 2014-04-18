@@ -10,4 +10,5 @@ This page lists University projects that use Roboconf.
 
 ## &laquo; ECOM &raquo;
 
-To complete...
+[http://air.imag.fr/index.php/ECOM](http://air.imag.fr/index.php/ECOM)  
+To be completed...
