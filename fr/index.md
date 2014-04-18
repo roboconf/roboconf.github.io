@@ -5,8 +5,13 @@ id: "home"
 ---
 
 <div id="welcome-dl" class="button">
+	<!--
 	<p class="info-main"><a href="#">Bientôt Disponible</a></p>
 	<p class="info-details">développement en cours</p>
+	-->
+	
+	<p class="info-main"><a href="http://github.com/roboconf/roboconf/">Code Source</a></p>
+	<p class="info-details">Accéder aux sources sur GitHub</p>
 </div>
 <div class="clear"></div>
 
