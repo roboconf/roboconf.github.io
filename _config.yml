@@ -87,6 +87,9 @@ urls:
   ug.snapshot.iaas-openstack:
     en: user-guide/iaas-openstack
   
+  ug.snapshot.iaas-embedded:
+    en: user-guide/iaas-embedded
+  
   ug.snapshot.iaas-aws:
     en: user-guide/iaas-aws
   
