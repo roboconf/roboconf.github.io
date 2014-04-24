@@ -71,7 +71,8 @@ menus: [ "users", "user-guide" ]
 	<li><a href="iaas-aws.html">Amazon Web Services</a></li>
 	<li><a href="iaas-vmware.html">VMWare</a></li>
 	<li><a href="iaas-azure.html">Microsoft Azure</a></li>
-	<li><a href="iaas-localhost.html">Localhost</a></li>
+	<li><a href="iaas-embedded.html">Embedded</a></li>
+	<li><a href="iaas-localhost.html">In-Memory</a></li>
 	<ul>
 </div>
 
