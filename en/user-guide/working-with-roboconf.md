@@ -21,7 +21,7 @@ Create the following file structure:
     	└── init.instances
 
 + Complete the [application properties](application-descriptor.html) file.
-+ Define the Software components you will deploy in [the graph model](graph.definition.html).
++ Define the Software components you will deploy in [the graph model](graph-definition.html).
 + For every component, create a sub-directory under **graph** and add [the resources](graph-resources.html)
 for the Roboconf plug-in that will handle the life cycle of component instances. IaaS configurations are the
 most simple to handle. The configuration of other components will depend on the chosen plug-in (Bash, Puppet...).
