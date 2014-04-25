@@ -41,7 +41,7 @@ Roboconf configuration files should be organized as follows:
 	│   ├── graph.graph
 	│   ├── VM_EC2
 	│   │   └── iaas.properties
-	│   │   ├── VM_Openstack
+	│   ├── VM_Openstack
 	│   │   └── iaas.properties
 	│   └── MyApp
 	│       ├── files
