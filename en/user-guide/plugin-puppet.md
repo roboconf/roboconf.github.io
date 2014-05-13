@@ -54,27 +54,27 @@ To do so, add a "modules.properties" file in the root directory of you puppet mo
 The line has the following format : <i>modulename = [version]</i>
 
 For example, to add the "thias-sysctl" module in version 0.3.0, and the "fsalum-redis" module with no version spec:
-```
-thias-sysctl = 0.3.0
-fsalum-redis=
-```
+
+	thias-sysctl = 0.3.0
+	fsalum-redis=
+
 
 ### Module content
 
 Suppose an apache+load balancer component, that imports variables from Tomcat instances. It may look like this in your graph model:
 
-```
-Apache {
-        alias: Apache Load Balancer;
-        installer: puppet;
-        imports: Tomcat.portAJP, Tomcat.ip;
-}
 
-Tomcat {
-	installer: puppet;
-        exports: ip, portAJP = 8009;
-}
-```
+	Apache {
+        	alias: Apache Load Balancer;
+        	installer: puppet;
+        	imports: Tomcat.portAJP, Tomcat.ip;
+	}
+	
+	Tomcat {
+		installer: puppet;
+        	exports: ip, portAJP = 8009;
+	}
+
 
 Let's have a look at what the module looks like:
 - It should be called roboconf_apache_module ("roboconf_" + Component name in LOWER CASE + "_module"), and can contain manifests, templates or files, like any classical puppet module (eg. for a init.pp puppet manifest: roboconf_apache_module/manifests/init.pp).
@@ -88,29 +88,27 @@ The puppet manifests receive the following variables:
 - A list of all imports to be taken into account, for each components that we depend on (eg. in the Apache example, there will be a "tomcat" variable, which is a list of all the tomcats, and for each tomcat, a hash with its name + the values of (ip, portAJP)).
 
 In our apache example, the module may look like the following:
-```
-roboconf_apache_module/
-├── files
-│   └── default
-├── manifests
-│   └── init.pp
-└── templates
-    └── workers.properties.erb
-```
+
+	roboconf_apache_module/
+	├── files
+	│   └── default
+	├── manifests
+	│   └── init.pp
+	└── templates
+    		└── workers.properties.erb
 
 And the init.pp manifest look like this:
-```
-class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
-	# 'tomcat' is an array of hashes
-	# It needs to be declared as the following:
-	# $tomcat = {
-	#              'tomcat1' => {'ip' => '127.0.0.1', 'portajp' => '8009'},
-	#              'tomcat2' => {'ip' => '127.0.0.2', 'portajp' => '8010'}
-	#            }
 
-  	...
-}
-```
+	class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
+		# 'tomcat' is an array of hashes
+		# It needs to be declared as the following:
+		# $tomcat = {
+		#              'tomcat1' => {'ip' => '127.0.0.1', 'portajp' => '8009'},
+		#              'tomcat2' => {'ip' => '127.0.0.2', 'portajp' => '8010'}
+		#            }
+	
+  		...
+	}
 
 ## Possible Upgrade
 
