@@ -73,6 +73,7 @@ The puppet scripts receive the following variables:
 - A list of all imports to be taken into account, for each components that we depend on (eg. in the Apache example, there will be a "tomcat" variable, which is a list of all the tomcats, and for each tomcat, a hash with its name + the values of (ip, portAJP)).
 
 In our apache example, the module may look like the following:
+```
 roboconf_apache_module/
 ├── files
 │   └── default
@@ -80,6 +81,7 @@ roboconf_apache_module/
 │   └── init.pp
 └── templates
     └── workers.properties.erb
+```
 
 And the init.pp script look like this:
 ```
