@@ -77,11 +77,13 @@ Suppose an apache+load balancer component, that imports variables from Tomcat in
 
 
 Let's have a look at what the module looks like:
+
 * It should be called roboconf_apache_module ("roboconf_" + Component name in LOWER CASE + "_module"), and can contain manifests, templates or files, like any classical puppet module (eg. for a init.pp puppet manifest: roboconf_apache_module/manifests/init.pp).
 * In the manifests/ directory, you can either create puppet manifests for each operation of the Roboconf lifecycle (deploy.pp, start.pp, stop.pp, update.pp and undeploy.pp), or a single init.pp default manifest (will be used instead of any other missing manifest - eg. if there is no "start.pp", "init.pp" will be used at startup time).
 * In the init.pp, the class should have the same name as the module (eg. class roboconf_apache_module). If specific operation manifests are used (eg. start.pp), the class name should be the operation name in the module (eg. class roboconf_apache_module::start).
 
 The puppet manifests receive the following variables:
+
 * runningState ("running" for start, "stopped" for stop, and "undef" for other operations)
 * importAdded (with the value of the new import when one is added)
 * importRemoved (with the value of the removed import if applicable)
