@@ -42,10 +42,24 @@ Note you may also use *apt-get install puppet*, but make sure the version on the
 recent enough.
 
 
-## Best Practices and Examples
+## The puppet module
 
 The configuration for the Puppet plug-in must be a valid [Puppet module](http://docs.puppetlabs.com/learning/modules1.html).  
 It is also recommended that components and variables be in lowercase characters in the Roboconf model: if not, they will be converted to lowercase prior to being passed to puppet (works fine, but can be quite confusing for developers).
+
+### Importing external modules
+
+Roboconf provides an equivalent to "puppet module add", so that external modules may be used.
+To do so, add a "modules.properties" file in the root directory of you puppet module, that contains one line for each module to import.
+The line has the following format : <i>modulename = [version]</i>
+
+For example, to add the "thias-sysctl" module in version 0.3.0, and the "fsalum-redis" module with no version spec:
+```
+thias-sysctl = 0.3.0
+fsalum-redis=
+```
+
+### Module content
 
 Suppose an apache+load balancer component, that imports variables from Tomcat instances. It may look like this in your graph model:
 
