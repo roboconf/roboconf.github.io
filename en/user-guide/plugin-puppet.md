@@ -58,7 +58,6 @@ For example, to add the "thias-sysctl" module in version 0.3.0, and the "fsalum-
 	thias-sysctl = 0.3.0
 	fsalum-redis=
 
-
 ### Module content
 
 Suppose an apache+load balancer component, that imports variables from Tomcat instances. It may look like this in your graph model:
