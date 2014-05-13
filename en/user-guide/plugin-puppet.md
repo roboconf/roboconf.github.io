@@ -46,6 +46,54 @@ recent enough.
 The configuration for the Puppet plug-in must be a valid [Puppet module](http://docs.puppetlabs.com/learning/modules1.html).  
 This page will be updated to illustrate the good practices to write a suitable Puppet module for Roboconf.
 
+Suppose an apache+load balancer component, that imports variables from Tomcat instances. It may look like this in your graph model:
+
+```
+Apache {
+        alias: Apache Load Balancer;
+        installer: puppet;
+        imports: Tomcat.portAJP, Tomcat.ip;
+}
+
+Tomcat {
+	installer: puppet;
+        exports: ip, portAJP = 8009;
+}
+```
+
+Let's have a look at what the module looks like:
+- It should be called roboconf_apache_module ("roboconf_" + Component name in LOWER CASE + "_module"), and can contain manifests, templates or files, like any classical puppet module.
+- In the manifests/ directory, you can either create puppet scripts for each operation of the Roboconf lifecycle (deploy.pp, start.pp, stop.pp, update.pp and undeploy.pp), or a single init.pp default script (will be used instead of any other missing script - eg. if there is no "start.pp", "init.pp" will be used at startup time).
+- In the init.pp, the class should have the same name as the module (eg. class roboconf_apache_module). If specific operation scripts are used (eg. start.pp), the class name should be the operation name in the module (eg. class roboconf_apache_module::start).
+
+The puppet scripts receive the following variables:
+- runningState ("running" for start, "stopped" for stop, and "undef" for other operations)
+- importAdded (with the value of the new import when one is added)
+- importRemoved (with the value of the removed import if applicable)
+- A list of all imports to be taken into account, for each components that we depend on (eg. in the Apache example, there will be a "tomcat" variable, which is a list of all the tomcats, and for each tomcat, a hash with its name + the values of (ip, portAJP)).
+
+In our apache example, the module may look like the following:
+roboconf_apache_module/
+├── files
+│   └── default
+├── manifests
+│   └── init.pp
+└── templates
+    └── workers.properties.erb
+
+And the init.pp script look like this:
+```
+class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
+	# 'tomcat' is an array of hashes
+	# It needs to be declared as the following:
+	# $tomcat = {
+	#              'tomcat1' => {'ip' => '127.0.0.1', 'port' => '8009'},
+	#              'tomcat2' => {'ip' => '127.0.0.2', 'port' => '8010'}
+	#            }
+
+  	...
+}
+```
 
 ## Possible Upgrade
 
