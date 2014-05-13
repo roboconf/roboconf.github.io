@@ -23,6 +23,7 @@ This plug-in is associated with the **puppet** installer name.
 		installer: puppet;
 	}
 
+The modulepath will automatically be set to the corresponding module path. The value of the MODULEPATH environment variable, if present, will be appended to it.
 
 ## Install prerequisites
 
