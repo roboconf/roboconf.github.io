@@ -123,3 +123,64 @@ N/A
 
     HTTP/1.1 200 OK
     
+## POST /applications/{name}/shutdown
+
+Shut down an application.
+
+**Query Parameters:**
+
+- name: the name of the application to shut down (as a path parameter).
+
+**Request Headers:**
+
+**Response Headers:**
+
+**Response Text Object:**
+
+N/A
+
+**Status Codes:**
+
+- 200 OK.
+- 202 Accepted - Bulk invocation scheduled for processing.
+- 404 Not found - Application does not exist.
+
+**Request:**
+
+    POST /applications/mongo-replicaset-openstack/shutdown
+    Host: localhost:9998
+
+**Response:**
+
+    HTTP/1.1 200 OK
+    
+## POST /applications/{name}/delete
+
+Delete an application.
+
+**Query Parameters:**
+
+- name: the name of the application to delete (as a path parameter).
+
+**Request Headers:**
+
+**Response Headers:**
+
+**Response Text Object:**
+
+N/A
+
+**Status Codes:**
+
+- 200 OK.
+- 403 Forbidden - Unauthorized action, or DM failure (eg. not initialized).
+
+**Request:**
+
+    POST /applications/mongo-replicaset-openstack/delete
+    Host: localhost:9998
+
+**Response:**
+
+    HTTP/1.1 200 OK
+    
