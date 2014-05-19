@@ -31,7 +31,7 @@ An instance is an object with the following properties:
 
 - name: the instance name
 - path: the instance path (with | used as a peth separator)
-- status: the instance status (NOT\_DEPLOYED, DEPLOYED\_STOPPED, STARTING, DEPLOYED\_STARTED, PROBLEM)
+- status: the instance status (NOT\_DEPLOYED, DEPLOYING, DEPLOYED\_STOPPED, STARTING, DEPLOYED\_STARTED, PROBLEM)
 - component: an object that provides information about the deployed component, including its name, alias, and installer flavor (eg. puppet or bash).
 
 Example:
@@ -66,17 +66,18 @@ Example:
     {"name":"Mongo primary node","path":"|Mongo primary|Mongo primary node","status":"NOT_DEPLOYED","component":{"name":"MongoReplicasetMember","alias":"A MongoDB node part of a replica-set","installer":"puppet"}}]
     0
 
-## POST /applications
+## POST /app/{name}/deploy/instance/{instanceName}
 
-Deploy an application.
+Deploy an instance.
 
 **Query Parameters:**
 
-- file: the roboconf deployment archive (zip file).
+- name: the application name (as a path parameter).
+- instanceName: the name of the instance to deploy (as a path parameter).
 
 **Request Headers:**
 
-- Content-type: multipart/form-data
+- Content-type: application/json
 
 **Response Headers:**
 
