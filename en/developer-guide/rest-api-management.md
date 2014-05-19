@@ -89,3 +89,37 @@ N/A
 
     HTTP/1.1 200 OK
     
+## POST /applications/local
+
+Deploy an application already available on the local filesystem (eg. FTP upload).
+
+**Query Parameters:**
+
+- localFilePath: the path to a locally deployed (unzipped) Roboconf application (a directory path).
+
+**Request Headers:**
+
+- Content-type: text/plain
+
+**Response Headers:**
+
+**Response Text Object:**
+
+N/A
+
+**Status Codes:**
+
+- 200 OK.
+- 403 Forbidden - Application already exists, or DM malfunction (eg. not initialized).
+- 406 Not acceptable - Invalid application.
+- 401 Unauthorized - Any file-system related error (eg. read-only access).
+
+**Request:**
+
+    POST /applications/local
+    Host: localhost:9998
+
+**Response:**
+
+    HTTP/1.1 200 OK
+    
