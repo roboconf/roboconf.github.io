@@ -66,14 +66,15 @@ Example:
     {"name":"Mongo primary node","path":"|Mongo primary|Mongo primary node","status":"NOT_DEPLOYED","component":{"name":"MongoReplicasetMember","alias":"A MongoDB node part of a replica-set","installer":"puppet"}}]
     0
 
-## POST /app/{name}/deploy/instance/{instanceName}
+## POST /app/{name}/deploy/instance/{instancePath}
 
 Deploy an instance.
 
 **Query Parameters:**
 
 - name: the application name (as a path parameter).
-- instanceName: the name of the instance to deploy (as a path parameter).
+- instancePath: the path to the instance to deploy (as a path parameter).
+- applyToAllChildren: true | false (optional, default false).
 
 **Request Headers:**
 
@@ -88,13 +89,14 @@ N/A
 **Status Codes:**
 
 - 200 OK.
-- 403 Forbidden - Application already exists, or DM malfunction (eg. not initialized).
-- 406 Not acceptable - Invalid application.
-- 401 Unauthorized - Any file-system related error (eg. read-only access).
+- 202 Accepted - Bulk invocation scheduled for processing.
+- 404 Not found - Instance not found.
+- 403 Forbidden - Unauthorized action.
+- 400 Bad request - Invalid action or malformed request.
 
 **Request:**
 
-    POST /applications
+    POST /app/mongo-replicaset-openstack/deploy/instance/%7CMongo%20primary HTTP/1.1
     Host: localhost:9998
 
 **Response:**
