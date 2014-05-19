@@ -26,12 +26,15 @@ List deployed applications.
 **Response Text Object:**
 
 Array of applications : [ app1, ..., appN ]
+
 An application is an object with the following properties:
+
 - name: the application name
 - desc: a human-readable description
 - qualifier: additional information field (eg. version, category...)
- 
+
 Example:
+
 [{"name":"mongo-replicaset-openstack","desc":"A mongo replica set install on Openstack VMs","qualifier":"1.0"}]
 
 
@@ -50,7 +53,7 @@ Example:
     HTTP/1.1 200 OK
     Content-Type: application/json
     Transfer-Encoding: chunked
-
+        
     5a
     [{"name":"mongo-replicaset-openstack","desc":"A sample application","qualifier":"sample"}]
     0
