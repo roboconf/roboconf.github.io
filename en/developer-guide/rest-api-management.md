@@ -35,7 +35,7 @@ An application is an object with the following properties:
 
 Example:
 
-[{"name":"mongo-replicaset-openstack","desc":"A mongo replica set install on Openstack VMs","qualifier":"1.0"}]
+[{"name":"mongo-replicaset","desc":"A mongo replica set install on IaaS VMs","qualifier":"1.0"}]
 
 
 **Status Codes:**
@@ -55,7 +55,7 @@ Example:
     Transfer-Encoding: chunked
         
     5a
-    [{"name":"mongo-replicaset-openstack","desc":"A sample application","qualifier":"sample"}]
+    [{"name":"mongo-replicaset","desc":"A sample application","qualifier":"sample"}]
     0
 
 ## POST /applications
@@ -150,7 +150,7 @@ N/A
 
 **Request:**
 
-    POST /applications/mongo-replicaset-openstack/shutdown
+    POST /applications/mongo-replicaset/shutdown
     Host: localhost:9998
 
 **Response:**
@@ -180,10 +180,9 @@ N/A
 
 **Request:**
 
-    POST /applications/mongo-replicaset-openstack/delete
+    POST /applications/mongo-replicaset/delete
     Host: localhost:9998
 
 **Response:**
 
     HTTP/1.1 200 OK
-    
