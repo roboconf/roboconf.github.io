@@ -50,7 +50,7 @@ Example:
 
 **Request:**
 
-    GET /app/mongo-replicaset-openstack HTTP/1.1
+    GET /app/mongo-replicaset/all-children HTTP/1.1
     Host: localhost:9998
     Accept: application/json
 
@@ -96,56 +96,26 @@ N/A
 
 **Request:**
 
-    POST /app/mongo-replicaset-openstack/deploy/instance/%7CMongo%20primary HTTP/1.1
+    POST /app/mongo-replicaset/deploy/instance/%7CMongo%20primary HTTP/1.1
     Host: localhost:9998
 
 **Response:**
 
     HTTP/1.1 200 OK
     
-## POST /applications/local
+## POST /app/{name}/start/instance/{instancePath}
 
-Deploy an application already available on the local filesystem (eg. FTP upload).
-
-**Query Parameters:**
-
-- localFilePath: the path to a locally deployed (unzipped) Roboconf application (a directory path).
-
-**Request Headers:**
-
-- Content-type: text/plain
-
-**Response Headers:**
-
-**Response Text Object:**
-
-N/A
-
-**Status Codes:**
-
-- 200 OK.
-- 403 Forbidden - Application already exists, or DM malfunction (eg. not initialized).
-- 406 Not acceptable - Invalid application.
-- 401 Unauthorized - Any file-system related error (eg. read-only access).
-
-**Request:**
-
-    POST /applications/local
-    Host: localhost:9998
-
-**Response:**
-
-    HTTP/1.1 200 OK
-    
-## POST /applications/{name}/shutdown
-
-Shut down an application.
+Start a deployed instance.
 
 **Query Parameters:**
 
-- name: the name of the application to shut down (as a path parameter).
+- name: the application name (as a path parameter).
+- instancePath: the path to the instance to start (as a path parameter).
+- applyToAllChildren: true | false (optional, default false).
 
 **Request Headers:**
+
+- Content-type: application/json
 
 **Response Headers:**
 
@@ -157,26 +127,32 @@ N/A
 
 - 200 OK.
 - 202 Accepted - Bulk invocation scheduled for processing.
-- 404 Not found - Application does not exist.
+- 404 Not found - Instance not found.
+- 403 Forbidden - Unauthorized action.
+- 400 Bad request - Invalid action or malformed request.
 
 **Request:**
 
-    POST /applications/mongo-replicaset-openstack/shutdown
+    POST /app/mongo-replicaset/start/instance/%7CMongo%20primary%7CMongo%20primary%20node HTTP/1.1
     Host: localhost:9998
 
 **Response:**
 
     HTTP/1.1 200 OK
-    
-## POST /applications/{name}/delete
 
-Delete an application.
+## POST /app/{name}/stop/instance/{instancePath}
+
+Stop a running instance.
 
 **Query Parameters:**
 
-- name: the name of the application to delete (as a path parameter).
+- name: the application name (as a path parameter).
+- instancePath: the path to the instance to stop (as a path parameter).
+- applyToAllChildren: true | false (ignored: all children are stopped).
 
 **Request Headers:**
+
+- Content-type: application/json
 
 **Response Headers:**
 
@@ -187,14 +163,53 @@ N/A
 **Status Codes:**
 
 - 200 OK.
-- 403 Forbidden - Unauthorized action, or DM failure (eg. not initialized).
+- 202 Accepted - Bulk invocation scheduled for processing.
+- 404 Not found - Instance not found.
+- 403 Forbidden - Unauthorized action.
+- 400 Bad request - Invalid action or malformed request.
 
 **Request:**
 
-    POST /applications/mongo-replicaset-openstack/delete
+    POST /app/mongo-replicaset/stop/instance/%7CMongo%20primary%7CMongo%20primary%20node HTTP/1.1
     Host: localhost:9998
 
 **Response:**
 
     HTTP/1.1 200 OK
-    
+
+## POST /app/{name}/undeploy/instance/{instancePath}
+
+Undeploy a deployed instance. The instance should be stopped: if not, a stop will be forced before undeploying.
+
+**Query Parameters:**
+
+- name: the application name (as a path parameter).
+- instancePath: the path to the instance to undeploy (as a path parameter).
+- applyToAllChildren: true | false (ignored: all children are undeployed).
+
+**Request Headers:**
+
+- Content-type: application/json
+
+**Response Headers:**
+
+**Response Text Object:**
+
+N/A
+
+**Status Codes:**
+
+- 200 OK.
+- 202 Accepted - Bulk invocation scheduled for processing.
+- 404 Not found - Instance not found.
+- 403 Forbidden - Unauthorized action.
+- 400 Bad request - Invalid action or malformed request.
+
+**Request:**
+
+    POST /app/mongo-replicaset/start/instance/%7CMongo%20primary%7CMongo%20primary%20node HTTP/1.1
+    Host: localhost:9998
+
+**Response:**
+
+    HTTP/1.1 200 OK
