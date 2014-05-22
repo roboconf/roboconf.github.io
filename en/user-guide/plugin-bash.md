@@ -49,7 +49,7 @@ All the exports of the instance are available as environment vars (their names a
 Imports are more complex, as there may be multiple ones: let's take the example of an apache load balancer, that imports tomcat "ip" and "portAjp" variables.
 The imports will look like this (for N tomcat instances named "tomcat1" to "tomcatN"):
 
-tomcat_size = N
+tomcat\_size = N
 tomcat\_1\_name = tomcat1
 tomcat\_1\_ip = < ip address of tomcat 1 >
 tomcat\_1\_portAjp = < AJP port for tomcat 1 >
