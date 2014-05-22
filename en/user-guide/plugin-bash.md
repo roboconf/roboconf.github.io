@@ -33,4 +33,21 @@ script or template.
 All the templates can use import variables.  
 These variables will be inserted by Roboconf.
 
-> This page will be completed soon with an example illustrating the templating.
+# Action script and parameters
+
+Parameters are passed to action scripts (eg. start.sh, update.sh ...) using environment variables, that respect naming conventions.
+
+## Global environment-related variables
+
+- ROBOCONF\_INSTANCE\_NAME: The name of the current instance (the one whose script is invoked).
+- ROBOCONF\_FILES\_DIR: The directory where instance files are located (if any).
+
+## Variables related to update actions
+
+- ROBOCONF\_UPDATE\_STATUS: the status of the instance that triggered the update (eg. DEPLOYED\_STOPPED, DEPLOYED\_STARTED).
+
+In case of import change (eg. instance started or stopped):
+
+- ROBOCONF\_IMPORT\_CHANGED\_INSTANCE\_PATH: Path to the instance that exports the changed import.
+- ROBOCONF\_IMPORT\_CHANGED\_<ImportName>: For each imported variable that changed, the corresponding value (eg. if an "ipAddress" export changed, the "ROBOCONF\_IMPORT\_CHANGED_ipAddress" variable should contain its new value).
+
