@@ -56,7 +56,7 @@ Roboconf could be replaced by some scripts executed by hand, but the result woul
 In fact, Roboconf receipts can use bash scripts. Roboconf only plugs dynamicity behind script invocations.
 
 
-# How about Puppet, Chief or CfEngine?
+# How about Puppet, Chef or CfEngine?
 
 [Puppet](http://puppetlabs.com/), [Chef](http://docs.opscode.com/) and [CFEngine](http://cfengine.com/) are various
 deployment solutions. Roboconf does not pretend to be a concurrent, but instead, a complement to these solutions. 
