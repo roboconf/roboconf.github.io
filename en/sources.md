@@ -44,4 +44,4 @@ The web site is powered by [Jekyll](http://jekyllrb.com), [GitHub](http://github
 The sources for the web site are hosted on [GitHub](https://github.com/roboconf/roboconf.github.io).  
 To contribute modifications, you should fork this repository, patch it and create a pull request.
 
-This page explains the Jekyll configuration and the way the web site works.
+This [page](developer-guide/web-site-organization.html) explains the Jekyll configuration and the way the web site works.

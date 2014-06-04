@@ -47,5 +47,5 @@ Les sources du site web sont elles-aussi hébergées sur [GitHub](https://github
 Pour proposer des corrections ou des évolutions, il vous suffit de *forker* ce dépôt, d'y appliquer vos modifications
 et de soumettre une *pull request*.
 
-Cette page explique les grandes lignes de la configuration Jekyll, ainsi que la façon dont
-le site fonctionne.
+Le [guide développeur](guide-developpeur/guide-developpeur.html) explique les grandes lignes de la configuration 
+Jekyll, ainsi que la façon dont le site fonctionne.

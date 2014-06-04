@@ -28,6 +28,39 @@ html, body {
 	clear: both;
 }
 
+/* Index */
+#first-index {
+	text-align: center;
+	padding-top: 8em;
+}
+
+#first-index #logo {
+	margin-bottom: 1em;
+}
+
+#first-index a {
+	text-decoration: none;
+}
+
+#first-index a:hover {
+	text-decoration: underline;
+}
+
+#first-index ul {
+	list-style: none;
+	margin-top: 1em;
+	text-align: left;
+	margin-left: 47%;
+}
+
+#first-index li {
+	margin-top: 0.2em;
+}
+
+#first-index ul img {
+	margin-right: 5px;
+}
+
 /* Welcome Page */
 
 #welcome-dl {
