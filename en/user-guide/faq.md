@@ -65,7 +65,7 @@ Roboconf concretely deploys something (once the asynchronous thing worked) is de
 a Bash and a Puppet plug-ins. It means Roboconf receipts can be either bash scripts or Puppet modules.
 
 No plug-in has been developed for Chef and CfEngine (yet), but we have this in mind.  
-This plug-in approach allow to use and mix various solutions in a deployment, depending on yours needs. It also
+This plug-in approach allows to use and mix various solutions in a deployment. It also
 makes Roboconf an extensible solution that can fit various requirements.
 
 
