@@ -7,12 +7,14 @@ menus: [ "users", "user-guide" ]
 
 # What is Roboconf?
 
-Roboconf is a deployment tool for the cloud: taking as input the description of a whole application in terms of "components" and "instances".  
+Roboconf is a deployment tool for distributed applications.  
+It is in particular adapted to deployments in cloud infrastructures, but not only.
+Roboconf takes as input the description of a whole application in terms of "components" and "instances".
+  
 From this model, it then takes the burden of launching Virtual Machines (VMs), deploying software on them, resolving dependencies 
-between software components, updating their configuration and starting the whole stuff when ready.
-
-Roboconf also handles the application lifecycle: hot reconfiguration (e.g. for elasticity issues) 
-and consistency (e.g. maintaining a consistent state when a component starts or stops, even accidentally).
+between software components, updating their configuration and starting the whole stuff when ready. Roboconf also handles the 
+application life cycle: hot reconfiguration (e.g. for elasticity issues) and consistency (e.g. maintaining a consistent state 
+when a component starts or stops, even accidentally).
 
 
 # What are its key points?
@@ -21,11 +23,20 @@ Roboconf allows to define a model of the application that one wants to deploy.
 It then offers a vision of this model during deployment and at runtime.
 
 The model and the use of Roboconf are designed to be simple.  
-It uses known technologies (Puppet, AMQP, Bash, REST/JSON web services).
+This project tries to not reinvent the wheel, by using and relying on several well-known technologies
+(Puppet, AMQP, Bash, REST/JSON web services...).
 
-Roboconf is asynchronous (the application can be deployed in any order) and IaaS-agnostic (provides plug-ins for
-many well-known IaaS, including OpenStack, Amazon WS, Azure, VMWare, as well as a "local" deployment plug-in for
-on-premise hosts).
+Roboconf is asynchronous (the application parts can be deployed in any order) and IaaS-agnostic (provides plug-ins for
+many well-known IaaS, including OpenStack, Amazon WS, Azure, VMWare, as well as an *embedded* deployment plug-in for
+on-premise hosts). The asynchronous mechanisms Roboconf supports allow to add and remove dynamically application parts. 
+Other application parts are then updated and/or reconfigured depending on what happened there.
+
+
+# Is Roboconf open source?
+
+Yes, Roboconf is open source.  
+See the [license page](../license.html) for more information.
+
 
 # What are Roboconf pre-requisites?
 
@@ -38,50 +49,28 @@ access a messaging server to interact with the Deployment Manager.
 
 The current messaging server is RabbitMQ. It supports a wide variety of clients, implemented in different languages. 
 
-# What are the differences between Roboconf and...
 
-## Some Bash script and SSH
+# What does Roboconf bring in addition to classics like Bash and SSH?
 
-Roboconf could be replaced by some scripts, but the result would be very complicated to maintain.
-
-
-## Puppet
-
-[Puppet](http://puppetlabs.com/) (using it with a central server) and Roboconf share numbers of common points.  
-Roboconf is however designed to be part of an autonomous IaaS. It can instantiate VM on a IaaS, and add or remove
-some very easily.
-
-In addition, Puppet maintains the state of resources.  
-Roboconf adds reconfiguration, meaning the it can push Puppet configurations. 
+Roboconf could be replaced by some scripts executed by hand, but the result would be very complicated to maintain.  
+In fact, Roboconf receipts can use bash scripts. Roboconf only plugs dynamicity behind script invocations.
 
 
-## Chef
+# How about Puppet, Chief or CfEngine?
 
-[Chef](http://docs.opscode.com/) is a deployment solution for cloud infrastructures.  
-Like for Puppet, Roboconf adds reconfiguration features. As an example, you ask for something to start, and it will
-start only when all the dependencies are resolved and running. This kind of feature is not supported by Chef or Puppet.
+[Puppet](http://puppetlabs.com/), [Chef](http://docs.opscode.com/) and [CFEngine](http://cfengine.com/) are various
+deployment solutions. Roboconf does not pretend to be a concurrent, but instead, a complement to these solutions. 
+The real key feature of Roboconf is the asynchronous exchanges to adapt and deploy concurrently Software components. How
+Roboconf concretely deploys something (once the asynchronous thing worked) is delegated to plug-ins. For the moment, we have
+a Bash and a Puppet plug-ins. It means Roboconf receipts can be either bash scripts or Puppet modules.
 
-
-## CFEngine
-
-[CFEngine](http://cfengine.com/) is a configuration management system.  
-Given intents, CFEngine performs the required operations to reach the expressed state.
-
-Like for Puppet or Chef, Roboconf adds dynamicity and dependency resolution.  
-Roboconf can also delegate them the static part while handling the dynamic part.
+No plug-in has been developed for Chef and CfEngine (yet), but we have this in mind.  
+This plug-in approach allow to use and mix various solutions in a deployment, depending on yours needs. It also
+makes Roboconf an extensible solution that can fit various requirements.
 
 
-## Cloudify
+# Are there concurrent solutions to Roboconf?
 
-[Cloudify](http://www.cloudifysource.org/) is very similar to Roboconf in the sense where you can express
-dependencies toward other Software components. The platform will resolve and reconfigure these components
-accordingly. The main difference with Roboconf is that Roboconf uses asynchronous messaging to enable communications.
-The Deployment Manager is only required during deployments. Reconfiguration is handled automatically by the agents
-according to the model rules. Eventually, Roboconf can delegate state maintenance to Puppet, Chef or CFengine.
-
-
-## JClouds
-
-[JClouds](http://jclouds.apache.org/) is a Java toolkit to manipulate IaaS APIs.  
-Although Roboconf does not use it currently, we may implement a IaaS plug-in based on JClouds so that
-people get more control over IaaS configuration.
+Yes, you can take a look at [Cloudify](http://www.cloudifysource.org/), [Right Scale](http://www.rightscale.com/), [Scalr](http://www.scalr.com/)
+and the OW2 project [Sirocco](http://wiki.sirocco.ow2.org/xwiki/bin/view/Main/WebHome).  
+You may also be interested by [JClouds](http://jclouds.apache.org/), which is a Java toolkit to manipulate IaaS APIs.

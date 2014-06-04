@@ -28,57 +28,17 @@ html, body {
 	clear: both;
 }
 
-.info-main {
-	font-size: 1.4em;
-	color: #ff0000;
-}
-
-.info-main a:hover {
-	text-decoration: underline;
-}
-
-.info-details {
-	font-size: 1.0em;
-}
-
-/* Index */
-#first-index {
-	text-align: center;
-	padding-top: 8em;
-}
-
-#first-index #logo {
-	margin-bottom: 1em;
-}
-
-#first-index a {
-	text-decoration: none;
-}
-
-#first-index a:hover {
-	text-decoration: underline;
-}
-
-#first-index ul {
-	list-style: none;
-	margin-top: 1em;
-	text-align: left;
-	margin-left: 47%;
-}
-
-#first-index li {
-	margin-top: 0.2em;
-}
-
-#first-index ul img {
-	margin-right: 5px;
-}
-
 /* Welcome Page */
 
 #welcome-dl {
 	position: absolute;
 	right: 15%;
+	top: 7%;
+}
+
+#last-update {
+	position: absolute;
+	left: 3%;
 	top: 7%;
 }
 
@@ -88,15 +48,14 @@ html, body {
 }
 
 #welcome-logo {
-	padding-top: 16%; /* 6% when there is an effective logo */
+	padding-top: 13%;
 	text-align: center;
 }
 
 #welcome-separator {
 	height: 5px;
-	background-color: #ff0000;
-	margin-bottom: 4em;
-	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+	background-color: #b03e4d;
+	margin-bottom: 3.7em;
 }
 
 #welcome-ep {
@@ -107,19 +66,34 @@ html, body {
 .welcome-desc {
 	font-weight: bold;
 	font-size: 2em;
+	margin-top: 1.3em;
 	margin-bottom: 2em;
 }
 
 .index-ep {
 	font-size: 1.7em;
 	margin-left: 2em;
+	padding-right: 32px;
+}
+
+.info-main {
+	font-size: 1.4em;
+	color: #b23e4b;
+}
+
+.info-main a:hover {
+	text-decoration: underline;
+}
+
+.info-details {
+	font-size: 1.0em;
 }
 
 /* Both Welcome and Top Menu */
 
 .ep {
 	background-color: white;
-	color: #ff0000;
+	color: #b23e4b;
 }
 
 .ep span.glyphicon {
@@ -128,17 +102,16 @@ html, body {
 }
 
 .ep:hover, .ep:hover span, .ep-selected {
-	background-color: #ff0000 !important;
-	border-bottom: solid #ff0000 2px;
+	background-color: #b23e4b !important;
+	border-bottom: solid #b23e4b 2px;
 	color: white;
 	text-decoration: none;
 }
 
 .ep-selected:hover {
-	background-color: #ff0000 !important;
-	border-bottom: solid #ff0000 2px;
+	background-color: #b23e4b !important;
+	border-bottom: solid #b23e4b 2px;
 	color: white;
-	text-decoration: underline !important;
 }
 
 .ep > .caret {
@@ -149,8 +122,10 @@ html, body {
 /* Top Menu */
 
 #header-img {
-	height: 40px;
-	margin: 7px 10px 5px 22px;
+	height: 90px;
+	margin: 8px 0 0 10px;
+	padding: 0 34px 14px 18px;
+	border-bottom: solid black 3px;
 }
 
 .dd-lang {
@@ -163,13 +138,13 @@ img.flag {
 }
 
 .navbar-rbcf {
-	border-bottom: solid #ff0000 3px;
 	margin: 0 0 28px 0;
+	padding-right: 24px;
 }
 
 .navbar-rbcf li.active {
-	background-color: #ff0000 !important;
-	border-bottom: solid #ff0000 2px;
+	background-color: #b23e4b !important;
+	border-bottom: solid #b23e4b 2px;
 	color: white !important;
 }
 
@@ -184,7 +159,7 @@ img.flag {
 }
 
 .dropdown-menu > li > a:hover {
-	background-color: #ff0000 !important;
+	background-color: #b23e4b !important;
 	color: white !important;
 }
 
@@ -211,8 +186,7 @@ img.flag {
 }
 
 .menu li:hover {
-	border-right: solid #ff0000 3px;
-	color: #ff0000;
+	color: #b23e4b;
 }
 
 .menu a, .menu a:active, .menu a:hover {
@@ -221,20 +195,20 @@ img.flag {
 }
 
 .menu li.active {
-	border-right: solid #ff0000 3px;
 	font-weight: bold;
+	color: #b23e4b;
 }
 
 /* Other Pages */
 
 .content {
-	margin-left: 250px;
+	margin-left: 260px;
 	margin-right: 34px;
-	margin-bottom: 4em;
+	padding-bottom: 24px;
 }
 
 .content a, .content a:hover {
-	color: #ff0000;
+	color: #b23e4b;
 }
 
 .content h1 {
@@ -291,7 +265,20 @@ p > img.gs {
 /* Twitter */
 
 #twitter-widget-0 {
- 	width: 80%;
+ 	width: 80% !important;
+}
+
+/* Roadmap */
+span.roadmap-done {
+	color: green;
+	font-weight: bold;
+	padding-left: 24px;
+}
+
+span.roadmap-in-progress {
+	color: orange;
+	font-weight: bold;
+	padding-left: 24px;
 }
 
 /* Syntax Highlighting with Pygment */

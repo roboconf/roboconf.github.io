@@ -13,12 +13,14 @@ id: "home"
 	<p class="info-main"><a href="http://github.com/roboconf/roboconf/">Code Source</a></p>
 	<p class="info-details">Accéder aux sources sur GitHub</p>
 </div>
-<div class="clear"></div>
+
+<div id="last-update" class="button">
+	Dernière Mise à Jour le {{ site.time | date: '%d / %m / %Y' }}
+</div>
 
 <div id="welcome-logo">
 	<p>
-		<!-- <img src="/resources/img/roboconf-logo.png" alt="Logo de Roboconf" />-->
-		<img src="/resources/img/roboconf.png" alt="Roboconf" />
+		<img src="/resources/img/roboconf.jpg" alt="Roboconf" />
 	</p>
 	<p class="welcome-desc">
 		Une Solution pour des Déploiements Elastiques

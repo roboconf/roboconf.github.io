@@ -17,14 +17,7 @@
 
 <body>
 	<nav class="navbar-rbcf" role="navigation">
-		<a href="/{{ locale }}/index.html"><img id="header-img" src="/resources/img/roboconf.png" alt="Roboconf" /></a>
-	
-		<form class="navbar-form navbar-right" role="search">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="{{ site.locales[locale].menu-search }}">
-			</div>
-			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-		</form>	
+		<a href="/{{ locale }}/index.html"><img id="header-img" src="/resources/img/roboconf.jpg" alt="Roboconf" /></a>
 
 		<ul class="nav navbar-nav navbar-right" id="top-menu">
 			<li><a href="/{{ locale }}/{{ site.urls['main.news'][locale] }}.html" class="{% if page.menus[0] == "project" %}ep-selected{% else %}ep{% endif %}">

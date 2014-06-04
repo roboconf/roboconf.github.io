@@ -8,6 +8,18 @@ menus: [ "project", "events" ]
 Various events where Roboconf was shown.  
 Slides can help to understand the project and its uses cases.
 
+## &laquo; RMLL 2014 &raquo;
+
+* July 7<sup>th</sup>-11<sup>th</sup>, 2014
+* There will be a talk about Roboconf at the [RMLL 2014](https://2014.rmll.info/) in Montpellier (France).
+
+
+## &laquo; EclipseCon France 2014 &raquo;
+
+* June 19<sup>th</sup>, 2014
+* Roboconf is part of [this talk](https://www.eclipsecon.org/france2014/node/738) at EclipseCon France.
+* Here is the [event's page](https://www.eclipsecon.org/france2014/) at EclipseCon.org
+
 
 ## &laquo; Eclipse IoT 2014 &raquo;
 

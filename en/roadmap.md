@@ -10,20 +10,20 @@ The roadmap for the next months covers several aspects.
 
 * **Platform**
 
-    * Refactor the code, add unit tests and improve the code coverage.
-    * Support new IaaS: Microsoft Azure, Open Stack, VM Ware.
+    * Refactor the code, add unit tests and improve the code coverage. <span class="roadmap-in-progress">[ In Progress ]</span>
+    * Support new IaaS: Microsoft Azure, Open Stack, VM Ware. <span class="roadmap-done">[ Done ]</span>
     * Prototype a solution for the monitoring.
-    * Migrate the Deployment Manager and the Agent to OSGi.
+    * Migrate the Deployment Manager and the Agent to OSGi. <span class="roadmap-in-progress">[ In Progress ]</span>
     * Write a library or find tools to write and execute user scenarios (testing). 
 
 * **Project Promotion**
 
-    * Add user documentation on the web site.
-    * Publish project examples.
+    * Add user documentation on the web site. <span class="roadmap-done">[ Done ]</span>
+    * Publish project examples. <span class="roadmap-done">[ Done ]</span>
 
 * **Tools**
 
-    * Complete the web application to drive the Deployment Manager.
+    * Complete the web application to drive the Deployment Manager. <span class="roadmap-in-progress">[ In Progress ]</span>
     * Create a Maven plug-in for Roboconf projects.
     * Create development tools (text editors to help writing configuration files).
 
