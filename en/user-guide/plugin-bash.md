@@ -49,14 +49,14 @@ All the exports of the instance are available as environment vars (their names a
 Imports are more complex, as there may be multiple ones: let's take the example of an apache load balancer, that imports tomcat "ip" and "portAjp" variables.
 The imports will look like this (for N tomcat instances named "tomcat1" to "tomcatN"):
 
-	tomcat\_size = N
-	tomcat\_1\_name = tomcat1
-	tomcat\_1\_ip = < ip address of tomcat 1 >
-	tomcat\_1\_portAjp = < AJP port for tomcat 1 >
+	tomcat_size = N
+	tomcat_1_name = tomcat1
+	tomcat_1_ip = < ip address of tomcat 1 >
+	tomcat_1_portAjp = < AJP port for tomcat 1 >
 	...
-	tomcat\_N\_name = tomcatN
-	tomcat\_N\_ip = < ip address of tomcat N >
-	tomcat\_1\_portAjp = < AJP port for tomcat 1 >
+	tomcat_N_name = tomcatN
+	tomcat_N_ip = < ip address of tomcat N >
+	tomcat_1_portAjp = < AJP port for tomcat 1 >
 
 So, the naming convention for imports is < componentName >\_< index >\_< exportName >, with index starting at 1 and max(index) given by < componentName >\_size .
 
