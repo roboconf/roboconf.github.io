@@ -21,6 +21,12 @@ Slides can help to understand the project and its uses cases.
 * Here is the [event's page](https://www.eclipsecon.org/france2014/) at EclipseCon.org
 
 
+## &laquo; CAL 2014 &raquo;
+
+* June 10<sup>th</sup>-11<sup>th</sup>, 2014
+* Roboconf is mentioned in [the slides](http://lig-membres.imag.fr/donsez/pub/publi/cal2014-keynote.pdf).
+* Here is the [event's page](http://cal2014.enseeiht.fr/programme.html).
+
 ## &laquo; Eclipse IoT 2014 &raquo;
 
 * February 19<sup>th</sup>, 2014

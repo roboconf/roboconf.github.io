@@ -11,15 +11,22 @@ ainsi que les publications dans lesquelles il a été mentionné.
 
 ## &laquo; RMLL 2014 &raquo;
 
-* Du 7 au 11 Juillet 2014
+* Du 7 au 11 juillet 2014
 * Il y aura une session sur Roboconf aux [RMLL 2014](https://2014.rmll.info/) à Montpellier.
 
 
 ## &laquo; EclipseCon France 2014 &raquo;
 
-* 19 Juin 2014
+* 19 juin 2014
 * Roboconf fait partie de [cette présentation](https://www.eclipsecon.org/france2014/node/738) à EclipseCon France.
 * Voilà la [page de l'événement](https://www.eclipsecon.org/france2014/) sur EclipseCon.org
+
+
+## &laquo; CAL 2014 &raquo;
+
+* 10 et 11 juin 2014
+* Roboconf est mentionné dans [la présentation](http://lig-membres.imag.fr/donsez/pub/publi/cal2014-keynote.pdf).
+* Le site web de l'événement est [ici](http://cal2014.enseeiht.fr/programme.html).
 
 
 ## &laquo; Eclipse IoT 2014 &raquo;
