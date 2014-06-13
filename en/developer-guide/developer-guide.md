@@ -18,7 +18,6 @@ menus: [ "developers", "developer-guide" ]
 
 ## REST API
 
-* [Init](rest-api-init.html)
 * [Management](rest-api-management.html)
 * [Application](rest-api-application.html)
 
