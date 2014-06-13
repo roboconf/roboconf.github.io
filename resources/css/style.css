@@ -323,3 +323,32 @@ span.roadmap-in-progress {
 .na {
 	font-weight: bold;
 }
+
+/* Tables for parameters */
+
+table {
+	margin-top: 40px;
+	border: solid black 1px;
+	border-collapse: collapse;
+}
+
+table td {
+	border: solid black 1px;
+	padding: 6px 14px;
+}
+
+table th {
+	background-color: #fff;
+	text-align: center;
+	font-weight: bold;
+	border: solid black 1px;
+	padding: 10px 14px;
+}
+
+table tr:nth-child(odd)	{ 
+	background-color: #eee;
+}
+
+table tr:nth-child(even) {
+	background-color: #fff;
+}
