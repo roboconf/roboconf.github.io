@@ -59,7 +59,6 @@ openstack.floatingIpPool = public
 | openstack.securityGroup | The VM security group | default | no |
 | openstack.floatingIpPool | A pool of available public IPs, so that one of them be associated to the VM  (if no pool is provided, the VM only has a private IP) | none | no |
 | openstack.volumeId | The ID or name of a volume to attach to the VM (if no volume is found with the given ID, it will be considered a name). | none | no |
-| openstack.volumeSizeGb | The size in GB of the volume to attach (usable only with volumeId set as a volume name) | none | no |
+| openstack.volumeSizeGb | The size in GB of the volume to attach (usable only with volumeId set as a volume name: the volume would then be created if not present). | none | no |
 | openstack.volumeMountPoint | The mount point of the volume to attach (usable only with volumeId set). Should comply with Openstack volume mount point name conventions (eg. /dev/vdb or /dev/vdc). | /dev/vdb | no |
-
 
