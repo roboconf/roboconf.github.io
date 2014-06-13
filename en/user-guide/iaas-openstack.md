@@ -45,6 +45,7 @@ openstack.securityGroup = default
 openstack.floatingIpPool = public
 ```
 
+
 | property | description | default | mandatory |
 | --- | --- | --- | --- |
 | iaas.type | Determines the IaaS plugin to be used | none, should be set to "openstack" | yes |
