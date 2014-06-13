@@ -44,3 +44,19 @@ openstack.flavor = m1.small
 openstack.securityGroup = default
 openstack.floatingIpPool = public
 ```
+
+| property | description | default | mandatory |
+| --- | --- | --- |
+| iaas.type | Determines the IaaS plugin to be used | none, should be set to "openstack" | yes |
+| openstack.identityUrl | URL of the identity server (aka. keystone) | none | yes |
+| openstack.computeUrl | URL of the compute service (aka. nova) | none | yes |
+| openstack.tenantId | The tenant ID associated to the user to connect | none | yes |
+| openstack.user | The name of the user to connect | none | yes |
+| openstack.password | The password of the user to connect | none | yes |
+| openstack.keypair | The name of the key pair used to connect | none | yes |
+| openstack.image | The ID of the VM image or snapshot used as a template for the VM | none | yes |
+| openstack.flavor | The VM "size" aka. flavor in Openstack | m1.tiny | no |
+| openstack.securityGroup | The VM security group | default | no |
+| openstack.floatingIpPool | A pool of available public IPs, so that one of them be associated to the VM  (if no pool is provided, the VM only has a private IP) | none | no |
+| openstack.volumeId | The ID of a volume to attach to the VM | none | no |
+
