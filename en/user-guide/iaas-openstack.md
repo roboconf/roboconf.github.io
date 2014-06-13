@@ -46,7 +46,7 @@ openstack.floatingIpPool = public
 ```
 
 
-| property | description | default | mandatory |
+| Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
 | iaas.type | Determines the IaaS plugin to be used | none, should be set to "openstack" | yes |
 | openstack.identityUrl | URL of the identity server (aka. keystone) | none | yes |
