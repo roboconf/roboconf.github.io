@@ -23,23 +23,23 @@ List the whole graph of a given application (all instances of VMs and apps).
 
 - Content-Type: application/json
 
-**Response Text Object:**
+**Response JSON Object:**
 
 Array of instances (VMs or apps) : [ inst1, ..., instN ]
 
 An instance is an object with the following properties:
 
 - name: the instance name
-- path: the instance path (with | used as a peth separator)
+- path: the instance path (with / used as a path separator)
 - status: the instance status (NOT\_DEPLOYED, DEPLOYING, DEPLOYED\_STOPPED, STARTING, DEPLOYED\_STARTED, PROBLEM)
 - component: an object that provides information about the deployed component, including its name, alias, and installer flavor (eg. puppet or bash).
 
 Example:
 
 [
-{"name":"Mongo primary","path":"|Mongo primary","status":"NOT_DEPLOYED",
+{"name":"Mongo primary","path":"/Mongo primary","status":"NOT_DEPLOYED",
  "component":{"name":"VmMongo","alias":"Mongo VM","installer":"iaas"}},
-{"name":"Mongo primary node","path":"|Mongo primary|Mongo primary node","status":"NOT_DEPLOYED",
+{"name":"Mongo primary node","path":"/Mongo primary/Mongo primary node","status":"NOT_DEPLOYED",
  "component":{"name":"MongoReplicasetMember","alias":"A MongoDB node part of a replica-set","installer":"puppet"}}
 ]
 
@@ -58,27 +58,25 @@ Example:
 
     HTTP/1.1 200 OK
     Content-Type: application/json
-    Transfer-Encoding: chunked
-        
-    8f
-    [{"name":"Mongo primary","path":"|Mongo primary","status":"NOT_DEPLOYED","component":{"name":"VmMongo","alias":"Mongo VM","installer":"iaas"}},
-    d2
-    {"name":"Mongo primary node","path":"|Mongo primary|Mongo primary node","status":"NOT_DEPLOYED","component":{"name":"MongoReplicasetMember","alias":"A MongoDB node part of a replica-set","installer":"puppet"}}]
-    0
+    [{"name":"Mongo primary","path":"/Mongo primary","status":"NOT_DEPLOYED","component":{"name":"VmMongo","alias":"Mongo VM","installer":"iaas"}},
+    {"name":"Mongo primary node","path":"/Mongo primary/Mongo primary node","status":"NOT_DEPLOYED","component":{"name":"MongoReplicasetMember","alias":"A MongoDB node part of a replica-set","installer":"puppet"}}]
 
-## POST /app/{name}/deploy/instance/{instancePath}
+## POST /app/{name}/deploy
 
 Deploy an instance.
 
 **Query Parameters:**
 
 - name: the application name (as a path parameter).
-- instancePath: the path to the instance to deploy (as a path parameter).
-- applyToAllChildren: true | false (optional, default false).
 
 **Request Headers:**
 
 - Content-type: application/json
+
+**Request JSON Objet:**
+
+- instance-path: the instance path (using / as separator).
+- apply-to-children: apply to subtree, or only to base node ("true" or "false", default "false").
 
 **Response Headers:**
 
@@ -96,26 +94,33 @@ N/A
 
 **Request:**
 
-    POST /app/mongo-replicaset/deploy/instance/%7CMongo%20primary HTTP/1.1
+    POST /app/mongo-replicaset/deploy HTTP/1.1
     Host: localhost:9998
+    {
+      "instance-path": "/Mongo/primary",
+      "apply-to-children": "true"
+    }
 
 **Response:**
 
     HTTP/1.1 200 OK
     
-## POST /app/{name}/start/instance/{instancePath}
+## POST /app/{name}/start
 
 Start a deployed instance.
 
 **Query Parameters:**
 
 - name: the application name (as a path parameter).
-- instancePath: the path to the instance to start (as a path parameter).
-- applyToAllChildren: true | false (optional, default false).
 
 **Request Headers:**
 
 - Content-type: application/json
+
+**Request JSON Objet:**
+
+- instance-path: the instance path (using / as separator).
+- apply-to-children: apply to subtree, or only to base node ("true" or "false", default "false").
 
 **Response Headers:**
 
@@ -133,30 +138,36 @@ N/A
 
 **Request:**
 
-    POST /app/mongo-replicaset/start/instance/%7CMongo%20primary%7CMongo%20primary%20node HTTP/1.1
+    POST /app/mongo-replicaset/start HTTP/1.1
     Host: localhost:9998
+    {
+      "instance-path": "/Mongo/primary/Mongo primary node",
+      "apply-to-children": "true"
+    }
 
 **Response:**
 
     HTTP/1.1 200 OK
 
-## POST /app/{name}/stop/instance/{instancePath}
+## POST /app/{name}/stop
 
 Stop a running instance.
 
 **Query Parameters:**
 
 - name: the application name (as a path parameter).
-- instancePath: the path to the instance to stop (as a path parameter).
-- applyToAllChildren: true | false (ignored: all children are stopped).
 
 **Request Headers:**
 
 - Content-type: application/json
 
+**Request JSON Objet:**
+
+- instance-path: the instance path (using / as separator).
+
 **Response Headers:**
 
-**Response Text Object:**
+**Response JSON Object:**
 
 N/A
 
@@ -172,24 +183,29 @@ N/A
 
     POST /app/mongo-replicaset/stop/instance/%7CMongo%20primary%7CMongo%20primary%20node HTTP/1.1
     Host: localhost:9998
+    {
+      "instance-path": "/Mongo/primary/Mongo primary node"
+    }
 
 **Response:**
 
     HTTP/1.1 200 OK
 
-## POST /app/{name}/undeploy/instance/{instancePath}
+## POST /app/{name}/undeploy
 
 Undeploy a deployed instance. The instance should be stopped: if not, a stop will be forced before undeploying.
 
 **Query Parameters:**
 
 - name: the application name (as a path parameter).
-- instancePath: the path to the instance to undeploy (as a path parameter).
-- applyToAllChildren: true | false (ignored: all children are undeployed).
 
 **Request Headers:**
 
 - Content-type: application/json
+
+**Request JSON Objet:**
+
+- instance-path: the instance path (using / as separator).
 
 **Response Headers:**
 
@@ -207,8 +223,11 @@ N/A
 
 **Request:**
 
-    POST /app/mongo-replicaset/start/instance/%7CMongo%20primary%7CMongo%20primary%20node HTTP/1.1
+    POST /app/mongo-replicaset/undeploy HTTP/1.1
     Host: localhost:9998
+    {
+      "instance-path": "/Mongo/primary/Mongo primary node"
+    }
 
 **Response:**
 
