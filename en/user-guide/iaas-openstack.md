@@ -1,11 +1,11 @@
 ---
-title: "Openstack Support"
+title: "OpenStack Support"
 layout: page
 id: "ug.snapshot.iaas-open-stack"
 menus: [ "users", "user-guide" ]
 ---
 
-Roboconf has a IaaS implementation for Openstack.  
+Roboconf has a IaaS implementation for OpenStack.  
 It only supports the creation of *compute* VMs.
 
 The implementation can associate a public address to the created VM.  
@@ -14,7 +14,7 @@ The behavior depends on the **iaas.properties** file.
 > Roboconf keeps memory of the most public address for the created VM.  
 > This address will be used by other components which resolve their dependencies through Roboconf.
 
-As an example, if a MySQL server is deployed on Openstack but only has an internal address (i.e. not
+As an example, if a MySQL server is deployed on OpenStack but only has an internal address (i.e. not
 visible the IaaS), then any web application server that uses it will have to be inside the same network.
 This can lead to some issues in case of hybrid cloud. For the moment, Roboconf does not check anything 
 with respect to this. It is assumed the administrator knows what he does.
