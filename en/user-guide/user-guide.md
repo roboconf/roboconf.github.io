@@ -67,7 +67,7 @@ menus: [ "users", "user-guide" ]
 
 	<ul>
 	<li><a href="iaas-support.html">IaaS Support</a></li>
-	<li><a href="iaas-openstack.html">Openstack</a></li>
+	<li><a href="iaas-openstack.html">OpenStack</a></li>
 	<li><a href="iaas-aws.html">Amazon Web Services</a></li>
 	<li><a href="iaas-vmware.html">VMWare</a></li>
 	<li><a href="iaas-azure.html">Microsoft Azure</a></li>
