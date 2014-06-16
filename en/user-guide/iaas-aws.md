@@ -26,8 +26,19 @@ ec2.access.key =
 ec2.secret.key = 
 
 # VM configuration
-ami.vm.node	= 
-vm.instance.type = t1.micro
-ssh.key.name = 
-security.group.name	= 
+ec2.ami	= 
+ec2.instance.type = t1.micro
+ec2.ssh.key = 
+ec2.security.group	= 
 ```
+
+| Property | Description | Default | Mandatory
+| --- | --- | --- | --- |
+| iaas.type | Determines the IaaS plugin to be used | none, should be set to "ec2" | yes |
+| ec2.endpoint | URL of the compute service (eg. eu-west-1.ec2.amazonaws.com)  | none | yes |
+| ec2.access.key | Access key defined in your ec2 account | none | yes |
+| ec2.secret.key | Secret key defined in your ec2 account | none | yes |
+| ec2.ami | The ID of the VM image used as a template for the VM | none | yes |
+| ec2.instance.type | The VM "size" aka. instance type or flavor | t1.micro | no |
+| ec2.ssh.key | The name of the ssh key used to connect | none | yes |
+| ec2.security.group | The VM security group | default | no |
