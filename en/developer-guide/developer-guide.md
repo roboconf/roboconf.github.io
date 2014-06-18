@@ -25,3 +25,7 @@ menus: [ "developers", "developer-guide" ]
 
 * [Web Site Organization](web-site-organization.html)
 * [Documenting a New Version](documenting-a-new-version.html)
+
+## Guidelines
+
+* [Development Guidelines](development-guidelines.html)

@@ -1,4 +1,4 @@
-The web site for [Roboconf](https://github.com/roboconf/roboconf).
+The sources for [Roboconf's web site](http://roboconf.net).
 
 To build the web site locally, you must install [Jekyll](http://jekyllrb.com/).  
 Then, use

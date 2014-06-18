@@ -22,3 +22,5 @@ Just copy / paste and edit.
 # Configuration file for localhost
 iaas.type = local 
 ```
+
+This kind of IaaS does not have any specific property.

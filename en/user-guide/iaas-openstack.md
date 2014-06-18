@@ -43,12 +43,18 @@ openstack.image =
 openstack.flavor = m1.small
 openstack.securityGroup = default
 openstack.floatingIpPool = public
+
+# Storage configuration
+openstack.volumeId =
+openstack.volumeSizeGb =
+openstack.volumeMountPoint =
 ```
 
+Here is a complete description of the parameters for OpenStack.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| iaas.type | Determines the IaaS plugin to be used | none, should be set to "openstack" | yes |
+| iaas.type | Determines the IaaS plugin to be used | none, must be "openstack" | yes |
 | openstack.identityUrl | URL of the identity server (aka. keystone) | none | yes |
 | openstack.computeUrl | URL of the compute service (aka. nova) | none | yes |
 | openstack.tenantId | The tenant ID associated to the user to connect | none | yes |

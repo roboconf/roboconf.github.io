@@ -192,6 +192,9 @@ urls:
   dg.snapshot.life-cycle:
     en: life-cycle
   
+  dg.snapshot.development-guidelines:
+    en: development-guidelines
+  
   #
   # Main pages
   #

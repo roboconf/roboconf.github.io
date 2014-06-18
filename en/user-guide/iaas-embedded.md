@@ -20,3 +20,5 @@ Just copy / paste and edit.
 # Configuration file for Embedded Machines
 iaas.type = embedded
 ```
+
+This kind of IaaS does not have any specific property.

@@ -32,9 +32,11 @@ ec2.ssh.key =
 ec2.security.group	= 
 ```
 
+Here is a complete description of the parameters for Amazon Web Services.
+
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| iaas.type | Determines the IaaS plugin to be used | none, should be set to "ec2" | yes |
+| iaas.type | Determines the IaaS plugin to be used | none, must be "ec2" | yes |
 | ec2.endpoint | URL of the compute service (eg. eu-west-1.ec2.amazonaws.com)  | none | yes |
 | ec2.access.key | Access key defined in your ec2 account | none | yes |
 | ec2.secret.key | Secret key defined in your ec2 account | none | yes |

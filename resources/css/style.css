@@ -316,20 +316,25 @@ span.roadmap-in-progress {
 
 /* Syntax Highlighting with Pygment */
 
-.c {
+code.properties .c {
 	color: green;
 }
 
-.na {
+code.properties .na {
 	font-weight: bold;
+}
+
+code.java .cm {
+	color: #4978a7;
 }
 
 /* Tables for parameters */
 
 table {
-	margin-top: 40px;
+	margin-top: 16px;
 	border: solid black 1px;
 	border-collapse: collapse;
+	width: 100%;
 }
 
 table td {
@@ -346,9 +351,21 @@ table th {
 }
 
 table tr:nth-child(odd)	{ 
-	background-color: #eee;
+	background-color: #c8c8c8;
 }
 
 table tr:nth-child(even) {
 	background-color: #fff;
+}
+
+table td:nth-child(1) {
+	color: #1a181d;
+}
+
+table td:nth-child(3) {
+	text-align: center;
+}
+
+table td:nth-child(4) {
+	text-align: center;
 }
