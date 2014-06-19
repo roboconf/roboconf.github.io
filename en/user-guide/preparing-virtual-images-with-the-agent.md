@@ -15,9 +15,8 @@ with SSH and some scripts, or by using other deployment solutions. In the cloud,
 is achieved by creating and storing a virtual image. When a VM will be instantiated from this image,
 the agent will already be there.
 
-> We are thinking about providing a mechanism in the DM to upload the agent on a remote host.  
-> This will be more convenient for devices or self-hosted machines. For cloud deployments, this
-> will result in less things to do to create the virtual image.
+> We plan to create system packages (.deb, .rpm) for both the DM and the agent.  
+> For agents, it will simplify the creation of the virtual images.
 
 The creation of a virtual image depends on the IaaS you use.  
 You may also define virtual appliances with [OVF](http://en.wikipedia.org/wiki/Open_Virtualization_Format) 
@@ -39,8 +38,10 @@ Make sure you have a recent version of Puppet. See [this page](plugin-puppet.htm
 for more information about Puppet installation.
 
 Eventually, you need to have the agent installed somewhere on the system.  
-Grab the agent's ZIP file and unzip it somewhere on the file system. Make sure the agent will start with 
-the system. A simple way can be to call it from from the the *rc.local* file.
+Until we have system packages, the agent must be deployed by hand and configured to start with the machine and/or VM.
+
+Grab the agent's ZIP file and unzip it somewhere on the file system.  
+Make sure the agent will start with the system. A simple way can be to call it from from the the *rc.local* file.
 
 	sudo nano /etc/rc.local
 
@@ -56,3 +57,19 @@ Obviously, you can also create an **init.d** script.
 Once you have a VM running with all of this, you can create a snapshot and save it as a virtual image.
 The image ID will be referenced in the **iaas.properties**. When a VM will be created by Roboconf, it will
 create it from this template.
+
+You may wonder if the agent needs parameters at startup.  
+Most of the time, the DM passes information to agents through mechanisms that are available
+in cloud infrastructures (through *user data*). However, since Roboconf can deploy on other machines than
+just VMs, other solutions are available to pass data to agents.
+
+Here is a short table to indicate the parameters to give.
+
+| IaaS / Platform | Parameters and Comments |
+| --- | --- |
+| Amazon Web Services | No argument. Information will be transmitted by the DM through AWS mechanisms. |
+| Microsoft Azure | Two arguments are required. Use **startup.sh platform azure** |
+| OpenStack | No argument. Information will be transmitted by the DM through OpenStack mechanisms. |
+| VMWare | No argument. Information will be transmitted by the DM through VMWare mechanisms. |
+| "Embedded" | You will need to pass 6 arguments to the startup script. See comments at beginning of the **startup.sh** script. |
+| "In-Memory" | It makes no sense for this, since the agent is created by the DM and runs in-memory. |

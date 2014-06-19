@@ -49,7 +49,7 @@ If we take the following graph definition...
 	│   ├── VM/
 	│   ├── Tomcat/
 	│   ├── MySQL/
-	│   ├── Apache/
+	│   └── Apache/
 	└── instances/
     	└── ...
 

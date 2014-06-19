@@ -9,10 +9,15 @@ Roboconf's source code is hosted on GitHub.
 See [https://github.com/roboconf/roboconf](https://github.com/roboconf/roboconf)  
 Related projects can be found [here](https://github.com/roboconf).
 
+
 # Building Roboconf
 
-You must have [Maven](http://maven.apache.org/) installed to build Roboconf.  
-Maven 3 is generally used, but it should also work with Maven 2.  
+You must have [Maven](http://maven.apache.org/) (version 3) installed to build Roboconf.  
+You should also have [NodeJS](http://nodejs.org/) and [NPM](https://www.npmjs.org/) installed.
+They are used at the build end to embed the web administration in the Deployment Manager's archive. If you
+do not have them installed, the build will fail. This is not critical, unless you need the DM
+to be packaged as a WAR.
+
 Clone the main repository and execute
 
 	mvn clean install
@@ -22,9 +27,13 @@ You can then get...
 * ... the deployment manager under **roboconf-dm-webapp/target** (it is a WAR file).
 * ... the agent under **roboconf-agent/target** (it is a ZIP file).
 
-To test Roboconf, you also need [Roboconf's web administration](https://github.com/roboconf/roboconf-web-administration).  
-Roboconf's web applications use another build system since they were developed with Javascript technologies.  
+
+# Roboconf's Web Administration
+
+[Roboconf's web administration](https://github.com/roboconf/roboconf-web-administration) is hosted on another repository.  
+Roboconf's web applications are developed and built with Javascript technologies.  
 Follow the instructions given in the readme of these sub-projects to build them.
+
 
 # Contributing
 
@@ -35,6 +44,7 @@ These links may help you.
 * [Understanding pull requests](https://help.github.com/articles/using-pull-requests)
 * [Forking a repository](https://help.github.com/articles/fork-a-repo)
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request)
+
 
 # Contributing to the Web Site
 

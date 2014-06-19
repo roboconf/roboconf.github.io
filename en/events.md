@@ -11,7 +11,8 @@ Slides can help to understand the project and its uses cases.
 ## &laquo; RMLL 2014 &raquo;
 
 * July 7<sup>th</sup>-11<sup>th</sup>, 2014
-* There will be a talk about Roboconf at the [RMLL 2014](https://2014.rmll.info/) in Montpellier (France).
+* There will be a talk about Roboconf at the [RMLL 2014](https://2014.rmll.info/conference285) in Montpellier (France).
+* The event's page is [here](https://2014.rmll.info/).
 
 
 ## &laquo; EclipseCon France 2014 &raquo;

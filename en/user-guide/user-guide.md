@@ -30,6 +30,7 @@ menus: [ "users", "user-guide" ]
 
 	<ul>
 	<li><a href="installing-the-deployment-manager.html">Installing the Deployment Manager (DM)</a></li>
+	<li><a href="configuring-the-deployment-manager.html">Configuring the Deployment Manager (DM)</a></li>
 	<li><a href="installing-the-messaging-server.html">Installing the Messaging Server</a></li>
 	<li><a href="preparing-virtual-images-with-the-agent.html">Preparing Virtual Images with the Agent</a></li>
 	<li><a href="launching-the-web-administration.html">Launching the Web Administration</a></li>
@@ -48,6 +49,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="graph-definition.html">The Graph</a></li>
 	<li><a href="graph-resources.html">The Graph Resources</a></li>
 	<li><a href="instances-description.html">The Instances</a></li>
+	<li><a href="roboconf-dsl.html">Roboconf DSL</a></li>
 	<ul>
 </div>
 
@@ -57,6 +59,8 @@ menus: [ "users", "user-guide" ]
 	<ul>
 	<li><a href="web-administration.html">Web Administration</a></li>
 	<li><a href="editors.html">Editors</a></li>
+	<li><a href="monitoring-roboconf.html">Monitoring Roboconf</a></li>
+	<li><a href="monitoring-applications-deployed-with-roboconf.html">Monitoring Applications deployed with Roboconf</a></li>
 	<ul>
 </div>
 <div class="clear"></div>

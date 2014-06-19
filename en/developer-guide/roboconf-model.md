@@ -7,7 +7,7 @@ menus: [ "developers", "developer-guide" ]
 
 This page explains the way Roboconf manages the model things.  
 
-There is not a Roboconf model, but TWO Roboconf models.  
+There is not ONE Roboconf model, but TWO Roboconf models.  
 They cover various steps and requirements.
 
 Roboconf's model is handled in **roboconf-core**.
@@ -37,14 +37,22 @@ This small portion is made up of several regions.
 This model allows to write editors in IDE (Eclipse, Netbeans, whatever).  
 From an in-memory representation, we can update a text portion. This model is useless at runtime.
 
-Facets are handled at this level.
+Facets are handled at this level.  
+In the runtime model, there is no facet, but only components. This way, developers
+have a simple object to manipulate: components. All the complexity has been handled
+at parsing time.
 
 
 ## The Runtime Model
 
 The runtime model is the one actually used by the platform at runtime.  
-It manipulates Roboconf concepts, such as the graph and the instances. It is what is
+It manipulates Roboconf concepts, such as the graph, components and instances. It is what is
 generally called a *model* in platforms.
+
+The transition between the parsing model and the runtime model is achieved through converters.
+There are converters for both directions (parsing to runtime and runtime to parsing). This could
+also allow other DSL to be implemented for Roboconf. One could have its own parsing model. What is
+important is to be able to map it to the runtime model.
 
 
 ## Dispatch
@@ -102,4 +110,11 @@ Roboconf's DSL is inspired from CSS.
 It was preferred over XML (easy but heavy), JSon (not user-friendly) and YAML 
 (error prone when many levels of indentation).
 
-Its main force is too very simple, with the minimal set of characters to write.
+Its main force is too very simple, with the minimal set of characters to write.  
+Every instruction must fit into a single line. So, one line = one instruction.
+
+Comments are a little bit specific.  
+On one hand, they are instructions (in some way). There are no multi-line comments. 
+A comment is a single line and starts with sharp character. And on the other hand,
+every instruction can have an end comment. So, on a same line, there can be an instruction
+(such as an installer name), followed by a comment.

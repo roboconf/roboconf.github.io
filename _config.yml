@@ -1,7 +1,7 @@
 encoding: utf-8
 markdown: redcarpet
 redcarpet:
-  extensions: ["tables"]
+  extensions: ["tables", "no_intra_emphasis"]
 
 
 ##########################
@@ -72,6 +72,9 @@ urls:
   ug.snapshot.installing-the-deployment-manager:
     en: user-guide/installing-the-deployment-manager
   
+  ug.snapshot.configuring-the-deployment-manager:
+    en: user-guide/configuring-the-deployment-manager
+  
   ug.snapshot.installing-the-messaging-server:
     en: user-guide/installing-the-messaging-server
   
@@ -113,6 +116,15 @@ urls:
   
   ug.snapshot.plugin-puppet:
     en: user-guide/plugin-puppet
+  
+  ug.snapshot.roboconf-dsl:
+    en: user-guide/roboconf-dsl
+  
+  ug.snapshot.monitoring-roboconf:
+    en: user-guide/monitoring-roboconf
+  
+  ug.snapshot.monitoring-applications-deployed-with-roboconf:
+    en: user-guide/monitoring-applications-deployed-with-roboconf
   
   ug.snapshot.editors:
     en: user-guide/editors

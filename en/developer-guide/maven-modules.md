@@ -42,4 +42,4 @@ other implementations had to appear, then this module may have to be split.
 
 > For the moment, the DM loads all the IaaS implementations within the same class loader.  
 > In the same way, an agent loads all the plug-ins in a same class loader.  
-> It is planned to migrate to OSGi before the end of the year.
+> It is planned to migrate to OSGi before the end of Summer 2014.

@@ -2,6 +2,7 @@
 title: "Roboconf"
 layout: welcome
 id: "home"
+description: Roboconf est une solution pour déployer des applications distribuées dans le cloud ou sur un réseau d'objets connectés...
 ---
 
 <div id="welcome-dl" class="button">

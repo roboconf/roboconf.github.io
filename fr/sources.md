@@ -9,10 +9,15 @@ Le code source de Roboconf est hébergé sur GitHub.
 Voir [https://github.com/roboconf/roboconf](https://github.com/roboconf/roboconf)  
 Le code source des projets relatifs (consoles web, etc) peut être trouvé [ici](https://github.com/roboconf).
 
+
 # Compiler Roboconf
 
-Il faut avoir installé [Maven](http://maven.apache.org/) pour compiler Roboconf.  
-Maven 3 est régulièrement utilisée dans l'équipe de développement, mais cela devrait fonctionner aussi avec Maven 2.  
+Il faut avoir installé [Maven](http://maven.apache.org/) (version 3) pour compiler Roboconf.  
+Vous aurez aussi besoin de [NodeJS](http://nodejs.org/) et [NPM](https://www.npmjs.org/). Ces solutions sont
+utilisées à la fin du build pour embarquer l'administration web de Roboconf dans l'archive du DM. Si vous
+n'avez pas installé ces outils, ce n'est pas dramatique en soi. Simplement, le gestionnaire de déploiement
+ne pourra pas être packagé dans une archive WAR.
+  
 Clonez le dépôt principal et exécutez
 
 	mvn clean install
@@ -22,9 +27,13 @@ Vous trouverez...
 * ... le *deployment manager* (DM) sous **roboconf-dm-webapp/target** (il s'agît d'un WAR).
 * ... l'agent under **roboconf-agent/target** (il s'agît d'un ZIP).
 
-Pour utiliser Roboconf, vous aurez également besoin de [l'administration web de Roboconf](https://github.com/roboconf/roboconf-web-administration).  
+
+## L'Administration Web de Roboconf
+
+[L'administration web de Roboconf](https://github.com/roboconf/roboconf-web-administration) est hébergée sur un autre dépôt Git.  
 Les applications web liées à Roboconf utilisent un autre système de build que Maven. En effet, ces applications
 sont développées en Javascript. Il est conseillé de suivre les *readme* de ces sous-projets pour les construire.
+
 
 # Contribuer au Projet
 
@@ -37,6 +46,7 @@ Sinon, il y a probablement des blogs francophones qui auront fourni d'autres exp
 * [Understanding pull requests](https://help.github.com/articles/using-pull-requests)
 * [Forking a repository](https://help.github.com/articles/fork-a-repo)
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request)
+
 
 # Contribuer au Site Web
 

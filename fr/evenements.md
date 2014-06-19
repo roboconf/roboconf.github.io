@@ -12,7 +12,8 @@ ainsi que les publications dans lesquelles il a été mentionné.
 ## &laquo; RMLL 2014 &raquo;
 
 * Du 7 au 11 juillet 2014
-* Il y aura une session sur Roboconf aux [RMLL 2014](https://2014.rmll.info/) à Montpellier.
+* Il y aura une session sur Roboconf aux [RMLL 2014](https://2014.rmll.info/conference285) à Montpellier.
+* La page de cet événement se trouve [ici](https://2014.rmll.info/).
 
 
 ## &laquo; EclipseCon France 2014 &raquo;

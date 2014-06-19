@@ -30,7 +30,9 @@ In Roboconf, applications parts are called instances.
 An instance is associated with a component, itself defined in the graph model.
 
 An instance is a specific piece of Software, running and working within the scope of a Roboconf application.  
-It can be an application server, a database, an applicative module or even a VM. Instances have a life cycle.  
+It can be an application server, a database, an applicative module or even a VM. 
+
+Instances have a life cycle.
 
 <img src="/resources/img/instance-life-cycle.png" alt="The life cycle of an instance" />
 
@@ -41,8 +43,12 @@ It is now reserved for root instances (often VM). If a root instance has not sen
 the root instance will go into the **problem** state. If a heart beat arrives, it will go back into the **deployed - started**
 state.
 
+> If a root instance is in the **PROBLEM** state, it means either that the agent encountered a
+> problem, that the VM has network issues, or that the messaging server had a problem. It does not
+> mean application parts do not work.
+
 Another difference of root instances is that they do not reach the **deployed - stopped** state.  
-They are either deployed and started, or not deployed. They can go through all the intermediate states.
+They are either deployed and started, or not deployed. They cannot go through the intermediate states.
 
 Let's now illustrate the life cycle of an instance with an example.  
 We will take the LAMP example (Apache load balancer, Tomcat and MySQL). We will focus on the Tomcat server.
@@ -67,4 +73,4 @@ into **deployed - started** state.
 
 The life cycle of application instances is managed through the Deployment Manager.  
 A user that wants to modify the state of an instance will have to use the REST API. This API
-can modify the state of an instance, of an instance and its children, or of all the instances.
+can modify the state of an instance, or modify states in bulk mode.
