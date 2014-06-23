@@ -42,6 +42,9 @@ openstack.keypair =
 openstack.image = 
 openstack.flavor = m1.small
 openstack.securityGroup = default
+
+# VM networking.
+# Use either floatingIpPool for Nova, or networkId / fixedIp for Neutron.
 openstack.floatingIpPool = public
 
 # Storage configuration
@@ -64,7 +67,9 @@ Here is a complete description of the parameters for OpenStack.
 | openstack.image | The ID of the VM image or snapshot used as a template for the VM | none | yes |
 | openstack.flavor | The VM "size" aka. flavor in Openstack | m1.tiny | no |
 | openstack.securityGroup | The VM security group | default | no |
-| openstack.floatingIpPool | A pool of available public IPs, so that one of them be associated to the VM  (if no pool is provided, the VM only has a private IP) | none | no |
+| openstack.floatingIpPool | A pool of available public IPs, so that one of them be associated to the VM (if no pool is provided, the VM only has a private IP). Works only for Nova networking (for Neutron, use networkId / fixedIp instead). | none | no |
+| openstack.networkId | A neutron (aka quantum) network ID, to use for networking. If ni fixedIp is specified, DHCP will be used to associate an IP from the corresponding network. Works only for Neutron networking (for Nova networking, use floatingIpPool instead). | none | no |
+| openstack.fixedIp | When a networkId is specified (Neutron networking), it is possible to select a fixed IP from that network. When no fixedIp is specified, DHCP is used to allocate one dynamically. | none | no |
 | openstack.volumeId | The ID or name of a volume to attach to the VM (if no volume is found with the given ID, it will be considered a name). | none | no |
 | openstack.volumeSizeGb | The size in GB of the volume to attach (usable only with volumeId set as a volume name: the volume would then be created if not present). | none | no |
 | openstack.volumeMountPoint | The mount point of the volume to attach (usable only with volumeId set). Should comply with Openstack volume mount point name conventions (eg. /dev/vdb or /dev/vdc). | /dev/vdb | no |
