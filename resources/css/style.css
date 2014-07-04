@@ -283,6 +283,7 @@ img.flag {
 .content .floated {
 	float: left;
 	width: 360px;
+	height: 200px;
 }
 
 p > img.illustration {

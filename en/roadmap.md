@@ -8,26 +8,27 @@ menus: [ "project", "roadmap" ]
 Roboconf started as a Research prototype and is now under industrialization.  
 The roadmap for the next months covers several aspects.
 
-* **Platform**
+* **Until mid-September**
 
-    * Refactor the code, add unit tests and improve the code coverage. <span class="roadmap-in-progress">[ In Progress ]</span>
-    * Support new IaaS: Microsoft Azure, Open Stack, VM Ware. <span class="roadmap-done">[ Done ]</span>
-    * Prototype a solution for the monitoring.
-    * Migrate the Deployment Manager and the Agent to OSGi. <span class="roadmap-in-progress">[ In Progress ]</span>
-    * Write a library or find tools to write and execute user scenarios (testing). 
+	* Bundle the DM and the agent in [Karaf](http://karaf.apache.org/) distributions.
+	* Use [iPOJO](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) and initialize a service approach.
+	* Create system packages (such a Debian packages) to ease installation.
+	* Setup a [Maven repository](https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide) for Roboconf.
+	* Complete the **download** section on the web site.
+	* Support [Docker](http://www.docker.com/).
+	* Write the first tutorial for Roboconf.
 
-* **Project Promotion**
+* **From mid-September**
 
-    * Add user documentation on the web site. <span class="roadmap-done">[ Done ]</span>
-    * Publish project examples. <span class="roadmap-done">[ Done ]</span>
+	* Add MBeans to monitor Roboconf.
+	* Add monitoring support to Roboconf.
+	* Create a Maven plug-in to automate validation and build.
+	* Create text editors for Roboconf's DSL.
+	* Create documentation generators.
+	* Add support to execute user scenarios.
+	* Setup a repository of reusable recipes and components.
 
-* **Tools**
-
-    * Complete the web application to drive the Deployment Manager. <span class="roadmap-in-progress">[ In Progress ]</span>
-    * Create a Maven plug-in for Roboconf projects.
-    * Create development tools (text editors to help writing configuration files).
-
-* **Extensibility**
+* **For Contributions**
 
     * Implement a Chef plug-in.
     * Implement a Puppet plug-in for Puppet masters.

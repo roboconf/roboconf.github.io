@@ -8,26 +8,27 @@ menus: [ "project", "roadmap" ]
 Roboconf a démarré en tant que prototype de recherche et est maintenant en cours d'industrialisation.  
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
-* **Platforme**
+* **Jusqu'à mi-Septembre**
 
-    * Refactoring du code, ajout de tests unitaires, amélioration de la couverture de code. <span class="roadmap-in-progress">[ En Cours ]</span>
-    * Support de nouveaux IaaS : Microsoft Azure, Open Stack, VM Ware. <span class="roadmap-done">[ Fait ]</span>
-    * Prototypage d'une solution de supervision.
-    * Migration du *Deployment Manager* et de l'*Agent* vers OSGi. <span class="roadmap-in-progress">[ En Cours ]</span>
-    * Ecriture d'une librairie (ou recherche d'outils existants) pour exécuter des scénarios utilisateurs (tests). 
+	* Packager le DM et l'agent dans des distributions [Karaf](http://karaf.apache.org/).
+	* Utiliser [iPOJO](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) pour une approche orientée service.
+	* Créer des paquets systèmes (comme des paquets Debian) pour simplifier l'installation.
+	* Mettre en place un [dépôt Maven](https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide) pour Roboconf.
+	* Compléter la section **téléchargement** sur le site web.
+	* Ajouter le support de [Docker](http://www.docker.com/).
+	* Ecrire le premier tutoriel pour Roboconf.
 
-* **Promotion du Projet**
+* **A partir de mi-Septembre**
 
-    * Rajout d'une documentation utilisateur sur le site web. <span class="roadmap-done">[ Fait ]</span>
-    * Publication d'exemples sur GitHub. <span class="roadmap-done">[ Fait ]</span>
+	* Ajouter des MBeans pour superviser Roboconf.
+	* Ajouter la supervision des applications avec Roboconf.
+	* Créer un plug-in Maven pour automatiser la validation et la construction de pack de déploiement.
+	* Créer un éditeur texte pour le DSL de Roboconf.
+	* Créer des générateurs de documentation.
+	* Supporter l'exécution de scénarios utilisateurs.
+	* Mettre en place un dépôt de recettes et de composants réutilisables.
 
-* **Outils**
-
-    * Compléter l'application web pour piloter le DM. <span class="roadmap-in-progress">[ En Cours ]</span>
-    * Créer un plug-in Maven pour les projets Roboconf.
-    * Créer des outils de développement (éditeurs textuels pour les fichiers de configuration).
-
-* **Extensibilité**
+* **Ouvert à Contributions**
 
     * Implémenter un plug-in pour Chef.
     * Implémenter un plug-in pour Puppet Master.

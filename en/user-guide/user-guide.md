@@ -22,7 +22,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="configuration-files.html">Configuration Files</a></li>
 	<li><a href="working-with-roboconf.html">Working with Roboconf</a></li>
 	<li><a href="faq.html">FAQ</a></li>
-	<ul>
+	</ul>
 </div>
 
 <div class="floated">
@@ -34,10 +34,8 @@ menus: [ "users", "user-guide" ]
 	<li><a href="installing-the-messaging-server.html">Installing the Messaging Server</a></li>
 	<li><a href="preparing-virtual-images-with-the-agent.html">Preparing Virtual Images with the Agent</a></li>
 	<li><a href="launching-the-web-administration.html">Launching the Web Administration</a></li>
-	<ul>
+	</ul>
 </div>
-<div class="clear"></div>
-
 
 
 
@@ -50,7 +48,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="graph-resources.html">The Graph Resources</a></li>
 	<li><a href="instances-description.html">The Instances</a></li>
 	<li><a href="roboconf-dsl.html">Roboconf DSL</a></li>
-	<ul>
+	</ul>
 </div>
 
 <div class="floated">
@@ -61,9 +59,9 @@ menus: [ "users", "user-guide" ]
 	<li><a href="editors.html">Editors</a></li>
 	<li><a href="monitoring-roboconf.html">Monitoring Roboconf</a></li>
 	<li><a href="monitoring-applications-deployed-with-roboconf.html">Monitoring Applications deployed with Roboconf</a></li>
-	<ul>
+	</ul>
 </div>
-<div class="clear"></div>
+
 
 	
 <div class="floated">
@@ -77,7 +75,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="iaas-azure.html">Microsoft Azure</a></li>
 	<li><a href="iaas-embedded.html">Embedded</a></li>
 	<li><a href="iaas-localhost.html">In-Memory</a></li>
-	<ul>
+	</ul>
 </div>
 
 <div class="floated">
@@ -88,6 +86,15 @@ menus: [ "users", "user-guide" ]
 	<li><a href="plugin-bash.html">The Bash Plug-in</a></li>
 	<li><a href="plugin-puppet.html">The Puppet Plug-in</a></li>
 	<li><a href="plugin-logger.html">The Logger Plug-in</a></li>
-	<ul>
+	</ul>
 </div>
+
+<div class="floated">
+	<h2>Troubles</h2>
+
+	<ul>
+	<li><a href="troubles-installation.html">Installation</a></li>
+	</ul>
+</div>
+
 <div class="clear"></div>
