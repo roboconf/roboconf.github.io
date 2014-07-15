@@ -17,4 +17,8 @@ It is developed with AngularJS. It allows to use most of the available features,
 * Deploy, start, stop and undeploy Software components (including virtual machines).
 * Create and destroy component instances.
 
-> This page will be updated soon with screen shots illustrating the various features.
+
+## Overview
+
+[This page](web-administration-screenshots.html) shows screenshots of the web administration through a simple scenario.  
+Notice that this page includes quite a lot of pictures and may be heavy to load.

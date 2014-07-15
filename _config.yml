@@ -69,6 +69,9 @@ urls:
   #
   # User Guide Snapshot
   #
+  ug.snapshot.web-administration-screenshots:
+    en: user-guide/web-administration-screenshots
+  
   ug.snapshot.troubles-installation:
     en: user-guide/troubles-installation
   

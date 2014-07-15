@@ -56,6 +56,7 @@ menus: [ "users", "user-guide" ]
 
 	<ul>
 	<li><a href="web-administration.html">Web Administration</a></li>
+	<li><a href="web-administration-screenshots.html">Screenshots of the Web Administration</a></li>
 	<li><a href="editors.html">Editors</a></li>
 	<li><a href="monitoring-roboconf.html">Monitoring Roboconf</a></li>
 	<li><a href="monitoring-applications-deployed-with-roboconf.html">Monitoring Applications deployed with Roboconf</a></li>
