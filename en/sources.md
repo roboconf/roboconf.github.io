@@ -16,7 +16,7 @@ You must have [Maven](http://maven.apache.org/) (version 3) installed to build R
 You should also have [NodeJS](http://nodejs.org/) and [NPM](https://www.npmjs.org/) installed.
 They are used at the build end to embed the web administration in the Deployment Manager's archive. If you
 do not have them installed, the build will fail. This is not critical, unless you need the DM
-to be packaged as a WAR.
+to be packaged as a WAR. 
 (Note concerning Debian/Ubuntu: the NodeJS executable may be named "nodejs" instead of "node". If so,
 go in the /usr/bin directory, then "ln -s nodejs node").
 
