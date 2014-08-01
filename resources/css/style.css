@@ -329,7 +329,7 @@ span.roadmap-in-progress {
 }
 
 .language-java span.cm,
-.language-puppet span.cm {
+.language-puppet span.k {
 	color: #4978a7;
 }
 
