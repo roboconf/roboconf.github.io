@@ -55,8 +55,10 @@ The line has the following format : <i>modulename = [version]</i>
 
 For example, to add the "thias-sysctl" module in version 0.3.0, and the "fsalum-redis" module with no version spec:
 
-	thias-sysctl = 0.3.0
-	fsalum-redis=
+``` properties
+thias-sysctl = 0.3.0
+fsalum-redis=
+```
 
 ### Module content
 
