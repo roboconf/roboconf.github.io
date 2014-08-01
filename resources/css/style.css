@@ -328,9 +328,13 @@ span.roadmap-in-progress {
 	font-weight: bold;
 }
 
-.language-java span.cm,
-.language-puppet span.k {
+.language-java span.cm {
 	color: #4978a7;
+}
+
+.language-puppet span.k {
+	color: #b23e4b;
+	font-weight: bold;
 }
 
 /* Tables for parameters */
