@@ -57,7 +57,7 @@ For example, to add the "thias-sysctl" module in version 0.3.0, and the "fsalum-
 
 ``` properties
 thias-sysctl = 0.3.0
-fsalum-redis=
+fsalum-redis =
 ```
 
 ### Module content
