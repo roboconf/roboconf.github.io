@@ -104,6 +104,7 @@ And the init.pp manifest look like this:
 
 ``` puppet
 class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
+
 	# 'tomcat' is an array of hashes
 	# It needs to be declared as the following:
 	# $tomcat = {
