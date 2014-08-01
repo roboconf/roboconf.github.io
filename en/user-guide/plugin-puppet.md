@@ -96,20 +96,22 @@ In our apache example, the module may look like the following:
 	├── manifests
 	│   └── init.pp
 	└── templates
-    		└── workers.properties.erb
+    	 └── workers.properties.erb
 
 And the init.pp manifest look like this:
 
-	class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
-		# 'tomcat' is an array of hashes
-		# It needs to be declared as the following:
-		# $tomcat = {
-		#              'tomcat1' => {'ip' => '127.0.0.1', 'portajp' => '8009'},
-		#              'tomcat2' => {'ip' => '127.0.0.2', 'portajp' => '8010'}
-		#            }
+``` puppet
+class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
+	# 'tomcat' is an array of hashes
+	# It needs to be declared as the following:
+	# $tomcat = {
+	#              'tomcat1' => {'ip' => '127.0.0.1', 'portajp' => '8009'},
+	#              'tomcat2' => {'ip' => '127.0.0.2', 'portajp' => '8010'}
+	#            }
 	
-  		...
-	}
+	...
+}
+```
 
 ## Possible Upgrade
 
