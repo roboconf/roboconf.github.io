@@ -317,15 +317,19 @@ span.roadmap-in-progress {
 
 /* Syntax Highlighting with Pygment */
 
-code.properties .c {
+.language-properties span.c,
+.language-java span.c,
+.language-puppet span.c {
 	color: green;
 }
 
-code.properties .na {
+.language-properties span.na,
+.language-puppet span.na {
 	font-weight: bold;
 }
 
-code.java .cm {
+.language-java span.cm,
+.language-puppet span.cm {
 	color: #4978a7;
 }
 
