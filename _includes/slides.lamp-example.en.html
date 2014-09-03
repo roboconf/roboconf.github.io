@@ -1,0 +1,103 @@
+
+<section>
+	<h1>Example: LAMP</h1>
+</section>
+
+<section>
+	<h2>The LAMP Example</h2>
+	<p>
+		This is the classical example to introduce Roboconf.<br />
+		It consists in deploying a standard stack made up of...
+	</p>
+	<ul>
+		<li>... a load balancer (here, an Apache server with modJK)...</li>
+		<li>... an application server (Tomcat)...</li>
+		<li>... and a database (MySQL).</li>
+	</ul>
+	
+	<br /><br />
+	<p>
+		It illustrates both deployment and reconfiguration.<br />
+		We use a very simple graph. We also assume the deployment is performed on Amazon Web Services.
+	</p>
+</section>
+
+<section>
+	<h2>The Graph</h2>
+	<img src="../../resources/img/graph-lamp-lax-example.jpg" alt="lax graph" class="no-border" />
+	<p>
+		The Apache load balancer, Tomcat and MySQL can be deployed over a VM.<br />
+		Web applications <strong>App 1</strong> and <strong>App 2</strong> can be deployed on Tomcat.
+	</p>
+	<p>
+		<strong>App 2</strong> needs a MySQL database.<br />
+		And the load balancer must be notified every time we deploy an instance of
+		<strong>App 1</strong> or <strong>App 2</strong>.
+	</p>
+</section>
+
+<section>
+	<h2>Instances Definition</h2>
+	<p>
+		We have our graph.<br />
+		Let's assume we have the following set of instances in our model.
+	</p>
+	<ul>
+		<li>
+			VM 1 <small>(type: EC2 VM)</small>
+			<ul>
+				<li>Apache <small>(type: Apache)</small></li>
+				<li>Tomcat 1 <small>(type: Tomcat)</small></li>
+			</ul>
+		</li>
+	</ul>
+	
+	<p class="clear"></p>
+	<ul>
+		<li>
+			VM 2 <small>(type: EC2 VM)</small>
+			<ul>
+				<li>MySQL <small>(type: MySQL)</small></li>
+			</ul>
+		</li>
+	</ul>
+	
+	<br /><br />
+	<p>
+		This is just a model, something we define in our configuration files.<br />
+		Let's see what happens when we <strong>deploy all</strong>.
+	</p>
+</section>
+
+<section>
+	<h2>VM Creation</h2>
+	<img src="../../resources/img/lamp-scenario.jpg" alt="lamp scenario" class="no-border" />
+	<p>
+		The DM sends one creation request per VM.<br />
+		The request contains the ID of the image template to instantiate, as well as the expected <i>flavour</i> (CPU, RAM...) for the VM.
+	</p>
+	<p>
+		The virtual image contains an OS and a Roboconf agent with its configuration (RabbitMQ's IP...).
+		Once the VM is up, the agent notifies the DM it is running.
+	</p>
+</section>
+
+<section>
+	<h2>Parallel Deployments</h2>
+</section>
+
+<section>
+	<h2>Configuration</h2>
+</section>
+
+<section>
+	<h2>Resulting Deployment</h2>
+</section>
+
+<section>
+	<h2>Reconfiguration</h2>
+</section>
+
+<section>
+	<h2>Resulting Deployment</h2>
+</section>

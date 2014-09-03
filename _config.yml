@@ -6,6 +6,21 @@ redcarpet:
 
 
 ##########################
+# Slides.
+##########################
+slides:
+  - about
+  - project
+  - architecture
+  - concepts
+  - lamp-example
+  - industrial-use-case
+  - configuration-files
+  - tools
+  - links
+
+
+##########################
 # The web site structure.
 # Mainly menu names.
 ##########################

@@ -1,0 +1,165 @@
+
+<section>
+	<h1>Concepts</h1>
+</section>
+
+<section>
+	<h2>The Graph</h2>
+	<p>
+		The graph defines Software elements and their relations.<br />
+		Software elements include virtual machines, application servers, application packages... whatever.
+		They are called <strong>components</strong>.
+	</p>
+	<p>
+		Two kinds of relations are considered.
+	</p>
+	
+	<h4>Containment</h4>
+	<p>
+		A component has to be deployed onto another one.<br />
+		<small>Example: a war onto a web application server.</small>
+	</p>	
+	
+	<h4>Runtime</h4>
+	<p>
+		A component needs another one to run.<br />
+		A component provides a feature another component may need.
+		<small>Example: a war application needs a MySQL database.</small>
+	</p>
+</section>
+
+<section>
+	<h2>Benefits</h2>
+	<p>For a given Software component...</p>
+	<ul>
+		<li>We know what can be deployed on it.</li>
+		<li>We know on what it can be deployed.</li>
+		<li>We know which other components it depends on.</li>
+	</ul>
+
+	<br /><br />
+	<h2>Practical Use</h2>
+	<p>When we want to deploy a new Software component...</p>
+	<ul>
+		<li>... we can deploy it on an existing container.</li>
+		<li>... we can create its container at the same time.</li>
+	</ul>
+</section>
+
+<section>
+	<h2>Containment Example</h2>
+	<img src="../../resources/img/graph-containment-example.jpg" alt="Example" class="no-border" />
+	<p>
+		We can deploy Tomcat either on an Amazon VM, or on an Azure VM.<br />
+		And we can deploy given applications only on Tomcat. 
+		If we wanted to deploy a third web application, we would have to update the graph.
+	</p>
+	<p>
+		Containment can be recursive. Tomcat is here both contained and a container.
+	</p>
+</section>
+
+<section>
+	<h2>Runtime Example</h2>
+	<img src="../../resources/img/graph-runtime-example.jpg" alt="Example" class="no-border" />
+	<p>
+		This time, in addition to containment relations, we have a runtime dependency.<br />
+		In this graph, <strong>App 2</strong> depends on a MySQL database, which is not the case of <strong>App 1</strong>.
+		It means Roboconf cannot start <strong>App 2</strong> until it has the <strong>ip</strong> and <strong>port</strong>
+		of a MySQL database. 
+	</p>
+</section>
+
+<section>
+	<h2>The Graph(s)</h2>
+	<p>
+		The graph is a structure with two levels of reading (containment and runtime relations).
+		It is a set of rules that will drive deployments and reconfiguration.
+	</p>
+	<p>
+		But unlike what the previous slides let think, there is not only one graph.
+		Indeed, several graphs can be defined in the configuration files.
+	</p>
+	<p>
+		Thus, it is possible to define pseudo-appliances.<br />
+		It means deployments can be made very flexible or very constrained.
+	</p>
+	<p>
+		This is useful because those that develop an application or plan its
+		deployment are not those who effectively deploy and manage it in production.
+		Constraining deployment of scalable parts reduces the risk of errors by the production team. 
+	</p>
+</section>
+
+<section>
+	<h2>Lax Graph</h2>
+	<img src="../../resources/img/graph-lamp-lax-example.jpg" alt="lax graph" class="no-border" />
+	<p>
+		We here consider the 3 main applications (Apache load balancer, Tomcat and MySQL) can be deployed over
+		a same VM, or at least, on VM of the same &laquo; type &raquo;.
+	</p>
+</section>
+
+<section>
+	<h2>Appliance-like Graphs</h2>
+	<img src="../../resources/img/graph-lamp-constrained-example.jpg" alt="constrained graph" class="no-border" />
+	<p>
+		Here, we consider each of the 3 main applications must be deployed on their own VM type. 
+		It means we cannot deploy different applications on a given VM.
+	</p>
+	<p>
+		Every VM type can have its own template and configuration (tailored CPU, RAM, storage, operating system, network configuration...).
+	</p>
+</section>
+
+<section>
+	<h2>Recipes</h2>
+	<p>
+		Every component in the graph is associated with a set of recipes.<br />
+		More exactly, every component in the graph is associated with a plug-in (&laquo; installer &raquo;).
+	</p>
+	<p>
+		A component associated with the <strong>Puppet</strong> installer will use a Puppet module as its recipe.
+		A component associated with the <strong>Bash</strong> installer will use a set of Bash scripts.
+	</p>
+	<p>
+		Recipes define the actions to undertake when an administration decision was sent.<br />
+		It matches life cycle steps: deploy, start, stop and undeploy.
+	</p>
+	<p>
+		There is also a step called <strong>update</strong>.<br />
+		It is invoked automatically by Roboconf on reconfiguration. This is discussed farther.
+	</p>
+</section>
+
+<section>
+	<h2>Instances</h2>
+	<p>
+		Instances means &laquo; instances of components from the graph &raquo;.<br />
+		The graph is a set of rules. It could be seen as a meta-model for instances.
+		So, instances comply with what was defined in the graph.
+	</p>
+	<p>
+		Another comparison could be classes and instances from Object-Oriented Programming.
+	</p>
+	<p>
+		Instances inherit properties from their component.<br />
+		They can override them, and even define new ones (local scope).
+		Their relations with other instances are ruled by the graph(s).
+	</p>
+	<p>
+		An instance is associated with a single component.
+	</p>
+</section>
+
+<section>
+	<h2>Application Meta-data</h2>
+	<p>
+		A Roboconf project is called an application.<br />
+		It comes with the definition of graphs and predefined instances.
+	</p>
+	<p>
+		But it also has some information about the application itself.<br />
+		Name, description, qualifier (version)...
+	</p>
+</section>
