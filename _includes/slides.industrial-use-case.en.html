@@ -4,9 +4,9 @@
 </section>
 
 <section>
-	<h2>Open PaaS</h2>
+	<h3>OpenPaaS</h3>
 	<p>
-		Open PaaS is an open source PaaS (Platform as a Service) that aims
+		OpenPaaS is an open source PaaS (Platform as a Service) that aims
 		at improving collaboration within and between organizations.
 		It joins the ESN trend (<strong>Enterprise Social Network</strong>).
 	</p>
@@ -16,25 +16,55 @@
 		All of this is structured around the notion of professional communities.
 	</p>
 	<p>
-		http://open-paas.org
+		<a href="http://open-paas.org">http://open-paas.org</a>
 	</p>
 </section>
 
 <section>
-	<h2>Current Architecture</h2>
-	
-</section>
-
-<section>
-	<h2>Scalable Parts</h2>
+	<h3>Technical Constraints</h3>
 	<p>
-	
+		The platform relies on Web technologies.<br />
+		Back-end are implemented with Node.js. Front-end is implemented with AngularJS
+		and related projects.
+	</p>
+	<p>
+		The platform must be cloud-ready.<br />
+		It must adapt to intense-load periods.<br />
+		And it must scale for more and more users. This led to use no-SQL databases.
+	</p>
+	<p>
+		Various other programs are or will be required in addition.<br />
+		So, OpenPaaS is a complex distributed platform that must run in the cloud.
 	</p>
 </section>
 
 <section>
-	<h2>Planned Upgrade</h2>
+	<h3>Overview</h3>
+	<img src="../../resources/img/open-paas-overview.jpg" alt="OpenPaas overview" class="no-border" />
 	<p>
-		
+		For the moment, OpenPaaS focuses on the web stack.<br />
+		Scalable parts include the ESN application (Node.js), MongoDB and ElasticSearch.
+	</p>
+</section>
+
+<section>
+	<h3>Planned Upgrade</h3>
+	<p>
+		OpenPaaS should soon integrate other Software.
+	</p>
+	<ul>
+		<li>Apache James, a Java-server for e-mailing.</li>
+		<li>Cassandra, another no-SQL database.</li>
+		<li>OpenLDAP and LinID.</li>
+	</ul>
+	
+	<br /><br />
+	<p>
+		Cassandra is used to store e-mails in a distributed database.<br />
+		LDAP is used for authentication and permissions management.
+	</p>
+	<p>
+		This will add new scalable parts in the platform.<br />
+		Hopefully, Roboconf will help to make its management as simple as possible.
 	</p>
 </section>

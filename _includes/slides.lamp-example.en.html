@@ -4,7 +4,7 @@
 </section>
 
 <section>
-	<h2>The LAMP Example</h2>
+	<h3>The LAMP Example</h3>
 	<p>
 		This is the classical example to introduce Roboconf.<br />
 		It consists in deploying a standard stack made up of...
@@ -18,26 +18,30 @@
 	<br /><br />
 	<p>
 		It illustrates both deployment and reconfiguration.<br />
-		We use a very simple graph. We also assume the deployment is performed on Amazon Web Services.
+		We use a very simple graph where web applications are installed with Tomcat (they are not in the graph, but part of the recipes).
+	</p>
+	<p>
+		We also assume the deployment is performed on Amazon Web Services.
 	</p>
 </section>
 
 <section>
-	<h2>The Graph</h2>
-	<img src="../../resources/img/graph-lamp-lax-example.jpg" alt="lax graph" class="no-border" />
+	<h3>The Graph</h3>
+	<img src="../../resources/img/lamp-simple-graph.jpg" alt="Simplified graph" class="no-border" />
 	<p>
 		The Apache load balancer, Tomcat and MySQL can be deployed over a VM.<br />
-		Web applications <strong>App 1</strong> and <strong>App 2</strong> can be deployed on Tomcat.
+		Tomcat needs a MySQL database. And the load balancer must be notified every time we deploy 
+		an instance of of Tomcat.
 	</p>
 	<p>
-		<strong>App 2</strong> needs a MySQL database.<br />
-		And the load balancer must be notified every time we deploy an instance of
-		<strong>App 1</strong> or <strong>App 2</strong>.
+		Tomcat is not the stand-alone server.<br />
+		The recipe behind deploys both the server and at least a web application in it. This is to keep things simple
+		for the example.
 	</p>
 </section>
 
 <section>
-	<h2>Instances Definition</h2>
+	<h3>Instances Definition</h3>
 	<p>
 		We have our graph.<br />
 		Let's assume we have the following set of instances in our model.
@@ -70,7 +74,7 @@
 </section>
 
 <section>
-	<h2>VM Creation</h2>
+	<h3>VM Creation</h3>
 	<img src="../../resources/img/lamp-scenario.jpg" alt="lamp scenario" class="no-border" />
 	<p>
 		The DM sends one creation request per VM.<br />
@@ -83,21 +87,221 @@
 </section>
 
 <section>
-	<h2>Parallel Deployments</h2>
+	<h3>DM and Agent Interactions</h3>
+	<p>
+		Here is what happens when an agent is &laquo; up &raquo;.
+	</p>
+	<img src="../../resources/img/dm-to-agent.jpg" alt="Initial exchanges between the DM and an agent" class="no-border" />
 </section>
 
 <section>
-	<h2>Configuration</h2>
+	<h3>The special case of &laquo; Start &raquo;</h3>
+	<p>
+		An agent manipulates instances (associated to components).<br />
+		An agent uses plug-ins to update the life cycle of an instance.<br />
+	</p>
+	<p>
+		But &laquo; plugin.start &raquo; does not start an instance.<br />
+		It <strong>tries</strong> to start it. Before executing it, Roboconf checks
+		all the runtime dependencies. If they are all satisfied, the plug-in can start.
+	</p>
+	<p>
+		Otherwise, the instance will remain in <strong>starting</strong> until its
+		dependencies are all resolved.
+	</p>
 </section>
 
 <section>
-	<h2>Resulting Deployment</h2>
+	<h3>Before Synchronization</h3>
+	<p>
+		So far, the VM have been created. Apache, Tomcat and MySQL have been deployed.
+		But Tomcat does not know where MySQL runs. And Apache does not know where web
+		applications are deployed.
+	</p>
+	<img src="../../resources/img/lamp-initial-deployment.jpg" alt="Initial deployment" class="no-border" />
+	<p>
+		In fact, while deployments progressively complete here and there,
+		agents exchange information between them through RabbitMQ.
+	</p>
 </section>
 
 <section>
-	<h2>Reconfiguration</h2>
+	<h3>Variable Exchange - 1/6</h3>
+	<p>
+		Let's assume Tomcat is the first deployed.
+	</p>
+	<img src="../../resources/img/lamp-variable-exchange-01.jpg" alt="Variable Exchange 1" class="no-border" />
+	<p>
+		First, the local agent starts listening those that need Tomcat variables.<br />
+		Then, it requests the variables it needs (MySQL). It will not be able to start until 
+		it has these variables.
+	</p>
 </section>
 
 <section>
-	<h2>Resulting Deployment</h2>
+	<h3>Variable Exchange - 2/6</h3>
+	<p>
+		Let's assume Apache is deployed right after.
+	</p>
+	<img src="../../resources/img/lamp-variable-exchange-02.jpg" alt="Variable Exchange 2" class="no-border" />
+	<p>
+		First, the local agent starts listening those that need Apache variables.<br />
+		Then, it requests the variables it needs (Tomcat). It will not be able to start until 
+		it has these variables.
+	</p>
+</section>
+
+<section>
+	<h3>Variable Exchange - 3/6</h3>
+	<p>
+		The agent in charge of Tomcat receives the request for Apache.
+	</p>
+	<img src="../../resources/img/lamp-variable-exchange-03.jpg" alt="Variable Exchange 3" class="no-border" />
+	<p>
+		But it is not started, it is missing variables.<br />
+		So, it cannot publish its variables.
+	</p>
+</section>
+
+<section>
+	<h3>Variable Exchange - 4/6</h3>
+	<p>
+		Now, MySQL is up.<br />
+		The graph states that the MySQL component / type does not have any dependency.
+		So, it can directly start. 
+	</p>
+	<img src="../../resources/img/lamp-variable-exchange-04.jpg" alt="Variable Exchange 4" class="no-border" />
+	<p>
+		When it starts, it listens to those that could need it. And it publishes its variables.
+	</p>
+</section>
+
+<section>
+	<h3>Variable Exchange - 5/6</h3>
+	<p>
+		Tomcat (its agent) gets notified about MySQL.<br />
+		All its dependencies are resolved and it can start.
+	</p>
+	<img src="../../resources/img/lamp-variable-exchange-05.jpg" alt="Variable Exchange 5" class="no-border" />
+	<p>
+		So, it can publish its variables.
+	</p>
+</section>
+
+<section>
+	<h3>Variable Exchange - 6/6</h3>
+	<p>
+		Eventually, Apache is notified about the Tomcat variables.<br />
+		It can now start.
+	</p>
+	<img src="../../resources/img/lamp-variable-exchange-06.jpg" alt="Variable Exchange 6" class="no-border" />
+	<p>
+		Since it does not export any variable, it publishes nothing.
+	</p>
+</section>
+
+<section>
+	<h3>Parallel Deployments</h3>
+	<p>
+		Roboconf parallelizes everything it can.<br />
+		Here, two flows wee executed in parallel. 
+	</p>
+	<ul>
+		<li>Create VM 1, deploy Apache and Tomcat.</li>
+		<li>Create VM 2 and deploy MySQL.</li>
+	</ul>
+	
+	<br /><br />
+	<p>
+		While things were progressing, information was exchanged between agents, so that
+		everything could resolve its dependencies to start.
+	</p>
+	<p class="notice">
+		No matter in which order deployments are performed,
+		Roboconf guarantees everything will get synchronized and running
+		at the end. This is achieved through asynchronous exchanges.
+	</p>
+</section>
+
+<section>
+	<h3>Resulting Deployment</h3>
+	<img src="../../resources/img/lamp-result-1.jpg" alt="A LAMP deployment" class="no-border" />
+	<p>
+		Here is what we get at the end.<br />
+		Let's now try to add a new Tomcat server.
+	</p>
+	<p>
+		In our model, we define a new set of instances that we will deploy and start.
+	</p>
+	<ul>
+		<li>
+			VM 3 <small>(type: EC2 VM)</small>
+			<ul>
+				<li>Tomcat 2 <small>(type: Tomcat)</small></li>
+			</ul>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Reconfiguration - 1/4</h3>
+	<img src="../../resources/img/lamp-reconfiguration-01.jpg" alt="LAMP reconfiguration - 1" class="no-border" />
+	<p>
+		Once the new VM is created, the agent gets its model and deploys Tomcat.<br />
+		Before starting it, it needs its dependencies.
+	</p>
+</section>
+
+<section>
+	<h3>Reconfiguration - 2/4</h3>
+	<img src="../../resources/img/lamp-reconfiguration-02.jpg" alt="LAMP reconfiguration - 2" class="no-border" />
+	<p>
+		An instance of MySQL is already up and running.<br />
+		It receives the request from the new Tomcat and publishes its variables.
+	</p>
+</section>
+
+<section>
+	<h3>Reconfiguration - 3/4</h3>
+	<img src="../../resources/img/lamp-reconfiguration-03.jpg" alt="LAMP reconfiguration - 3" class="no-border" />
+	<p>
+		The new Tomcat gets the MySQL variables.<br />
+		It can thus start and publish its own variables.
+	</p>
+</section>
+
+<section>
+	<h3>Reconfiguration - 4/4</h3>
+	<img src="../../resources/img/lamp-reconfiguration-04.jpg" alt="LAMP reconfiguration - 4" class="no-border" />
+	<p>
+		An Apache load balancer is also up and running.<br />
+		It is notified a new Tomcat is here. The associated agent executes the <strong>update</strong> recipe,
+		which adds the new Tomcat in the load balancer configuration.
+	</p>
+	<p>
+		Using one or all the Tomcat instances is specified in the recipes.<br />
+		For a load balancer, we need to know ALL the instances. For a relational database, we 
+		need to ONE instance (others are ignored). 
+	</p>
+</section>
+
+<section>
+	<h3>Resulting Deployment</h3>
+	<img src="../../resources/img/lamp-result-2.jpg" alt="Another LAMP deployment" class="no-border" />
+	<p>
+		The Apache load balancer can now dispatch requests to 2 Tomcat servers.<br />
+		Both rely on the same database.
+	</p>
+</section>
+
+<section>
+	<h3>LAMP is the basic example</h3>
+	<p>
+		If one has to deploy a real LAMP stack, Roboconf fits.<br />
+		However, a solution like <a href="https://juju.ubuntu.com/">Juju</a> (from Ubuntu) does it too, and probably in a more affordable way.
+	</p>
+	<p>
+		But for complex applications or architectures, Roboconf brings a real value to teams.
+		From this point of view, the LAMP example helps to understand the way it works.
+	</p>
 </section>

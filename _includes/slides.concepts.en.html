@@ -4,7 +4,7 @@
 </section>
 
 <section>
-	<h2>The Graph</h2>
+	<h3>The Graph</h3>
 	<p>
 		The graph defines Software elements and their relations.<br />
 		Software elements include virtual machines, application servers, application packages... whatever.
@@ -29,7 +29,7 @@
 </section>
 
 <section>
-	<h2>Benefits</h2>
+	<h3>Benefits</h3>
 	<p>For a given Software component...</p>
 	<ul>
 		<li>We know what can be deployed on it.</li>
@@ -38,7 +38,7 @@
 	</ul>
 
 	<br /><br />
-	<h2>Practical Use</h2>
+	<h3>Practical Use</h3>
 	<p>When we want to deploy a new Software component...</p>
 	<ul>
 		<li>... we can deploy it on an existing container.</li>
@@ -47,7 +47,7 @@
 </section>
 
 <section>
-	<h2>Containment Example</h2>
+	<h3>Containment Example</h3>
 	<img src="../../resources/img/graph-containment-example.jpg" alt="Example" class="no-border" />
 	<p>
 		We can deploy Tomcat either on an Amazon VM, or on an Azure VM.<br />
@@ -60,7 +60,7 @@
 </section>
 
 <section>
-	<h2>Runtime Example</h2>
+	<h3>Runtime Example</h3>
 	<img src="../../resources/img/graph-runtime-example.jpg" alt="Example" class="no-border" />
 	<p>
 		This time, in addition to containment relations, we have a runtime dependency.<br />
@@ -71,7 +71,7 @@
 </section>
 
 <section>
-	<h2>The Graph(s)</h2>
+	<h3>The Graph(s)</h3>
 	<p>
 		The graph is a structure with two levels of reading (containment and runtime relations).
 		It is a set of rules that will drive deployments and reconfiguration.
@@ -92,7 +92,7 @@
 </section>
 
 <section>
-	<h2>Lax Graph</h2>
+	<h3>Lax Graph</h3>
 	<img src="../../resources/img/graph-lamp-lax-example.jpg" alt="lax graph" class="no-border" />
 	<p>
 		We here consider the 3 main applications (Apache load balancer, Tomcat and MySQL) can be deployed over
@@ -101,7 +101,7 @@
 </section>
 
 <section>
-	<h2>Appliance-like Graphs</h2>
+	<h3>Appliance-like Graphs</h3>
 	<img src="../../resources/img/graph-lamp-constrained-example.jpg" alt="constrained graph" class="no-border" />
 	<p>
 		Here, we consider each of the 3 main applications must be deployed on their own VM type. 
@@ -113,7 +113,7 @@
 </section>
 
 <section>
-	<h2>Recipes</h2>
+	<h3>Recipes</h3>
 	<p>
 		Every component in the graph is associated with a set of recipes.<br />
 		More exactly, every component in the graph is associated with a plug-in (&laquo; installer &raquo;).
@@ -133,7 +133,7 @@
 </section>
 
 <section>
-	<h2>Instances</h2>
+	<h3>Instances</h3>
 	<p>
 		Instances means &laquo; instances of components from the graph &raquo;.<br />
 		The graph is a set of rules. It could be seen as a meta-model for instances.
@@ -153,7 +153,7 @@
 </section>
 
 <section>
-	<h2>Application Meta-data</h2>
+	<h3>Application Meta-data</h3>
 	<p>
 		A Roboconf project is called an application.<br />
 		It comes with the definition of graphs and predefined instances.

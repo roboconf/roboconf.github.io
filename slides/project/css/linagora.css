@@ -174,3 +174,7 @@ body {
 section > p {
 	margin-bottom: 40px !important;
 }
+
+section > p.notice {
+	border: solid black 1px;
+}
