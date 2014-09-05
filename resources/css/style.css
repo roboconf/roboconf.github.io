@@ -324,12 +324,18 @@ span.roadmap-in-progress {
 }
 
 .language-properties span.na,
-.language-puppet span.na {
+.language-puppet span.na,
+.language-html span.na {
 	font-weight: bold;
 }
 
-.language-java span.cm {
+.language-java span.cm,
+.language-html span.cm {
 	color: #4978a7;
+}
+
+.language-html span.s {
+	color: green;
 }
 
 .language-puppet span.k {

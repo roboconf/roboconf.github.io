@@ -85,6 +85,9 @@ urls:
   #
   # User Guide Snapshot
   #
+  ug.snapshot.reusable-slides:
+    en: user-guide/reusable-slides
+  
   ug.snapshot.web-administration-screenshots:
     en: user-guide/web-administration-screenshots
   

@@ -2,3 +2,322 @@
 <section>
 	<h1>Configuration Files</h1>
 </section>
+
+<section>
+	<h3>Project Structure</h3>
+	<ul>
+		<li>
+			descriptor/
+			<ul>
+				<li>application.properties</li>
+			</ul>
+		</li>
+		<li>
+			graph/
+			<ul>
+				<li>*.graph</li>
+				<li>1 directory per component (for its recipes)</li>
+			</ul>
+		</li>
+		<li>
+			instances/
+			<ul>
+				<li>*.instances</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<br /><br />
+	<p>
+		The graph is defined in <strong>*.graph</strong> files.<br />
+		The description can be split in several files, for modularity.<br />
+		The same thing applies to <strong>*.instances</strong> files.
+	</p>
+	<p>
+		This structure can also be ported into a Maven structure,
+		for a combined use with the Roboconf Maven plugin.
+	</p>
+</section>
+
+<section>
+	<h3>Graph Files - 1/5</h3>
+	<p>
+		These files use a custom syntax, inspired from CSS.<br />
+		They are readable and editable easily through any text editor.
+		They are less verbose than XML, and less error-prone than YAML.
+	</p>
+	<pre><code data-trim>
+# A component called 'MyComponentName'
+MyComponentName {
+    alias: My test application;
+    installer: bash;
+}
+	</code></pre>
+	<p>
+		Comments and properties must fit on a single line.<br />
+		<strong>alias</strong> is the user-friendly name of the component.
+		<strong>installer</strong> is the extension Roboconf will use to deploy,
+		start, stop and undeploy instances of this component. 
+	</p>
+	<p>
+		Every component has an associated directory that contains recipes or resources.
+		These resources are used by the Roboconf extension identified by the <strong>installer</strong> name.
+	</p>
+</section>
+
+<section>
+	<h3>Graph Files - 2/5</h3>
+	<p>
+		An important aspect of components are imports and exports.<br />
+		They are variables that a component exposes or requires.
+	</p>
+	<pre><code data-trim>
+# WebApplication export "WebApplication.ip".
+WebApplication {
+	exports: ip;
+	imports: MySQL.ip, MySQL.port = 3306;
+}
+
+# MySQL exports "MySQL.ip" and "MySQL.port".
+MySQL {
+	exports: ip, port;
+}
+	</code></pre>
+	<p>
+		If a component imports a variable, then another component in the graph must export it.
+		A component instance cannot start unless all its imports are resolved.
+	</p>
+	<p>
+		Every time a component instance appears or leaves, it notifies those that import
+		its variables. The notified instances can then take proper actions through their recipes.
+	</p>
+</section>
+
+<section>
+	<h3>Graph Files - 3/5</h3>
+	<p>
+		It is possible to define optional imports.<br />
+		Optional imports mean a component can start, even if these imports are not resolved.
+		But it will be notified if they appear.
+	</p>
+	<pre><code data-trim>
+# A cluster node.
+ClusterNode {
+	exports: ip, port = 18741;
+	imports: ClusterNode.ip (optional), ClusterNode.port (optional);
+}
+	</code></pre>
+	<p>
+		In this example, the cluster node can start if it is alone.
+		And it will be notified when other nodes appear or disappear.
+	</p>
+	<p>
+		When a component instance is started, and that one of its dependencies disappear,
+		Roboconf stops it and puts it in the <strong>starting</strong> state. If the dependency
+		comes back, it will automatically be started.
+	</p>
+	<p>
+		<strong>ip</strong> is a special variable whose value is set automatically by Roboconf.<br />
+		Any other exported variable must have a default value.
+	</p>
+</section>
+
+<section>
+	<h3>Graph Files - 4/5</h3>
+	<p>
+		Imports and exports deal with runtime dependencies.<br />
+		Containment relations are handled through the <strong>children</strong> key word.
+	</p>
+	<pre><code data-trim>
+# Tomcat and MySQL are other graph components
+VM_Tomcat {
+	children: Tomcat;
+}
+
+VM_MySQL {
+	children: MySQL;
+}
+
+VM_All {
+	children: Tomcat, MySQL;
+}
+	</code></pre>
+	<p>
+		<strong>children</strong> lists components that can be deployed
+		over an instance of this component. It can be very constrained or quite flexible.
+	</p>
+</section>
+
+<section>
+	<h3>Graph Files - 5/5</h3>
+	<p>
+		Sometimes, components share properties.<br />
+		It is possible to group properties into a <strong>facet</strong>.
+	</p>
+	<pre><code data-trim>
+# Facets
+facet VM {
+	children: deployable;
+	installer: iaas;
+}
+
+facet deployable {
+	installer: puppet;
+	exports: ip;
+}
+	</code></pre>
+	<pre><code data-trim>
+# Components
+VM_EC2 {
+	facets: VM;
+}
+
+VM_Azure {
+	facets: VM;
+}
+	
+Tomcat {
+	facets: deployable;
+}
+	</code></pre>
+</section>
+
+<section>
+	<h3>Recipes - 1/3</h3>
+	<p>
+		Recipes are resources used by a Roboconf plug-in to manage the
+		life cycle of component instances.
+	</p>
+	<pre><code data-trim>
+VM_EC2 {
+	installer: iaas;
+}
+
+VM_Openstack {
+	installer :iaas;
+}
+	</code></pre>
+	<p>
+		This graph implies there will be two directories in the graph, called
+		<strong>VM_EC2</strong> and <strong>VM_Openstack</strong>. Because these components
+		use the <strong>iaas</strong> installer, these directories will contain a 
+		<strong>iaas.properties</strong> file.
+	</p>
+	<p>
+		One will have parameters for EC2.<br />
+		The other one will contain parameters related to Openstack.
+	</p>
+</section>
+
+<section>
+	<h3>Recipes - 2/3</h3>
+	<p>
+		Here is an example of <strong>iaas.properties</strong>.
+	</p>
+	<pre><code data-trim>
+# These properties are specific to Amazon Web Services
+iaas.type          = ec2
+ec2.endpoint       = eu-west-1.ec2.amazonaws.com
+ec2.access.key     = YOUR_EC2_ACCESS_KEY
+ec2.secret.key     = YOUR_EC2_SECRET_KEY
+amiVmNode          = ami-YourAmiNumber
+vmInstanceType     = t1.micro
+sshKeyName         = YourSshKey
+securityGroupName  = YourSecurityGroup	
+	</code></pre>
+</section>
+
+<section>
+	<h3>Recipes - 3/3</h3>
+	<p>
+		The <strong>iaas</strong> installer is in charge of managing machines
+		(VM, server, device...). The configuration depends on the target type.
+	</p>
+	<p>
+		The <strong>bash</strong> installer manages the life cycle of a component
+		through bash scripts (deploy, start, stop, undeploy and update). These scripts
+		must be idempotent.
+	</p>
+	<p>
+		The <strong>puppet</strong> installer manages the life cycle of a component
+		through a Puppet module. The module name must start with <strong>roboconf_</strong>.
+	</p>
+	<p>
+		These are the only available extensions for now.<br />
+		But new ones can be easily created (Chef, ANT, custom one...).
+	</p>
+</section>
+
+<section>
+	<h3>Instances - 1/2</h3>
+	<p>
+		Components define rules and relations (how).<br />
+		Instances define what really runs (what and where).
+	</p>
+	<p>
+		Unlike the graph, which was really a graph, instance definitions are trees.
+	</p>
+	<pre><code data-trim>
+# Deploy on EC2 VM (called VM1)
+instanceof VM_EC2 {
+    name: VM1;
+    instanceof MyApp {
+            name: MyApp_on_EC2;
+    }
+}
+
+# Deploy on Openstack VM (called VM2)
+instanceof VM_Openstack {
+    name: VM2;
+    instanceof MyApp {
+            name: MyApp_on_Openstack;
+    }
+}
+	</code></pre>
+</section>
+
+<section>
+	<h3>Instances - 2/2</h3>
+	<p>
+		Beyond specifying a name and its components, an instance
+		can override the value of exported component properties.
+	</p>
+	<p>
+		It can even define new properties that were not defined in the component.<br />
+		This is useless with respect to exports, but it can be very useful in recipes.
+	</p>
+	<pre><code data-trim>
+# The Component
+Tomcat {
+	exports: ip, port = 8080;
+}
+	</code></pre>
+	<pre><code data-trim>
+# An instance
+instanceof Tomcat {
+	name: Tomcat;
+	port: 8080;
+	log_level: INFO;	# used in the recipe 
+}
+	</code></pre>
+</section>
+
+<section>
+	<h3>Application Descriptor</h3>
+	<p>
+		The application descriptor is a simple properties file with
+		meta-data about the project itself.
+	</p>
+	<pre><code class="ini" data-trim>
+# Application Descriptor for Roboconf
+application-name = MyApp
+application-qualifier = sample
+application-description = A sample application
+graph-entry-point = main.graph
+instance-entry-point = initial-model.instances
+	</code></pre>
+	<p>
+		For the moment, a project must contain everything.<br />
+		But work is in progress about making recipes and graph portions reusable (~ libraries).
+	</p>
+</section>

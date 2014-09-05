@@ -98,4 +98,12 @@ menus: [ "users", "user-guide" ]
 	</ul>
 </div>
 
+<div class="floated">
+	<h2>Resources</h2>
+
+	<ul>
+	<li><a href="reusable-slides.html">Reusable Slides</a></li>
+	</ul>
+</div>
+
 <div class="clear"></div>

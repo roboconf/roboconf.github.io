@@ -49,7 +49,7 @@ Le cas d'usage nominal met en oeuvre des capteurs domestiques qui envoient, de p
 [Storm](http://storm.incubator.apache.org/) pour du calcul en temps réel. Que des capteurs apparaissent ou disparaissent,
 Roboconf prend en charge la reconfiguration de l'ensmeble. Pour rappel, M2M signifie *machine to machine* et IoT *Internet of Things*.
 
-* **Open PaaS** : [Open PaaS](http://research.linagora.com/display/openpaas) est un Réseau Social d'Entreprise (RSE) open-source 
+* **Open PaaS** : [Open PaaS](http://open-paas.org) est un Réseau Social d'Entreprise (RSE) open-source 
 et adapté à l'ère du *cloud*.  
 Présenté autrement, il s'agît d'une plateforme web pour faciliter et améliorer la collaboration au sein d'entreprises, et plus généralement,
 au sein d'organisations. Open PaaS s'appuie sur de nombreuses technologies, telles que [NodeJS](http://nodejs.org/), [NPM](http://www.npmjs.org/),
