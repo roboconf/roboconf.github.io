@@ -34,6 +34,8 @@
 			<div class="slides">
 				{% for s in site.slides %}
 					{% capture the_slides %}{{ s | prepend: 'slides.' | append: '.' | append: page.lang | append: '.html' }}{% endcapture %}
+					
+<!-- {{ s }} -->
 					{% include {{the_slides}} %}
 				{% endfor %}
 			</div>

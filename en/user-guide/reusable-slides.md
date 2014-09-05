@@ -6,7 +6,8 @@ menus: [ "users", "user-guide" ]
 ---
 
 A set of slides is available on this web site.  
-You can reuse them for you presentations (training, courses, conferences...).
+You can reuse them for you presentations (training, courses, conferences...).  
+You can also copy and adapt them for your own context.
 
 * [Slides In English](/slides/general/roboconf-presentation.html)
 * Slides in French will come later.
