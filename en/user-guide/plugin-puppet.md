@@ -86,8 +86,9 @@ Let's have a look at what the module looks like:
 The puppet manifests receive the following variables:
 
 * runningState ("running" for start, "stopped" for stop, and "undef" for other operations)
-* importAdded (with the value of the new import when one is added)
-* importRemoved (with the value of the removed import if applicable)
+* importComponent (only upon import add/remove: name of the corresponding component)
+* importAdded (value of the new import when one is added)
+* importRemoved (value of the removed import if applicable)
 * A list of all imports to be taken into account, for each components that we depend on (eg. in the Apache example, there will be a "tomcat" variable, which is a list of all the tomcats, and for each tomcat, a hash with its name + the values of (ip, portAJP)).
 
 In our apache example, the module may look like the following:
