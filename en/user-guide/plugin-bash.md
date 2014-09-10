@@ -68,6 +68,7 @@ So, the naming convention for imports is < componentName >\_< index >\_< exportN
 
 In case of import change (eg. instance started or stopped):
 
+- ROBOCONF\_IMPORT\_CHANGED\_COMPONENT: Name of the component for the changed import.
 - ROBOCONF\_IMPORT\_CHANGED\_INSTANCE\_PATH: Path to the instance that exports the changed import.
 - ROBOCONF\_IMPORT\_CHANGED\_< ImportName >: For each imported variable that changed, the corresponding value (eg. if an "ipAddress" export changed, the "ROBOCONF\_IMPORT\_CHANGED_ipAddress" variable should contain its new value).
 
