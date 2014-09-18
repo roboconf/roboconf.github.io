@@ -130,8 +130,8 @@ urls:
   ug.snapshot.iaas-azure:
     en: user-guide/iaas-azure
   
-  ug.snapshot.iaas-localhost:
-    en: user-guide/iaas-localhost
+  ug.snapshot.iaas-in-memory:
+    en: user-guide/iaas-in-memory
   
   ug.snapshot.plugins:
     en: user-guide/plugins

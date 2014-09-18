@@ -1,11 +1,11 @@
 ---
-title: "Localhost Support"
+title: "In-Memory (IaaS) Support"
 layout: page
-id: "ug.snapshot.iaas-localhost"
+id: "ug.snapshot.iaas-in-memory"
 menus: [ "users", "user-guide" ]
 ---
 
-Roboconf has a IaaS implementation to deploy on the local host.    
+Roboconf has a IaaS implementation to run agents in memory.    
 
 > This implementation has no interest for production environments.  
 > However, it is really useful to debug Roboconf.
@@ -19,8 +19,8 @@ Sample **iaas.properties**.
 Just copy / paste and edit.
 
 ``` properties
-# Configuration file for localhost
-iaas.type = local 
+# Configuration file for in-memory
+iaas.type = in-memory
 ```
 
 This kind of IaaS does not have any specific property.
