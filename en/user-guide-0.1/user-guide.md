@@ -1,7 +1,7 @@
 ---
-title: "User Guide"
+title: "User Guide - Version 0.1"
 layout: page
-id: "ug.snapshot.index"
+id: "ug.0.1.index"
 menus: [ "users", "user-guide" ]
 ---
 
@@ -9,7 +9,15 @@ menus: [ "users", "user-guide" ]
 	We use HTML syntax in this page because we need CSS classes for floating.
 	Markdown does not support it.
  -->
+ 
+This the user guide for Roboconf 0.1.  
+This version provides the DM as a web application (a WAR to deploy in Tomcat)
+and the agent as a stand-alone Java application.
 
+Do not use the Docker and in-memory IaaS.  
+You will get an error at runtime otherwise.
+
+ 
 <div class="floated">
 	<h2>Getting Started</h2>
 	
@@ -103,14 +111,6 @@ menus: [ "users", "user-guide" ]
 
 	<ul>
 	<li><a href="reusable-slides.html">Reusable Slides</a></li>
-	</ul>
-</div>
-
-<div class="floated">
-	<h2>Old Versions</h2>
-
-	<ul>
-	<li><a href="../user-guide-0.1/user-guide.html">User Guide for version 0.1</a></li>
 	</ul>
 </div>
 
