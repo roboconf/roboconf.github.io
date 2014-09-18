@@ -19,6 +19,7 @@ menus: [ "users", "user-guide" ]
 		- <a href="lamp-example-part-2.html">part 2</a>
 	</li>
 	<li><a href="roboconf-concepts.html">Roboconf Concepts</a></li>
+	<li><a href="roboconf-architecture.html">Roboconf Architecture</a></li>
 	<li><a href="configuration-files.html">Configuration Files</a></li>
 	<li><a href="working-with-roboconf.html">Working with Roboconf</a></li>
 	<li><a href="faq.html">FAQ</a></li>
