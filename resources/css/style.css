@@ -319,7 +319,8 @@ span.roadmap-in-progress {
 
 .language-properties span.c,
 .language-java span.c,
-.language-puppet span.c {
+.language-puppet span.c,
+.language-xml span.nt {
 	color: green;
 }
 
