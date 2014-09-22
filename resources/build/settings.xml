@@ -12,4 +12,21 @@
 		</server>
 	</servers>
 	
+	<profiles>
+		<profile>
+			<repositories>
+				<repository>
+					<id>sonatype-snpashots</id>
+					<name>Sonatype Snpashots</name>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+						<checksumPolicy>fail</checksumPolicy>
+					</snapshots>
+					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+	
 </settings>
