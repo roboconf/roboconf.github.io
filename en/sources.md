@@ -6,8 +6,7 @@ menus: [ "developers", "sources" ]
 ---
 
 Roboconf's source code is hosted on GitHub.  
-See [https://github.com/roboconf/roboconf](https://github.com/roboconf/roboconf)  
-Related projects can be found [here](https://github.com/roboconf).
+See [https://github.com/roboconf](https://github.com/roboconf).
 
 
 # Building Roboconf

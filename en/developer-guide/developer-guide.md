@@ -5,18 +5,20 @@ id: "dg.snapshot.index"
 menus: [ "developers", "developer-guide" ]
 ---
 
-## Roboconf Platform
+## Main Topics
 
-* [Maven Modules](maven-modules.html)
 * [Roboconf Model](roboconf-model.html)
-
-<!-- -->
-
 * [Understanding the Messaging with RabbitMQ](understand-the-messaging-with-rabbit-mq.html)
 * [Understanding the Life Cycle](life-cycle.html)
 * [Debugging Roboconf](debugging-roboconf.html)
 
-## REST API
+## Build
+
+* [Repositories and Maven Modules](code-organization.html)
+* [Continuous Integration](continuous-integration.html)
+* [Release Management](release-management.html)
+
+## Rest API
 
 * [Management](rest-api-management.html)
 * [Application](rest-api-application.html)

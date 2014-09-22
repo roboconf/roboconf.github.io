@@ -205,11 +205,17 @@ urls:
   dg.snapshot.roboconf-model:
     en: roboconf-model
   
-  dg.snapshot.maven-modules:
-    en: maven-modules
+  dg.snapshot.code-organization:
+    en: code-organization
   
-  dg.snapshot.rest-api:
-    en: rest-api
+  dg.snapshot.code-organization:
+    en: code-organization
+  
+  dg.snapshot.continuous-integration:
+    en: continuous-integration
+  
+  dg.snapshot.release-management:
+    en: release-management
   
   dg.snapshot.rest-application:
     en: rest-application
