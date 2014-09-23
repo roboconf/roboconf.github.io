@@ -9,7 +9,7 @@ On every commit, a [routine](http://jekyllrb.com/) is executed. It generates sta
 them on [GitHub pages](https://pages.github.com/).
 
 To build the web site locally, you must install [Jekyll](http://jekyllrb.com/).    
-Then, use
+Then, use...
 
 	jekyll serve -w
 
