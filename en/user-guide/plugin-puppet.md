@@ -34,7 +34,8 @@ virtual machine image (eg. EC2 AMI or OpenStack snapshot) that contains the Robo
 
 On Ubuntu systems, the safest way is to install the latest Puppet, as follows:
 
-	sudo apt-get install rubygems
+	# On old versions (instead of ruby): sudo apt-get install rubygems
+	sudo apt-get install ruby
 	sudo gem install facter
 	sudo gem install puppet
 
