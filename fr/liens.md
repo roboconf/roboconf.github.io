@@ -5,19 +5,20 @@ id: "main.links"
 menus: [ "users", "links" ]
 ---
 
-## Sources &amp; Réseaux Sociaux
+## Sources & Binaires
 
-* [Principal dépôt de sources](https://github.com/roboconf/roboconf)
-* [L'organisation](https://github.com/roboconf) Roboconf sur GitHub
+* Dépôts des sources sur [GitHub](https://github.com/roboconf)
+* Dépôt Maven pour les *snapshots* sur [Sonatype](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/)
+* Dépôt Maven pour les *releases* sur [Maven Central](http://repo1.maven.org/maven2/net/roboconf/)
 
-<!-- -->
+## Réseaux Sociaux
 
 * [Compte Twitter](https://twitter.com/Roboconf)
-* La page de Roboconf sur [Ohloh](https://www.ohloh.net/p/roboconf)
+* La page du projet sur [Ohloh](https://www.ohloh.net/p/roboconf)
 
 ## Projects Liés
 
-* [Open PaaS](http://research.petalslink.org/display/openpaas)
+* [Open PaaS](http://open-paas.org/)
 
 ## Sponsors
 

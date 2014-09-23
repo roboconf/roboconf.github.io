@@ -6,13 +6,8 @@ description: Roboconf is a solution to deploy distributed applications in cloud 
 ---
 
 <div id="welcome-dl" class="button">
-	<!--
-	<p class="info-main"><a href="#">No Download Yet</a></p>
-	<p class="info-details">still in development</p>
-	-->
-	
-	<p class="info-main"><a href="http://github.com/roboconf/roboconf/">Source Code</a></p>
-	<p class="info-details">Access the sources on GitHub</p>
+	<p class="info-main"><a href="download.html">Download</a></p>
+	<p class="info-details">Access the Download Page</p>
 </div>
 
 <div id="last-update" class="button">

@@ -11,29 +11,26 @@ See [https://github.com/roboconf](https://github.com/roboconf).
 
 # Building Roboconf
 
-You must have [Maven](http://maven.apache.org/) (version 3) installed to build Roboconf.  
-You should also have [NodeJS](http://nodejs.org/) and [NPM](https://www.npmjs.org/) installed.
-They are used at the build end to embed the web administration in the Deployment Manager's archive. If you
-do not have them installed, the build will fail. This is not critical, unless you need the DM
-to be packaged as a WAR. 
-(Note concerning Debian/Ubuntu: the NodeJS executable may be named "nodejs" instead of "node". If so,
-go in the /usr/bin directory, then "ln -s nodejs node").
+Most of the Roboconf projects are Java projects. They all use Maven to be built.  
+Roboconf's web administration is a Javascript project. And Roboconf's web site is built with Jekyll. 
+They are the only exceptions.
 
-Clone the main repository and execute
+So, you must have [Maven](http://maven.apache.org/) (version 3) installed to build Roboconf.  
+You should also have [NodeJS](http://nodejs.org/) and [NPM](https://www.npmjs.org/) installed.
+
+You must have both installed to build Roboconf source code.  
+NPM is used not only to build the web administration, but also the platform. In fact, the platform
+embeds the web administration in its archive.
+
+	Note concerning Debian/Ubuntu: the NodeJS executable may be named "nodejs" instead of "node".
+	If so, go into the /usr/bin directory, then type in "ln -s nodejs node".
+
+For Java projects, such as the platform, the Maven plug-in or Eclipse tools, 
+just clone the repository and execute...
 
 	mvn clean install
 
-You can then get...
-
-* ... the deployment manager under **roboconf-dm-webapp/target** (it is a WAR file).
-* ... the agent under **roboconf-agent/target** (it is a ZIP file).
-
-
-# Roboconf's Web Administration
-
-[Roboconf's web administration](https://github.com/roboconf/roboconf-web-administration) is hosted on another repository.  
-Roboconf's web applications are developed and built with Javascript technologies.  
-Follow the instructions given in the readme of these sub-projects to build them.
+When projects use a different build mechanism, it is described in the readme of the project.
 
 
 # Contributing

@@ -8,17 +8,17 @@ menus: [ "project", "roadmap" ]
 Roboconf a démarré en tant que prototype de recherche et est maintenant en cours d'industrialisation.  
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
-* **Jusqu'à mi-Septembre**
+* **Jusqu'à Octobre**
 
 	* Packager le DM et l'agent dans des distributions [Karaf](http://karaf.apache.org/).
 	* Utiliser [iPOJO](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) pour une approche orientée service.
 	* Créer des paquets systèmes (comme des paquets Debian) pour simplifier l'installation.
-	* Mettre en place un [dépôt Maven](https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide) pour Roboconf.
-	* Compléter la section **téléchargement** sur le site web.
+	* Mettre en place un [dépôt Maven](https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide) pour Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Compléter la section **téléchargement** sur le site web. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Ajouter le support de [Docker](http://www.docker.com/).
 	* Ecrire le premier tutoriel pour Roboconf.
 
-* **A partir de mi-Septembre**
+* **A partir d'Octobre**
 
 	* Ajouter des MBeans pour superviser Roboconf.
 	* Ajouter la supervision des applications avec Roboconf.

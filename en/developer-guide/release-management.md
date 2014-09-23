@@ -49,4 +49,4 @@ They are in the staging repository at [Sonatype.org](https://oss.sonatype.org/).
 * ... make sure no error was found by Sonatype after you closed the staging repository.
 * ... deploy the staging repository. This will deploy and synchronize the artifacts with Maven Central.
 
-Reading this [page](https://docs.sonatype.org/display/Repository/Closing+a+Staging+Repository) may help for the last steps.
+Reading [this page](https://docs.sonatype.org/display/Repository/Closing+a+Staging+Repository) may help for the last steps.

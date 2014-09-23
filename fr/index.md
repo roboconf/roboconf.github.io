@@ -6,13 +6,8 @@ description: Roboconf est une solution pour déployer des applications distribu�
 ---
 
 <div id="welcome-dl" class="button">
-	<!--
-	<p class="info-main"><a href="#">Bientôt Disponible</a></p>
-	<p class="info-details">développement en cours</p>
-	-->
-	
-	<p class="info-main"><a href="http://github.com/roboconf/roboconf/">Code Source</a></p>
-	<p class="info-details">Accéder aux sources sur GitHub</p>
+	<p class="info-main"><a href="telecharger.html">Télécharger</a></p>
+	<p class="info-details">Accéder aux Téléchargements</p>
 </div>
 
 <div id="last-update" class="button">
