@@ -45,9 +45,9 @@ Make sure the agent will start with the system. A simple way can be to call it f
 
 	sudo nano /etc/rc.local
 
-Put at the end of this file, before *exit(0)*
+Put at the end of this file, before *exit 0*
 
-	/path/to/roboconf/agent/startup.sh
+	/path/to/roboconf/agent/start.sh
 
 Obviously, you can also create an **init.d** script.
 
