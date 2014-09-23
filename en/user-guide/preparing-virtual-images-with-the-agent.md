@@ -47,7 +47,9 @@ Make sure the agent will start with the system. A simple way can be to call it f
 
 Put at the end of this file, before *exit 0*
 
-	/path/to/roboconf/agent/start.sh
+	cd /path/to/roboconf/agent
+	./start.sh
+	cd
 
 Obviously, you can also create an **init.d** script.
 
