@@ -10,7 +10,8 @@ Currently available plug-ins include **Bash**, **Puppet** and **Logger**.
 You may want to read [this page](../user-guide/plugins.html) to refresh your memories.
 
 A Roboconf plug-in is an OSGi bundle with specific meta-data.  
-Roboconf uses [iPojo](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) to simply OSGi development. We also use Maven to develop our modules.
+Roboconf uses [iPojo](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) to simplify OSGi development. 
+We also use Maven to develop our modules.
 
 > If you have never worked with OSGi, do not worry.  
 > Our design was made to make extensibility easy.
@@ -21,7 +22,7 @@ At the moment this documentation is being written, there is not yet a Roboconf p
 ## The POM
 
 * Create a directory called **roboconf-plugin-chef**.
-* Create a **pom.xml** and copy the content below.
+* Create a **pom.xml** file and copy the content below.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
