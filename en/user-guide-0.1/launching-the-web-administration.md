@@ -35,7 +35,7 @@ Then, assuming you are running it on your machine, open a web browser and go to
 
 	http://localhost:8000/
 
-All the dynamic part is handled by Javascript. Si, this application is only made up
+All the dynamic part is handled by Javascript. This application is only made up
 of static files. You could serve them from any web server.
 
 > Do not open directly the *index.html* file into your web browser (file:/...).  

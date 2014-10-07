@@ -5,36 +5,97 @@ id: "ug.snapshot.installing-the-deployment-manager"
 menus: [ "users", "user-guide" ]
 ---
 
-The Deployment Manager (or DM) is a web application that drives deployments and administration actions.  
+The Deployment Manager (or DM) is an OSGi application that drives deployments and administration actions.  
 Basically, it can deploy, start, stop and undeploy instances of Software components. It is also in charge
 of maintaining application models and artifacts.
 
 The DM itself exposes REST services.  
-It also shows a very basic web page to make sure it is online. The DM also comes with a web interface which is
-in fact a client for the REST API. By default, this interface is bundled with the DM, but [it can also be run
+It also comes with a web interface which is in fact a client for the REST API. 
+By default, this interface is bundled with the DM, but [it can also be run
 independently](launching-the-web-administration.html).
 
-To install the DM, grab **roboconf-dm-webapp.war** and deploy it on your favorite web application server.  
-It requires the *servlet-api* library, version 2.5. You can use as an example [Apache Tomcat](https://tomcat.apache.org/whichversion.html)
-from version 6.x.
+> The Deployment Manager is the administration part of Roboconf.  
+> And although it could, it is not supposed to run all the time.    
+> So, you may stop it when you do not use it anymore. The agents will work without it and without any problem.
 
-If you are using Tomcat, just drop the WAR into the **webapps** directory.  
-Assuming the server is running on your local machine, open a web browser 
-and go to 
+To install the DM, you need a Java Virtual Machine (JVM) for Java 1.6+.  
+Both OpenJDK and Oracle JDK are supported.
 
-	http://localhost:8080/roboconf-dm-webapp/
+Although we generally test Roboconf with Ubuntu systems, there is no reason it does not work on other systems.  
+However, **we recommend using Linux systems**.
 
-The REST services are exposed at
+Several options are available to install the DM.
 
-	http://localhost:8080/roboconf-dm-webapp/rest
-	
-And the embedded web client for the REST services is available at
+* Use our Debian package for the DM. 
+* Deploy our predefined OSGi distribution for the DM.
+* Deploy the DM as a Karaf feature on your own Karaf server.
+* Deploy the DM's bundles in an OSGi container.
 
-	http://localhost:8080/roboconf-dm-webapp/client
 
-> Although the DM could be deployed anywhere, a good practice is to keep it in your internal information system.  
-> Indeed, the DM is just an interface to transmit orders to agents through the messaging server. Putting it in
-> the cloud will require an extra effort to make it secured. Besides, the DM is not supposed to run all the time.
+# The Debian Package for the DM
 
-The DM is not supposed to run all the time.  
-Once you have installed it, you should take a look at [its configuration](configuring-the-deployment-manager.html).
+The Debian package installs our custom Karaf distribution for Roboconf's DM.  
+Once installed, the Karaf server is started as a service. The DM runs within the Karaf server.
+
+> We do not have a public server yet to simply type in **sudo apt-get install roboconf-dm**.  
+> Hopefully, this will come soon.
+
+Grab the DM's Debian package on the [download page](../download.html) and install it.
+
+
+# The Custom Karaf Distribution for the DM
+
+[Apache Karaf](http://karaf.apache.org/) is an OSGi server.  
+It brings additional features to OSGi containers like Felix (Apache) or Equinox (Eclipse). It also allows to build custom distributions
+with pre-installed bundles and their configurations. The custom Karaf distribution for the DM is thus a stand-alone server with the
+Roboconf's DM being already deployed and configured. It is configured to run with [Apache Felix](http://felix.apache.org/).
+
+> Having several Karaf servers on a machine can result in port conflicts.
+> If it is your case, you may have to configure the ports differently. 
+> Or you may prefer deploying our Karaf feature.
+
+This distribution can be deployed either with a Debian package or manually.  
+To deploy it manually, you must have a JDK 6 (or higher) installed. Then, [download the DM's ZIP archive](../download.html)
+and unzip it somewhere on your disk. 
+
+To start it, execute...
+
+```bash
+cd bin
+./karaf
+```
+
+You can find help and more instructions about Karaf on [its web site](http://karaf.apache.org/).
+
+
+# The DM Feature for Karaf
+
+If you already have your own Karaf server, you may prefer to install the DM as a feature.  
+The DM feature is a XML file that lists the bundles to install and some of their dependencies so that the DM works.
+
+We do not have any official release yet.  
+However, you can add our snapshot repository to the list of features repository.
+
+Start your karaf and execute...
+
+```properties
+# Add the feature URL
+features:addurl https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-feature-dm/0.2-SNAPSHOT/feature.feature.xml
+
+# Install the feature 
+feature:install roboconf-dm
+```
+
+For the record, the **roboconf-dm** feature depends on the following features:
+
+* **ipojo-all** since Roboconf bundles use iPojo.
+* **war** since Roboconf exposes the web administration (a web application).
+* **jersey 1.x** since the REST services rely on Jersey 1.x.
+* **config** since the DM can be reconfigured through *Config Admin*.
+
+
+# The DM Bundles
+
+It is possible to deploy the DM bundles directly in Felix, Equinox or any other OSGi container.  
+To determine all the required bundles, take a look at the Karaf feature described above. The previous section
+also lists their dependencies (as other Karaf features).

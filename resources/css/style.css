@@ -339,8 +339,24 @@ span.roadmap-in-progress {
 	color: green;
 }
 
-.language-puppet span.k {
+.language-puppet span.k,
+.language-java span.k,
+.language-java span.kd,
+.language-java span.kn {
 	color: #b23e4b;
+	font-weight: bold;
+}
+
+.language-java span.nd {
+	font-style: italic;
+}
+
+.language-java span.nf {
+	font-weight: bold;
+}
+
+.language-bash span.nb {
+	color: #025edb;
 	font-weight: bold;
 }
 

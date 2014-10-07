@@ -11,6 +11,11 @@ menus: [ "developers", "developer-guide" ]
 * [Understanding the Messaging with RabbitMQ](understand-the-messaging-with-rabbit-mq.html)
 * [Understanding the Life Cycle](life-cycle.html)
 * [Debugging Roboconf](debugging-roboconf.html)
+* [Launching the Web Administration](launching-the-web-administration.html)
+
+## Extending Roboconf
+
+* [Creating a new Roboconf plug-in](creating-a-new-roboconf-plugin.html)
 
 ## Build
 

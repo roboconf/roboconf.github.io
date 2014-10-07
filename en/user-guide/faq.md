@@ -5,7 +5,7 @@ id: "ug.snapshot.faq"
 menus: [ "users", "user-guide" ]
 ---
 
-# What is Roboconf?
+## What is Roboconf?
 
 Roboconf is a deployment tool for distributed applications.  
 It is in particular adapted to deployments in cloud infrastructures, but not only.
@@ -17,7 +17,7 @@ application life cycle: hot reconfiguration (e.g. for elasticity issues) and con
 when a component starts or stops, even accidentally).
 
 
-# What are its key points?
+## What are its key points?
 
 Roboconf allows to define a model of the application that one wants to deploy.  
 It then offers a vision of this model during deployment and at runtime.
@@ -32,13 +32,13 @@ on-premise hosts). The asynchronous mechanisms Roboconf supports allow to add an
 Other application parts are then updated and/or reconfigured depending on what happened there.
 
 
-# Is Roboconf open source?
+## Is Roboconf open source?
 
 Yes, Roboconf is open source.  
 See the [license page](../license.html) for more information.
 
 
-# What are Roboconf pre-requisites?
+## What are Roboconf pre-requisites?
 
 Roboconf is developed in Java.  
 You at least need a JDK 1.6 (Oracle JDK or OpenJDK) to run it.
@@ -50,13 +50,13 @@ access a messaging server to interact with the Deployment Manager.
 The current messaging server is RabbitMQ. It supports a wide variety of clients, implemented in different languages. 
 
 
-# What does Roboconf bring in addition to classics like Bash and SSH?
+## What does Roboconf bring in addition to classics like Bash and SSH?
 
 Roboconf could be replaced by some scripts executed by hand, but the result would be very complicated to maintain.  
 In fact, Roboconf receipts can use bash scripts. Roboconf only plugs dynamicity behind script invocations.
 
 
-# How about Puppet, Chef or CFEngine?
+## How about Puppet, Chef or CFEngine?
 
 [Puppet](http://puppetlabs.com/), [Chef](http://docs.opscode.com/) and [CFEngine](http://cfengine.com/) are various
 deployment solutions. Roboconf does not pretend to be a concurrent, but instead, a complement to these solutions. 
@@ -69,8 +69,8 @@ This plug-in approach allows to use and mix various solutions in a deployment. I
 makes Roboconf an extensible solution that can fit various requirements.
 
 
-# Are there concurrent solutions to Roboconf?
+## Are there concurrent solutions to Roboconf?
 
-Yes, you can take a look at [Cloudify](http://www.cloudifysource.org/), [Right Scale](http://www.rightscale.com/), [Scalr](http://www.scalr.com/)
+Yes, you can take a look at [Cloudify](http://getcloudify.org/), [Right Scale](http://www.rightscale.com/), [Scalr](http://www.scalr.com/)
 and the OW2 project [Sirocco](http://wiki.sirocco.ow2.org/xwiki/bin/view/Main/WebHome).  
 You may also be interested by [JClouds](http://jclouds.apache.org/), which is a Java toolkit to manipulate IaaS APIs.

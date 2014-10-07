@@ -14,7 +14,7 @@ Versions 3.x come with a [management plug-in](https://www.rabbitmq.com/managemen
 You **should** follow the instructions on [RabbitMQ's web site](http://www.rabbitmq.com/download.html) to install it.
 
 > The messaging server should be accessible through a public IP.  
-> The most simple solution is generally to put it in a public cloud infrastructure.
+> The most simple solution is generally to put it on a public server.
 
 RabbitMQ needs to be configured with a user and a password.  
 Otherwise, client connections will be refused. See this page about [access control](http://www.rabbitmq.com/access-control.html) wit RabbitMQ.
@@ -26,7 +26,7 @@ Here is a short snippet to quickly configure RabbitMQ.
 You must first connect to the machine hosting RabbitMQ and then execute these commands.
 
 ``` properties
-# Create a new user called Batman
+# To create a new user called Batman
 rabbitmqctl add_user Batman BatmanPassword
 
 # Grant read/write/access permissions to our new user

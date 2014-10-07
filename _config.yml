@@ -94,23 +94,26 @@ urls:
   ug.snapshot.web-administration-screenshots:
     en: user-guide/web-administration-screenshots
   
-  ug.snapshot.troubles-installation:
-    en: user-guide/troubles-installation
+  ug.snapshot.configuring-the-loggers:
+    en: user-guide/configuring-the-loggers
   
   ug.snapshot.installing-the-deployment-manager:
     en: user-guide/installing-the-deployment-manager
   
+  ug.snapshot.installing-an-agent:
+    en: user-guide/installing-an-agent
+  
   ug.snapshot.configuring-the-deployment-manager:
     en: user-guide/configuring-the-deployment-manager
+  
+  ug.snapshot.configuring-an-agent:
+    en: user-guide/configuring-an-agent
   
   ug.snapshot.installing-the-messaging-server:
     en: user-guide/installing-the-messaging-server
   
-  ug.snapshot.launching-the-web-administration:
-    en: user-guide/launching-the-web-administration
-  
-  ug.snapshot.preparing-virtual-images-with-the-agent:
-    en: user-guide/preparing-virtual-images-with-the-agent
+  ug.snapshot.preparing-virtual-images-with-an-agent:
+    en: user-guide/preparing-virtual-images-with-an-agent
   
   ug.snapshot.iaas-support:
     en: user-guide/iaas-support
@@ -202,44 +205,44 @@ urls:
     en: developer-guide/developer-guide
     fr: guide-developpeur/guide-developpeur
   
+  dg.snapshot.creating-a-new-roboconf-plugin:
+    en: developer-guide/creating-a-new-roboconf-plugin
+  
+  dg.snapshot.launching-the-web-administration:
+    en: developer-guide/launching-the-web-administration
+  
   dg.snapshot.roboconf-model:
-    en: roboconf-model
-  
-  dg.snapshot.code-organization:
-    en: code-organization
-  
-  dg.snapshot.code-organization:
-    en: code-organization
+    en: developer-guide/roboconf-model
   
   dg.snapshot.continuous-integration:
-    en: continuous-integration
+    en: developer-guide/continuous-integration
   
   dg.snapshot.release-management:
-    en: release-management
+    en: developer-guide/release-management
   
   dg.snapshot.rest-application:
-    en: rest-application
+    en: developer-guide/rest-application
   
   dg.snapshot.rest-management:
-    en: rest-management
+    en: developer-guide/rest-management
   
   dg.snapshot.web-site-organization:
-    en: web-site-organization
+    en: developer-guide/web-site-organization
   
   dg.snapshot.documenting-a-new-version:
-    en: documenting-a-new-version
+    en: developer-guide/documenting-a-new-version
   
   dg.snapshot.understand-the-messaging-with-rabbit-mq:
-    en: understand-the-messaging-with-rabbit-mq
+    en: developer-guide/understand-the-messaging-with-rabbit-mq
   
   dg.snapshot.debugging-roboconf:
-    en: debugging-roboconf
+    en: developer-guide/debugging-roboconf
   
   dg.snapshot.life-cycle:
-    en: life-cycle
+    en: developer-guide/life-cycle
   
   dg.snapshot.development-guidelines:
-    en: development-guidelines
+    en: developer-guide/development-guidelines
   
   #
   # Main pages
@@ -305,108 +308,104 @@ urls:
   # User Guide - Version 0.1
   #
   ug.0.1.reusable-slides:
-    en: user-guide/reusable-slides
+    en: user-guide-0.1/reusable-slides
   
   ug.0.1.web-administration-screenshots:
-    en: user-guide/web-administration-screenshots
+    en: user-guide-0.1/web-administration-screenshots
   
   ug.0.1.troubles-installation:
-    en: user-guide/troubles-installation
+    en: user-guide-0.1/troubles-installation
   
   ug.0.1.installing-the-deployment-manager:
-    en: user-guide/installing-the-deployment-manager
+    en: user-guide-0.1/installing-the-deployment-manager
   
   ug.0.1.configuring-the-deployment-manager:
-    en: user-guide/configuring-the-deployment-manager
+    en: user-guide-0.1/configuring-the-deployment-manager
   
   ug.0.1.installing-the-messaging-server:
-    en: user-guide/installing-the-messaging-server
+    en: user-guide-0.1/installing-the-messaging-server
   
   ug.0.1.launching-the-web-administration:
-    en: user-guide/launching-the-web-administration
+    en: user-guide-0.1/launching-the-web-administration
   
   ug.0.1.preparing-virtual-images-with-the-agent:
-    en: user-guide/preparing-virtual-images-with-the-agent
+    en: user-guide-0.1/preparing-virtual-images-with-the-agent
   
   ug.0.1.iaas-support:
-    en: user-guide/iaas-support
+    en: user-guide-0.1/iaas-support
   
   ug.0.1.iaas-openstack:
-    en: user-guide/iaas-openstack
+    en: user-guide-0.1/iaas-openstack
   
   ug.0.1.iaas-embedded:
-    en: user-guide/iaas-embedded
+    en: user-guide-0.1/iaas-embedded
   
   ug.0.1.iaas-aws:
-    en: user-guide/iaas-aws
+    en: user-guide-0.1/iaas-aws
   
   ug.0.1.iaas-vmware:
-    en: user-guide/iaas-vmware
+    en: user-guide-0.1/iaas-vmware
   
   ug.0.1.iaas-azure:
-    en: user-guide/iaas-azure
+    en: user-guide-0.1/iaas-azure
   
   ug.0.1.iaas-localhost:
-    en: user-guide/iaas-localhost
+    en: user-guide-0.1/iaas-localhost
   
   ug.0.1.plugins:
-    en: user-guide/plugins
+    en: user-guide-0.1/plugins
   
   ug.0.1.plugin-logger:
-    en: user-guide/plugin-logger
+    en: user-guide-0.1/plugin-logger
   
   ug.0.1.plugin-bash:
-    en: user-guide/plugin-bash
+    en: user-guide-0.1/plugin-bash
   
   ug.0.1.plugin-puppet:
-    en: user-guide/plugin-puppet
+    en: user-guide-0.1/plugin-puppet
   
   ug.0.1.roboconf-dsl:
-    en: user-guide/roboconf-dsl
+    en: user-guide-0.1/roboconf-dsl
   
   ug.0.1.monitoring-roboconf:
-    en: user-guide/monitoring-roboconf
+    en: user-guide-0.1/monitoring-roboconf
   
   ug.0.1.monitoring-applications-deployed-with-roboconf:
-    en: user-guide/monitoring-applications-deployed-with-roboconf
+    en: user-guide-0.1/monitoring-applications-deployed-with-roboconf
   
   ug.0.1.editors:
-    en: user-guide/editors
+    en: user-guide-0.1/editors
   
   ug.0.1.configuration-files:
-    en: user-guide/configuration-files
+    en: user-guide-0.1/configuration-files
   
   ug.0.1.faq:
-    en: user-guide/faq
+    en: user-guide-0.1/faq
   
   ug.0.1.roboconf-concepts:
-    en: user-guide/roboconf-concepts
+    en: user-guide-0.1/roboconf-concepts
   
   ug.0.1.application-descriptor:
-    en: user-guide/application-descriptor
+    en: user-guide-0.1/application-descriptor
   
   ug.0.1.instances-description:
-    en: user-guide/instances-description
+    en: user-guide-0.1/instances-description
   
   ug.0.1.graph-definition:
-    en: user-guide/graph-definition
+    en: user-guide-0.1/graph-definition
   
   ug.0.1.graph-resources:
-    en: user-guide/graph-resources
+    en: user-guide-0.1/graph-resources
   
   ug.0.1.web-administration:
-    en: user-guide/web-administration
+    en: user-guide-0.1/web-administration
   
   ug.0.1.lamp-example-part-1:
-    en: user-guide/lamp-example-part-1
+    en: user-guide-0.1/lamp-example-part-1
   
   ug.0.1.lamp-example-part-2:
-    en: user-guide/lamp-example-part-2
-  
-  ug.0.1.index:
-    en: user-guide/user-guide
-    fr: guide-utilisateur/guide-utilisateur
+    en: user-guide-0.1/lamp-example-part-2
   
   ug.0.1.working-with-roboconf:
-    en: user-guide/working-with-roboconf
+    en: user-guide-0.1/working-with-roboconf
  

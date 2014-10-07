@@ -30,18 +30,27 @@ menus: [ "users", "user-guide" ]
 	<h2>Installing Roboconf</h2>
 
 	<ul>
-	<li><a href="installing-the-deployment-manager.html">Installing the Deployment Manager (DM)</a></li>
-	<li><a href="configuring-the-deployment-manager.html">Configuring the Deployment Manager (DM)</a></li>
 	<li><a href="installing-the-messaging-server.html">Installing the Messaging Server</a></li>
-	<li><a href="preparing-virtual-images-with-the-agent.html">Preparing Virtual Images with the Agent</a></li>
-	<li><a href="launching-the-web-administration.html">Launching the Web Administration</a></li>
+	<li><a href="installing-the-deployment-manager.html">Installing the Deployment Manager (DM)</a></li>
+	<li><a href="configuring-the-deployment-manager.html">Configuring the DM</a></li>
+	<li><a href="preparing-virtual-images-with-an-agent.html">Preparing Virtual Images with an Agent</a></li>
+	<li><a href="installing-an-agent.html">Installing an Agent</a></li>
+	<li><a href="configuring-an-agent.html">Configuring an Agent</a></li>
 	</ul>
 </div>
 
+<div class="floated">
+	<h2>Configuring Roboconf</h2>
 
+	<ul>
+	<li><a href="configuring-the-deployment-manager.html">Configuring the DM</a></li>
+	<li><a href="configuring-an-agent.html">Configuring an Agent</a></li>
+	<li><a href="configuring-the-loggers.html">Configuring the Loggers</a></li>
+	</ul>
+</div>
 
 <div class="floated">
-	<h2>Configuration Files</h2>
+	<h2>Model Files</h2>
 
 	<ul>
 	<li><a href="application-descriptor.html">The Application Descriptor</a></li>
@@ -88,14 +97,6 @@ menus: [ "users", "user-guide" ]
 	<li><a href="plugin-bash.html">The Bash Plug-in</a></li>
 	<li><a href="plugin-puppet.html">The Puppet Plug-in</a></li>
 	<li><a href="plugin-logger.html">The Logger Plug-in</a></li>
-	</ul>
-</div>
-
-<div class="floated">
-	<h2>Troubles</h2>
-
-	<ul>
-	<li><a href="troubles-installation.html">Installation</a></li>
 	</ul>
 </div>
 

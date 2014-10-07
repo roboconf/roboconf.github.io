@@ -22,9 +22,12 @@ the version to create or release is 1.0.
 Copy the section that declares the snapshot pages.  
 In the new section, update the IDs as explained above.
 
-4. Add a link to the new version in the main user or developer guide.
+4. Still in the **_config.yml** file, update the relative path of the copied IDs.  
+As an example, the **en** entry **user-guide/my-page-id** will become **user-guide-1.0/my-page-id**.
 
-5. Translate the guides for other languages.
+5. Add a link to the new version in the main user or developer guide.
+
+6. Translate the guides for other languages.
 
 > The best practice is to only document the snapshot version in English.  
 > When it is released, as explained above, the guides should be translated
