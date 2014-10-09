@@ -62,7 +62,7 @@ The following table summers up all the DM parameters.
 | message-server-ip | The IP address and the port of the messaging server. Examples: http://192.168.1.87 (default port), http://192.168.1.89:4048 (with a custom port). | **null** is interpreted as "localhost". | yes |
 | message-server-username | The user name for the messaging server. | **null** is interpreted as "guest". | yes |
 | message-server-password | The password for the messaging server. | **null** is interpreted as "guest". | yes |
-| configuration-directory-location | The directory where applications resources are saved. | **null** is interpreted as "/tmp/roboconf-dm" | yes |
+| configuration-directory-location | The directory where applications resources are saved. | - | yes |
 
 <br />
 
