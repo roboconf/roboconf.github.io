@@ -22,8 +22,8 @@ You must have both installed to build Roboconf source code.
 NPM is used not only to build the web administration, but also the platform. In fact, the platform
 embeds the web administration in its archive.
 
-	Note concerning Debian/Ubuntu: the NodeJS executable may be named "nodejs" instead of "node".
-	If so, go into the /usr/bin directory, then type in "ln -s nodejs node".
+> Note concerning Debian / Ubuntu. The NodeJS executable may be named **nodejs** instead of **node**.  
+> If so, go into the **/usr/bin** directory, then type in **ln -s nodejs node**.
 
 For Java projects, such as the platform, the Maven plug-in or Eclipse tools, 
 just clone the repository and execute...

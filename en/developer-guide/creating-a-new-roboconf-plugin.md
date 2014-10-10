@@ -69,8 +69,7 @@ At the moment this documentation is being written, there is not yet a Roboconf p
 				<configuration>
 					<instructions>
 						<Import-Package>
-							net.roboconf.core.*;version="${roboconf.version}",
-							net.roboconf.plugin.api;version="${roboconf.version}"
+							net.roboconf.*;version="${roboconf.version}"
 						</Import-Package>
 						<Embed-Dependency>*;scope=compile|runtime;inline=true;groupId=!net.roboconf</Embed-Dependency>
 						<Embed-Transitive>true</Embed-Transitive>
@@ -229,7 +228,7 @@ And **any long-running operation must be blocking**.
 
 Any critical exception must be wrapped in an instance of **PluginException**.  
 Eventually, you must know that inside the agent, there will be only instance of your plug-in class. And that it will be reused
-during all the time it is deployed. So, be careful with class fields. The class must be implemented in a stateless fashion.
+during all the time it is deployed. So, be careful with class fields. The class must be implemented in a state-less fashion.
 
 As usual, write as many unit tests as possible.
 
@@ -246,3 +245,12 @@ where iPojo, the **roboconf-plugin-api** and **roboconf-core** bundles are alrea
 If you want to deploy it in the agent's Karaf distribution, simply drop it under the **deploy** directory.  
 That's it, your plug-in is installed and ready to be used by the agent. No additional configuration is required.
 
+
+## Source Code Hosting
+
+Roboconf's modularity and extensibility allows you to only rely on Maven dependencies at build time.  
+There is no need to update Roboconf's POM or its code to plug your own extension. Therefore, you can 
+host your source code wherever you want. It can be on another Git repository, on SVN, whatever.
+
+You may also contribute your extension to Roboconf's source code.  
+In this case, a fork followed of a pull request is the suitable way to achieve this.
