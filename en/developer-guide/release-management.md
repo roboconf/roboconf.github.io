@@ -44,8 +44,8 @@ At this point, the artifacts have not been released.
 They are in the staging repository at [Sonatype.org](https://oss.sonatype.org/). To validate this release, you should...
 
 * ... test it!
-* ... test it (again)!
-* ... connect to [Sonatype.org](https://oss.sonatype.org/) and close the staging repository.
+* ... test it, again.
+* ... connect to [Sonatype.org](https://oss.sonatype.org/) and **close** the staging repository.
 * ... make sure no error was found by Sonatype after you closed the staging repository.
 * ... deploy the staging repository. This will deploy and synchronize the artifacts with Maven Central.
 
