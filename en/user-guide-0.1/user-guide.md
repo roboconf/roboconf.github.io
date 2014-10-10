@@ -2,7 +2,7 @@
 title: "User Guide - Version 0.1"
 layout: page
 id: "ug.0.1.index"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 <!-- 

@@ -2,7 +2,7 @@
 title: "Embedded Support"
 layout: page
 id: "ug.0.1.iaas-embedded"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Embedded support addresses the cases where the machines already exist or are created manually.  

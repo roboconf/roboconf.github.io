@@ -2,7 +2,7 @@
 title: "Installing the Deployment Manager"
 layout: page
 id: "ug.0.1.installing-the-deployment-manager"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 The Deployment Manager (or DM) is a web application that drives deployments and administration actions.  

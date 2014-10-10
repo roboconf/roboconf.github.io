@@ -2,7 +2,7 @@
 title: "Microsoft Azure Support"
 layout: page
 id: "ug.0.1.iaas-azure"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Roboconf will soon have a IaaS implementation for Microsoft Azure.  

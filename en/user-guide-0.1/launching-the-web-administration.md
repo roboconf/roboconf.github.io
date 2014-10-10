@@ -2,7 +2,7 @@
 title: "Launching the Web Administration"
 layout: page
 id: "ug.0.1.launching-the-web-administration"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Roboconf's Web Administration is a web application developed with [AngularJS](http://angularjs.org/).  

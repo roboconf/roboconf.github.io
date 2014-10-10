@@ -2,7 +2,7 @@
 title: "Localhost Support"
 layout: page
 id: "ug.0.1.iaas-localhost"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Roboconf has a IaaS implementation to deploy on the local host.    

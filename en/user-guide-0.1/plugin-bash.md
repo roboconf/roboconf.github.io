@@ -2,7 +2,7 @@
 title: "The Bash Plug-in"
 layout: page
 id: "ug.0.1.plugin-logger"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 The Bash plug-in executes a bash script on every life cycle step.  

@@ -2,7 +2,7 @@
 title: "Graph Resources"
 layout: page
 id: "ug.0.1.graph-resources"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 The graph definition has already been introduced.  

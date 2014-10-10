@@ -2,7 +2,7 @@
 title: "Graph Definition"
 layout: page
 id: "ug.0.1.graph-definition"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 ## The Graph

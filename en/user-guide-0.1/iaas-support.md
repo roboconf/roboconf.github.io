@@ -2,7 +2,7 @@
 title: "IaaS Support"
 layout: page
 id: "ug.0.1.iaas-support"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Roboconf can deploy an application on various cloud infrastructures (IaaS).  

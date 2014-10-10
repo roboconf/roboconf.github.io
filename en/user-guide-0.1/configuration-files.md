@@ -2,7 +2,7 @@
 title: "Configuration Files"
 layout: page
 id: "ug.0.1.configuration-files"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 # Outline

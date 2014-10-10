@@ -2,7 +2,7 @@
 title: "Toubles with Installation"
 layout: page
 id: "ug.0.1.troubles-installation"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 These page gives solutions to common troubles people may encounter while installing Roboconf.  

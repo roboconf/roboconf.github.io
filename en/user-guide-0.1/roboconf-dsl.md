@@ -2,7 +2,7 @@
 title: "Roboconf DSL"
 layout: page
 id: "ug.0.1.roboconf-dsl"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Here is a summary of Roboconf's DSL and keywords.  

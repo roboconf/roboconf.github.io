@@ -2,7 +2,7 @@
 title: "LAMP Example - Part 1"
 layout: page
 id: "ug.0.1.lamp-example-part-1"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Let's take an example to understand the way Roboconf works.  

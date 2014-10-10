@@ -2,7 +2,7 @@
 title: "The Logger Plug-in"
 layout: page
 id: "ug.0.1.plugin-logger"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 The logger plug-in is a plug-in which only logs invocations.  

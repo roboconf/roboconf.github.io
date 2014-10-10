@@ -2,7 +2,7 @@
 title: "Working with Roboconf"
 layout: page
 id: "ug.0.1.working-with-roboconf"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 ## Creating a Roboconf Application

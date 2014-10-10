@@ -10,8 +10,8 @@ The roadmap for the next months covers several aspects.
 
 * **Until October**
 
-	* Bundle the DM and the agent in [Karaf](http://karaf.apache.org/) distributions.
-	* Use [iPOJO](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) and initialize a service approach.
+	* Bundle the DM and the agent in [Karaf](http://karaf.apache.org/) distributions. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Use [iPOJO](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) and initialize a service approach. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Create system packages (such a Debian packages) to ease installation.
 	* Setup a [Maven repository](https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide) for Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Complete the **download** section on the web site. &nbsp; <span class="glyphicon glyphicon-ok"></span>
@@ -22,7 +22,7 @@ The roadmap for the next months covers several aspects.
 
 	* Add MBeans to monitor Roboconf.
 	* Add monitoring support to Roboconf.
-	* Create a Maven plug-in to automate validation and build.
+	* Create a Maven plug-in to automate validation and build. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Create text editors for Roboconf's DSL.
 	* Create documentation generators.
 	* Add support to execute user scenarios.

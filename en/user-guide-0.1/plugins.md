@@ -2,7 +2,7 @@
 title: "Roboconf Plug-ins"
 layout: page
 id: "ug.0.1.plugins"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Roboconf agents use plug-ins to manage the life cycle of instances.  

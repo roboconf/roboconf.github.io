@@ -2,7 +2,7 @@
 title: "FAQ"
 layout: page
 id: "ug.0.1.faq"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 # What is Roboconf?

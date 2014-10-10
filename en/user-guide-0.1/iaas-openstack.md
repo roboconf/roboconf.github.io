@@ -2,7 +2,7 @@
 title: "OpenStack Support"
 layout: page
 id: "ug.0.1.iaas-open-stack"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Roboconf has a IaaS implementation for OpenStack.  

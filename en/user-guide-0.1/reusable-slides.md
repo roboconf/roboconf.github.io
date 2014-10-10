@@ -2,7 +2,7 @@
 title: "Reusable Slides"
 layout: page
 id: "ug.0.1.reusable-slides"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 A set of slides is available on this web site.  

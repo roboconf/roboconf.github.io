@@ -2,7 +2,7 @@
 title: "VMWare Support"
 layout: page
 id: "ug.0.1.iaas-vmware"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Roboconf has a IaaS implementation for VMWare.  

@@ -2,7 +2,7 @@
 title: "Roboconf Concepts"
 layout: page
 id: "ug.0.1.roboconf-concepts"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.1" ]
 ---
 
 Roboconf is made up of several blocks.

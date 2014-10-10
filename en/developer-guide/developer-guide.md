@@ -19,6 +19,7 @@ menus: [ "developers", "developer-guide" ]
 
 ## Build
 
+* [Version Management](version-management.html)
 * [Repositories and Maven Modules](code-organization.html)
 * [Continuous Integration](continuous-integration.html)
 * [Release Management](release-management.html)
