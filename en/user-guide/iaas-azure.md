@@ -67,8 +67,9 @@ II. Cloud service xml template file should be similar to follow:
   <Description/>  
   <Location>West Europe</Location>  
 </CreateHostedService>
+</code></pre>
 ```
-  See full details about creating a Azure Cloud service [here][createcloud].
+The full xml structure can be copied from [here][fullxml]. See full details about creating a Azure Cloud service [here][createcloud].
 
 III. VM deployment xml template file should be similar to follow:
 ```xml
@@ -101,6 +102,7 @@ III. VM deployment xml template file should be similar to follow:
             </InputEndpoint>
 	          <InputEndpoint>          
               <LocalPort>8080</LocalPort>
+              
               <Name>Tomcat</Name>
               <Port>8080</Port>
               <Protocol>tcp</Protocol>
@@ -118,9 +120,10 @@ III. VM deployment xml template file should be similar to follow:
   </RoleList>
 </Deployment>
 ```
-See full details about creating a VM deployment on Azure [here][vmdeployment].
+The full xml structure can be copied from [here][fullxml]. See full details about creating a VM deployment on Azure [here][vmdeployment].
 
 [jks]: http://en.wikipedia.org/wiki/Keystore
 [keytool]: http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html
 [createcloud]: http://msdn.microsoft.com/library/azure/gg441304.aspx
 [vmdeployment]: http://msdn.microsoft.com/en-us/library/azure/jj157194.aspx
+[fullxml]: https://github.com/roboconf/roboconf.github.io/blob/master/en/user-guide/iaas-azure.md
