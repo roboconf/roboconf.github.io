@@ -1,5 +1,5 @@
 ---
-title: "Syntax Highlighters"
+title: "Syntax Highlighting"
 layout: page
 id: "dg.snapshot.syntax-highlighting"
 menus: [ "developers", "developer-guide" ]
@@ -38,6 +38,7 @@ nodejs tools/build.js -t browser
 # Find the Roboconf snippet and make sure the rendering is correct.
 
 # Run the test to make sure Roboconf DSL is recognized correctly.
+nodejs tools/build.js -t node
 npm test
 ```
 

@@ -11,7 +11,6 @@ Vous pouvez récupérer une version *snapshot* de Roboconf sur notre dépôt Mav
 
 * Le **Deployment Manager** peut-être récupéré [ici](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-dm-webapp).
 * L'archive de **l'Agent** se trouve [là](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-agent).
-* Et le **plug-in Maven** pour Roboconf est disponible [ici](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-maven-plugin).
 
 
 ## Versions Stables

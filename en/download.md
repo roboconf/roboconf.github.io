@@ -12,7 +12,6 @@ The current development version is **0.2-SNAPSHOT**.
 
 * For the **Deployment Manager**, look [here](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-dm-webapp).
 * For the **Agent**, look [here](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-agent).
-* For the Roboconf **Maven plug-in**, look [here](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-maven-plugin).
 
 
 ## Stable Versions

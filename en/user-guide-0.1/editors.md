@@ -16,7 +16,7 @@ This make these configuration files very easy to read and to modify within any t
 ## Notepad ++
 
 For those who use [Notepad ++](http://notepad-plus-plus.org), a configuration file has been written for the Roboconf syntax.  
-It brings syntax highlighting in the editor. You can download it [here](/downloads/roboconf--npp.xml). 
+It brings syntax highlighting in the editor. You can download it [here](/resources/downloads/roboconf--npp.xml). 
 
 Follow [these instructions](http://sourceforge.net/apps/mediawiki/notepad-plus/index.php?title=User_Defined_Language_Files#How_to_install_user_defined_language_files)
 to install it in Notepad ++.
