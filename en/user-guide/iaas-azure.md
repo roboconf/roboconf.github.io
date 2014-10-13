@@ -67,7 +67,6 @@ II. Cloud service xml template file should be similar to follow:
   <Description/>  
   <Location>West Europe</Location>  
 </CreateHostedService>
-</code></pre>
 ```
 The full xml structure can be copied from [here][fullxml]. See full details about creating a Azure Cloud service [here][createcloud].
 
@@ -100,9 +99,8 @@ III. VM deployment xml template file should be similar to follow:
               <Port>22</Port>
               <Protocol>tcp</Protocol>
             </InputEndpoint>
-	          <InputEndpoint>          
+	    <InputEndpoint>          
               <LocalPort>8080</LocalPort>
-              
               <Name>Tomcat</Name>
               <Port>8080</Port>
               <Protocol>tcp</Protocol>
