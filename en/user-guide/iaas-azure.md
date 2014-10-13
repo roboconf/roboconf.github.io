@@ -99,7 +99,7 @@ III. VM deployment xml template file should be similar to follow:
               <Port>22</Port>
               <Protocol>tcp</Protocol>
             </InputEndpoint>
-	    <InputEndpoint>          
+	        <InputEndpoint>          
               <LocalPort>8080</LocalPort>
               <Name>Tomcat</Name>
               <Port>8080</Port>
