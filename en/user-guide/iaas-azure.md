@@ -21,14 +21,14 @@ iaas.type = azure
 # Credentials to connect
 azure.key.store.file =
 azure.key.store.password =
-azure.subscription.id	=
+azure.subscription.id =
 
 # VM configuration
-azure.create.cloud.service.template	=
+azure.create.cloud.service.template =
 azure.create.deployment.template =
 azure.location =
-azure.vm.size	=
-azure.vm.template	=
+azure.vm.size =
+azure.vm.template =
 ```
 
 Here is a complete description of the parameters for Microsoft Azure.
@@ -48,11 +48,11 @@ Here is a complete description of the parameters for Microsoft Azure.
 
 I. To create a Keystore, you would use a tool called [Keytool][keytool]. Here’s the command used to create a Keystore:
 
-> `keytool -genkeypair -alias mydomain -keyalg RSA -keystore WindowsAzureKeyStore.jks -keysize 2048 -storepass "test123";`
+> keytool -genkeypair -alias mydomain -keyalg RSA -keystore WindowsAzureKeyStore.jks -keysize 2048 -storepass "test123";
 
 What we’ve done is created a Keystore called “WindowsAzureKeyStore.jks” and set the password to access this as “test123”. You should see a file called “WindowsAzureKeyStore.jks” in your current Java bin folder (e.g. /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin). Next we’ll export a certificate from this Keystore we just created. To do so, again we will use Keytool. Here’s the command used:
 
-> `keytool -v -export -file ~/WindowsAzureSMAPI.cer -keystore WindowsAzureKeyStore.jks -alias mydomain`
+> keytool -v -export -file ~/WindowsAzureSMAPI.cer -keystore WindowsAzureKeyStore.jks -alias mydomain
 
 Once this operation completes, we will get a “WindowsAzureSMAPI.cer” file in “~/”. Next step is to upload this certificate to the Windows Azure Portal. To do so, login into Windows Azure Portal at https://manage.windowsazure.com and click on “SETTINGS” tab and then go to “MANAGEMENT CERTIFICATES” tab and upload this “WindowsAzureSMAPI.cer” file there.
 
