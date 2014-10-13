@@ -33,6 +33,7 @@ menus: [ "developers", "developer-guide" ]
 
 * [Web Site Organization](web-site-organization.html)
 * [Documenting a New Version](documenting-a-new-version.html)
+* [Syntax Highlighting](syntax-highlighting.html)
 
 ## Guidelines
 

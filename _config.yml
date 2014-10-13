@@ -205,6 +205,9 @@ urls:
     en: developer-guide/developer-guide
     fr: guide-developpeur/guide-developpeur
   
+  dg.snapshot.syntax-highlighting:
+    en: developer-guide/syntax-highlighting
+  
   dg.snapshot.version-management:
     en: developer-guide/version-management
   

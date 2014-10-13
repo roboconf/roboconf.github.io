@@ -28,7 +28,7 @@ The current development version is **0.2-SNAPSHOT**.
 	<!-- Version 0.1 -->
 	<tr>
 		<td>0.1</td>
-		<td>October 10th, 2014</td>
+		<td>October 10<sup>th</sup>, 2014</td>
 		<td>
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-dm-webapp/0.1/roboconf-dm-webapp-0.1.war">Deployment Manager</a> (30 Mb)
 			&nbsp; - &nbsp;
