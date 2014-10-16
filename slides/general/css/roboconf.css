@@ -172,3 +172,19 @@ section > p {
 section > p.notice {
 	border: solid black 1px;
 }
+
+table {
+	border: solid black 1px; 
+	border-collapse: collapse;
+}
+
+td {
+	border: solid black 1px;
+	padding: 4px 10px;
+}
+
+th {
+	border: solid black 1px;
+	padding: 4px 10px;
+	font-weight: bold;
+}
