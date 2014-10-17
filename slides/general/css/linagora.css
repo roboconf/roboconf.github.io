@@ -175,18 +175,12 @@ section > p.notice {
 	border: solid black 1px;
 }
 
-table {
+.reveal table {
 	border: solid black 1px; 
 	border-collapse: collapse;
 }
 
-td {
+.reveal td, .reveal th {
 	border: solid black 1px;
-	padding: 4px 10px;
-}
-
-th {
-	border: solid black 1px;
-	padding: 4px 10px;
-	font-weight: bold;
+	padding: 8px 15px;
 }
