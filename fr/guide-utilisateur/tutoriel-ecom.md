@@ -9,14 +9,14 @@ Ce tutoriel vous propose de déployer sur Amazon Web Services (AWS) une pile log
 incluant un équilibreur de charge (Apache avec ModJK), un serveur d'application (Glassfish)
 et une base de données (MySQL).
 
-Ce tutoriel s'appuie sur Roboconf 0.1
+La version de Roboconf utilisée ici est la 0.1
 
 
 ## Paramétrer AWS
 
 Si vous n'en avez pas déjà, créez-vous un compte sur [AWS](http://aws.amazon.com/fr/).    
 Choisissez l'offre basique. La première année d'utilisation est gratuite, à condition que vous respectiez certains quotas.
-Vous êtes en effet limités à des machines virtuelles **tiny** et vous ne devez pas dépasser 750 
+Vous êtes en effet limités à des machines virtuelles **micro** et vous ne devez pas dépasser 750 
 heures d'utilisation par mois. Ce sera amplement suffisant dans le cadre de ce projet.
 
 Allez ensuite dans la console de gestion d'AWS.  
@@ -54,12 +54,12 @@ En vous aidant du guide utilisateur (en anglais)...
  
  ... et procédez à l'installation.
  
- > Pensez à créer un image de cette VM une fois le tout réalisé.   
+ > Une fois le tout réalisé, pensez à créer une image de cette VM.   
  > Ainsi, vous n'aurez pas à tout recommencer la prochaine fois. Il vous suffira d'instancier 
  > votre image pour que RabbitMQ fonctionne à nouveau.
  
 * ... installez le DM sur votre propre machine.  
-Il est généralement inutile de le déployer sur le cloud, dans la mesure cela donne un travail
+Il est généralement inutile de le déployer sur le cloud, dans la mesure où cela donne un travail
 supplémentaire pour le sécuriser.
 
 * ... créez une **image virtuelle** sur laquelle vous déploierez Java (6 ou 7), [Puppet](http://puppetlabs.com/) et l'agent Roboconf.   
@@ -72,7 +72,7 @@ Récupérez les sources des [exemples Roboconf](https://github.com/roboconf/robo
 Etudiez les projets **apache-tomcat-webapp** et **apache-tomcat-bash**. Vous allez commencer par en déployer un
 pour vous familiariser avec Roboconf et son fonctionnement.
 
-* Mettez à jour les fichiers **iaas.properties** pour y ajouter vos identifiants AWS.
+* Mettez à jour les fichiers **iaas.properties** pour y ajouter vos accès AWS.
 * Celui-ci doit reprendre le [modèle pour EC2](/en/user-guide/iaas-aws.html).
 * Spécifiez les propriétés de vos machines virtuelles (ID de l'image, groupe de sécurité...).
 * Assurez-vous que le dossier contenant le **iaas.properties** englobe aussi un fichier *.gitignore*
@@ -90,7 +90,7 @@ il vous suffit de vous inspirer de ce
 
 Mettez également à jour votre fichier ~/.m2/settings.xml.  
 Vous devez activer un dépôt particulier pour que Maven sache où récupérer
-le plug-in Maven pour Roboconf.
+le plug-in pour Roboconf.
 
 ```xml
 <profiles>
