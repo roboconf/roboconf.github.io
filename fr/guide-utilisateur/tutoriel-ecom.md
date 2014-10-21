@@ -68,7 +68,12 @@ Paramétrez bien le système pour que l'agent Roboconf soit lancé au démarrage
 
 ## Premiers Pas
 
-Récupérez les sources des [exemples Roboconf](https://github.com/roboconf/roboconf-examples).  
+Afin de comprendre ce qui va se passer, commencez par lire ces 2 pages.
+
+* [Understanding Roboconf - part 1](/en/user-guide/lamp-example-part-1.html)
+* [Understanding Roboconf - part 2](/en/user-guide/lamp-example-part-2.html)
+
+Une fois cela fait, récupérez les sources des [exemples Roboconf](https://github.com/roboconf/roboconf-examples).  
 Etudiez les projets **apache-tomcat-webapp** et **apache-tomcat-bash**. Vous allez commencer par en déployer un
 pour vous familiariser avec Roboconf et son fonctionnement.
 
