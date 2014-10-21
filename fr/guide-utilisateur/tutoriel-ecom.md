@@ -136,10 +136,10 @@ Faîtes également évoluer le graphe pour y ajouter une 3ème niveau.
 Dans les exemples précédents, l'application web venait avec le serveur Tomcat. On installait donc, et Tomcat,
 et une application web. Modifiez ce comportement en les séparant.
 
-En résumé, vous devez enlever Tomcat de votre graphe, et y ajouter deux autres noeuds : Glassfish et WebApp.  
-Faîtes en sorte que le load balancer ne soit reconfiguré que lorsque vous démarrerez l'application web.
-Choisissez l'extension de Roboconf que vous souhaitez utiliser (Bash ou Puppet) et compléter les scripts
-nécessaires.
+En résumé, vous devez enlever Tomcat de votre graphe, et y ajouter deux autres noeuds : Glassfish et WebApp, où
+WebApp désigne l'application que vous réalisez dans le cadre du projet ECOM. Faîtes en sorte que le load balancer
+ne soit reconfiguré que lorsque vous démarrerez cette application web. Choisissez l'extension de Roboconf que vous 
+souhaitez utiliser (Bash ou Puppet) et compléter les scripts nécessaires.
 
 
 ## Pour Aller plus Loin
