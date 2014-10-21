@@ -15,4 +15,5 @@ Il constitue un ensemble de travaux pratiques pour des étudiants de
 Master 2 de l'Université Joseph Fourier, ainsi que pour les étudiants en
 informatique (RICM 5) de l'Institut National Polytechnique de Grenoble (INPG).
  
-[http://air.imag.fr/index.php/ECOM](http://air.imag.fr/index.php/ECOM)  
+* [http://air.imag.fr/index.php/ECOM](http://air.imag.fr/index.php/ECOM)
+* [Tutoriel ECOM](guide-utilisateur/tutoriel-ecom.html)  
