@@ -44,8 +44,6 @@ Voilà, vous êtes maintenant prêts à installer Roboconf.
 
 ## Installation de Roboconf
 
-**Informations Générales**
-
 	Pour vos machines virtuelles, utilisez Ubuntu Server comme image de base.  
 	Vous aurez aussi (parfois) à vous connecter en SSH. Pour rappel, la commande à utiliser est...
 	
