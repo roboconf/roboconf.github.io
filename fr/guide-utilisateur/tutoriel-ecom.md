@@ -9,7 +9,7 @@ Ce tutoriel vous propose de déployer sur Amazon Web Services (AWS) une pile log
 incluant un équilibreur de charge (Apache avec ModJK), un serveur d'application (Glassfish)
 et une base de données (MySQL).
 
-La version de Roboconf utilisée ici est la 0.1
+La version de Roboconf utilisée ici est la 0.1.
 
 
 ## Paramétrer AWS
@@ -44,26 +44,44 @@ Voilà, vous êtes maintenant prêts à installer Roboconf.
 
 ## Installation de Roboconf
 
-Téléchargez l'agent et le DM sur [cette page](../telecharger.html).  
-En vous aidant du guide utilisateur (en anglais)...
+**Informations Générales**
 
-* ... créez une machine virtuelle sur laquelle vous installerez et configurerez RabbitMQ.  
- Utilisez Ubuntu Server comme image de base. Connectez-vous en SSH sur la machine...
- 
+	Pour vos machines virtuelles, utilisez Ubuntu Server comme image de base.  
+	Vous aurez aussi (parfois) à vous connecter en SSH. Pour rappel, la commande à utiliser est...
+	
 	ssh -i /path/to/your.pem ubuntu@ip-address
- 
- ... et procédez à l'installation.
- 
- > Une fois le tout réalisé, pensez à créer une image de cette VM.   
- > Ainsi, vous n'aurez pas à tout recommencer la prochaine fois. Il vous suffira d'instancier 
- > votre image pour que RabbitMQ fonctionne à nouveau.
- 
-* ... installez le DM sur votre propre machine.  
-Il est généralement inutile de le déployer sur le cloud, dans la mesure où cela donne un travail
-supplémentaire pour le sécuriser.
 
-* ... créez une **image virtuelle** sur laquelle vous déploierez Java (6 ou 7), [Puppet](http://puppetlabs.com/) et l'agent Roboconf.   
-Paramétrez bien le système pour que l'agent Roboconf soit lancé au démarrage.
+Si vous êtes plusieurs, vous pouvez paralléliser les 3 tâches suivantes.  
+Les détails pour l'installation de chaque brique sont disponibles dans 
+[le guide utilisateur](/en/user-guide-0.1/user-guide.html) (en anglais seulement).
+
+1. Créez une machine virtuelle (VM) sur AWS et connectez-vous en SSH dessus.  
+Installez RabbitMQ, puis créez une image depuis cette VM. La prochaine fois que vous aurez à utiliser
+Roboconf, vous n'aurez ainsi qu'à instancier cette image plutôt que de tout réinstaller. Laissez la VM
+tourner, vous allez l'utiliser par la suite. 
+
+2. Deux options sont possibles pour l'installation du DM.  
+Si votre machine peut accéder à un port exotique (celui de RabbitMQ), il est préférable d'installer le DM sur votre
+machine. Autrement, créez une nouvelle VM sur AWS et connectez-vous en SSH dessus. Installez un serveur Apache Tomcat 
+et [installez le DM](../telecharger.html) sur ce serveur. Encore une fois, référez-vous au 
+[guide utilisateur](/en/user-guide-0.1/user-guide.html)  pour l'installation et la **configuration préalable** du DM.
+
+3. Créez une machine virtuelle (VM) sur AWS et connectez-vous en SSH dessus.  
+[Téléchargez l'agent](../telecharger.html) sur cette VM.
+
+```
+wget http://agent-url/...
+```
+
+Configurez le système pour que l'agent se lance au démarrage.  
+Pour vérifiez que votre configuration est bonne, tapez **sudo reboot** et vérifiez qu'un fichier de log a bien été
+créé dans le dossier **/logs** de l'agent. **Il est normal que le démarrage de l'agent échoue**. En mode normal,
+le DM de Roboconf va positionner des informations que l'agent va lire au démarrage. Ces informations étant absentes
+pour le moment, l'agent indique une erreur lorsqu'on le lance. Si vous comptez également utiliser [Puppet](http://puppetlabs.com/)
+comme plug-in Roboconf, pensez à l'installer sur la même machine que l'agent. Enfin, pour vous faciliter la vie pour la suite
+du TP, modifiez le fichier **logging.properties** de l'agent et modifiez le niveau de log à **FINEST** au lieu d'**INFO**.
+
+Une fois votre machine avec l'agent opérationnelle, créez une image, puis détruisez la VM.
 
 
 ## Premiers Pas
@@ -92,6 +110,7 @@ et **graph**.
 Roboconf va créer cette archive, mais il effectuera aussi une validation du projet. Pour utiliser Maven,
 il vous suffit de vous inspirer de ce 
 [pom.xml](https://github.com/roboconf/roboconf-maven-plugin/blob/master/src/test/projects/project--valid/pom.xml).
+Pensez aussi à mettre à jour la structure des dossiers (**src/main/model**).
 
 Mettez également à jour votre fichier ~/.m2/settings.xml.  
 Vous devez activer un dépôt particulier pour que Maven sache où récupérer
@@ -122,11 +141,14 @@ le plug-in pour Roboconf.
 
 
 Ouvrez ensuite l'interface d'administration de Roboconf. Celle-ci est embarquée par le DM.  
-L'adresse par défaut est [http://localhost:8080/roboconf-dm-webapp/client](http://localhost:8080/roboconf-dm-webapp/client).
+Si vous avez installé le DM sur votre machine, l'adresse par défaut est 
+[http://localhost:8080/roboconf-dm-webapp/client](http://localhost:8080/roboconf-dm-webapp/client).
 
 Chargez votre application et déployez-la via l'interface graphique de Roboconf.  
 Vérifiez dans l'interface de AWS que des machines virtuelles ont bien été créées.  Assurez-vous que
 l'application déployée fonctionne bien. Pour cela, connectez-vous sur le port 80 de la VM qui héberge le *load balancer* (Apache).
+
+> En cas de problème, regardez les logs des divers agents Roboconf.
 
 Une fois cette tâche réalisée, désinstallez les instances racines via Roboconf.  
 Cela devrait détruire les machines virtuelles dans AWS. Assurez-vous en.
@@ -151,6 +173,6 @@ souhaitez utiliser (Bash ou Puppet) et compléter les scripts nécessaires.
 
 * Faîtes évoluer votre graphe pour déployer les autres briques nécessaires à votre projet.
 * Retravaillez vos groupes de sécurité AWS pour limiter le nombre de ports accessibles.
-* Améliorez votre image virtuelle avec l'agent pour que seuls les ports nécessaires soient ouverts (SSH, RabbitMQ...).
-* Retravaillez les scripts Bash ou Puppet pour ouvrir ou fermer des ports via **iptables** lorsqu'une application démarre
-ou s'arrête.
+* Améliorez votre image virtuelle avec l'agent en configurant **iptables** pour que seuls les ports nécessaires soient ouverts (SSH, RabbitMQ...).
+* Retravaillez les scripts Bash ou Puppet de votre projet pour ouvrir ou fermer des ports via **iptables** lorsqu'une 
+application démarre ou s'arrête.

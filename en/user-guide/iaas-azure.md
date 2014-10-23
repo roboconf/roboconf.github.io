@@ -35,30 +35,41 @@ Here is a complete description of the parameters for Microsoft Azure.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| iaas.type | Determines the IaaS plugin to be used | none, must be "azure" | yes |
-| azure.key.store.file | Path to [JKS Keystore][jks] file (to create this file, see I) | none | yes |
-| azure.key.store.password | Keystore password | none | yes |
-| azure.subscription.id | Subscription ID of an Azure account using value of "azure.key.store.file" parameter as credential | none | yes |
-| azure.create.cloud.service.template | Path to a xml template file containing the "Body Request" used to submit to the Azure REST API for creating an Azure Cloud service (see II for more details) | none | yes |
-| azure.create.deployment.template | Path to a xml template file containing the "Body Request" used to submit to the Azure REST API for creating a VM deployment on the Cloud service designated by value of "azure.create.cloud.service.template" parameter (see III for more details) | none | yes |
-| azure.location | The Azure region chosen for both Cloud service and VM deployment (e.g. West Europe) | none | yes |
-| azure.vm.size | The size of VM (e.g. Small) | none | yes |
-| azure.vm.template | The ID of the VM image used as a template for the VM | none | yes |
+| iaas.type | Determines the IaaS plug-in to be used. | none, must be "azure" | yes |
+| azure.key.store.file | Path to [JKS Key store][jks] file (see below for help). | none | yes |
+| azure.key.store.password | Key store password. | none | yes |
+| azure.subscription.id | Subscription ID of an Azure account using value of "azure.key.store.file" parameter as credential. | none | yes |
+| azure.create.cloud.service.template | Path to a XML template file containing the "Body Request" used to submit to the Azure REST API for creating an Azure Cloud service (see below for help). | none | yes |
+| azure.create.deployment.template | Path to a XML template file containing the "Body Request" used to submit to the Azure REST API for creating a VM deployment on the Cloud service designated by value of **azure.create.cloud.service.template** parameter (see below for more details). | none | yes |
+| azure.location | The Azure region chosen for both Cloud service and VM deployment (e.g. West Europe). | none | yes |
+| azure.vm.size | The VM size (e.g. Small). | none | yes |
+| azure.vm.template | The ID of the VM image used as a template for the VM. | none | yes |
+
+<br />
+## Key Store
+
+To create a key store, you can use a tool called [Keytool][keytool].  
+Here is the command used to create a key store.
+
+	keytool -genkeypair -alias mydomain -keyalg RSA -keystore WindowsAzureKeyStore.jks -keysize 2048 -storepass "test123";
+
+What we have done is creating a key store called **WindowsAzureKeyStore.jks** and set its access password to **test123**. 
+You should see a file called **WindowsAzureKeyStore.jks** in your current Java bin folder 
+(e.g. */usr/lib/jvm/java-1.7.0-openjdk-amd64/bin*). Next, we need to export a certificate from this key store. To do so, 
+we will once again use [Keytool][keytool]. Here is the command to use.
+
+	keytool -v -export -file ~/WindowsAzureSMAPI.cer -keystore WindowsAzureKeyStore.jks -alias mydomain
+
+Once this operation completes, we will get a **WindowsAzureSMAPI.cer** file under **~/**.  
+The next (final) step consists in uploading this certificate to the Windows Azure Portal. To do so, login into the 
+[Windows Azure Portal](https://manage.windowsazure.com), click **Settings** > **Management Certificates**
+and upload the **WindowsAzureSMAPI.cer** file there.
 
 
-I. To create a Keystore, you would use a tool called [Keytool][keytool]. Here’s the command used to create a Keystore:
+## XML Template for Cloud Service
 
-> keytool -genkeypair -alias mydomain -keyalg RSA -keystore WindowsAzureKeyStore.jks -keysize 2048 -storepass "test123";
+Cloud service's XML template file should be similar to the following...
 
-What we’ve done is created a Keystore called “WindowsAzureKeyStore.jks” and set the password to access this as “test123”. You should see a file called “WindowsAzureKeyStore.jks” in your current Java bin folder (e.g. /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin). Next we’ll export a certificate from this Keystore we just created. To do so, again we will use Keytool. Here’s the command used:
-
-> keytool -v -export -file ~/WindowsAzureSMAPI.cer -keystore WindowsAzureKeyStore.jks -alias mydomain
-
-Once this operation completes, we will get a “WindowsAzureSMAPI.cer” file in “~/”. Next step is to upload this certificate to the Windows Azure Portal. To do so, login into Windows Azure Portal at https://manage.windowsazure.com and click on “SETTINGS” tab and then go to “MANAGEMENT CERTIFICATES” tab and upload this “WindowsAzureSMAPI.cer” file there.
-
-We're done !!!
-
-II. Cloud service xml template file should be similar to follow:
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="no"?>  
 <CreateHostedService xmlns="http://schemas.microsoft.com/windowsazure">  
@@ -68,9 +79,14 @@ II. Cloud service xml template file should be similar to follow:
   <Location>West Europe</Location>  
 </CreateHostedService>
 ```
-The full xml structure can be copied from [here][fullxml]. See full details about creating a Azure Cloud service [here][createcloud].
 
-III. VM deployment xml template file should be similar to follow:
+See full details about creating a Azure Cloud service [here][createcloud].
+
+
+## XML Template for VM deployment
+
+VM Deployment's XML template file should be similar to the following...
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsazure" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
@@ -118,10 +134,11 @@ III. VM deployment xml template file should be similar to follow:
   </RoleList>
 </Deployment>
 ```
-The full xml structure can be copied from [here][fullxml]. See full details about creating a VM deployment on Azure [here][vmdeployment].
+
+See full details about creating a VM deployment on Azure [here][vmdeployment].
+
 
 [jks]: http://en.wikipedia.org/wiki/Keystore
 [keytool]: http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html
 [createcloud]: http://msdn.microsoft.com/library/azure/gg441304.aspx
 [vmdeployment]: http://msdn.microsoft.com/en-us/library/azure/jj157194.aspx
-[fullxml]: https://github.com/roboconf/roboconf.github.io/blob/master/en/user-guide/iaas-azure.md
