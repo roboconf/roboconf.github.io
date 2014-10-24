@@ -27,6 +27,9 @@ and to the resulting size, that can be important depending on what we want).
 * [Roboconf-web-administration](https://github.com/roboconf/roboconf-web-administration) is a web application to manage Roboconf.  
 It is based on Javascript technologies (Angular JS and related).
 
+* [Roboconf-debian-packages](https://github.com/roboconf/roboconf-debian-packages) contains sources to build
+Debian packages for both the agent and the DM. These packages each install and configure a custom Karaf distribution.
+
 * [Roboconf-examples](https://github.com/roboconf/roboconf-examples) contains examples of Roboconf applications.
 
 * [Roboconf.github.io](https://github.com/roboconf/roboconf.github.io) contains the source for this web site.  
