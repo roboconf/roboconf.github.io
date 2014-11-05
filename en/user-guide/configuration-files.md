@@ -40,9 +40,9 @@ Roboconf configuration files should be organized as follows:
 	├── graph
 	│   ├── graph.graph
 	│   ├── VM_EC2
-	│   │   └── iaas.properties
+	│   │   └── target.properties
 	│   ├── VM_Openstack
-	│   │   └── iaas.properties
+	│   │   └── target.properties
 	│   └── MyApp
 	│       ├── files
 	│       └── script
@@ -104,11 +104,11 @@ Content of **initial-deployment.instances**:
         }
     }
 
-Content of **VM_EC2/iaas.properties**:
+Content of **VM_EC2/target.properties**:
 
 ``` properties
 # These properties are specific to Amazon Web Services
-iaas.type          = ec2
+target.id          = ec2
 ec2.endpoint       = eu-west-1.ec2.amazonaws.com
 ec2.access.key     = YOUR_EC2_ACCESS_KEY
 ec2.secret.key     = YOUR_EC2_SECRET_KEY

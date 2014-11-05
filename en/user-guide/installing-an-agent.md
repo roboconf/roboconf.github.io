@@ -5,7 +5,7 @@ id: "ug.snapshot.installing-an-agent"
 menus: [ "users", "user-guide" ]
 ---
 
-A Roboconf agent is an OSGi application which in charge of executing instructions on the host it is deployed on.  
+A Roboconf agent is an OSGi application which is in charge of executing instructions on the host it is deployed on.  
 These instructions are either given by the DM, or deduced by the agent from a change in the global application.
 As an example, if there is a web application on the host, and that it depends on a database, and that the database
 is undeployed, then the agent will stop the web application.
@@ -18,7 +18,7 @@ So, an agent will undertake and communicate about all the applications parts tha
 
 To install a Roboconf agent, you must have:
 
-* A Java Virtual Machine (JVM) for Java 1.6+.  
+* A Java Virtual Machine (JDK) for Java 1.6 or higher.  
 OpenJDK and Oracle JDK are supported.
 
 * Bash if you want to use the **Bash** plug-in.
@@ -37,6 +37,9 @@ Several options are available to install an agent.
 * Deploy the agent as a Karaf feature on your own Karaf server.
 * Deploy the agent's bundles in an OSGi container.
 
+> This page only describes how to install an agent.  
+> Take a look at [this page](configuring-an-agent.html) to see how to configure it.
+
 
 # Root Access
 
@@ -49,11 +52,30 @@ This is necessary if you deploy in a cloud environment.
 On Linux systems, making a program start with the operating system can be achieved a **init.d** script.  
 You can also edit the **/etc/rc.local** file and launch the program at the end of the script.
 
-Notice that all these notices are handled automatically if you install the Debian package.  
-Otherwise, you will have to handle this by hand.
+If you use Karaf, there are commands to automatically register the server as a service.  
+And if you install the Debian package, all of this is handled automatically for you.
 
 
-# The Debian package for the Agent
+# Installing Java
+
+Installing Java is described in several places all over the web.  
+Here are some short links and snippets to make you gain some time.
+Take a look at [this page](http://doc.ubuntu-fr.org/java) as an example.
+
+```
+sudo apt-get update
+sudo apt-get install openjdk-7-jdk 
+```
+
+And define the **JAVA_HOME** environment variable.  
+On Ubuntu 14.04, the following command installs Java here...
+
+	/usr/lib/jvm/java-7-openjdk-amd64/jre
+
+If you use Karaf, you can define this variable in the Karaf's **bin/setenv** file.
+
+
+# The Debian Package for the Agent
 
 The Debian package installs our custom Karaf distribution for Roboconf's agent.  
 Once installed, the Karaf server is started as a service. The agent runs within the Karaf server.
@@ -61,7 +83,8 @@ Once installed, the Karaf server is started as a service. The agent runs within 
 > We do not have a public server yet to simply type in **sudo apt-get install roboconf-agent**.  
 > Hopefully, this will come soon.
 
-Grab the agent's Debian package on the [download page](../download.html) and install it.
+Grab the agent's Debian package on the [download page](../download.html) and install it.  
+This package installs the agent as a service that will start with the operating system.
 
 
 # The Custom Karaf Distribution for the Agent
@@ -86,7 +109,57 @@ cd bin
 sudo ./karaf
 ```
 
-You can find help and more instructions about Karaf on [its web site](http://karaf.apache.org/).
+This opens an interactive shell.  
+To exit, type in...
+
+```bash
+logout
+```
+
+You can find help and more instructions about Karaf on [its web site](http://karaf.apache.org/).  
+Anyway, you need to make Karaf start at boot time with the system. Fortunately, Karaf has very useful
+features such as [system wrappers](http://karaf.apache.org/manual/latest/users-guide/wrapper.html).
+
+```properties
+# Start the agent
+cd bin
+sudo ./karaf
+
+# Install the service wrapper
+feature:install service-wrapper
+
+# Create a service for the agent
+wrapper:install -n roboconf-agent
+
+# Exit Karaf
+logout
+
+# Install the service
+sudo ln -s /home/ubuntu/roboconf-karaf-dist-agent-0.2-SNAPSHOT/bin/roboconf-agent-service /etc/init.d/
+
+# Configure it to boot with the system
+sudo update-rc.d roboconf-agent-service defaults
+
+# Just to be sure, you can check the main script
+more ../etc/roboconf-agent-service.conf
+```
+
+Now, restart your system and make sure the agent runs.  
+
+```properties
+# Clear the logs (you were in the "bin" directory).
+cd ../data/log
+rm -rf *
+
+# Restart.
+sudo reboot
+
+# Reconnect to the VM through SSH (...).
+# Check the logs.
+cd roboconf-agent/data/log
+
+# If the agent is running, there will be logs.
+```
 
 
 # The Agent Feature for Karaf

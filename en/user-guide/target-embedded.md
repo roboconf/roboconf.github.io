@@ -1,7 +1,7 @@
 ---
 title: "Embedded Support"
 layout: page
-id: "ug.snapshot.iaas-embedded"
+id: "ug.snapshot.target-embedded"
 menus: [ "users", "user-guide" ]
 ---
 
@@ -13,12 +13,12 @@ With this configuration, you need to start the agent directly.
 And you will have to pass it some information by hand (like the IP address of the messaging server).
 The most simple solution is to update the startup script of the agent.
 
-Sample **iaas.properties**.  
+Sample **target.properties**.  
 Just copy / paste and edit.
 
 ``` properties
 # Configuration file for Embedded Machines
-iaas.type = embedded
+target.id = embedded
 ```
 
-This kind of IaaS does not have any specific property.
+This kind of target does not have any specific property.

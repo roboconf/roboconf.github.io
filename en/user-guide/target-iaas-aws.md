@@ -1,22 +1,22 @@
 ---
 title: "Amazon Web Services Support"
 layout: page
-id: "ug.snapshot.iaas-aws"
+id: "ug.snapshot.target-iaas-aws"
 menus: [ "users", "user-guide" ]
 ---
 
-Roboconf has a IaaS implementation for Amazon Web Services (AWS).  
+Roboconf has a target implementation for Amazon Web Services (AWS).  
 It only supports the creation of *compute* VMs.
 
 Every new VM is associated with a public IP address.  
 This address will be used by other components which resolve their dependencies through Roboconf.
 
-Sample **iaas.properties**.  
+Sample **target.properties**.  
 Just copy / paste and edit.
 
 ``` properties
 # Configuration file for EC2
-iaas.type = ec2
+target.id = ec2
 
 # EC2 URL
 ec2.endpoint = 
@@ -36,7 +36,7 @@ Here is a complete description of the parameters for Amazon Web Services.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| iaas.type | Determines the IaaS plugin to be used | none, must be "ec2" | yes |
+| target.id | Determines the target handler to use | none, must be "ec2" | yes |
 | ec2.endpoint | URL of the compute service (eg. eu-west-1.ec2.amazonaws.com)  | none | yes |
 | ec2.access.key | Access key defined in your ec2 account | none | yes |
 | ec2.secret.key | Secret key defined in your ec2 account | none | yes |

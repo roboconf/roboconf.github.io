@@ -119,26 +119,26 @@ urls:
   ug.snapshot.preparing-virtual-images-with-an-agent:
     en: user-guide/preparing-virtual-images-with-an-agent
   
-  ug.snapshot.iaas-support:
-    en: user-guide/iaas-support
+  ug.snapshot.target-support:
+    en: user-guide/target-support
   
-  ug.snapshot.iaas-openstack:
-    en: user-guide/iaas-openstack
+  ug.snapshot.target-iaas-openstack:
+    en: user-guide/target-iaas-openstack
   
-  ug.snapshot.iaas-embedded:
-    en: user-guide/iaas-embedded
+  ug.snapshot.target-embedded:
+    en: user-guide/target-embedded
   
-  ug.snapshot.iaas-aws:
-    en: user-guide/iaas-aws
+  ug.snapshot.target-iaas-aws:
+    en: user-guide/target-iaas-aws
   
-  ug.snapshot.iaas-vmware:
-    en: user-guide/iaas-vmware
+  ug.snapshot.target-iaas-vmware:
+    en: user-guide/target-iaas-vmware
   
-  ug.snapshot.iaas-azure:
-    en: user-guide/iaas-azure
+  ug.snapshot.target-iaas-azure:
+    en: user-guide/target-iaas-azure
   
-  ug.snapshot.iaas-in-memory:
-    en: user-guide/iaas-in-memory
+  ug.snapshot.target-in-memory:
+    en: user-guide/target-in-memory
   
   ug.snapshot.plugins:
     en: user-guide/plugins

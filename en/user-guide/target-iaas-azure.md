@@ -1,22 +1,22 @@
 ---
 title: "Microsoft Azure Support"
 layout: page
-id: "ug.snapshot.iaas-azure"
+id: "ug.snapshot.target-iaas-azure"
 menus: [ "users", "user-guide" ]
 ---
 
-Roboconf has a IaaS implementation for Microsoft Azure.  
+Roboconf has a target implementation for Microsoft Azure.  
 It only supports the creation of *compute* VMs.
 
 Every new VM is associated with a public IP address.  
 This address will be used by other components which resolve their dependencies through Roboconf.
 
-Sample **iaas.properties**.  
+Sample **target.properties**.  
 Just copy / paste and edit.
 
 ``` properties
 # Configuration file for Azure
-iaas.type = azure
+target.id = azure
 
 # Credentials to connect
 azure.key.store.file =
@@ -35,7 +35,7 @@ Here is a complete description of the parameters for Microsoft Azure.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| iaas.type | Determines the IaaS plug-in to be used. | none, must be "azure" | yes |
+| target.id | Determines the target handler to use. | none, must be "azure" | yes |
 | azure.key.store.file | Path to [JKS Key store][jks] file (see below for help). | none | yes |
 | azure.key.store.password | Key store password. | none | yes |
 | azure.subscription.id | Subscription ID of an Azure account using value of "azure.key.store.file" parameter as credential. | none | yes |

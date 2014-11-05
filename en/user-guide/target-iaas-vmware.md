@@ -1,19 +1,19 @@
 ---
 title: "VMWare Support"
 layout: page
-id: "ug.snapshot.iaas-vmware"
+id: "ug.snapshot.target-iaas-vmware"
 menus: [ "users", "user-guide" ]
 ---
 
-Roboconf has a IaaS implementation for VMWare.  
+Roboconf has a target implementation for VMWare.  
 It only supports the creation of *compute* VMs.
 
-Sample **iaas.properties**.  
+Sample **target.properties**.  
 Just copy / paste and edit.
 
 ``` properties
 # Configuration file for VMWare
-iaas.type = vmware
+target.id = vmware
 
 # REST URL
 vmware.url = 

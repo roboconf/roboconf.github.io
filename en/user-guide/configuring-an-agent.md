@@ -5,7 +5,10 @@ id: "ug.snapshot.configuring-an-agent"
 menus: [ "users", "user-guide" ]
 ---
 
-Once the agent (DM) has been installed, it needs to be configured.  
+Once the agent has been installed, you have to configure it.  
+If the target is a IaaS (a cloud infrastructure), you only have to specify one thing, the IaaS type
+(or target ID). All the other parameters will be set dynamically by the DM or the IaaS itself.
+
 The agent comes with a default configuration that needs to be updated. Even if the configuration is
 wrong, the agent will keep on running (in a degraded mode).
 

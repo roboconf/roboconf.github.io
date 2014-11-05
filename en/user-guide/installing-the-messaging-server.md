@@ -27,16 +27,16 @@ You must first connect to the machine hosting RabbitMQ and then execute these co
 
 ``` properties
 # To create a new user called Batman
-rabbitmqctl add_user Batman BatmanPassword
+sudo rabbitmqctl add_user Batman BatmanPassword
 
 # Grant read/write/access permissions to our new user
-rabbitmqctl set_permissions Batman ".*" ".*" ".*"
+sudo rabbitmqctl set_permissions Batman ".*" ".*" ".*"
 
 # Check permissions
-rabbitmqctl list_user_permissions Batman
+sudo rabbitmqctl list_user_permissions Batman
 
 # Delete the guest user
-rabbitmqctl delete_user guest
+sudo rabbitmqctl delete_user guest
 ```
   
 To adjust the access permissions, you may want to look at [the man page](http://www.rabbitmq.com/man/rabbitmqctl.1.man.html) of RabbitMQ.

@@ -12,10 +12,73 @@ wrong, the DM will keep on running (in a degraded mode).
 The configuration is persisted by the OSGi container.  
 It is restored upon restart.
 
-There are 2 ways of updating the DM's configuration.  
+
+# Enable the Target Handlers
+
+By default, all the target handlers (EC2, Openstack, etc.) are disabled.  
+You will have to enable those you want to use. This guarantees an optimal memory usage.
+
+```properties
+# Start Karaf in interactive mode
+cd bin
+./karaf
+
+# List all the bundles
+bundle:list
+```
+
+This will display something like...
+
+```
+roboconf-dm > bundle:list
+START LEVEL 100 , List Threshold: 50
+ ID | State    | Lvl | Version        | Name
+--------------------------------------------------------------------------------------------
+ 37 | Active   |  80 | 1.12.0         | Apache Felix iPOJO
+ 38 | Active   |  80 | 1.12.0         | Apache Felix iPOJO Gogo Command
+ 39 | Active   |  80 | 1.12.0         | Apache Felix iPOJO Composite
+ 40 | Active   |  80 | 1.12.0         | Apache Felix iPOJO API
+ 43 | Active   |  80 | 1.18.1         | jersey-core
+ 44 | Active   |  80 | 1.18.1         | jersey-server
+ 45 | Active   |  80 | 1.18.1         | jersey-servlet
+ 46 | Active   |  80 | 1.18.1         | jersey-multipart
+ 47 | Active   |  80 | 1.6            | MIME streaming extension
+ 48 | Active   |  80 | 2.3.1          | Jackson-core
+ 49 | Active   |  80 | 2.3.1          | jackson-databind
+ 50 | Active   |  80 | 2.3.1          | Jackson-annotations
+ 51 | Active   |  80 | 2.3.1          | Jackson-JAXRS-base
+ 52 | Active   |  80 | 2.3.1          | Jackson-JAXRS-JSON
+ 53 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Core
+ 54 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Messaging
+ 55 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Deployment Manager :: REST Commons
+ 56 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Deployment Manager :: REST Services
+ 57 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Deployment Manager
+ 58 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Deployment Manager :: Web Administration
+ 59 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: API
+ 60 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: Docker
+ 61 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: Embedded
+ 62 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: Azure IaaS
+ 63 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: EC2 IaaS
+ 64 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: OpenStack IaaS
+ 65 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: VMWare IaaS
+105 | Active   |  80 | 1.7.0          | Apache Felix iPOJO WebConsole Plugins
+```
+
+```properties
+# Identify the ID of the bundle associated with your target.
+# Let's take EC2 in this case. It bundle ID is 63. We start it...
+bundle:start 63
+
+# The target handler for EC2 is now started and registered into the DM.
+```
+
+# Runtime Parameters
+
+Beyond extensions you can enable or disable dynamically, the DM has parameters that can
+be changed without restarting it. There are 3 ways of updating them. 
 
 
-# Config Admin
+## Config Admin
 
 If you installed the DM as bundles, you can use *Config Admin* to update the DM's parameters.  
 These pages give information about this mechanism.
@@ -27,10 +90,26 @@ These pages give information about this mechanism.
 The ID of the managed service for the DM is **net.roboconf.dm.configuration**.
 
 
-# File Install
+## Karaf's Administration Console
 
-If you installed the DM in a Karaf distribution, there are two ways.  
-The first one consists in editing (or creating) the **/etc/net.roboconf.dm.configuration.cfg** file.  
+If you installed the Karaf distribution for the DM, then there is web console which is preinstalled.  
+Open your web browser and go to [http://localhost:8181/system/console/configMgr](http://localhost:8181/system/console/configMgr)
+(assuming you run the DM locally). Default credentials are *karaf/karaf*.
+
+In the table, search for **net.roboconf.dm.configuration** and click it.  
+A dialog will show up where you will be able to update the configuration. Once done, click **Save**
+and the new configuration will be pushed into the DM. It will then setup a new messaging client and reload
+applications from the configuration directory.
+
+> If the configuration is invalid, no error will be shown in the console.  
+> And the DM will keep on running. To make sure there is no error, you will have to check the logs
+> under **data/logs**.
+
+
+## File Install
+
+If you installed the DM in a Karaf distribution, you can also update the configuration by editing a file.  
+This file is called (and located) **/etc/net.roboconf.dm.configuration.cfg**.  
 A sample is given below.
 
 ```properties
@@ -47,10 +126,9 @@ message-server-password = guest
 configuration-directory-location =
 ```
 
-The second solution consists in using Karaf's web console.  
-The parameters can be edited under the **OSGi &gt; Configuration** menu.
-Look for the **net.roboconf.dm.configuration** key and double-click it. A dialog will show up
-listing all the parameters in a form.
+> If the configuration is invalid, no error will be shown.  
+> And the DM will keep on running. To make sure there is no error, you will have to check the logs
+> under **data/logs**.
 
 
 # DM Parameters
