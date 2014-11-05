@@ -1,5 +1,5 @@
 ^/\*\*$
-^ \* Copyright (\d\d\d\d-)?2014 Linagora, Université Joseph Fourier$
+^ \* Copyright (\d\d\d\d-)?2014 Linagora, Université Joseph Fourier, Floralis$
 ^ \*$
 ^ \* The present code is developed in the scope of their joint LINAGORA -
 ^ \* Université Joseph Fourier - Floralis research program and is designated
