@@ -125,6 +125,9 @@ urls:
   ug.snapshot.target-iaas-openstack:
     en: user-guide/target-iaas-openstack
   
+  ug.snapshot.target-jclouds:
+    en: user-guide/target-jclouds
+  
   ug.snapshot.target-embedded:
     en: user-guide/target-embedded
   
@@ -425,5 +428,4 @@ urls:
   
   ug.0.1.index:
     en: user-guide-0.1/user-guide
-    fr: guide-utilisateur-0.1/guide-utilisateur
  

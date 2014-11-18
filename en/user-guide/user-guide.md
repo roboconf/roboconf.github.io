@@ -76,16 +76,17 @@ menus: [ "users", "user-guide" ]
 
 	
 <div class="floated">
-	<h2>IaaS</h2>
+	<h2>Deployment Targets</h2>
 
 	<ul>
-	<li><a href="iaas-support.html">IaaS Support</a></li>
-	<li><a href="iaas-openstack.html">OpenStack</a></li>
-	<li><a href="iaas-aws.html">Amazon Web Services</a></li>
-	<li><a href="iaas-vmware.html">VMWare</a></li>
-	<li><a href="iaas-azure.html">Microsoft Azure</a></li>
-	<li><a href="iaas-embedded.html">Embedded</a></li>
-	<li><a href="iaas-in-memory.html">In-Memory</a></li>
+	<li><a href="target-support.html">IaaS Support</a></li>
+	<li><a href="target-iaas-openstack.html">OpenStack</a></li>
+	<li><a href="target-iaas-aws.html">Amazon Web Services</a></li>
+	<li><a href="target-iaas-azure.html">Microsoft Azure</a></li>
+	<li><a href="target-jclouds.html">Apache JClouds</a></li>
+	<li><a href="target-iaas-vmware.html">VMWare</a></li>
+	<li><a href="target-embedded.html">Embedded</a></li>
+	<li><a href="target-in-memory.html">In-Memory</a></li>
 	</ul>
 </div>
 

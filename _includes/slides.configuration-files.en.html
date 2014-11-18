@@ -75,12 +75,12 @@ MyComponentName {
 # WebApplication export "WebApplication.ip".
 WebApplication {
 	exports: ip;
-	imports: MySQL.ip, MySQL.port = 3306;
+	imports: MySQL.ip, MySQL.port;
 }
 
 # MySQL exports "MySQL.ip" and "MySQL.port".
 MySQL {
-	exports: ip, port;
+	exports: ip, port = 3306;
 }
 	</code></pre>
 	<p>
@@ -194,7 +194,7 @@ VM_EC2 {
 }
 
 VM_Openstack {
-	installer :iaas;
+	installer: iaas;
 }
 	</code></pre>
 	<p>

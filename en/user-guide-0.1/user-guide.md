@@ -10,7 +10,7 @@ menus: [ "users", "user-guide", "0.1" ]
 	Markdown does not support it.
  -->
  
-This the user guide for Roboconf 0.1.  
+This is the user guide for Roboconf 0.1.  
 This version provides the DM as a web application (a WAR to deploy in Tomcat)
 and the agent as a stand-alone Java application.
 

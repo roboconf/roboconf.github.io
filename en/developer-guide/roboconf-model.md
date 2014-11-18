@@ -10,7 +10,9 @@ This page explains the way Roboconf manages the model things.
 There is not ONE Roboconf model, but TWO Roboconf models.  
 They cover various steps and requirements.
 
-Roboconf's model is handled in **roboconf-core**.
+Roboconf's model is handled in **roboconf-core**.  
+Both models are handled by the same bundle. They could be separated later if several DSL
+were used.
 
 
 ## The Parsing Model
@@ -35,6 +37,7 @@ This small portion is made up of several regions.
 * The end of a component declaration.
 
 This model allows to write editors in IDE (Eclipse, Netbeans, whatever).  
+This is why the parsing model is not internal. Eclipse plug-ins may import these classes.
 From an in-memory representation, we can update a text portion. This model is useless at runtime.
 
 Facets are handled at this level.  
@@ -110,11 +113,24 @@ Roboconf's DSL is inspired from CSS.
 It was preferred over XML (easy but heavy), JSon (not user-friendly) and YAML 
 (error prone when many levels of indentation).
 
-Its main force is too very simple, with the minimal set of characters to write.  
-Every instruction must fit into a single line. So, one line = one instruction.
+Its main force is to be very simple, with the minimal set of characters to write.  
+Every instruction must fit into a single line. So, **one line = one instruction**.
 
 Comments are a little bit specific.  
 On one hand, they are instructions (in some way). There are no multi-line comments. 
 A comment is a single line and starts with sharp character. And on the other hand,
 every instruction can have an end comment. So, on a same line, there can be an instruction
 (such as an installer name), followed by a comment.
+
+
+## DSL Version
+
+The Roboconf DSL may be upgraded with time.  
+New instructions may appear. This is why a specific property called **dsl-version** was introduced.
+This will help to select the right parser. 
+
+This way, parsers should only focus on one version.  
+This will help to maintain the code and support version upgrades with less efforts.
+
+For the moment, the default (and unique) parser only reads this property.  
+It does not check if it is really what it supports.
