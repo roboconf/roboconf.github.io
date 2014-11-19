@@ -9,8 +9,8 @@ Un jeu de *slides* est disponible sur ce site web.
 Vous pouvez les réutiliser pour vos présentations (cours, formations, conférences...).  
 Vous pouvez aussi les copier et les adapter pour votre propre besoin.
 
-* [Slides en anglais](/slides/general/roboconf-presentation.html)
-* Les *slides* en français ne sont pas encore disponibles.
+* [*Slides* en anglais](/slides/general/roboconf-presentation.html)
+* [*Slides* en français](/slides/general/presentation-roboconf.html)
 
 Le tout est basé sur [reveal.js](http://lab.hakim.se/reveal-js).  
 Vous pouvez donc copier la page HTML et enlever ou rajouter des sections.

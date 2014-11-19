@@ -10,7 +10,7 @@ You can reuse them for you presentations (training, courses, conferences...).
 You can also copy and adapt them for your own context.
 
 * [Slides In English](/slides/general/roboconf-presentation.html)
-* Slides in French will come later.
+* [Slides in French](/slides/general/presentation-roboconf.html)
 
 They are based on [reveal.js](http://lab.hakim.se/reveal-js).  
 You can copy the HTML page and remove or add sections.

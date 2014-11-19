@@ -33,7 +33,7 @@ azure.vm.template =
 
 Here is a complete description of the parameters for Microsoft Azure.
 
-| Property | Description | Default | Mandatory
+| Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
 | target.id | Determines the target handler to use. | none, must be "azure" | yes |
 | azure.key.store.file | Path to [JKS Key store][jks] file (see below for help). | none | yes |

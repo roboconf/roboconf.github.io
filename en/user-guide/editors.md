@@ -36,4 +36,11 @@ you could not create such editors in NetBeans or other IDE.
 ## HTML Pages
 
 If you want to embed snippets of Roboconf's DSL in HTML pages, we have added Roboconf
-support to [Highlight JS](http://highlightjs.org/).
+support to [Highlight JS](http://highlightjs.org/).  
+Just add the right JS and CSS links in your HTML page and wrap your code as follows.
+
+```html
+<pre><code class="roboconf" data-trim>
+	# Your snippet of Roboconf's DSL
+</code></pre>
+```

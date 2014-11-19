@@ -1,0 +1,144 @@
+
+<section>
+	<h1>Architecture</h1>
+</section>
+
+<section>
+	<img src="../../resources/img/roboconf-architecture.jpg" alt="Diagramme d'Architecture" class="no-border" />
+	<br />
+	<p>
+		Roboconf repose sur 3 éléments : le DM, des agents et un serveur de messagerie AMQP (RabbitMQ).
+		Les VM désignent des Machines Virtuelles ou n'importe quel type de machine (serveur, device...).
+	</p>
+</section>
+
+<section>
+	<h3>Le DM</h3>
+	<p>
+		Le DM (ou gestionnaire de déploiements en français) est chargé de piloter
+		les déploiements. Il est l'interface par laquelle passent les commandes d'administration.
+	</p>
+	<p>
+		Le DM fournit un ensemble d'API REST.<br />
+		Il est généralement accompagné d'une console web (roboconf-web-administration)
+		qui fournit une interface graphique pour l'invocation de cette API REST.
+	</p>
+	<div>
+		En fonction des opérations REST invoquées, le DM peut...
+	</div>
+	<ul>
+		<li>... interagir avec un gestionnaire de cloud pour créer ou supprimer une machine.</li>
+		<li>... communiquer avec des agents Roboconf au travers du serveur de messagerie.</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Les Agents</h3>
+	<p>
+		Chaque machine sur laquelle Roboconf doit déployer ou gérer quelque chose, doit avoir un agent
+		installé et démarré. Un tel agent est à l'écoute...
+	</p>
+	<ul>
+		<li>... d'instructions provenant du DM.</li>
+		<li>... de notifications provenant d'autres agents.</li>
+	</ul>
+	
+	<br /><br />
+	<p>
+		En fonction de ce qu'il reçoit, un agent va exécuter une recette.<br />
+		Une recette est un ensemble d'actions associées à une brique applicative et attachée
+		à une extension de Roboconf (Puppet, Bash...). L'exécution d'une recette aboutit à un changement
+		dans l'application.
+	</p>
+	<p>
+		Un agent peut installer et gérer plusieurs éléments sur cette même machine. Les applications
+		déployées par Roboconf ne sont pas conscientes de sa présence. De ce point de vue, Roboconf est bien
+		un intergiciel (ou middleware).
+	</p>
+</section>
+
+<section>
+	<h3>Le Serveur de Messagerie</h3>
+	<p>
+		Le serveur de messagerie est le medium utilisé pour échanger des informations entre...
+	</p>
+	<ul>
+		<li>...  le DM et les agents.</li>
+		<li>...  un agent et d'autres agents.</li>
+	</ul>
+	
+	<br /><br />
+	<p>
+		Le serveur de messagerie actuellement utilisé est RabbitMQ.<br />
+		C'est une solution robuste et open source qui implémente la norme AMQP. De plus, elle supporte
+		un mode <i>cluster</i>.
+	</p>
+</section>
+
+<section>
+	<h3>A propos du DM</h3>
+	<p>
+		Le DM peut être déployé n'importe où.<br />
+		Généralement, il est considéré comme une bonne pratique de le faire tourner
+		en local (c'est à dire au sein de son système d'information). Cela réduit les précautions
+		à prendre comparé à ce qu'il faudrait faire s'il tournait sur un serveur public.
+	</p>
+	<p>
+		Le DM a été conçu pour ne fonctionner que lorsque cela est nécessaire.<br />
+		Cela signifie qu'il peut être arrêté lorsqu'aucune action d'administration n'est en cours. L'état
+		courant des applications est alors persisté sur le système de fichiers. Cet état sera réactualisé
+		au prochain démarrage en interrogeant les agents. L'utilisation d'un simple système de fichiers pour
+		la persistence permet de mettre en place des procédures simples pour la restauration en cas de crash.
+	</p>
+</section>
+
+<section>
+	<h3>A propos de RabbitMQ</h3>
+	<p>
+		Le serveur de messagerie est le point clé qui assure le fonctionnement global.<br />
+		Il doit donc être accessible par le DM, ainsi que par tous les agents. C'est la raison
+		pour laquelle il doit être accessible via une URL publique.
+	</p>
+	<p>
+		Roboconf utilise les mécanismes d'authentification fournis par RabbitMQ pour sécuriser
+		l'accès au serveur de messagerie.
+	</p>
+</section>
+
+<section>
+	<h3>A propos des Agents</h3>
+	<p>
+		Le cas d'usage le plus pratique actuellement pour Roboconf est lorsque les machines
+		cibles sont hébergées dans le cloud. Le DM créé alors les machines virtuelles depuis le catalogue d'images
+		du IaaS. Afin de s'assurer que chaque machine cible a bien un agent installé et démarré, le plus simple
+		est donc de créer une image virtuelle sur laquelle on pré-installe un agent Roboconf, puis d'enregistrer
+		cette image dans le catalogue. 
+	</p>
+	<p>
+		Pour d'autres cibles, il faut généralement installer et configurer l'agent à la main.
+		<br />Des solutions utilisant SSH peuvent être utilisées dans cette optique. 
+	</p>
+	<p>
+		La plupart des informations requises par un agent, sont détenues et fournies par le DM.
+		La configuration de l'agent est donc minimale.
+	</p>
+</section>
+
+<section>
+	<h3>Multi-IaaS</h3>
+	<p>
+		Les déploiements hybrides et multi-cibles sont supportés.<br />
+		Cette possibilité peut être utilisée par exemple en cas de périodes critiques
+		(pic de charge) ou dans le cadre d'une migration. Cela peut aussi être utilisé
+		pour la sécurité et la protection des données.  
+	</p>
+	<p>
+		La prochaine image illustre ça avec <strong>quelques</strong> infrastructures de cloud.<br />
+		Pour rester simple, on ne montre que les interactions entre les briques Roboconf, et non
+		entre les applications déployées par Roboconf.
+	</p>
+</section>
+
+<section>
+	<img src="../../resources/img/roboconf-architecture-example.jpg" alt="Sample Architecture Diagram" class="no-border" />
+</section>

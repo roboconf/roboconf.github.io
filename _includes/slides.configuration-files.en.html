@@ -46,7 +46,7 @@
 		They are readable and editable easily through any text editor.
 		They are less verbose than XML, and less error-prone than YAML.
 	</p>
-	<pre><code data-trim>
+	<pre><code class="roboconf" data-trim>
 # A component called 'MyComponentName'
 MyComponentName {
     alias: My test application;
@@ -71,7 +71,7 @@ MyComponentName {
 		An important aspect of components are imports and exports.<br />
 		They are variables that a component exposes or requires.
 	</p>
-	<pre><code data-trim>
+	<pre><code class="roboconf" data-trim>
 # WebApplication export "WebApplication.ip".
 WebApplication {
 	exports: ip;
@@ -100,7 +100,7 @@ MySQL {
 		Optional imports mean a component can start, even if these imports are not resolved.
 		But it will be notified if they appear.
 	</p>
-	<pre><code data-trim>
+	<pre><code class="roboconf" data-trim>
 # A cluster node.
 ClusterNode {
 	exports: ip, port = 18741;
@@ -128,7 +128,7 @@ ClusterNode {
 		Imports and exports deal with runtime dependencies.<br />
 		Containment relations are handled through the <strong>children</strong> key word.
 	</p>
-	<pre><code data-trim>
+	<pre><code class="roboconf" data-trim>
 # Tomcat and MySQL are other graph components
 VM_Tomcat {
 	children: Tomcat;
@@ -154,11 +154,11 @@ VM_All {
 		Sometimes, components share properties.<br />
 		It is possible to group properties into a <strong>facet</strong>.
 	</p>
-	<pre><code data-trim>
+	<pre><code class="roboconf" data-trim>
 # Facets
 facet VM {
 	children: deployable;
-	installer: iaas;
+	installer: target;
 }
 
 facet deployable {
@@ -166,7 +166,7 @@ facet deployable {
 	exports: ip;
 }
 	</code></pre>
-	<pre><code data-trim>
+	<pre><code class="roboconf" data-trim>
 # Components
 VM_EC2 {
 	facets: VM;
@@ -188,23 +188,23 @@ Tomcat {
 		Recipes are resources used by a Roboconf plug-in to manage the
 		life cycle of component instances.
 	</p>
-	<pre><code data-trim>
+	<pre><code class="roboconf" data-trim>
 VM_EC2 {
-	installer: iaas;
+	installer: target;
 }
 
 VM_Openstack {
-	installer: iaas;
+	installer: target;
 }
 	</code></pre>
 	<p>
 		This graph implies there will be two directories in the graph, called
 		<strong>VM_EC2</strong> and <strong>VM_Openstack</strong>. Because these components
-		use the <strong>iaas</strong> installer, these directories will contain a 
-		<strong>iaas.properties</strong> file.
+		use the <strong>target</strong> installer, these directories will contain a 
+		<strong>target.properties</strong> file.
 	</p>
 	<p>
-		One will have parameters for EC2.<br />
+		One will have parameters to handle VM on EC2.<br />
 		The other one will contain parameters related to Openstack.
 	</p>
 </section>
@@ -212,11 +212,11 @@ VM_Openstack {
 <section>
 	<h3>Recipes - 2/3</h3>
 	<p>
-		Here is an example of <strong>iaas.properties</strong>.
+		Here is an example of <strong>target.properties</strong>.
 	</p>
-	<pre><code data-trim>
+	<pre><code class="bash" data-trim>
 # These properties are specific to Amazon Web Services
-iaas.type          = ec2
+target.id          = iaas-ec2
 ec2.endpoint       = eu-west-1.ec2.amazonaws.com
 ec2.access.key     = YOUR_EC2_ACCESS_KEY
 ec2.secret.key     = YOUR_EC2_SECRET_KEY
@@ -230,7 +230,7 @@ securityGroupName  = YourSecurityGroup
 <section>
 	<h3>Recipes - 3/3</h3>
 	<p>
-		The <strong>iaas</strong> installer is in charge of managing machines
+		The <strong>target</strong> installer is in charge of managing machines
 		(VM, server, device...). The configuration depends on the target type.
 	</p>
 	<p>
@@ -257,19 +257,19 @@ securityGroupName  = YourSecurityGroup
 	<p>
 		Unlike the graph, which was really a graph, instance definitions are trees.
 	</p>
-	<pre><code data-trim>
+	<pre><code class="roboconf" data-trim>
 # Deploy on EC2 VM (called VM1)
-instanceof VM_EC2 {
+instance of VM_EC2 {
     name: VM1;
-    instanceof MyApp {
+    instance of MyApp {
             name: MyApp_on_EC2;
     }
 }
 
 # Deploy on Openstack VM (called VM2)
-instanceof VM_Openstack {
+instance of VM_Openstack {
     name: VM2;
-    instanceof MyApp {
+    instance of MyApp {
             name: MyApp_on_Openstack;
     }
 }
@@ -286,15 +286,15 @@ instanceof VM_Openstack {
 		It can even define new properties that were not defined in the component.<br />
 		This is useless with respect to exports, but it can be very useful in recipes.
 	</p>
-	<pre><code data-trim>
+	<pre><code class="roboconf" data-trim>
 # The Component
 Tomcat {
 	exports: ip, port = 8080;
 }
 	</code></pre>
-	<pre><code data-trim>
+	<pre><code class="roboconf" data-trim>
 # An instance
-instanceof Tomcat {
+instance of Tomcat {
 	name: Tomcat;
 	port: 8080;
 	log_level: INFO;	# used in the recipe 
@@ -308,7 +308,7 @@ instanceof Tomcat {
 		The application descriptor is a simple properties file with
 		meta-data about the project itself.
 	</p>
-	<pre><code class="ini" data-trim>
+	<pre><code class="bash" data-trim>
 # Application Descriptor for Roboconf
 application-name = MyApp
 application-qualifier = sample

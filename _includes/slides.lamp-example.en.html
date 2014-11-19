@@ -98,7 +98,7 @@
 	<h3>The special case of &laquo; Start &raquo;</h3>
 	<p>
 		An agent manipulates instances (associated to components).<br />
-		An agent uses plug-ins to update the life cycle of an instance.<br />
+		An agent uses plug-ins to update the life cycle of an instance.
 	</p>
 	<p>
 		But &laquo; plugin.start &raquo; does not start an instance.<br />
@@ -114,7 +114,7 @@
 <section>
 	<h3>Before Synchronization</h3>
 	<p>
-		So far, the VM have been created. Apache, Tomcat and MySQL have been deployed.
+		Let's get back to our example. So far, the VM have been created. Apache, Tomcat and MySQL have been deployed.
 		But Tomcat does not know where MySQL runs. And Apache does not know where web
 		applications are deployed.
 	</p>
@@ -128,20 +128,20 @@
 <section>
 	<h3>Variable Exchange - 1/6</h3>
 	<p>
-		Let's assume Tomcat is the first deployed.
+		Let's <strong>assume</strong> that Tomcat is the first deployed.
 	</p>
 	<img src="../../resources/img/lamp-variable-exchange-01.jpg" alt="Variable Exchange 1" class="no-border" />
 	<p>
 		First, the local agent starts listening those that need Tomcat variables.<br />
 		Then, it requests the variables it needs (MySQL). It will not be able to start until 
-		it has these variables.
+		it has these variables. Since it is alone, nobody will answer its request.
 	</p>
 </section>
 
 <section>
 	<h3>Variable Exchange - 2/6</h3>
 	<p>
-		Let's assume Apache is deployed right after.
+		Let's <strong>assume</strong> Apache is deployed right after.
 	</p>
 	<img src="../../resources/img/lamp-variable-exchange-02.jpg" alt="Variable Exchange 2" class="no-border" />
 	<p>
@@ -154,7 +154,7 @@
 <section>
 	<h3>Variable Exchange - 3/6</h3>
 	<p>
-		The agent in charge of Tomcat receives the request for Apache.
+		The agent in charge of Tomcat receives the request sent by the Apache agent.
 	</p>
 	<img src="../../resources/img/lamp-variable-exchange-03.jpg" alt="Variable Exchange 3" class="no-border" />
 	<p>
@@ -291,6 +291,23 @@
 	<p>
 		The Apache load balancer can now dispatch requests to 2 Tomcat servers.<br />
 		Both rely on the same database.
+	</p>
+</section>
+
+<section>
+	<h3>Conclusion</h3>
+	<p>
+		Roboconf can deploy a distributed application <strong>in any order</strong>.
+	</p>
+	<p>
+		Parallelism is pushed to the limits. The asynchronous exchanges between agents guarantee that no
+		matter what, the application will <i>land on its feet</i>.
+	</p>
+	<img src="../../resources/img/chat.gif" alt="a cat landing on its feet" />
+	
+	<p>
+		This mecanism is used at deployment time as well as during reconfiguration phasis<br />
+		(addition or removal of application parts).
 	</p>
 </section>
 

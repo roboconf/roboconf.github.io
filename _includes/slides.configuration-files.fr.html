@@ -1,0 +1,318 @@
+
+<section>
+	<h1>Fichiers de Configuration</h1>
+</section>
+
+<section>
+	<h3>Structure de Projet</h3>
+	<ul>
+		<li>
+			descriptor/
+			<ul>
+				<li>application.properties</li>
+			</ul>
+		</li>
+		<li>
+			graph/
+			<ul>
+				<li>*.graph</li>
+				<li>1 répertoire par composant (pour les recettes)</li>
+			</ul>
+		</li>
+		<li>
+			instances/
+			<ul>
+				<li>*.instances</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<br /><br />
+	<p>
+		Le graphe est défini dans des fichiers <strong>*.graph</strong>.<br />
+		Cette définition peut être étalée dans plusieurs fichiers, pour la modularité.<br />
+		Il en est de même pour les fichiers <strong>*.instances</strong>.
+	</p>
+	<p>
+		Cette structure de fichiers peut aussi être portée dans Maven, pour une utilisation conjointe
+		du plug-in Maven pour Roboconf.
+	</p>
+</section>
+
+<section>
+	<h3>Fichiers du Graphe - 1/5</h3>
+	<p>
+		Ces fichiers utilisent une syntaxe particulière, inspirée de celle de CSS.<br />
+		Ils sont facilement lisibles, et éditables avec n'importe quel éditeur de texte.
+		Ils sont moins verbeux que XML, et moins sujets aux maladresses que YAML.
+	</p>
+	<pre><code class="roboconf" data-trim>
+# Un composant appelé 'MyComponentName'
+MyComponentName {
+    alias: My test application;
+    installer: bash;
+}
+	</code></pre>
+	<p>
+		Les commentaires et les propriétés doivent tenir sur une seule ligne.<br />
+		<strong>alias</strong> est une description ou un nom plus sympathique du composant.
+		<strong>installer</strong> est l'extension Roboconf utilisée pour le déploiement, le démarrage, l'arrêt
+		ou la désinstallation d'instances de ce composant. 
+	</p>
+	<p>
+		Chaque composant est associé à un répertoire contenant des recettes.
+		Ces ressources seront utilisées par l'extension Roboconf identifiée par la propriété <strong>installer</strong>.
+	</p>
+</section>
+
+<section>
+	<h3>Fichiers du Graphe - 2/5</h3>
+	<p>
+		Un aspect important des composants sont les imports et les exports.<br />
+		Ce sont des variables qu'un composant expose ou dont il dépend.
+	</p>
+	<pre><code class="roboconf" data-trim>
+# WebApplication exporte "WebApplication.ip".
+WebApplication {
+	exports: ip;
+	imports: MySQL.ip, MySQL.port;
+}
+
+# MySQL exporte "MySQL.ip" and "MySQL.port".
+MySQL {
+	exports: ip, port = 3306;
+}
+	</code></pre>
+	<p>
+		Si un composant importe une variable, alors un autre composant doit l'exporter.
+		Une instance de composant ne peut pas démarrer tant que tous ses imports ne sont pas résolus.
+	</p>
+	<p>
+		Chaque fois qu'une instance de composant apparait ou disparait, elle notifie ceux qui importent
+		ses variables. Les instances notifiées peuvent alors prendre les actions adéquates au travers de leurs recettes.
+	</p>
+</section>
+
+<section>
+	<h3>Fichiers du Graphe - 3/5</h3>
+	<p>
+		Il est possible de définir des imports optionnels.<br />
+		Des imports optionnels signifient qu'un composant peut démarrer sans que ces imports n'aient été résolus.
+		Toutefois, il sera averti si des instances les exportant apparaissent ou disparaissent.
+	</p>
+	<pre><code class="roboconf" data-trim>
+# Un noeud de cluster
+ClusterNode {
+	exports: ip, port = 18741;
+	imports: ClusterNode.ip (optional), ClusterNode.port (optional);
+}
+	</code></pre>
+	<p>
+		Quand une instance de composant est démarrée, et qu'un de ses imports n'est plus résolu,
+		Roboconf l'arrête et le met dans un état appelé <strong>starting</strong>. Lorsque la dépendance sera
+		à nouveau résolue, l'instance sera automatiquement redémarrée.
+	</p>
+	<p>
+		<strong>ip</strong> est une variable particulière dont la valeur est mise automatiquement par Roboconf.
+		Toute autre variable exportée doit avoir une valeur par défaut.
+	</p>
+</section>
+
+<section>
+	<h3>Fichiers du Graphe - 4/5</h3>
+	<p>
+		Les imports et les exports ont trait aux relations de type &laquo; exécution &raquo;.<br />
+		Les relations de type &laquo; conteneur &raquo; sont gérées via le mot-clé <strong>children</strong>.
+	</p>
+	<pre><code class="roboconf" data-trim>
+# Tomcat et MySQL sont d'autres composants
+VM_Tomcat {
+	children: Tomcat;
+}
+
+VM_MySQL {
+	children: MySQL;
+}
+
+VM_All {
+	children: Tomcat, MySQL;
+}
+	</code></pre>
+	<p>
+		<strong>children</strong> liste les composants qui peuvent être déployés sur une instance
+		de ce composant. On peut ainsi être très flexible ou bien très contraignant.
+	</p>
+</section>
+
+<section>
+	<h3>Fichiers du Graphe - 5/5</h3>
+	<p>
+		Des composants peuvent parfois partager un certain nombre de propriétés.<br />
+		Il est possible de regrouper des propriétés au sein d'une <strong>facette</strong>.
+	</p>
+	<pre><code class="roboconf" data-trim>
+# Facettes
+facet VM {
+	children: deployable;
+	installer: target;
+}
+
+facet deployable {
+	installer: puppet;
+	exports: ip;
+}
+	</code></pre>
+	<pre><code class="roboconf" data-trim>
+# Composants
+VM_EC2 {
+	facets: VM;
+}
+
+VM_Azure {
+	facets: VM;
+}
+	
+Tomcat {
+	facets: deployable;
+}
+	</code></pre>
+</section>
+
+<section>
+	<h3>Recettes - 1/3</h3>
+	<p>
+		Les recettes sont des ressources utilisées par des extensions de Roboconf pour gérer
+		le cycle de vie d'instances de composants.
+	</p>
+	<pre><code class="roboconf" data-trim>
+VM_EC2 {
+	installer: target;
+}
+
+VM_Openstack {
+	installer: target;
+}
+	</code></pre>
+	<p>
+		Ce graphe signifie que l'on va trouver 2 sous-répertoires appelés
+		<strong>VM_EC2</strong> et <strong>VM_Openstack</strong>. Ces composants utilisent l'extension
+		<strong>target</strong>, qui gère la création et la destruction de VM. Cette extension nécessite 
+		un fichier <strong>target.properties</strong>.
+	</p>
+	<p>
+		Il y aura donc un répertoire avec les paramètres pour EC2.<br />
+		Et il y en aura un autre avec les paramètres pour Openstack.
+	</p>
+</section>
+
+<section>
+	<h3>Recettes - 2/3</h3>
+	<p>
+		Voici un exemple de fichier <strong>target.properties</strong>.
+	</p>
+	<pre><code class="bash" data-trim>
+# Propriétés spécifiques à Amazon Web Services
+target.id          = iaas-ec2
+ec2.endpoint       = eu-west-1.ec2.amazonaws.com
+ec2.access.key     = YOUR_EC2_ACCESS_KEY
+ec2.secret.key     = YOUR_EC2_SECRET_KEY
+amiVmNode          = ami-YourAmiNumber
+vmInstanceType     = t1.micro
+sshKeyName         = YourSshKey
+securityGroupName  = YourSecurityGroup	
+	</code></pre>
+</section>
+
+<section>
+	<h3>Recettes - 3/3</h3>
+	<p>
+		L'extension associée à l'identifiant <strong>target</strong> est en charge des machines
+		(VM, serveur, device...). Sa configuration dépend de la cible de déploiement.
+	</p>
+	<p>
+		L'extension associée à l'identifiant <strong>bash</strong> gère le cycle de vie d'une instance de composant
+		à l'aide de scripts Bash (deploy, start, stop, undeploy et update). Ces scripts doivent être idem-potents.
+	</p>
+	<p>
+		L'extension associée à l'identifiant <strong>puppet</strong> gère le cycle de vie d'une instance de composant
+		au travers d'un module Puppet. Le nom du module doit démarrer par <strong>roboconf_</strong>.
+	</p>
+	<p>
+		Ce sont les extensions actuellement disponibles.<br />
+		D'autres peuvent être créées au besoin (Chef, ANT, extension personnalisée...).
+	</p>
+</section>
+
+<section>
+	<h3>Instances - 1/2</h3>
+	<p>
+		Les composants définissent des règles et des relations (comment).<br />
+		Les instances définissent ce qui tourne vraiment (quoi et où).
+	</p>
+	<p>
+		Contrairement au graphe, qui désigne un ensemble de graphes, les définitions d'instances sont des arbres.
+	</p>
+	<pre><code class="roboconf" data-trim>
+# Déploiement d'une VM "VM1" sur EC2
+instance of VM_EC2 {
+    name: VM1;
+    instance of MyApp {
+            name: MyApp_on_EC2;
+    }
+}
+
+# Déploiement d'une VM "VM1" sur Openstack
+instance of VM_Openstack {
+    name: VM2;
+    instance of MyApp {
+            name: MyApp_on_Openstack;
+    }
+}
+	</code></pre>
+</section>
+
+<section>
+	<h3>Instances - 2/2</h3>
+	<p>
+		Outre son nom et son composant, une instance peut définir de nouvelles propriétés
+		et/ou surcharger des propriétés héritées de son composant.
+	</p>
+	<p>
+		Le fait de rajouter de nouvelles propriétés est inutile du point de vue des exports.
+		Mais cela peut s'avérer utile dans les recettes.
+	</p>
+	<pre><code class="roboconf" data-trim>
+# Le composant
+Tomcat {
+	exports: ip, port = 8080;
+}
+	</code></pre>
+	<pre><code class="roboconf" data-trim>
+# Une instance
+instance of Tomcat {
+	name: Tomcat;
+	port: 8080;
+	log_level: INFO;	# utilisé dans la recette 
+}
+	</code></pre>
+</section>
+
+<section>
+	<h3>Descripteur d'Application</h3>
+	<p>
+		Le descripteur d'une application est un simple fichier de propriétés.
+		Celui-ci contient des méta-données sur le projet lui-même.
+	</p>
+	<pre><code class="bash" data-trim>
+# Descripteur d'application pour Roboconf
+application-name = MyApp
+application-qualifier = sample
+application-description = Une application pour l'exemple
+graph-entry-point = main.graph
+instance-entry-point = initial-model.instances
+	</code></pre>
+	<p>
+		Pour le moment, un projet doit contenir absolument tout : graphe, recettes et descripteur (les instances sont optionnelles).
+		Des travaux sont en cours pour rendre les recettes et des portions de graphe réutilisables (~ librairies).
+	</p>
+</section>

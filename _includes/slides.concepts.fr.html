@@ -1,0 +1,168 @@
+
+<section>
+	<h1>Concepts</h1>
+</section>
+
+<section>
+	<h3>Le Graphe</h3>
+	<p>
+		Le graphe définit des éléments logiciels et les relations qui les unissent.<br />
+		Un élément logiciel peut être une machine virtuelle, un serveur d'application, une application, etc.
+		On les appelle aussi des <strong>composants</strong>.
+	</p>
+	<p>
+		Deux types de relations sont considérées.
+	</p>
+	
+	<h4>Conteneur</h4>
+	<p>
+		Un composant doit être déployé sur un autre.<br />
+		<small>Exemple : un WAR se déploie sur un serveur d'application.</small>
+	</p>	
+	
+	<h4>Exécution</h4>
+	<p>
+		Un composant a besoin d'un autre pour fonctionner.<br />
+		<small>Exemple : une application web a besoin d'une base de données.</small>
+	</p>
+</section>
+
+<section>
+	<h3>Exemple de Relation &laquo; Conteneur &raquo;</h3>
+	<img src="../../resources/img/graph-containment-example.jpg" alt="Exemple" class="no-border" />
+	<p>
+		Ce graphe indique que l'on peut déployer Tomcat soit sur une VM Amazon,
+		soit sur une VM Azure. Et on a listé 2 applications qui se déploient sur Tomcat.
+		Si l'on souhaite déployer une troisième application web, il faut compléter ce graphe.
+	</p>
+	<p>
+		Les conteneurs peuvent être imbriqués.
+		Ainsi, Tomcat est à la fois contenu et un conteneur.
+	</p>
+</section>
+
+<section>
+	<h3>Exemple de Relation &laquo; Exécution &raquo;</h3>
+	<img src="../../resources/img/graph-runtime-example.jpg" alt="Exemple" class="no-border" />
+	<p>
+		Nous avons ici, en plus d'une relation de type &laquo; conteneur &raquo;, 
+		une relation de type &laquo; exécution &raquo;.
+		Dans ce graphe, <strong>App 2</strong> dépend d'une base MySQL, ce qui n'est pas le cas de <strong>App 1</strong>.
+		Cela signifie que Roboconf ne peut pas démarrer <strong>App 2</strong> tant qu'il ne connaît pas les propriétés
+		<strong>ip</strong> et <strong>port</strong> d'une base MySQL. 
+	</p>
+</section>
+
+<section>
+	<h3>Avantages du Graphe</h3>
+	<p>Pour un composant logiciel...</p>
+	<ul>
+		<li>On sait si l'on peut déployer des choses dessus.</li>
+		<li>On sait sur quoi on peut le déployer.</li>
+		<li>On sait de quels autres composants il dépend.</li>
+	</ul>
+
+	<br /><br />
+	<h3>En Pratique</h3>
+	<p>Quand on veut déployer un nouveau composant logiciel...</p>
+	<ul>
+		<li>... on peut le déployer sur un conteneur existant.</li>
+		<li>... on peut créer son conteneur en même temps.</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Les Graphes</h3>
+	<p>
+		Le graphe est une structure avec 2 niveaux de lecture (relations de type conteneur et exécution).
+		On peut le voir comme un ensemble de règles qui régissent les déploiements et les reconfigurations.
+	</p>
+	<p>
+		Toutefois, pour être précis, il n'y a pas qu'un seul graphe. 
+		En effet, il est possible d'en avoir plusieurs au travers des fichiers de configuration.
+	</p>
+	<p>
+		Cela permet par exemple de définir des <i>pseudo-appliances</i>.<br />
+		On peut donc avoir des déploiements très contraints, ou bien très flexibles.
+	</p>
+	<p>
+		C'est une possibilité intéressante dans la mesure où ceux qui développent ou conçoivent
+		l'application ne sont pas les mêmes que ceux qui la gèrent une fois en production. Le fait
+		de contraindre le déploiement des parties élastiques (ou scalables) réduit le risque d'erreurs
+		pour les équipes de production. 
+	</p>
+</section>
+
+<section>
+	<h3>Un Graphe Flexible</h3>
+	<img src="../../resources/img/graph-lamp-lax-example.jpg" alt="graphe flexible" class="no-border" />
+	<p>
+		Sur cet exemple, on considère que les 3 briques logicielles (équilibreur de charges Apache, Tomcat et 
+		MySQL) peuvent être déployées sur une même VM, ou en tout cas, sur des VM du même &laquo; type &raquo;.
+	</p>
+</section>
+
+<section>
+	<h3>Un Graphe Contraint</h3>
+	<img src="../../resources/img/graph-lamp-constrained-example.jpg" alt="graphe contraint" class="no-border" />
+	<p>
+		Contrairement au cas précent, on considère ici que chaque brique doit être déployée sur son propre type de VM.
+		Donc, pas de mélange des applications.
+	</p>
+	<p>
+		Chaque type de VM peut avoir sa propre configuration (CPU, stockage, configuration du réseau...).
+	</p>
+</section>
+
+<section>
+	<h3>Les Recettes</h3>
+	<p>
+		Chaque composant du graphe est associé à un ensemble de recettes.<br />
+		Plus précisémment, chaque componsant est associé à une extension (propriété &laquo; installer &raquo;).
+	</p>
+	<p>
+		Un composant associé avec l'extension <strong>Puppet</strong> utilisera un module Puppet comme recette.
+		Un composant associé avec l'extension <strong>Bash</strong> utilisera des scripts Bash comme recette.
+	</p>
+	<p>
+		Les recettes définissent les actions à entreprendre lorsqu'une action d'administration est reçue par un agent.
+		Cela correspond à des actions sur le cycle de vie : <i>deploy, start, stop et undeploy</i>.
+	</p>
+	<p>
+		Il existe aussi une étape particulière appelée <strong>update</strong>.<br />
+		Elle est utilisée par Roboconf lors des phases de reconfiguration. Cette partie-là est détaillée un peu plus loin.
+	</p>
+</section>
+
+<section>
+	<h3>Les Instances</h3>
+	<p>
+		Les instances signifient des &laquo; instances de composants définis dans le graphe &raquo;.<br />
+		Le graphe est un ensemble de règles. On peut aussi le voir comme un méta-modèle pour des instances.
+		Par conséquent, toute instance est conforme à ce qui a été défini dans le graphe.
+	</p>
+	<p>
+		Une autre comparaison entre composants et instances pourrait être faite en prenant comme
+		exemple classes et instances de classes dans la programmation orientée-objet.
+	</p>
+	<p>
+		Les instances héritent de propriétés définies dans leur composant.<br />
+		Elles peuvent les surcharger et même en définir de nouvelles (scope local).
+		Les relations entre instances sont définies une fois pour toute dans le graphe.
+	</p>
+	<p>
+		Une instance n'est associée qu'avec un seul composant.
+	</p>
+</section>
+
+<section>
+	<h3>Les Méta-Données d'une Application</h3>
+	<p>
+		Un projet Roboconf est appelé une application.<br />
+		Il vient avec la définition d'un graphe et potentiellement d'instances prédéfinies.
+	</p>
+	<p>
+		Il doit aussi contenir des informations à propos de l'application elle-même.<br />
+		Nom, description, qualificatif (version)...
+	</p>
+</section>

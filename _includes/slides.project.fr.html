@@ -9,98 +9,98 @@
 	<ul>
 		<li>Lancé 2013</li>
 		<li>Open source (Apache v2)</li>
-		<li>Hébergé on GitHub</li>
+		<li>Hébergé sur GitHub</li>
 	</ul>
 	<p class="clear"></p>
 	<p>
-		Roboconf is based on a prototype developed by <a href="https://www.ujf-grenoble.fr/">Université Joseph
-		Fourier</a> (Grenoble, France). It is now being industrialized by
-		<a href="http://linagora.com">Linagora</a>, a French Software company.
+		Roboconf est basé sur un prototype développé par <a href="https://www.ujf-grenoble.fr/">l'Université Joseph
+		Fourier</a> à Grenoble (France). Le projet est en cours d'industrialisation par
+		<a href="http://linagora.com">Linagora</a>, un éditeur logiciel français spécialisé dans l'open source.
 	</p>
 </section>
 
 <section>
-	<h3>In Few Words</h3>
+	<h3>En Quelques Mots</h3>
 	<p>
-		Roboconf is a solution based on asynchronous exchanges to deploy
-		and reconfigure distributed applications.
+		Roboconf est une solution basée sur une messagerie asynchrone pour gérer
+		le déploiement et la reconfiguration d'applications réparties.
 	</p>
 	<p>
-		It translates concepts from component models (like OSGi) to
-		Software deployment and management.
-	</p>
-</section>
-
-<section>
-	<h3>Target Users</h3>
-	<p>
-		Roboconf is intended for project teams with requirements about
-		dynamic deployments and where scalability matters.
-	</p>
-	<p>
-		The ideal user profile is a <strong>DevOp</strong>.<br /> Someone
-		involved in the project development but with a focus on production
-		issues.
+		Il transpose des concepts de modèles à composant (tels qu'OSGi) au déploiement
+		et à la gestion de piles logicielles.
 	</p>
 </section>
 
 <section>
-	<h3>Roboconf Features - 1/2</h3>
+	<h3>Utilisateurs Ciblés</h3>
+	<p>
+		Roboconf adresse des déploiements où la notion d'élasticité est centrale.
+	</p>
+	<p>
+		Le profil type d'un utilisateur de Roboconf est ce que l'on appelle
+		un <strong>DevOps</strong>, c'est-à-dire quelqu'un à cheval entre le développement
+		et des problématiques de production.
+	</p>
+</section>
+
+<section>
+	<h3>Fonctionnalités - 1/2</h3>
 	<br />
 	
-	<h3>Deployment</h3>
-	<p>Installs and configures Software applications.</p>
+	<h3>Déploiement</h3>
+	<p>Installation et configuration d'applications.</p>
 
-	<h3>Deployment Targets</h3>
+	<h3>Cibles de Déploiement</h3>
 	<p>
-		Allows deployment over various targets: cloud infrastructures
-		(IaaS), devices, on-premise hosts... Hybrid deployments are supported.
+		Déploiement sur de multiples cibles : infrastructures de cloud (IaaS),
+		objets embarqués, serveurs plus classiques, etc. Les déploiements hybrides sont également supportés.
 	</p>
 </section>
 
 <section>
-	<h3>Roboconf Features - 2/2</h3>
+	<h3>Fonctionnalités - 2/2</h3>
 	<br />
 	
 	<h3>Reconfiguration</h3>
 	<p>
-		Application parts notify each others, which allow them to
-		reconfigure themselves through scripts. Roboconf handles applications
-		life cycle.
+		Grâce à Roboconf, des portions d'application répartie peuvent se notifier
+		les unes les autres et se reconfigurer en conséquence au travers de scripts.
+		Roboconf prend en charge tous les aspects du cycle de vie.
 	</p>
 
-	<h3>Monitoring</h3>
-	<p>Monitoring support is in progress.</p>
+	<h3>Supervision</h3>
+	<p>La gestion de la supervision est en cours d'implémentation.</p>
 </section>
 
 <section>
-	<h3>Covered Use Cases</h3>
+	<h3>Cas d'Usage Couverts</h3>
 	<ul>
-		<li>Cloud deployment</li>
-		<li>Hybrid deployments</li>
-		<li>Highly dynamic environments<br /> (with lots of reconfiguration)</li>
+		<li>Déploiement dans le Cloud</li>
+		<li>Déploiements hybrides</li>
+		<li>Environnements fortement dynamiques</li>
 	</ul>
 
 	<br /><br />
 	<p>
-		Roboconf can deploy any kind of Software.<br /> It suits well for
-		distributed applications. There is no constraint on languages or
-		frameworks. If you can script it, you can make it automatic with
-		Roboconf.
+		Roboconf peut déployer n'importe quel type d'application.<br />
+		Il est bien adapté aux applications réparties. Il n'y a pas de contrainte
+		sur les langages ou les frameworks utilisés par ces applications. Du moment qu'un
+		déploiement ou une reconfiguration peut être scripté, Roboconf peut l'automatiser.
 	</p>
-	<p>Large-scale deployments are not well covered (yet).</p>
+	<p>Les déploiements à grande échelle sont encore mal couverts.</p>
 </section>
 
 <section>
-	<h3>Roboconf does not...</h3>
+	<h3>Roboconf...</h3>
 	<p>
-		... reinvent the wheel.<br /> Thanks to a plug-in approach, it is
-		possible to use Bash scripts and Puppet modules. You could also use
-		other solutions like Chef or CFengine, provided you write a plug-in for
-		this.
+		... <strong>ne réinvente pas la roue</strong>. <br />Grâce à une approche à base de plug-ins,
+		il est possible d'utiliser Bash ou Puppet. D'autres solutions sont envisageables,
+		telles que Chef ou CFEngine. Il n'existe pas encore de plug-in pour ces solutions,
+		mais leur écriture est à la portée de n'importe quel développeur Java.
 	</p>
 	<p>
-		Life cycle steps can thus be handled through robust solutions.<br />
-		Roboconf only plugs dynamics behind them.
+		C'est à travers de ces extensions que Roboconf gère les changements au niveau
+		du cycle de vie d'une application. La vraie plus-value de Roboconf réside dans la
+		dynamicité qu'il ajoute derrière ces plug-ins.
 	</p>
 </section>

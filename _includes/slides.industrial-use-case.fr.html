@@ -1,0 +1,72 @@
+
+<section>
+	<h1>Cas d'Usage</h1>
+	<h1>Industriel</h1>
+</section>
+
+<section>
+	<h3>OpenPaaS</h3>
+	<p>
+		OpenPaaS est une PaaS (Platform as a Service) open source dont l'objectif
+		est d'améliorer la collaboration entre et au sein d'organisations.
+		C'est un projet dans la mouvance des RSE (Réseaux Sociaux d'Entreprise).
+	</p>
+	<p>
+		Il couvre la création de communautés autour de sujets ou de projets professionnels.
+		Ces communautés bénéficient de nombreux outils, tels qu'une messagerie instantanée,
+		e-mail, agendas, partage de documents, etc.
+	</p>
+	<p>
+		<a href="http://open-paas.org">http://open-paas.org</a>
+	</p>
+</section>
+
+<section>
+	<h3>Contraintes Techniques</h3>
+	<p>
+		La plate-forme s'appuie sur des technologies web.<br />
+		La partie serveur est implémentée avec Node.js. La partie cliente est développée avec AngularJS
+		et les projets qui gravitent généralement autour.
+	</p>
+	<p>
+		Un des impératifs est que cette plat-forme doit pouvoir fonctionner dans le cloud, en bénéficiant
+		des facilités offertes par ce type d'infrastructures. Elle doit notamment pouvoir faire face à des
+		pics de charge, et pouvoir s'adapter avec le temps au nombre grandissant de données stockées. Cette
+		partie repose notamment sur l'utilisation de base de données no-SQL.
+	</p>
+	<p>
+		D'autres briques logicielles viendront enrichir la plate-forme avec le temps.<br />
+		En résumé, OpenPaaS est une application répartie très complexe qui doit tourner dans le cloud.
+	</p>
+</section>
+
+<section>
+	<h3>Vue d'Ensemble</h3>
+	<img src="../../resources/img/open-paas-overview.jpg" alt="vue d'ensemble d'OpenPaas" class="no-border" />
+	<p>
+		Pour le moment, OpenPaaS se concentre sur la pile web.<br />
+		Les parties élastiques incluent l'application du RSE (Node.js), MongoDB et ElasticSearch.
+	</p>
+</section>
+
+<section>
+	<h3>Evolutions Prévues</h3>
+	<p>
+		OpenPaaS devraient bientôt compter d'autres briques logicielles.
+	</p>
+	<ul>
+		<li>Apache James, un serveur de mails développé en Java.</li>
+		<li>Cassandra, une autre base de données no-SQL.</li>
+		<li>OpenLDAP et LinID.</li>
+	</ul>
+	
+	<br /><br />
+	<p>
+		Cassandra sera utilisé comme stockage distribué pour les e-mails.<br />
+		LDAP sera utilisé pour l'authentification et la gestion des permissions.
+	</p>
+	<p>
+		Ces évolutions viendront rajouter des nouvelles parties élastiques dans la plate-forme.
+		Roboconf permettra de rendre ces changements et leurs gestion aussi simples que possible.
+	</p>
+</section>
