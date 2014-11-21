@@ -11,7 +11,7 @@ For the moment, it only supports the creation of *compute* VMs.
 Sample **target.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for JClouds
 target.id = jclouds
 
@@ -26,9 +26,9 @@ jclouds.identity =
 jclouds.credential = 
 
 # The VM configuration
-jclouds.image-id = 
 jclouds.security-group = 
-jclouds.hardware-id = 
+jclouds.image-name =  
+jclouds.hardware-name = 
 jclouds.key-pair = 
 ```
 
@@ -41,7 +41,26 @@ Here is a complete description of the parameters for JClouds.
 | jclouds.endpoint | The URL to reach the cloud API. | none | yes |
 | jclouds.identity | The user name for the cloud API. | none | yes |
 | jclouds.credential | The password for the cloud API. | none | yes |
-| jclouds.image-id | The ID of the template image for new VMs. | none | yes |
+| jclouds.image-name | The name of the template image for new VMs. | none | yes |
 | jclouds.security-group | The name of the security group for new VMs. | none | yes |
-| jclouds.hardware-id | The hardware configuration to use to create a new VM. Equivalent to flavor. | none | yes |
+| jclouds.hardware-name | The hardware configuration to use to create a new VM, e.g. "m1.small". Equivalent to flavor. | none | yes |
 | jclouds.key-pair | The name of the key pair used to connect in SSH to newly created VMs. Not all the providers support it. | none | no |
+
+<br />
+Notice we do not use image and hardware IDs in our configuration files.  
+This is because JClouds requires region settings when specifying identifiers.
+
+As an example, if you wanted to create a new VM from image ID *abcdef* with a flavor (or hardware) called *m1.small* in Openstack, you
+would have a configuration looking-like...
+
+```properties
+# ...
+jclouds.image-id = RegionOne/abcdef
+jclouds.hardware-id = RegionOne/2
+# ... assuming 2 is the ID for flavor m1.small...
+# ... and RegionOne is the associated region.
+```
+
+Since region settings and hardware ID are not always easy to retrieve, we prefer to rely on names.  
+We assume cloud infrastructures will be managed so that these names remain unique. Otherwise, feel free to post a feature request
+in our issues tracker.

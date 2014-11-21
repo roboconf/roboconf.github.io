@@ -30,7 +30,12 @@ de cloner le dépôt de sources et d'exécuter...
 
 	mvn clean install
 
-Quand les projets utilisent un outil de *build* différent, des instructions sont données dans le *readme* du projet. 
+Si vous travaillez sur un tag ou une branche, il se peut que la compilation échoue à cause des vérifications
+faites par Checkstyle. Vous pouvez désactiver ces vérifications en utilisant...
+
+	mvn clean install -Dcheckstyle.skip=true
+
+Quand les projets utilisent un outil d'assemblage différent, des instructions sont données dans le *readme* du projet. 
 
 
 # Contribuer au Projet

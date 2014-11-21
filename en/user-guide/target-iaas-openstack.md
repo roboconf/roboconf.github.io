@@ -26,31 +26,23 @@ Just copy / paste and edit.
 # Configuration file for Openstack
 target.id = openstack
 
-# The keystone URL
-openstack.identityUrl = 
-
-# The nova URL
-openstack.computeUrl = 
+# The URL of Nova, Openstack's compute component
+openstack.nova-url = 
 
 # Credentials to connect
-openstack.tenantId = 
+openstack.tenant-name = 
 openstack.user = 
 openstack.password = 
-openstack.keypair = 
 
 # VM configuration
-openstack.image = 
-openstack.flavor = m1.small
-openstack.securityGroup = default
+openstack.image-name = 
+openstack.flavor-name = m1.small
+openstack.security-group = default
+openstack.key-pair = default
 
 # VM networking.
-# Use either floatingIpPool for Nova, or networkId / fixedIp for Neutron.
-openstack.floatingIpPool = public
-
-# Storage configuration
-openstack.volumeId =
-openstack.volumeSizeGb =
-openstack.volumeMountPoint =
+openstack.floating-ip-pool = 
+openstack.network-id = 
 ```
 
 Here is a complete description of the parameters for OpenStack.
@@ -58,19 +50,32 @@ Here is a complete description of the parameters for OpenStack.
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
 | target.id | Determines the target handler to use | none, must be "openstack" | yes |
-| openstack.identityUrl | URL of the identity server (aka. keystone) | none | yes |
-| openstack.computeUrl | URL of the compute service (aka. nova) | none | yes |
-| openstack.tenantId | The tenant ID associated to the user to connect | none | yes |
-| openstack.user | The name of the user to connect | none | yes |
-| openstack.password | The password of the user to connect | none | yes |
-| openstack.keypair | The name of the key pair used to connect | none | yes |
-| openstack.image | The ID of the VM image or snapshot used as a template for the VM | none | yes |
-| openstack.flavor | The VM "size" aka. flavor in Openstack | m1.tiny | no |
-| openstack.securityGroup | The VM security group | default | no |
-| openstack.floatingIpPool | A pool of available public IPs, so that one of them be associated to the VM (if no pool is provided, the VM only has a private IP). Works only for Nova networking (for Neutron, use networkId / fixedIp instead). | none | no |
-| openstack.networkId | A neutron (aka quantum) network ID, to use for networking. If no fixedIp is specified, DHCP will be used to associate an IP from the corresponding network. Works only for Neutron networking (for Nova networking, use floatingIpPool instead). | none | no |
-| openstack.fixedIp | When a networkId is specified (Neutron networking), it is possible to select a fixed IP from that network. When no fixedIp is specified, DHCP is used to allocate one dynamically. | none | no |
-| openstack.volumeId | The ID or name of a volume to attach to the VM (if no volume is found with the given ID, it will be considered a name). | none | no |
-| openstack.volumeSizeGb | The size in GB of the volume to attach (usable only with volumeId set as a volume name: the volume would then be created if not present). | none | no |
-| openstack.volumeMountPoint | The mount point of the volume to attach (usable only with volumeId set). Should comply with Openstack volume mount point name conventions (eg. /dev/vdb or /dev/vdc). | /dev/vdb | no |
+| openstack.nova-url | The URL of Nova, Openstack's *compute* component. | none | yes |
+| openstack.tenant-name | The tenant name (not the ID). | none | yes |
+| openstack.user | The name of the user to connect. | none | yes |
+| openstack.password | The password of the user to connect. | none | yes |
+| openstack.image-name | The name of the VM image or snapshot used as a template for the VM. | none | yes |
+| openstack.flavor-name | The hardware configuration for new VMs. Example: m1.tiny | none | no |
+| openstack.security-group | The VM security group | default | no |
+| openstack.key-pair | The name of the key pair used to connect to new VMs. | none | yes |
+| openstack.floating-ip-pool | A pool of available public IPs, so that one of them be associated to the VM (if no pool is provided, the VM only has a private IP). | none | no |
+| openstack.network-id | A neutron (aka quantum) network ID, to use for networking. | none | no |
 
+<br />
+Notice we do not use image and flavor IDs in our configuration files.  
+This is because this IaaS extension is implemented with Apache JClouds which requires region settings when specifying identifiers.
+
+As an example, if you wanted to create a new VM from image ID *abcdef* with a flavor (or hardware) called *m1.small* in Openstack, you
+would have a configuration looking-like...
+
+```properties
+# ...
+openstack.image-id = RegionOne/abcdef
+openstack.hardware-id = RegionOne/2
+# ... assuming 2 is the ID for flavor m1.small...
+# ... and RegionOne is the associated region.
+```
+
+Since region settings and hardware ID are not always easy to retrieve, we prefer to rely on names.  
+We assume cloud infrastructures will be managed so that these names remain unique. Otherwise, feel free to post a feature request
+in our issues tracker.
