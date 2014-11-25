@@ -7,7 +7,7 @@ menus: [ "users", "user-guide" ]
 
 Roboconf has a target implementation for Docker.  
 
-## Roboconf configuration for Docker
+# Roboconf configuration for Docker
 
 Sample **target.properties**.  
 Just copy / paste and edit.
@@ -32,13 +32,13 @@ Here is a complete description of the parameters for Docker.
 | docker.user | The name of the user to connect. | none | yes |
 | docker.password | The password of the user to connect. | none | yes |
 
-## Docker configuration
+# Docker configuration
 
 Here, we'll assume docker is installed on your system (eg. using "apt-get install lxc-docker" if on Ubuntu, or see docker.com for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some ports may be available for other platforms.
 
 It is recommended to use docker version 1.3.x or later.
 
-### Configure TCP port for docker container
+## Configure TCP port for docker container
 
 Roboconf needs that docker be available on a TCP port. To enable it, edit **/etc/default/docker**, and set DOCKER\_OPTS there:
 
@@ -54,7 +54,7 @@ sudo stop docker
 sudo start docker
 ```
 
-### Prepare docker image
+## Prepare docker image
 
 Obtain a docker linux image (eg. Ubuntu), then start a docker container using it:
 
@@ -97,7 +97,7 @@ The container is now ready to become a docker image; outside docker, keep track 
 
 Now, your image is created: retrieve its image ID using **docker images**, and use it as docker.image in the roboconf docker configuration.
 
-### Some docker tips
+## Some docker tips
 
 To list docker images:
 **docker images**
