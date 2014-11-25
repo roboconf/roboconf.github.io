@@ -48,29 +48,32 @@ DOCKER_OPTS="-H=tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock"
 ```
 
 Then, simply restart docker:
+
 ```
-# sudo stop docker
-# sudo start docker
+sudo stop docker
+sudo start docker
 ```
 
 ### Prepare docker image
 
 Obtain a docker linux image (eg. Ubuntu), then start a docker container using it:
+
 ```
-# docker pull ubuntu
-# docker run -v /tmp:/roboconf -t -i ubuntu /bin/bash
+docker pull ubuntu
+docker run -v /tmp:/roboconf -t -i ubuntu /bin/bash
 ```
 
 Note: the container started above shares the local /tmp as "/roboconf" under Docker (using the -v option).
 This can be useful to share files between the local filesystem and the docker container (eg. to install the roboconf agent).
 
 In the docker container (let's assume you have copied the roboconf agent, namely "roboconf-karaf-dist-agent.tar.gz", in the shared /roboconf directory - in the note above, /roboconf in the container is the local /tmp):
+
 ```
-# apt-get update
-# apt-get install openjdk-7-jre-headless
-# cd /usr/local
-# tar xvzf /roboconf/roboconf-karaf-dist-agent.tar.gz
-# ln -s roboconf-karaf-dist-agent/ roboconf-agent
+apt-get update
+apt-get install openjdk-7-jre-headless
+cd /usr/local
+tar xvzf /roboconf/roboconf-karaf-dist-agent.tar.gz
+ln -s roboconf-karaf-dist-agent/ roboconf-agent
 ```
 
 Now, you have to add a "start.sh" executable script in the /usr/local/roboconf-agent directory, with the following content (the script is mainly used to complete the agent setup at startup time):
