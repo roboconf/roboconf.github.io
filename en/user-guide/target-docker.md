@@ -48,7 +48,7 @@ DOCKER_OPTS="-H=tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock"
 ```
 
 Then, simply restart docker:
-```
+``` shell
 sudo stop docker
 sudo start docker
 ```
