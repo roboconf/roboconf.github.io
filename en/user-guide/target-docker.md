@@ -34,7 +34,7 @@ Here is a complete description of the parameters for Docker.
 
 ## Docker configuration
 
-Here, we'll assume docker is installed on your system (eg. using "apt-get install lxc-docker" if on Ubuntu, or see docker.com for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some ports may be available for other platforms).
+Here, we'll assume docker is installed on your system (eg. using "apt-get install lxc-docker" if on Ubuntu, or see docker.com for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some ports may be available for other platforms.
 
 It is recommended to use docker version 1.3.x or later.
 
