@@ -5,7 +5,8 @@ id: "ug.snapshot.target-docker"
 menus: [ "users", "user-guide" ]
 ---
 
-Roboconf has a target implementation for Docker.  
+Roboconf has a target implementation for Docker: from the Roboconf perspective, docker is seen as a kind of IaaS.
+Roboconf may create and manage docker containers, that run Roboconf agents (just like IaaS VMs) and can be used as deployment targets.
 
 # Roboconf configuration for Docker
 
