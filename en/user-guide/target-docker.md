@@ -90,3 +90,28 @@ The container is now ready to become a docker image; outside docker, keep track 
 
 Now, your image is created: retrieve its image ID using **docker images**, and use it as docker.image in the roboconf docker configuration.
 
+### Some docker tips
+
+To list docker images:
+**docker images**
+
+To remove a docker image:
+**docker rmi \<image-ID\>**
+
+To run interactively a docker image (thus launching a container):
+**docker run -i -v /tmp:/roboconf -t \<image-ID\> /bin/bash**
+(Note: the -v option is used there to share the local /tmp as "/roboconf" in the container: useful tip to exchange files).
+
+To list running docker containers:
+**docker ps** (or, to list them all, "docker ps -a")
+
+to attach a shell script to a running container:
+**docker exec -ti \<container-ID\> /bin/bash**
+
+To remove a docker container:
+**docker rm \<container-ID\>**
+
+To remove all exited containers:
+**docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm**
+
+
