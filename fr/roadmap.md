@@ -8,24 +8,25 @@ menus: [ "project", "roadmap" ]
 Roboconf a démarré en tant que prototype de recherche et est maintenant en cours d'industrialisation.  
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
-* **Jusqu'à Octobre**
+* **Jusqu'à Février 2015**
 
-	* Packager le DM et l'agent dans des distributions [Karaf](http://karaf.apache.org/). &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Utiliser [iPOJO](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) pour une approche orientée service. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Mettre en place un [dépôt Maven](https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide) pour Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Compléter la section **téléchargement** sur le site web. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Ajouter le support de [Docker](http://www.docker.com/). &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Créer un plug-in Maven pour automatiser la validation et la construction de pack de déploiement. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Ecrire le premier tutoriel pour Roboconf.
-
-* **A partir d'Octobre**
-
+	* Créer un éditeur Eclipse pour le DSL de Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Ecrire des scripts pour faciliter l'installation de Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Embarquer JClouds. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Ajouter la supervision des applications avec Roboconf.
-	* Créer un éditeur texte pour le DSL de Roboconf.
-	* Créer des paquets systèmes (comme des paquets Debian) pour simplifier l'installation.
+	* Ecrire le premier tutoriel pour Roboconf.
+	* Supporter des "place holders" pour les changements d'environnement.
+	* Compléter le plug-in Maven vis-à-vis des problématiques de réutilisabilité.
+	* Etendre la console web (debug, filtra	ge, création de nouvelles instances).
+
+* **A partir de Février 2015**
+	
 	* Mettre en place un dépôt de recettes et de composants réutilisables.
-	* Créer des générateurs de documentation.
+	* Créer des paquets systèmes (comme des paquets Debian) pour simplifier l'installation.
 	* Supporter l'exécution de scénarios utilisateurs.
+	* Rajouter de l'auto-complétion dans l'éditeur Eclipse pour Roboconf.
+	* Ajouter le DSL de Roboconf dans Atom.io et Bracket.io.
+	* Créer des générateurs de documentation.
 
 * **Ouvert à Contributions**
 

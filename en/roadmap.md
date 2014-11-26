@@ -8,24 +8,25 @@ menus: [ "project", "roadmap" ]
 Roboconf started as a Research prototype and is now under industrialization.  
 The roadmap for the next months covers several aspects.
 
-* **Until October**
+* **Until February 2015**
 
-	* Bundle the DM and the agent in [Karaf](http://karaf.apache.org/) distributions. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Use [iPOJO](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) and initialize a service approach. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Setup a [Maven repository](https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide) for Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Complete the **download** section on the web site. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Support [Docker](http://www.docker.com/). &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Create a Maven plug-in to automate validation and build. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Write the first tutorial for Roboconf.
-
-* **From October**
-
+	* Create an Eclipse editor for Roboconf's DSL. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Write scripts to ease Roboconf's installation. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Embed JClouds. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Add monitoring support to Roboconf.
-	* Create text editors for Roboconf's DSL.
-	* Create system packages (such a Debian packages) to ease installation.
+	* Write the first tutorial for Roboconf.
+	* Support place holders for environment switch.
+	* Complete the Maven plug-in for reusability purpose.
+	* Extend the web console (debug, filtering, new instances).
+
+* **From February 2015**
+
 	* Setup a repository of reusable recipes and components.
-	* Create documentation generators.
+	* Create system packages (such a Debian packages) to ease installation.
 	* Add support to execute user scenarios.
+	* Add auto-completion in Eclipse editors.
+	* Add support for Roboconf's DSL in Atom.io and Bracket.io.
+	* Create documentation generators.
 
 * **For Contributions**
 
