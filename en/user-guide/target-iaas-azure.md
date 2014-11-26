@@ -16,7 +16,7 @@ Just copy / paste and edit.
 
 ``` properties
 # Configuration file for Azure
-target.id = azure
+target.id = iaas-azure
 
 # Credentials to connect
 azure.key.store.file =

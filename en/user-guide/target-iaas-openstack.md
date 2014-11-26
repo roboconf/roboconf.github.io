@@ -24,7 +24,7 @@ Just copy / paste and edit.
 
 ``` properties
 # Configuration file for Openstack
-target.id = openstack
+target.id = iaas-openstack
 
 # The URL of Nova, Openstack's compute component
 openstack.nova-url = 

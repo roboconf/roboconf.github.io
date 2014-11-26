@@ -16,7 +16,7 @@ Just copy / paste and edit.
 
 ``` properties
 # Configuration file for EC2
-target.id = ec2
+target.id = iaas-ec2
 
 # EC2 URL
 ec2.endpoint = 

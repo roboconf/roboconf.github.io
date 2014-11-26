@@ -122,6 +122,9 @@ urls:
   ug.snapshot.target-support:
     en: user-guide/target-support
   
+  ug.snapshot.list-of-deployment-targets:
+    en: user-guide/list-of-deployment-targets
+  
   ug.snapshot.target-iaas-openstack:
     en: user-guide/target-iaas-openstack
   

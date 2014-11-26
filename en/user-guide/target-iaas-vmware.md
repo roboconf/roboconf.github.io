@@ -13,7 +13,7 @@ Just copy / paste and edit.
 
 ``` properties
 # Configuration file for VMWare
-target.id = vmware
+target.id = iaas-vmware
 
 # REST URL
 vmware.url = 

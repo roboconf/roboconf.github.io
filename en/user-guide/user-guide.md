@@ -79,15 +79,8 @@ menus: [ "users", "user-guide" ]
 	<h2>Deployment Targets</h2>
 
 	<ul>
-	<li><a href="target-support.html">IaaS Support</a></li>
-	<li><a href="target-iaas-openstack.html">OpenStack</a></li>
-	<li><a href="target-iaas-aws.html">Amazon Web Services</a></li>
-	<li><a href="target-docker.html">Docker</a></li>
-	<li><a href="target-iaas-azure.html">Microsoft Azure</a></li>
-	<li><a href="target-jclouds.html">Apache JClouds</a></li>
-	<li><a href="target-iaas-vmware.html">VMWare</a></li>
-	<li><a href="target-embedded.html">Embedded</a></li>
-	<li><a href="target-in-memory.html">In-Memory</a></li>
+	<li><a href="target-support.html">Target Support</a></li>
+	<li><a href="list-of-deployment-targets.html">List of Deployment Targets</a></li>
 	</ul>
 </div>
 
