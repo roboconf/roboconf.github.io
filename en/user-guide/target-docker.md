@@ -17,10 +17,10 @@ Just copy / paste and edit.
 # Configuration file for Docker
 target.id = docker
 
-docker.endpoint: http://localhost:4243
-docker.image: 0f3087570887
-docker.user: guest
-docker.password: guest
+docker.endpoint = http://localhost:4243
+docker.image = 0f3087570887
+docker.user = guest
+docker.password = guest
 ```
 
 Here is a complete description of the parameters for Docker.
