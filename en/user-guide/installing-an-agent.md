@@ -141,10 +141,16 @@ sudo ln -s /home/ubuntu/roboconf-karaf-dist-agent-0.2-SNAPSHOT/bin/roboconf-agen
 sudo update-rc.d roboconf-agent-service defaults
 
 # Just to be sure, you can check the main script
-more ../etc/roboconf-agent-service.conf
+more ../etc/roboconf-agent-wrapper.conf
 ```
 
 Now, restart your system and make sure the agent runs.  
+
+Note: you can test directly the installation, by running "sudo /etc/init.d/roboconf-agent-service start", and checking the "data/log/wrapper.log" file. If you get some trouble finding the JVM:
+- Determine where it is ("update-alternatives --config java")
+- In the etc/roboconf-agent-wrapper.conf file, set the set.default.JAVA_HOME property accordingly with the location of your JVM (in the path displayed by the "update-alternatives" command, take the first part, removing "/jre...").
+
+When everything looks fine, then, reboot:
 
 ```properties
 # Clear the logs (you were in the "bin" directory).
