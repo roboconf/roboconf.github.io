@@ -59,7 +59,7 @@ message-server-password = guest
 # 	* azure
 # 	* embedded
 #
-iaas-type = 
+target-id = 
 
 # The application name.
 application-name = 

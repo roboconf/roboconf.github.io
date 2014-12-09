@@ -88,8 +88,23 @@ urls:
   ug.snapshot.roboconf-architecture:
     en: user-guide/roboconf-architecture
   
-  ug.snapshot.tutoriel-ecom:
-    fr: guide-utilisateur/tutoriel-ecom
+  ug.snapshot.tutoriel-lamp:
+    fr: guide-utilisateur/tutoriel-lamp
+  
+  ug.snapshot.tutoriel-lamp-1:
+    fr: guide-utilisateur/tutoriel-lamp-1
+  
+  ug.snapshot.tutoriel-lamp-2:
+    fr: guide-utilisateur/tutoriel-lamp-2
+  
+  ug.snapshot.tutoriel-lamp-3:
+    fr: guide-utilisateur/tutoriel-lamp-3
+  
+  ug.snapshot.tutoriel-lamp-4:
+    fr: guide-utilisateur/tutoriel-lamp-4
+  
+  ug.snapshot.tutoriel-lamp-5:
+    fr: guide-utilisateur/tutoriel-lamp-5
   
   ug.snapshot.reusable-slides:
     en: user-guide/reusable-slides

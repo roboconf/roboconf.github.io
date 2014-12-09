@@ -18,7 +18,7 @@ Les traductions des guides utilisateur et développeur se font lors des releases
 
 	<ul>
 	<li><a href="presentation-reutilisable.html">Présentation Réutilisable</a></li>
-	<li><a href="tutoriel-ecom.html">Tutoriel ECOM</a></li>
+	<li><a href="tutoriel-lamp.html">Tutoriel LAMP</a></li>
 	</ul>
 </div>
 

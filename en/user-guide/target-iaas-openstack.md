@@ -55,8 +55,8 @@ Here is a complete description of the parameters for OpenStack.
 | openstack.user | The name of the user to connect. | none | yes |
 | openstack.password | The password of the user to connect. | none | yes |
 | openstack.image-name | The name of the VM image or snapshot used as a template for the VM. | none | yes |
-| openstack.flavor-name | The hardware configuration for new VMs. Example: m1.tiny | none | no |
-| openstack.security-group | The VM security group | default | no |
+| openstack.flavor-name | The hardware configuration for new VMs. Example: m1.tiny | none | yes |
+| openstack.security-group | The VM security group | default | yes |
 | openstack.key-pair | The name of the key pair used to connect to new VMs. | none | yes |
 | openstack.floating-ip-pool | A pool of available public IPs, so that one of them be associated to the VM (if no pool is provided, the VM only has a private IP). | none | no |
 | openstack.network-id | A neutron (aka quantum) network ID, to use for networking. | none | no |
