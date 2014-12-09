@@ -40,7 +40,7 @@ Seule la propriété *ami* ne peut pas être complétée. Elle le sera dans l'é
 target.id = ec2
 
 # URL d'accès à EC2
-ec2.endpoint = 
+ec2.endpoint = ec2.eu-west-1.amazonaws.com
 
 # Identifiants de connexion
 ec2.access.key = 
