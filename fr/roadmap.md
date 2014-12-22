@@ -13,16 +13,22 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Créer un éditeur Eclipse pour le DSL de Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Ecrire des scripts pour faciliter l'installation de Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Embarquer JClouds. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Ajouter la supervision des applications avec Roboconf.
+	* Figer le DSL de Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Ajouter une gestion autonomique à Roboconf.
 	* Ecrire le premier tutoriel pour Roboconf.
-	* Supporter des "place holders" pour les changements d'environnement.
-	* Compléter le plug-in Maven vis-à-vis des problématiques de réutilisabilité.
 	* Etendre la console web (debug, filtra	ge, création de nouvelles instances).
 
 * **A partir de Février 2015**
 	
+	* Ajouter la supervision des applications avec Roboconf.
+	* Supporter des "place holders" pour les changements d'environnement.
+	* Compléter le plug-in Maven vis-à-vis des problématiques de réutilisabilité.
+	* Simplifier l'installation de Roboconf.
+	
+
+* **A partir d'Avril 2015**
+
 	* Mettre en place un dépôt de recettes et de composants réutilisables.
-	* Créer des paquets systèmes (comme des paquets Debian) pour simplifier l'installation.
 	* Supporter l'exécution de scénarios utilisateurs.
 	* Rajouter de l'auto-complétion dans l'éditeur Eclipse pour Roboconf.
 	* Ajouter le DSL de Roboconf dans Atom.io et Bracket.io.
@@ -34,4 +40,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
     * Implémenter un plug-in pour Puppet Master.
     * Implémenter un plug-in ANT.
 
-Pour le moment, il n'y a pas de date de release planifiée.
+La version 0.2 de Roboconf sortira le 31 janvier 2015.

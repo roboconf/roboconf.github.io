@@ -22,8 +22,8 @@ Vous aurez probablement besoin des deux pour compiler Roboconf.
 NPM est utilisé pour construire l'administration web. Mais cette administration est aussi embarquée
 dans la plate-fome.
 
-	Sur Debian/Ubuntu, l'exécutable de NodeJS s'appelle parfois "nodejs" au lieu de "node".
-	Il suffit alors d'aller dans /usr/bin et d'exécuter "ln -s nodejs node".
+> Sur Debian/Ubuntu, l'exécutable de NodeJS s'appelle parfois **nodejs** au lieu de **node**.  
+> Il suffit alors d'aller dans **/usr/bin** et d'exécuter **ln -s nodejs node**.
 
 Pour les projets Java comme la plate-forme, le plug-in Maven ou les outils Eclipse, il vous suffit
 de cloner le dépôt de sources et d'exécuter...
@@ -34,6 +34,10 @@ Si vous travaillez sur un tag ou une branche, il se peut que la compilation éch
 faites par Checkstyle. Vous pouvez désactiver ces vérifications en utilisant...
 
 	mvn clean install -Dcheckstyle.skip=true
+
+Même chopse si vous souhaitez travailler en mode déconnecté.
+
+	mvn clean install -o -Dcheckstyle.skip=true
 
 Quand les projets utilisent un outil d'assemblage différent, des instructions sont données dans le *readme* du projet. 
 

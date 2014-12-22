@@ -34,6 +34,10 @@ If you try to compile a tag or a branch, you may have to skip the Checkstyle val
 
 	mvn clean install -Dcheckstyle.skip=true
 
+Same thing when you want to compile offline.
+
+	mvn clean install -o -Dcheckstyle.skip=true
+
 When projects use a different build mechanism, it is described in the readme of the project.
 
 
