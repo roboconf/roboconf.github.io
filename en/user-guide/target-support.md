@@ -1,5 +1,5 @@
 ---
-title: "IaaS Support"
+title: "Target Support"
 layout: page
 id: "ug.snapshot.target-support"
 menus: [ "users", "user-guide" ]
@@ -38,13 +38,11 @@ Each one will be associated with various IaaS properties. Thus, to deploy a comp
 VM or an AWS VM, you will have the following graph definition.
 
 	VM_AWS {
-		alias: a VM for AWS;
 		children: X;
 		installer: target;
 	}
 	
 	VM_Open_Stack {
-		alias: a VM for Open Stack;
 		children: X;
 		installer: target;
 	}

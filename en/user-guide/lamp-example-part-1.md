@@ -31,25 +31,25 @@ Roboconf is told to deploy Apache, MySQL and Tomcat on 3 separate VMs, as follow
 
 ```
 # A VM with Apache only
-instanceof VM {
+instance of VM {
         name: Apache VM;
-        instanceof Apache {
+        instance of Apache {
                 name: Apache;
         }
 }
 
 # A VM with MySQL only
-instanceof VM {
+instance of VM {
         name: MySQL VM;
-        instanceof MySQL {
+        instance of MySQL {
                 name: MySQL;
         }
 }
 
 # A VM with Tomcat only
-instanceof VM {
+instance of VM {
         name: Tomcat VM 1;
-        instanceof Tomcat {
+        instance of Tomcat {
                 name: Tomcat;
         }
 }
@@ -68,14 +68,12 @@ The application nodes (MySQL, Tomcat, Apache) are defined as follows:
 ```
 # MySQL database
 MySQL { 
-	alias: MySQL;
 	installer: puppet;
 	exports: ip, port = 3306;
 }       
 
 # Tomcat + webapp
 Tomcat {
-	alias: Tomcat with Webapp;
 	installer: puppet; 
 	exports: ip, portAJP = 8009;
 	imports: MySQL.ip, MySQL.port;
@@ -83,15 +81,13 @@ Tomcat {
 
 # Apache + load Balancer
 Apache { 
-	alias: Apache Load Balancer;
 	installer: puppet; 
 	imports: Tomcat.portAJP, Tomcat.ip;
 } 
 
 # A VM
 VM {
-	alias: Virtual Machine;
-	installer: iaas;
+	installer: target;
 	children: MySQL, Tomcat, Apache;
 }
 ```

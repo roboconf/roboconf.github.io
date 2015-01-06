@@ -41,7 +41,6 @@ directory associated with a graph component.
 As an example, let's assume you have the following component.
 
 	Apache_Load_Balancer {
-		alias: An Apache load Balancer;
 		installer: puppet;
 	}
 

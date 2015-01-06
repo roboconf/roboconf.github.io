@@ -49,13 +49,11 @@
 	<pre><code class="roboconf" data-trim>
 # A component called 'MyComponentName'
 MyComponentName {
-    alias: My test application;
     installer: bash;
 }
 	</code></pre>
 	<p>
 		Comments and properties must fit on a single line.<br />
-		<strong>alias</strong> is the user-friendly name of the component.
 		<strong>installer</strong> is the extension Roboconf will use to deploy,
 		start, stop and undeploy instances of this component. 
 	</p>
@@ -72,7 +70,7 @@ MyComponentName {
 		They are variables that a component exposes or requires.
 	</p>
 	<pre><code class="roboconf" data-trim>
-# WebApplication export "WebApplication.ip".
+# WebApplication exports "WebApplication.ip".
 WebApplication {
 	exports: ip;
 	imports: MySQL.ip, MySQL.port;
@@ -216,14 +214,14 @@ VM_Openstack {
 	</p>
 	<pre><code class="bash" data-trim>
 # These properties are specific to Amazon Web Services
-target.id          = iaas-ec2
+target.id          = ec2
 ec2.endpoint       = eu-west-1.ec2.amazonaws.com
 ec2.access.key     = YOUR_EC2_ACCESS_KEY
 ec2.secret.key     = YOUR_EC2_SECRET_KEY
-amiVmNode          = ami-YourAmiNumber
-vmInstanceType     = t1.micro
-sshKeyName         = YourSshKey
-securityGroupName  = YourSecurityGroup	
+ec2.ami            = Your AMI identifier (ami-...)
+ec2.instance.type  = t1.micro
+ec2.ssh.key        = Your SSH Key
+ec2.security.group = Your Security Group
 	</code></pre>
 </section>
 
@@ -313,11 +311,11 @@ instance of Tomcat {
 application-name = MyApp
 application-qualifier = sample
 application-description = A sample application
+
+application-namespace = net.roboconf
+application-dsl-id = roboconf-1.0
+
 graph-entry-point = main.graph
 instance-entry-point = initial-model.instances
 	</code></pre>
-	<p>
-		For the moment, a project must contain everything.<br />
-		But work is in progress about making recipes and graph portions reusable (~ libraries).
-	</p>
 </section>

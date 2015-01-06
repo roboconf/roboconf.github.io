@@ -88,6 +88,18 @@ urls:
   ug.snapshot.roboconf-architecture:
     en: user-guide/roboconf-architecture
   
+  ug.snapshot.configuring-the-web-consoles:
+    en: user-guide/configuring-the-web-consoles
+  
+  ug.snpashot.eclipse-plugin:
+    en: user-guide/eclipse-plugin
+
+  ug.snpashot.maven-plugin:
+    en: user-guide/maven-plugin
+  
+  ug.snapshot.autonomic-management-with-roboconf:
+    en: user-guide/autonomic-management-with-roboconf
+  
   ug.snapshot.tutoriel-lamp:
     fr: guide-utilisateur/tutoriel-lamp
   
@@ -449,4 +461,5 @@ urls:
   
   ug.0.1.index:
     en: user-guide-0.1/user-guide
+    fr: guide-utilisateur-0.1/guide-utilisateur
  

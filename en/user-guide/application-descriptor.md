@@ -27,6 +27,15 @@ application-qualifier = snapshot
 application-description = The description of \
 your application
 
+# The application's name space (required)
+# Really useful for reusability.
+application-namespace = net.roboconf
+
+# The DSL ID (optional)
+# For the moment, Roboconf only knows 1 DSL,
+# but it may support other standards or definitions later.
+application-dsl-id = roboconf-1.0
+
 # The main graph file (required)
 # A graph definition may contain several files. This property indicates
 # the one to read first.

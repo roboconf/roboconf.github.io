@@ -56,6 +56,12 @@ Roboconf could be replaced by some scripts executed by hand, but the result woul
 In fact, Roboconf receipts can use bash scripts. Roboconf only plugs dynamicity behind script invocations.
 
 
+## What is Roboconf's position with respect to standards?
+
+In terms of concepts, Roboconf is very close from [TOSCA](http://en.wikipedia.org/wiki/OASIS_TOSCA).  
+We should investigate this deeper in the future, since Roboconf may be seen as a deployment orchestrator.
+
+
 ## How about Puppet, Chef or CFEngine?
 
 [Puppet](http://puppetlabs.com/), [Chef](http://docs.opscode.com/) and [CFEngine](http://cfengine.com/) are various
@@ -64,7 +70,7 @@ The real key feature of Roboconf is the asynchronous exchanges to adapt and depl
 Roboconf concretely deploys something (once the asynchronous thing worked) is delegated to plug-ins. For the moment, we have
 a Bash and a Puppet plug-ins. It means Roboconf receipts can be either bash scripts or Puppet modules.
 
-No plug-in has been developed for Chef and CfEngine (yet), but we have this in mind.  
+No plug-in has been developed for Chef and CFEngine (yet), but we have this in mind.  
 This plug-in approach allows to use and mix various solutions in a deployment. It also
 makes Roboconf an extensible solution that can fit various requirements.
 

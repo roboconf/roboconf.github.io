@@ -12,10 +12,12 @@ menus: [ "developers", "developer-guide" ]
 * [Understanding the Life Cycle](life-cycle.html)
 * [Debugging Roboconf](debugging-roboconf.html)
 * [Launching the Web Administration](launching-the-web-administration.html)
+* [Understanding the iPojo model]()
 
 ## Extending Roboconf
 
 * [Creating a new Roboconf plug-in](creating-a-new-roboconf-plugin.html)
+* [Creating a new Deployement Target]()
 
 ## Build
 
@@ -28,6 +30,7 @@ menus: [ "developers", "developer-guide" ]
 
 * [Management](rest-api-management.html)
 * [Application](rest-api-application.html)
+* [Debug]()
 
 ## Documentation and Website
 

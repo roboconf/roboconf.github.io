@@ -25,7 +25,10 @@ However, **we recommend using Linux systems**.
 
 Several options are available to install the DM.
 
+<!-- 
 * Use our Debian package for the DM. 
+-->
+ 
 * Deploy our predefined OSGi distribution for the DM.
 * Deploy the DM as a Karaf feature on your own Karaf server.
 * Deploy the DM's bundles in an OSGi container.
@@ -53,6 +56,7 @@ On Ubuntu 14.04, the following command installs Java here...
 
 If you use Karaf, you can define this variable in the Karaf's **bin/setenv** file.
 
+<!--
 
 # The Debian Package for the DM
 
@@ -64,6 +68,7 @@ Once installed, the Karaf server is started as a service. The DM runs within the
 
 Grab the DM's Debian package on the [download page](../download.html) and install it.
 
+-->
 
 # The Custom Karaf Distribution for the DM
 

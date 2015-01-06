@@ -258,7 +258,8 @@ img.flag {
 .content h3 {
 	font-size: 1.1em;
 	font-weight: normal;
-	margin: 2px 0 14px 0;
+	text-decoration: underline;
+	margin: 10px 0 14px 0;
 }
 
 .content ul {

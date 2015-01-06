@@ -30,20 +30,18 @@ Here are the supported properties for a component.
 | Property | Description | Required |
 | --- | --- | --- |
 | installer | The installer name, that is to say, which Roboconf extension will handle the life cycle of this component instances. | yes |
-| alias | A description of a component. An alias aims at being more user-friendly than the component name. | yes |
-| icon | The location of an icon file (\*.jpg, \*.png, \*.gif). | no |
 | children | A list of component names, separated by a comma. As an example, an Apache component being a child of a VM component means we could deploy Apache on a VM. | no |
 | exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. | no |
 | imports | A list of imported variables, separated by a comma. It means this component will need dependencies to be started. An import can be marked as **optional**. | no |
 | facets | Some properties can be grouped together in facets. So, this is a list of facet names, separated by a comma. | no |
+| extends | The name of a component this component extends. All its properties and recipes will be inherited. | no |
 
 <br />
 Here is a commented example of a component (without any facet).
 
 	ApacheServer {
-		installer: puppet;			# Apache instances will be deployed by Roboconf's Puppet extension
-		alias: a Tomcat server;		# An alias
-		icon: apache.jpg;			# An icon located in the graph resources
+		# Apache instances will be deployed by Roboconf's Puppet extension
+		installer: puppet;
 		
 		# Web applications could be deployed over this Apache server
 		children: My-Dash-Board, Marketing-Suite;
@@ -76,29 +74,28 @@ it will need to import **Tomcat.port** and **Tomcat.ip**. Same thing if the vari
 ## Facets
 
 Facets are defined in graph(s) definitions.  
-A facet is almost like a component, except it is used to group properties and make their reusable (inheritable)
-among components.
+A facet is an abstract component, meaning it does not have anything related with recipes.  
+It only supports **exports** and **children** properties.
 
 Here is an example of facet.
 
 	facet LoadBalanced {
 		exports: ip, port;	# Define we export two variables.
-		installer: puppet;	# Define it will be installed by the Puppet extension.
 	}
+
+It starts with the **facet** keyword, followed by the facet name and an opening curly bracket.  
+Facets properties must be defined from the next line, **one property per line**.
 
 Here are the supported properties for a facet.
 
 | Property | Description | Required |
 | --- | --- | --- |
-| installer | The installer name, that is to say, which Roboconf extension will handle the life cycle of this component instances. | no |
-| icon | The location of an icon file (\*.jpg, \*.png, \*.gif). | no |
 | children | A list of component names, separated by a comma. As an example, an Apache component being a child of a VM component means we could deploy Apache on a VM. | no |
 | exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. | no |
 | extends | A facet may extend other facets. So, this is a list of facet names, separated by a comma. | no |
 
 <br />
-Unlike components, facets do not have a resource directory.  
-In fact, facets are just a way to shorten component definitions, by making reusability easier.
+Unlike components, facets do not have a resource directory.
 
 
 ## Instances
@@ -109,12 +106,12 @@ add or remove properties (neither exported, nor imported). They must be complian
 
 An instance is defined as follows:
 
-	instanceof MyComp {
+	instance of MyComp {
 		name: MyInstance1;
 		...
 	}
 
-It starts with the **facet** keyword, followed by a component name and an opening curly bracket.  
+It starts with the **instance of** keyword, followed by a component name and an opening curly bracket.  
 Instance properties must be defined from the next line, **one property per line**.
 
 Here are the supported properties for an instance.
@@ -123,7 +120,7 @@ Here are the supported properties for an instance.
 | --- | --- | --- |
 | name | The instance name. It supports spaces. | yes |
 | count | The number of instances to create. If not set, it is assumed to be 1. | no |
-| channel | Channels are used to adjust the target of messaging in Roboconf (this feature is not yet back in the code). | no |
+| channels | Channels are used to adjust the target of messaging in Roboconf (this feature is not yet back in the code). | no |
 | instance-data | Instance data. This is not expected to be set by hand. But you may encounter it. | no |
 | instance-state | The instance state. This is not expected to be set by hand. But you may encounter it. | no |
 
@@ -131,14 +128,14 @@ Here are the supported properties for an instance.
 Instances can be defined hierarchically.  
 Here is an example.
 
-	instanceof VM {
+	instance of VM {
 	
 		# This will create 5 VM instances, called VM 1, VM 2, VM3, VM 4 and VM 5.
 		name: VM ;	# Yes, there is a space at the end... :)
 		count: 5;
 		
 		# On every VM instance, we will deploy...
-		instanceof Tomcat {
+		instance of Tomcat {
 			name: Tomcat;
 		}
 	}
@@ -152,7 +149,7 @@ Assuming the Tomcat component specified...
 	
 ... a Tomcat instance may override the port value.
 
-	instanceof Tomcat {
+	instance of Tomcat {
 		name: Tomcat;
 		port: 11000;
 	}
@@ -160,7 +157,7 @@ Assuming the Tomcat component specified...
 It may also define properties that were not defined in the component.  
 This can be useful sometimes to pass specific data in a script or a Puppet module.
 
-	instanceof Tomcat {
+	instance of Tomcat {
 		name: Tomcat;
 		port: 11000;
 		checked: true;

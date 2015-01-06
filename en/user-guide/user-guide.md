@@ -16,7 +16,8 @@ menus: [ "users", "user-guide" ]
 	<ul>
 	<li>Understanding Roboconf: 
 		<a href="lamp-example-part-1.html">part 1</a>
-		- <a href="lamp-example-part-2.html">part 2</a>
+		-
+		<a href="lamp-example-part-2.html">part 2</a>
 	</li>
 	<li><a href="roboconf-concepts.html">Roboconf Concepts</a></li>
 	<li><a href="roboconf-architecture.html">Roboconf Architecture</a></li>
@@ -30,12 +31,11 @@ menus: [ "users", "user-guide" ]
 	<h2>Installing Roboconf</h2>
 
 	<ul>
-	<li><a href="installing-the-messaging-server.html">Installing the Messaging Server</a></li>
-	<li><a href="installing-the-deployment-manager.html">Installing the Deployment Manager (DM)</a></li>
-	<li><a href="configuring-the-deployment-manager.html">Configuring the DM</a></li>
+	<li><a href="installing-the-messaging-server.html">Installing the Messaging Server...</a> by hand</li>
+	<li><a href="installing-the-deployment-manager.html">Installing the Deployment Manager...</a> by hand</li>
 	<li><a href="preparing-virtual-images-with-an-agent.html">Preparing Virtual Images with an Agent</a></li>
-	<li><a href="installing-an-agent.html">Installing an Agent</a></li>
-	<li><a href="configuring-an-agent.html">Configuring an Agent</a></li>
+	<li><a href="installing-an-agent.html">Installing an Agent...</a> by hand</li>
+	<li><a href="">Installing Everything...</a> almost automatically</li>
 	</ul>
 </div>
 
@@ -46,6 +46,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="configuring-the-deployment-manager.html">Configuring the DM</a></li>
 	<li><a href="configuring-an-agent.html">Configuring an Agent</a></li>
 	<li><a href="configuring-the-loggers.html">Configuring the Loggers</a></li>
+	<li><a href="configuring-the-web-consoles.html">Configuring the Web Consoles</a></li>
 	</ul>
 </div>
 
@@ -58,6 +59,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="graph-resources.html">The Graph Resources</a></li>
 	<li><a href="instances-description.html">The Instances</a></li>
 	<li><a href="roboconf-dsl.html">Roboconf DSL</a></li>
+	<li><a href="">Reusability</a></li>
 	</ul>
 </div>
 
@@ -66,10 +68,12 @@ menus: [ "users", "user-guide" ]
 
 	<ul>
 	<li><a href="web-administration.html">Web Administration</a></li>
-	<li><a href="web-administration-screenshots.html">Screenshots of the Web Administration</a></li>
 	<li><a href="editors.html">Editors</a></li>
+	<li><a href="eclipse-plugin.html">The Eclipse plug-in</a></li>
+	<li><a href="maven-plugin.html">The Maven plug-in</a></li>
 	<li><a href="monitoring-roboconf.html">Monitoring Roboconf</a></li>
 	<li><a href="monitoring-applications-deployed-with-roboconf.html">Monitoring Applications deployed with Roboconf</a></li>
+	<li><a href="autonomic-management-with-roboconf.html">Autonomic Management</a></li>
 	</ul>
 </div>
 
@@ -100,6 +104,8 @@ menus: [ "users", "user-guide" ]
 
 	<ul>
 	<li><a href="reusable-slides.html">Reusable Slides</a></li>
+	<li><a href="">Tutorial - Getting started with Roboconf</a></li>
+	<li><a href="">Tutorial - First deployment in the cloud</a></li>
 	</ul>
 </div>
 

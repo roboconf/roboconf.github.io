@@ -5,10 +5,9 @@ id: "ug.snapshot.target-docker"
 menus: [ "users", "user-guide" ]
 ---
 
-Roboconf has a target implementation for Docker: from the Roboconf perspective, docker is seen as a kind of IaaS.
-Roboconf may create and manage docker containers, that run Roboconf agents (just like IaaS VMs) and can be used as deployment targets.
-
-# Roboconf configuration for Docker
+Roboconf has a target implementation for Docker.  
+From the Roboconf perspective, Docker is seen as a kind of IaaS.
+Roboconf may create and manage docker containers, that run Roboconf agents (just like VMs) and can be used as deployment targets.
 
 Sample **target.properties**.  
 Just copy / paste and edit.
@@ -27,47 +26,55 @@ Here is a complete description of the parameters for Docker.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use | none, must be "docker" | yes |
-| docker.endpoint | The endpoint URL of Docker (requires Docker to be setup to use a TCP port). | none | yes |
-| docker.image | The ID of the docker image used as a template for the VM (as shown by "docker images", for example) | none | yes |
+| target.id | Determines the target handler to use. | none, must be "docker" | yes |
+| docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). | none | yes |
+| docker.image | The ID of the docker image used as a template for the VM (as shown by "docker images", for example). | none | yes |
 | docker.user | The name of the user to connect. | none | yes |
 | docker.password | The password of the user to connect. | none | yes |
 
-# Docker configuration
+<br />
 
-Here, we'll assume docker is installed on your system (eg. using "apt-get install lxc-docker" if on Ubuntu, or see docker.com for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some ports may be available for other platforms.
+## Docker Configuration
+
+Here, we assume Docker is already installed on your system (e.g. by using "apt-get install lxc-docker" on Ubuntu, or see 
+[docker.com](http://docker.com) for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some 
+ports may be available for other platforms.
 
 It is recommended to use docker version 1.3.x or later.
 
-## Configure TCP port for docker container
 
-Roboconf needs that docker be available on a TCP port. To enable it, edit **/etc/default/docker**, and set DOCKER\_OPTS there:
+## Configure the TCP port for Docker Containers
 
-```
+Roboconf needs Docker to be available on a TCP port.  
+To enable it, edit **/etc/default/docker**, and define DOCKER\_OPTS there.
+
+``` properties
 # Make Docker listen on TCP port 4243 (along with local Unix socket)
 DOCKER_OPTS="-H=tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock"
 ```
 
-Then, simply restart docker:
+Then, simply restart docker.
 
 ```
 sudo stop docker
 sudo start docker
 ```
 
-## Prepare docker image
 
-Obtain a docker linux image (eg. Ubuntu), then start a docker container using it:
+## Prepare a Docker Image
+
+Obtain a Docker Linux image (e.g. Ubuntu), then start a Docker container using it.
 
 ```
 docker pull ubuntu
 docker run -v /tmp:/roboconf -t -i ubuntu /bin/bash
 ```
 
-Note: the container started above shares the local /tmp as "/roboconf" under Docker (using the -v option).
-This can be useful to share files between the local filesystem and the docker container (eg. to install the roboconf agent).
+Note: the container started above shares the local **/tmp** as **/roboconf** under Docker (using the -v option).  
+This can be useful to share files between the local file system and the Docker container (e.g. to install the Roboconf agent).
 
-In the docker container (let's assume you have copied the roboconf agent, namely "roboconf-karaf-dist-agent.tar.gz", in the shared /roboconf directory - in the note above, /roboconf in the container is the local /tmp):
+Let's assume you have copied the Roboconf agent in the shared **/roboconf** directory (here, the local **/tmp**).  
+In the Docker container, execute the following commands.
 
 ```
 apt-get update
@@ -77,9 +84,10 @@ tar xvzf /roboconf/roboconf-karaf-dist-agent.tar.gz
 ln -s roboconf-karaf-dist-agent/ roboconf-agent
 ```
 
-Now, you have to add a "start.sh" executable script in the /usr/local/roboconf-agent directory, with the following content (the script is mainly used to complete the agent setup at startup time):
+Now, you have to add a **start.sh** executable script in the **/usr/local/roboconf-agent** directory.  
+Set the following content (the script is mainly used to complete the agent setup at startup time).
 
-```
+``` properties
 #!/bin/bash
 # Startup script for docker agent
 cd /usr/local/roboconf-agent
@@ -92,34 +100,39 @@ cd bin
 ./karaf
 ```
 
-The container is now ready to become a docker image; outside docker, keep track of its ID, that will be useful to build the image:
-- use **docker ps** to obtain your container ID.
-- then, **docker commit -m "Roboconf-Agent-Image" \<your container ID\> roboconf-agent:some-tag**
+The container is now ready to become a Docker image.  
+Outside docker, keep track of its ID, that will be useful to build the image.
 
-Now, your image is created: retrieve its image ID using **docker images**, and use it as docker.image in the roboconf docker configuration.
+- Use **docker ps** to obtain your container ID.
+- Then, **docker commit -m "Roboconf-Agent-Image" \<your container ID\> roboconf-agent:some-tag**
 
-## Some docker tips
+Now, your image is created.  
+Retrieve its image ID using **docker images**, and use it as *docker.image* in the Roboconf configuration (**target.properties**).
 
-To list docker images:
+
+## Some Docker Tips
+
+Here is a reminder of some Docker commands.
+
+To list docker images:  
 **docker images**
 
-To remove a docker image:
+To remove a docker image:  
 **docker rmi \<image-ID\>**
 
-To run interactively a docker image (thus launching a container):
+To run interactively a docker image (thus launching a container):  
 **docker run -i -v /tmp:/roboconf -t \<image-ID\> /bin/bash**
-(Note: the -v option is used there to share the local /tmp as "/roboconf" in the container: useful tip to exchange files).
 
-To list running docker containers:
+Note: the -v option is used there to share the local "/tmp" as "/roboconf" in the container, which is useful to exchange files.
+
+To list running docker containers:  
 **docker ps** (or, to list them all, "docker ps -a")
 
-to attach a shell script to a running container:
+to attach a shell script to a running container:  
 **docker exec -ti \<container-ID\> /bin/bash**
 
-To remove a docker container:
+To remove a docker container:  
 **docker rm \<container-ID\>**
 
-To remove all exited containers:
+To remove all exited containers:  
 **docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm**
-
-

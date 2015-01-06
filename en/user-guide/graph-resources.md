@@ -10,31 +10,27 @@ However, it does not answer the question: how does Roboconf deal with deployment
 
 Clearly, the graph model is artificial. One can put whatever he wants in it.  
 The real logic processing will be handled by a Roboconf plug-in (e.g. Bash or Puppet). These plug-ins will
-use resources, associated with a component, to deploy its instances.
+use resources, associated with a component, to deploy real Software.
 
 So, for **every** component in the graph, a project must contain a sub-directory with the same name than the component.  
 If we take the following graph definition...
 
 	VM {
-		alias: Virtual Machine;
-		installer: iaas;
+		installer: target;
 		# ...
 	}
 	
 	MySQL {
-		alias: MySQL;
 		installer: puppet;
 		# ...
 	}
 	
 	Tomcat {
-		alias: Tomcat with Rubis;
 		installer: puppet;
 		# ...
 	}
 	
 	Apache {
-		alias: Apache Load Balancer;
 		installer: puppet;
 		# ...
 	}
@@ -54,8 +50,8 @@ If we take the following graph definition...
     	└── ...
 
 These sub-directories will contain the components resources.  
-These resources will be used by the Roboconf
-plug-in identified by the installer name. The kind of resources to put depends on the plug-in.
+These resources will be used by the Roboconf plug-in identified by the installer name.
+The kind of resources to put depends on the plug-in.
 
 * As an example, if the *Tomcat* component uses the **puppet** installer, then its resources directory
 will contain a Puppet module.

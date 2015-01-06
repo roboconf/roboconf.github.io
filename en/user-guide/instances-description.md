@@ -13,22 +13,22 @@ Predefined instances aims at gaining some time when one wants to deploy applicat
 The fact they are defined does not mean they will be deployed or started automatically. But they
 will be already defined and configured, ready to be deployed.
 
-By convention, instances definitions are expected in files with the **instances** extension.
+By convention, instances definitions are expected in files with the **instances** extension.  
 The parser will not be difficult if you use another extension. However, notice that tools
 may rely on the extension (such as editors, to provide syntax highlighting).
 
-An instance starts with the keyword **instanceof** followed by the name of the component.  
+An instance starts with the 2-word keyword **instance of** followed by the name of the component.  
 Instances must be defined hierarchically. If the graph defines a root component R with a 
-child C, then an instance of C must be defined in an instance of R.
+child C, then an instance of C must be defined within an instance of R.
 
 Let's see a concrete example.
 
 	# This is a comment
 	# There are only in-line comments
-	instanceof Vm_Tomcat {
+	instance of Vm_Tomcat {
 		name: Tomcat VM1;
 	
-		instanceof Tomcat {
+		instance of Tomcat {
 			name: Tomcat;
 		}
 	}
@@ -40,10 +40,17 @@ An instance must have the **name** property, which is the instance name. It must
 The instance may also declare properties to override component properties. As an example, if a component exports
 a *port* property with the default value 8080, the instance may override it (e.g. with 8081).
 
-	instanceof Tomcat {
+	instance of Tomcat {
 		name: Tomcat;
 		port: 8081;
 	}
 
-> Instances definition can be splitted into several files.  
-> The import mechanism will be documented later.
+Instances definition can be split into several files. It is indeed possible to import other instance definitions.  
+Instances definitions can mix imports and instances declaration, or, it can only contain imports.
+
+	import database.instances;
+	import servers.instances;
+	
+	instance of MyApp {
+		# whatever
+	}

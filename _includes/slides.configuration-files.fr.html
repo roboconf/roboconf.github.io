@@ -49,13 +49,11 @@
 	<pre><code class="roboconf" data-trim>
 # Un composant appelé 'MyComponentName'
 MyComponentName {
-    alias: My test application;
     installer: bash;
 }
 	</code></pre>
 	<p>
 		Les commentaires et les propriétés doivent tenir sur une seule ligne.<br />
-		<strong>alias</strong> est une description ou un nom plus sympathique du composant.
 		<strong>installer</strong> est l'extension Roboconf utilisée pour le déploiement, le démarrage, l'arrêt
 		ou la désinstallation d'instances de ce composant. 
 	</p>
@@ -212,14 +210,14 @@ VM_Openstack {
 	</p>
 	<pre><code class="bash" data-trim>
 # Propriétés spécifiques à Amazon Web Services
-target.id          = iaas-ec2
+target.id          = ec2
 ec2.endpoint       = eu-west-1.ec2.amazonaws.com
 ec2.access.key     = YOUR_EC2_ACCESS_KEY
 ec2.secret.key     = YOUR_EC2_SECRET_KEY
-amiVmNode          = ami-YourAmiNumber
-vmInstanceType     = t1.micro
-sshKeyName         = YourSshKey
-securityGroupName  = YourSecurityGroup	
+ec2.ami            = Your AMI identifier (ami-...)
+ec2.instance.type  = t1.micro
+ec2.ssh.key        = Your SSH Key
+ec2.security.group = Your Security Group
 	</code></pre>
 </section>
 
@@ -308,11 +306,11 @@ instance of Tomcat {
 application-name = MyApp
 application-qualifier = sample
 application-description = Une application pour l'exemple
+
+application-namespace = net.roboconf
+application-dsl-id = roboconf-1.0
+
 graph-entry-point = main.graph
 instance-entry-point = initial-model.instances
 	</code></pre>
-	<p>
-		Pour le moment, un projet doit contenir absolument tout : graphe, recettes et descripteur (les instances sont optionnelles).
-		Des travaux sont en cours pour rendre les recettes et des portions de graphe réutilisables (~ librairies).
-	</p>
 </section>

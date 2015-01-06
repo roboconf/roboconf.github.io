@@ -10,8 +10,8 @@ Therefore, it covers existing (physical) machines, devices (such as cards) and v
 manually (e.g. with Virtual Box).
 
 With this configuration, you need to start the agent directly.  
-And you will have to pass it some information by hand (like the IP address of the messaging server).
-The most simple solution is to update the startup script of the agent.
+And you will have to pass it some information by hand (like the IP address of the messaging server).  
+This is achieved by updating the **net.roboconf.agent.configuration.cfg** file under Karaf's **etc** directory.
 
 Sample **target.properties**.  
 Just copy / paste and edit.

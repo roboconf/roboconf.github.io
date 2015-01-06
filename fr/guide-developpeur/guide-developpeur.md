@@ -5,5 +5,6 @@ id: "dg.snapshot.index"
 menus: [ "developers", "developer-guide" ]
 ---
 
-Le guide développeur n'a pas encore été traduit en français.  
-Les traductions des guides utilisateur et développeur se font lors des releases.
+Aucune traduction en français n'est disponible pour les versions antérieures à la 1.0.  
+Le guide développeur est toutefois disponible en anglais, et sera traduit au fur et à mesure
+des releases à partir de la version 1.0.

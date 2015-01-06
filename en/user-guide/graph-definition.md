@@ -56,9 +56,8 @@ As an example, you could define the following graphs inside a same project:
 * VM_MySQL / MySQL
 * VM_Apache_Load_Balancer / Apache
 
-Or you could define a single graph, with a single root VM and three possible children (Tomcat,
-MySQL and Apache Load Balancer). The IaaS on which the VM is will be created is defined in the component's
-resources directory. We will see this later.
+Or you could define a single graph, with a single root VM and three possible children (Tomcat, MySQL and Apache Load Balancer).  
+The IaaS on which the VM is will be created is defined in the component's resources directory. We will see this later.
 
 
 ## Graph Configuration
@@ -79,21 +78,18 @@ Components can be defined in any order.
 	
 	# The VM
 	VM {
-		alias: Virtual Machine;
 		installer: iaas;
 		children: MySQL, Tomcat, Apache;
 	}
 	
 	# MySQL database
 	MySQL {
-		alias: MySQL;
 		installer: puppet;
 		exports: ip, port = 3306;
 	}
 	
 	# Tomcat
 	Tomcat {
-		alias: Tomcat with Rubis;
 		installer: puppet;
 		exports: ip, portAJP = 8009;
 		imports: MySQL.ip, MySQL.port;
@@ -101,36 +97,33 @@ Components can be defined in any order.
 	
 	# Apache Load Balancer
 	Apache {
-		alias: Apache Load Balancer;
 		installer: puppet;
 		imports: Tomcat.portAJP, Tomcat.ip;
 	}
 
-> Important!  
-> Every component property must be defined on a single line.
+> Every component property must be defined on **a single line**.
 
-Components can be defined in separate files (think to
-the case where you have several graphs in your graph model, you could have one file per graph). 
+Components can be defined in separate files and in any order. This is achieved thanks to the **import** keyword.  
+Graphs definitions can mix imports and components declaration, or, it can only contain imports.
 
-> The import mechanism will be documented later.
+	import graph-part-1.graph;
+	import graph-part-2.graph;
+	
+	MyComponent{
+		# whatever
+	} 
 
 Let's see the properties you can or have to set for a component.
-
-* **alias** is mandatory and provides a human-readable name.  
 
 * **installer** is mandatory and designates the Roboconf plug-in that will handle the life cycle of component instances.  
 Examples of Roboconf plug-ins include Bash and Puppet implementations.
 
 * **children** lists the component that can be instantiated and deployed over this component.  
-In the example above,
-it means we can deploy MySQL, Tomcat and Apache over a VM instance.
+In the example above, it means we can deploy MySQL, Tomcat and Apache over a VM instance.
 
 * **exports** lists the variables this component makes visible to other components.  
 Variable names are separated by commas. **ip** is a special variable name whose value will be set dynamically
 by Roboconf. All the other variables should specify a default value.
-
-> The IP address is a special variable.  
-> In fact, other network properties should be supported soon.
 
 * **imports** lists the variables this components needs to be resolved before starting.  
 Variable names are separated by commas. They are also prefixed by the component that exports them. As an example,
@@ -145,69 +138,41 @@ In this case, the instance will be able to start even if the imported variables 
 As an example, if you think to a cluster mode, a cluster member may need to know where are the other members.
 
 	ClusterMember {
-		alias: a Cluster member;
 		exports: varA, varB;
 		imports: ClusterMember.varA (optional), ClusterMember.varB (optional);
 	}
+	
+It is possible to group imports thanks to the *wildcard* symbol.  
+As an example, the previous imports could simply be written as...
+
+	imports: ClusterMember.* (optional);
+
+* **extends** indicates this component extends another component.  
+A component that extends another one inherits its exports, its imports, its installer and its recipes.
+An extending component can override the value of an inherited element. It can also add
+new variables (for export or for import). It cannot remove inherited elements.
 
 
 ## Facets
 
-Sometimes, components may share a lot of configuration.  
-To limit redundancy, Roboconf added the notion of **facet**. A facet groups properties that can then be applied to components.
-A component may *inherit* from several facets.
+Components designate Software components.  
+They could be seen also as *types*. And sometimes, we need abstractions to manipulate types.
+Such abstractions can be used to group common properties or just to provide late-binding.
 
-Let's take a look at an example.
+Facets are abstract components.  
+A component may inherit from one or several facets.
 
-	###################################
-	## First, components...
-	###################################
-	
-	# The VM
-	VM_EC2 {
-		alias: Virtual Machine on EC2;
-		facets: VM;
-	}
-	
-	VM_Azure {
-		alias: Virtual Machine on Azure;
-		facets: VM;
-	}
-	
-	# MySQL database
-	MySQL {
-		alias: MySQL;
-		facets: deployable;
-		installer: puppet;
-		exports: ip, port = 3306;
-	}
-	
-	# Tomcat
-	Tomcat {
-		alias: Tomcat with Rubis;
-		facets: deployable;
-		installer: puppet;
-		exports: ip, portAJP = 8009;
-		imports: MySQL.ip, MySQL.port;
-	}
-	
-	# Apache Load Balancer
-	Apache {
-		alias: Apache Load Balancer;
-		facets: deployable;
-		installer: puppet;
-		imports: Tomcat.portAJP, Tomcat.ip;
-	}
-	
-	
-	###################################
-	## Then, facets...
-	###################################
-	
+> Components and facets are both defined *.graph files.
+
+A facet can define **exports** and **children**.  
+That's all. The installer name and the imports are all tightly coupled to recipes. And by definition, a facet
+cannot have recipes. Facets are useful to group common properties, as well as a suitable way for reusability.
+
+Let's take a first example.
+
 	# The VM facet
 	facet VM {
 		children: deployable;
-		installer: iaas;
 	}
 	
 	# The deployable facet
@@ -215,20 +180,28 @@ Let's take a look at an example.
 		# nothing
 	}
 	
-	# Facets are not very useful here. We could put everything in components (see lamp-legacy-1).
-	# However, it shows what can be seen as a good practice for bigger VM deployments.
+Let's take another example.
 
-A component lists the facets it uses with the property named **facets**.  
-It will inherit all the imported and exported variables, as well as the children and installer name. If
-a component inherits several installers, and does not specify one, then an error is thrown. In case of ambiguity
-in the inheritance, the component has to override the installer. There can be only one installer.
+	# An abstract type
+	facet load-balance-able {
+		exports: ip, port = 8080;
+	}
+	
+	# A load balancer component
+	load-balancer {
+		installer: puppet;
+		facets: deployable;
+		exports: ip;
+		imports: load-balance-able.*;
+	}
 
-Imported and exported variables are only added to the component.  
-A facet supports the following properties: **children**, **exports**, **imports** and **installer**.
+Thanks to facets, we can define independent definitions and reuse them
+when needed to create new links between Software components. Here, we could define another 
+component with the **load-balance-able** facet, and Roboconf would know that it would be linked with our load balancer.
 
-> Facets are only a way to group properties.  
-> At runtime, there is no "facet" object in Roboconf's internal model. This is a parsing commodity
-> to reduce the size of configuration files.
+> If we had to do some comparison, we could say components are like Java classes,
+> and that facets are like Java interfaces.  
+> Components are implementations. And facets are abstractions.
 
 
 ## System Requirements

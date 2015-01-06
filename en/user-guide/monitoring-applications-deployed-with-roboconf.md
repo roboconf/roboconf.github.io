@@ -6,4 +6,4 @@ menus: [ "users", "user-guide" ]
 ---
 
 Monitoring applications deployed with Roboconf (application servers, databases...) still needs to be addressed.  
-We plan to start working on it from mid-September.
+We plan to start working on it later.

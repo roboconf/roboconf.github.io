@@ -32,7 +32,10 @@ However, **we recommend using Linux systems**.
 
 Several options are available to install an agent.
 
-* Use our Debian package for the agent. 
+<!--
+* Use our Debian package for the agent.
+-->
+ 
 * Deploy our predefined OSGi distribution for the agent.
 * Deploy the agent as a Karaf feature on your own Karaf server.
 * Deploy the agent's bundles in an OSGi container.
@@ -75,6 +78,8 @@ On Ubuntu 14.04, the following command installs Java here...
 If you use Karaf, you can define this variable in the Karaf's **bin/setenv** file.
 
 
+<!--
+
 # The Debian Package for the Agent
 
 The Debian package installs our custom Karaf distribution for Roboconf's agent.  
@@ -85,6 +90,8 @@ Once installed, the Karaf server is started as a service. The agent runs within 
 
 Grab the agent's Debian package on the [download page](../download.html) and install it.  
 This package installs the agent as a service that will start with the operating system.
+
+-->
 
 
 # The Custom Karaf Distribution for the Agent

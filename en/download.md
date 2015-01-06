@@ -10,8 +10,8 @@ menus: [ "users", "download" ]
 You can download the last snapshots of Roboconf on our Maven repository.  
 The current development version is **0.2-SNAPSHOT**.
 
-* For the **Deployment Manager**, look [here](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-dm-webapp).
-* For the **Agent**, look [here](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-agent).
+* For the **Deployment Manager**, look [here](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-dist-dm).
+* For the **Agent**, look [here](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-dist-agent).
 
 
 ## Stable Versions

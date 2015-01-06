@@ -43,5 +43,5 @@ The use case that was studied is about home sensors that send big data to analys
 or disappear and everything gets reconfigured in consequence. As a reminder, M2M means *machine to machine* and IoT *Internet of Things*.
 
 * **Open PaaS**: an open-source Social Networking Service deployed in the cloud.  
-[Open PaaS](open-paas.org) is a project which aims at developing a web collaboration suite for companies and organizations. 
+[Open PaaS](http://open-paas.org) is a project which aims at developing a web collaboration suite for companies and organizations. 
 It uses [NodeJS](http://nodejs.org/), [NPM](http://www.npmjs.org/) and various other Software ([Redis](http://redis.io/), [MongoDB](http://www.mongodb.org/), LDAP, etc).

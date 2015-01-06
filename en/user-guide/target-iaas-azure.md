@@ -46,6 +46,7 @@ Here is a complete description of the parameters for Microsoft Azure.
 | azure.vm.template | The ID of the VM image used as a template for the VM. | none | yes |
 
 <br />
+
 ## Key Store
 
 To create a key store, you can use a tool called [Keytool][keytool].  

@@ -6,8 +6,8 @@ menus: [ "users", "user-guide" ]
 ---
 
 Once the agent has been installed, you have to configure it.  
-If the target is a IaaS (a cloud infrastructure), you only have to specify one thing, the IaaS type
-(or target ID). All the other parameters will be set dynamically by the DM or the IaaS itself.
+If the target is a IaaS (a cloud infrastructure), you only have to specify one thing, the target ID. 
+All the other parameters will be set dynamically by the DM or the IaaS itself.
 
 The agent comes with a default configuration that needs to be updated. Even if the configuration is
 wrong, the agent will keep on running (in a degraded mode).
@@ -47,7 +47,7 @@ message-server-username = guest
 message-server-password = guest
 
 
-# The IaaS type.
+# The target ID.
 # Depending on its value, the following parameters may be read from
 # another location than this file. This is the case for Amazon Web Services
 # Microsoft Azure and Openstack.
@@ -87,20 +87,20 @@ The following table summers up all the agent parameters.
 | message-server-ip | The IP address and the port of the messaging server. Examples: http://192.168.1.87 (default port), http://192.168.1.89:4048 (with a custom port). | **null** is interpreted as "localhost". | yes |
 | message-server-username | The user name for the messaging server. | **null** is interpreted as "guest". | yes |
 | message-server-password | The password for the messaging server. | **null** is interpreted as "guest". | yes |
-| iaas-type | The IaaS type. Some cloud infrastructures provide mechanisms to store information for the VM. On some IaaS, the DM passes information to the agent through these means. It implies that a part of the agent configuration is read from an external location. | See the next section. | yes |
-| application-name | An agent is associated with a single application. | Depending on the IaaS type, its value can be retrieved from *user data*. | yes |
-| root-instance-name | Within an application, machines are represented by a root instance. This parameter is the name of the instance associated with this agent. | Depending on the IaaS type, its value can be retrieved from *user data*. | yes |
+| target-id | The target ID. Some cloud infrastructures provide mechanisms to store information for the VM. On some IaaS, the DM passes information to the agent through these means. It implies that a part of the agent configuration is read from an external location. | See the next section. | yes |
+| application-name | An agent is associated with a single application. | Depending on the target ID, its value can be retrieved from *user data*. | yes |
+| root-instance-name | Within an application, machines are represented by a root instance. This parameter is the name of the instance associated with this agent. | Depending on the target ID, its value can be retrieved from *user data*. | yes |
 | ip-address-of-the-agent | The IP address of the agent's machine. | This is useful if the machine has several network interfaces. | no |
 
 <br />
 
 These parameters are persisted and restored upon restart.  
-However, depending on the IaaS type, some values may be overridden.
+However, depending on the target ID, some values may be overridden.
 
 
-# IaaS Type
+# Target ID
 
-The IaaS type indicates on which IaaS the agent runs.  
+The target ID indicates on which target the agent runs.  
 Normally, the agent parameters should be hard-written in configuration files. However, each agent has its own configuration.
 Some settings are the same for all the agents (such as the messaging parameters). And some others are specific.
 The couple **application name** and **root instance name** are unique. Two agents cannot have the same values for these 2 parameters.
@@ -110,7 +110,7 @@ This is only possible in cloud infrastructures, since they support, in one way o
 creates a VM (virtual machine) from a virtual image, it is possible to pass data to the new VM. Once the VM is running, it can access these data and do whatever it needs with.  
 
 Let's take an example with Amazon Web Services.  
-We assume we created a virtual image with a Roboconf agent. This one was partially configured. It has the right IaaS type.
+We assume we created a virtual image with a Roboconf agent. This one was partially configured. It has the right target ID.
 Other settings are invalid or incomplete.
 
 1. In the DM, we have a root instance called "my-root" in the "my app" application.  
@@ -119,7 +119,7 @@ It is associated with a component that designates an EC2 VM.
 It calls the right API in EC2 and sets user data for the new VM 
 (application name = my app, root-instance-name = my-root, plus the messaging parameters).
 3. Once the VM is up, the agent starts, the OSGi configuration is injected in the agent.
-5. Since the IaaS type is **ec2**, the agent then reads the user data in EC2, thus completing its configuration.
+5. Since the target ID is **ec2**, the agent then reads the user data in EC2, thus completing its configuration.
 
 User data override the following parameters.
 
@@ -136,5 +136,5 @@ The only IaaS it does not work with is the **embedded** one.
 > If the agent took its configuration in user data, you can update the parameters AFTER the agent started through
 > *Config Admin* or through the *.cfg file.
 
-Notice that if you stop the agent and restart it, and that its IaaS type involves user data, 
+Notice that if you stop the agent and restart it, and that its target ID involves user data, 
 the agent will once again read these user data.

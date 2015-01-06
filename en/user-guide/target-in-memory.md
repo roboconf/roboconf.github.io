@@ -8,12 +8,17 @@ menus: [ "users", "user-guide" ]
 Roboconf has a target implementation to run agents in memory.    
 
 > This implementation has no interest for production environments.  
-> However, it is really useful to debug Roboconf.
 
-When it is asked to create a VM, this implementation launches an agent instance into
-a distinct thread. Depending on the plug-ins the agent uses, this can lead to permissions issues.
-As an example, the Puppet plug-in requires root permissions to work. When someone uses this
-implementation, he or she should use the logger plug-in.  
+The in-memory target acts as a simulation mode.  
+When it is asked to create a VM, this implementation launches a new agent instance (as a new
+iPojo instance). These agents mock extensions, which means no script or Puppet module is used.
+Instead, life cycle actions (deploy, start, etc.) result in a log entry and nothing more.
+
+In-memory support is useful for...
+
+* ... experimenting with Roboconf (tutorials).
+* ... debugging Roboconf's internal mechanisms.
+* ... testing (unit and integration tests).
 
 Sample **target.properties**.  
 Just copy / paste and edit.

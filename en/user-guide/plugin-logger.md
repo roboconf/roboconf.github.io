@@ -12,6 +12,5 @@ This can be useful for debug purpose.
 This plug-in is associated with the **logger** installer name.
 
 	Component_Y {
-		alias: an alias;
 		installer: logger;
 	}

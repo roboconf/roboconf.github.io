@@ -24,7 +24,7 @@ The DM and the agents always communicate asynchronously through this server.
 * Eventually, a **REST client** is required to control the DM.  
 Roboconf comes with a web application which provides a user interface to interact
 with the DM through REST. If one wants to use or develop another client, the REST API 
-is described in the [developer guide](/developer-guide/developer-guide.html). 
+is described in the [developer guide](../developer-guide/developer-guide.html). 
 
 In terms of model and configuration files, Roboconf has the following concepts.
 

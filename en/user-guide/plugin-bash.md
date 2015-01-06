@@ -14,7 +14,6 @@ It only works under Linux systems.
 This plug-in is associated with the **bash** installer name.
 
 	Component_Y {
-		alias: an alias;
 		installer: bash;
 	}
 
@@ -44,10 +43,10 @@ Parameters are passed to action scripts (eg. start.sh, update.sh ...) using envi
 
 ## Exported and imported variables
 
-All the exports of the instance are available as environment vars (their names are left unchanged).
-
-Imports are more complex, as there may be multiple ones: let's take the example of an apache load balancer, that imports tomcat "ip" and "portAjp" variables.
-The imports will look like this (for N tomcat instances named "tomcat1" to "tomcatN"):
+All the exports of the instance are available as environment variables (their names are left unchanged).  
+Imports are more complex, as there may be multiple ones: let's take the example of an Apache load balancer, 
+that imports Tomcat "ip" and "portAjp" variables. The imports will look like this (for N Tomcat instances
+named "tomcat1" to "tomcatN"):
 
 ``` properties
 tomcat_size = N
@@ -60,15 +59,15 @@ tomcat_N_ip = < ip address of tomcat N >
 tomcat_1_portAjp = < AJP port for tomcat 1 >
 ```
 
-So, the naming convention for imports is < componentName >\_< index >\_< exportName >, with index starting at 1 and max(index) given by < componentName >\_size .
+So, the naming convention for imports is < componentName >\_< index >\_< exportName >, with index starting at 1 and max (index) given by < componentName >\_size .
 
 ## Variables related to update actions
 
-- ROBOCONF\_UPDATE\_STATUS: the status of the instance that triggered the update (eg. DEPLOYED\_STOPPED, DEPLOYED\_STARTED).
+- ROBOCONF\_UPDATE\_STATUS: the status of the instance that triggered the update (e.g. DEPLOYED\_STOPPED, DEPLOYED\_STARTED).
 
-In case of import change (eg. instance started or stopped):
+In case of import change (e.g. instance started or stopped):
 
 - ROBOCONF\_IMPORT\_CHANGED\_COMPONENT: Name of the component for the changed import.
 - ROBOCONF\_IMPORT\_CHANGED\_INSTANCE\_PATH: Path to the instance that exports the changed import.
-- ROBOCONF\_IMPORT\_CHANGED\_< ImportName >: For each imported variable that changed, the corresponding value (eg. if an "ipAddress" export changed, the "ROBOCONF\_IMPORT\_CHANGED_ipAddress" variable should contain its new value).
+- ROBOCONF\_IMPORT\_CHANGED\_< ImportName >: For each imported variable that changed, the corresponding value (e.g. if an "ipAddress" export changed, the "ROBOCONF\_IMPORT\_CHANGED_ipAddress" variable should contain its new value).
 

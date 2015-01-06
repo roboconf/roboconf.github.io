@@ -22,15 +22,16 @@ Follow [these instructions](http://sourceforge.net/apps/mediawiki/notepad-plus/i
 to install it in Notepad ++.
 
 
-## Eclipse
+## IDE
 
-It is planned to develop Eclipse tools to easily edit Roboconf's configuration files.  
 The value of such edition tools resides in syntax highlighting, auto-completion and contextual
 help (such as validation markers or quick fix).
 
-As a reminder, Roboconf's parsing and model library is written in Java and is technology-agnostic.  
-It means it could be used in any IDE or Java tool. The fact we create Eclipse tools does not mean
-you could not create such editors in NetBeans or other IDE.
+For the moment, only Eclipse tooling has been created.  
+You can find more information about the Eclipse plug-in [here](eclipse-plugin.html).
+
+Since Roboconf's parsing and model library is an independent Java library, it is possible to reuse the
+validation code and model classes in other IDE (such as Netbeans).
 
 
 ## HTML Pages
@@ -44,3 +45,6 @@ Just add the right JS and CSS links in your HTML page and wrap your code as foll
 	# Your snippet of Roboconf's DSL
 </code></pre>
 ```
+
+This is what is used for syntax highlighting in the [online presentations](reusable-slides.html).
+
