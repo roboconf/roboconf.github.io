@@ -7,9 +7,11 @@ menus: [ "developers", "developer-guide" ]
 
 This API is used to load, query or delete applications.
 
-## GET /applications
+<br />
 
-List deployed applications.
+## <span class="glyphicon glyphicon-hand-right"></span> GET /applications
+
+To list deployed applications.
 
 **Query Parameters:**
 
@@ -25,18 +27,19 @@ List deployed applications.
 
 **Response Text Object:**
 
-Array of applications : [ app1, ..., appN ]
-
+Array of applications: [ app1, ..., appN ]  
 An application is an object with the following properties:
 
-- name: the application name
-- desc: a human-readable description
-- qualifier: additional information field (eg. version, category...)
+- name: the application name.
+- desc: a human-readable description.
+- qualifier: additional information field (e.g. version, category...).
+- namespace: the application's name space.
 
 Example:
 
-[{"name":"mongo-replicaset","desc":"A mongo replica set install on IaaS VMs","qualifier":"1.0"}]
-
+```json
+[{"name":"mongo-replicaset","desc":"A mongo replica set install on IaaS VMs","qualifier":"1.0","namespace":"net.roboconf"}]
+```
 
 **Status Codes:**
 
@@ -44,27 +47,33 @@ Example:
 
 **Request:**
 
-    GET /applications HTTP/1.1
-    Host: localhost:9998
-    Accept: application/json
+```http
+GET /applications HTTP/1.1
+Host: localhost:9998
+Accept: application/json
+```
 
 **Response:**
 
-    HTTP/1.1 200 OK
-    Content-Type: application/json
-    Transfer-Encoding: chunked
-        
-    5a
-    [{"name":"mongo-replicaset","desc":"A sample application","qualifier":"sample"}]
-    0
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Transfer-Encoding: chunked
 
-## POST /applications
+5a
+[{"name":"mongo-replicaset","desc":"A sample application","qualifier":"sample","namespace":"net.roboconf"}]
+0
+```
 
-Deploy an application.
+<br />
+
+## <span class="glyphicon glyphicon-hand-right"></span> POST /applications
+
+To upload and deploy an application.
 
 **Query Parameters:**
 
-- file: the roboconf deployment archive (zip file).
+- file: the roboconf deployment archive (ZIP file).
 
 **Request Headers:**
 
@@ -72,33 +81,42 @@ Deploy an application.
 
 **Response Headers:**
 
+- none
+
 **Response Text Object:**
 
-N/A
+- none
 
 **Status Codes:**
 
 - 200 OK.
-- 403 Forbidden - Application already exists, or DM malfunction (eg. not initialized).
+- 403 Forbidden - The application already exists.
 - 406 Not acceptable - Invalid application.
-- 401 Unauthorized - Any file-system related error (eg. read-only access).
+- 401 Unauthorized - Any file-system related error (e.g. read-only access).
 
 **Request:**
 
-    POST /applications
-    Host: localhost:9998
+```http
+POST /applications HTTP/1.1
+Host: localhost:9998
+```
 
 **Response:**
 
-    HTTP/1.1 200 OK
-    
-## POST /applications/local
+```http
+HTTP/1.1 200 OK
+```
 
-Deploy an application already available on the local filesystem (eg. FTP upload).
+<br />
+
+## <span class="glyphicon glyphicon-hand-right"></span> POST /applications/local
+
+To deploy an application already available on the local file system (e.g. FTP upload).  
+Depending on the size of the application, FTP upload may be more suitable than a simple HTTP upload.
 
 **Query Parameters:**
 
-- localFilePath: the path to a locally deployed (unzipped) Roboconf application (a directory path).
+- local-file-path: the path to a locally deployed (unzipped) Roboconf application (a directory path).
 
 **Request Headers:**
 
@@ -106,9 +124,11 @@ Deploy an application already available on the local filesystem (eg. FTP upload)
 
 **Response Headers:**
 
+- none
+
 **Response Text Object:**
 
-N/A
+- none
 
 **Status Codes:**
 
@@ -119,16 +139,24 @@ N/A
 
 **Request:**
 
-    POST /applications/local
-    Host: localhost:9998
+```http
+POST /applications/local?local-file-path=/path/to/the/application HTTP/1.1
+Host: localhost:9998
+```
 
 **Response:**
 
-    HTTP/1.1 200 OK
-    
-## POST /applications/{name}/shutdown
+```http
+HTTP/1.1 200 OK
+```
 
-Shut down an application.
+<br />
+
+## <span class="glyphicon glyphicon-hand-right"></span> POST /applications/{name}/shutdown
+
+To shut down an application.  
+Shutdown means removing everything Roboconf deployed or created for this application.
+This operation does not delete the application from the model. It only destroys runtime resources.
 
 **Query Parameters:**
 
@@ -136,11 +164,15 @@ Shut down an application.
 
 **Request Headers:**
 
+- none
+
 **Response Headers:**
+
+- none
 
 **Response Text Object:**
 
-N/A
+- none
 
 **Status Codes:**
 
@@ -150,16 +182,24 @@ N/A
 
 **Request:**
 
-    POST /applications/mongo-replicaset/shutdown
-    Host: localhost:9998
+```http
+POST /applications/mongo-replicaset/shutdown HTTP/1.1
+Host: localhost:9998
+```
 
 **Response:**
 
-    HTTP/1.1 200 OK
-    
-## POST /applications/{name}/delete
+```http
+HTTP/1.1 200 OK
+```
 
-Delete an application.
+<br />
+
+## <span class="glyphicon glyphicon-hand-right"></span> DELETE /applications/{name}/delete
+
+To delete an application.  
+An application can only be deleted if all its resources were stopped and undeployed first.
+Said differently, an application must be shutdown before being deleted.
 
 **Query Parameters:**
 
@@ -167,11 +207,15 @@ Delete an application.
 
 **Request Headers:**
 
+- none
+
 **Response Headers:**
+
+- none
 
 **Response Text Object:**
 
-N/A
+- none
 
 **Status Codes:**
 
@@ -180,9 +224,13 @@ N/A
 
 **Request:**
 
-    POST /applications/mongo-replicaset/delete
-    Host: localhost:9998
+```http
+DELETE /applications/mongo-replicaset/delete HTTP/1.1
+Host: localhost:9998
+```
 
 **Response:**
 
-    HTTP/1.1 200 OK
+```http
+HTTP/1.1 200 OK
+```

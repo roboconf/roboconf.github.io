@@ -59,7 +59,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="graph-resources.html">The Graph Resources</a></li>
 	<li><a href="instances-description.html">The Instances</a></li>
 	<li><a href="roboconf-dsl.html">Roboconf DSL</a></li>
-	<li><a href="">Reusability</a></li>
+	<li><a href="reusability.html">Reusability</a></li>
 	</ul>
 </div>
 

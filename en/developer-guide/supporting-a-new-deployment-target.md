@@ -1,27 +1,26 @@
 ---
-title: "Creating a new Roboconf plug-in"
+title: "Supporting a new Deployment Target"
 layout: page
-id: "dg.snapshot.creating-a-new-roboconf-plugin"
+id: "dg.snapshot.supporting-a-new-deployment-target"
 menus: [ "developers", "developer-guide" ]
 ---
 
-A Roboconf plug-in is an extension for a Roboconf agent.  
-Currently available plug-ins include **Bash**, **Puppet** and **Logger**.
-You may want to read [this page](../user-guide/plugins.html) to refresh your memories.
+A deployment target designates a platform or a solution on which Roboconf can deploy Software.  
+Currently available targets include cloud infrastructures (Amazon Web Services, Openstack...), **Docker**, etc.
+You may want to read [this page](../user-guide/target-support.html) to refresh your memories.
 
-A Roboconf plug-in is an OSGi bundle with specific meta-data.  
+A deployment target is supported though an OSGi bundle with specific meta-data.  
 Roboconf uses [iPojo](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) to simplify OSGi development. 
 We also use Maven to develop our modules.
 
 > If you have never worked with OSGi, do not worry.  
 > Our design was made to make extensibility easy.
 
-Let's suppose you want to develop a plug-in for **Chef**.  
-At the moment this documentation is being written, there is not yet a Roboconf plug-in for [Chef](https://www.getchef.com/chef/).
+Let's suppose you want to develop a deployment target for a specific version of **vSphere** (from VM Ware).
 
 ## The POM
 
-* Create a directory called **roboconf-plugin-chef**.
+* Create a directory called **roboconf-target-vsphere**.
 * Create a **pom.xml** file and copy the content below.
 
 ```xml
@@ -33,8 +32,8 @@ At the moment this documentation is being written, there is not yet a Roboconf p
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.roboconf</groupId>
-	<artifactId>roboconf-plugin-chef</artifactId>
-	<name>Roboconf :: Plugin :: Chef</name>
+	<artifactId>roboconf-target-vsphere</artifactId>
+	<name>Roboconf :: Target :: vSphere</name>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	
@@ -52,7 +51,7 @@ At the moment this documentation is being written, there is not yet a Roboconf p
 		
 		<dependency>
   			<groupId>net.roboconf</groupId>
-  			<artifactId>roboconf-plugin-api</artifactId>
+  			<artifactId>roboconf-target-api</artifactId>
   			<version>${roboconf.version}</version>
   			<scope>provided</scope>
 		</dependency>
@@ -97,7 +96,7 @@ At the moment this documentation is being written, there is not yet a Roboconf p
 The project meta are standard information with Maven.  
 Notice the **bundle** packaging.
 
-In the dependencies, you need both **roboconf-core** and **roboconf-plugin-api**.  
+In the dependencies, you need both **roboconf-core** and **roboconf-target-api**.  
 Their scope is **provided** because at runtime, these dependencies are also deployed as OSGi bundles.
 
 The **maven-bundle-plugin** describes the OSGi meta-data for the MANIFEST.  
@@ -122,29 +121,29 @@ Copy the content below.
 		xsi:schemaLocation="org.apache.felix.ipojo http://felix.apache.org/ipojo/schemas/CURRENT/core.xsd"
 		xmlns="org.apache.felix.ipojo">
 
-	<component classname="net.roboconf.plugin.chef.internal.PluginChef" name="roboconf-plugin-chef">
+	<component classname="net.roboconf.target.vsphere.internal.TargetVSphere" name="roboconf-target-vsphere">
 		<provides />
 	</component>
 	
-	<instance component="roboconf-plugin-chef" name="Roboconf Plugin - Chef" />
+	<instance component="roboconf-target-vsphere" name="Roboconf Target - vSphere" />
 </ipojo>
 ```
 
-This file indicates your bundle provides a **PluginInterface** service for a Roboconf's agent.  
+This file indicates your bundle provides a **TargetHandler** service for Roboconf's DM.  
 More exactly, your bundle defines a component (a Java class) and an instance that will be registered as a service in the OSGi registry.
-The iPojo framework ensures us that once you deploy your bundle in an OSGi container with a Roboconf's agent, your service will be
-injected into the agent.
+The iPojo framework ensures us that once you deploy your bundle in an OSGi container with Roboconf's DM, your service will be
+injected into the DM.
 
 
 ## Implementing the Plug-in
 
-The **metadata.xml** file references a class called **net.roboconf.plugin.chef.internal.PluginChef**.  
+The **metadata.xml** file references a class called **net.roboconf.target.vsphere.internal.TargetVSphere**.  
 So, you need to create it. Start by creating the Maven structure (**src/main/java** and **src/test/java**).
 
 Here is the skeleton of the class.
 
 ```java
-package net.roboconf.plugin.chef.internal;
+package net.roboconf.target.vsphere.internal;
 
 import java.util.logging.Logger;
 
@@ -154,96 +153,66 @@ import net.roboconf.core.model.runtime.Instance.InstanceStatus;
 import net.roboconf.plugin.api.PluginException;
 import net.roboconf.plugin.api.PluginInterface;
 
-public class PluginChef implements PluginInterface {
+public class TargetVSphere implements TargetHandler {
 
 	private final Logger logger = Logger.getLogger( getClass().getName());
-	private String agentId;
-
 
 
 	@Override
-	public String getPluginName() {
-		return "chef";
+	public String getTargetId() {
+		return "vsphere";
 	}
 
-
 	@Override
-	public void setNames( String applicationName, String rootInstanceName ) {
-		this.agentId = "'" + rootInstanceName + "' agent";
+	public String createOrConfigureMachine(
+			Map<String,String> targetProperties, 
+			String messagingIp,
+			String messagingUsername, 
+			String messagingPassword,
+			String rootInstanceName, 
+			String applicationName )
+	throws TargetException {
+		
+		logger.info( "Creating a new machine." );
+		return "the VM's ID";
 	}
 
-
 	@Override
-	public void initialize( Instance instance ) throws PluginException {
-		String name = instance != null ? instance.getName() : null;
-		this.logger.fine( this.agentId + " is initializing the plug-in for " + name + "." );
-	}
-
-
-	@Override
-	public void deploy( Instance instance ) throws PluginException {
-		String name = instance != null ? instance.getName() : null;
-		this.logger.info( this.agentId + " is deploying instance " + name + "." );
-	}
-
-
-	@Override
-	public void start( Instance instance ) throws PluginException {
-		String name = instance != null ? instance.getName() : null;
-		this.logger.info( this.agentId + " is starting instance " + name + "." );
-	}
-
-
-	@Override
-	public void update( Instance instance, Import importChanged, InstanceStatus statusChanged ) throws PluginException {
-		String name = instance != null ? instance.getName() : null;
-		this.logger.info( this.agentId + " is updating instance " + name + "." );
-	}
-
-
-	@Override
-	public void stop( Instance instance ) throws PluginException {
-		String name = instance != null ? instance.getName() : null;
-		this.logger.info( this.agentId + " is stopping instance " + name + "." );
-	}
-
-
-	@Override
-	public void undeploy( Instance instance ) throws PluginException {
-		String name = instance != null ? instance.getName() : null;
-		this.logger.info( this.agentId + " is undeploying instance " + name + "." );
+	public void terminateMachine( 
+			Map<String,String> targetProperties, 
+			String machineId ) 
+	throws TargetException {
+		
+		logger.info( "Terminating a machine." );
 	}
 }
 ```
 
-For the description of the methods, please refer to the Javadoc of the **PluginInterface** interface.
+For the description of the methods, please refer to the Javadoc of the **TargetHandler** interface.
 
-Basically, all the methods are related to a life cycle change on the agent side.  
-The plug-in name matches the installer name within Roboconf's DSL. If a Roboconf component uses **chef** as its
-installer name, then this plug-in will be used.
+The target ID matches the **target-id** property in **"target.properties** files (**target** installer).  
+If a Roboconf component references this target ID, then this bundle will be used.
 
-On the agent, there is no multi-threading for the plug-ins.  
-Since every action may modify the system and the deployed applications, plug-ins are invoked sequentially by the agent. 
-And **any long-running operation must be blocking**.
+On the DM, target handlers may be invoked concurrently and from different threads.  
 
-Any critical exception must be wrapped in an instance of **PluginException**.  
-Eventually, you must know that inside the agent, there will be only instance of your plug-in class. And that it will be reused
-during all the time it is deployed. So, be careful with class fields. The class must be implemented in a state-less fashion.
+Any critical exception must be wrapped in an instance of **TargetException**.  
+Eventually, you must know that inside the DM, there will be only instance of your target handler class. And that it will be reused during all the time it is deployed. So, be careful with class fields. The class must be implemented in a state-less fashion.
 
 As usual, write as many unit tests as possible.
 
 > It is good habit to keep this class in an internal package.  
-> By convention, internal packages are generally not exported in OSGi. And Roboconf plug-ins do not need to export packages.
+> By convention, internal packages are generally not exported in OSGi. And Roboconf's target handlers
+> do not need to export packages.
 
 
-## Packaging the Plug-in
+## Packaging the Bundle
 
-To package your plug-in, you simply need to run **mvn clean install** in your plug-in directory.  
+To package your bundle, you simply need to run **mvn clean install** in your project directory.  
 You will get a JAR file under the **target** directory. This JAR file can be deployed in any OSGi container or server
 where iPojo, the **roboconf-plugin-api** and **roboconf-core** bundles are already deployed.
 
-If you want to deploy it in the agent's Karaf distribution, simply drop it under the **deploy** directory.  
-That's it, your plug-in is installed and ready to be used by the agent. No additional configuration is required.
+If you want to deploy it in the DM's Karaf distribution, simply drop it under the **deploy** directory.  
+That's it, your target handler is installed and ready to be used by the DM. No additional configuration is required.
 
 
 ## Source Code Hosting

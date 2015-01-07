@@ -50,3 +50,29 @@ They are in the staging repository at [Sonatype.org](https://oss.sonatype.org/).
 * ... **release** the staging repository. This will deploy and synchronize the artifacts with Maven Central.
 
 Reading [this page](https://docs.sonatype.org/display/Repository/Closing+a+Staging+Repository) may help for the last steps.
+
+
+## Releasing the Eclipse plug-in
+
+The Eclipse plug-in follow a slightly different build process.  
+Roughly, we do not use Maven to release it. We must use the Tycho approach, which means...
+
+1. Update the version by hand in the POM.
+2. Build locally.
+3. Test...
+4. Upload the generated update site.
+5. Tag the source repository.
+
+> FIXME: complete this section to indicate where the update site must be uploaded.
+
+
+## Projects Release
+
+A release involve several source repositories.  
+Proceed as described below.
+
+1. Release **roboconf-platform**.
+2. Release **roboconf-maven-plugin**.
+3. Release **roboconf-eclipse-plugin**.
+4. Update the web site (no tag required).
+5. Update and tag **roboconf-examples** (no release required).

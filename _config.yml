@@ -97,6 +97,9 @@ urls:
   ug.snpashot.maven-plugin:
     en: user-guide/maven-plugin
   
+  ug.snpashot.reusability:
+    en: user-guide/reusability
+  
   ug.snapshot.autonomic-management-with-roboconf:
     en: user-guide/autonomic-management-with-roboconf
   
@@ -251,8 +254,14 @@ urls:
   dg.snapshot.version-management:
     en: developer-guide/version-management
   
+  dg.snapshot.ipojo-model:
+    en: developer-guide/ipojo-model
+  
   dg.snapshot.creating-a-new-roboconf-plugin:
     en: developer-guide/creating-a-new-roboconf-plugin
+  
+  dg.snapshot.supporting-a-new-deployment-target:
+    en: developer-guide/supporting-a-new-deployment-target
   
   dg.snapshot.launching-the-web-administration:
     en: developer-guide/launching-the-web-administration
@@ -266,11 +275,14 @@ urls:
   dg.snapshot.release-management:
     en: developer-guide/release-management
   
-  dg.snapshot.rest-application:
-    en: developer-guide/rest-application
+  dg.snapshot.rest-api-application:
+    en: developer-guide/rest-api-application
   
-  dg.snapshot.rest-management:
-    en: developer-guide/rest-management
+  dg.snapshot.rest-api-management:
+    en: developer-guide/rest-api-management
+  
+    dg.snapshot.rest-api-debug:
+    en: developer-guide/rest-api-debug
   
   dg.snapshot.web-site-organization:
     en: developer-guide/web-site-organization

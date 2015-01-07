@@ -321,7 +321,8 @@ span.roadmap-in-progress {
 .language-properties span.c,
 .language-java span.c,
 .language-puppet span.c,
-.language-xml span.nt {
+.language-xml span.nt,
+.language-json span.nt {
 	color: green;
 }
 
@@ -343,7 +344,10 @@ span.roadmap-in-progress {
 .language-puppet span.k,
 .language-java span.k,
 .language-java span.kd,
-.language-java span.kn {
+.language-java span.kn,
+.language-http span.nf,
+.language-http span.na,
+.language-http span.kr {
 	color: #b23e4b;
 	font-weight: bold;
 }
