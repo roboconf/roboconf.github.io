@@ -1,7 +1,7 @@
 ---
-title: "Tutoriel LAMP - 5/5"
+title: "Tutoriel - Premier Déploiement dans le Cloud - 4/4"
 layout: page
-id: "ug.snapshot.tutoriel-lamp-5"
+id: "ug.snapshot.tutorial-first-deployment-in-the-cloud-4"
 menus: [ "users", "user-guide" ]
 ---
 

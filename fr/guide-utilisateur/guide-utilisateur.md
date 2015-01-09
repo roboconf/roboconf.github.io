@@ -21,7 +21,8 @@ La seule exception concerne la présentation en ligne, ainsi que les tutoriaux.
 
 	<ul>
 	<li><a href="presentation-reutilisable.html">Présentation Réutilisable</a></li>
-	<li><a href="tutoriel-lamp.html">Tutoriel LAMP</a></li>
+	<li><a href="tutoriel-debuter-avec-roboconf.html">Débuter avec Roboconf</a></li>
+	<li><a href="tutoriel-premier-deploiement-dans-le-cloud.html">Premier déploiement dans le Cloud</a></li>
 	</ul>
 </div>
 

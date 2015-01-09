@@ -103,23 +103,20 @@ urls:
   ug.snapshot.autonomic-management-with-roboconf:
     en: user-guide/autonomic-management-with-roboconf
   
-  ug.snapshot.tutoriel-lamp:
-    fr: guide-utilisateur/tutoriel-lamp
+  ug.snapshot.tutorial-first-deployment-in-the-cloud:
+    fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud
   
-  ug.snapshot.tutoriel-lamp-1:
-    fr: guide-utilisateur/tutoriel-lamp-1
+  ug.snapshot.tutorial-first-deployment-in-the-cloud-1:
+    fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-1
   
-  ug.snapshot.tutoriel-lamp-2:
-    fr: guide-utilisateur/tutoriel-lamp-2
+  ug.snapshot.tutorial-first-deployment-in-the-cloud-2:
+    fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-2
   
-  ug.snapshot.tutoriel-lamp-3:
-    fr: guide-utilisateur/tutoriel-lamp-3
+  ug.snapshot.tutorial-first-deployment-in-the-cloud-3:
+    fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-3
   
-  ug.snapshot.tutoriel-lamp-4:
-    fr: guide-utilisateur/tutoriel-lamp-4
-  
-  ug.snapshot.tutoriel-lamp-5:
-    fr: guide-utilisateur/tutoriel-lamp-5
+  ug.snapshot.tutorial-first-deployment-in-the-cloud-4:
+    fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-4
   
   ug.snapshot.reusable-slides:
     en: user-guide/reusable-slides
