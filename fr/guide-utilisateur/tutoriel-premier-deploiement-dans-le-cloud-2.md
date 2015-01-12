@@ -18,7 +18,7 @@ au IaaS (*Infrastructure as a Service*) de l'instancier.
 > Un agent Roboconf se présente comme le DM, sous la forme d'une application OSGi
 > pré-conditionnée dans un serveur Karaf.
 
-Première choses, instantiez une nouvelle VM dans la console d'Amazon Web Services.  
+Première chose, instanciez une nouvelle VM dans la console d'Amazon Web Services.  
 Pour cela, allez dans le menu **Instances**.
 
 <img src="/resources/img/tutorial-aws-instances.jpg" alt="Créer une nouvelle VM" class="gs" />

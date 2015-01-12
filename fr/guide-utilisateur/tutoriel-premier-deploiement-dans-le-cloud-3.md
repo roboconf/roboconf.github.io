@@ -20,6 +20,11 @@ Cela évitera un éventuel conflit avec l'application précédente.
 3. Rezippez le tout en une seule archive.  
 Comparez avec l'archive originale pour vérifiez la validité de la structure.
 
+4. Dans la console (ligne de commande) du DM, démarrez le bundle **roboconf-target-iaas-ec2**.  
+Pour rappel, vous devez récupérer l'identifiant de ce bundle via la commande **bundle:list**, puis
+exécuter **bundle:start id**, où *id* est l'identifiant du bundle. Ainsi, l'extension qui gère des déploiements
+sur Amazon Web Services est désormais activée.
+
 Vous pouvez maintenant déployer cette nouvelle application au travers de l'administration web de Roboconf.
 Comme vous l'avez fait *en mémoire*, jouez avec le cycle de vie des différentes briques. Assurez-vous que
 des machines virtuelles sont bien lancées et que les briques s'installent correctement.

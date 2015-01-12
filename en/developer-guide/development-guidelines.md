@@ -46,6 +46,13 @@ However, it is a good practice for developers to run this tool locally from time
 Using it with your IDE (such as Eclipse) makes it quite easy to use.
 
 
+## Rely on Utility Methods
+
+**roboconf-core** contains several utility methods.  
+Take a look at the **utils** package and try to reuse these methods.
+This will prevent redundant code.
+
+
 ## Running Sonar Locally
 
 Roboconf does not have an online Sonar instance.  

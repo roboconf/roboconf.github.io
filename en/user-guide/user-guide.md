@@ -95,6 +95,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="plugins.html">Roboconf Plug-ins</a></li>
 	<li><a href="plugin-bash.html">The Bash Plug-in</a></li>
 	<li><a href="plugin-puppet.html">The Puppet Plug-in</a></li>
+	<li><a href="plugin-file.html">The File Plug-in</a></li>
 	<li><a href="plugin-logger.html">The Logger Plug-in</a></li>
 	</ul>
 </div>
@@ -104,8 +105,8 @@ menus: [ "users", "user-guide" ]
 
 	<ul>
 	<li><a href="reusable-slides.html">Reusable Slides</a></li>
-	<li><a href="">Tutorial - Getting started with Roboconf</a></li>
-	<li><a href="">Tutorial - First deployment in the cloud</a></li>
+	<li><a href="tutorial-getting-started-with-roboconf.html">Tutorial - Getting started with Roboconf</a></li>
+	<li><a href="tutorial-first-deployment-in-the-cloud.html">Tutorial - First deployment in the cloud</a></li>
 	</ul>
 </div>
 

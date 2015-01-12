@@ -22,6 +22,7 @@ Here is a UML diagram that illustrates the components we have and their relation
 
 <br />
 <img src="/resources/img/ipojo-dm.png" alt="The iPojo model on the DM's side" />
+
 <br />
 
 Basically, every (deployment) target handler is associated with an iPojo component.  
@@ -45,6 +46,7 @@ Here is a UML diagram that illustrates the components we have and their relation
 
 <br />
 <img src="/resources/img/ipojo-agent.png" alt="The iPojo model on the agent's side" />
+
 <br />
 
 Basically, every plug-in is associated with an iPojo component.  

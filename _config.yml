@@ -100,23 +100,32 @@ urls:
   ug.snpashot.reusability:
     en: user-guide/reusability
   
+  ug.snapshot.tutorial-getting-started-with-roboconf:
+    en: user-guide/tutorial-getting-started-with-roboconf
+    fr: guide-utilisateur/tutoriel-debuter-avec-roboconf
+  
   ug.snapshot.autonomic-management-with-roboconf:
     en: user-guide/autonomic-management-with-roboconf
   
   ug.snapshot.tutorial-first-deployment-in-the-cloud:
     fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud
+    en: user-guide/tutorial-first-deployment-in-the-cloud
   
   ug.snapshot.tutorial-first-deployment-in-the-cloud-1:
     fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-1
+    en: user-guide/tutorial-first-deployment-in-the-cloud-1
   
   ug.snapshot.tutorial-first-deployment-in-the-cloud-2:
     fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-2
+    en: user-guide/tutorial-first-deployment-in-the-cloud-2
   
   ug.snapshot.tutorial-first-deployment-in-the-cloud-3:
     fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-3
+    en: user-guide/tutorial-first-deployment-in-the-cloud-3
   
   ug.snapshot.tutorial-first-deployment-in-the-cloud-4:
     fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-4
+    en: user-guide/tutorial-first-deployment-in-the-cloud-4
   
   ug.snapshot.reusable-slides:
     en: user-guide/reusable-slides
@@ -181,6 +190,9 @@ urls:
   
   ug.snapshot.plugin-logger:
     en: user-guide/plugin-logger
+  
+  ug.snapshot.plugin-file:
+    en: user-guide/plugin-file
   
   ug.snapshot.plugin-bash:
     en: user-guide/plugin-bash

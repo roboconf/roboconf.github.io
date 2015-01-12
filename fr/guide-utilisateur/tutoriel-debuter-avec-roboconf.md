@@ -1,7 +1,7 @@
 ---
 title: "Tutoriel - Débuter avec Roboconf"
 layout: page
-id: "ug.snapshot.tutoriel-getting-started-with-roboconf"
+id: "ug.snapshot.tutorial-getting-started-with-roboconf"
 menus: [ "users", "user-guide" ]
 ---
 
@@ -89,7 +89,7 @@ Karaf embarque une console web.
 Par défaut, elle est accessible à l'adresse [http://localhost:8181/system/console](http://localhost:8181/system/console).  
 Les identifiants par défaut sont **karaf** / **karaf**.
 
-<img src="/resources/img/web-console-bundles.jpg" alt="The bundle management page in Karaf's web console" class="gs" />
+<img src="/resources/img/web-console-bundles.jpg" alt="La console web de Karaf" class="gs" />
 
 A priori, vous n'allez pas utiliser cette console pendant ce tutoriel, mais il est toujours utile
 de savoir qu'elle est existe et qu'elle est là.
@@ -211,7 +211,7 @@ Assurez-vous au préalable que tout est arrêté.
 
 1. Démarrez et lancez l'équilibreur de charge (le *load balancer*).  
 Le serveur Apache devrait rester en état **starting**. C'est parce qu'une de ses dépendances (l'application web)
-n'est pas encore démarrée).
+n'est pas encore démarrée.
 
 2. Faîtes de même avec l'application web.  
 Elle devrait également rester en état **starting**, et ce, parce que la base de données dont elle dépend n'est

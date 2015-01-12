@@ -1,5 +1,5 @@
 ---
-title: "Tutoriel - Premier Déploiement dans le Cloud - 1/3"
+title: "Tutoriel - Premier Déploiement dans le Cloud - 1/4"
 layout: page
 id: "ug.snapshot.tutorial-first-deployment-in-the-cloud-1"
 menus: [ "users", "user-guide" ]
@@ -29,8 +29,7 @@ Téléchargez ces informations sous la forme d'un fichier CSV.
 
 <img src="/resources/img/tutorial-aws-download-access-key.jpg" alt="Télécharger la nouvelle clé d'accès" class="gs" />
 
-Celui-ci contient l'identifiant de votre clé, ainsi qu'une clé privée qui sera nécessaire plus tard.
-
+Celui-ci contient l'identifiant de votre clé, ainsi qu'une clé privée qui sera nécessaire plus tard.  
 Allez ensuite dans l'interface d'EC2, menu **Groupes de Sécurité**.
 
 <img src="/resources/img/tutorial-aws-security-groups-menu.jpg" alt="Accéder aux groupes de sécurité" />
@@ -48,7 +47,7 @@ Cette clé sera utilisée quand vous vous connecterez en SSH sur des VM Amazon.
 Sauvegardez le fichier **pem** en local. Vous le passerez en paramètres des commandes SSH.
 
 
-## Préparer la Configuation pour AWS
+## Préparer les Fichiers de Configuration
 
 Créez un fichier appelé **target.properties**.  
 Copiez le modèle ci-dessous et complétez-le avec les informations récupérées plus haut.  

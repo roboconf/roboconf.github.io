@@ -58,7 +58,6 @@
         
         <!-- Javadoc -->		
 		<module name="JavadocType">
-			<property name="scope" value="public" />
 			<property name="authorFormat" value=".+ - .+" />
 		</module>
 		<module name="JavadocStyle" />
