@@ -14,8 +14,8 @@ The roadmap for the next months covers several aspects.
 	* Write scripts to ease Roboconf's installation. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Embed JClouds. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Update Roboconf' DSL for reusability. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Add autonomic support to Roboconf.
-	* Write the first tutorial for Roboconf.
+	* Add autonomic support to Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Write the first tutorial for Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Complete the web console (debug, filtering, new instances).
 
 * **From February 2015**
@@ -24,6 +24,8 @@ The roadmap for the next months covers several aspects.
 	* Support place holders for environment switch.
 	* Complete the Maven plug-in for reusability purpose.
 	* Simplify the installation of Roboconf.
+	* Study TOSCA support.
+	* Support Apache QPID as the messaging server.
 	
 * **From April 2015**
 

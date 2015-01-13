@@ -71,8 +71,9 @@ Roughly, we do not use Maven to release it. We must use the Tycho approach, whic
 A release involve several source repositories.  
 Proceed as described below.
 
-1. Release **roboconf-platform**.
-2. Release **roboconf-maven-plugin**.
-3. Release **roboconf-eclipse-plugin**.
-4. Update the web site (no tag required).
-5. Update and tag **roboconf-examples** (no release required).
+1. Update and tag **roboconf-web-administration**.
+2. Release **roboconf-platform**.
+3. Release **roboconf-maven-plugin**.
+4. Release **roboconf-eclipse-plugin**.
+5. Update the web site (no tag required).
+6. Update and tag **roboconf-examples** (no release required).
