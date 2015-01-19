@@ -13,15 +13,24 @@ The configuration is persisted by the OSGi container.
 It is restored upon restart.
 
 
-# Enable the Target Handlers
+# Installing the Target Handlers
 
-By default, all the target handlers (EC2, Openstack, etc.) are disabled.  
-You will have to enable those you want to use. This guarantees an optimal memory usage.
+By default, no target handler is installed.  
+A target handler is in charge of creating and terminating machines in a given infrastructure.
+Hence, there is a target handler for Amazon Web Services, one for Openstack, etc. Since not all the
+users will use all the supported targets, it is better for everyone to only install and enable the
+desired targets.
 
 ```properties
 # Start Karaf in interactive mode
 cd bin
 ./karaf
+
+# Install the bundles you want (here in version 0.2)
+bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/0.2
+
+# Install other targets if you want
+# ...
 
 # List all the bundles
 bundle:list

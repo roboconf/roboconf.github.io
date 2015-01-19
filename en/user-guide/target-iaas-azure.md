@@ -8,6 +8,14 @@ menus: [ "users", "user-guide" ]
 Roboconf has a target implementation for Microsoft Azure.  
 It only supports the creation of *compute* VMs.
 
+To install it, open the DM's interactive mode and type in...
+
+```properties
+# Here in version 0.2
+bundle:install mvn:net.roboconf/roboconf-target-iaas-azure/0.2
+bundle:start <bundle-id>
+```
+
 Every new VM is associated with a public IP address.  
 This address will be used by other components which resolve their dependencies through Roboconf.
 
@@ -35,7 +43,7 @@ Here is a complete description of the parameters for Microsoft Azure.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use. | none, must be "azure" | yes |
+| target.id | Determines the target handler to use. | none, must be "iaas-azure" | yes |
 | azure.key.store.file | Path to [JKS Key store][jks] file (see below for help). | none | yes |
 | azure.key.store.password | Key store password. | none | yes |
 | azure.subscription.id | Subscription ID of an Azure account using value of "azure.key.store.file" parameter as credential. | none | yes |

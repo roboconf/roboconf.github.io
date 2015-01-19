@@ -9,6 +9,14 @@ Embedded support addresses the cases where the machines already exist or are cre
 Therefore, it covers existing (physical) machines, devices (such as cards) and virtual machines created
 manually (e.g. with Virtual Box).
 
+To install it, open the DM's interactive mode and type in...
+
+```properties
+# Here in version 0.2
+bundle:install mvn:net.roboconf/roboconf-target-embedded/0.2
+bundle:start <bundle-id>
+```
+
 With this configuration, you need to start the agent directly.  
 And you will have to pass it some information by hand (like the IP address of the messaging server).  
 This is achieved by updating the **net.roboconf.agent.configuration.cfg** file under Karaf's **etc** directory.

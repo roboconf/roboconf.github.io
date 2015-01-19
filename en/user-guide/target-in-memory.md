@@ -7,7 +7,17 @@ menus: [ "users", "user-guide" ]
 
 Roboconf has a target implementation to run agents in memory.    
 
-> This implementation has no interest for production environments.  
+> This implementation has no interest for production environments.
+
+To install it, open the DM's interactive mode and type in...
+
+```properties
+# Here in version 0.2 (with its dependencies)
+bundle:install mvn:net.roboconf/roboconf-plugin-api/0.2
+bundle:install mvn:net.roboconf/roboconf-agent/0.2
+bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/0.2
+bundle:start <bundle-id1> <bundle-id2> <bundle-id3>
+```
 
 The in-memory target acts as a simulation mode.  
 When it is asked to create a VM, this implementation launches a new agent instance (as a new
@@ -28,4 +38,9 @@ Just copy / paste and edit.
 target.id = in-memory
 ```
 
-This target handler does not have any specific property.
+Here is a complete description of the parameters for Amazon Web Services.
+
+| Property | Description | Default | Mandatory
+| --- | --- | --- | --- |
+| target.id | Determines the target handler to use | none, must be "in-memory" | yes |
+| in-memory.delay | The delay (in milliseconds) to wait for before instantiating a new agent in memory. | 0 | yes |

@@ -8,6 +8,14 @@ menus: [ "users", "user-guide" ]
 Roboconf has a target implementation for Amazon Web Services (AWS).  
 It only supports the creation of *compute* VMs.
 
+To install it, open the DM's interactive mode and type in...
+
+```properties
+# Here in version 0.2
+bundle:install mvn:net.roboconf/roboconf-target-iaas-ec2/0.2
+bundle:start <bundle-id>
+```
+
 Every new VM is associated with a public IP address.  
 This address will be used by other components which resolve their dependencies through Roboconf.
 
@@ -16,7 +24,7 @@ Just copy / paste and edit.
 
 ``` properties
 # Configuration file for EC2
-target.id = ec2
+target.id = iaas-ec2
 
 # EC2 URL
 ec2.endpoint = 
@@ -36,7 +44,7 @@ Here is a complete description of the parameters for Amazon Web Services.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use | none, must be "ec2" | yes |
+| target.id | Determines the target handler to use | none, must be "iaas-ec2" | yes |
 | ec2.endpoint | URL of the compute service (eg. eu-west-1.ec2.amazonaws.com)  | none | yes |
 | ec2.access.key | Access key defined in your ec2 account | none | yes |
 | ec2.secret.key | Secret key defined in your ec2 account | none | yes |

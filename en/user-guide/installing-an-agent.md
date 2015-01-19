@@ -18,7 +18,7 @@ So, an agent will undertake and communicate about all the applications parts tha
 
 To install a Roboconf agent, you must have:
 
-* A Java Virtual Machine (JDK) for Java 1.6 or higher.  
+* A Java Virtual Machine (JDK) for Java 1.7.  
 OpenJDK and Oracle JDK are supported.
 
 * Bash if you want to use the **Bash** plug-in.
@@ -106,7 +106,7 @@ Roboconf's agent being already deployed and configured. It is configured to run 
 > Or you may prefer deploying our Karaf feature.
 
 This distribution can be deployed either with a Debian package or manually.  
-To deploy it manually, you must have a JDK 6 (or higher) installed. Then, [download the agent's ZIP archive](../download.html)
+To deploy it manually, you must have a JDK 7 installed. Then, [download the agent's ZIP archive](../download.html)
 and unzip it somewhere on your disk. 
 
 To start it, execute...

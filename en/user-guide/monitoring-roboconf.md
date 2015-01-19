@@ -21,6 +21,11 @@ See [Karaf's web site](http://karaf.apache.org/manual/latest/users-guide/monitor
 JMX access can be completed with the web consoles and shell access.  
 Once again, you will find information on Karaf's web site.
 
+You can also take a look at [this blog post](http://blog.nanthrax.net/2014/03/apache-karaf-cellar-camel-activemq-monitoring-with-elk-elasticsearch-logstash-and-kibana/).  
+It shows how to use [Logstash](http://logstash.net/), [ElasticSearch](http://www.elasticsearch.org) and 
+[Kibana](http://www.elasticsearch.org/overview/kibana) to monitor several Karaf instances by aggregating and sorting
+data collected from logs and JMX probes. A similar system should be feasible with Roboconf.
+
 
 ## Monitoring RabbitMQ
 

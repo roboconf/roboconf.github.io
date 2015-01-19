@@ -24,7 +24,7 @@ Dans le cadre de ce tutoriel, vous allez simplement utiliser la brique d'adminis
 de Roboconf (le DM, pour *Deployment Manager*), ainsi que le serveur de messagerie RabbitMQ.
 
 Téléchargez le DM sur [cette page](../telecharger.html).  
-Vous aurez besoin d'une machine virtuelle Java pour le faire tourner (JDK 6+).  
+Vous aurez besoin d'une machine virtuelle Java pour le faire tourner (JDK 7).  
 Pour l'installer, il suffit de dézipper l'archive. Optez de préférence pour le \*.tar.gz, qui
 conserve les permissions sur les fichiers.
 

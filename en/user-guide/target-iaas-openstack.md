@@ -1,5 +1,5 @@
 ---
-title: "OpenStack Support"
+title: "Openstack Support"
 layout: page
 id: "ug.snapshot.target-iaas-openstack"
 menus: [ "users", "user-guide" ]
@@ -7,6 +7,14 @@ menus: [ "users", "user-guide" ]
 
 Roboconf has a target implementation for Openstack.  
 It only supports the creation of *compute* VMs.
+
+To install it, open the DM's interactive mode and type in...
+
+```properties
+# Here in version 0.2
+bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/0.2
+bundle:start <bundle-id>
+```
 
 The implementation can associate a public address to the created VM.  
 The behavior depends on the **target.properties** file.
@@ -49,7 +57,7 @@ Here is a complete description of the parameters for OpenStack.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use | none, must be "openstack" | yes |
+| target.id | Determines the target handler to use | none, must be "iaas-openstack" | yes |
 | openstack.nova-url | The URL of Nova, Openstack's *compute* component. | none | yes |
 | openstack.tenant-name | The tenant name (not the ID). | none | yes |
 | openstack.user | The name of the user to connect. | none | yes |

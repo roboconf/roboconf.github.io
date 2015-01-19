@@ -9,6 +9,14 @@ Roboconf has a target implementation for Docker.
 From the Roboconf perspective, Docker is seen as a kind of IaaS.
 Roboconf may create and manage docker containers, that run Roboconf agents (just like VMs) and can be used as deployment targets.
 
+To install it, open the DM's interactive mode and type in...
+
+```properties
+# Here in version 0.2
+bundle:install mvn:net.roboconf/roboconf-target-docker/0.2
+bundle:start <bundle-id>
+```
+
 Sample **target.properties**.  
 Just copy / paste and edit.
 

@@ -8,6 +8,14 @@ menus: [ "users", "user-guide" ]
 Roboconf has a generic target implementation based on [Apache JClouds](http://jclouds.apache.org).  
 For the moment, it only supports the creation of *compute* VMs.
 
+To install it, open the DM's interactive mode and type in...
+
+```properties
+# Here in version 0.2
+bundle:install mvn:net.roboconf/roboconf-target-jclouds/0.2
+bundle:start <bundle-id>
+```
+
 Sample **target.properties**.  
 Just copy / paste and edit.
 

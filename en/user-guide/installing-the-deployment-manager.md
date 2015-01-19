@@ -17,7 +17,7 @@ independently.
 > The Deployment Manager is the administration part of Roboconf. And although it could, it is not supposed to run all the time. 
 > So, you may stop it when you do not use it anymore. The agents will work without it and without any problem.
 
-To install the DM, you need a Java Virtual Machine (JDK) for Java 1.6 or higher.  
+To install the DM, you need a Java Virtual Machine (JDK) for Java 1.7.  
 Both OpenJDK and Oracle JDK are supported.
 
 Although we generally test Roboconf with Ubuntu systems, there is no reason it does not work on other systems.  
@@ -82,7 +82,7 @@ Roboconf's DM being already deployed and configured. The DM distribution uses [A
 > Or you may prefer deploying our Karaf feature in your own Karaf installation.
 
 This distribution can be deployed either with a Debian package or manually.  
-To deploy it manually, you must have a JDK 6 (or higher) installed. Then, [download the DM's archive](../download.html)
+To deploy it manually, you must have a JDK 7 installed. Then, [download the DM's archive](../download.html)
 and unzip it somewhere on your disk.
 
 > It is better to take the **tar.gz** archive, since it preserves file permissions.  

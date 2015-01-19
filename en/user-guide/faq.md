@@ -41,7 +41,7 @@ See the [license page](../license.html) for more information.
 ## What are Roboconf pre-requisites?
 
 Roboconf is developed in Java.  
-You at least need a JDK 1.6 (Oracle JDK or OpenJDK) to run it.
+You at least need a JDK 1.7 (Oracle JDK or OpenJDK) to run it.
 
 Although the agent is developed in Java, it would be possible to implement your own agent in your own language.
 This could suit constrained environments (such as connected objects). The only requirement is that this agent can

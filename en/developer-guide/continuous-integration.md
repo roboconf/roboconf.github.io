@@ -13,7 +13,7 @@ On these repositories, every commit triggers a build that will compile the code 
 CI is hanled by [Travis](https://travis-ci.org/).  
 The build is configured through a **.travis.yml** file, located at the root of the Git repository.
 
-All our Java projects are built against 3 JDK: OpenJDK 6, Oracle JDK 7 and OpenJDK 7.  
+All our Java projects are built against 2 JDK: Oracle JDK 7 and OpenJDK 7.  
 This kind of features is directly handled by Travis.
 
 
@@ -39,9 +39,9 @@ Some actions may be performed in case of successful build.
 * **Code coverage analysis** is handled by [Coveralls](https://coveralls.io/).
 * **Deployment** of the built artifacts to a Maven repository (hosted by [Sonatype](http://www.sonatype.org/)).
 
-Since we build against 3 JDK, and that we do not want to perform these actions 3 times per build, we only
-run them for the JDK 6. These actions are defined in the **after_success.sh** script that is located at the root of the
-concerned projects.
+Since we build against 2 JDK, and that we do not want to perform these actions twice per build, we only
+run them for the OpenJDK 7. These actions are defined in the **travis-build** and **travis-after-success.sh** scripts 
+that are located at the root of the concerned projects.
 
 The Maven deployment is run by the **mvn deploy** command.  
 The Maven settings (where do we upload the artifacts, with which credentials) are specified [here](/resources/build/settings.xml).  
