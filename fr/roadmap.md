@@ -16,7 +16,7 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Figer le DSL de Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Ajouter une gestion autonomique à Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Ecrire le premier tutoriel pour Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Etendre la console web (debug, filtra	ge, création de nouvelles instances).
+	* Etendre la console web. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 
 * **A partir de Février 2015**
 	

@@ -27,8 +27,8 @@ and to the resulting size, that can be important depending on what we want).
 * [Roboconf-web-administration](https://github.com/roboconf/roboconf-web-administration) is a web application to manage Roboconf.  
 It is based on Javascript technologies (Angular JS and related).
 
-* [Roboconf-debian-packages](https://github.com/roboconf/roboconf-debian-packages) contains sources to build
-Debian packages for both the agent and the DM. These packages each install and configure a custom Karaf distribution.
+* [Roboconf-system-installers](https://github.com/roboconf/roboconf-system-installers) contains sources to build
+installers (Linux scripts, Debian packages for the Karaf distributions, etc).
 
 * [Roboconf-examples](https://github.com/roboconf/roboconf-examples) contains examples of Roboconf applications.
 
@@ -105,7 +105,7 @@ application servers.
 In Roboconf's model, a IaaS is in fact a root instance. A root instance could also be
 an existing host, or a device. So, a IaaS plug-in does not only handle a cloud infrastructure.
 
-* **roboconf-iaas-***: IaaS implementations.
+* **roboconf-iaas-**\*: IaaS implementations.
 
 * **roboconf-messaging**: all the stuff related to messaging.  
 It includes the message definitions, the interface to interact with a given messaging server
@@ -114,4 +114,4 @@ other implementations had to appear, then this module may have to be split.
 
 * **roboconf-plugin-api**: the API to implement for a new Roboconf plug-in.  
 
-* **roboconf-plugin-***: all the implementations of Roboconf plug-ins.
+* **roboconf-plugin-**\*: all the implementations of Roboconf plug-ins.

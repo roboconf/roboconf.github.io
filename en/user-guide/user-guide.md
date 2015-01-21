@@ -35,7 +35,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="installing-the-deployment-manager.html">Installing the Deployment Manager...</a> by hand</li>
 	<li><a href="preparing-virtual-images-with-an-agent.html">Preparing Virtual Images with an Agent</a></li>
 	<li><a href="installing-an-agent.html">Installing an Agent...</a> by hand</li>
-	<li><a href="">Installing Everything...</a> almost automatically</li>
+	<li><a href="installing-everything.html">Installing Everything...</a> almost automatically</li>
 	</ul>
 </div>
 

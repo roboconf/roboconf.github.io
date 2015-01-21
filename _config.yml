@@ -137,6 +137,9 @@ urls:
   ug.snapshot.configuring-the-loggers:
     en: user-guide/configuring-the-loggers
   
+  ug.snapshot.installing-everything:
+    en: user-guide/installing-everything
+  
   ug.snapshot.installing-the-deployment-manager:
     en: user-guide/installing-the-deployment-manager
   

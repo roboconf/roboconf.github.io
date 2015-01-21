@@ -16,7 +16,7 @@ The roadmap for the next months covers several aspects.
 	* Update Roboconf' DSL for reusability. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Add autonomic support to Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Write the first tutorial for Roboconf. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Complete the web console (debug, filtering, new instances).
+	* Complete the web console. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 
 * **From February 2015**
 
