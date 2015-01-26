@@ -160,6 +160,40 @@ not the job of the agent. The agent measures and notify when needed. It is not u
 these measures. This will be up to the Deployment Manager.
 
 
+## Parametrized Measures Files
+
+Measures files can be parametrized.  
+It means values can be externalized in a properties file.
+
+This an be used, for the moment, for environment switch (test, production, etc).  
+It will also be used **later** to update and inject new values for the agent.
+
+Let's take an example.  
+Here is the content of the **my-component.measures** file.  
+It contains two variables whose value will be injected from a properties file.
+They are here called *a-directory-to-not-delete* and *accept_passive_checks*. They are
+wrapped between *{{* and *}}* (like Mustache does).
+
+```properties
+# A simple query for Live Status, Nagios' protocol.
+[EVENT nagios myRuleName-nagios]
+GET hosts
+Columns: host_name accept_passive_checks acknowledged
+Filter: accept_passive_checks = {{ accept_passive_checks }}
+
+# Notify the DM if a file does NOT exist.
+[EVENT file myRuleName-for-file]
+Notify if not exists /tmp/{{ a-directory-to-not-delete }}
+```
+
+And here is the content of the **my-component.measures.properties** file.
+
+```properties
+accept_passive_checks = 1
+a-directory-to-not-delete = roboconf
+```
+
+
 ## Rules Files
 
 Rules files contain the reactions to undertake by the DM when a measure verified a given rule
@@ -211,6 +245,28 @@ admin@company.com
 # When "event-4" is triggered, log an entry.
 [reaction event-4 Log]
 ```
+
+To send an e-mail, you have to create a properties file.  
+For the moment, it must be located in the rules directory, and be called *rules.cfg.properties*.
+It must contain all the mail configuration. Here is a sample.
+
+```properties
+# From... to...
+mail.from: dm@roboconf.net
+mail.to: someone@domain.com
+
+# SMTP configuration
+mail.user: me
+mail.password: mypassword
+mail.smtp.host: my.mail.server
+mail.smtp.port: 1234
+
+# SSL configuration
+mail.smtp.auth: true
+mail.smtp.starttls.enable: true
+mail.smtp.ssl.trust: my.mail.server
+```
+
 
 ## Activation
 
