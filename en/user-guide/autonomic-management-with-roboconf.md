@@ -240,7 +240,9 @@ war1
 
 # When "event-3" is triggered, send an e-mail.
 [reaction event-3 Mail]
-admin@company.com
+Subject: event-3 was detected
+Put the e-mail content here.
+The subject line is optional.
 
 # When "event-4" is triggered, log an entry.
 [reaction event-4 Log]
@@ -266,6 +268,8 @@ mail.smtp.auth: true
 mail.smtp.starttls.enable: true
 mail.smtp.ssl.trust: my.mail.server
 ```
+
+See **javax.mail** properties for more details.
 
 
 ## Activation
