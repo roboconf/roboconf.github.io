@@ -40,6 +40,24 @@ ec2.ssh.key =
 ec2.security.group	= 
 ```
 
+It is also possible to define an elastic IP address.  
+It is not a good idea to set it in the **target.properties**, although it works.
+Indeed, all the VM instances created from this target configuration will try to use the same elastic IP.
+Since Amazon does not allow it, only the last created VM will be associated with this IP. 
+**It is much better** to define the elastic IP in the instance definition, as shown below.
+
+```
+instance of VM {
+	name: VM1;
+	data.ec2.elastic.ip: your-elastic-ip;
+	
+	# Put children instances next...
+}
+```
+
+> In a general matter, VM instances can inject target parameters through their definitions.  
+> These properties must start with "data." followed by the target property.
+
 Here is a complete description of the parameters for Amazon Web Services.
 
 | Property | Description | Default | Mandatory
@@ -52,3 +70,5 @@ Here is a complete description of the parameters for Amazon Web Services.
 | ec2.instance.type | The VM "size" aka. instance type or flavor | t1.micro | no |
 | ec2.ssh.key | The name of the ssh key used to connect | none | yes |
 | ec2.security.group | The VM security group | default | no |
+| ec2.volume.snapshot.id | A snapshot volume to attach for storage | none | no |
+| ec2.elastic.ip | An elastic IP address | none | no |
