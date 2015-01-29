@@ -10,6 +10,7 @@ menus: [ "users", "links" ]
 * Source repositories on [GitHub](https://github.com/roboconf)
 * Maven snapshot repository on [Sonatype](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/)
 * Maven release repository on [Maven Central](http://repo1.maven.org/maven2/net/roboconf/)
+* Repositories on [Bintray](https://bintray.com/roboconf)
 
 ## Social
 
