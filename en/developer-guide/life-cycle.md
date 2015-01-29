@@ -36,12 +36,21 @@ Instances have a life cycle.
 
 <img src="/resources/img/instance-life-cycle.png" alt="The life cycle of an instance" />
 
+<br />
+
 Some of the steps are said *unstable*: **deploying**, **starting**, **stopping** and **undeploying** will 
-end up with a stable state (either **not deployed**, **deployed - started** and **deployed - stopped**). 
+end up with a stable state (either **not deployed**, **deployed - started** and **deployed - stopped**).
+
+The **unresolved** state is reserved to non-root instances.  
+Before a **deployed** instance can be started, its dependencies are verified. If they are all
+satisfied (Roboconf knows where they are and that they were started), then the instance can be started.
+Otherwise, it will remain in the **unresolved** state until its dependencies are resolved. Once they
+are all satisfied, Roboconf will automatically start the instance. So, when an instance is in this state,
+it means &laquo; *I will start as soon as all my dependencies are resolved* &raquo;.
+
 The **problem** state is a little bit specific.
-It is now reserved for root instances (often VM). If a root instance has not sent a heart beat for some time,
-the root instance will go into the **problem** state. If a heart beat arrives, it will go back into the **deployed - started**
-state.
+It is reserved for root instances (often VM). If a **started** root instance has not sent a heart beat for some time,
+the root instance will go into the **problem** state. If a heart beat arrives, it will go back into the **deployed - started** state.
 
 > If a root instance is in the **PROBLEM** state, it means either that the agent encountered a
 > problem, that the VM has network issues, or that the messaging server had a problem. It does not
@@ -56,12 +65,13 @@ We will take the LAMP example (Apache load balancer, Tomcat and MySQL). We will 
 1. We have created and started a VM for the Tomcat server.
 2. We now create an instance in our model to declare a Tomcat server. State is **not deployed**.
 3. We deploy it. Its state first jumps to **deploying**. Once it is deployed, the state switches to **deployed - stopped**.
-4. We start it. It goes to the **starting** state.
-5. If all its imports are resolved (i.e., a MySQL database was deployed and started), then it can go to the **deployed - started** state.
-Otherwise, it will remain in the **starting** state until a MySQL database is started. Let's suppose a MySQL database was started. The
-state of the Tomcat instance is **deployed - started**.
-6. Let's stop the MySQL database. Roboconf changes the Tomcat's state to **starting**. All the other instances that depend on this
-Tomcat instance will also update their life cycle if necessary (chain reaction). Let's restart the MySQL instance. The Tomcat will go back
+4. We start it. It goes to the **unresolved** state.
+5. If all its imports are resolved (i.e., a MySQL database was deployed and started), then it can go to the **starting**
+state before ending (normally) in the **deployed - started** state.
+Otherwise, it will remain in the **unresolved** state until a MySQL database is started. Let's suppose a MySQL database was started.
+The state of the Tomcat instance is **deployed - started**.
+6. Let's stop the MySQL database. Roboconf changes the Tomcat's state to **unresolved** again. All the other instances that depend on this
+Tomcat instance will also update their life cycle if necessary (chain reaction). Restart the MySQL instance and the Tomcat will go back
 into **deployed - started** state.
 7. We stop the Tomcat server. State goes through **stopping** before ending with **deployed - stopped**.
 8. We undeploy the instance. State goes through **undeploying** before ending with **not deployed**.
