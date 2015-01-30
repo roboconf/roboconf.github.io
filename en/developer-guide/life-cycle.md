@@ -38,8 +38,10 @@ Instances have a life cycle.
 
 <br />
 
-Some of the steps are said *unstable*: **deploying**, **starting**, **stopping** and **undeploying** will 
-end up with a stable state (either **not deployed**, **deployed - started** and **deployed - stopped**).
+Some of the steps are said *unstable* (or *transitive*): **deploying**, **starting**, **stopping** and **undeploying** will 
+end up with a stable state (either **not deployed**, **deployed - started** and **deployed - stopped**). The transitive states
+are used to report information to the user. Indeed, deploying (or starting, or stopping, or undeploying) an application can be 
+a long-running operation.
 
 The **unresolved** state is reserved to non-root instances.  
 Before a **deployed** instance can be started, its dependencies are verified. If they are all
