@@ -45,21 +45,21 @@ Parameters are passed to action scripts (eg. start.sh, update.sh ...) using envi
 
 All the exports of the instance are available as environment variables (their names are left unchanged).  
 Imports are more complex, as there may be multiple ones: let's take the example of an Apache load balancer, 
-that imports Tomcat "ip" and "portAjp" variables. The imports will look like this (for N Tomcat instances
-named "tomcat1" to "tomcatN"):
+that imports Tomcat "ip" and "portAjp" variables. The imports will look like this (for N+1 Tomcat instances
+named "tomcat0" to "tomcatN"):
 
 ``` properties
 tomcat_size = N
-tomcat_1_name = tomcat1
-tomcat_1_ip = < ip address of tomcat 1 >
-tomcat_1_portAjp = < AJP port for tomcat 1 >
+tomcat_0_name = tomcat1
+tomcat_0_ip = < ip address of tomcat 1 >
+tomcat_0_portAjp = < AJP port for tomcat 1 >
 # ...
 tomcat_N_name = tomcatN
 tomcat_N_ip = < ip address of tomcat N >
-tomcat_1_portAjp = < AJP port for tomcat 1 >
+tomcat_N_portAjp = < AJP port for tomcat 1 >
 ```
 
-So, the naming convention for imports is < componentName >\_< index >\_< exportName >, with index starting at 1 and max (index) given by < componentName >\_size .
+So, the naming convention for imports is < componentName >\_< index >\_< exportName >, with index starting at 0 and max (index) given by < componentName >\_size .
 
 ## Variables related to update actions
 
