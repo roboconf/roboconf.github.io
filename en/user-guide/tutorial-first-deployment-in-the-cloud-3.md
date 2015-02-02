@@ -8,7 +8,7 @@ menus: [ "users", "user-guide" ]
 ## Deploying the Application
 
 Take the application that was given in the first tutorial.  
-As a reminder, it is available [here](todo).
+As a reminder, it is available [here](https://bintray.com/artifact/download/roboconf/roboconf-tutorial-samples/lamp-webapp-bash-0.2.0-1.0.zip).
 
 Extract it and bring it the following modifications:
 

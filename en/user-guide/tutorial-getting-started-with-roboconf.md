@@ -123,7 +123,7 @@ Roboconf features can be enabled or disabled in this way.
 ## First Roboconf Application
 
 You are now going to deploy your first Roboconf application.  
-Download it [here](todo). It is a ZIP archive with a specific structure 
+Download it [here](https://bintray.com/artifact/download/roboconf/roboconf-tutorial-samples/lamp-webapp-bash-0.2.0-1.0.zip). It is a ZIP archive with a specific structure 
 (it always contains the following directories: **descriptor**, **graph** and **instances**).
 
 <img src="/resources/img/tutorial-sample-app-structure.jpg" alt="Archive's structure" />
