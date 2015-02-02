@@ -56,7 +56,7 @@ tomcat_0_portAjp = < AJP port for tomcat 1 >
 # ...
 tomcat_N_name = tomcatN
 tomcat_N_ip = < ip address of tomcat N >
-tomcat_N_portAjp = < AJP port for tomcat 1 >
+tomcat_N_portAjp = < AJP port for tomcat N >
 ```
 
 So, the naming convention for imports is < componentName >\_< index >\_< exportName >, with index starting at 0 and max (index) given by < componentName >\_size .
