@@ -44,7 +44,7 @@ the autonomic rules as an annotation on a component in the graph.
 These files must be named **&lt;component name&gt;.measures**.
 
 * **rules** files define the actions to undertake by the DM when a measure has reached a given limit.  
-Such a file is associated with the whole application. These files must be named **&lt;application name&gt;.rules**.
+Such a file is associated with the whole application. It must be named **rules.cfg**.
 
 
 ## Measures Files
