@@ -6,7 +6,7 @@ menus: [ "developers", "developer-guide" ]
 ---
 
 Continuous Integration (CI) is applied to [Roboconf-platform](https://github.com/roboconf/roboconf-platform),
-[Roboconf-maven-plugin](https://github.com/roboconf/roboconf-maven-plugin) and  
+[Roboconf-maven-plugin](https://github.com/roboconf/roboconf-maven-plugin) and 
 [Roboconf-eclipse](https://github.com/roboconf/roboconf-eclipse). On these repositories, 
 every commit triggers a build that will compile the code and run the tests.
 
