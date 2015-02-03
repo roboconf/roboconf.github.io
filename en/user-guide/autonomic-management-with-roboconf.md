@@ -179,11 +179,11 @@ wrapped between *{{* and *}}* (like Mustache does).
 [EVENT nagios myRuleName-nagios]
 GET hosts
 Columns: host_name accept_passive_checks acknowledged
-Filter: accept_passive_checks = {{ accept_passive_checks }}
+{% raw %}Filter: accept_passive_checks = {{ accept_passive_checks }}{% endraw %}
 
 # Notify the DM if a file does NOT exist.
 [EVENT file myRuleName-for-file]
-Notify if not exists /tmp/{{ a-directory-to-not-delete }}
+{% raw %}Notify if not exists /tmp/{{ a-directory-to-not-delete }}{% endraw %}
 ```
 
 And here is the content of the **my-component.measures.properties** file.
