@@ -11,4 +11,7 @@ L'équipe de développement de Roboconf est constituée de...
 * Didier Donsez (Université Joseph Fourier) - [@FablabAIR](https://twitter.com/FablabAIR)
 * Pierre-Yves Gibello (Linagora) - [Blog](http://planet.petalslink.com/home/pygibello/)
 * Linh-Manh Pham (Université Joseph Fourier)
+* Pierre Bourret (Université Joseph Fourier)
 * Vincent Zurczak (Linagora) - [@VincentZurczak](https://twitter.com/VincentZurczak) - [Blog (EN)](http://vzurczak.wordpress.com) - [Blog (FR)](http://vzurczak2.wordpress.com)
+
+Un grand merci également à [Romain Pignolet](https://twitter.com/rpignolet) (Linagora), pour les tests et les retours réguliers.

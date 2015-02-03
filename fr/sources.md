@@ -28,16 +28,22 @@ dans la plate-fome.
 Pour les projets Java comme la plate-forme, le plug-in Maven ou les outils Eclipse, il vous suffit
 de cloner le dépôt de sources et d'exécuter...
 
-	mvn clean install
+```tcl
+mvn clean install
+```
 
 Si vous travaillez sur un tag ou une branche, il se peut que la compilation échoue à cause des vérifications
 faites par Checkstyle. Vous pouvez désactiver ces vérifications en utilisant...
 
-	mvn clean install -Dcheckstyle.skip=true
+```tcl
+mvn clean install -Dcheckstyle.skip=true
+```
 
 Même chopse si vous souhaitez travailler en mode déconnecté.
 
-	mvn clean install -o -Dcheckstyle.skip=true
+```tcl
+mvn clean install -o -Dcheckstyle.skip=true
+```
 
 Quand les projets utilisent un outil d'assemblage différent, des instructions sont données dans le *readme* du projet. 
 

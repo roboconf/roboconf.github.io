@@ -17,4 +17,8 @@ Then, use...
 
 	jekyll build
 
-... to simply generate static HTML files.
+... to simply generate static HTML files.  
+When using Jekyll on your own machine, you may have errors about missing gems or dependencies.
+
+	sudo gem install jemoji
+	sudo gem install github-pages

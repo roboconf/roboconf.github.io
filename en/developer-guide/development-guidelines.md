@@ -5,6 +5,38 @@ id: "dg.snapshot.development-guidelines"
 menus: [ "developers", "developer-guide" ]
 ---
 
+## Use Maven
+
+There is no constraint over which development environment people use.  
+However, the build tool is Maven (3.x). So, use it.
+
+And before every commit or pull request, run...
+
+```tcl
+mvn clean install
+```
+
+
+## Git Commit Messages
+
+This section is widely inspired (and partially copied) from [Atom.io's web site](https://atom.io/docs/v0.176.0/contributing).
+
+* Use the present tense ("Add feature" not "Added feature").
+* Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
+* Limit the first line to 72 characters or less.
+* Reference issues and pull requests liberally (with #<issue-number>).
+* Optionally, consider starting the commit message with an applicable [emoji](http://www.emoji-cheat-sheet.com).
+
+    * :art: <code>:<span>art</span>:</code> when improving the format or structure of the code
+    * :racehorse: <code>:<span>racehorse</span>:</code> when improving performance
+    * :bomb: <code>:<span>bomb</span>:</code> when fixing a bug
+    * :green_heart: <code>:<span>green_hart</span>:</code> when fixing the CI build
+    * :heavy_check_mark: <code>:<span>heavy_check_mark</span>:</code> when adding tests
+    * :lock: <code>:<span>lock</span>:</code> when dealing with security
+    * :arrow_up: <code>:<span>arrow_up</span>:</code> when upgrading dependencies
+    * :arrow_down: <code>:<span>arrow_down</span>:</code> when downgrading dependencies
+
+
 ## CheckStyle
 
 Roboconf's Maven configuration comes with a [CheckStyle](http://checkstyle.sourceforge.net/) configuration.  
@@ -46,6 +78,20 @@ However, it is a good practice for developers to run this tool locally from time
 Using it with your IDE (such as Eclipse) makes it quite easy to use.
 
 
+## Check Code Coverage
+
+Even if it is not dramatic, keeping a high code-coverage is useful.  
+This indicator determines whether your unit tests check all the possible execution branches.
+
+You can verify it in a given Maven module by typing in...
+
+```tcl
+mvn clean cobertura:cobertura
+```
+
+Then, open the **target/site/cobertura/index.html** file in your web browser.
+
+
 ## Rely on Utility Methods
 
 **roboconf-core** contains several utility methods.  
@@ -64,10 +110,10 @@ No need to install a database. You can use an in-memory database, such as H2.
 2. Start Sonar.  
 3. Go to Roboconf's directory and execute the following commands.
 
-<!-- -->
-
-	mvn clean install
-	mvn sonar:sonar
+```tcl
+mvn clean install
+mvn sonar:sonar
+```
 
 See [Sonar's web site](http://docs.codehaus.org/display/SONAR/Analyzing+with+Maven) for more information.  
 You can now check out results on **http://localhost:9000** 

@@ -347,7 +347,8 @@ span.roadmap-in-progress {
 .language-java span.kn,
 .language-http span.nf,
 .language-http span.na,
-.language-http span.kr {
+.language-http span.kr,
+.language-tcl span.nv {
 	color: #b23e4b;
 	font-weight: bold;
 }
@@ -357,6 +358,10 @@ span.roadmap-in-progress {
 }
 
 .language-java span.nf {
+	font-weight: bold;
+}
+
+.language-tcl {
 	font-weight: bold;
 }
 

@@ -4,6 +4,7 @@ highlighter: pygments
 redcarpet:
   extensions: ["tables", "no_intra_emphasis"]
 
+gems: [ "jemoji" ]
 
 ##########################
 # Slides.

@@ -41,4 +41,4 @@ The roadmap for the next months covers several aspects.
     * Implement a Puppet plug-in for Puppet masters.
     * Implement an ANT plug-in.
 
-Roboconf 0.2 will be released on January 31<sup>st</sup>.
+Roboconf 0.2 will be released on February 5<sup>th</sup>.

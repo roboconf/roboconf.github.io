@@ -28,15 +28,21 @@ embeds the web administration in its archive.
 For Java projects, such as the platform, the Maven plug-in or Eclipse tools, 
 just clone the repository and execute...
 
-	mvn clean install
+```tcl
+mvn clean install
+```
 
 If you try to compile a tag or a branch, you may have to skip the Checkstyle validation.
 
-	mvn clean install -Dcheckstyle.skip=true
+```tcl
+mvn clean install -Dcheckstyle.skip=true
+```
 
 Same thing when you want to compile offline.
 
-	mvn clean install -o -Dcheckstyle.skip=true
+```tcl
+mvn clean install -o -Dcheckstyle.skip=true
+```
 
 When projects use a different build mechanism, it is described in the readme of the project.
 

@@ -42,4 +42,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
     * Implémenter un plug-in pour Puppet Master.
     * Implémenter un plug-in ANT.
 
-La version 0.2 de Roboconf sortira le 31 janvier 2015.
+La version 0.2 de Roboconf sortira le 5 février 2015.
