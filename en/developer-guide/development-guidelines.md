@@ -24,7 +24,7 @@ This section is widely inspired (and partially copied) from [Atom.io's web site]
 * Use the present tense ("Add feature" not "Added feature").
 * Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
 * Limit the first line to 72 characters or less.
-* Reference issues and pull requests liberally (with #<issue-number>).
+* Reference issues and pull requests liberally (with #*&lt;issue-number&gt;*).
 * Optionally, consider starting the commit message with an applicable [emoji](http://www.emoji-cheat-sheet.com).
 
     * :art: <code>:<span>art</span>:</code> when improving the format or structure of the code

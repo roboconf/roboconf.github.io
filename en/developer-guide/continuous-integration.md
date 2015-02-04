@@ -5,15 +5,15 @@ id: "dg.snapshot.continuous-integration"
 menus: [ "developers", "developer-guide" ]
 ---
 
-Continuous Integration (CI) is only applied to [Roboconf-platform](https://github.com/roboconf/roboconf-platform)
-and [Roboconf-maven-plugin](https://github.com/roboconf/roboconf-maven-plugin).  
-Other repositories may get concerned later (such as [Roboconf-eclipse](https://github.com/roboconf/roboconf-eclipse)).  
+Continuous Integration (CI) is applied to [Roboconf-platform](https://github.com/roboconf/roboconf-platform),
+[Roboconf-maven-plugin](https://github.com/roboconf/roboconf-maven-plugin) and 
+[Roboconf-eclipse](https://github.com/roboconf/roboconf-eclipse).  
 On these repositories, every commit triggers a build that will compile the code and run the tests.
 
 CI is hanled by [Travis](https://travis-ci.org/).  
 The build is configured through a **.travis.yml** file, located at the root of the Git repository.
 
-All our Java projects are built against 2 JDK: Oracle JDK 7 and OpenJDK 7.  
+Our Java projects are generally built against 3 JDK: Oracle JDK 7, OpenJDK 7 and Oracle JDK 8.  
 This kind of features is directly handled by Travis.
 
 
