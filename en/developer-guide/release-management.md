@@ -60,10 +60,10 @@ Roughly, we do not use Maven to release it. We must use the Tycho approach, whic
 1. Update the version by hand in the POM.
 2. Build locally.
 3. Test...
-4. Upload the generated update site.
-5. Tag the source repository.
-
-> FIXME: complete this section to indicate where the update site must be uploaded.
+4. Upload the generated update site on [Bintray](https://bintray.com/roboconf/roboconf-eclipse).
+5. Make sure that the uploaded archive will be unzipped (there is an option for that). 
+6. Tag the source repository.
+7. Add the new update site's location on the web site.
 
 
 ## Projects Release

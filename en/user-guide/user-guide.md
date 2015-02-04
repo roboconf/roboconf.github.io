@@ -111,7 +111,7 @@ menus: [ "users", "user-guide" ]
 </div>
 
 <div class="floated">
-	<h2>Old Versions</h2>
+	<h2>Released Versions</h2>
 
 	<ul>
 	<li><a href="../user-guide-0.1/user-guide.html">User Guide for version 0.1</a></li>
