@@ -378,7 +378,173 @@ urls:
     en: developer-guide/developer-guide
     fr: guide-developpeur/guide-developpeur
   
-    
+  
+  #
+  # User Guide - Version 0.2
+  #
+    #
+  # User Guide Snapshot
+  #
+  ug.0.2.roboconf-architecture:
+    en: user-guide-0.2/roboconf-architecture
+  
+  ug.0.2.configuring-the-web-consoles:
+    en: user-guide-0.2/configuring-the-web-consoles
+  
+  ug.snpashot.eclipse-plugin:
+    en: user-guide-0.2/eclipse-plugin
+
+  ug.snpashot.maven-plugin:
+    en: user-guide-0.2/maven-plugin
+  
+  ug.snpashot.reusability:
+    en: user-guide-0.2/reusability
+  
+  ug.0.2.tutorial-getting-started-with-roboconf:
+    en: user-guide-0.2/tutorial-getting-started-with-roboconf
+  
+  ug.0.2.autonomic-management-with-roboconf:
+    en: user-guide-0.2/autonomic-management-with-roboconf
+  
+  ug.0.2.tutorial-first-deployment-in-the-cloud:
+    en: user-guide-0.2/tutorial-first-deployment-in-the-cloud
+  
+  ug.0.2.tutorial-first-deployment-in-the-cloud-1:
+    en: user-guide-0.2/tutorial-first-deployment-in-the-cloud-1
+  
+  ug.0.2.tutorial-first-deployment-in-the-cloud-2:
+    en: user-guide-0.2/tutorial-first-deployment-in-the-cloud-2
+  
+  ug.0.2.tutorial-first-deployment-in-the-cloud-3:
+    en: user-guide-0.2/tutorial-first-deployment-in-the-cloud-3
+  
+  ug.0.2.tutorial-first-deployment-in-the-cloud-4:
+    en: user-guide-0.2/tutorial-first-deployment-in-the-cloud-4
+  
+  ug.0.2.reusable-slides:
+    en: user-guide-0.2/reusable-slides
+  
+  ug.0.2.web-administration-screenshots:
+    en: user-guide-0.2/web-administration-screenshots
+  
+  ug.0.2.configuring-the-loggers:
+    en: user-guide-0.2/configuring-the-loggers
+  
+  ug.0.2.installing-everything:
+    en: user-guide-0.2/installing-everything
+  
+  ug.0.2.installing-the-deployment-manager:
+    en: user-guide-0.2/installing-the-deployment-manager
+  
+  ug.0.2.installing-an-agent:
+    en: user-guide-0.2/installing-an-agent
+  
+  ug.0.2.configuring-the-deployment-manager:
+    en: user-guide-0.2/configuring-the-deployment-manager
+  
+  ug.0.2.configuring-an-agent:
+    en: user-guide-0.2/configuring-an-agent
+  
+  ug.0.2.installing-the-messaging-server:
+    en: user-guide-0.2/installing-the-messaging-server
+  
+  ug.0.2.preparing-virtual-images-with-an-agent:
+    en: user-guide-0.2/preparing-virtual-images-with-an-agent
+  
+  ug.0.2.target-support:
+    en: user-guide-0.2/target-support
+  
+  ug.0.2.list-of-deployment-targets:
+    en: user-guide-0.2/list-of-deployment-targets
+  
+  ug.0.2.target-iaas-openstack:
+    en: user-guide-0.2/target-iaas-openstack
+  
+  ug.0.2.target-jclouds:
+    en: user-guide-0.2/target-jclouds
+  
+  ug.0.2.target-docker:
+    en: user-guide-0.2/target-docker
+  
+  ug.0.2.target-embedded:
+    en: user-guide-0.2/target-embedded
+  
+  ug.0.2.target-iaas-aws:
+    en: user-guide-0.2/target-iaas-aws
+  
+  ug.0.2.target-iaas-vmware:
+    en: user-guide-0.2/target-iaas-vmware
+  
+  ug.0.2.target-iaas-azure:
+    en: user-guide-0.2/target-iaas-azure
+  
+  ug.0.2.target-in-memory:
+    en: user-guide-0.2/target-in-memory
+  
+  ug.0.2.plugins:
+    en: user-guide-0.2/plugins
+  
+  ug.0.2.plugin-logger:
+    en: user-guide-0.2/plugin-logger
+  
+  ug.0.2.plugin-file:
+    en: user-guide-0.2/plugin-file
+  
+  ug.0.2.plugin-bash:
+    en: user-guide-0.2/plugin-bash
+  
+  ug.0.2.plugin-puppet:
+    en: user-guide-0.2/plugin-puppet
+  
+  ug.0.2.roboconf-dsl:
+    en: user-guide-0.2/roboconf-dsl
+  
+  ug.0.2.monitoring-roboconf:
+    en: user-guide-0.2/monitoring-roboconf
+  
+  ug.0.2.monitoring-applications-deployed-with-roboconf:
+    en: user-guide-0.2/monitoring-applications-deployed-with-roboconf
+  
+  ug.0.2.editors:
+    en: user-guide-0.2/editors
+  
+  ug.0.2.configuration-files:
+    en: user-guide-0.2/configuration-files
+  
+  ug.0.2.faq:
+    en: user-guide-0.2/faq
+  
+  ug.0.2.roboconf-concepts:
+    en: user-guide-0.2/roboconf-concepts
+  
+  ug.0.2.application-descriptor:
+    en: user-guide-0.2/application-descriptor
+  
+  ug.0.2.instances-description:
+    en: user-guide-0.2/instances-description
+  
+  ug.0.2.graph-definition:
+    en: user-guide-0.2/graph-definition
+  
+  ug.0.2.graph-resources:
+    en: user-guide-0.2/graph-resources
+  
+  ug.0.2.web-administration:
+    en: user-guide-0.2/web-administration
+  
+  ug.0.2.lamp-example-part-1:
+    en: user-guide-0.2/lamp-example-part-1
+  
+  ug.0.2.lamp-example-part-2:
+    en: user-guide-0.2/lamp-example-part-2
+  
+  ug.0.2.index:
+    en: user-guide-0.2/user-guide
+  
+  ug.0.2.working-with-roboconf:
+    en: user-guide-0.2/working-with-roboconf
+  
+  
   #
   # User Guide - Version 0.1
   #

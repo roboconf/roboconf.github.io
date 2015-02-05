@@ -34,7 +34,11 @@ As an example, the **en** entry **user-guide/my-page-id** will become **user-gui
 
 6. Add a link to the new version in the main user or developer guide.
 
-7. Translate the guides for other languages.
+7. Remove the **Released Versions** section from the newly released user guide.  
+We do not want to see a link to the user guide 0.1 in the user guide 0.2. Only the main
+user guide should list released versions.
+
+8. Translate the guides for other languages.
 
 > The best practice is to only document the snapshot version in English.  
 > When it is released, as explained above, the guides should be translated
