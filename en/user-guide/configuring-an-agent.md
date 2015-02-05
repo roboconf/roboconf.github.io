@@ -53,10 +53,10 @@ message-server-password = guest
 # Microsoft Azure and Openstack.
 #
 # Possible values are:
-# 	* ec2
-# 	* openstack
-# 	* vmware
-# 	* azure
+# 	* iaas-ec2
+# 	* iaas-openstack
+# 	* iaas-vmware
+# 	* iaas-azure
 # 	* embedded
 #
 target-id = 
@@ -119,7 +119,7 @@ It is associated with a component that designates an EC2 VM.
 It calls the right API in EC2 and sets user data for the new VM 
 (application name = my app, root-instance-name = my-root, plus the messaging parameters).
 3. Once the VM is up, the agent starts, the OSGi configuration is injected in the agent.
-5. Since the target ID is **ec2**, the agent then reads the user data in EC2, thus completing its configuration.
+5. Since the target ID is **iaas-ec2**, the agent then reads the user data in EC2, thus completing its configuration.
 
 User data override the following parameters.
 
