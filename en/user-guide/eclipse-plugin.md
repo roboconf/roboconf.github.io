@@ -12,7 +12,21 @@ and text editors to edit configuration files.
 
 ## Installation
 
-To complete.
+In Eclipse, click **Help &gt; Install New Software...**.  
+Click **Add...** and complete the dialog that shows up.  
+Give it a name, like...
+
+	Roboconf's update site
+
+... and this URL: 
+[http://dl.bintray.com/roboconf/roboconf-eclipse/0.2/](http://dl.bintray.com/roboconf/roboconf-eclipse/0.2/)
+
+<img src="/resources/img/eclipse-install.jpg" alt="The update dialog" />
+
+Click **OK**.    
+Wait few seconds. An item containing **Roboconf** should appear. Check it and click **Next**.  
+Keep on clicking **Next** and **OK** until you are asked to restart your Eclipse.  
+Confirm. After the restart, the plug-in is installed. 
 
 
 ## New Project Wizard
