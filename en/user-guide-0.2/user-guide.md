@@ -10,6 +10,8 @@ menus: [ "users", "user-guide", "0.2" ]
 	Markdown does not support it.
  -->
 
+This is the user guide for Roboconf 0.2.
+
 <div class="floated">
 	<h2>Getting Started</h2>
 	
