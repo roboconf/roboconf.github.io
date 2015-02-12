@@ -79,12 +79,12 @@ Content of **main.graph**:
 
     # The VMs where to deploy the Wall application
     VM_EC2 {
-        installer: iaas;
+        installer: target;
         children: MyApp;
     }
     
     VM_Openstack {
-        installer: iaas;
+        installer: target;
         children: MyApp;
     }
 
