@@ -37,8 +37,9 @@ Here is a complete description of the parameters for Docker.
 | target.id | Determines the target handler to use. | none, must be "docker" | yes |
 | docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). | none | yes |
 | docker.image | The ID of the docker image used as a template for the VM (as shown by "docker images", for example). | none | yes |
-| docker.user | The name of the user to connect. | none | yes |
-| docker.password | The password of the user to connect. | none | yes |
+| docker.user | The name of the user to connect. | none | no |
+| docker.password | The password of the user to connect. | none | no (default empty if a user name is provided) |
+| docker.email | The email of the user to connect. | none | no (default empty if a user name is provided) |
 
 <br />
 
