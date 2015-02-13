@@ -43,3 +43,15 @@ npm test
 ```
 
 Once you have performed your modifications, create a pull request on the project.
+
+
+## Atom.io
+
+Follow the developer guide available on [Atom.io's web site](https://atom.io/docs/v0.176.0/creating-a-package).  
+Globally...
+
+1. Make the required changes and upgrades.
+2. Update and run the tests (coffee scripts).
+3. Commit and push the version.
+4. Run **apm publish minor** and follow the instructions in the console to publish a new version of the package.
+

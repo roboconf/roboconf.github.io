@@ -35,6 +35,9 @@ installers (Linux scripts, Debian packages for the Karaf distributions, etc).
 * [Roboconf.github.io](https://github.com/roboconf/roboconf.github.io) contains the source for this web site.  
 There are turned into a set of HTML pages by [Jekyll](http://jekyllrb.com), and hosted on [GitHub pages](https://pages.github.com/).
 
+* [Language-roboconf](https://github.com/roboconf/language-roboconf) contains a JS package for the support of Roboconf's DSL
+in [Atom.io](https://atom.io/).
+
 
 ## Impact on Releases
 

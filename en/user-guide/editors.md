@@ -22,6 +22,16 @@ Follow [these instructions](http://sourceforge.net/apps/mediawiki/notepad-plus/i
 to install it in Notepad ++.
 
 
+## Atom.io
+
+There is an Atom package for Roboconf's DSL.  
+It provides syntax highlighting and snippets for the Roboconf configuration files (graph and instances).  
+You can find information on [Atom's web site](https://atom.io/packages/language-roboconf).
+
+Here is a screenshot with the dark theme.  
+<img src="/resources/img/atom.io-overview.png" alt="Atom.io overview" class="gs" />
+
+
 ## IDE
 
 The value of such edition tools resides in syntax highlighting, auto-completion and contextual
