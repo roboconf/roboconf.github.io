@@ -82,7 +82,7 @@ It may look like this in your graph model.
 
 Let's have a look at what the module looks like:
 
-* It should be called roboconf\_apache\_module ("roboconf\_" + Component name in LOWER CASE + "\_module"), and can contain manifests, templates or files, like any classical puppet module (e.1g. for a init.pp puppet manifest: roboconf_apache_module/manifests/init.pp).
+* It should be called roboconf\_apache\_module ("roboconf\_" + something), and can contain manifests, templates or files, like any classical puppet module (e.g. for a init.pp puppet manifest: roboconf_apache_module/manifests/init.pp).
 * In the manifests/ directory, you can either create puppet manifests for each operation of the Roboconf life cycle (deploy.pp, start.pp, stop.pp, update.pp and undeploy.pp), or a single init.pp default manifest (will be used instead of any other missing manifest - eg. if there is no "start.pp", "init.pp" will be used at startup time).
 * In the init.pp, the class should have the same name as the module (e.g. class roboconf_apache_module). If specific operation manifests are used (eg. start.pp), the class name should be the operation name in the module (e.g. class roboconf_apache_module::start).
 
