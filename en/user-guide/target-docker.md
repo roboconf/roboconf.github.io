@@ -145,3 +145,14 @@ To remove a docker container:
 
 To remove all exited containers:  
 **docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm**
+
+## Note to install latest Docker (Ubuntu)
+
+As of March 3, 2015 (docker 1.5.x)...
+
+```
+$ wget -qO- https://get.docker.io/gpg | sudo apt-key add -
+$ sudo sh -c "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+$ sudo apt-get update
+$ sudo apt-get install lxc-docker
+```
