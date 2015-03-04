@@ -135,7 +135,7 @@ The iPojo framework ensures us that once you deploy your bundle in an OSGi conta
 injected into the DM.
 
 
-## Implementing the Plug-in
+## Implementing the Target Handler
 
 The **metadata.xml** file references a class called **net.roboconf.target.vsphere.internal.TargetVSphere**.  
 So, you need to create it. Start by creating the Maven structure (**src/main/java** and **src/test/java**).
@@ -164,12 +164,12 @@ public class TargetVSphere implements TargetHandler {
 	}
 
 	@Override
-	public String createOrConfigureMachine(
-			Map<String,String> targetProperties, 
+	public String createMachine(
+		Map<String, String> targetProperties,
 			String messagingIp,
-			String messagingUsername, 
+			String messagingUsername,
 			String messagingPassword,
-			String rootInstanceName, 
+			String rootInstanceName,
 			String applicationName )
 	throws TargetException {
 		
@@ -184,6 +184,27 @@ public class TargetVSphere implements TargetHandler {
 	throws TargetException {
 		
 		logger.info( "Terminating a machine." );
+	}
+	
+	@Override
+	public void configureMachine(
+		Map<String,String> targetProperties,
+		String machineId,
+		String messagingIp,
+		String messagingUsername,
+		String messagingPassword,
+		String rootInstanceName,
+		String applicationName )
+	throws TargetException {
+		
+		logger.info( "Configuring a machine." );
+	}
+
+
+	@Override
+	public boolean isMachineRunning( Map<String,String> targetProperties, String machineId )
+	throws TargetException {
+		return false;
 	}
 }
 ```
@@ -223,3 +244,42 @@ host your source code wherever you want. It can be on another Git repository, on
 
 You may also contribute your extension to Roboconf's source code.  
 In this case, a fork followed of a pull request is the suitable way to achieve this.
+
+
+## Long-Time Running Operations
+
+Creating a machine generally consists in requesting the creation of a machine.  
+It may then take time for this operation to complete. It is also the case of machine configuration.
+Setting up the network, associating storage... All these operations can be long-running.
+
+The temptation is real about using *Thread.sleep* to wait for a step to complete.  
+However, this would not be a good idea, as it would reduce performances in case of many requests.
+
+Roboconf provides an abstract class to handle such operations.  
+It is called **net.roboconf.target.api.AbstractThreadedTargetHandler**. To benefit from its feature, make your
+target handler extend it and implement a **MachineConfigurator**. A machine configurator is in charge of starting and resuming
+configuration steps asynchronously for a given machine. You can find examples of this mechanism in the **EC2** and **Openstack**
+target handlers.
+
+> If your target handler needs to perform long-time running operations, consider extending *AbstractThreadedTargetHandler*.
+> This will seriously improve performances of your handler.
+
+Because **AbstractThreadedTargetHandler** uses a thread pool executor, you also have to update the iPojo configuration.  
+You indeed need to declare **start** and **stop** callbacks in the **metadata.xml** file.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="org.apache.felix.ipojo http://felix.apache.org/ipojo/schemas/CURRENT/core.xsd"
+		xmlns="org.apache.felix.ipojo">
+
+	<component classname="net.roboconf.target.vsphere.internal.TargetVSphere" name="roboconf-target-vsphere">
+		<provides />
+		<callback transition="validate" method="start" />
+		<callback transition="invalidate" method="stop" />
+	</component>
+	
+	<instance component="roboconf-target-vsphere" name="Roboconf Target - vSphere" />
+</ipojo>
+```

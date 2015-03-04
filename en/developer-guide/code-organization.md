@@ -18,7 +18,8 @@ It contains common configuration for plug-ins, as well as information about the 
 This includes the OSGi bundles and user-ready distributions (for the moment, based on Apache Karaf). All the core and
 runtime modules are hosted in this repository.
 
-* [Roboconf-maven-plugin](https://github.com/roboconf/roboconf-maven-plugin) contains the sources for the Roboconf Maven plug-in.
+* [Roboconf-maven-plugin](https://github.com/roboconf/roboconf-maven-plugin) contains the sources for the Roboconf Maven plug-in. 
+The plug-in has since moved into the platform repository. We keep this repository to hold the tag for the Maven plug-in 0.2.
 
 * [Roboconf-eclipse](https://github.com/roboconf/roboconf-eclipse) contains Eclipse plug-ins for Roboconf.  
 It relies on Eclipse Tycho. And the build result is not supposed to be published to Maven Central (this is related to the way Tycho works
@@ -37,6 +38,10 @@ There are turned into a set of HTML pages by [Jekyll](http://jekyllrb.com), and 
 
 * [Language-roboconf](https://github.com/roboconf/language-roboconf) contains a JS package for the support of Roboconf's DSL
 in [Atom.io](https://atom.io/).
+
+* [Roboconf-maven-archetype](https://github.com/roboconf/roboconf-maven-archetype) defines a Maven archetype to create Roboconf applications.
+Since it will not be upgraded very often, it was placed in its own repository. Just like for the **roboconf-parent**, it will be released
+on demand and independently of the Roboconf roadmap.
 
 
 ## Impact on Releases
@@ -65,7 +70,7 @@ As for the web administration, only tagging would make sense.
 
 ## Maven Modules
 
-Here is an overview of the Maven hierarchy for Roboconf.  
+Here is an overview of the **Maven hierarchy** for Roboconf (not the file hierarchy).  
 
 	roboconf-parent
 	│
@@ -78,15 +83,16 @@ Here is an overview of the Maven hierarchy for Roboconf.
 	│   ├── roboconf-messaging
 	│   ├── roboconf-dm
 	│   ├── roboconf-dm-rest-api
-	│   └── roboconf-dm-rest-client
+	│   ├── roboconf-dm-rest-client
+	│   └── roboconf-maven-plugin
 	│
-	├── roboconf-maven-plugin
+	├── roboconf-maven-archetype
 	└── roboconf-eclipse-parent
     	└── ...
 
 
-**Roboconf.github.io**, **Roboconf-web-administration** and **Roboconf-examples** are not Maven modules.  
-Here is a little description of some platform modules.
+Some Git repositories, like **Roboconf.github.io**, **Roboconf-web-administration** and **Roboconf-examples** do not
+contain Maven modules. Here is a little description of some platform modules.
 
 
 * **roboconf-core**: the common module, that can be reused in external projects (Maven plug-in, 

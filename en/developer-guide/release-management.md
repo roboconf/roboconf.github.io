@@ -73,8 +73,7 @@ Proceed as described below.
 
 1. Update and tag **roboconf-web-administration**.
 2. Release **roboconf-platform**.
-3. Release **roboconf-maven-plugin**.
-4. Release **roboconf-eclipse-plugin**.
-5. Release **roboconf-system-installers**.
-6. Update the web site (no tag required).
-7. Update and tag **roboconf-examples** (no release required).
+3. Release **roboconf-eclipse-plugin**.
+4. Release **roboconf-system-installers**.
+5. Update the web site (no tag required).
+6. Update and tag **roboconf-examples** (no release required).

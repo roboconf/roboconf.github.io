@@ -61,3 +61,17 @@ The plug-ins has the following goals.
 * **validate-project**: to validate the project's structure.
 * **validate-application**: to validate the Roboconf application.
 * **package**: to package a Roboconf application as a ZIP file.
+
+
+## Maven archetype
+
+Use the following command to create a new Roboconf project from our Maven archetype.
+
+```tcl
+mvn archetype:generate                              \
+  -DarchetypeGroupId=net.roboconf                   \
+  -DarchetypeArtifactId=roboconf-maven-archetype    \
+  -DarchetypeVersion=1.0                            \
+  -DgroupId=<my.groupid>                            \
+  -DartifactId=<my-artifactId>
+```

@@ -36,12 +36,16 @@ Here is a complete description of the parameters for Docker.
 | --- | --- | --- | --- |
 | target.id | Determines the target handler to use. | none, must be "docker" | yes |
 | docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). | none | yes |
-| docker.image | The ID of the docker image used as a template for the VM (as shown by "docker images", for example). | none | yes |
+| docker.image | The ID of the docker image used as a template for the VM (as shown by "docker images", for example). It should be defined if you want to use your own image. | "generated.by.roboconf" | no |
 | docker.user | The name of the user to connect. | none | no |
-| docker.password | The password of the user to connect. | none | no (default empty if a user name is provided) |
-| docker.email | The email of the user to connect. | none | no (default empty if a user name is provided) |
+| docker.password | The password of the user to connect. | none | no |
+| docker.email | The email of the user to connect. | none | no |
+| docker.version | The Docker version (for API compatibility). | none | no |
+| docker.agent.package | If you want this extension to generate a Docker image for you, this parameter points to the ZIP or TAR.GZ file of a Roboconf agent. | none | no |
+| docker.agent.jre-packages | If you want this extension to generate a Docker image for you, this parameter indicates the JRE to install (as a system package). | openjdk-7-jre-headless | no |
 
 <br />
+At least one of **docker.image** or **docker.agent.package** must be specified.
 
 ## Docker Configuration
 
