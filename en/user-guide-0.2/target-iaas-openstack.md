@@ -12,6 +12,7 @@ To install it, open the DM's interactive mode and type in...
 
 ```properties
 # Here in version 0.2
+feature:install jclouds-for-roboconf
 bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/0.2
 bundle:start <bundle-id>
 ```
