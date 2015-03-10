@@ -20,6 +20,7 @@ menus: [ "users", "links" ]
 ## Related Projects
 
 * [Open PaaS](http://open-paas.org/)
+* [OCCIware](http://www.occiware.org/bin/view/Main/)
 
 ## Sponsors
 

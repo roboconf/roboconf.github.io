@@ -74,7 +74,7 @@ sudo start docker
 ```
 
 
-## Prepare a Docker Image
+## Prepare your own Docker Image
 
 Obtain a Docker Linux image (e.g. Ubuntu), then start a Docker container using it.
 
