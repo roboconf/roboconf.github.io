@@ -96,5 +96,5 @@ L'image ci-dessous vous montre où trouver les *snapshots* dans la console d'EC2
 	D'expérience, l'auteur de ce tutoriel s'est déjà vu facturer 1 € pour avoir oublié de 
 	supprimer des snapshots dans son espace de stockage. Pensez à les supprimer.
 
-Voilà, vous pouvez maintenant [passer à l'étape suivante](tutoriel-premier-deploiement-sur-le-cloud-2.html),
+Voilà, vous pouvez maintenant [passer à l'étape suivante](tutoriel-premier-deploiement-dans-le-cloud-2.html),
 l'installation de l'agent Roboconf.

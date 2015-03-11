@@ -540,6 +540,7 @@ urls:
   
   ug.0.2.index:
     en: user-guide-0.2/user-guide
+    fr: guide-utilisateur-0.2/guide-utilisateur
   
   ug.0.2.working-with-roboconf:
     en: user-guide-0.2/working-with-roboconf
