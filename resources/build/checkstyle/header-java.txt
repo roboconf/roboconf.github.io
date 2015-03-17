@@ -1,10 +1,10 @@
 ^(#+|/\*\*)$
-^(#| \*) Copyright (\d\d\d\d-)?2015 Linagora, Universit(é|\u00E9) Joseph Fourier, Floralis$
+^(#| \*) Copyright (\d\d\d\d-)?2015 Linagora, Universit(é|\\u00E9) Joseph Fourier, Floralis$
 ^(#| \*)$
 ^(#| \*) The present code is developed in the scope of the joint LINAGORA -
-^(#| \*) Universit(é|\u00E9) Joseph Fourier - Floralis research program and is designated
+^(#| \*) Universit(é|\\u00E9) Joseph Fourier - Floralis research program and is designated
 ^(#| \*) as a "Result" pursuant to the terms and conditions of the LINAGORA
-^(#| \*) - Universit(é|\u00E9) Joseph Fourier - Floralis research program. Each copyright
+^(#| \*) - Universit(é|\\u00E9) Joseph Fourier - Floralis research program. Each copyright
 ^(#| \*) holder of Results enumerated here above fully & independently holds complete
 ^(#| \*) ownership of the complete Intellectual Property rights applicable to the whole
 ^(#| \*) of said Results, and may freely exploit it in any manner which does not infringe
