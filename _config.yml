@@ -47,7 +47,7 @@ locales:
     s-menu-source-code: Source Code
     s-menu-team: Team
     s-menu-events: Events &amp; Publications
-    s-menu-academics: Science &amp; University
+    s-menu-projects: Reference Projects
     s-menu-graphics: Graphics
     s-menu-links: Links
     s-menu-dev-guide: Developer Guide
@@ -69,7 +69,7 @@ locales:
     s-menu-source-code: Code Source
     s-menu-team: Équipe
     s-menu-events: Événements &amp; Publications
-    s-menu-academics: Science &amp; Universités
+    s-menu-projects: Projets Références
     s-menu-graphics: Ressources Graphiques
     s-menu-links: Liens
     s-menu-dev-guide: Guide Développeur
@@ -322,9 +322,9 @@ urls:
     en: events
     fr: evenements
   
-  main.academics:
-    en: academics
-    fr: academiques
+  main.projects:
+    en: projects
+    fr: projets
   
   main.sources:
     en: sources
