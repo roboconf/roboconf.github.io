@@ -55,7 +55,7 @@ Here is a complete description of the parameters for JClouds.
 | jclouds.hardware-name | The hardware configuration to use to create a new VM, e.g. "m1.small". Equivalent to flavor. | none | yes |
 | jclouds.key-pair | The name of the key pair used to connect in SSH to newly created VMs. Not all the providers support it. | none | no |
 
-<br />
+
 Notice we do not use image and hardware IDs in our configuration files.  
 This is because JClouds requires region settings when specifying identifiers.
 

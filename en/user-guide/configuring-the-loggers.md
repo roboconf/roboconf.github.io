@@ -52,7 +52,6 @@ We reproduce this table here.
 | CONFIG | - | CONFIG events are ignored. |
 | - | FATAL | No such thing in JDK Logging. | 
 
-<br />
 
 In the *cfg* file, you must use Log4J levels.  
 They will be converted into levels for the JDK logging.

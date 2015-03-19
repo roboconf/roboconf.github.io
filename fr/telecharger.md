@@ -44,7 +44,7 @@ Vous pouvez récupérer une version *snapshot* de Roboconf sur notre dépôt Mav
 			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.2">Entrées GitHub</a>
 			&nbsp;
 			<span class="octicon octicon-megaphone"></span>
-			</span> <a href="liste-des-changements.html">Changements</a> 
+			<a href="liste-des-changements.html">Changements</a> 
 			&nbsp;
 			<span class="octicon octicon-person"></span>
 			<a href="/en/user-guide-0.2/user-guide.html">Guide Utilisateur</a>
@@ -65,7 +65,7 @@ Vous pouvez récupérer une version *snapshot* de Roboconf sur notre dépôt Mav
 			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.1">Entrées GitHub</a>
 			&nbsp;
 			<span class="octicon octicon-megaphone"></span>
-			</span> <a href="liste-des-changements.html">Changements</a> 
+			<a href="liste-des-changements.html">Changements</a> 
 			&nbsp;
 			<span class="octicon octicon-person"></span>
 			<a href="/en/user-guide-0.1/user-guide.html">Guide Utilisateur</a>

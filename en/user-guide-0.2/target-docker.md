@@ -40,7 +40,6 @@ Here is a complete description of the parameters for Docker.
 | docker.user | The name of the user to connect. | none | yes |
 | docker.password | The password of the user to connect. | none | yes |
 
-<br />
 
 ## Docker Configuration
 

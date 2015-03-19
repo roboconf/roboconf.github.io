@@ -373,7 +373,7 @@ span.roadmap-in-progress {
 /* Tables for parameters */
 
 table {
-	margin-top: 16px;
+	margin: 16px 0 20px;
 	border: solid black 1px;
 	border-collapse: collapse;
 	width: 100%;
@@ -393,7 +393,7 @@ table th {
 }
 
 table tr:nth-child(odd)	{ 
-	background-color: #c8c8c8;
+	background-color: #dadada;
 }
 
 table tr:nth-child(even) {
@@ -422,4 +422,13 @@ table#download-table td:nth-child(2) {
 table#download-table td {
 	text-align: center;
 	vertical-align: top;
+}
+
+/* Footer */
+
+#footer {
+	margin: 18px 0 0;
+	padding: 7px 0;
+	font-size: 11px;
+	text-align: center;
 }

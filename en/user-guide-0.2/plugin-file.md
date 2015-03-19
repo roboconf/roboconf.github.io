@@ -56,7 +56,6 @@ Possible action types:
 | Copy | Source -> Path | Copies a file. source path **->** target path |
 | Move | Source -> Path | Moves a file. source path **->** target path |
 
-<br />
 
 If the action type is not recognized, then nothing is done.  
 For a given phase, several actions can be specified. Ordering is achieved through the position parameter.

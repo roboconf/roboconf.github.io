@@ -54,13 +54,7 @@ The project structure must be the following one.
 	** graph/
 	** instances/
 
-Basically, this is the usual Roboconf structure, translated into a Maven-like project.  
-The plug-ins has the following goals.
-
-* **initialize**: to configure the project (model directory, build output).
-* **validate-project**: to validate the project's structure.
-* **validate-application**: to validate the Roboconf application.
-* **package**: to package a Roboconf application as a ZIP file.
+Basically, this is the usual Roboconf structure, translated into a Maven-like project.
 
 
 ## Maven archetype
@@ -75,3 +69,75 @@ mvn archetype:generate                              \
   -DgroupId=<my.groupid>                            \
   -DartifactId=<my-artifactId>
 ```
+
+
+## Maven Goals
+  
+The plug-in has the following goals.
+
+### initialize
+
+This goal configures the project (model directory, build output).  
+It has no parameter. 
+
+
+### validate-project
+
+This goal validates the project's structure.  
+It has no parameter.
+
+
+### validate-application
+
+This goal validates the Roboconf application.  
+It accepts the following parameters.
+
+| Name | Type | Required | Default | Since | Description |
+| ---- | ---- | -------- | ------- | ----- | ----------- |
+| **recipe** | boolean | no | false | 0.3 | True if the Maven project contains a recipe, false if it contains a complete Roboconf application. |
+| **official** | boolean | no | false | 0.3 | True if this is a recipe managed by the Roboconf team. This parameter only makes sense when **recipe** is true. |
+
+
+### package
+
+This goal packages a Roboconf application as a ZIP file.  
+It has no parameter.
+
+
+## documentation
+
+This goal generates documentation from the configuration files.  
+Documentation includes text documents and images (as PNG files). It lists all the components
+of the application and their relations. Generated documents can be used by people in charge production
+environments, as well as for maintenance teams.
+
+It accepts the following parameters.
+
+| Name | Type | Required | Default | Since | Description |
+| ---- | ---- | -------- | ------- | ----- | ----------- |
+| **renderers** | List&lt;String&gt; | yes | - | 0.3 | A list of renderers to use. Currently available: **html** and **markdown**. Unknown renderers are ignored. |
+| **locales** | List&lt;String&gt; | no | The system's locale. | 0.3 | A list of locales for the generated documentation. Currently available: **en_US** and **fr_FR**. |
+| **options** | Map&lt;String,String&gt; | no | - | 0.3 | A map associating rendering options and their values. Available options are documented below. |
+
+Available options for the documentation generator.
+
+| Name | Type | Default | Since | Description |
+| ---- | ---- | ------- | ----- | ----------- |
+| img.background.color | String | #ffffff | 0.3 | The background color for generated images. |
+| img.foreground.color | String | #b23e4b | 0.3 | The foreground (font) color for generated images. |
+| img.highlight.bg.color | String | #f3df20 | 0.3 | The background color for components to highlight in the generated images. |
+| html.exploded | String | - | 0.3 | Option for the HTML renderer. When this option is present (no matter its value), the output HTML is split into several files instead of a single one. |
+| html.css.file | String | - | 0.3 | Option for the HTML renderer. It specifies the location of a CSS file to replace the default one. |
+| html.css.reference | String | - | 0.3 | Option for the HTML renderer. It specifies the URL of a CSS file to reference in the generated HTML files. |
+
+In addition to the default output, users can include additional information in their project.  
+The generator will read and include them in the result.
+
+Thus, if you want to add a specific description for a component called **toto**, you can add a **toto.summary.txt** file under **src/main/doc**.
+Locales are supported too. Assuming you want to have one version for English and one for French, you will only have to add **toto_en_US.summary.txt**
+and **toto_fr_FR.summary.txt** under **src/main/doc**.
+
+**summary.txt** files aim at adding a specific description of a given Roboconf component.
+It will be added at the beginning of a component's description. You can also add information at the end of its dedicated section by
+using **extra.txt** files. As an example, if you want to add a warning or a caution section, you can add **toto.extra.txt**, **toto_en_US.extra.txt**
+or **toto_fr_FR.extra.txt** under **src/main/doc**.

@@ -53,7 +53,6 @@ Here is a complete description of the parameters for Microsoft Azure.
 | azure.vm.size | The VM size (e.g. Small). | none | yes |
 | azure.vm.template | The ID of the VM image used as a template for the VM. | none | yes |
 
-<br />
 
 ## Key Store
 

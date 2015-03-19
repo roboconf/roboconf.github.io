@@ -70,7 +70,7 @@ Here is a complete description of the parameters for OpenStack.
 | openstack.floating-ip-pool | A pool of available public IPs, so that one of them be associated to the VM (if no pool is provided, the VM only has a private IP). | none | no |
 | openstack.network-id | A neutron (aka quantum) network ID, to use for networking. | none | no |
 
-<br />
+
 Notice we do not use image and flavor IDs in our configuration files.  
 This is because this IaaS extension is implemented with Apache JClouds which requires region settings when specifying identifiers.
 

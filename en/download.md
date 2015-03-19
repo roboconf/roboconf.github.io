@@ -45,7 +45,7 @@ The current development version is **0.3-SNAPSHOT**.
 			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.2">GitHub issues</a>
 			&nbsp;
 			<span class="octicon octicon-megaphone"></span>
-			</span> <a href="change-log.html">Change Log</a> 
+			<a href="change-log.html">Change Log</a> 
 			&nbsp;
 			<span class="octicon octicon-person"></span>
 			<a href="user-guide-0.2/user-guide.html">User Guide</a>
@@ -66,7 +66,7 @@ The current development version is **0.3-SNAPSHOT**.
 			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.1">GitHub issues</a>
 			&nbsp;
 			<span class="octicon octicon-megaphone"></span>
-			</span> <a href="change-log.html">Change Log</a> 
+			<a href="change-log.html">Change Log</a> 
 			&nbsp;
 			<span class="octicon octicon-person"></span>
 			<a href="user-guide-0.1/user-guide.html">User Guide</a>

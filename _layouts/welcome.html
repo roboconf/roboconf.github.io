@@ -8,9 +8,12 @@
 	<title>{{ page.title }}</title>
 	<meta name="description" content="{{ page.description }}" />
   
-	<link type="text/css" rel="stylesheet" media="all" href="/resources/css/style.css" />
+  	<link type="text/css" rel="stylesheet" media="all" href="/resources/css/style.css" />
 	<link href="/resources/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	<link rel="shortcut icon" href="/favicon.ico" />
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="/resources/js/roboconf.min.js"></script>
 </head>
 
 <body>
@@ -27,6 +30,10 @@
 		<a class="button ep index-ep" href="/{{locale}}/{{ site.urls['main.sources'][locale] }}.html">
 			<span class="glyphicon glyphicon-wrench"></span> {{ site.locales[locale].menu-developers }}
 		</a>
+	</div>
+	
+	<div id="footer">
+		Copyright &copy; 2013-{{ site.time | date: '%Y' }}, Linagora, Université Joseph Fourier, Floralis
 	</div>
 	
 	<script>

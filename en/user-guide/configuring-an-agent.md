@@ -92,8 +92,6 @@ The following table summers up all the agent parameters.
 | root-instance-name | Within an application, machines are represented by a root instance. This parameter is the name of the instance associated with this agent. | Depending on the target ID, its value can be retrieved from *user data*. | yes |
 | ip-address-of-the-agent | The IP address of the agent's machine. | This is useful if the machine has several network interfaces. | no |
 
-<br />
-
 These parameters are persisted and restored upon restart.  
 However, depending on the target ID, some values may be overridden.
 

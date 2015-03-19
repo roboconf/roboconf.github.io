@@ -52,7 +52,6 @@ Let's see examples.
 | 1.0.1 | 1.0.2 | The second **maintenance** release of the relative that works with Roboconf 1.0.x. Only bugs were fixed in the Roboconf platform. |
 | 1.0.1 | 1.0.3 | The third **maintenance** release of the relative that works with Roboconf 1.0.x. Only bugs were fixed in the Roboconf platform. |
 
-<br />
 It may happen that a maintenance release of the platform requires a new maintenance release of project relatives.
 As an example, fixing a bug in the Maven module **roboconf-core** may impact the Roboconf Maven plug-in and the Roboconf Eclipse plug-ins.
 In this case, we will simply release a new maintenance version of these projects. How the maintenance releases are linked will be done 

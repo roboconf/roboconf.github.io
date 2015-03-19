@@ -36,7 +36,7 @@ Here are the supported properties for a component.
 | facets | Some properties can be grouped together in facets. So, this is a list of facet names, separated by a comma. | no |
 | extends | The name of a component this component extends. All its properties and recipes will be inherited. | no |
 
-<br />
+
 Here is a commented example of a component (without any facet).
 
 	ApacheServer {
@@ -94,7 +94,7 @@ Here are the supported properties for a facet.
 | exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. | no |
 | extends | A facet may extend other facets. So, this is a list of facet names, separated by a comma. | no |
 
-<br />
+
 Unlike components, facets do not have a resource directory.
 
 
@@ -124,7 +124,7 @@ Here are the supported properties for an instance.
 | instance-data | Instance data. This is not expected to be set by hand. But you may encounter it. | no |
 | instance-state | The instance state. This is not expected to be set by hand. But you may encounter it. | no |
 
-<br />
+
 Instances can be defined hierarchically.  
 Here is an example.
 

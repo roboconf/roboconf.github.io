@@ -123,7 +123,6 @@ The following operators are supported.
 | <= | yes |
 | >= | yes |
 
-<br />
 
 ### File
 

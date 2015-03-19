@@ -151,7 +151,6 @@ The following table summers up all the DM parameters.
 | message-server-password | The password for the messaging server. | **null** is interpreted as "guest". | yes |
 | configuration-directory-location | The directory where applications resources are saved. | - | yes |
 
-<br />
 
 # The Configuration Directory
 

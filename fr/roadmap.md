@@ -10,21 +10,31 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 
 
 * **A partir de Février 2015**
-	
-	* Ajouter la supervision des applications avec Roboconf.
-	* Supporter des "place holders" pour les changements d'environnement.
+
+	* Améliorer les performances des déploiements dans des IaaS. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Ajouter le DSL de Roboconf dans Atom.io. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Créer des générateurs de documentation. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Compléter le plug-in Maven vis-à-vis des problématiques de réutilisabilité.
+	* Mettre en place un dépôt de recettes et de composants réutilisables.
+	* Ajouter la supervision des applications avec Roboconf avec Nagios.
 	* Simplifier l'installation de Roboconf.
-	* Etudier le support de TOSCA.
-	* Rajouter de l'auto-complétion dans l'éditeur Eclipse pour Roboconf.
-	* Ajouter le DSL de Roboconf dans Atom.io et Bracket.io.
-	* Créer des générateurs de documentation.
 
 * **A partir d'Avril 2015**
 
-	* Mettre en place un dépôt de recettes et de composants réutilisables.
-	* Supporter l'exécution de scénarios utilisateurs.
+	* Utilisation d'une web socket dans le gestionnaire de déploiements.
+	* Refonte de l'administration web.
+	* Supporter des "place holders" pour les changements d'environnement.
+	* Compléter le support de Roboconf dans Eclipse et certains éditeurs.
+	* Etudier le support de TOSCA.
 	* Implémenter le support d'Apache QPID en tant que serveur de messagerie.
+
+* **Après Juin 2015**
+
+	* Supporter l'exécution de scénarios utilisateurs.
+	* Supporter la migration d'applications (déploiement continu).
+	* Créer une extension pour Jenkins.
+	* Compléter la messagerie pour des échanges sécurisés avec SSL.
+	* Implémenter une cible de déploiement SSH.
 
 * **Ouvert à Contributions**
 

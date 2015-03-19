@@ -44,7 +44,7 @@ Here is a complete description of the parameters for Docker.
 | docker.agent.package | If you want this extension to generate a Docker image for you, this parameter points to the ZIP or TAR.GZ file of a Roboconf agent. | none | no |
 | docker.agent.jre-packages | If you want this extension to generate a Docker image for you, this parameter indicates the JRE to install (as a system package). | openjdk-7-jre-headless | no |
 
-<br />
+
 At least one of **docker.image** or **docker.agent.package** must be specified.
 
 ## Docker Configuration

@@ -24,7 +24,6 @@ There are 5 scripts.
 | install-dm.sh | The script to install and configure the DM on a remote VM. |
 | install-local-dm.sh | The script to install and configure the DM on your local machine. |
 
-<br />
 
 Here is how it works.
 
