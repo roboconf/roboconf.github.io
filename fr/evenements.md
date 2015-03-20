@@ -1,5 +1,5 @@
 ---
-title: "Evénements & Publications"
+title: "Evénements &amp; Publications"
 layout: page
 id: "main.events"
 menus: [ "project", "events" ]

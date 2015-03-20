@@ -23,7 +23,7 @@ It will help you to...
 In the scope of this tutorial, you will only use Roboconf's administration.
 It is called the DM (which stands for the *Deployment Manager*). You will also use a messaging server, RabbitMQ.
 
-Download the DM on [this page](../telecharger.html).  
+Download the DM on [this page](../download.html).  
 You will need a Java Virtual Machine to run it (JDK 7).  
 To install it, unzip the archive. It may be better to prefer the \*.tar.gz archive, since this format preserves
 file permissions.

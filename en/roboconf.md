@@ -22,7 +22,7 @@ The global idea is to apply to applications the concepts used in component techn
 way, so that it can work with legacy Software.
 
 Application parts use the message queue to communicate and take the appropriate actions depending on what is deployed or started.
-These *appropriate* actions are executed by plug-ins (such as bash or [Puppet](puppetlabs.com)). 
+These *appropriate* actions are executed by plug-ins (such as bash or [Puppet](http://puppetlabs.com)). 
 
 Roboconf is distributed technology, based on AMQP 
 and REST / JSon. It is IaaS-agnostic, and supports many well-known IaaS (including OpenStack, Amazon Web Services, Microsoft Azure, VMWare, 
