@@ -1,5 +1,7 @@
 # Roboconf's Web Site
 
+[![Build Status](https://travis-ci.org/roboconf/roboconf.github.io.svg?branch=master)](https://travis-ci.org/roboconf/roboconf.github.io)
+
 Website: [http://roboconf.net](http://roboconf.net)  
 Roboconf is licensed under the terms of the **Apache License v2**.  
 The web site documentation is licensed under [Creative Commons](http://creativecommons.org/licenses/by/3.0/).
