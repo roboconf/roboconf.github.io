@@ -44,4 +44,4 @@ of static files. You could serve them from any web server.
 You might also prefer using another REST client.  
 Remember, this application is just a front-end for the REST API exposed by the Deployment Manager.
 Mozilla Firefox and Google Chrome have extensions to invoke REST services. Roboconf's REST API 
-is documented in the [developer guide](/developer-guide/developer-guide.html).
+is documented in the [developer guide](../developer-guide/developer-guide.html).

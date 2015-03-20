@@ -115,5 +115,5 @@ mvn clean install
 mvn sonar:sonar
 ```
 
-See [Sonar's web site](http://docs.codehaus.org/display/SONAR/Analyzing+with+Maven) for more information.  
+See [Sonar's web site](http://mojo.codehaus.org/sonar-maven-plugin/) for more information.  
 You can now check out results on **http://localhost:9000** 

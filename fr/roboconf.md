@@ -27,7 +27,7 @@ Cela permet notamment d'utiliser Roboconf sur des systèmes pré-existants.
 Ainsi, un serveur d'application a connaissance
 des bases de données. Cette information est relayée via la messagerie. Roboconf se charge de prendre les décisions adéquates
 en fonction des messages qui transitent. Ces actions, effectuées par Roboconf, sont en réalité exécutées au travers d'extensions
-(ou de plug-ins). Il y a par exemple un plug-in Bash, ainsi qu'un plug-in [Puppet](puppetlabs.com). 
+(ou de plug-ins). Il y a par exemple un plug-in Bash, ainsi qu'un plug-in [Puppet](http://puppetlabs.com). 
 
 Roboconf est elle-même une application répartie, basée sur AMQP et REST / JSon. Elle supporte plusieurs IaaS (dont
  OpenStack, Amazon Web Services, Microsoft Azure, VMWare, ainsi qu'un déploiement "local" pour des hôtes pré-existants, voire

@@ -8,7 +8,7 @@ menus: [ "developers", "developer-guide" ]
 Roboconf's Web Administration is a web application developed with [AngularJS](http://angularjs.org/).  
 It comes a separate application and acts as a front-end for the DM. It is in fact a REST client with a web interface.
 
-As explained on the [DM's installation page](installing-the-deployment-manager.html), the DM's web application
+As explained on the [DM's installation page](../user-guide/installing-the-deployment-manager.html), the DM's web application
 embeds this client by default.  
 
 However, it can be useful to run it separately (as an example, for test purpose).  
