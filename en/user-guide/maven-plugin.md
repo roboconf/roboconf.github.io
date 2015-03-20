@@ -130,6 +130,8 @@ Available options for the documentation generator.
 | html.css.file | String | - | 0.3 | Option for the HTML renderer. It specifies the location of a CSS file to replace the default one. |
 | html.css.reference | String | - | 0.3 | Option for the HTML renderer. It specifies the URL of a CSS file to reference in the generated HTML files. |
 
+You can find examples of configuration [here](maven-examples-documentation.html).
+
 In addition to the default output, users can include additional information in their project.  
 The generator will read and include them in the result.
 

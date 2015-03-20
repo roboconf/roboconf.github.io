@@ -86,6 +86,9 @@ urls:
   #
   # User Guide Snapshot
   #
+  ug.snapshot.maven-examples-documentation:
+    en: user-guide/maven-examples-documentation
+  
   ug.snapshot.roboconf-architecture:
     en: user-guide/roboconf-architecture
   
