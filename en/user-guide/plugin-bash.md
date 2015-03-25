@@ -20,7 +20,7 @@ This plug-in is associated with the **script** installer name.
 Here is the way this plug-in works.  
 In the next lines, *action* is one of **deploy**, **start**, **update**, **stop** or **undeploy**. 
 
-* The plug-in will load **scripts/action***
+* The plug-in will load **scripts/action*** (when multiple file names start with the action's name, the 1st one found will be used, so the result may be unpredictable: in such case, a warning message will be logged by Roboconf).
 * If it is not found, it will try to load **templates/action.template**
 * If it is not found, it will try to load **templates/default.template**
 * If it is not found, the plug-in will do nothing.
