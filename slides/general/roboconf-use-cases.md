@@ -1,5 +1,5 @@
 ---
 layout: roboconf-presentation
-lang: "fr"
-slides-id: "slides"
+lang: "en"
+slides-id: "uc.slides"
 ---

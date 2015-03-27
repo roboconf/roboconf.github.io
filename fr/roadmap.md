@@ -15,7 +15,7 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Ajouter le DSL de Roboconf dans Atom.io. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Créer des générateurs de documentation. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Compléter le plug-in Maven vis-à-vis des problématiques de réutilisabilité.
-	* Mettre en place un dépôt de recettes et de composants réutilisables.
+	* Mettre en place un dépôt de recettes et de composants réutilisables. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Ajouter la supervision des applications avec Roboconf avec Nagios.
 	* Simplifier l'installation de Roboconf.
 

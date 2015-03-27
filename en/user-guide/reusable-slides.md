@@ -9,6 +9,13 @@ A set of slides is available on this web site.
 You can reuse them for you presentations (training, courses, conferences...).  
 You can also copy and adapt them for your own context.
 
+**Short presentation** (use cases)
+
+* [Slides In English](/slides/general/roboconf-use-cases.html)
+* [Slides in French](/slides/general/cas-d-usage-de-roboconf.html)
+
+**Long presentation** (general and technical)
+
 * [Slides In English](/slides/general/roboconf-presentation.html)
 * [Slides in French](/slides/general/presentation-roboconf.html)
 

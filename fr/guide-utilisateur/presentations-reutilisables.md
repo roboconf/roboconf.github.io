@@ -1,5 +1,5 @@
 ---
-title: "Présentation Réutilisable"
+title: "Présentations Réutilisables"
 layout: page
 id: "ug.snapshot.reusable-slides"
 menus: [ "users", "user-guide" ]
@@ -8,6 +8,13 @@ menus: [ "users", "user-guide" ]
 Un jeu de *slides* est disponible sur ce site web.  
 Vous pouvez les réutiliser pour vos présentations (cours, formations, conférences...).  
 Vous pouvez aussi les copier et les adapter pour votre propre besoin.
+
+**Présentation courte** (cas d'usage)
+
+* [*Slides* en anglais](/slides/general/roboconf-use-cases.html)
+* [*Slides* en français](/slides/general/cas-d-usage-de-roboconf.html)
+
+**Présentation longue** (générale et technique)
 
 * [*Slides* en anglais](/slides/general/roboconf-presentation.html)
 * [*Slides* en français](/slides/general/presentation-roboconf.html)

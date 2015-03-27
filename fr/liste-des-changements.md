@@ -5,8 +5,30 @@ id: "main.download.changelog"
 menus: [ "users", "download" ]
 ---
 
-Cette page récapitule la liste des fonctionnalités principales et des changements apportés
+Cette page récapitule la liste des fonctionnalités principales et les changements apportés
 à chaque version de Roboconf.
+
+
+<!--
+## Version 0.3
+
+Roboconf 0.3 apporte des améliorations pour le déploiement dans le cloud.  
+La création des machines est plus rapide, et leur configuration se fait désormais
+en parallèle et de manière asynchrone. Ces optimisations permettent d'effectuer de
+gros déploiements plus rapidement qu'avec les versions précédentes de Roboconf.
+
+L'équipe de développement a égalemen ttravaillé sur la réutilisabilité de recettes.
+Nous avons mis en place une nouvelle organisation Github, [Roboconf-recipes](https://github.com/roboconf-recipes), 
+pour partager de telles recettes. N'hésitez pas à vous en servir et à en contribuer de nouvelles.
+
+Enfin, l'outillage a continué d'être enrichi.  
+Le plug-in Maven est désormais complet, un générateur de documentation a été réalisé,
+et des contributions ont été faites pour supporter le DSL de Roboconf dans des outils d'édition
+comme [Atom.io](https://atom.io/).
+
+Vous pouvez jeter un oeil [aux nouveautés](nouveautes/nouveautes-principales-0.3.html) de cette version 0.3.
+-->
+
 
 ## Version 0.2
 

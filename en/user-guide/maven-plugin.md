@@ -129,6 +129,7 @@ Available options for the documentation generator.
 | html.exploded | String | - | 0.3 | Option for the HTML renderer. When this option is present (no matter its value), the output HTML is split into several files instead of a single one. |
 | html.css.file | String | - | 0.3 | Option for the HTML renderer. It specifies the location of a CSS file to replace the default one. |
 | html.css.reference | String | - | 0.3 | Option for the HTML renderer. It specifies the URL of a CSS file to reference in the generated HTML files. |
+| html.header.image.file | String | - | 0.3 | Option for the HTML renderer. It specifies the location of an image file to use as the header image. |
 
 You can find examples of configuration [here](maven-examples-documentation.html).
 

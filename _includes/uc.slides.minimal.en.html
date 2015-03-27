@@ -1,0 +1,114 @@
+
+<section>
+	<img src="../../resources/img/roboconf--mirrored.jpg" alt="Roboconf" />
+	<h3>Roboconf in less than 10 Slides</h3>
+	<p><small>
+		By the <a href="http://roboconf.net">Roboconf</a> team / <a href="http://twitter.com/Roboconf">@Roboconf</a>
+	</small></p>
+</section>
+
+<section>
+	<img src="../../resources/img/roboconf.jpg" alt="Roboconf" /><br />
+	<ul>
+		<li>... is open source Software (Apache v2)</li>
+		<li>... is hosted on GitHub</li>
+		<li>... started in fall 2013</li>
+		<li>
+			... is powered by <a href="http://linagora.com">Linagora</a> and 
+			<a href="https://www.ujf-grenoble.fr/">Joseph Fourier University</a>
+		</li>
+	</ul>
+	<br /><br />
+	<p>
+		The project focuses on adaptable (or elastic) deployments.<br />
+		It is currently used in the <a href="http://open-paas.org/">Open PaaS</a> project.
+	</p>
+	<p>
+		Roboconf covers several possible uses cases.
+	</p>
+</section>
+
+<section>
+	<h3>Cloud Deployment</h3>
+	<img src="../../resources/img/slides-uc-cloud-deployment.png" alt="Cloud deployment targets" />
+	<p>
+		Roboconf addresses public, private and hybrid cloud deployments.
+		Several cloud providers are supported, as well as virtualization platforms
+		(like VMWare).
+	</p>
+</section>
+
+<section>
+	<h3>PaaS Framework</h3>
+	<img src="../../resources/img/slides-uc-paas-framework-en.png" alt="Build your own PaaS" />
+	<p>
+		Roboconf can be used to build tailored PaaS. It manages deployment,
+		monitoring and reconfiguration of potentially any application.
+	</p>
+</section>
+
+<section>
+	<h3>Deployment Orchestration</h3>
+	<p>
+		Suppose we want to orchestrate the deployment of the following application.
+	</p>
+	<img src="../../resources/img/slides-uc-deployment-orchestration-en.png" alt="Orchestrating deployments" />
+	<p>
+		By using predefined relations between Software components, Roboconf resolves runtime dependencies 
+		and updates configuration files so that everything works.
+	</p>
+</section>
+
+<section>
+	<h3>Automating Procedures</h3>
+	<p>
+		For every Software component that Roboconf manages, normalized actions can be
+		specified. These callback actions are called &laquo; recipes &raquo;. They can be written
+		as scripts, as a Puppet module, ...
+	</p>
+	<img src="../../resources/img/slides-uc-automating-procedures.png" alt="Roboconf actions" />
+	<p>
+		The <b>update</b> phase is specific to Roboconf. It is invoked when a runtime
+		dependency appears, is modified or removed. Reconfiguration is thus handled automatically.
+	</p>
+</section>
+
+<section>
+	<h3>Continuous Deployment</h3>
+	<p>
+		Continuous deployments are part of Roboconf's roadmap.
+	</p>
+	<img src="../../resources/img/slides-uc-continuous-deployment-en.png" alt="Develop, compile and test, deploy or migrate" />
+	<br /><br />
+	<p>Several migration strategies are planned.</p>
+	<ul>
+		<li>Full replacement (with service interruption).</li>
+		<li>Invariant-based, for continuous development (devOps).</li>
+		<li>Progressive upgrade (with architecture change).</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Do NOT reinvent the Wheel</h3>
+	<p>
+		Roboconf plugs dynamic in existing deployment solutions.
+	</p>
+	<img src="../../resources/img/slides-uc-do-not-reinvent-the-wheel-1.png" alt="Puppet, Bash, Docker..." />
+	<br /><br />
+	<p>
+		Additional solutions can be supported.
+	</p>
+	<img src="../../resources/img/slides-uc-do-not-reinvent-the-wheel-2.png" alt="Chef, CFengine..." />
+</section>
+
+<section>
+	<h3>Working with Roboconf</h3>
+	<img src="../../resources/img/slides-uc-working-with-roboconf-en.png" alt="
+		1. Define Software components and their relations (servers deployed over a VM, application that needs a database...).
+		2. Write (or reuse) recipes for all the Software components that were defined.
+		3. Plug monitoring rules and/or monitoring tools (like Nagios or Cacti).
+	" />
+	<p>
+		That's it, you can start deploying with Roboconf.
+	</p>
+</section>

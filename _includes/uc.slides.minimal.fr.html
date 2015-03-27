@@ -1,0 +1,114 @@
+
+<section>
+	<img src="../../resources/img/roboconf--mirrored.jpg" alt="Roboconf" />
+	<h3>Roboconf en moins de 10 Slides</h3>
+	<p><small>
+		Par l'équipe de <a href="http://roboconf.net">Roboconf</a> / <a href="http://twitter.com/Roboconf">@Roboconf</a>
+	</small></p>
+</section>
+
+<section>
+	<img src="../../resources/img/roboconf.jpg" alt="Roboconf" /><br />
+	<ul>
+		<li>... est open source (Apache v2)</li>
+		<li>... est hébergé sur GitHub</li>
+		<li>... a débuté à l'automne 2013</li>
+		<li>
+			... est poussé par <a href="http://linagora.com">Linagora</a> et 
+			<a href="https://www.ujf-grenoble.fr/">l'Université Joseph Fourier</a>
+		</li>
+	</ul>
+	<br /><br />
+	<p>
+		Le projet se focalise sur des déploiements adaptables (ou élastiques).<br />
+		Il est actuellement utilisé dans le projet <a href="http://open-paas.org/">Open PaaS</a>.
+	</p>
+	<p>
+		Roboconf adresse plusieurs usages possibles.
+	</p>
+</section>
+
+<section>
+	<h3>Déploiement dans le Cloud</h3>
+	<img src="../../resources/img/slides-uc-cloud-deployment.png" alt="Cibles de déploiement dans le cloud" />
+	<p>
+		Roboconf permet des déploiements dans des clouds publics, privés et hybrides.
+		Plusieurs fournisseurs sont supportés, tout comme les plate-formes de virtualisation
+		(telles que VMWare).
+	</p>
+</section>
+
+<section>
+	<h3>Un Framework pour sa propre PaaS</h3>
+	<img src="../../resources/img/slides-uc-paas-framework-fr.png" alt="Build your own PaaS" />
+	<p>
+		Roboconf peut être utilisé pour créer sa propre PaaS. Il sait gérer le déploiement, la supervision
+		et la reconfiguration de potentiellement n'importe quelle application.
+	</p>
+</section>
+
+<section>
+	<h3>Orchestration de Déploiements</h3>
+	<p>
+		Imaginons que l'on veuille orchestrer le déploiement des briques suivantes.
+	</p>
+	<img src="../../resources/img/slides-uc-deployment-orchestration-fr.png" alt="Orchestration des déploiements" />
+	<p>
+		A partir de relations pré-définies entre composants logiciels, Roboconf sait résoudre les dépendances
+		et mettre à jour les fichiers de configuration en conséquence.
+	</p>
+</section>
+
+<section>
+	<h3>Automatisation de Procédures</h3>
+	<p>
+		Pour chaque composant logiciel géré par Roboconf, on peut définir des actions normalisées.
+		C'est ce que l'on appelle des &laquo; recettes &raquo;. Elles peuvent être écrites au travers
+		de scripts, d'un module Puppet...
+	</p>
+	<img src="../../resources/img/slides-uc-automating-procedures.png" alt="Actions pour une recette de Roboconf" />
+	<p>
+		La phase <b>update</b> est particulière à Roboconf. Elle est invoquée lorsqu'une dépendance d'exécution apparaît,
+		est modifiée ou bien supprimée. La reconfiguration est donc gérée automatiquement.
+	</p>
+</section>
+
+<section>
+	<h3>Déploiements Continus</h3>
+	<p>
+		Les déploiements continus sont prévus dans la <i>roadmap</i> de Roboconf.
+	</p>
+	<img src="../../resources/img/slides-uc-continuous-deployment-fr.png" alt="Développer, compiler et tester, déployer ou migrer" />
+	<br /><br />
+	<p>Plusieurs stratégies de migration sont à l'étude.</p>
+	<ul>
+		<li>Mise à jour complète (avec interruption de service).</li>
+		<li>A base d'invariants, pour du développement continu (devOps).</li>
+		<li>Mise à jour progressive (en cas d'évolution de l'architecture).</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Ne PAS réinventer la Roue</h3>
+	<p>
+		Roboconf apporte de la dynamicité à des solutions de déploiement existantes.
+	</p>
+	<img src="../../resources/img/slides-uc-do-not-reinvent-the-wheel-1.png" alt="Puppet, Bash, Docker..." />
+	<br /><br />
+	<p>
+		D'autres solutions sont également envisageables.
+	</p>
+	<img src="../../resources/img/slides-uc-do-not-reinvent-the-wheel-2.png" alt="Chef, CFengine..." />
+</section>
+
+<section>
+	<h3>Travailler avec Roboconf</h3>
+	<img src="../../resources/img/slides-uc-working-with-roboconf-fr.png" alt="
+		1. Définir des composants logiciels et leurs relations (serveurs déployés sur une VM, application qui a besoin d'une base de données...).
+		2. Ecrire (ou réutiliser) des recettes pour les composants logiciels définis auparavant.
+		3. Spécifier des règles et des outils (comme Nagios ou Cacti) pour la supervision.
+	" />
+	<p>
+		Voilà, vous pouvez commencer à déployer avec Roboconf.
+	</p>
+</section>

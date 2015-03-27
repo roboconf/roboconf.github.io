@@ -10,15 +10,18 @@ gems: [ "jemoji" ]
 # Slides.
 ##########################
 slides:
-  - about
-  - project
-  - architecture
-  - concepts
-  - lamp-example
-  - industrial-use-case
-  - configuration-files
-  - tools
-  - links
+  - slides.about
+  - slides.project
+  - slides.architecture
+  - slides.concepts
+  - slides.lamp-example
+  - slides.industrial-use-case
+  - slides.configuration-files
+  - slides.tools
+  - slides.links
+
+uc.slides:
+  - uc.slides.minimal
 
 
 ##########################
@@ -133,7 +136,7 @@ urls:
   
   ug.snapshot.reusable-slides:
     en: user-guide/reusable-slides
-    fr: guide-utilisateur/presentation-reutilisable
+    fr: guide-utilisateur/presentations-reutilisables
   
   ug.snapshot.web-administration-screenshots:
     en: user-guide/web-administration-screenshots
@@ -381,6 +384,14 @@ urls:
     en: developer-guide/developer-guide
     fr: guide-developpeur/guide-developpeur
   
+  
+  #
+  # New and noteworthy
+  #
+  
+  main.download.new-and-noteworthy-0.3:
+    en: new/new-and-noteworthy-0.3
+    fr: nouveautes/nouveautes-principales-0.3
   
   #
   # User Guide - Version 0.2

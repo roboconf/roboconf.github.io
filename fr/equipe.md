@@ -14,4 +14,5 @@ L'équipe de développement de Roboconf est constituée de...
 * Linh-Manh Pham (Université Joseph Fourier)
 * Vincent Zurczak (Linagora) - [@VincentZurczak](https://twitter.com/VincentZurczak) - [Blog (EN)](http://vzurczak.wordpress.com) - [Blog (FR)](http://vzurczak2.wordpress.com)
 
-Un grand merci également à [Romain Pignolet](https://twitter.com/rpignolet) (Linagora), pour les tests et les retours réguliers.
+Un grand merci également à [Romain Pignolet](https://twitter.com/rpignolet) et
+[Yousri Kouki](https://github.com/ykouki) (Linagora), pour les tests et les retours réguliers.
