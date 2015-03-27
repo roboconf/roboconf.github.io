@@ -1,32 +1,32 @@
 ---
-title: "The Bash Plug-in"
+title: "The Script Plug-in"
 layout: page
 id: "ug.snapshot.plugin-logger"
 menus: [ "users", "user-guide" ]
 ---
 
-The Bash plug-in executes a bash script on every life cycle step.  
-It only works under Linux systems.
+The Script plug-in executes a script (eg. bash, shell, perl, python...) on every life cycle step.  
+It is mostly intended for Unix systems, but might run on alternative platforms.
 
-> Bash scripts should explicitly return an error when something goes wrong.  
+> Scripts should explicitly return an error when something goes wrong.  
 > Otherwise, Roboconf will consider everything run fine even if the script encountered errors.  
   
-This plug-in is associated with the **bash** installer name.
+This plug-in is associated with the **script** installer name.
 
 	Component_Y {
-		installer: bash;
+		installer: script;
 	}
 
 Here is the way this plug-in works.  
 In the next lines, *action* is one of **deploy**, **start**, **update**, **stop** or **undeploy**. 
 
-* The plug-in will load **scripts/action.sh**
-* If it is not found, it will try to load **templates/action.sh.template**
-* If it is not found, it will try to load **templates/default.sh.template**
+* The plug-in will load **scripts/action*** (when multiple file names start with the action's name, the 1st one found will be used, so the result may be unpredictable: in such case, a warning message will be logged by Roboconf).
+* If it is not found, it will try to load **templates/action.template**
+* If it is not found, it will try to load **templates/default.template**
 * If it is not found, the plug-in will do nothing.
 
-Templates use [Mustache](http://mustache.github.io/) to generate a concrete bash script before executing it.  
-**default.sh.template** is the template that will be used for all the steps which do not have their own
+Templates use [Mustache](http://mustache.github.io/) to generate a concrete script before executing it.  
+**default.template** is the template that will be used for all the steps which do not have their own
 script or template.
 
 All the templates can use import variables.  
@@ -34,7 +34,7 @@ These variables will be inserted by Roboconf.
 
 # Action script and parameters
 
-Parameters are passed to action scripts (eg. start.sh, update.sh ...) using environment variables, that respect naming conventions.
+Parameters are passed to action scripts (eg. start.sh, stop.py, update.perl ...) using environment variables, that respect naming conventions.
 
 ## Global environment-related variables
 
