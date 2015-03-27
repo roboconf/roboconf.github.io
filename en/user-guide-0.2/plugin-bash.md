@@ -1,7 +1,7 @@
 ---
 title: "The Bash Plug-in"
 layout: page
-id: "ug.0.2.plugin-logger"
+id: "ug.0.2.plugin-bash"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

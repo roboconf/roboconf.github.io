@@ -93,7 +93,7 @@ menus: [ "users", "user-guide" ]
 
 	<ul>
 	<li><a href="plugins.html">Roboconf Plug-ins</a></li>
-	<li><a href="plugin-bash.html">The Bash Plug-in</a></li>
+	<li><a href="plugin-script.html">The Script Plug-in</a></li>
 	<li><a href="plugin-puppet.html">The Puppet Plug-in</a></li>
 	<li><a href="plugin-file.html">The File Plug-in</a></li>
 	<li><a href="plugin-logger.html">The Logger Plug-in</a></li>

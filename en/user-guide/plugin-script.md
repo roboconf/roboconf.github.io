@@ -1,11 +1,11 @@
 ---
 title: "The Script Plug-in"
 layout: page
-id: "ug.snapshot.plugin-logger"
+id: "ug.snapshot.plugin-script"
 menus: [ "users", "user-guide" ]
 ---
 
-The Script plug-in executes a script (eg. bash, shell, perl, python...) on every life cycle step.  
+The Script plug-in executes a script (e.g. bash, shell, perl, python...) on every life cycle step.  
 It is mostly intended for Unix systems, but might run on alternative platforms.
 
 > Scripts should explicitly return an error when something goes wrong.  

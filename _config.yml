@@ -204,8 +204,8 @@ urls:
   ug.snapshot.plugin-file:
     en: user-guide/plugin-file
   
-  ug.snapshot.plugin-bash:
-    en: user-guide/plugin-bash
+  ug.snapshot.plugin-script:
+    en: user-guide/plugin-script
   
   ug.snapshot.plugin-puppet:
     en: user-guide/plugin-puppet
