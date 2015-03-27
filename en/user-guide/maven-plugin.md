@@ -78,19 +78,28 @@ The plug-in has the following goals.
 ### initialize
 
 This goal configures the project (model directory, build output).  
-It has no parameter. 
+It has no parameter. Users are not supposed to invoke this goal manually.
 
 
 ### validate-project
 
 This goal validates the project's structure.  
-It has no parameter.
+It has no parameter. Users are not supposed to invoke this goal manually.
 
 
 ### validate-application
 
-This goal validates the Roboconf application.  
-It accepts the following parameters.
+This goal validates the Roboconf application.
+
+```tcl
+# To use it...
+mvn validate
+
+# ... or the verbose way...
+mvn roboconf:validate-application
+```
+  
+Its configuration accepts the following parameters.
 
 | Name | Type | Required | Default | Since | Description |
 | ---- | ---- | -------- | ------- | ----- | ----------- |
@@ -103,6 +112,14 @@ It accepts the following parameters.
 This goal packages a Roboconf application as a ZIP file.  
 It has no parameter.
 
+```tcl
+# To use it...
+mvn package
+
+# ... or the verbose way...
+mvn roboconf:package
+```
+
 
 ## documentation
 
@@ -110,6 +127,11 @@ This goal generates documentation from the configuration files.
 Documentation includes text documents and images (as PNG files). It lists all the components
 of the application and their relations. Generated documents can be used by people in charge production
 environments, as well as for maintenance teams.
+
+```tcl
+# To use it...
+mvn roboconf:documentation
+```
 
 It accepts the following parameters.
 
@@ -126,6 +148,7 @@ Available options for the documentation generator.
 | img.background.color | String | #ffffff | 0.3 | The background color for generated images. |
 | img.foreground.color | String | #b23e4b | 0.3 | The foreground (font) color for generated images. |
 | img.highlight.bg.color | String | #f3df20 | 0.3 | The background color for components to highlight in the generated images. |
+| recipe | String | - | 0.3 | Generate documentation for a recipe and not for a complete application. Enabled as soon as it is present (no matter its value). |
 | html.exploded | String | - | 0.3 | Option for the HTML renderer. When this option is present (no matter its value), the output HTML is split into several files instead of a single one. |
 | html.css.file | String | - | 0.3 | Option for the HTML renderer. It specifies the location of a CSS file to replace the default one. |
 | html.css.reference | String | - | 0.3 | Option for the HTML renderer. It specifies the URL of a CSS file to reference in the generated HTML files. |
@@ -144,3 +167,7 @@ and **toto_fr_FR.summary.txt** under **src/main/doc**.
 It will be added at the beginning of a component's description. You can also add information at the end of its dedicated section by
 using **extra.txt** files. As an example, if you want to add a warning or a caution section, you can add **toto.extra.txt**, **toto_en_US.extra.txt**
 or **toto_fr_FR.extra.txt** under **src/main/doc**.
+
+For recipes, information ca be specified for facets.  
+To document a facet, create a file called *your-facet-name*.**facet.txt**. As usual, when you want to specify a locale, add it as a suffix
+(your-facet-name**_en_US.facet.txt**).
