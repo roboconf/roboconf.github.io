@@ -12,10 +12,10 @@ Roboconf has a target implementation to run agents in memory.
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.2 (with its dependencies)
-bundle:install mvn:net.roboconf/roboconf-plugin-api/0.2
-bundle:install mvn:net.roboconf/roboconf-agent/0.2
-bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/0.2
+# Here in version 0.3 (with its dependencies)
+bundle:install mvn:net.roboconf/roboconf-plugin-api/0.3
+bundle:install mvn:net.roboconf/roboconf-agent/0.3
+bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/0.3
 bundle:start <bundle-id1> <bundle-id2> <bundle-id3>
 ```
 
