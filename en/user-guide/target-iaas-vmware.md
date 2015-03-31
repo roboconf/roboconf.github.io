@@ -11,8 +11,8 @@ It only supports the creation of *compute* VMs.
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.2
-bundle:install mvn:net.roboconf/roboconf-target-iaas-vmware/0.2
+# Here in version 0.3
+bundle:install mvn:net.roboconf/roboconf-target-iaas-vmware/0.3
 bundle:start <bundle-id>
 ```
 
