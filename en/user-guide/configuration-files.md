@@ -62,7 +62,6 @@ application-name = MyApp
 application-qualifier = sample
 application-description = A sample application
 
-application-namespace = net.roboconf
 application-dsl-id = roboconf-1.0
 
 graph-entry-point = main.graph

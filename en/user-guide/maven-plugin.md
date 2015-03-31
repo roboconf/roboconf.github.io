@@ -78,24 +78,27 @@ The plug-in has the following goals.
 ### initialize
 
 This goal configures the project (model directory, build output).  
-It has no parameter. Users are not supposed to invoke this goal manually.
+It has no parameter.
+
+Users are not supposed to invoke this goal manually.  
+It is part of the default life cycle for **roboconf-app** projects.
 
 
 ### validate-project
 
 This goal validates the project's structure.  
-It has no parameter. Users are not supposed to invoke this goal manually.
+It has no parameter.
+
+Users are not supposed to invoke this goal manually.  
+It is part of the default life cycle for **roboconf-app** projects.
 
 
 ### validate-application
 
-This goal validates the Roboconf application.
+This goal validates the Roboconf application.  
+It is part of the default life cycle for **roboconf-app** projects. You can also invoke it manually.
 
 ```tcl
-# To use it...
-mvn validate
-
-# ... or the verbose way...
 mvn roboconf:validate-application
 ```
   
@@ -112,11 +115,16 @@ Its configuration accepts the following parameters.
 This goal packages a Roboconf application as a ZIP file.  
 It has no parameter.
 
-```tcl
-# To use it...
-mvn package
+It is part of the default life cycle for **roboconf-app** projects. You can also invoke it manually.
 
-# ... or the verbose way...
+```tcl
+mvn package
+```
+
+... or the verbose way...
+
+
+``tcl
 mvn roboconf:package
 ```
 
@@ -128,8 +136,9 @@ Documentation includes text documents and images (as PNG files). It lists all th
 of the application and their relations. Generated documents can be used by people in charge production
 environments, as well as for maintenance teams.
 
+This goal must be invoked explicitly.
+
 ```tcl
-# To use it...
 mvn roboconf:documentation
 ```
 
@@ -170,4 +179,4 @@ or **toto_fr_FR.extra.txt** under **src/main/doc**.
 
 For recipes, information ca be specified for facets.  
 To document a facet, create a file called *your-facet-name*.**facet.txt**. As usual, when you want to specify a locale, add it as a suffix
-(your-facet-name**_en_US.facet.txt**).
+(your-facet-name\_**en_US.facet.txt**).

@@ -57,7 +57,7 @@ The kind of resources to put depends on the plug-in.
 will contain a Puppet module.
 * If it uses the **bash** installer, then it will contain bash scripts.
 * Plug-ins are extensions for Roboconf. So, you can imagine various plug-ins.  
-Roboconf plug-ins are discussed more in details [here](plugins.html).
+Roboconf plug-ins are discussed more in details [here](about-plugins.html).
 
 > Writing the plug-in configurations is what takes most of the time.  
 > Roboconf's roadmap includes a Maven plug-in so that people will be able to reuse graph model and resources

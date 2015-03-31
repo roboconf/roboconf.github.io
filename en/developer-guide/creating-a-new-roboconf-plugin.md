@@ -7,7 +7,7 @@ menus: [ "developers", "developer-guide" ]
 
 A Roboconf plug-in is an extension for a Roboconf agent.  
 Currently available plug-ins include **Bash**, **Puppet** and **Logger**.
-You may want to read [this page](../user-guide/plugins.html) to refresh your memories.
+You may want to read [this page](../user-guide/about-plugins.html) to refresh your memories.
 
 A Roboconf plug-in is an OSGi bundle with specific meta-data.  
 Roboconf uses [iPojo](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) to simplify OSGi development. 

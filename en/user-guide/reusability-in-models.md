@@ -1,11 +1,12 @@
 ---
-title: "Reusability"
+title: "Reusability in Models"
 layout: page
-id: "ug.snapshot.reusability"
+id: "ug.snapshot.reusability-in-models"
 menus: [ "users", "user-guide" ]
 ---
 
-This page explains several ways of creating reusable recipes and Software descriptions.  
+This page explains several ways of creating reusable graph portions.  
+It is quite helpful to use and write reusable recipes.
 As a user, it is convenient to not have to write ALL your application description, and ALL
 the recipes. Roboconf has solutions to ease reusability.
 
@@ -86,11 +87,11 @@ import file-name;
 import dir1/dir2/file-name;
 ```
 
-Remote imports will be defined as follows...
+Remote imports are only handled through the Roboconf Maven plug-in.
 
 ```
-import application-namespace/file-name;
-import application-namespace/dir1/dir2/file-name;
+import application-artifact-id/file-name;
+import application-artifact-id/dir1/dir2/file-name;
 ```
 
 
@@ -100,7 +101,7 @@ If an application part (graph definition + recipe) aims at being reusable,
 there are some good practices to promote them and ease their reuse.
 
 1. Create a dedicated application / Maven module.
-2. Choose significant **name** and **namespace** values.
+2. Choose a significant artifact ID.
 
 
 ## Use Facets
@@ -111,7 +112,7 @@ They allow to draw links between graph components very easily.
 An example will be easier to understand.  
 Let's assume with a first application that defines a load balancer based on Apache and ModJK.  
 Let's call this project **load-balancer--puppet--apache-mod-jk**. This is also the application's name.
-Let's assume the application's name space is **net.roboconf**.
+Let's assume the application's artifact ID is **load-balancer--puppet--apache-mod-jk**.
 
 ```
 lb--apache-mod-jk--puppet {
@@ -134,7 +135,7 @@ Now, let's assume I have another project in which I want to reuse a load balance
 Here is how we would proceed (assuming the Roboconf's Maven plug-in can resolve dependencies).
 
 ```
-import net.roboconf/load-balancer--puppet--apache-mod-jk.graph;
+import load-balancer--puppet--apache-mod-jk/main.graph;
 
 my-application {
 	installer: bash;
@@ -155,6 +156,15 @@ Roboconf will draw the right links between components just with these declaratio
 Reusable parts can be shared inside our community.  
 But it is also possible to define its own reusable parts (e.g. in a company that would like to enforce
 some practices and configurations). There is quite a lot of possibilities offered by this system.
+
+
+## Sharing
+
+Roboconf recipes can be defined and maintained anywhere.  
+Official recipes are hosted on [Github](http://github.com/roboconf-recipes), every recipe having its own Git repository.
+
+It is up to you to determine whether you want to use them, create new ones, or even, create your own recipe repository.
+This is indeed an option some organizations may retain.
 
 
 ## About Maven

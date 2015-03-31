@@ -8,16 +8,10 @@ menus: [ "project", "roadmap" ]
 Roboconf started as a Research prototype and is now under industrialization.  
 The roadmap for the next months covers several aspects.
 
+<!-- 
+	 &nbsp; <span class="glyphicon glyphicon-ok"></span>
+-->
 
-* **From February 2015**
-
-	* Improve performances with IaaS deployments. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Add support for Roboconf's DSL in Atom.io. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Create documentation generators. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Complete the Maven plug-in for reusability purpose.
-	* Setup a repository of reusable recipes and components. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Add monitoring support to Roboconf with Nagios.
-	* Simplify the installation of Roboconf.
 	
 * **From April 2015**
 
@@ -25,11 +19,13 @@ The roadmap for the next months covers several aspects.
 	* Rework the web administration.
 	* Support place holders for environment switch.
 	* Complete support in Eclipse and other editors.
-	* Study TOSCA support.
 	* Support Apache QPID as the messaging server.
+	* Add monitoring support to Roboconf with Nagios.
+	* Simplify the installation of Roboconf.
 		
 * **After June 2015**
 
+	* Study TOSCA support.
 	* Add support to execute user scenarios.	
 	* Support applications migration (continuous deployment).
 	* Create a Jenkins plugin.
@@ -42,4 +38,4 @@ The roadmap for the next months covers several aspects.
     * Implement a Puppet plug-in for Puppet masters.
     * Implement an ANT plug-in.
 
-Roboconf 0.3 will be released on March 31<sup>st</sup>.
+Roboconf 0.4 will be released on June, 16<sup>st</sup>.

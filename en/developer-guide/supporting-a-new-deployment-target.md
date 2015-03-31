@@ -7,7 +7,7 @@ menus: [ "developers", "developer-guide" ]
 
 A deployment target designates a platform or a solution on which Roboconf can deploy Software.  
 Currently available targets include cloud infrastructures (Amazon Web Services, Openstack...), **Docker**, etc.
-You may want to read [this page](../user-guide/target-support.html) to refresh your memories.
+You may want to read [this page](../user-guide/about-target-support.html) to refresh your memories.
 
 A deployment target is supported though an OSGi bundle with specific meta-data.  
 Roboconf uses [iPojo](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) to simplify OSGi development. 

@@ -59,7 +59,16 @@ menus: [ "users", "user-guide" ]
 	<li><a href="graph-resources.html">The Graph Resources</a></li>
 	<li><a href="instances-description.html">The Instances</a></li>
 	<li><a href="roboconf-dsl.html">Roboconf DSL</a></li>
-	<li><a href="reusability.html">Reusability</a></li>
+	</ul>
+</div>
+
+<div class="floated">
+	<h2>Reusability</h2>
+
+	<ul>
+	<li><a href="reusability-in-models.html">Reusability in Models</a></li>
+	<li><a href="reusable-recipes-index.html">Index of Reusable Recipes</a></li>
+	<li><a href="how-to-write-reusable-recipes.html">How to write reusable recipes?</a></li>
 	</ul>
 </div>
 
@@ -76,27 +85,17 @@ menus: [ "users", "user-guide" ]
 	<li><a href="autonomic-management-with-roboconf.html">Autonomic Management</a></li>
 	</ul>
 </div>
-
-
 	
 <div class="floated">
-	<h2>Deployment Targets</h2>
+	<h2>Targets &amp; Plugins</h2>
 
 	<ul>
-	<li><a href="target-support.html">Target Support</a></li>
+	<li><a href="about-target-support.html">About Target Support</a></li>
 	<li><a href="list-of-deployment-targets.html">List of Deployment Targets</a></li>
 	</ul>
-</div>
-
-<div class="floated">
-	<h2>Plug-ins</h2>
-
 	<ul>
-	<li><a href="plugins.html">Roboconf Plug-ins</a></li>
-	<li><a href="plugin-script.html">The Script Plug-in</a></li>
-	<li><a href="plugin-puppet.html">The Puppet Plug-in</a></li>
-	<li><a href="plugin-file.html">The File Plug-in</a></li>
-	<li><a href="plugin-logger.html">The Logger Plug-in</a></li>
+	<li><a href="about-plugins.html">About Roboconf Plug-ins</a></li>
+	<li><a href="list-of-plugins.html">List of Roboconf Plug-ins</a></li>
 	</ul>
 </div>
 

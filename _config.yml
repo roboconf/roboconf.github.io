@@ -104,8 +104,14 @@ urls:
   ug.snpashot.maven-plugin:
     en: user-guide/maven-plugin
   
-  ug.snpashot.reusability:
-    en: user-guide/reusability
+  ug.snpashot.reusability-in-models:
+    en: user-guide/reusability-in-models
+    
+  ug.snpashot.reusable-recipes-index:
+    en: user-guide/reusable-recipes-index
+  
+  ug.snpashot.how-to-write-reusable-recipes:
+    en: user-guide/how-to-write-reusable-recipes
   
   ug.snapshot.tutorial-getting-started-with-roboconf:
     en: user-guide/tutorial-getting-started-with-roboconf
@@ -165,8 +171,8 @@ urls:
   ug.snapshot.preparing-virtual-images-with-an-agent:
     en: user-guide/preparing-virtual-images-with-an-agent
   
-  ug.snapshot.target-support:
-    en: user-guide/target-support
+  ug.snapshot.about-target-support:
+    en: user-guide/about-target-support
   
   ug.snapshot.list-of-deployment-targets:
     en: user-guide/list-of-deployment-targets
@@ -195,8 +201,11 @@ urls:
   ug.snapshot.target-in-memory:
     en: user-guide/target-in-memory
   
-  ug.snapshot.plugins:
-    en: user-guide/plugins
+  ug.snapshot.about-plugins:
+    en: user-guide/about-plugins
+  
+  ug.snapshot.list-of-plugins:
+    en: user-guide/list-of-plugins
   
   ug.snapshot.plugin-logger:
     en: user-guide/plugin-logger
