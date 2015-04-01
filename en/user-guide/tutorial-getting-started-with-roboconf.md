@@ -1,7 +1,8 @@
 ---
 title: "Tutorial - Getting Started with Roboconf"
 layout: page
-id: "ug.snapshot.tutorial-getting-started-with-roboconf"
+cat: "ug-snapshot"
+id: "tutorial-getting-started-with-roboconf"
 menus: [ "users", "user-guide" ]
 ---
 

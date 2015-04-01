@@ -1,7 +1,8 @@
 ---
 title: "Application Descriptor"
 layout: page
-id: "ug.snapshot.application-descriptor"
+cat: "ug-snapshot"
+id: "application-descriptor"
 menus: [ "users", "user-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Source Code"
 layout: page
-id: "main.sources"
+cat: "main"
+id: "sources"
 menus: [ "developers", "sources" ]
 ---
 

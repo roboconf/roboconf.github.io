@@ -1,7 +1,8 @@
 ---
 title: "Roboconf's Eclipse plug-in"
 layout: page
-id: "ug.0.2.eclipse-plugin"
+cat: "ug-0-2"
+id: "eclipse-plugin"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

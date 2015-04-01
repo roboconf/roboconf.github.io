@@ -1,7 +1,8 @@
 ---
 title: "Télécharger"
 layout: page
-id: "main.download"
+cat: "main"
+id: "download"
 menus: [ "users", "download" ]
 ---
 

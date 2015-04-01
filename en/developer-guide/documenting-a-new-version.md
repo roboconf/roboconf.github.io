@@ -1,7 +1,8 @@
 ---
 title: "Documenting a New Version"
 layout: page
-id: "dg.snapshot.documenting-a-new-version"
+cat: "dg-snapshot"
+id: "documenting-a-new-version"
 menus: [ "developers", "developer-guide" ]
 ---
 

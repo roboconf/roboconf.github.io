@@ -1,7 +1,8 @@
 ---
 title: "Roboconf Architecture"
 layout: page
-id: "ug.snapshot.roboconf-architecture"
+cat: "ug-snapshot"
+id: "roboconf-architecture"
 menus: [ "users", "user-guide" ]
 ---
 

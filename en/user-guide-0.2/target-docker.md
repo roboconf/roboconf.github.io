@@ -1,7 +1,8 @@
 ---
 title: "Docker Support"
 layout: page
-id: "ug.0.2.target-docker"
+cat: "ug-0-2"
+id: "target-docker"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

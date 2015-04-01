@@ -1,7 +1,8 @@
 ---
 title: "Maven Examples for the &laquo; documentation &raquo; goal"
 layout: page
-id: "ug.snapshot.maven-examples-documentation"
+cat: "ug-snapshot"
+id: "maven-examples-documentation"
 menus: [ "users", "user-guide" ]
 ---
 

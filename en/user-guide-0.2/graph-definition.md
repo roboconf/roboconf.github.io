@@ -1,7 +1,8 @@
 ---
 title: "Graph Definition"
 layout: page
-id: "ug.0.2.graph-definition"
+cat: "ug-0-2"
+id: "graph-definition"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

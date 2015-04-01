@@ -1,7 +1,8 @@
 ---
 title: "Editors"
 layout: page
-id: "ug.snapshot.editors"
+cat: "ug-snapshot"
+id: "editors"
 menus: [ "users", "user-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "The Logger Plug-in"
 layout: page
-id: "ug.snapshot.plugin-logger"
+cat: "ug-snapshot"
+id: "plugin-logger"
 menus: [ "users", "user-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Configuration Files"
 layout: page
-id: "ug.snapshot.configuration-files"
+cat: "ug-snapshot"
+id: "configuration-files"
 menus: [ "users", "user-guide" ]
 ---
 

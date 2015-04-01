@@ -1,7 +1,8 @@
 ---
 title: "Monitoring"
 layout: page
-id: "ug.0.1.monitoring"
+cat: "ug-0-1"
+id: "monitoring"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

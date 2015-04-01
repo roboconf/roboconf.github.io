@@ -1,7 +1,8 @@
 ---
 title: "How to write Reusable Recipes?"
 layout: page
-id: "ug.snapshot.how-to-write-reusable-recipes"
+cat: "ug-snapshot"
+id: "how-to-write-reusable-recipes"
 menus: [ "users", "user-guide" ]
 ---
 

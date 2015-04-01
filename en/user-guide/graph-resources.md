@@ -1,7 +1,8 @@
 ---
 title: "Graph Resources"
 layout: page
-id: "ug.snapshot.graph-resources"
+cat: "ug-snapshot"
+id: "graph-resources"
 menus: [ "users", "user-guide" ]
 ---
 

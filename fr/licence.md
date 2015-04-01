@@ -1,7 +1,8 @@
 ---
 title: "Licence"
 layout: page
-id: "main.license"
+cat: "main"
+id: "license"
 menus: [ "project", "license" ]
 ---
 

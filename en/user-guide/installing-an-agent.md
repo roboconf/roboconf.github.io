@@ -1,7 +1,8 @@
 ---
 title: "Installing an Agent"
 layout: page
-id: "ug.snapshot.installing-an-agent"
+cat: "ug-snapshot"
+id: "installing-an-agent"
 menus: [ "users", "user-guide" ]
 ---
 

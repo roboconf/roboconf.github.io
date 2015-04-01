@@ -1,0 +1,163 @@
+#
+  # User Guide - Version 0.2
+  #
+roboconf-architecture:
+  en: user-guide-0.2/roboconf-architecture
+  
+configuring-the-web-consoles:
+  en: user-guide-0.2/configuring-the-web-consoles
+  
+eclipse-plugin:
+  en: user-guide-0.2/eclipse-plugin
+
+maven-plugin:
+  en: user-guide-0.2/maven-plugin
+  
+reusability:
+  en: user-guide-0.2/reusability
+  
+tutorial-getting-started-with-roboconf:
+  en: user-guide-0.2/tutorial-getting-started-with-roboconf
+  
+autonomic-management-with-roboconf:
+  en: user-guide-0.2/autonomic-management-with-roboconf
+  
+tutorial-first-deployment-in-the-cloud:
+  en: user-guide-0.2/tutorial-first-deployment-in-the-cloud
+  
+tutorial-first-deployment-in-the-cloud-1:
+  en: user-guide-0.2/tutorial-first-deployment-in-the-cloud-1
+  
+tutorial-first-deployment-in-the-cloud-2:
+  en: user-guide-0.2/tutorial-first-deployment-in-the-cloud-2
+  
+tutorial-first-deployment-in-the-cloud-3:
+  en: user-guide-0.2/tutorial-first-deployment-in-the-cloud-3
+  
+tutorial-first-deployment-in-the-cloud-4:
+  en: user-guide-0.2/tutorial-first-deployment-in-the-cloud-4
+  
+reusable-slides:
+  en: user-guide-0.2/reusable-slides
+  
+web-administration-screenshots:
+  en: user-guide-0.2/web-administration-screenshots
+  
+configuring-the-loggers:
+  en: user-guide-0.2/configuring-the-loggers
+  
+installing-everything:
+  en: user-guide-0.2/installing-everything
+  
+installing-the-deployment-manager:
+  en: user-guide-0.2/installing-the-deployment-manager
+  
+installing-an-agent:
+  en: user-guide-0.2/installing-an-agent
+  
+configuring-the-deployment-manager:
+  en: user-guide-0.2/configuring-the-deployment-manager
+  
+configuring-an-agent:
+  en: user-guide-0.2/configuring-an-agent
+  
+installing-the-messaging-server:
+  en: user-guide-0.2/installing-the-messaging-server
+  
+preparing-virtual-images-with-an-agent:
+  en: user-guide-0.2/preparing-virtual-images-with-an-agent
+  
+target-support:
+  en: user-guide-0.2/target-support
+  
+list-of-deployment-targets:
+  en: user-guide-0.2/list-of-deployment-targets
+  
+target-iaas-openstack:
+  en: user-guide-0.2/target-iaas-openstack
+  
+target-jclouds:
+  en: user-guide-0.2/target-jclouds
+  
+target-docker:
+  en: user-guide-0.2/target-docker
+  
+target-embedded:
+  en: user-guide-0.2/target-embedded
+  
+target-iaas-aws:
+  en: user-guide-0.2/target-iaas-aws
+  
+target-iaas-vmware:
+  en: user-guide-0.2/target-iaas-vmware
+  
+target-iaas-azure:
+  en: user-guide-0.2/target-iaas-azure
+  
+target-in-memory:
+  en: user-guide-0.2/target-in-memory
+  
+plugins:
+  en: user-guide-0.2/plugins
+  
+plugin-logger:
+  en: user-guide-0.2/plugin-logger
+  
+plugin-file:
+  en: user-guide-0.2/plugin-file
+  
+plugin-bash:
+  en: user-guide-0.2/plugin-bash
+  
+plugin-puppet:
+  en: user-guide-0.2/plugin-puppet
+  
+roboconf-dsl:
+  en: user-guide-0.2/roboconf-dsl
+  
+monitoring-roboconf:
+  en: user-guide-0.2/monitoring-roboconf
+  
+monitoring-applications-deployed-with-roboconf:
+  en: user-guide-0.2/monitoring-applications-deployed-with-roboconf
+  
+editors:
+  en: user-guide-0.2/editors
+  
+configuration-files:
+  en: user-guide-0.2/configuration-files
+  
+faq:
+  en: user-guide-0.2/faq
+  
+roboconf-concepts:
+  en: user-guide-0.2/roboconf-concepts
+  
+application-descriptor:
+  en: user-guide-0.2/application-descriptor
+  
+instances-description:
+  en: user-guide-0.2/instances-description
+  
+graph-definition:
+  en: user-guide-0.2/graph-definition
+  
+graph-resources:
+  en: user-guide-0.2/graph-resources
+  
+web-administration:
+  en: user-guide-0.2/web-administration
+  
+lamp-example-part-1:
+  en: user-guide-0.2/lamp-example-part-1
+  
+lamp-example-part-2:
+  en: user-guide-0.2/lamp-example-part-2
+  
+index:
+  en: user-guide-0.2/user-guide
+  fr: guide-utilisateur-0.2/guide-utilisateur
+  
+working-with-roboconf:
+  en: user-guide-0.2/working-with-roboconf
+  

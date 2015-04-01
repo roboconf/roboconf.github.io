@@ -1,7 +1,8 @@
 ---
 title: "Working with Roboconf"
 layout: page
-id: "ug.snapshot.working-with-roboconf"
+cat: "ug-snapshot"
+id: "working-with-roboconf"
 menus: [ "users", "user-guide" ]
 ---
 

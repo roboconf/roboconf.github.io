@@ -1,7 +1,8 @@
 ---
 title: "JClouds Support"
 layout: page
-id: "ug.snapshot.target-jclouds"
+cat: "ug-snapshot"
+id: "target-jclouds"
 menus: [ "users", "user-guide" ]
 ---
 

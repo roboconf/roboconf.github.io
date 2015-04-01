@@ -1,32 +1,32 @@
 
 <ul>
 	<li{% if page.menus[1] == "news" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.news'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['news'][include.locale] }}.html">
 		{{ site.locales[locale].s-menu-news }}</a>
 	</li>
 	
 	<li{% if page.menus[1] == "what-is-roboconf" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.what-is-roboconf'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['what-is-roboconf'][include.locale] }}.html">
 		{{ site.locales[locale].s-menu-what-is-roboconf }}</a>
 	</li>
 	
 	<li{% if page.menus[1] == "roadmap" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.roadmap'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['roadmap'][include.locale] }}.html">
 		{{ site.locales[locale].s-menu-roadmap }}</a>
 	</li>
 	
 	<li{% if page.menus[1] == "events" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.events'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['events'][include.locale] }}.html">
 		{{ site.locales[locale].s-menu-events }}</a>
 	</li>
 	
 	<li{% if page.menus[1] == "projects" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.projects'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['projects'][include.locale] }}.html">
 		{{ site.locales[locale].s-menu-projects }}</a>
 	</li>
 	
 	<li{% if page.menus[1] == "license" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.license'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['license'][include.locale] }}.html">
 		{{ site.locales[locale].s-menu-license }}</a>
 	</li>
 </ul>

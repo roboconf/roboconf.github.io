@@ -1,7 +1,8 @@
 ---
 title: "The iPojo Model"
 layout: page
-id: "dg.snapshot.ipojo-model"
+cat: "dg-snapshot"
+id: "ipojo-model"
 menus: [ "developers", "developer-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Installing the Messaging Server"
 layout: page
-id: "ug.snapshot.installing-the-messaging-server"
+cat: "ug-snapshot"
+id: "installing-the-messaging-server"
 menus: [ "users", "user-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "The Puppet Plug-in"
 layout: page
-id: "ug.0.1.plugin-puppet"
+cat: "ug-0-1"
+id: "plugin-puppet"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

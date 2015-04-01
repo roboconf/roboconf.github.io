@@ -1,7 +1,8 @@
 ---
 title: "Graph Resources"
 layout: page
-id: "ug.0.2.graph-resources"
+cat: "ug-0-2"
+id: "graph-resources"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

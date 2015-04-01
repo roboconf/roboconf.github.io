@@ -1,7 +1,8 @@
 ---
 title: "Openstack Support"
 layout: page
-id: "ug.0.2.target-iaas-openstack"
+cat: "ug-0-2"
+id: "target-iaas-openstack"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

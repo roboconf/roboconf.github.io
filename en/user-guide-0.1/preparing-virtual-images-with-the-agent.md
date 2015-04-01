@@ -1,7 +1,8 @@
 ---
 title: "Preparing Virtual Images with the Agent"
 layout: page
-id: "ug.0.1.preparing-virtual-images-with-the-agent"
+cat: "ug-0-1"
+id: "preparing-virtual-images-with-the-agent"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

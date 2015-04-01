@@ -1,7 +1,8 @@
 ---
 title: "Installing Everything"
 layout: page
-id: "ug.snapshot.installing-everything"
+cat: "ug-snapshot"
+id: "installing-everything"
 menus: [ "users", "user-guide" ]
 ---
 

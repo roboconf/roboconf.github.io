@@ -1,7 +1,8 @@
 ---
 title: "The File Plug-in"
 layout: page
-id: "ug.snapshot.plugin-file"
+cat: "ug-snapshot"
+id: "plugin-file"
 menus: [ "users", "user-guide" ]
 ---
 

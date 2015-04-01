@@ -1,0 +1,109 @@
+#
+# User Guide Version 0.1
+#
+reusable-slides:
+  en: user-guide-0.1/reusable-slides
+  
+web-administration-screenshots:
+  en: user-guide-0.1/web-administration-screenshots
+  
+troubles-installation:
+  en: user-guide-0.1/troubles-installation
+  
+installing-the-deployment-manager:
+  en: user-guide-0.1/installing-the-deployment-manager
+  
+configuring-the-deployment-manager:
+  en: user-guide-0.1/configuring-the-deployment-manager
+  
+installing-the-messaging-server:
+  en: user-guide-0.1/installing-the-messaging-server
+  
+launching-the-web-administration:
+  en: user-guide-0.1/launching-the-web-administration
+  
+preparing-virtual-images-with-the-agent:
+  en: user-guide-0.1/preparing-virtual-images-with-the-agent
+  
+iaas-support:
+  en: user-guide-0.1/iaas-support
+  
+iaas-openstack:
+  en: user-guide-0.1/iaas-openstack
+  
+iaas-embedded:
+  en: user-guide-0.1/iaas-embedded
+  
+iaas-aws:
+  en: user-guide-0.1/iaas-aws
+  
+iaas-vmware:
+  en: user-guide-0.1/iaas-vmware
+  
+iaas-azure:
+  en: user-guide-0.1/iaas-azure
+  
+iaas-localhost:
+  en: user-guide-0.1/iaas-localhost
+  
+plugins:
+  en: user-guide-0.1/plugins
+  
+plugin-logger:
+  en: user-guide-0.1/plugin-logger
+  
+plugin-bash:
+  en: user-guide-0.1/plugin-bash
+  
+plugin-puppet:
+  en: user-guide-0.1/plugin-puppet
+  
+roboconf-dsl:
+  en: user-guide-0.1/roboconf-dsl
+  
+monitoring-roboconf:
+  en: user-guide-0.1/monitoring-roboconf
+  
+monitoring-applications-deployed-with-roboconf:
+  en: user-guide-0.1/monitoring-applications-deployed-with-roboconf
+  
+editors:
+  en: user-guide-0.1/editors
+  
+configuration-files:
+  en: user-guide-0.1/configuration-files
+  
+faq:
+  en: user-guide-0.1/faq
+  
+roboconf-concepts:
+  en: user-guide-0.1/roboconf-concepts
+  
+application-descriptor:
+  en: user-guide-0.1/application-descriptor
+  
+instances-description:
+  en: user-guide-0.1/instances-description
+  
+graph-definition:
+  en: user-guide-0.1/graph-definition
+  
+graph-resources:
+  en: user-guide-0.1/graph-resources
+  
+web-administration:
+  en: user-guide-0.1/web-administration
+  
+lamp-example-part-1:
+  en: user-guide-0.1/lamp-example-part-1
+  
+lamp-example-part-2:
+  en: user-guide-0.1/lamp-example-part-2
+  
+working-with-roboconf:
+  en: user-guide-0.1/working-with-roboconf
+  
+index:
+  en: user-guide-0.1/user-guide
+  fr: guide-utilisateur-0.1/guide-utilisateur
+ 

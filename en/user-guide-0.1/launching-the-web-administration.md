@@ -1,7 +1,8 @@
 ---
 title: "Launching the Web Administration"
 layout: page
-id: "ug.0.1.launching-the-web-administration"
+cat: "ug-0-1"
+id: "launching-the-web-administration"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

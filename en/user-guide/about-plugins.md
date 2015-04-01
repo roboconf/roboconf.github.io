@@ -1,7 +1,8 @@
 ---
 title: "About Roboconf Plug-ins"
 layout: page
-id: "ug.snapshot.about-plugins"
+cat: "ug-snapshot"
+id: "about-plugins"
 menus: [ "users", "user-guide" ]
 ---
 

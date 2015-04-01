@@ -1,7 +1,8 @@
 ---
 title: "Roboconf's Maven plug-in"
 layout: page
-id: "ug.0.2.maven-plugin"
+cat: "ug-0-2"
+id: "maven-plugin"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

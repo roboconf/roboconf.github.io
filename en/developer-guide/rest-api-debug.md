@@ -1,7 +1,8 @@
 ---
 title: "The Debug REST API"
 layout: page
-id: "dg.snapshot.rest-api-debug"
+cat: "dg-snapshot"
+id: "rest-api-debug"
 menus: [ "developers", "developer-guide" ]
 ---
 

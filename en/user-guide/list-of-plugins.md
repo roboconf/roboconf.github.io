@@ -1,7 +1,8 @@
 ---
 title: "List of Plugins"
 layout: page
-id: "ug.snapshot.list-of-plugins"
+cat: "ug-snapshot"
+id: "list-of-plugins"
 menus: [ "users", "user-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Web Site Organization"
 layout: page
-id: "dg.snapshot.web-site-organization"
+cat: "dg-snapshot"
+id: "web-site-organization"
 menus: [ "developers", "developer-guide" ]
 ---
 
@@ -111,7 +112,8 @@ Pages must respect the following guidelines.
 	---
 	title: "The Management REST API"
 	layout: page
-	id: "dg.snapshot.rest-api-management"
+cat: "dg-snapshot"
+	id: "rest-api-management"
 	menus: [ "developers", "developer-guide" ]
 	---
 

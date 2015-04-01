@@ -1,7 +1,8 @@
 ---
 title: "Editors"
 layout: page
-id: "ug.0.2.editors"
+cat: "ug-0-2"
+id: "editors"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

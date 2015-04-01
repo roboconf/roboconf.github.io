@@ -1,7 +1,8 @@
 ---
 title: "New &amp; Noteworthy"
 layout: page
-id: "main.download.new-and-noteworthy-0.3"
+cat: "main"
+id: "download-new-and-noteworthy-0.3"
 menus: [ "users", "download" ]
 ---
 

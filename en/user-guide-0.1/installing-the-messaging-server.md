@@ -1,7 +1,8 @@
 ---
 title: "Installing the Messaging Server"
 layout: page
-id: "ug.0.1.installing-the-messaging-server"
+cat: "ug-0-1"
+id: "installing-the-messaging-server"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

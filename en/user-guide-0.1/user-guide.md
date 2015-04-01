@@ -1,7 +1,8 @@
 ---
 title: "User Guide - Version 0.1"
 layout: page
-id: "ug.0.1.index"
+cat: "ug-0-1"
+id: "index"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

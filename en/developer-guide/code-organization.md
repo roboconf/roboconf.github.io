@@ -1,7 +1,8 @@
 ---
 title: "Code Organization"
 layout: page
-id: "dg.snapshot.code-organization"
+cat: "dg-snapshot"
+id: "code-organization"
 menus: [ "developers", "developer-guide" ]
 ---
 

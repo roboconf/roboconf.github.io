@@ -1,7 +1,8 @@
 ---
 title: "Reusability"
 layout: page
-id: "ug.0.2.reusability"
+cat: "ug-0-2"
+id: "reusability"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

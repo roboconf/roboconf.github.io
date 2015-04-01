@@ -1,7 +1,8 @@
 ---
 title: "Understand the Messaging with Rabbit MQ"
 layout: page
-id: "dg.snapshot.understand-the-messaging-with-rabbit-mq"
+cat: "dg-snapshot"
+id: "understand-the-messaging-with-rabbit-mq"
 menus: [ "developers", "developer-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Life Cycle"
 layout: page
-id: "dg.snapshot.life-cycle"
+cat: "dg-snapshot"
+id: "life-cycle"
 menus: [ "developers", "developer-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Localhost Support"
 layout: page
-id: "ug.0.1.iaas-localhost"
+cat: "ug-0-1"
+id: "iaas-localhost"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

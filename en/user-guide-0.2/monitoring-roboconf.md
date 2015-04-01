@@ -1,7 +1,8 @@
 ---
 title: "Monitoring"
 layout: page
-id: "ug.0.2.monitoring-roboconf"
+cat: "ug-0-2"
+id: "monitoring-roboconf"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

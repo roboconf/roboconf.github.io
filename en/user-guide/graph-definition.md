@@ -1,7 +1,8 @@
 ---
 title: "Graph Definition"
 layout: page
-id: "ug.snapshot.graph-definition"
+cat: "ug-snapshot"
+id: "graph-definition"
 menus: [ "users", "user-guide" ]
 ---
 

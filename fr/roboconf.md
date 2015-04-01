@@ -1,7 +1,8 @@
 ---
 title: "Qu'est-ce que Roboconf ?"
 layout: page
-id: "main.what-is-roboconf"
+cat: "main"
+id: "what-is-roboconf"
 menus: [ "project", "what-is-roboconf" ]
 ---
 

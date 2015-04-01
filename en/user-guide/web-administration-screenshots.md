@@ -1,7 +1,8 @@
 ---
 title: "Screenshots of the Web Administration"
 layout: page
-id: "ug.snapshot.web-administration-screenshots"
+cat: "ug-snapshot"
+id: "web-administration-screenshots"
 menus: [ "users", "user-guide" ]
 ---
 

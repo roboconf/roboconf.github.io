@@ -1,7 +1,8 @@
 ---
 title: "Links"
 layout: page
-id: "main.links"
+cat: "main"
+id: "links"
 menus: [ "users", "links" ]
 ---
 

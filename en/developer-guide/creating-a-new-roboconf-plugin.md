@@ -1,7 +1,8 @@
 ---
 title: "Creating a new Roboconf plug-in"
 layout: page
-id: "dg.snapshot.creating-a-new-roboconf-plugin"
+cat: "dg-snapshot"
+id: "creating-a-new-roboconf-plugin"
 menus: [ "developers", "developer-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "About Target Support"
 layout: page
-id: "ug.snapshot.about-target-support"
+cat: "ug-snapshot"
+id: "about-target-support"
 menus: [ "users", "user-guide" ]
 ---
 

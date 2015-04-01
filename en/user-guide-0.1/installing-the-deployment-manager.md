@@ -1,7 +1,8 @@
 ---
 title: "Installing the Deployment Manager"
 layout: page
-id: "ug.0.1.installing-the-deployment-manager"
+cat: "ug-0-1"
+id: "installing-the-deployment-manager"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

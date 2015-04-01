@@ -1,7 +1,8 @@
 ---
 title: "Supporting a new Deployment Target"
 layout: page
-id: "dg.snapshot.supporting-a-new-deployment-target"
+cat: "dg-snapshot"
+id: "supporting-a-new-deployment-target"
 menus: [ "developers", "developer-guide" ]
 ---
 

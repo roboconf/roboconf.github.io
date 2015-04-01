@@ -1,7 +1,8 @@
 ---
 title: "Developer Guide"
 layout: page
-id: "dg.snapshot.index"
+cat: "dg-snapshot"
+id: "index"
 menus: [ "developers", "developer-guide" ]
 ---
 

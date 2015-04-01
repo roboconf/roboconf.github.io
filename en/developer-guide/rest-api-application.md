@@ -1,7 +1,8 @@
 ---
 title: "The Application REST API"
 layout: page
-id: "dg.snapshot.rest-api-application"
+cat: "dg-snapshot"
+id: "rest-api-application"
 menus: [ "developers", "developer-guide" ]
 ---
 

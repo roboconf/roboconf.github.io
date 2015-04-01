@@ -1,7 +1,8 @@
 ---
 title: "Syntax Highlighting"
 layout: page
-id: "dg.snapshot.syntax-highlighting"
+cat: "dg-snapshot"
+id: "syntax-highlighting"
 menus: [ "developers", "developer-guide" ]
 ---
 

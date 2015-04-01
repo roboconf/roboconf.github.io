@@ -1,7 +1,8 @@
 ---
 title: "Configuring the Web Consoles"
 layout: page
-id: "ug.0.2.configuring-the-web-consoles"
+cat: "ug-0-2"
+id: "configuring-the-web-consoles"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

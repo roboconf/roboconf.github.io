@@ -1,7 +1,8 @@
 ---
 title: "Reusability in Models"
 layout: page
-id: "ug.snapshot.reusability-in-models"
+cat: "ug-snapshot"
+id: "reusability-in-models"
 menus: [ "users", "user-guide" ]
 ---
 

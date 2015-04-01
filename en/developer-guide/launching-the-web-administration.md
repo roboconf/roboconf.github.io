@@ -1,7 +1,8 @@
 ---
 title: "Launching the Web Administration"
 layout: page
-id: "dg.snapshot.launching-the-web-administration"
+cat: "dg-snapshot"
+id: "launching-the-web-administration"
 menus: [ "developers", "developer-guide" ]
 ---
 

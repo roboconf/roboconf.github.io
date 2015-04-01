@@ -1,7 +1,8 @@
 ---
 title: "Autonomic Management"
 layout: page
-id: "ug.snapshot.autonomic-management-with-roboconf"
+cat: "ug-snapshot"
+id: "autonomic-management-with-roboconf"
 menus: [ "users", "user-guide" ]
 ---
 

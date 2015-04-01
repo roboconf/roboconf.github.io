@@ -1,7 +1,8 @@
 ---
 title: "The Logger Plug-in"
 layout: page
-id: "ug.0.2.plugin-logger"
+cat: "ug-0-2"
+id: "plugin-logger"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

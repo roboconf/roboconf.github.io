@@ -1,7 +1,8 @@
 ---
 title: "VMWare Support"
 layout: page
-id: "ug.0.2.target-iaas-vmware"
+cat: "ug-0-2"
+id: "target-iaas-vmware"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

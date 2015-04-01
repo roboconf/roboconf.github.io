@@ -1,7 +1,8 @@
 ---
 title: "List of Deployment Targets"
 layout: page
-id: "ug.0.2.list-of-deployment-targets"
+cat: "ug-0-2"
+id: "list-of-deployment-targets"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

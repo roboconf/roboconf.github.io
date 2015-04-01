@@ -1,7 +1,8 @@
 ---
 title: "Graphics"
 layout: page
-id: "main.graphics"
+cat: "main"
+id: "graphics"
 menus: [ "developers", "graphics" ]
 ---
 

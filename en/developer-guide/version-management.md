@@ -1,7 +1,8 @@
 ---
 title: "Version Management"
 layout: page
-id: "dg.snapshot.version-management"
+cat: "dg-snapshot"
+id: "version-management"
 menus: [ "developers", "developer-guide" ]
 ---
 

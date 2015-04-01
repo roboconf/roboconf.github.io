@@ -1,7 +1,8 @@
 ---
 title: "Configuring the Loggers"
 layout: page
-id: "ug.0.2.configuring-the-loggers"
+cat: "ug-0-2"
+id: "configuring-the-loggers"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Installing Everything"
 layout: page
-id: "ug.0.2.installing-everything"
+cat: "ug-0-2"
+id: "installing-everything"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

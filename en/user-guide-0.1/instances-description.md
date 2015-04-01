@@ -1,7 +1,8 @@
 ---
 title: "Instances Description"
 layout: page
-id: "ug.0.1.instances-description"
+cat: "ug-0-1"
+id: "instances-description"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

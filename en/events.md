@@ -1,7 +1,8 @@
 ---
 title: "Events and Publications"
 layout: page
-id: "main.events"
+cat: "main"
+id: "events"
 menus: [ "project", "events" ]
 ---
 

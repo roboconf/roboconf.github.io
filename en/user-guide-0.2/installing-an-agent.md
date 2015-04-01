@@ -1,7 +1,8 @@
 ---
 title: "Installing an Agent"
 layout: page
-id: "ug.0.2.installing-an-agent"
+cat: "ug-0-2"
+id: "installing-an-agent"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Embedded Support"
 layout: page
-id: "ug.0.1.iaas-embedded"
+cat: "ug-0-1"
+id: "iaas-embedded"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

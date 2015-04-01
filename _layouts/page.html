@@ -22,15 +22,15 @@
 		<a href="/{{ locale }}/index.html"><img id="header-img" src="/resources/img/roboconf.jpg" alt="Roboconf" /></a>
 
 		<ul class="nav navbar-nav navbar-right" id="top-menu">
-			<li><a href="/{{ locale }}/{{ site.urls['main.news'][locale] }}.html" class="{% if page.menus[0] == "project" %}ep-selected{% else %}ep{% endif %}">
+			<li><a href="/{{ locale }}/{{ site.data['main']['news'][locale] }}.html" class="{% if page.menus[0] == "project" %}ep-selected{% else %}ep{% endif %}">
 				<span class="glyphicon glyphicon-flash"></span> {{ site.locales[locale].menu-project }}
 			</a></li>
 		
-			<li><a href="/{{ locale }}/{{ site.urls['main.download'][locale] }}.html" class="{% if page.menus[0] == "users" %}ep-selected{% else %}ep{% endif %}">
+			<li><a href="/{{ locale }}/{{ site.data['main']['download'][locale] }}.html" class="{% if page.menus[0] == "users" %}ep-selected{% else %}ep{% endif %}">
 				<span class="glyphicon glyphicon-user"></span> {{ site.locales[locale].menu-users }}
 			</a></li>
 			
-			<li><a href="/{{ locale }}/{{ site.urls['main.sources'][locale] }}.html" class="{% if page.menus[0] == "developers" %}ep-selected{% else %}ep{% endif %}">
+			<li><a href="/{{ locale }}/{{ site.data['main']['sources'][locale] }}.html" class="{% if page.menus[0] == "developers" %}ep-selected{% else %}ep{% endif %}">
 				<span class="glyphicon glyphicon-wrench"></span> {{ site.locales[locale].menu-developers }}
 			</a></li>
 			
@@ -43,12 +43,10 @@
 				<ul class="dropdown-menu">
 				{% for l in site.locales %}
 					{% capture the_locale %}{{ l[0] }}{% endcapture %}
-					{% capture page_url %}{{ site.urls[page.id][the_locale] }}{% endcapture %}
-					{% if page_url != "" and page_url != null %}
-					<li><a href="/{{ the_locale }}/{{ page_url }}.html">
+					{% capture page_url %}{{ site.data[page.cat][page.id][the_locale] }}{% endcapture %}
+					{% if page_url != "" and page_url != null %}<li><a href="/{{ the_locale }}/{{ page_url }}.html">
 						<img src="/resources/img/{{ site.locales[the_locale].icon}}" alt="{{ site.locales[the_locale].language }}" class="flag" /> {{ site.locales[the_locale].language }}
-					</a></li>
-					{% endif %}
+					</a></li>{% endif %}
 				{% endfor %}
 				</ul>
 			</li>

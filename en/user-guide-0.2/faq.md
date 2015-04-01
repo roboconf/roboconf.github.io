@@ -1,7 +1,8 @@
 ---
 title: "FAQ"
 layout: page
-id: "ug.0.2.faq"
+cat: "ug-0-2"
+id: "faq"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

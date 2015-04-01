@@ -1,7 +1,8 @@
 ---
 title: "Présentations Réutilisables"
 layout: page
-id: "ug.snapshot.reusable-slides"
+cat: "ug-snapshot"
+id: "reusable-slides"
 menus: [ "users", "user-guide" ]
 ---
 

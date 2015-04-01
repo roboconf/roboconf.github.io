@@ -1,0 +1,71 @@
+#
+# Main pages
+#
+events:
+  en: events
+  fr: evenements
+  
+projects:
+  en: projects
+  fr: projets
+  
+sources:
+  en: sources
+  fr: sources
+  
+team:
+  en: team
+  fr: equipe
+  
+roadmap:
+  en: roadmap
+  fr: roadmap
+  
+graphics:
+  en: graphics
+  fr: ressources-graphiques
+  
+news:
+  en: news
+  fr: nouveautes
+  
+what-is-roboconf:
+  en: roboconf
+  fr: roboconf
+  
+license:
+  en: license
+  fr: licence
+  
+links:
+  en: links
+  fr: liens
+  
+download:
+  en: download
+  fr: telecharger
+  
+download-changelog:
+  en: change-log
+  fr: liste-des-changements
+  
+support:
+  en: support
+  fr: support
+  
+user-guide:
+  en: user-guide/user-guide
+  fr: guide-utilisateur/guide-utilisateur
+  
+dev-guide:
+  en: developer-guide/developer-guide
+  fr: guide-developpeur/guide-developpeur
+  
+  
+#
+# New and noteworthy
+#
+  
+new-and-noteworthy-0.3:
+  en: new/new-and-noteworthy-0.3
+  fr: nouveautes/nouveautes-principales-0.3

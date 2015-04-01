@@ -1,7 +1,8 @@
 ---
 title: "Continuous Integration"
 layout: page
-id: "dg.snapshot.continuous-integration"
+cat: "dg-snapshot"
+id: "continuous-integration"
 menus: [ "developers", "developer-guide" ]
 ---
 

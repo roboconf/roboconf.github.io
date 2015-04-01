@@ -1,7 +1,8 @@
 ---
 title: "The Script Plug-in"
 layout: page
-id: "ug.snapshot.plugin-script"
+cat: "ug-snapshot"
+id: "plugin-script"
 menus: [ "users", "user-guide" ]
 ---
 

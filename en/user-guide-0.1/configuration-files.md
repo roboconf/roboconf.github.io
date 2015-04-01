@@ -1,7 +1,8 @@
 ---
 title: "Configuration Files"
 layout: page
-id: "ug.0.1.configuration-files"
+cat: "ug-0-1"
+id: "configuration-files"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

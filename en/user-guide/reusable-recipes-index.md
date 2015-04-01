@@ -1,7 +1,8 @@
 ---
 title: "Index of Reusable Recipes"
 layout: page
-id: "ug.snapshot.reusable-recipes-index"
+cat: "ug-snapshot"
+id: "reusable-recipes-index"
 menus: [ "users", "user-guide" ]
 ---
 

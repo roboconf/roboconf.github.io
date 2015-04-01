@@ -1,7 +1,8 @@
 ---
 title: "Development Guidelines"
 layout: page
-id: "dg.snapshot.development-guidelines"
+cat: "dg-snapshot"
+id: "development-guidelines"
 menus: [ "developers", "developer-guide" ]
 ---
 

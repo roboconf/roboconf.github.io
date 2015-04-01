@@ -1,7 +1,8 @@
 ---
 title: "Release Management"
 layout: page
-id: "dg.snapshot.release-management"
+cat: "dg-snapshot"
+id: "release-management"
 menus: [ "developers", "developer-guide" ]
 ---
 

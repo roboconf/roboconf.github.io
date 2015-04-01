@@ -1,7 +1,8 @@
 ---
 title: "FAQ"
 layout: page
-id: "ug.snapshot.faq"
+cat: "ug-snapshot"
+id: "faq"
 menus: [ "users", "user-guide" ]
 ---
 

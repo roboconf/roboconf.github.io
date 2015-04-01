@@ -1,7 +1,8 @@
 ---
 title: "Projects that use Roboconf"
 layout: page
-id: "main.projects"
+cat: "main"
+id: "projects"
 menus: [ "project", "projects" ]
 ---
 

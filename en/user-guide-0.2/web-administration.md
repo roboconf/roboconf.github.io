@@ -1,7 +1,8 @@
 ---
 title: "Web Administration"
 layout: page
-id: "ug.0.2.web-administration"
+cat: "ug-0-2"
+id: "web-administration"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Microsoft Azure Support"
 layout: page
-id: "ug.0.2.target-iaas-azure"
+cat: "ug-0-2"
+id: "target-iaas-azure"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

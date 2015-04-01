@@ -1,7 +1,8 @@
 ---
 title: "Application Descriptor"
 layout: page
-id: "ug.0.1.application-descriptor"
+cat: "ug-0-1"
+id: "application-descriptor"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

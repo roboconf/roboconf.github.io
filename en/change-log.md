@@ -1,7 +1,8 @@
 ---
 title: "Change Log"
 layout: page
-id: "main.download.changelog"
+cat: "main"
+id: "download-changelog"
 menus: [ "users", "download" ]
 ---
 

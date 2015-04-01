@@ -1,7 +1,8 @@
 ---
 title: "Roadmap"
 layout: page
-id: "main.roadmap"
+cat: "main"
+id: "roadmap"
 menus: [ "project", "roadmap" ]
 ---
 

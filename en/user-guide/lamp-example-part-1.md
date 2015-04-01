@@ -1,7 +1,8 @@
 ---
 title: "LAMP Example - Part 1"
 layout: page
-id: "ug.snapshot.lamp-example-part-1"
+cat: "ug-snapshot"
+id: "lamp-example-part-1"
 menus: [ "users", "user-guide" ]
 ---
 

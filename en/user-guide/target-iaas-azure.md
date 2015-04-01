@@ -1,7 +1,8 @@
 ---
 title: "Microsoft Azure Support"
 layout: page
-id: "ug.snapshot.target-iaas-azure"
+cat: "ug-snapshot"
+id: "target-iaas-azure"
 menus: [ "users", "user-guide" ]
 ---
 

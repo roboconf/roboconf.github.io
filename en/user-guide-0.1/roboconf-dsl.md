@@ -1,7 +1,8 @@
 ---
 title: "Roboconf DSL"
 layout: page
-id: "ug.0.1.roboconf-dsl"
+cat: "ug-0-1"
+id: "roboconf-dsl"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

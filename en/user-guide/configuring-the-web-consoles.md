@@ -1,7 +1,8 @@
 ---
 title: "Configuring the Web Consoles"
 layout: page
-id: "ug.snapshot.configuring-the-web-consoles"
+cat: "ug-snapshot"
+id: "configuring-the-web-consoles"
 menus: [ "users", "user-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Reusable Slides"
 layout: page
-id: "ug.0.2.reusable-slides"
+cat: "ug-0-2"
+id: "reusable-slides"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

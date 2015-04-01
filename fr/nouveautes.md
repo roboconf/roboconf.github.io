@@ -1,7 +1,8 @@
 ---
 title: "Nouveautés"
 layout: page
-id: "main.news"
+cat: "main"
+id: "news"
 menus: [ "project", "news" ]
 ---
 

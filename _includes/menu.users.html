@@ -1,39 +1,38 @@
 
 <ul>
 	<li{% if page.menus[1] == "download" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.download'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['download'][include.locale] }}.html">
 		{{ site.locales[locale].s-menu-download }}</a>
 	</li>
 	
 	{% if page.menus[2] %}
 	<li>
-		<a href="/{{ include.locale }}/{{ site.urls['main.user-guide'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['user-guide'][include.locale] }}.html">
 			{{ site.locales[locale].s-menu-user-guide }}
 		</a>
 	</li>
 	
 	<li{% if page.menus[1] == "user-guide" %} class="active"{% endif %}>
-		{% capture pagekey %}{{ "ug." | append: page.menus[2] | append: ".index" }}{% endcapture %}
-		<a href="/{{ include.locale }}/{{ site.urls[pagekey][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data[page.cat]['index'][include.locale] }}.html">
 			{{ site.locales[locale].s-menu-user-guide }} {{ page.menus[2] }}
 		</a>
 	</li>
 	
 	{% else %}
 	<li{% if page.menus[1] == "user-guide" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.user-guide'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['user-guide'][include.locale] }}.html">
 			{{ site.locales[locale].s-menu-user-guide }}
 		</a>
 	</li>
 	{% endif %}
 	
 	<li{% if page.menus[1] == "support" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.support'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['support'][include.locale] }}.html">
 		{{ site.locales[locale].s-menu-support }}</a>
 	</li>
 	
 	<li{% if page.menus[1] == "links" %} class="active"{% endif %}>
-		<a href="/{{ include.locale }}/{{ site.urls['main.links'][include.locale] }}.html">
+		<a href="/{{ include.locale }}/{{ site.data['main']['links'][include.locale] }}.html">
 		{{ site.locales[locale].s-menu-links }}</a>
 	</li>
 </ul>

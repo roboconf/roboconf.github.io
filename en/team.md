@@ -1,7 +1,8 @@
 ---
 title: "Team"
 layout: page
-id: "main.team"
+cat: "main"
+id: "team"
 menus: [ "developers", "team" ]
 ---
 

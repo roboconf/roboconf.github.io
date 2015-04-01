@@ -1,7 +1,8 @@
 ---
 title: "Embedded Support"
 layout: page
-id: "ug.0.2.target-embedded"
+cat: "ug-0-2"
+id: "target-embedded"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

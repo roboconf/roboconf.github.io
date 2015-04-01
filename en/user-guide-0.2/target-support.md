@@ -1,7 +1,8 @@
 ---
 title: "Target Support"
 layout: page
-id: "ug.0.2.target-support"
+cat: "ug-0-2"
+id: "target-support"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

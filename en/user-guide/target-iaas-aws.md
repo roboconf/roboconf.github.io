@@ -1,7 +1,8 @@
 ---
 title: "Amazon Web Services Support"
 layout: page
-id: "ug.snapshot.target-iaas-aws"
+cat: "ug-snapshot"
+id: "target-iaas-aws"
 menus: [ "users", "user-guide" ]
 ---
 

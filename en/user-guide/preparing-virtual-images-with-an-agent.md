@@ -1,7 +1,8 @@
 ---
 title: "Preparing Virtual Images with an Agent"
 layout: page
-id: "ug.snapshot.preparing-virtual-images-with-an-agent"
+cat: "ug-snapshot"
+id: "preparing-virtual-images-with-an-agent"
 menus: [ "users", "user-guide" ]
 ---
 

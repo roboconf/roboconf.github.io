@@ -1,7 +1,8 @@
 ---
 title: "Toubles with Installation"
 layout: page
-id: "ug.0.1.troubles-installation"
+cat: "ug-0-1"
+id: "troubles-installation"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

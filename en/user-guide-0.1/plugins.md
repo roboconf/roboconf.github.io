@@ -1,7 +1,8 @@
 ---
 title: "Roboconf Plug-ins"
 layout: page
-id: "ug.0.1.plugins"
+cat: "ug-0-1"
+id: "plugins"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

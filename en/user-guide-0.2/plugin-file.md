@@ -1,7 +1,8 @@
 ---
 title: "The File Plug-in"
 layout: page
-id: "ug.0.2.plugin-file"
+cat: "ug-0-2"
+id: "plugin-file"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

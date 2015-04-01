@@ -1,7 +1,8 @@
 ---
 title: "Support"
 layout: page
-id: "main.support"
+cat: "main"
+id: "support"
 menus: [ "users", "support" ]
 ---
 

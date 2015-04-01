@@ -1,7 +1,8 @@
 ---
 title: "Roboconf DSL"
 layout: page
-id: "ug.snapshot.roboconf-dsl"
+cat: "ug-snapshot"
+id: "roboconf-dsl"
 menus: [ "users", "user-guide" ]
 ---
 

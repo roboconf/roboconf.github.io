@@ -1,7 +1,8 @@
 ---
 title: "Ressources Graphiques"
 layout: page
-id: "main.graphics"
+cat: "main"
+id: "graphics"
 menus: [ "developers", "graphics" ]
 ---
 

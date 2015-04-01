@@ -1,7 +1,8 @@
 ---
 title: "Debugging Roboconf"
 layout: page
-id: "dg.snapshot.debugging-roboconf"
+cat: "dg-snapshot"
+id: "debugging-roboconf"
 menus: [ "developers", "developer-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "IaaS Support"
 layout: page
-id: "ug.0.1.iaas-support"
+cat: "ug-0-1"
+id: "iaas-support"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

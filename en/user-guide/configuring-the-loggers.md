@@ -1,7 +1,8 @@
 ---
 title: "Configuring the Loggers"
 layout: page
-id: "ug.snapshot.configuring-the-loggers"
+cat: "ug-snapshot"
+id: "configuring-the-loggers"
 menus: [ "users", "user-guide" ]
 ---
 

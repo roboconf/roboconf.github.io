@@ -1,7 +1,8 @@
 ---
 title: "The Bash Plug-in"
 layout: page
-id: "ug.0.2.plugin-bash"
+cat: "ug-0-2"
+id: "plugin-bash"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 

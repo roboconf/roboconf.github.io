@@ -1,7 +1,8 @@
 ---
 title: "In-Memory Support"
 layout: page
-id: "ug.snapshot.target-in-memory"
+cat: "ug-snapshot"
+id: "target-in-memory"
 menus: [ "users", "user-guide" ]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Configuring the Deployment Manager"
 layout: page
-id: "ug.snapshot.configuring-the-deployment-manager"
+cat: "ug-snapshot"
+id: "configuring-the-deployment-manager"
 menus: [ "users", "user-guide" ]
 ---
 

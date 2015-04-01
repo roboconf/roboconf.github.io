@@ -1,7 +1,8 @@
 ---
 title: "VMWare Support"
 layout: page
-id: "ug.0.1.iaas-vmware"
+cat: "ug-0-1"
+id: "iaas-vmware"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 

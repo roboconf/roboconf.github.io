@@ -1,7 +1,8 @@
 ---
 title: "Monitoring"
 layout: page
-id: "ug.snapshot.monitoring"
+cat: "ug-snapshot"
+id: "monitoring"
 menus: [ "users", "user-guide" ]
 ---
 
