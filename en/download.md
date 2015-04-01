@@ -39,7 +39,7 @@ The current development version is **0.3-SNAPSHOT**.
 			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.3/roboconf-karaf-dist-agent-0.3.zip">Zip</a> (~ 20 Mb)
 			
 			<br /><br />
-			Eclipse <a href="http://dl.bintray.com/roboconf/roboconf-eclipse/0.3/">update site</a>
+			Eclipse <a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.3/">update site</a>
 		</td>
 		<td>
 			<span class="octicon octicon-mark-github"></span> 
@@ -70,7 +70,7 @@ The current development version is **0.3-SNAPSHOT**.
 			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.2/roboconf-karaf-dist-agent-0.2.zip">Zip</a> (~ 20 Mb)
 			
 			<br /><br />
-			Eclipse <a href="http://dl.bintray.com/roboconf/roboconf-eclipse/0.2/">update site</a>
+			Eclipse <a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.2/">update site</a>
 		</td>
 		<td>
 			<span class="octicon octicon-mark-github"></span> 

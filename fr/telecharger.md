@@ -38,7 +38,7 @@ Vous pouvez récupérer une version *snapshot* de Roboconf sur notre dépôt Mav
 			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.3/roboconf-karaf-dist-agent-0.3.zip">Zip</a> (~ 20 Mo)
 			
 			<br /><br />
-			<a href="http://dl.bintray.com/roboconf/roboconf-eclipse/0.3/">Site de mise à jour</a> pour Eclipse
+			<a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.3/">Site de mise à jour</a> pour Eclipse
 		</td>
 		<td>
 			<span class="octicon octicon-mark-github"></span> 
@@ -69,7 +69,7 @@ Vous pouvez récupérer une version *snapshot* de Roboconf sur notre dépôt Mav
 			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.2/roboconf-karaf-dist-agent-0.2.zip">Zip</a> (~ 20 Mo)
 			
 			<br /><br />
-			<a href="http://dl.bintray.com/roboconf/roboconf-eclipse/0.2/">Site de mise à jour</a> pour Eclipse
+			<a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.2/">Site de mise à jour</a> pour Eclipse
 		</td>
 		<td>
 			<span class="octicon octicon-mark-github"></span> 
