@@ -9,13 +9,12 @@ menus: [ "users", "download" ]
 This page summers up the features and main changes brought by the various Roboconf versions.
 
 
-<!--
 ## Version 0.3
 
 Roboconf 0.3 brings performance enhancements for cloud deployments.  
 Machine creation goes faster than before, and their configuration is
 done asynchronously and in parallel. It results that big deployments
-are performed more quickly.
+are performed more quickly than before.
 
 The team also worked on reusability issues for recipes. We set up a Github
 organization called [Roboconf-recipes](https://github.com/roboconf-recipes) to
@@ -26,7 +25,6 @@ a documentation generator, and by upgrading existing editors, like [Atom.io](htt
 to support Roboconf's DSL.
 
 Browse the [new &amp; noteworthy page](new/new-and-noteworthy-0.3.html) for this release.
--->
 
 
 ## Version 0.2

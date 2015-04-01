@@ -10,7 +10,6 @@ Cette page récapitule la liste des fonctionnalités principales et les changeme
 à chaque version de Roboconf.
 
 
-<!--
 ## Version 0.3
 
 Roboconf 0.3 apporte des améliorations pour le déploiement dans le cloud.  
@@ -28,7 +27,6 @@ et des contributions ont été faites pour supporter le DSL de Roboconf dans des
 comme [Atom.io](https://atom.io/).
 
 Vous pouvez jeter un oeil [aux nouveautés](nouveautes/nouveautes-principales-0.3.html) de cette version 0.3.
--->
 
 
 ## Version 0.2
