@@ -19,14 +19,9 @@ gros déploiements plus rapidement qu'avec les versions précédentes de Robocon
 
 L'équipe de développement a égalemen ttravaillé sur la réutilisabilité de recettes.
 Nous avons mis en place une nouvelle organisation Github, [Roboconf-recipes](https://github.com/roboconf-recipes), 
-pour partager de telles recettes. N'hésitez pas à vous en servir et à en contribuer de nouvelles.
-
-Enfin, l'outillage a continué d'être enrichi.  
-Le plug-in Maven est désormais complet, un générateur de documentation a été réalisé,
-et des contributions ont été faites pour supporter le DSL de Roboconf dans des outils d'édition
+pour partager de telles recettes. N'hésitez pas à vous en servir et à en contribuer de nouvelles. Enfin, 
+l'outillage a poursuivi son évolution. Le plug-in Maven est désormais complet, un générateur de documentation a été réalisé, et des contributions ont été faites pour supporter le DSL de Roboconf dans des outils d'édition
 comme [Atom.io](https://atom.io/).
-
-Vous pouvez jeter un oeil [aux nouveautés](nouveautes/nouveautes-principales-0.3.html) de cette version 0.3.
 
 
 ## Version 0.2

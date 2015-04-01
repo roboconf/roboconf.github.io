@@ -18,13 +18,10 @@ are performed more quickly than before.
 
 The team also worked on reusability issues for recipes. We set up a Github
 organization called [Roboconf-recipes](https://github.com/roboconf-recipes) to
-share tested recipes. Feel free to use them and contribute.
-
-Eventually, we improved tooling support, by completing our Maven plug-in, by creating
+share tested recipes. Feel free to use them and contribute. Eventually, we improved 
+tooling support, by completing our Maven plug-in, by creating
 a documentation generator, and by upgrading existing editors, like [Atom.io](https://atom.io/),
 to support Roboconf's DSL.
-
-Browse the [new &amp; noteworthy page](new/new-and-noteworthy-0.3.html) for this release.
 
 
 ## Version 0.2
