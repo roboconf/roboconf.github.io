@@ -2,7 +2,7 @@
 title: "Nouveautés Principales"
 layout: page
 cat: "main"
-id: "download-new-and-noteworthy-0.3"
+id: "new-and-noteworthy-0.3"
 menus: [ "users", "download" ]
 ---
 
