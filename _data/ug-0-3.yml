@@ -1,0 +1,174 @@
+#
+# User Guide Version 0.3
+#
+maven-examples-documentation:
+  en: user-guide-0.3/maven-examples-documentation
+  
+roboconf-architecture:
+  en: user-guide-0.3/roboconf-architecture
+  
+configuring-the-web-consoles:
+  en: user-guide-0.3/configuring-the-web-consoles
+  
+eclipse-plugin:
+  en: user-guide-0.3/eclipse-plugin
+
+maven-plugin:
+  en: user-guide-0.3/maven-plugin
+  
+reusability-in-models:
+  en: user-guide-0.3/reusability-in-models
+    
+reusable-recipes-index:
+  en: user-guide-0.3/reusable-recipes-index
+  
+how-to-write-reusable-recipes:
+  en: user-guide-0.3/how-to-write-reusable-recipes
+  
+tutorial-getting-started-with-roboconf:
+  en: user-guide-0.3/tutorial-getting-started-with-roboconf
+  
+autonomic-management-with-roboconf:
+  en: user-guide-0.3/autonomic-management-with-roboconf
+  
+tutorial-first-deployment-in-the-cloud:
+  en: user-guide-0.3/tutorial-first-deployment-in-the-cloud
+  
+tutorial-first-deployment-in-the-cloud-1:
+  en: user-guide-0.3/tutorial-first-deployment-in-the-cloud-1
+  
+tutorial-first-deployment-in-the-cloud-2:
+  en: user-guide-0.3/tutorial-first-deployment-in-the-cloud-2
+  
+tutorial-first-deployment-in-the-cloud-3:
+  en: user-guide-0.3/tutorial-first-deployment-in-the-cloud-3
+  
+tutorial-first-deployment-in-the-cloud-4:
+  en: user-guide-0.3/tutorial-first-deployment-in-the-cloud-4
+  
+reusable-slides:
+  en: user-guide-0.3/reusable-slides
+  
+web-administration-screenshots:
+  en: user-guide-0.3/web-administration-screenshots
+  
+configuring-the-loggers:
+  en: user-guide-0.3/configuring-the-loggers
+  
+installing-everything:
+  en: user-guide-0.3/installing-everything
+  
+installing-the-deployment-manager:
+  en: user-guide-0.3/installing-the-deployment-manager
+  
+installing-an-agent:
+  en: user-guide-0.3/installing-an-agent
+  
+configuring-the-deployment-manager:
+  en: user-guide-0.3/configuring-the-deployment-manager
+  
+configuring-an-agent:
+  en: user-guide-0.3/configuring-an-agent
+  
+installing-the-messaging-server:
+  en: user-guide-0.3/installing-the-messaging-server
+  
+preparing-virtual-images-with-an-agent:
+  en: user-guide-0.3/preparing-virtual-images-with-an-agent
+  
+about-target-support:
+  en: user-guide-0.3/about-target-support
+  
+list-of-deployment-targets:
+  en: user-guide-0.3/list-of-deployment-targets
+  
+target-iaas-openstack:
+  en: user-guide-0.3/target-iaas-openstack
+  
+target-jclouds:
+  en: user-guide-0.3/target-jclouds
+  
+target-docker:
+  en: user-guide-0.3/target-docker
+  
+target-embedded:
+  en: user-guide-0.3/target-embedded
+  
+target-iaas-aws:
+  en: user-guide-0.3/target-iaas-aws
+  
+target-iaas-vmware:
+  en: user-guide-0.3/target-iaas-vmware
+  
+target-iaas-azure:
+  en: user-guide-0.3/target-iaas-azure
+  
+target-in-memory:
+  en: user-guide-0.3/target-in-memory
+  
+about-plugins:
+  en: user-guide-0.3/about-plugins
+  
+list-of-plugins:
+  en: user-guide-0.3/list-of-plugins
+  
+plugin-logger:
+  en: user-guide-0.3/plugin-logger
+  
+plugin-file:
+  en: user-guide-0.3/plugin-file
+  
+plugin-script:
+  en: user-guide-0.3/plugin-script
+  
+plugin-puppet:
+  en: user-guide-0.3/plugin-puppet
+  
+roboconf-dsl:
+  en: user-guide-0.3/roboconf-dsl
+  
+monitoring-roboconf:
+  en: user-guide-0.3/monitoring-roboconf
+  
+monitoring-applications-deployed-with-roboconf:
+  en: user-guide-0.3/monitoring-applications-deployed-with-roboconf
+  
+editors:
+  en: user-guide-0.3/editors
+  
+configuration-files:
+  en: user-guide-0.3/configuration-files
+  
+faq:
+  en: user-guide-0.3/faq
+  
+roboconf-concepts:
+  en: user-guide-0.3/roboconf-concepts
+  
+application-descriptor:
+  en: user-guide-0.3/application-descriptor
+  
+instances-description:
+  en: user-guide-0.3/instances-description
+  
+graph-definition:
+  en: user-guide-0.3/graph-definition
+  
+graph-resources:
+  en: user-guide-0.3/graph-resources
+  
+web-administration:
+  en: user-guide-0.3/web-administration
+  
+lamp-example-part-1:
+  en: user-guide-0.3/lamp-example-part-1
+  
+lamp-example-part-2:
+  en: user-guide-0.3/lamp-example-part-2
+  
+index:
+  en: user-guide-0.3/user-guide
+  fr: guide-utilisateur-0.3/guide-utilisateur
+  
+working-with-roboconf:
+  en: user-guide-0.3/working-with-roboconf

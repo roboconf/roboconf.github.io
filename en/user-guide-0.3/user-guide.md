@@ -1,9 +1,9 @@
 ---
 title: "User Guide"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-0-3"
 id: "index"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.3" ]
 ---
 
 <!-- 
@@ -107,16 +107,6 @@ menus: [ "users", "user-guide" ]
 	<li><a href="reusable-slides.html">Reusable Slides</a></li>
 	<li><a href="tutorial-getting-started-with-roboconf.html">Tutorial - Getting started with Roboconf</a></li>
 	<li><a href="tutorial-first-deployment-in-the-cloud.html">Tutorial - First deployment in the cloud</a></li>
-	</ul>
-</div>
-
-<div class="floated">
-	<h2>Released Versions</h2>
-
-	<ul>
-	<li><a href="../user-guide-0.3/user-guide.html">User Guide for version 0.3</a></li>
-	<li><a href="../user-guide-0.2/user-guide.html">User Guide for version 0.2</a></li>
-	<li><a href="../user-guide-0.1/user-guide.html">User Guide for version 0.1</a></li>
 	</ul>
 </div>
 

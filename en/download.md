@@ -25,6 +25,37 @@ The current development version is **0.3-SNAPSHOT**.
 		<th>Links</th>
 	</tr>
 	
+	<!-- Version 0.3 -->
+	<tr>
+		<td>0.3</td>
+		<td>April 1<sup>st</sup>, 2015</td>
+		<td>
+			Deployment Manager: 
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.3/roboconf-karaf-dist-dm-0.3.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.3/roboconf-karaf-dist-dm-0.3.zip">Zip</a> (~ 30 Mb)
+			<br />
+			Agent: 
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.3/roboconf-karaf-dist-agent-0.3.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.3/roboconf-karaf-dist-agent-0.3.zip">Zip</a> (~ 20 Mb)
+			
+			<br /><br />
+			Eclipse <a href="http://dl.bintray.com/roboconf/roboconf-eclipse/0.3/">update site</a>
+		</td>
+		<td>
+			<span class="octicon octicon-mark-github"></span> 
+			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.3">GitHub issues</a>
+			&nbsp;
+			<span class="octicon octicon-telescope"></span>
+			<a href="new/new-and-noteworthy-0.3.html">New &amp; Noteworthy</a>
+			&nbsp;
+			<span class="octicon octicon-megaphone"></span>
+			<a href="change-log.html">Change Log</a> 
+			&nbsp;
+			<span class="octicon octicon-person"></span>
+			<a href="user-guide-0.3/user-guide.html">User Guide</a>
+		</td>
+	</tr>
+	
 	<!-- Version 0.2 -->
 	<tr>
 		<td>0.2</td>
