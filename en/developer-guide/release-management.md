@@ -16,8 +16,36 @@ We do not release a single Maven module, but a set of coherent projects. A Git r
 2. You must have been added as a manager on Roboconf @ Sonatype. See [this ticket](https://issues.sonatype.org/browse/OSSRH-11576).
 3. You must have a signing key, generated with PGP. See [these instructions](http://central.sonatype.org/pages/working-with-pgp-signatures.html).
 
+## Release Scripts
 
-## Releasing
+A project with release scripts is available on [Github](https://github.com/roboconf/roboconf-release-scripts).  
+**Only update the conf.sh file**. Then, use the various scripts to release the Roboconf items. Release order is given in the next section.
+
+These scripts assume all the Roboconf projects have been checked out in the same directory.  
+Assuming you use *my-dir* as the Git default directory, you should have the following sub-directories:
+*my-dir/roboconf-platform*, *my-dir/roboconf-web-administration*, etc.
+
+
+## Projects Release
+
+A release involve several source repositories.  
+Proceed as described below.
+
+1. Update and tag **roboconf-web-administration**.
+2. Release **roboconf-platform**.
+3. Release **roboconf-eclipse-plugin**.
+4. Release **roboconf-system-installers**.
+5. Update the web site (no tag required).
+6. Update and tag **roboconf-examples** (no release required).
+
+
+# Manual Releases
+
+> The following sections indicate how to release projects by hand.  
+> It is the basis used in the release scripts.
+
+
+## Releasing a Maven project
 
 * Clone or update the concerned Git repository.  
 * Make sure the root POM has a released version as its parent.
@@ -62,19 +90,8 @@ Roughly, we do not use Maven to release it. We must use the Tycho approach, whic
 2. Build locally.
 3. Test...
 4. Upload the generated update site on [Bintray](https://bintray.com/roboconf/roboconf-eclipse).
-5. Make sure that the uploaded archive will be unzipped (there is an option for that). 
-6. Tag the source repository.
-7. Add the new update site's location on the web site.
+5. Make sure that the uploaded archive will be unzipped (there is an option for that).
+6. Specify a path when you upload. Use the new Roboconf version (e.g. 0.2, 0.3, etc) as the upload path.
+7. Tag the source repository.
+8. Add the new update site's location on the web site.
 
-
-## Projects Release
-
-A release involve several source repositories.  
-Proceed as described below.
-
-1. Update and tag **roboconf-web-administration**.
-2. Release **roboconf-platform**.
-3. Release **roboconf-eclipse-plugin**.
-4. Release **roboconf-system-installers**.
-5. Update the web site (no tag required).
-6. Update and tag **roboconf-examples** (no release required).

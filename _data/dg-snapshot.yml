@@ -59,4 +59,7 @@ life-cycle:
   
 development-guidelines:
   en: developer-guide/development-guidelines
+
+occi-model:
+  en: developer-guide/occi-model
  

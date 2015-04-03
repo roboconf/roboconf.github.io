@@ -33,6 +33,10 @@ menus: [ "developers", "developer-guide" ]
 * [Application](rest-api-application.html)
 * [Debug](rest-api-debug.html)
 
+## OCCI Support
+
+* [OCCI Model for Roboconf](occi-model.html)
+
 ## Documentation and Website
 
 * [Web Site Organization](web-site-organization.html)

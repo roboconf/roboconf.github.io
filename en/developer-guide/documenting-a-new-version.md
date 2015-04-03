@@ -9,6 +9,22 @@ menus: [ "developers", "developer-guide" ]
 As explained [here](web-site-organization.html), the user and developer guides have a version.  
 This version is used in the page IDs.
 
+## Automatically
+
+The [&laquo; release scripts &raquo;](https://github.com/roboconf/roboconf-release-scripts) project contains a **website.sh** file.  
+Provided you updated the **conf.sh** file, you can use it to perform most of the update task automatically.
+
+For the moment, it will create a new user guide version and update the indexes.  
+You still need to verify the result and clean the user guides. In particular, released user guides do not contain
+links toward older user guides. And the newly created user guide needs to be added to the main one.
+
+This script **does not** support the release of the developer guide (since we will not release it as long as we will
+remain in version 0.x).  
+Also, git commit and push have to be done manually, after the review.
+
+
+## By Hand
+
 This page explains how to document a new version of these guides.  
 In the next lines, **directory** is either **user-guide** or **developer-guide**. We assume
 the version to create or release is 1.0.
@@ -18,19 +34,20 @@ the version to create or release is 1.0.
 
 1. *directory* match the snapshot version. Copy it as *directory-1.0*.
 
-2. In this directory, replace all the IDs in the **markdown** files.  
-*dg.snapshot.* must become *dg.1.0.*  
-*ug.snapshot.* must become *ug.1.0.*
+2. In this directory, replace all the **cat** property in the **markdown** files.  
+*dg.snapshot* must become *dg.1.0.*  
+*ug.snapshot* must become *ug.1.0.*
 
 3. Still in the markdown files, update the **menus** field.  
 Add the version as a third property.  
 **Example:** *menus: menus: [ "users", "user-guide" ]* **becomes** *menus: [ "users", "user-guide", "1.0" ]*
 
-4. Open **_config.yml**.  
-Copy the section that declares the snapshot pages.  
-In the new section, update the IDs as explained above.
+4. Copy the data files.  
+**_data/ug-snapshot.yml** becomes **_data/ug-1-0.yml**.  
+**_data/dg-snapshot.yml** becomes **_data/dg-1-0.yml**.  
+Notice these file names do not contain dots!
 
-5. Still in the **_config.yml** file, update the relative path of the copied IDs.  
+5. In the newly created **yml** files, update the relative path of the copied IDs.  
 As an example, the **en** entry **user-guide/my-page-id** will become **user-guide-1.0/my-page-id**.
 
 6. Add a link to the new version in the main user or developer guide.
