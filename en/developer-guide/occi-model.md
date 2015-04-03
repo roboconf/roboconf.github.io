@@ -49,7 +49,7 @@ Let's detail it a little bit.
 
 <!-- -->
 
-* So, every behavior available for a facet also exists for a component.
+* *Component* extends *Facet*. So, every behavior available for a facet also exists for a component.
 * Only components can have hierarchical and runtime relations. In this context, a facet designates all the components that inherit from this facet.
 * An instance is associated with only one component.
 
@@ -74,38 +74,36 @@ In the ecore model, they are translated as OCL constraints.
 
 Here is a textual definition of these constraints.
 
-**1: comp-ext-any-facets**
-
-	A component can extend any number of facets.
-
-**2: comp-ext-one-comp**
+**1: comp-ext-one-comp**
 
 	A component can only extend directly one component.
 	You can compare facets to Java interfaces and components to Java classes.
+	
+	Like the diagram suggests it, a component can extend any number of facets.
 
-**3: facet-cannot-ext-itself**
+**2: facet-cannot-ext-itself**
 
 	A facet cannot extend (directly or indirectly) itself.
 
-**4: comp-cannot-deploy-over**
+**3: comp-cannot-deploy-over**
 
 	A component cannot be deployed (directly or indirectly) on itself (prevent cycle).
 	This may be seen as a limit for Docker containers, but they should be modeled differently according to their use,
 	even if they share the same configuration (think about debug and support).
 
-**5: comp-optional-dep**
+**4: comp-optional-dep**
 
 	A component cannot depend on itself, unless the dependency is optional.
 
-**6: root-components**
+**5: root-components**
 
 	Graphs root components cannot not have any (hierarchical) parent.
 
-**7: root-instances**
+**6: root-instances**
 
 	Applications root instances cannot have any (hierarchical) parent.
 
-**8: instance-and-graph-coherence**
+**7: instance-and-graph-coherence**
 
 	Instance hierarchy must be coherent with the component hierarchy.  
 	Said differently, if instance A is a child of instance B, then the component (of instance) B must be a
