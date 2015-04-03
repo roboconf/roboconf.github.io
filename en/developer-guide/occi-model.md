@@ -109,6 +109,9 @@ Here is a textual definition of these constraints.
 	Said differently, if instance A is a child of instance B, then the component (of instance) B must be a
 	(hierarchical) parent of the component A.
 
+**8: graph-facets-are-facets**
+
+	Graphs facets can only be facets, and not components.
 
 > Notice that all these constraints are already checked in the Roboconf validator.  
 > Except the Roboconf validator works on Roboconf classes and not on an OCCI-compliant meta-model.
