@@ -7,7 +7,7 @@ menus: [ "developers", "developer-guide" ]
 ---
 
 This page aims at specifying an OCCI-compliant extension for Roboconf.  
-The [OCCiware](http://occiware.ow2.org/) project defined an EMF meta-model. The global idea is to map Roboconf concepts
+The [OCCiware](http://www.occiware.org) project defined an EMF meta-model. The global idea is to map Roboconf concepts
 as OCCI resources, links, mix-ins, etc.
 
 
