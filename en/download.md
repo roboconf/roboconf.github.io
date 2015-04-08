@@ -32,11 +32,11 @@ The current development version is **0.4-SNAPSHOT**.
 		<td>
 			Deployment Manager: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.3/roboconf-karaf-dist-dm-0.3.tar.gz">Tar.gz</a>
-			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.3/roboconf-karaf-dist-dm-0.3.zip">Zip</a> (~ 30 Mb)
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.3/roboconf-karaf-dist-dm-0.3.zip">Zip</a> (~ 30 MB)
 			<br />
 			Agent: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.3/roboconf-karaf-dist-agent-0.3.tar.gz">Tar.gz</a>
-			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.3/roboconf-karaf-dist-agent-0.3.zip">Zip</a> (~ 20 Mb)
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.3/roboconf-karaf-dist-agent-0.3.zip">Zip</a> (~ 20 MB)
 			
 			<br /><br />
 			Eclipse <a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.3/">update site</a>
@@ -63,11 +63,11 @@ The current development version is **0.4-SNAPSHOT**.
 		<td>
 			Deployment Manager: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.2/roboconf-karaf-dist-dm-0.2.tar.gz">Tar.gz</a>
-			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.2/roboconf-karaf-dist-dm-0.2.zip">Zip</a> (~ 30 Mb)
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.2/roboconf-karaf-dist-dm-0.2.zip">Zip</a> (~ 30 MB)
 			<br />
 			Agent: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.2/roboconf-karaf-dist-agent-0.2.tar.gz">Tar.gz</a>
-			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.2/roboconf-karaf-dist-agent-0.2.zip">Zip</a> (~ 20 Mb)
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.2/roboconf-karaf-dist-agent-0.2.zip">Zip</a> (~ 20 MB)
 			
 			<br /><br />
 			Eclipse <a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.2/">update site</a>
@@ -89,9 +89,9 @@ The current development version is **0.4-SNAPSHOT**.
 		<td>0.1</td>
 		<td>October 10<sup>th</sup>, 2014</td>
 		<td>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-dm-webapp/0.1/roboconf-dm-webapp-0.1.war">Deployment Manager</a> (30 Mb)
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-dm-webapp/0.1/roboconf-dm-webapp-0.1.war">Deployment Manager</a> (30 MB)
 			&nbsp; - &nbsp;
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-agent/0.1/roboconf-agent-0.1.zip">Agent</a> (4,5 Mb)
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-agent/0.1/roboconf-agent-0.1.zip">Agent</a> (4,5 MB)
 		</td>
 		<td>
 			<span class="octicon octicon-mark-github"></span> 
