@@ -15,6 +15,7 @@ as OCCI resources, links, mix-ins, etc.
 
 Roboconf has the following concepts.
 
+* Application template
 * Application
 * Graphs (which wraps types definitions)
 * Facet (which is an abstract type)
@@ -38,7 +39,9 @@ As usual with [draw.io](https://www.draw.io/) diagrams, sources are available on
 This diagram may look ugly.  
 Let's detail it a little bit.
 
-* An application always has a graph.
+* An application and an application template share common properties.
+* An application is always created from a template.
+* An application template always has a graph.
 * An application may have any number of root instances.
 * Facets and components are types.
 
