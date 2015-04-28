@@ -94,6 +94,43 @@ GET hosts
 Columns: host_name
 ```
 
+Notes concerning Nagios3 install (Ubuntu)
+
+```
+apt-get install nagios3 check-mk-livestatus xinetd
+```
+Edit the /etc/nagios3/nagios.cfg, then append the following line:
+```
+set broker_module=/usr/lib/check_mk/livestatus.o /var/lib/nagios3/rw/livestatus
+```
+Add a new file called "livestatus" in /etc/xinetd.d, with the following content (makes livestatus available on TCP port 50000, you might prefer another one):
+```
+service livestatus
+{
+	type = UNLISTED
+	port = 50000
+	socket_type = stream
+	protocol = tcp
+	wait = no
+	cps = 100 3
+	instances = 500
+	per_source = 250
+	flags = NODELAY
+	user = nagios
+	server = /usr/bin/unixcat
+	server_args = /var/lib/nagios3/rw/livestatus
+	#only_from = 127.0.0.1 # modify this to only allow specific hosts to connect, currenly localhost only
+	disable = no
+}
+```
+Restart nagios3 and xinetd services
+```
+service nagios3 restart
+service xinetd restart
+```
+
+Note concerning Shinken: livestatus is installed by default, and configured to listen on port 50000. It may be necessary to enable the "livestatus" module: check the Shinken documentation to do so.
+
 ### REST
 
 An agent can query a REST service.  
