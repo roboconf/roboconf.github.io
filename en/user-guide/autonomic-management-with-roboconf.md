@@ -201,7 +201,7 @@ not the job of the agent. The agent measures and notify when needed. It is not u
 these measures. This will be up to the Deployment Manager.
 
 
-## Parametrized Measures Files
+## Parameterized Measures Files
 
 Measures files can be parametrized.  
 It means values can be externalized in a properties file.
