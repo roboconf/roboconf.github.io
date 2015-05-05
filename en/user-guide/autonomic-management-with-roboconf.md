@@ -102,7 +102,7 @@ apt-get install nagios3 check-mk-livestatus xinetd
 Edit the /etc/nagios3/nagios.cfg, then append the following line:
 
 ```
-set broker_module=/usr/lib/check_mk/livestatus.o /var/lib/nagios3/rw/livestatus
+broker_module=/usr/lib/check_mk/livestatus.o /var/lib/nagios3/rw/livestatus
 ```
 Add a new file called "livestatus" in /etc/xinetd.d, with the following content (makes livestatus available on TCP port 50000, you might prefer another one):
 
@@ -131,6 +131,12 @@ Restart nagios3 and xinetd services:
 ```
 service nagios3 restart
 service xinetd restart
+```
+
+Test livestatus / nagios config:
+
+```
+echo 'get HOSTS' | netcat localhost 50000
 ```
 
 Note concerning Shinken: livestatus is installed by default, and configured to listen on port 50000. It may be necessary to enable the "livestatus" module: check the Shinken documentation to do so.
