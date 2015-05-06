@@ -37,12 +37,12 @@ Here is a complete description of the parameters for Docker.
 | --- | --- | --- | --- |
 | target.id | Determines the target handler to use. | none, must be "docker" | yes |
 | docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). | none | yes |
-| docker.image | The ID or tag (name) of the docker image used as a template for the VM (as shown by "docker images", for example). If the image is not found, Roboconf will try to generate one, using "\<docker.image\>:\<docker.image\>" as its tag: if so, the "docker.agent.package" property is required so that Roboconf knows where to find the roboconf agent to install on the generated image. | "generated.by.roboconf" | no |
+| docker.image | The ID or tag (name) of the docker image used as a template for the VM (as shown by "docker images", for example). If the image is not found, Roboconf will try to generate one, using "\<docker.image\>:\<docker.image\>" as its tag: if so, the "docker.agent.package" property is required so that Roboconf knows where to find the Roboconf agent to install on the generated image. | "generated.by.roboconf" | no |
 | docker.user | The name of the user to connect. | none | no |
 | docker.password | The password of the user to connect. | none | no |
 | docker.email | The email of the user to connect. | none | no |
 | docker.version | The Docker version (for API compatibility). | none | no |
-| docker.agent.package | If you want this extension to generate a Docker image for you, this parameter points to the ZIP or TAR.GZ file of a Roboconf agent distribution. | none | no |
+| docker.agent.package | If you want this extension to generate a Docker image for you, this parameter is an **URL** that points to the ZIP or TAR.GZ file of a Roboconf agent distribution. The generated image is based on **Ubuntu**. | none | no |
 | docker.agent.jre-packages | If you want this extension to generate a Docker image for you, this parameter indicates the JRE to install (as a system package), as well as other optional packages, separated by spaces. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | openjdk-7-jre-headless | no |
 
 At least one of **docker.image** or **docker.agent.package** must be specified.
