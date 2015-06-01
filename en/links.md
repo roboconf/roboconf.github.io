@@ -20,6 +20,7 @@ menus: [ "users", "links" ]
 ## Social
 
 * [Twitter](https://twitter.com/Roboconf) account
+* Chat room @ [Gitter.im](https://gitter.im/roboconf/roboconf)
 * [Ohloh](https://www.ohloh.net/p/roboconf) page
 
 ## Related Projects
