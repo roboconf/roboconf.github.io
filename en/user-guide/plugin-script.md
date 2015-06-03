@@ -62,6 +62,16 @@ tomcat_N_portAjp = < AJP port for tomcat N >
 
 So, the naming convention for imports is < componentName >\_< index >\_< exportName >, with index starting at 0 and max (index) given by < componentName >\_size .
 
+An example of how such variables may be used (in bash):
+
+```
+for (( c=0; c<$tomcat_size; c++ ))
+do
+ IP_ADDRESS=tomcat_${c}_ip
+ echo $IP_ADDRESS
+done
+```
+
 ## Variables related to update actions
 
 - ROBOCONF\_UPDATE\_STATUS: the status of the instance that triggered the update (e.g. DEPLOYED\_STOPPED, DEPLOYED\_STARTED).
