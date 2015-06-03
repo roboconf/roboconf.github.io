@@ -76,10 +76,11 @@ This can help in quite a lot of situations.
 
 It is possible to split graph definitions into several files.  
 For every application, there is one main file. By using the **import** keyword,
-this main file can import other definitions. These definitions have to be in the same application.
+this main file can import other definitions.
 
-Very soon, Roboconf's **Maven plug-in** will be able to retrieve other projects and resolve
-imports from other projects.
+These definitions can be in the same application.  
+Or they can be in another Roboconf project. You can include other Roboconf projects
+by using Roboconf's **Maven plug-in**.
 
 Local imports are defined as follows...
 
