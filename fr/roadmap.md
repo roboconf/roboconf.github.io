@@ -12,15 +12,24 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 
 * **A partir d'Avril 2015**
 
-	* Utilisation d'une web socket dans le gestionnaire de déploiements.
-	* Refonte de l'administration web.
-	* Supporter des "place holders" pour les changements d'environnement.
-	* Compléter le support de Roboconf dans Eclipse et certains éditeurs.
-	* Implémenter le support d'Apache QPID en tant que serveur de messagerie.
-	* Ajouter la supervision des applications de Roboconf avec Nagios.
-	* Simplifier l'installation de Roboconf.
+	* Ajouter un mécanisme de <i>templating</i>.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Illustrer l'utilisation de Nagios avec Roboconf.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Créer des paquets Debian pour Roboconf.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Retravailler l'administration web.	&nbsp; <span class="glyphicon glyphicon-time"></span>
+	* Rajouter le support des commandes dans Roboconf.
+	* Rendre RabbitMQ optionnel.	&nbsp; <span class="glyphicon glyphicon-time"></span>
+	* Créer des démonstrateurs pour le déploiement de piles <i>Big Data</i>.	&nbsp; <span class="glyphicon glyphicon-time"></span>
+	* Utilisation d'une web socket dans le gestionnaire de déploiements.	
 
-* **Après Juin 2015**
+* **A partir de Juillet 2015**
+
+	* Supporter des "place holders" pour les changements d'environnement.
+	* Créer des paquets RPM pour Roboconf.
+	* Améliorer l'utilisabilité du système de <i>templating</i>.
+	* Compléter le support de Roboconf dans Eclipse et certains éditeurs.
+	* Progresser sur les recettes réutilisables et les rendre publiques.
+
+* **Après Octobre 2015**
 
 	* Etudier le support de TOSCA.
 	* Supporter l'exécution de scénarios utilisateurs.
@@ -35,4 +44,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
     * Implémenter un plug-in pour Puppet Master.
     * Implémenter un plug-in ANT.
 
-La version 0.4 de Roboconf sortira le 16 juin 2015.
+La version 0.4 de Roboconf sortira le <strike>16 juin</strike> 25 juin 2015.
