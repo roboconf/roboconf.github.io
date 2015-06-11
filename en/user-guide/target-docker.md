@@ -36,7 +36,7 @@ Here is a complete description of the parameters for Docker.
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
 | target.id | Determines the target handler to use. | none, must be "docker" | yes |
-| docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). | none | yes |
+| docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). | http://localhost:4243 | no |
 | docker.image | The ID or tag (name) of the docker image used as a template for the VM (as shown by "docker images", for example). If the image is not found, Roboconf will try to generate one, using "\<docker.image\>:\<docker.image\>" as its tag: if so, the "docker.agent.package" property is required so that Roboconf knows where to find the Roboconf agent to install on the generated image. | "generated.by.roboconf" | no |
 | docker.user | The name of the user to connect. | none | no |
 | docker.password | The password of the user to connect. | none | no |
