@@ -10,4 +10,4 @@ menus: [ "users", "user-guide" ]
 
 Apache Storm
 
-<img src="/resources/img/tutorial-storm-cluster.jpg" alt="Apache storm" class="gs" />
+<img src="/resources/img/tutorial-storm-cluster.png" alt="Apache storm" class="gs" />
