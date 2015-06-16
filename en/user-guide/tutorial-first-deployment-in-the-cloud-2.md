@@ -6,7 +6,7 @@ id: "tutorial-first-deployment-in-the-cloud-2"
 menus: [ "users", "user-guide" ]
 ---
 
-## Installer l'Agent Roboconf
+## Installing the Roboconf agent
 
 Install the DM and RabbitMQ.  
 You should have already done this in the [getting started with Roboconf](tutorial-getting-started-with-roboconf.html).
