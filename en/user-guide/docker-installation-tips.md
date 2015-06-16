@@ -6,7 +6,7 @@ id: "docker-installation-tips"
 menus: [ "users", "user-guide" ]
 ---
 
-## Docker installation tips
+## Docker configuration
 
 Here, we assume Docker is already installed on your system (e.g. by using "apt-get install lxc-docker" on Ubuntu, or see 
 [docker.com](http://docker.com) for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some 
