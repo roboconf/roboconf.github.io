@@ -69,7 +69,8 @@ My-Client-Database {
 }
 ```
 
-This can help in quite a lot of situations.
+This can help in quite a lot of situations.  
+Read [this page](inheritance-and-variables.html) for more information about how inheritance impacts variable exports.
 
 
 ## Imports
@@ -150,7 +151,8 @@ It is installed with Bash. And by indicating it has the **load-balance-able** fa
 we know two things: first, it exports **ip** and **port** variables. Second, it will be
 resolved by the load balancer.
 
-Roboconf will draw the right links between components just with these declarations.
+Roboconf will draw the right links between components just with these declarations.  
+Read [this page](inheritance-and-variables.html) for more information about how facets impact variable exports.
 
 
 ## Scopes

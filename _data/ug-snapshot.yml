@@ -56,6 +56,9 @@ reusable-slides:
   en: user-guide/reusable-slides
   fr: guide-utilisateur/presentations-reutilisables
   
+inheritance-and-variables:  
+  en: user-guide/inheritance-and-variables
+  
 web-administration-screenshots:
   en: user-guide/web-administration-screenshots
   
