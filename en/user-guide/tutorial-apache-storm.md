@@ -59,8 +59,10 @@ In this tutorial, we decided to design the Roboconf graph as follows:
 
 ## Install prerequisites
 
-Install the [messaging server (RabbitMQ)](http://roboconf.net/en/user-guide/installing-the-messaging-server.html) and the [Roboconf DM](http://roboconf.net/en/user-guide/installing-the-deployment-manager.html).
+Install the [messaging server (RabbitMQ)](installing-the-messaging-server.html) and the [Roboconf DM](installing-the-deployment-manager.html).
 You may have already done this in the [getting started with Roboconf](tutorial-getting-started-with-roboconf.html).
+
+Docker will also be necessary (unless you reconfigure the tutorial to use another IaaS). For details, see [Roboconf tips for Docker installation](docker-installation-tips.html).
 
 Then, start the DM, and make it aware of Docker: open the DM's interactive mode and type in...
 
