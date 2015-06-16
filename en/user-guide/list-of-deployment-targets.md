@@ -22,3 +22,7 @@ This page lists all the deployment targets Roboconf currently supports.
 * [Apache JClouds](target-jclouds.html)
 * [Embedded](target-embedded.html)
 * [In-Memory](target-in-memory.html)
+
+## Miscellaneous
+
+* [Docker installation tips for Roboconf](docker-installation-tips.html)
