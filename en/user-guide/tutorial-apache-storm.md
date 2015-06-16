@@ -37,19 +37,22 @@ In this tutorial, we will use Roboconf to deploy a storm cluster on multiple VMs
 Let's make it simple : we'll consider 2 kinds of nodes, called "Nimbus" (the master node) and "Worker" (a slave node).
 
 The Nimbus node will embed an instance of ZooKeeper (nodes coordination) and StormUI (Storm's web-based management console).
-Both Nimbus and Worker nodes will provide a storm platform (each kind of node will have a specific configuration), and the processes will be run under supervision using "supervisor" (supervisord.org).
+Both Nimbus and Worker nodes will provide a storm platform (each one with a specific configuration), and the processes will be run under supervision using "supervisor" (supervisord.org).
 
-A Worker node needs to know the IP address of the Nimbus node, in order to complete its configuration before starting: there is a runtime dependency, that must be resolved before starting the node.
+A Worker node needs to know the IP address of the Nimbus node, in order to complete its configuration before starting: this is a runtime dependency, that must be resolved before starting the node.
 
 So, to sum up:
 
 - Nimbus has storm + supervisord + ZooKeeper + StormUI
 - a Worker has storm + supervisord
-- Each kind of node has specific configuration files for all the software components deployed on it
+- Each kind of node has specific configuration files for all software components deployed on it
 - There is a runtime dependency between Nimbus and Worker(s) - each Worker needs the Nimbus IP address.
 
 In this tutorial, we decided to design the Roboconf graph as follows:
 
-- A "storm\_platform" component is a kind of container for Nimbus and Worker: it provides the Storm + supervisord software stack, without configuration.
-- A "storm\_worker" component is a kind of application to be deployed on a "storm\_platform" (here, mainly configuration files). It imports the IP address of the Nimbus node, and will be able to complete its configuration and start up as soon as the Nimbus IP is known.
-- A "storm\_nimbus" component is a kind of application to be deployed on a "storm\_platform" (configuration files + additional software, including StormUI and ZooKeeper). It exports its IP address, so that other components may use it (here, "storm\_worker" instances).
+- A "storm\_platform" component is a container for Nimbus and Worker: it provides the Storm + supervisord software stack, without configuration.
+- A "storm\_worker" component is an application to be deployed on a "storm\_platform" (here, mainly configuration files). It imports the IP address of the Nimbus node, and will be able to complete its configuration and start up as soon as the Nimbus IP is known.
+- A "storm\_nimbus" component is an application to be deployed on a "storm\_platform" (configuration files + additional software, including StormUI and ZooKeeper). It exports its IP address, so that other components may use it (here, "storm\_worker" instances).
+- A "VM" is the virtual machine where other components can be deployed (we'll use Docker containers, but switching to a IaaS is quiet easy - just adapt the "target.properties" configuration file with adequate credentials).
+
+<img src="/resources/img/tutorial-storm-graph.png" alt="Roboconf graph for Apache Storm" class="gs" />
