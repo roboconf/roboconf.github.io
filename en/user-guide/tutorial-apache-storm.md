@@ -53,6 +53,6 @@ In this tutorial, we decided to design the Roboconf graph as follows:
 - A "storm\_platform" component is a container for Nimbus and Worker: it provides the Storm + supervisord software stack, without configuration.
 - A "storm\_worker" component is an application to be deployed on a "storm\_platform" (here, mainly configuration files). It imports the IP address of the Nimbus node, and will be able to complete its configuration and start up as soon as the Nimbus IP is known.
 - A "storm\_nimbus" component is an application to be deployed on a "storm\_platform" (configuration files + additional software, including StormUI and ZooKeeper). It exports its IP address, so that other components may use it (here, "storm\_worker" instances).
-- A "VM" is the virtual machine where other components can be deployed (we'll use Docker containers, but switching to a IaaS is quiet easy - just adapt the "target.properties" configuration file with adequate credentials).
+- A "VM" is the virtual machine where other components can be deployed (we'll use Docker containers, but switching to a IaaS is quite easy - just adapt the "target.properties" configuration file with adequate credentials).
 
 <img src="/resources/img/tutorial-storm-model.png" alt="Roboconf graph for Apache Storm" class="gs" />
