@@ -56,3 +56,16 @@ In this tutorial, we decided to design the Roboconf graph as follows:
 - A "VM" is the virtual machine where other components can be deployed (we'll use Docker containers, but switching to a IaaS is quite easy - just adapt the "target.properties" configuration file with adequate credentials).
 
 <img src="/resources/img/tutorial-storm-model.png" alt="Roboconf graph for Apache Storm" class="gs" />
+
+## Install prerequisites
+
+Install the [messaging server (RabbitMQ)](http://roboconf.net/en/user-guide/installing-the-messaging-server.html) and the [Roboconf DM](http://roboconf.net/en/user-guide/installing-the-deployment-manager.html).
+You may have already done this in the [getting started with Roboconf](tutorial-getting-started-with-roboconf.html).
+
+Then, start the DM, and make it aware of Docker: open the DM's interactive mode and type in...
+
+```properties
+# Here in version 0.4
+bundle:install mvn:net.roboconf/roboconf-target-docker/0.4
+bundle:start <bundle-id>
+```
