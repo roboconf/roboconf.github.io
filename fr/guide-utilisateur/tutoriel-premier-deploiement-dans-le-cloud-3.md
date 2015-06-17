@@ -8,20 +8,20 @@ menus: [ "users", "user-guide" ]
 
 ## Déployer l'Application
 
-Reprenez l'application du premier tutoriel de Roboconf.
+Reprenez l'application du premier tutoriel de Roboconf.  
 Pour rappel, elle est disponible [ici](https://bintray.com/artifact/download/roboconf/roboconf-tutorial-samples/lamp-webapp-bash-0.2.0-1.0.zip).
 
 Extrayez-la et apportez les modifications suivantes :
 
-1. Changez le nom de l'application dans **descriptor/application.properties**.
+1. Changez le nom de l'application dans **descriptor/application.properties**.  
 Cela évitera un éventuel conflit avec l'application précédente.
 
 2. Ecrasez le fichier **graph/VM/target.properties** avec celui que vous venez de créer pour AWS.
 
-3. Rezippez le tout en une seule archive.
+3. Rezippez le tout en une seule archive.  
 Comparez avec l'archive originale pour vérifiez la validité de la structure.
 
-4. Dans la console (ligne de commande) du DM, démarrez le bundle **roboconf-target-iaas-ec2**.
+4. Dans la console (ligne de commande) du DM, démarrez le bundle **roboconf-target-iaas-ec2**.  
 Pour rappel, vous devez récupérer l'identifiant de ce bundle via la commande **bundle:list**, puis
 exécuter **bundle:start id**, où *id* est l'identifiant du bundle. Ainsi, l'extension qui gère des déploiements
 sur Amazon Web Services est désormais activée.
@@ -36,7 +36,7 @@ voir l'application web s'afficher. Si vous avez déployé les 2 isntances de l'a
 pouvoir vérifier que l'équilibrage de charge est opérationnel et que les requêtes tombent alternativement sur chacune
 des 2 instances de l'application web.
 
-Pour terminer, arrêtez toutes les machines via l'administration web de Roboconf.
+Pour terminer, arrêtez toutes les machines via l'administration web de Roboconf.  
 Assurez-vous que toutes les instances de VMs ont bien été détruites dans la console d'Amazon Web Services.
 
 Pour ceux qui souhaitent aller plus loin, des exercices supplémentaires sont disponibles dans [la dernière étape](tutoriel-premier-deploiement-dans-le-cloud-4.html).

@@ -6,12 +6,12 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>{{ page.title }}</title>
-
+  
 	<link type="text/css" rel="stylesheet" media="all" href="/resources/css/style.css" />
 	<link href="/resources/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	<link href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.css" rel="stylesheet" media="all" />
 	<link rel="shortcut icon" href="/favicon.ico" />
-
+	
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="/resources/js/roboconf.min.js"></script>
 	<script src="/resources/js/bootstrap.min.js"></script>
@@ -25,21 +25,21 @@
 			<li><a href="/{{ locale }}/{{ site.data['main']['news'][locale] }}.html" class="{% if page.menus[0] == "project" %}ep-selected{% else %}ep{% endif %}">
 				<span class="glyphicon glyphicon-flash"></span> {{ site.locales[locale].menu-project }}
 			</a></li>
-
+		
 			<li><a href="/{{ locale }}/{{ site.data['main']['download'][locale] }}.html" class="{% if page.menus[0] == "users" %}ep-selected{% else %}ep{% endif %}">
 				<span class="glyphicon glyphicon-user"></span> {{ site.locales[locale].menu-users }}
 			</a></li>
-
+			
 			<li><a href="/{{ locale }}/{{ site.data['main']['sources'][locale] }}.html" class="{% if page.menus[0] == "developers" %}ep-selected{% else %}ep{% endif %}">
 				<span class="glyphicon glyphicon-wrench"></span> {{ site.locales[locale].menu-developers }}
 			</a></li>
-
+			
 			<li class="dropdown">
 				<a class="dropdown-toggle ep" data-toggle="dropdown" href="#">
-					<span class="glyphicon glyphicon-globe"></span> {{ site.locales[locale].menu-lang }}
+					<span class="glyphicon glyphicon-globe"></span> {{ site.locales[locale].menu-lang }} 
 					<span class="glyphicon glyphicon-chevron-down little"></span>
 				</a>
-
+				
 				<ul class="dropdown-menu">
 				{% for l in site.locales %}
 					{% capture the_locale %}{{ l[0] }}{% endcapture %}
@@ -51,31 +51,31 @@
 				</ul>
 			</li>
 		</ul>
-
+		
 		<p style="clear: both; display: inline;"></p>
 	</nav>
-
+	
 	<div class="menu">
 		{% capture the_menu %}{{ page.menus[0] | prepend: 'menu.' | append: '.html' }}{% endcapture %}
 		{% include {{the_menu}} locale=locale %}
 	</div>
 	<div class="content">
 		<h1>{{ page.title }}</h1>
-
+	
 		{{content}}
 	</div>
 	<div class="clear"></div>
-
+	
 	<div id="footer">
 		Copyright &copy; 2013-{{ site.time | date: '%Y' }}, Linagora, Université Joseph Fourier, Floralis
 	</div>
-
+	
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+	
 	  ga('create', 'UA-50154889-1', 'roboconf.net');
 	  ga('send', 'pageview');
 	</script>

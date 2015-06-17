@@ -6,7 +6,7 @@ id: "target-docker"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 
-Roboconf has a target implementation for Docker.
+Roboconf has a target implementation for Docker.  
 From the Roboconf perspective, Docker is seen as a kind of IaaS.
 Roboconf may create and manage docker containers, that run Roboconf agents (just like VMs) and can be used as deployment targets.
 
@@ -18,7 +18,7 @@ bundle:install mvn:net.roboconf/roboconf-target-docker/0.2
 bundle:start <bundle-id>
 ```
 
-Sample **target.properties**.
+Sample **target.properties**.  
 Just copy / paste and edit.
 
 ```properties
@@ -44,8 +44,8 @@ Here is a complete description of the parameters for Docker.
 
 ## Docker Configuration
 
-Here, we assume Docker is already installed on your system (e.g. by using "apt-get install lxc-docker" on Ubuntu, or see
-[docker.com](http://docker.com) for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some
+Here, we assume Docker is already installed on your system (e.g. by using "apt-get install lxc-docker" on Ubuntu, or see 
+[docker.com](http://docker.com) for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some 
 ports may be available for other platforms.
 
 It is recommended to use docker version 1.3.x or later.
@@ -53,7 +53,7 @@ It is recommended to use docker version 1.3.x or later.
 
 ## Configure the TCP port for Docker Containers
 
-Roboconf needs Docker to be available on a TCP port.
+Roboconf needs Docker to be available on a TCP port.  
 To enable it, edit **/etc/default/docker**, and define DOCKER\_OPTS there.
 
 ```properties
@@ -78,10 +78,10 @@ docker pull ubuntu
 docker run -v /tmp:/roboconf -t -i ubuntu /bin/bash
 ```
 
-Note: the container started above shares the local **/tmp** as **/roboconf** under Docker (using the -v option).
+Note: the container started above shares the local **/tmp** as **/roboconf** under Docker (using the -v option).  
 This can be useful to share files between the local file system and the Docker container (e.g. to install the Roboconf agent).
 
-Let's assume you have copied the Roboconf agent in the shared **/roboconf** directory (here, the local **/tmp**).
+Let's assume you have copied the Roboconf agent in the shared **/roboconf** directory (here, the local **/tmp**).  
 In the Docker container, execute the following commands.
 
 ```
@@ -92,7 +92,7 @@ tar xvzf /roboconf/roboconf-karaf-dist-agent.tar.gz
 ln -s roboconf-karaf-dist-agent/ roboconf-agent
 ```
 
-Now, you have to add a **start.sh** executable script in the **/usr/local/roboconf-agent** directory.
+Now, you have to add a **start.sh** executable script in the **/usr/local/roboconf-agent** directory.  
 Set the following content (the script is mainly used to complete the agent setup at startup time).
 
 ```properties
@@ -108,13 +108,13 @@ cd bin
 ./karaf
 ```
 
-The container is now ready to become a Docker image.
+The container is now ready to become a Docker image.  
 Outside docker, keep track of its ID, that will be useful to build the image.
 
 - Use **docker ps** to obtain your container ID.
 - Then, **docker commit -m "Roboconf-Agent-Image" \<your container ID\> roboconf-agent:some-tag**
 
-Now, your image is created.
+Now, your image is created.  
 Retrieve its image ID using **docker images**, and use it as *docker.image* in the Roboconf configuration (**target.properties**).
 
 
@@ -122,25 +122,25 @@ Retrieve its image ID using **docker images**, and use it as *docker.image* in t
 
 Here is a reminder of some Docker commands.
 
-To list docker images:
+To list docker images:  
 **docker images**
 
-To remove a docker image:
+To remove a docker image:  
 **docker rmi \<image-ID\>**
 
-To run interactively a docker image (thus launching a container):
+To run interactively a docker image (thus launching a container):  
 **docker run -i -v /tmp:/roboconf -t \<image-ID\> /bin/bash**
 
 Note: the -v option is used there to share the local "/tmp" as "/roboconf" in the container, which is useful to exchange files.
 
-To list running docker containers:
+To list running docker containers:  
 **docker ps** (or, to list them all, "docker ps -a")
 
-to attach a shell script to a running container:
+to attach a shell script to a running container:  
 **docker exec -ti \<container-ID\> /bin/bash**
 
-To remove a docker container:
+To remove a docker container:  
 **docker rm \<container-ID\>**
 
-To remove all exited containers:
+To remove all exited containers:  
 **docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm**

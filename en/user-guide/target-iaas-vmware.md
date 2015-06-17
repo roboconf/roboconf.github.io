@@ -6,7 +6,7 @@ id: "target-iaas-vmware"
 menus: [ "users", "user-guide" ]
 ---
 
-Roboconf has a target implementation for VMWare.
+Roboconf has a target implementation for VMWare.  
 It only supports the creation of *compute* VMs.
 
 To install it, open the DM's interactive mode and type in...
@@ -17,10 +17,10 @@ bundle:install mvn:net.roboconf/roboconf-target-iaas-vmware/0.3
 bundle:start <bundle-id>
 ```
 
-> VMWare support depends on your version.
+> VMWare support depends on your version.  
 > What will most likely happens is that Roboconf will have several VMWare extensions, one per VMWare version.
 
-Sample **target.properties**.
+Sample **target.properties**.  
 Just copy / paste and edit.
 
 ```properties
@@ -28,21 +28,21 @@ Just copy / paste and edit.
 target.id = iaas-vmware
 
 # REST URL
-vmware.url =
+vmware.url = 
 
 # Credentials to connect
-vmware.user	=
-vmware.password	=
+vmware.user	= 
+vmware.password	= 
 vmware.ignorecert = true
 
 # Cluster information
-vmware.datacenter =
-vmware.cluster =
-vmware.vmuser =
-vmware.vmpassword =
+vmware.datacenter = 
+vmware.cluster = 
+vmware.vmuser = 
+vmware.vmpassword = 
 
 # VM configuration
-vmware.template =
+vmware.template =  
 ```
 
 Here is a complete description of the parameters for OpenStack.

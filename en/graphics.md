@@ -6,7 +6,7 @@ id: "graphics"
 menus: [ "developers", "graphics" ]
 ---
 
-This page gathers graphical resources associated with Roboconf (logo, icons, etc).
+This page gathers graphical resources associated with Roboconf (logo, icons, etc).  
 
 <br /><br />
 **Main Logo**

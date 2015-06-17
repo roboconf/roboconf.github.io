@@ -7,20 +7,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>{{ page.title }}</title>
 	<meta name="description" content="{{ page.description }}" />
-
+  
   	<link type="text/css" rel="stylesheet" media="all" href="/resources/css/style.css" />
 	<link href="/resources/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	<link rel="shortcut icon" href="/favicon.ico" />
-
+	
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="/resources/js/roboconf.min.js"></script>
 </head>
 
 <body>
 	{{content}}
-
+	
 	<div id="welcome-separator"></div>
-	<div id="welcome-ep">
+	<div id="welcome-ep">	
 		<a class="button ep index-ep" href="/{{locale}}/{{ site.data['main']['news'][locale] }}.html">
 			<span class="glyphicon glyphicon-flash"></span> <span class="index-link">{{ site.locales[locale].menu-project }}</span>
 		</a>
@@ -31,20 +31,20 @@
 			<span class="glyphicon glyphicon-wrench"></span> {{ site.locales[locale].menu-developers }}
 		</a>
 	</div>
-
+	
 	<div id="footer">
 		Copyright &copy; 2013-{{ site.time | date: '%Y' }}, Linagora, Université Joseph Fourier, Floralis
 	</div>
-
+	
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+	
 	  ga('create', 'UA-50154889-1', 'roboconf.net');
 	  ga('send', 'pageview');
 	</script>
-
+	
 </body>
 </html>

@@ -386,7 +386,7 @@ table th {
 	padding: 10px 14px;
 }
 
-table tr:nth-child(odd)	{
+table tr:nth-child(odd)	{ 
 	background-color: #dadada;
 }
 

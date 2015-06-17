@@ -6,7 +6,7 @@ id: "target-jclouds"
 menus: [ "users", "user-guide" ]
 ---
 
-Roboconf has a generic target implementation based on [Apache JClouds](http://jclouds.apache.org).
+Roboconf has a generic target implementation based on [Apache JClouds](http://jclouds.apache.org).  
 For the moment, it only supports the creation of *compute* VMs.
 
 To install it, open the DM's interactive mode and type in...
@@ -18,7 +18,7 @@ bundle:install mvn:net.roboconf/roboconf-target-jclouds/0.3
 bundle:start <bundle-id>
 ```
 
-Sample **target.properties**.
+Sample **target.properties**.  
 Just copy / paste and edit.
 
 ```properties
@@ -26,20 +26,20 @@ Just copy / paste and edit.
 target.id = jclouds
 
 # The JClouds provider
-jclouds.provider-id =
+jclouds.provider-id = 
 
 # The URL to reach the cloud API
-jclouds.endpoint =
+jclouds.endpoint = 
 
 # The credentials to connect
-jclouds.identity =
-jclouds.credential =
+jclouds.identity = 
+jclouds.credential = 
 
 # The VM configuration
-jclouds.security-group =
-jclouds.image-name =
-jclouds.hardware-name =
-jclouds.key-pair =
+jclouds.security-group = 
+jclouds.image-name =  
+jclouds.hardware-name = 
+jclouds.key-pair = 
 ```
 
 Here is a complete description of the parameters for JClouds.
@@ -57,7 +57,7 @@ Here is a complete description of the parameters for JClouds.
 | jclouds.key-pair | The name of the key pair used to connect in SSH to newly created VMs. Not all the providers support it. | none | no |
 
 
-Notice we do not use image and hardware IDs in our configuration files.
+Notice we do not use image and hardware IDs in our configuration files.  
 This is because JClouds requires region settings when specifying identifiers.
 
 As an example, if you wanted to create a new VM from image ID *abcdef* with a flavor (or hardware) called *m1.small* in Openstack, you
@@ -71,6 +71,6 @@ jclouds.hardware-id = RegionOne/2
 # ... and RegionOne is the associated region.
 ```
 
-Since region settings and hardware ID are not always easy to retrieve, we prefer to rely on names.
+Since region settings and hardware ID are not always easy to retrieve, we prefer to rely on names.  
 We assume cloud infrastructures will be managed so that these names remain unique. Otherwise, feel free to post a feature request
 in our issues tracker.

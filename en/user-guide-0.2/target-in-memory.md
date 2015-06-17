@@ -6,7 +6,7 @@ id: "target-in-memory"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 
-Roboconf has a target implementation to run agents in memory.
+Roboconf has a target implementation to run agents in memory.    
 
 > This implementation has no interest for production environments.
 
@@ -20,7 +20,7 @@ bundle:install mvn:net.roboconf/roboconf-target-in-memory/0.2
 bundle:start <bundle-id1> <bundle-id2> <bundle-id3>
 ```
 
-The in-memory target acts as a simulation mode.
+The in-memory target acts as a simulation mode.  
 When it is asked to create a VM, this implementation launches a new agent instance (as a new
 iPojo instance). These agents mock extensions, which means no script or Puppet module is used.
 Instead, life cycle actions (deploy, start, etc.) result in a log entry and nothing more.
@@ -31,7 +31,7 @@ In-memory support is useful for...
 * ... debugging Roboconf's internal mechanisms.
 * ... testing (unit and integration tests).
 
-Sample **target.properties**.
+Sample **target.properties**.  
 Just copy / paste and edit.
 
 ```properties

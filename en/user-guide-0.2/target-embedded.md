@@ -6,7 +6,7 @@ id: "target-embedded"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 
-Embedded support addresses the cases where the machines already exist or are created manually.
+Embedded support addresses the cases where the machines already exist or are created manually.  
 Therefore, it covers existing (physical) machines, devices (such as cards) and virtual machines created
 manually (e.g. with Virtual Box).
 
@@ -18,11 +18,11 @@ bundle:install mvn:net.roboconf/roboconf-target-embedded/0.2
 bundle:start <bundle-id>
 ```
 
-With this configuration, you need to start the agent directly.
-And you will have to pass it some information by hand (like the IP address of the messaging server).
+With this configuration, you need to start the agent directly.  
+And you will have to pass it some information by hand (like the IP address of the messaging server).  
 This is achieved by updating the **net.roboconf.agent.configuration.cfg** file under Karaf's **etc** directory.
 
-Sample **target.properties**.
+Sample **target.properties**.  
 Just copy / paste and edit.
 
 ```properties

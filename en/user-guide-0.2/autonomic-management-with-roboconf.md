@@ -6,24 +6,24 @@ id: "autonomic-management-with-roboconf"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 
-Autonomic management is an experimental feature of Roboconf.
+Autonomic management is an experimental feature of Roboconf.  
 It consists in two parts:
 
-* On one side, agents retrieve metrics on their local node.
+* On one side, agents retrieve metrics on their local node.  
 These metrics are compared against some values given in the agent's configuration.
 If they exceed, equal or are lower than given values (depending on the configuration rules),
 agents send a notification to the DM.
 * On the other side, when the DM receives such a notification, it checks its configuration
 to determine which action to undertake. This can go from a single log entry, to e-mail notification
-or even replicating a service on another machine.
+or even replicating a service on another machine. 
 
-> Autonomic management is complementary to usual monitoring tools.
+> Autonomic management is complementary to usual monitoring tools.  
 > One does not replace the other.
 
 
 ## Schema
 
-This schema summers up the way autonomic management works.
+This schema summers up the way autonomic management works.  
 Detection is delegated to agents. Reactions are managed by the Deployment Manager (DM).
 
 <br />
@@ -32,32 +32,32 @@ Detection is delegated to agents. Reactions are managed by the Deployment Manage
 
 ## Configuration
 
-The configuration is in fact defined in application projects.
+The configuration is in fact defined in application projects.  
 It means every project has its own rules and reactions.
 
-In this perspective, the project structure is enriched with a new directory, called **autonomic**.
+In this perspective, the project structure is enriched with a new directory, called **autonomic**.  
 With the **descriptor**, **graph** and **instances** directories, it makes 4. The **autonomic** directory
 expects two kinds of files.
 
-* **measures** files include a set of measures to perform by the agent.
+* **measures** files include a set of measures to perform by the agent.  
 Such a file is associated with a given component in the graph. Hence, we can consider
-the autonomic rules as an annotation on a component in the graph.
+the autonomic rules as an annotation on a component in the graph.  
 These files must be named **&lt;component name&gt;.measures**.
 
-* **rules** files define the actions to undertake by the DM when a measure has reached a given limit.
+* **rules** files define the actions to undertake by the DM when a measure has reached a given limit.  
 Such a file is associated with the whole application. It must be named **rules.cfg**.
 
 
 ## Measures Files
 
-Measures files indicate measures an agent will have to perform regularly on its machine.
+Measures files indicate measures an agent will have to perform regularly on its machine.  
 The delay between each check is for the moment hard-coded.
 
-These files use a custom syntax.
-Comments start with the sharp (#) character.
+These files use a custom syntax.  
+Comments start with the sharp (#) character.  
 Ever measure must have a unique name.
 
-An agent can use several options to measure something.
+An agent can use several options to measure something.  
 The option or extension to use to perform the measure is indicated on the same line than
 the measure name. Here is the syntax for the declaration of a measure.
 
@@ -66,7 +66,7 @@ the measure name. Here is the syntax for the declaration of a measure.
 
 ### LiveStatus
 
-We can use **LiveStatus** (which is the protocol used by Nagios and Shinken).
+We can use **LiveStatus** (which is the protocol used by Nagios and Shinken).  
 This allows to query a local Nagios or Shinken agent. We simply write a live status request.
 
 ```properties
@@ -96,7 +96,7 @@ Columns: host_name
 
 ### REST
 
-An agent can query a REST service.
+An agent can query a REST service.  
 The result can be interpreted as an integer or as a string.
 
 ```properties
@@ -127,9 +127,9 @@ The following operators are supported.
 
 ### File
 
-An agent can check the local file system.
+An agent can check the local file system.  
 Depending on the existence of a file or a directory, or based on the absence
-of a given file, a notification will be sent to the DM.
+of a given file, a notification will be sent to the DM. 
 
 ```properties
 # This is a comment ;)
@@ -149,10 +149,10 @@ Delete if exists /tmp/ta-daaaaa
 Notify if not exists /tmp/a-directory-to-not-delete
 ```
 
-> For a given component, one can define several measures.
+> For a given component, one can define several measures.  
 > For a given component, it is possible to mix measure extensions.
 
-Each measure is performed independently of the others.
+Each measure is performed independently of the others.  
 It means every result that match the rule results in a message sent to the DM.
 
 How combinations are checked (i.e. react only if this rule and this other one are verified) is
@@ -162,14 +162,14 @@ these measures. This will be up to the Deployment Manager.
 
 ## Parametrized Measures Files
 
-Measures files can be parametrized.
+Measures files can be parametrized.  
 It means values can be externalized in a properties file.
 
-This an be used, for the moment, for environment switch (test, production, etc).
+This an be used, for the moment, for environment switch (test, production, etc).  
 It will also be used **later** to update and inject new values for the agent.
 
-Let's take an example.
-Here is the content of the **my-component.measures** file.
+Let's take an example.  
+Here is the content of the **my-component.measures** file.  
 It contains two variables whose value will be injected from a properties file.
 They are here called *a-directory-to-not-delete* and *accept_passive_checks*. They are
 wrapped between *{{* and *}}* (like Mustache does).
@@ -199,11 +199,11 @@ a-directory-to-not-delete = roboconf
 Rules files contain the reactions to undertake by the DM when a measure verified a given rule
 on the agent side.
 
-> For the moment, the DM implementation is very basic.
+> For the moment, the DM implementation is very basic.  
 > It reacts to every message. There is no complex event processing or real rule engine for the moment.
 
 These files use a custom syntax. **This syntax may change later, in particular if we had
-to switch to real rule engine.**
+to switch to real rule engine.**  
 Comments start with the sharp (#) character.
 
 The syntax is the following one...
@@ -211,13 +211,13 @@ The syntax is the following one...
 	[REACTION measure-name reaction-handler]
 	Optional parameters for the handler
 
-There are 4 available handlers.
+There are 4 available handlers.  
 
 * **Log**: to log an entry. There is no parameter.
 * **Mail**: to send an e-mail. It accepts only one parameter, which is an e-mail address.
 * **Replicate-Service**: to replicate a component on a new machine. It takes a chain of component names as parameter.
-* **Delete-Service**: to delete a component that was replicated. It takes a component name as parameter.
-
+* **Delete-Service**: to delete a component that was replicated. It takes a component name as parameter. 
+ 
 Let's see an example with 4 different reactions to 4 different measures.
 
 ```properties
@@ -248,7 +248,7 @@ The subject line is optional.
 [reaction event-4 Log]
 ```
 
-To send an e-mail, you have to create a properties file.
+To send an e-mail, you have to create a properties file.  
 For the moment, it must be located in the rules directory, and be called *rules.cfg.properties*.
 It must contain all the mail configuration. Here is a sample.
 
@@ -274,11 +274,11 @@ See **javax.mail** properties for more details.
 
 ## Activation
 
-On the agent side, autonomic is handled in the **roboconf-agent-monitoring** bundle.
+On the agent side, autonomic is handled in the **roboconf-agent-monitoring** bundle.  
 So, you can disable autonomic management by stopping or uninstalling this bundle.
 
-On the DM, you have nothing to do.
+On the DM, you have nothing to do.  
 Reacting to agent messaging is the normal job of the DM.
 
-> The DM can usually be stopped when it is not used.
+> The DM can usually be stopped when it is not used.  
 > However, it has to run ALL the time when autonomic management is used.

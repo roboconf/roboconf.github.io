@@ -28,7 +28,7 @@ To list deployed applications.
 
 **Response Text Object:**
 
-Array of applications: [ app1, ..., appN ]
+Array of applications: [ app1, ..., appN ]  
 An application is an object with the following properties:
 
 - name: the application name.
@@ -112,7 +112,7 @@ HTTP/1.1 200 OK
 
 ## <span class="glyphicon glyphicon-hand-right"></span> POST /applications/local
 
-To deploy an application already available on the local file system (e.g. FTP upload).
+To deploy an application already available on the local file system (e.g. FTP upload).  
 Depending on the size of the application, FTP upload may be more suitable than a simple HTTP upload.
 
 **Query Parameters:**
@@ -155,7 +155,7 @@ HTTP/1.1 200 OK
 
 ## <span class="glyphicon glyphicon-hand-right"></span> POST /applications/{name}/shutdown
 
-To shut down an application.
+To shut down an application.  
 Shutdown means removing everything Roboconf deployed or created for this application.
 This operation does not delete the application from the model. It only destroys runtime resources.
 
@@ -198,7 +198,7 @@ HTTP/1.1 200 OK
 
 ## <span class="glyphicon glyphicon-hand-right"></span> DELETE /applications/{name}/delete
 
-To delete an application.
+To delete an application.  
 An application can only be deleted if all its resources were stopped and undeployed first.
 Said differently, an application must be shutdown before being deleted.
 

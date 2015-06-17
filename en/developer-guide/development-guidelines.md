@@ -8,7 +8,7 @@ menus: [ "developers", "developer-guide" ]
 
 ## Use Maven
 
-There is no constraint over which development environment people use.
+There is no constraint over which development environment people use.  
 However, the build tool is Maven (3.x). So, use it.
 
 And before every commit or pull request, run...
@@ -40,7 +40,7 @@ This section is widely inspired (and partially copied) from [Atom.io's web site]
 
 ## CheckStyle
 
-Roboconf's Maven configuration comes with a [CheckStyle](http://checkstyle.sourceforge.net/) configuration.
+Roboconf's Maven configuration comes with a [CheckStyle](http://checkstyle.sourceforge.net/) configuration.  
 Basically, it checks some casual rules about code quality. It also checks the well-formedness of Javadoc comments.
 
 In particular, classes must be documented as follows...
@@ -63,17 +63,17 @@ And methods must be described as follows...
  *
  * @param param1 an optional description
  * @param param2 an optional description
- * @return an optional description of the result
+ * @return an optional description of the result 
  */
 ```
 
-CheckStyle is also in charge of checking license headers in Java and XML files.
+CheckStyle is also in charge of checking license headers in Java and XML files.  
 They must contain the headers for the Apache license. The copyright years are also checked.
 
 
 ## FindBugs
 
-There is no default configuration for [FindBugs](http://findbugs.sourceforge.net/) in Roboconf's **pom.xml**.
+There is no default configuration for [FindBugs](http://findbugs.sourceforge.net/) in Roboconf's **pom.xml**.  
 However, it is a good practice for developers to run this tool locally from time to time.
 
 Using it with your IDE (such as Eclipse) makes it quite easy to use.
@@ -81,7 +81,7 @@ Using it with your IDE (such as Eclipse) makes it quite easy to use.
 
 ## Check Code Coverage
 
-Even if it is not dramatic, keeping a high code-coverage is useful.
+Even if it is not dramatic, keeping a high code-coverage is useful.  
 This indicator determines whether your unit tests check all the possible execution branches.
 
 You can verify it in a given Maven module by typing in...
@@ -95,20 +95,20 @@ Then, open the **target/site/cobertura/index.html** file in your web browser.
 
 ## Rely on Utility Methods
 
-**roboconf-core** contains several utility methods.
+**roboconf-core** contains several utility methods.  
 Take a look at the **utils** package and try to reuse these methods.
 This will prevent redundant code.
 
 
 ## Running Sonar Locally
 
-Roboconf does not have an online Sonar instance.
+Roboconf does not have an online Sonar instance.  
 However, it is good sometimes to run it locally to get feedback and warnings about your code.
 Sonar brings information some other tools, like FindBugs and CheckStyle, do not have.
 
-1. First, make sure you have [Sonar](http://www.sonarqube.org/downloads/) installed on your machine.
+1. First, make sure you have [Sonar](http://www.sonarqube.org/downloads/) installed on your machine.  
 No need to install a database. You can use an in-memory database, such as H2.
-2. Start Sonar.
+2. Start Sonar.  
 3. Go to Roboconf's directory and execute the following commands.
 
 ```tcl
@@ -116,5 +116,5 @@ mvn clean install
 mvn sonar:sonar
 ```
 
-See [Sonar's web site](http://mojo.codehaus.org/sonar-maven-plugin/) for more information.
-You can now check out results on **http://localhost:9000**
+See [Sonar's web site](http://mojo.codehaus.org/sonar-maven-plugin/) for more information.  
+You can now check out results on **http://localhost:9000** 

@@ -6,16 +6,16 @@ id: "index"
 menus: [ "users", "user-guide", "0.3" ]
 ---
 
-<!--
+<!-- 
 	We use HTML syntax in this page because we need CSS classes for floating.
 	Markdown does not support it.
  -->
 
 <div class="floated">
 	<h2>Getting Started</h2>
-
+	
 	<ul>
-	<li>Understanding Roboconf:
+	<li>Understanding Roboconf: 
 		<a href="lamp-example-part-1.html">part 1</a>
 		-
 		<a href="lamp-example-part-2.html">part 2</a>
@@ -86,7 +86,7 @@ menus: [ "users", "user-guide", "0.3" ]
 	<li><a href="autonomic-management-with-roboconf.html">Autonomic Management</a></li>
 	</ul>
 </div>
-
+	
 <div class="floated">
 	<h2>Targets &amp; Plugins</h2>
 

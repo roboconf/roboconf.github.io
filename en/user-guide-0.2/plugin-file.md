@@ -6,7 +6,7 @@ id: "plugin-file"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 
-The file plug-in is a handy plug-in to perform basic file operations.
+The file plug-in is a handy plug-in to perform basic file operations.  
 It can be used, as an example, to download and install artifacts in web servers
 that can detect new files. As an example, with Tomcat, you can install a new web application
 by dropping a WAR file into the *webapps* directory.
@@ -19,10 +19,10 @@ Component_Y {
 }
 </code></pre>
 
-Its configuration (or recipe) resides in a simple properties file.
+Its configuration (or recipe) resides in a simple properties file.  
 This file must be called **instructions.properties**.
 
-The syntax of such a file is made up of a list of instructions.
+The syntax of such a file is made up of a list of instructions.  
 It will be easier with an example.
 
 ```properties
@@ -60,10 +60,10 @@ Possible action types:
 | Move | Source -> Path | Moves a file. source path **->** target path |
 
 
-If the action type is not recognized, then nothing is done.
+If the action type is not recognized, then nothing is done.  
 For a given phase, several actions can be specified. Ordering is achieved through the position parameter.
 
-Most of the time, people will only deal with one file.
+Most of the time, people will only deal with one file.  
 But you could process lists in the following way...
 
 ```properties
@@ -78,6 +78,6 @@ deploy.4.move = /tmp/roboconf-tmp-file -> /home/user/my-file-2.txt
 # ...
 ```
 
-> Everything this extension does could be done with Bash or Puppet.
+> Everything this extension does could be done with Bash or Puppet.  
 > But for people that do not want to write Bash scripts or Puppet modules,
 > this plug-in provides a simple and efficient alternative for basic use cases.

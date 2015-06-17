@@ -10,7 +10,7 @@ Here are some good practices to write reusable recipes.
 
 ## 1. Be as Minimal as Possible
 
-To maximize reusability, make your recipe as minimal as possible.
+To maximize reusability, make your recipe as minimal as possible.  
 The functional scope should be clearly defined. And it should have the fewest dependencies.
 
 ## 2. Name it correctly
@@ -30,12 +30,12 @@ Use the same name for the Maven artifact ID, the module name and the Git reposit
 
 ## 4. Do not add a Descriptor
 
-Unlike complete applications, recipes do not need an application descriptor.
+Unlike complete applications, recipes do not need an application descriptor.  
 This is always true, unless your recipe contains more than one graph files right under the **graph** directory.
 
 ## 5. Exported Variables must be used in Recipes
 
-If a component exports a variable, then it should be used in its recipe.
+If a component exports a variable, then it should be used in its recipe.  
 Indeed, exported variables can be overridden by instances and sub-components. If it is overridden,
 then the recipe should use the value set by the user. Otherwise, inconsistency may occur.
 

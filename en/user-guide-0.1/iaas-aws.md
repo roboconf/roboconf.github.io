@@ -6,13 +6,13 @@ id: "iaas-aws"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 
-Roboconf has a IaaS implementation for Amazon Web Services (AWS).
+Roboconf has a IaaS implementation for Amazon Web Services (AWS).  
 It only supports the creation of *compute* VMs.
 
-Every new VM is associated with a public IP address.
+Every new VM is associated with a public IP address.  
 This address will be used by other components which resolve their dependencies through Roboconf.
 
-Sample **iaas.properties**.
+Sample **iaas.properties**.  
 Just copy / paste and edit.
 
 ```properties
@@ -20,17 +20,17 @@ Just copy / paste and edit.
 iaas.type = ec2
 
 # EC2 URL
-ec2.endpoint =
+ec2.endpoint = 
 
 # Credentials to connect
-ec2.access.key =
-ec2.secret.key =
+ec2.access.key = 
+ec2.secret.key = 
 
 # VM configuration
-ec2.ami	=
+ec2.ami	= 
 ec2.instance.type = t1.micro
-ec2.ssh.key =
-ec2.security.group	=
+ec2.ssh.key = 
+ec2.security.group	= 
 ```
 
 Here is a complete description of the parameters for Amazon Web Services.

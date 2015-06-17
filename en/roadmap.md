@@ -6,17 +6,17 @@ id: "roadmap"
 menus: [ "project", "roadmap" ]
 ---
 
-Roboconf started as a Research prototype and is now under industrialization.
+Roboconf started as a Research prototype and is now under industrialization.  
 The roadmap for the next months covers several aspects.
 
-<!--
+<!-- 
 	 &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	 &nbsp; <span class="glyphicon glyphicon-time"></span>
 -->
 
-
+	
 * **From April 2015**
-
+ 
 	* Add a templating mechanism.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Illustrate Nagios support with Roboconf.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Create Debian packages for Roboconf.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
@@ -33,7 +33,7 @@ The roadmap for the next months covers several aspects.
 	* Improve usability of the templating mechanism.
 	* Complete support in Eclipse and other editors.
 	* Fix reusable recipes and make them public.
-
+		
 * **After October 2015**
 
 	* Study TOSCA support.

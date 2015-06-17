@@ -35,8 +35,8 @@ ainsi que les publications dans lesquelles il a été mentionné.
 
 * 19 février 2014
 * [Page de l'événement](http://wiki.eclipse.org/Eclipse_IoT_Day_Grenoble_2014) sur Eclipse.org
-* Présentation :
-[PDF](/slides/eclipse-iot-2014/Roboconf--Cloud-Deployment--Eclipse-IoT--Grenoble-2014.pdf) /
+* Présentation : 
+[PDF](/slides/eclipse-iot-2014/Roboconf--Cloud-Deployment--Eclipse-IoT--Grenoble-2014.pdf) / 
 [ODP](/slides/eclipse-iot-2014/Roboconf--Cloud-Deployment--Eclipse-IoT--Grenoble-2014.odp)
 * Vidéo sur [Youtube](http://www.youtube.com/watch?v=h2FvWRtDoGM)
 

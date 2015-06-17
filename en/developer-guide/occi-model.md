@@ -6,7 +6,7 @@ id: "occi-model"
 menus: [ "developers", "developer-guide" ]
 ---
 
-This page aims at specifying an OCCI-compliant extension for Roboconf.
+This page aims at specifying an OCCI-compliant extension for Roboconf.  
 The [OCCiware](http://www.occiware.org) project defined an EMF meta-model. The global idea is to map Roboconf concepts
 as OCCI resources, links, mix-ins, etc.
 
@@ -27,16 +27,16 @@ And there are various relations between these concepts.
 
 ## Class Diagram
 
-The following class diagram illustrates the relations between Roboconf concepts.
+The following class diagram illustrates the relations between Roboconf concepts.  
 Notice that **instance data** are not present in the model, there are considered like a developer trick rather than a real concept.
 Same thing for **instance imports**, which are runtime structures and do not aim at being manipulated by users.
 
 <img src="/resources/img/roboconf-class-diagram-for-occi.png" alt="Class diagram" class="gs" />
 
-A [SVG version](/resources/img/roboconf-class-diagram-for-occi.svg) is also available.
+A [SVG version](/resources/img/roboconf-class-diagram-for-occi.svg) is also available.  
 As usual with [draw.io](https://www.draw.io/) diagrams, sources are available on Roboconf's web site resources.
 
-This diagram may look ugly.
+This diagram may look ugly.  
 Let's detail it a little bit.
 
 * An application and an application template share common properties.
@@ -59,10 +59,10 @@ Let's detail it a little bit.
 
 ## OCCI Diagram
 
-The following diagram was generated with Eclipse's ecore tooling.
+The following diagram was generated with Eclipse's ecore tooling.  
 It is based on the ecore model that was contributed in the [OCCIware project](https://github.com/occiware).
 
-This diagram is compliant with the OCCI meta-model.
+This diagram is compliant with the OCCI meta-model.  
 The concepts described above extend **Resource**. And we defined relations that exist between them as **Link**s.
 There is no mix-in in Roboconf.
 
@@ -72,7 +72,7 @@ There is no mix-in in Roboconf.
 
 ## Model Constraints
 
-There are also some constraints that cannot be represented on the class and OCCI diagrams.
+There are also some constraints that cannot be represented on the class and OCCI diagrams.  
 In the ecore model, they are translated as OCL constraints.
 
 Here is a textual definition of these constraints.
@@ -81,7 +81,7 @@ Here is a textual definition of these constraints.
 
 	A component can only extend directly one component.
 	You can compare facets to Java interfaces and components to Java classes.
-
+	
 	Like the diagram suggests it, a component can extend any number of facets.
 
 **2: facet-cannot-ext-itself**
@@ -108,7 +108,7 @@ Here is a textual definition of these constraints.
 
 **7: instance-and-graph-coherence**
 
-	Instance hierarchy must be coherent with the component hierarchy.
+	Instance hierarchy must be coherent with the component hierarchy.  
 	Said differently, if instance A is a child of instance B, then the component (of instance) B must be a
 	(hierarchical) parent of the component A.
 
@@ -116,5 +116,5 @@ Here is a textual definition of these constraints.
 
 	Graphs facets can only be facets, and not components.
 
-> Notice that all these constraints are already checked in the Roboconf validator.
+> Notice that all these constraints are already checked in the Roboconf validator.  
 > Except the Roboconf validator works on Roboconf classes and not on an OCCI-compliant meta-model.

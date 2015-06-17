@@ -12,14 +12,14 @@ Cette page récapitule la liste des fonctionnalités principales et les changeme
 
 ## Version 0.3
 
-Roboconf 0.3 apporte des améliorations pour le déploiement dans le cloud.
+Roboconf 0.3 apporte des améliorations pour le déploiement dans le cloud.  
 La création des machines est plus rapide, et leur configuration se fait désormais
 en parallèle et de manière asynchrone. Ces optimisations permettent d'effectuer de
 gros déploiements plus rapidement qu'avec les versions précédentes de Roboconf.
 
 L'équipe de développement a égalemen ttravaillé sur la réutilisabilité de recettes.
-Nous avons mis en place une nouvelle organisation Github, [Roboconf-recipes](https://github.com/roboconf-recipes),
-pour partager de telles recettes. N'hésitez pas à vous en servir et à en contribuer de nouvelles. Enfin,
+Nous avons mis en place une nouvelle organisation Github, [Roboconf-recipes](https://github.com/roboconf-recipes), 
+pour partager de telles recettes. N'hésitez pas à vous en servir et à en contribuer de nouvelles. Enfin, 
 l'outillage a poursuivi son évolution. Le plug-in Maven est désormais complet, un générateur de documentation a été réalisé, et des contributions ont été faites pour supporter le DSL de Roboconf dans des outils d'édition
 comme [Atom.io](https://atom.io/).
 
@@ -38,10 +38,10 @@ Par ailleurs, le formalisme de description de Roboconf a été revu et complét�
 
 ## Version 0.1
 
-La version 0.1 est la première release stable de Roboconf.
+La version 0.1 est la première release stable de Roboconf.  
 
 Le **Deployment Manager** (DM) est une application web qui peut être déployée
-sur n'importe quel serveur d'application.
+sur n'importe quel serveur d'application.  
 L'**agent** est quant à lui une application Java autonome.
 
 * *Cibles* supportées : Amazon EC2, Microsoft Azure, Openstack, VMWare, ainsi que les hôtes plus classiques (serveurs, objets embarqué...).

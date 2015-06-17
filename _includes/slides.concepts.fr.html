@@ -13,13 +13,13 @@
 	<p>
 		Deux types de relations sont considérées.
 	</p>
-
+	
 	<h4>Conteneur</h4>
 	<p>
 		Un composant doit être déployé sur un autre.<br />
 		<small>Exemple : un WAR se déploie sur un serveur d'application.</small>
-	</p>
-
+	</p>	
+	
 	<h4>Exécution</h4>
 	<p>
 		Un composant a besoin d'un autre pour fonctionner.<br />
@@ -45,11 +45,11 @@
 	<h3>Exemple de Relation &laquo; Exécution &raquo;</h3>
 	<img src="../../resources/img/graph-runtime-example.jpg" alt="Exemple" class="no-border" />
 	<p>
-		Nous avons ici, en plus d'une relation de type &laquo; conteneur &raquo;,
+		Nous avons ici, en plus d'une relation de type &laquo; conteneur &raquo;, 
 		une relation de type &laquo; exécution &raquo;.
 		Dans ce graphe, <strong>App 2</strong> dépend d'une base MySQL, ce qui n'est pas le cas de <strong>App 1</strong>.
 		Cela signifie que Roboconf ne peut pas démarrer <strong>App 2</strong> tant qu'il ne connaît pas les propriétés
-		<strong>ip</strong> et <strong>port</strong> d'une base MySQL.
+		<strong>ip</strong> et <strong>port</strong> d'une base MySQL. 
 	</p>
 </section>
 
@@ -78,7 +78,7 @@
 		On peut le voir comme un ensemble de règles qui régissent les déploiements et les reconfigurations.
 	</p>
 	<p>
-		Toutefois, pour être précis, il n'y a pas qu'un seul graphe.
+		Toutefois, pour être précis, il n'y a pas qu'un seul graphe. 
 		En effet, il est possible d'en avoir plusieurs au travers des fichiers de configuration.
 	</p>
 	<p>
@@ -89,7 +89,7 @@
 		C'est une possibilité intéressante dans la mesure où ceux qui développent ou conçoivent
 		l'application ne sont pas les mêmes que ceux qui la gèrent une fois en production. Le fait
 		de contraindre le déploiement des parties élastiques (ou scalables) réduit le risque d'erreurs
-		pour les équipes de production.
+		pour les équipes de production. 
 	</p>
 </section>
 
@@ -97,7 +97,7 @@
 	<h3>Un Graphe Flexible</h3>
 	<img src="../../resources/img/graph-lamp-lax-example.jpg" alt="graphe flexible" class="no-border" />
 	<p>
-		Sur cet exemple, on considère que les 3 briques logicielles (équilibreur de charges Apache, Tomcat et
+		Sur cet exemple, on considère que les 3 briques logicielles (équilibreur de charges Apache, Tomcat et 
 		MySQL) peuvent être déployées sur une même VM, ou en tout cas, sur des VM du même &laquo; type &raquo;.
 	</p>
 </section>

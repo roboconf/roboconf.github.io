@@ -6,10 +6,10 @@ id: "application-descriptor"
 menus: [ "users", "user-guide", "0.3" ]
 ---
 
-A Roboconf project must contain a **descriptor** directory with an application descriptor inside.
+A Roboconf project must contain a **descriptor** directory with an application descriptor inside.  
 This descriptor must be named **application.properties**.
 
-It contains basic information related to the application itself.
+It contains basic information related to the application itself.  
 Here is a sample you can copy / paste and edit.
 
 ```properties
@@ -43,3 +43,4 @@ graph-entry-point = main.graph
 # indicates the one to read first.
 instance-entry-point = definition.instances
 ```
+	

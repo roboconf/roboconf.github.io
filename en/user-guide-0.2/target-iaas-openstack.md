@@ -6,7 +6,7 @@ id: "target-iaas-openstack"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 
-Roboconf has a target implementation for Openstack.
+Roboconf has a target implementation for Openstack.  
 It only supports the creation of *compute* VMs.
 
 To install it, open the DM's interactive mode and type in...
@@ -18,18 +18,18 @@ bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/0.2
 bundle:start <bundle-id>
 ```
 
-The implementation can associate a public address to the created VM.
+The implementation can associate a public address to the created VM.  
 The behavior depends on the **target.properties** file.
-
-> Roboconf keeps memory of the most public address for the created VM.
+  
+> Roboconf keeps memory of the most public address for the created VM.  
 > This address will be used by other components which resolve their dependencies through Roboconf.
 
 As an example, if a MySQL server is deployed on OpenStack but only has an internal address (i.e. not
 visible the IaaS), then any web application server that uses it will have to be inside the same network.
-This can lead to some issues in case of hybrid cloud. For the moment, Roboconf does not check anything
+This can lead to some issues in case of hybrid cloud. For the moment, Roboconf does not check anything 
 with respect to this. It is assumed the administrator knows what he does.
 
-Sample **target.properties**.
+Sample **target.properties**.  
 Just copy / paste and edit.
 
 ```properties
@@ -37,22 +37,22 @@ Just copy / paste and edit.
 target.id = iaas-openstack
 
 # The URL of Nova, Openstack's compute component
-openstack.nova-url =
+openstack.nova-url = 
 
 # Credentials to connect
-openstack.tenant-name =
-openstack.user =
-openstack.password =
+openstack.tenant-name = 
+openstack.user = 
+openstack.password = 
 
 # VM configuration
-openstack.image-name =
+openstack.image-name = 
 openstack.flavor-name = m1.small
 openstack.security-group = default
 openstack.key-pair = default
 
 # VM networking.
-openstack.floating-ip-pool =
-openstack.network-id =
+openstack.floating-ip-pool = 
+openstack.network-id = 
 ```
 
 Here is a complete description of the parameters for OpenStack.
@@ -72,7 +72,7 @@ Here is a complete description of the parameters for OpenStack.
 | openstack.network-id | A neutron (aka quantum) network ID, to use for networking. | none | no |
 
 
-Notice we do not use image and flavor IDs in our configuration files.
+Notice we do not use image and flavor IDs in our configuration files.  
 This is because this IaaS extension is implemented with Apache JClouds which requires region settings when specifying identifiers.
 
 As an example, if you wanted to create a new VM from image ID *abcdef* with a flavor (or hardware) called *m1.small* in Openstack, you
@@ -86,6 +86,6 @@ openstack.hardware-id = RegionOne/2
 # ... and RegionOne is the associated region.
 ```
 
-Since region settings and hardware ID are not always easy to retrieve, we prefer to rely on names.
+Since region settings and hardware ID are not always easy to retrieve, we prefer to rely on names.  
 We assume cloud infrastructures will be managed so that these names remain unique. Otherwise, feel free to post a feature request
 in our issues tracker.
