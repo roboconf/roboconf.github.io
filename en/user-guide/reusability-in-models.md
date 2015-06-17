@@ -20,7 +20,7 @@ of the component it extends.
 
 Let's take an example.
 
-```
+<pre><code class="language-roboconf">
 MySQL {
 	exports: ip, port = 3306;
 	installer: puppet;
@@ -30,7 +30,7 @@ MySQL {
 My-Client-Database {
 	extends: MySQL;
 }
-```
+</code></pre>
 
 In this example, we have two components.  
 There are exactly the same, except they do not have the same name. This helps to distinguish
@@ -38,7 +38,7 @@ them in terms of roles and behavior. We can associate different rules about moni
 
 An extending component can also override property values.
 
-```
+<pre><code class="language-roboconf">
 MySQL {
 	exports: ip, port = 3306;
 	installer: puppet;
@@ -49,14 +49,14 @@ My-Client-Database {
 	extends: MySQL;
 	exports: port = 3307;
 }
-```
+</code></pre>
 
 Here, the default value of the port variable will be 3307 instead of 3306.  
 And as usual, instances can override the default values of their component.
 
 Extending components can also define new variables.
 
-```
+<pre><code class="language-roboconf">
 MySQL {
 	exports: ip, port = 3306;
 	installer: puppet;
@@ -67,7 +67,7 @@ My-Client-Database {
 	extends: MySQL;
 	exports: my-own-variable = something;
 }
-```
+</code></pre>
 
 This can help in quite a lot of situations.  
 Read [this page](inheritance-and-variables.html) for more information about how inheritance impacts variable exports.
@@ -85,17 +85,17 @@ by using Roboconf's **Maven plug-in**.
 
 Local imports are defined as follows...
 
-```
+<pre><code class="language-roboconf">
 import file-name;
 import dir1/dir2/file-name;
-```
+</code></pre>
 
 Remote imports are only handled through the Roboconf Maven plug-in.
 
-```
+<pre><code class="language-roboconf">
 import application-artifact-id/file-name;
 import application-artifact-id/dir1/dir2/file-name;
-```
+</code></pre>
 
 
 ## Good Practices
@@ -117,7 +117,7 @@ Let's assume with a first application that defines a load balancer based on Apac
 Let's call this project **load-balancer--puppet--apache-mod-jk**. This is also the application's name.
 Let's assume the application's artifact ID is **load-balancer--puppet--apache-mod-jk**.
 
-```
+<pre><code class="language-roboconf">
 lb--apache-mod-jk--puppet {
 	exports: ip, port = 80;
 	imports: load-balance-able.*;
@@ -127,7 +127,7 @@ lb--apache-mod-jk--puppet {
 facet load-balance-able {
 	exports: ip, port = 80;
 }
-```
+</code></pre>
 
 The graph definition includes a component, associated with a recipe (a Puppet module), and a facet.
 The facet designates abstract elements. The only thing we know about these elements, is that they **MUST**
@@ -137,14 +137,14 @@ This is a first project.
 Now, let's assume I have another project in which I want to reuse a load balancer.
 Here is how we would proceed (assuming the Roboconf's Maven plug-in can resolve dependencies).
 
-```
+<pre><code class="language-roboconf">
 import load-balancer--puppet--apache-mod-jk/main.graph;
 
 my-application {
 	installer: bash;
 	facets: load-balance-able;
 }
-```
+</code></pre>
 
 This graph definition declares a single component.  
 It is installed with Bash. And by indicating it has the **load-balance-able** facet,

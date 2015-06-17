@@ -21,7 +21,7 @@ bundle:start <bundle-id>
 Sample **target.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for Docker
 target.id = docker
 

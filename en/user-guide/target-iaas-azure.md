@@ -23,7 +23,7 @@ This address will be used by other components which resolve their dependencies t
 Sample **target.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for Azure
 target.id = iaas-azure
 

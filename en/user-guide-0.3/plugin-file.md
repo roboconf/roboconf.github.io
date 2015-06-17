@@ -13,9 +13,11 @@ by dropping a WAR file into the *webapps* directory.
 
 This plug-in is associated with the **file** installer name.
 
-	Component_Y {
-		installer: file;
-	}
+<pre><code class="language-roboconf">
+Component_Y {
+	installer: file;
+}
+</code></pre>
 
 Its configuration (or recipe) resides in a simple properties file.  
 This file must be called **instructions.properties**.

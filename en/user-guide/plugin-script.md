@@ -14,9 +14,11 @@ It is mostly intended for Unix systems, but might run on alternative platforms.
   
 This plug-in is associated with the **script** installer name.
 
-	Component_Y {
-		installer: script;
-	}
+<pre><code class="language-roboconf">
+Component_Y {
+	installer: script;
+}
+</code></pre>
 
 Here is the way this plug-in works.  
 In the next lines, *action* is one of **deploy**, **start**, **update**, **stop** or **undeploy**. 
@@ -49,7 +51,7 @@ Imports are more complex, as there may be multiple ones: let's take the example 
 that imports Tomcat "ip" and "portAjp" variables. The imports will look like this (for N+1 Tomcat instances
 named "tomcat0" to "tomcatN"):
 
-``` properties
+```properties
 tomcat_size = N
 tomcat_0_name = tomcat1
 tomcat_0_ip = < ip address of tomcat 1 >
@@ -64,7 +66,7 @@ So, the naming convention for imports is < componentName >\_< index >\_< exportN
 
 An example of how such variables may be used (in bash):
 
-```
+```bash
 for (( c=0; c<$tomcat_size; c++ ))
 do
  IP_ADDRESS=tomcat_${c}_ip

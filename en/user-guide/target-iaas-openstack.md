@@ -32,7 +32,7 @@ with respect to this. It is assumed the administrator knows what he does.
 Sample **target.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for Openstack
 target.id = iaas-openstack
 

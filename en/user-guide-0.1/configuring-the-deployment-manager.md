@@ -9,7 +9,7 @@ menus: [ "users", "user-guide", "0.1" ]
 Once the Deployment Manager (DM) has been installed, it needs to be configured.  
 The DM stores its configuration in a directory. By default, this directory is located under the user directory.
 
-``` properties
+```properties
 # On Linux systems
 cd /home/username/roboconf_dm
 ```
@@ -36,7 +36,7 @@ very few write operations (unless you create and delete VMs all the time).
 The **conf** directory contains the configuration of the DM.  
 The **configuration.properties** file contains three key/value pairs for the messaging server (Rabbit MQ).
 
-``` properties
+```properties
 # The IP address of the messaging server (required).
 # A port can be added at the end, e.g. localhost:11021
 messaging.ip = localhost

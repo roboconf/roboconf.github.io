@@ -13,11 +13,11 @@ Roboconf agents to update configuration files dynamically.
 
 ## Back to basics
 
-```
+<pre><code class="language-roboconf">
 MyComponent {
 	exports: ip, property = value;
 }
-```
+</code></pre>
 
 This (incomplete) graph portion indicates **MyComponent** will share
 *MyComponent.ip* and *MyComponent.property* with other application parts.
@@ -27,7 +27,7 @@ This (incomplete) graph portion indicates **MyComponent** will share
 
 Let's now consider the following example.
 
-```
+<pre><code class="language-roboconf">
 MySQL {
 	exports: ip, port = 3306;
 	installer: puppet;
@@ -37,7 +37,7 @@ My-Client-Database {
 	extends: MySQL;
 	exports: my-own-variable = something;
 }
-```
+</code></pre>
 
 We have two components, one extending the other.  
 In the example above, **MySQL** exports...
@@ -71,12 +71,12 @@ Components can override variables they inherit.
 
 Let's take back the example above.
 
-```
+<pre><code class="language-roboconf">
 My-Client-Database {
 	extends: MySQL;
 	exports: my-own-variable = something;
 }
-```
+</code></pre>
 
 Here are the default values of the variables.
 
@@ -89,31 +89,31 @@ Here are the default values of the variables.
 Now, how can we override the **port** value in **My-Client-Database**?  
 There are two ways. This will override both port variables.
 
-```
+<pre><code class="language-roboconf">
 My-Client-Database {
 	extends: MySQL;
 	exports: port = 3307;
 }
-```
+</code></pre>
 
 Or we can override the MySQL.port value directly.  
 And by inheritance, we will get it.
 
-```
+<pre><code class="language-roboconf">
 My-Client-Database {
 	extends: MySQL;
 	exports: MySQL.port = 3307;
 }
-```
+</code></pre>
 
 If for some reason, we do not want to expose the same property for the ports, we can proceed this way.
 
-```
+<pre><code class="language-roboconf">
 My-Client-Database {
 	extends: MySQL;
 	exports: MySQL.port = 3307, My-Client-Database.port = 3308;
 }
-```
+</code></pre>
 
 Setting the prefix defines a scope.  
 When there is no prefix, then all the variables are updated.

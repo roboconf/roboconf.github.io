@@ -31,7 +31,7 @@ Vous pouvez également créer et utiliser le vôtre si vous le souhaitez.
 
 Pour changer le thème utilisé, mettez à jour la balise CSS dans la page HTML.
 
-``` html
+```html
 <link rel="stylesheet" href="css/roboconf.css" id="theme">
 ```
 

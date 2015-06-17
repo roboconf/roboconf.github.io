@@ -316,29 +316,30 @@ span.roadmap-in-progress {
 	padding-left: 24px;
 }
 
-/* Syntax Highlighting with Pygment */
+/* Syntax Highlighting with Pygment (and others...) */
 
 .language-properties span.c,
 .language-java span.c,
 .language-puppet span.c,
 .language-xml span.nt,
-.language-json span.nt {
+.language-json span.nt,
+.language-html span.s {
 	color: green;
 }
 
 .language-properties span.na,
 .language-puppet span.na,
-.language-html span.na {
+.language-html span.na,
+.language-tcl,
+.language-java span.nf,
+.language-roboconf span.value {
 	font-weight: bold;
 }
 
 .language-java span.cm,
-.language-html span.cm {
+.language-html span.cm,
+.language-roboconf span.comment {
 	color: #4978a7;
-}
-
-.language-html span.s {
-	color: green;
 }
 
 .language-puppet span.k,
@@ -348,21 +349,14 @@ span.roadmap-in-progress {
 .language-http span.nf,
 .language-http span.na,
 .language-http span.kr,
-.language-tcl span.nv {
+.language-tcl span.nv,
+.language-roboconf span.property {
 	color: #b23e4b;
 	font-weight: bold;
 }
 
 .language-java span.nd {
 	font-style: italic;
-}
-
-.language-java span.nf {
-	font-weight: bold;
-}
-
-.language-tcl {
-	font-weight: bold;
 }
 
 .language-bash span.nb {

@@ -21,7 +21,7 @@ bundle:start <bundle-id>
 Sample **target.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for Docker
 target.id = docker
 
@@ -67,7 +67,7 @@ docker pull ubuntu
 Roboconf needs Docker to be available on a TCP port.  
 To enable it, edit **/etc/default/docker**, and define DOCKER\_OPTS there.
 
-``` properties
+```properties
 # Make Docker listen on TCP port 4243 (along with local Unix socket)
 DOCKER_OPTS="-H=tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock"
 ```
@@ -105,7 +105,7 @@ ln -s roboconf-karaf-dist-agent/ roboconf-agent
 Now, you have to add a **start.sh** executable script in the **/usr/local/roboconf-agent** directory.  
 Set the following content (the script is mainly used to complete the agent setup at startup time).
 
-``` properties
+```properties
 #!/bin/bash
 # Startup script for docker agent
 cd /usr/local/roboconf-agent
@@ -159,9 +159,9 @@ To remove all exited containers:
 
 As of March 3, 2015 (docker 1.5.x)...
 
-```
-$ wget -qO- https://get.docker.io/gpg | sudo apt-key add -
-$ sudo sh -c "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
-$ sudo apt-get update
-$ sudo apt-get install lxc-docker
+```tcl
+wget -qO- https://get.docker.io/gpg | sudo apt-key add -
+sudo sh -c "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+sudo apt-get update
+sudo apt-get install lxc-docker
 ```

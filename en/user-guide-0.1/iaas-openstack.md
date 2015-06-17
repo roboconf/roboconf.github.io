@@ -23,7 +23,7 @@ with respect to this. It is assumed the administrator knows what he does.
 Sample **iaas.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for Openstack
 iaas.type = openstack
 

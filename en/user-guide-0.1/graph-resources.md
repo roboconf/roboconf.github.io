@@ -16,29 +16,31 @@ use resources, associated with a component, to deploy its instances.
 So, for **every** component in the graph, a project must contain a sub-directory with the same name than the component.  
 If we take the following graph definition...
 
-	VM {
-		alias: Virtual Machine;
-		installer: iaas;
-		# ...
-	}
+<pre><code class="language-roboconf">
+VM {
+	alias: Virtual Machine;
+	installer: iaas;
+	# ...
+}
 	
-	MySQL {
-		alias: MySQL;
-		installer: puppet;
-		# ...
-	}
+MySQL {
+	alias: MySQL;
+	installer: puppet;
+	# ...
+}
 	
-	Tomcat {
-		alias: Tomcat with Rubis;
-		installer: puppet;
-		# ...
-	}
+Tomcat {
+	alias: Tomcat with Rubis;
+	installer: puppet;
+	# ...
+}
 	
-	Apache {
-		alias: Apache Load Balancer;
-		installer: puppet;
-		# ...
-	}
+Apache {
+	alias: Apache Load Balancer;
+	installer: puppet;
+	# ...
+}
+</code></pre>
 
 ... then the file structure will look like...
 

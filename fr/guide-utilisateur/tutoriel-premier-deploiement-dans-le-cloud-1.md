@@ -54,7 +54,7 @@ Créez un fichier appelé **target.properties**.
 Copiez le modèle ci-dessous et complétez-le avec les informations récupérées plus haut.  
 Seule la propriété *ami* ne peut pas être complétée. Elle le sera dans l'étape d'après.
 
-``` properties
+```properties
 # Indiquer à l'agent Roboconf qu'il va tourner sur EC2
 target.id = ec2
 

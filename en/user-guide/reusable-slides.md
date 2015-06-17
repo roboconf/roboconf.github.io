@@ -31,7 +31,7 @@ But you can create and use your own one if you want.
 
 To switch the style, update the CSS mark-up in the HTML presentation.
 
-``` html
+```html
 <link rel="stylesheet" href="css/roboconf.css" id="theme">
 ```
 

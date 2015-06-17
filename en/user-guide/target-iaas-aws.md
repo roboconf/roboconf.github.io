@@ -23,7 +23,7 @@ This address will be used by other components which resolve their dependencies t
 Sample **target.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for EC2
 target.id = iaas-ec2
 
@@ -47,14 +47,14 @@ Indeed, all the VM instances created from this target configuration will try to 
 Since Amazon does not allow it, only the last created VM will be associated with this IP. 
 **It is much better** to define the elastic IP in the instance definition, as shown below.
 
-```
+<pre><code class="language-roboconf">
 instance of VM {
 	name: VM1;
 	data.ec2.elastic.ip: your-elastic-ip;
 	
 	# Put children instances next...
 }
-```
+</code></pre>
 
 > In a general matter, VM instances can inject target parameters through their definitions.  
 > These properties must start with "data." followed by the target property.

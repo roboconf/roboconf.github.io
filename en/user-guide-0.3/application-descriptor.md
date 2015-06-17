@@ -12,7 +12,7 @@ This descriptor must be named **application.properties**.
 It contains basic information related to the application itself.  
 Here is a sample you can copy / paste and edit.
 
-``` properties
+```properties
 # Application Descriptor for Roboconf
 
 # The application name (required)

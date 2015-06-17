@@ -23,7 +23,7 @@ in stand-alone mode, they are served by NodeJS.
 
 If you have  installed, go into the **roboconf-web-administration** folder, and type in
 
-``` properties
+```properties
 # Download Javascript dependencies
 npm install
 

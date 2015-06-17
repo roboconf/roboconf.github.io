@@ -75,37 +75,39 @@ may rely on the extension (such as editors, to provide syntax highlighting).
 A component starts with the component name, followed by an opening curly bracket.  
 Components can be defined in any order. 
 
-	# This is a comment
-	# There are only in-line comments
+<pre><code class="language-roboconf">
+# This is a comment
+# There are only in-line comments
 	
-	# The VM
-	VM {
-		alias: Virtual Machine;
-		installer: iaas;
-		children: MySQL, Tomcat, Apache;
-	}
+# The VM
+VM {
+	alias: Virtual Machine;
+	installer: iaas;
+	children: MySQL, Tomcat, Apache;
+}
 	
-	# MySQL database
-	MySQL {
-		alias: MySQL;
-		installer: puppet;
-		exports: ip, port = 3306;
-	}
+# MySQL database
+MySQL {
+	alias: MySQL;
+	installer: puppet;
+	exports: ip, port = 3306;
+}
 	
-	# Tomcat
-	Tomcat {
-		alias: Tomcat with Rubis;
-		installer: puppet;
-		exports: ip, portAJP = 8009;
-		imports: MySQL.ip, MySQL.port;
-	}
+# Tomcat
+Tomcat {
+	alias: Tomcat with Rubis;
+	installer: puppet;
+	exports: ip, portAJP = 8009;
+	imports: MySQL.ip, MySQL.port;
+}
 	
-	# Apache Load Balancer
-	Apache {
-		alias: Apache Load Balancer;
-		installer: puppet;
-		imports: Tomcat.portAJP, Tomcat.ip;
-	}
+# Apache Load Balancer
+Apache {
+	alias: Apache Load Balancer;
+	installer: puppet;
+	imports: Tomcat.portAJP, Tomcat.ip;
+}
+</code></pre>
 
 > Important!  
 > Every component property must be defined on a single line.
@@ -145,12 +147,13 @@ Import can also be marked as **optional**.
 In this case, the instance will be able to start even if the imported variables are not resolved.
 As an example, if you think to a cluster mode, a cluster member may need to know where are the other members.
 
-	ClusterMember {
-		alias: a Cluster member;
-		exports: varA, varB;
-		imports: ClusterMember.varA (optional), ClusterMember.varB (optional);
-	}
-
+<pre><code class="language-roboconf">
+ClusterMember {
+	alias: a Cluster member;
+	exports: varA, varB;
+	imports: ClusterMember.varA (optional), ClusterMember.varB (optional);
+}
+</code></pre>
 
 ## Facets
 
@@ -160,64 +163,66 @@ A component may *inherit* from several facets.
 
 Let's take a look at an example.
 
-	###################################
-	## First, components...
-	###################################
+<pre><code class="language-roboconf">
+###################################
+## First, components...
+###################################
 	
-	# The VM
-	VM_EC2 {
-		alias: Virtual Machine on EC2;
-		facets: VM;
-	}
+# The VM
+VM_EC2 {
+	alias: Virtual Machine on EC2;
+	facets: VM;
+}
 	
-	VM_Azure {
-		alias: Virtual Machine on Azure;
-		facets: VM;
-	}
+VM_Azure {
+	alias: Virtual Machine on Azure;
+	facets: VM;
+}
 	
-	# MySQL database
-	MySQL {
-		alias: MySQL;
-		facets: deployable;
-		installer: puppet;
-		exports: ip, port = 3306;
-	}
+# MySQL database
+MySQL {
+	alias: MySQL;
+	facets: deployable;
+	installer: puppet;
+	exports: ip, port = 3306;
+}
 	
-	# Tomcat
-	Tomcat {
-		alias: Tomcat with Rubis;
-		facets: deployable;
-		installer: puppet;
-		exports: ip, portAJP = 8009;
-		imports: MySQL.ip, MySQL.port;
-	}
+# Tomcat
+Tomcat {
+	alias: Tomcat with Rubis;
+	facets: deployable;
+	installer: puppet;
+	exports: ip, portAJP = 8009;
+	imports: MySQL.ip, MySQL.port;
+}
 	
-	# Apache Load Balancer
-	Apache {
-		alias: Apache Load Balancer;
-		facets: deployable;
-		installer: puppet;
-		imports: Tomcat.portAJP, Tomcat.ip;
-	}
+# Apache Load Balancer
+Apache {
+	alias: Apache Load Balancer;
+	facets: deployable;
+	installer: puppet;
+	imports: Tomcat.portAJP, Tomcat.ip;
+}
 	
 	
-	###################################
-	## Then, facets...
-	###################################
+###################################
+## Then, facets...
+###################################
 	
-	# The VM facet
-	facet VM {
-		children: deployable;
-		installer: iaas;
-	}
+# The VM facet
+facet VM {
+	children: deployable;
+	installer: iaas;
+}
 	
-	# The deployable facet
-	facet deployable {
-		# nothing
-	}
+# The deployable facet
+facet deployable {
+	# nothing
+}
 	
-	# Facets are not very useful here. We could put everything in components (see lamp-legacy-1).
-	# However, it shows what can be seen as a good practice for bigger VM deployments.
+# Facets are not very useful here. We could put everything in components (see lamp-legacy-1).
+# However, it shows what can be seen as a good practice for bigger VM deployments.
+</code></pre>
 
 A component lists the facets it uses with the property named **facets**.  
 It will inherit all the imported and exported variables, as well as the children and installer name. If

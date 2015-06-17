@@ -24,15 +24,17 @@ child C, then an instance of C must be defined within an instance of R.
 
 Let's see a concrete example.
 
-	# This is a comment
-	# There are only in-line comments
-	instance of Vm_Tomcat {
-		name: Tomcat VM1;
-	
-		instance of Tomcat {
-			name: Tomcat;
-		}
+<pre><code class="language-roboconf">
+# This is a comment
+# There are only in-line comments
+instance of Vm_Tomcat {
+	name: Tomcat VM1;
+
+	instance of Tomcat {
+		name: Tomcat;
 	}
+}
+</code></pre>
 
 The Tomcat instance is defined inside a VM instance.  
 Defining it else where would result in an error.
@@ -41,17 +43,21 @@ An instance must have the **name** property, which is the instance name. It must
 The instance may also declare properties to override component properties. As an example, if a component exports
 a *port* property with the default value 8080, the instance may override it (e.g. with 8081).
 
-	instance of Tomcat {
-		name: Tomcat;
-		port: 8081;
-	}
+<pre><code class="language-roboconf">
+instance of Tomcat {
+	name: Tomcat;
+	port: 8081;
+}
+</code></pre>
 
 Instances definition can be split into several files. It is indeed possible to import other instance definitions.  
 Instances definitions can mix imports and instances declaration, or, it can only contain imports.
 
-	import database.instances;
-	import servers.instances;
+<pre><code class="language-roboconf">
+import database.instances;
+import servers.instances;
 	
-	instance of MyApp {
-		# whatever
-	}
+instance of MyApp {
+	# whatever
+}
+</code></pre>

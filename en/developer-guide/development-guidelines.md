@@ -45,7 +45,7 @@ Basically, it checks some casual rules about code quality. It also checks the we
 
 In particular, classes must be documented as follows...
 
-``` java
+```java
 /**
  * A brief and optional sentence describing the class (and ending with a dot).
  * <p>Additional (and still optional) information wrapped in HTML mark-ups.</p>
@@ -56,7 +56,7 @@ In particular, classes must be documented as follows...
 
 And methods must be described as follows...
 
-``` java
+```java
 /**
  * A brief and mandatory sentence describing the method (and ending with a dot).
  * <p>Additional (and optional) information wrapped in HTML mark-ups.</p>

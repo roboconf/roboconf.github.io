@@ -19,7 +19,7 @@ Try to follow this convention.
 
 ```
 installer-software-version
-``` 
+```
 
 As an example, **puppet-apache-mod-jk-latest** indicates the recipe is based on **Puppet**
 and that it manages the **last version** of Apache with mod_jk.

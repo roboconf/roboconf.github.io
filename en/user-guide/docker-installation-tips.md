@@ -26,7 +26,7 @@ docker pull ubuntu
 Roboconf needs Docker to be available on a TCP port.  
 To enable it, edit **/etc/default/docker**, and define DOCKER\_OPTS there.
 
-``` properties
+```properties
 # Make Docker listen on TCP port 4243 (along with local Unix socket)
 DOCKER_OPTS="-H=tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock"
 ```

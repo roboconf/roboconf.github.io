@@ -17,7 +17,7 @@ The most simple solution is to update the startup script of the agent.
 Sample **iaas.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for Embedded Machines
 iaas.type = embedded
 ```

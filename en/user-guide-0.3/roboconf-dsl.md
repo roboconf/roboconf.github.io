@@ -19,9 +19,11 @@ walk through the graph(s).
 
 A component is defined as follows:
 
-	MyComp {
-		...
-	}
+<pre><code class="language-roboconf">
+MyComp {
+	...
+}
+</code></pre>
 
 It is a name followed by an opening curly bracket.  
 Component properties must be defined from the next line, **one property per line**.
@@ -40,33 +42,35 @@ Here are the supported properties for a component.
 
 Here is a commented example of a component (without any facet).
 
-	ApacheServer {
-		# Apache instances will be deployed by Roboconf's Puppet extension
-		installer: puppet;
+<pre><code class="language-roboconf">
+ApacheServer {
+	# Apache instances will be deployed by Roboconf's Puppet extension
+	installer: puppet;
 		
-		# Web applications could be deployed over this Apache server
-		children: My-Dash-Board, Marketing-Suite;
+	# Web applications could be deployed over this Apache server
+	children: My-Dash-Board, Marketing-Suite;
 		
-		# Properties exported by this component.
-		exports: ip, port = 19099;
-		# 'port' should have a default value, or we will have to set it when we create an instance.
-		# 'ip' will be updated at runtime by Roboconf's agent.
+	# Properties exported by this component.
+	exports: ip, port = 19099;
+	# 'port' should have a default value, or we will have to set it when we create an instance.
+	# 'ip' will be updated at runtime by Roboconf's agent.
 		
-		# Other components properties that this server needs to have so that it can start.
-		imports: LB.port (optional), LB.ip (optional);
+	# Other components properties that this server needs to have so that it can start.
+	imports: LB.port (optional), LB.ip (optional);
 		
-		# Here, the Apache may also be notified about components instances of type LB.
-		# The imports are marked as optional. It means that if there is no LB instance, an
-		# Apache instance will be able to start anyway. 
-		#
-		# If the import was not optional, e.g.
-		#
-		# imports: LB.port, LB.ip;
-		# or even
-		# imports: LB.port (optional), LB.ip;
-		# 
-		# ... then an Apache instance would need at least one LB instance somewhere.
-	}
+	# Here, the Apache may also be notified about components instances of type LB.
+	# The imports are marked as optional. It means that if there is no LB instance, an
+	# Apache instance will be able to start anyway. 
+	#
+	# If the import was not optional, e.g.
+	#
+	# imports: LB.port, LB.ip;
+	# or even
+	# imports: LB.port (optional), LB.ip;
+	# 
+	# ... then an Apache instance would need at least one LB instance somewhere.
+}
+</code></pre>
 
 Notice that exported variables are prefixed by the component (or the facet) name that defined them.  
 As an example, if a component Tomcat exports **port** and **ip**, and that another component wants to import them,
@@ -80,9 +84,11 @@ It only supports **exports** and **children** properties.
 
 Here is an example of facet.
 
-	facet LoadBalanced {
-		exports: ip, port;	# Define we export two variables.
-	}
+<pre><code class="language-roboconf">
+facet LoadBalanced {
+	exports: ip, port;	# Define we export two variables.
+}
+</code></pre>
 
 It starts with the **facet** keyword, followed by the facet name and an opening curly bracket.  
 Facets properties must be defined from the next line, **one property per line**.
@@ -107,10 +113,12 @@ add or remove properties (neither exported, nor imported). They must be complian
 
 An instance is defined as follows:
 
-	instance of MyComp {
-		name: MyInstance1;
-		...
-	}
+<pre><code class="language-roboconf">
+instance of MyComp {
+	name: MyInstance1;
+	...
+}
+</code></pre>
 
 It starts with the **instance of** keyword, followed by a component name and an opening curly bracket.  
 Instance properties must be defined from the next line, **one property per line**.
@@ -129,37 +137,45 @@ Here are the supported properties for an instance.
 Instances can be defined hierarchically.  
 Here is an example.
 
-	instance of VM {
+<pre><code class="language-roboconf">
+instance of VM {
 	
-		# This will create 5 VM instances, called VM 1, VM 2, VM3, VM 4 and VM 5.
-		name: VM ;	# Yes, there is a space at the end... :)
-		count: 5;
+	# This will create 5 VM instances, called VM 1, VM 2, VM3, VM 4 and VM 5.
+	name: VM ;	# Yes, there is a space at the end... :)
+	count: 5;
 		
-		# On every VM instance, we will deploy...
-		instance of Tomcat {
-			name: Tomcat;
-		}
+	# On every VM instance, we will deploy...
+	instance of Tomcat {
+		name: Tomcat;
 	}
+}
+</code></pre>
 
 Instances can also override properties from their component.  
 Assuming the Tomcat component specified...
 
-	Tomcat {
-		exports: ip, port = 8080;
-	}
+<pre><code class="language-roboconf">
+Tomcat {
+	exports: ip, port = 8080;
+}
+</code></pre>
 	
 ... a Tomcat instance may override the port value.
 
-	instance of Tomcat {
-		name: Tomcat;
-		port: 11000;
-	}
+<pre><code class="language-roboconf">
+instance of Tomcat {
+	name: Tomcat;
+	port: 11000;
+}
+</code></pre>
 
 It may also define properties that were not defined in the component.  
 This can be useful sometimes to pass specific data in a script or a Puppet module.
 
-	instance of Tomcat {
-		name: Tomcat;
-		port: 11000;
-		checked: true;
-	}
+<pre><code class="language-roboconf">
+instance of Tomcat {
+	name: Tomcat;
+	port: 11000;
+	checked: true;
+}
+</code></pre>

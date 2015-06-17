@@ -24,7 +24,7 @@ Each of them has also its own queue.
 
 The DM's queue is called...
 
-``` xml
+```xml
 <application-name>.dm
 ```
 
@@ -32,7 +32,7 @@ The queue for an agent is named according to the root instance it is associated 
 Within a Roboconf application, a root instance name is unique. When an agent starts, it is associated
 with a root instance. The name of an agent's queue is thus...
 
-``` xml
+```xml
 <application-name>.<root-instance-name>
 ```
 
@@ -45,14 +45,14 @@ Queues are hidden behind exchanges.
 The first exchange is for the Deployment Manager. All the messages sent to this exchange will be
 forwarded to the DM's queue (broadcast). This exchange name is called...
 
-``` xml
+```xml
 <application-name>.admin
 ```
 
 The second exchange is used for all the agents.  
 When the DM or an agent wants to send something to agent, it will use this exchange.
 
-``` xml
+```xml
 <application-name>.agents
 ```
 

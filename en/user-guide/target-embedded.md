@@ -25,7 +25,7 @@ This is achieved by updating the **net.roboconf.agent.configuration.cfg** file u
 Sample **target.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for Embedded Machines
 target.id = embedded
 ```

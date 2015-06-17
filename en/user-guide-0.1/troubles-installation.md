@@ -29,7 +29,7 @@ To solve this, follow the next steps.
 * Note the user and group names associated with the server.
 * At the end of the file, define the **ROBOCONF_DM_DIR** environment variable.
 
-``` properties
+```properties
 # Add environment variables for web applications
 ROBOCONF_DM_DIR=/some/directory
 ```

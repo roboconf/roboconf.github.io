@@ -21,7 +21,7 @@ bundle:start <bundle-id>
 Sample **target.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for Docker
 target.id = docker
 
@@ -56,7 +56,7 @@ It is recommended to use docker version 1.3.x or later.
 Roboconf needs Docker to be available on a TCP port.  
 To enable it, edit **/etc/default/docker**, and define DOCKER\_OPTS there.
 
-``` properties
+```properties
 # Make Docker listen on TCP port 4243 (along with local Unix socket)
 DOCKER_OPTS="-H=tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock"
 ```
@@ -95,7 +95,7 @@ ln -s roboconf-karaf-dist-agent/ roboconf-agent
 Now, you have to add a **start.sh** executable script in the **/usr/local/roboconf-agent** directory.  
 Set the following content (the script is mainly used to complete the agent setup at startup time).
 
-``` properties
+```properties
 #!/bin/bash
 # Startup script for docker agent
 cd /usr/local/roboconf-agent

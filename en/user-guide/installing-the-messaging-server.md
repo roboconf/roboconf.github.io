@@ -26,7 +26,7 @@ Otherwise, client connections will be refused. See this page about [access contr
 Here is a short snippet to quickly configure RabbitMQ.  
 You must first connect to the machine hosting RabbitMQ and then execute these commands.
 
-``` properties
+```properties
 # To create a new user called Batman
 sudo rabbitmqctl add_user Batman BatmanPassword
 

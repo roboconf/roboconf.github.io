@@ -14,10 +14,12 @@ It only works under Linux systems.
   
 This plug-in is associated with the **bash** installer name.
 
-	Component_Y {
-		alias: an alias;
-		installer: bash;
-	}
+<pre><code class="language-roboconf">
+Component_Y {
+	alias: an alias;
+	installer: bash;
+}
+</code></pre>
 
 Here is the way this plug-in works.  
 In the next lines, *action* is one of **deploy**, **start**, **update**, **stop** or **undeploy**. 
@@ -50,7 +52,7 @@ All the exports of the instance are available as environment vars (their names a
 Imports are more complex, as there may be multiple ones: let's take the example of an apache load balancer, that imports tomcat "ip" and "portAjp" variables.
 The imports will look like this (for N tomcat instances named "tomcat1" to "tomcatN"):
 
-``` properties
+```properties
 tomcat_size = N
 tomcat_1_name = tomcat1
 tomcat_1_ip = < ip address of tomcat 1 >

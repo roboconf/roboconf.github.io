@@ -19,7 +19,7 @@ As a reminder, to build the web site locally, you must:
 * Go into the project's directory.
 * Open a terminal and type in one of the following commands.
 
-``` bash
+```properties
 # Simply build the web site.
 # The generated files will be located under _site
 jekyll build

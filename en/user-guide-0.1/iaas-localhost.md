@@ -19,7 +19,7 @@ implementation, he or she should use the logger plug-in.
 Sample **iaas.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for localhost
 iaas.type = local 
 ```

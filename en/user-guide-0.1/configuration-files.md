@@ -56,7 +56,7 @@ Roboconf configuration files should be organized as follows:
 
 Content of **application.properties**:
 
-``` properties
+```properties
 # Application Descriptor for Roboconf
 application-name = MyApp
 application-qualifier = sample
@@ -67,47 +67,51 @@ instance-entry-point = initial-deployment.instances
 
 Content of **graph.graph**:
 
-    # My app to deploy on the IaaS
-    MyApp {
-        alias: My test application;
-        installer: bash;
-        exports: ip;
-    }
+<pre><code class="language-roboconf">
+# My app to deploy on the IaaS
+MyApp {
+	alias: My test application;
+	installer: bash;
+	exports: ip;
+}
 
-    # The VMs where to deploy the Wall application
-    VM_EC2 {
-        alias: Virtual Machine on Amazon EC2;
-        installer: iaas;
-        children: MyApp;
-    }
+# The VMs where to deploy the Wall application
+VM_EC2 {
+	alias: Virtual Machine on Amazon EC2;
+	installer: iaas;
+	children: MyApp;
+}
     
-    VM_Openstack {
-        alias: Virtual Machine on Openstack;
-        installer: iaas;
-        children: MyApp;
-    }
+VM_Openstack {
+	alias: Virtual Machine on Openstack;
+	installer: iaas;
+	children: MyApp;
+}
+</code></pre>
 
 Content of **initial-deployment.instances**:
 
-    # Deploy on EC2 VM (called VM1)
-    instanceof VM_EC2 {
-        name: VM1;
-        instanceof MyApp {
-                name: MyApp_on_EC2;
-        }
-    }
+<pre><code class="language-roboconf">
+# Deploy on EC2 VM (called VM1)
+instanceof VM_EC2 {
+	name: VM1;
+	instanceof MyApp {
+		name: MyApp_on_EC2;
+	}
+}
     
-    # Deploy on Openstack VM (called VM2)
-    instanceof VM_Openstack {
-        name: VM2;
-        instanceof MyApp {
-                name: MyApp_on_Openstack;
-        }
-    }
+# Deploy on Openstack VM (called VM2)
+instanceof VM_Openstack {
+	name: VM2;
+	instanceof MyApp {
+		name: MyApp_on_Openstack;
+	}
+}
+</code></pre>
 
 Content of **VM_EC2/iaas.properties**:
 
-``` properties
+```properties
 # These properties are specific to Amazon Web Services
 iaas.type          = ec2
 ec2.endpoint       = eu-west-1.ec2.amazonaws.com
@@ -118,4 +122,3 @@ vmInstanceType     = t1.micro
 sshKeyName         = YourSshKey
 securityGroupName  = YourSecurityGroup
 ```
-

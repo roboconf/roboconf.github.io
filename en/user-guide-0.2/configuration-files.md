@@ -57,7 +57,7 @@ Roboconf configuration files should be organized as follows:
 
 Content of **application.properties**:
 
-``` properties
+```properties
 # Application Descriptor for Roboconf
 application-name = MyApp
 application-qualifier = sample
@@ -72,44 +72,48 @@ instance-entry-point = model.instances
 
 Content of **main.graph**:
 
-    # My app to deploy on the IaaS
-    MyApp {
-        installer: bash;
-        exports: ip;
-    }
+<pre><code class="language-roboconf">
+# My app to deploy on the IaaS
+MyApp {
+	installer: bash;
+	exports: ip;
+}
 
-    # The VMs where to deploy the Wall application
-    VM_EC2 {
-        installer: target;
-        children: MyApp;
-    }
+# The VMs where to deploy the Wall application
+VM_EC2 {
+	installer: target;
+	children: MyApp;
+}
     
-    VM_Openstack {
-        installer: target;
-        children: MyApp;
-    }
+VM_Openstack {
+	installer: target;
+	children: MyApp;
+}
+</code></pre>
 
 Content of **model.instances**:
 
-    # Deploy on EC2 VM (called VM1)
-    instance of VM_EC2 {
-        name: VM1;
-        instance of MyApp {
-                name: MyApp_on_EC2;
-        }
-    }
+<pre><code class="language-roboconf">
+# Deploy on EC2 VM (called VM1)
+instance of VM_EC2 {
+	name: VM1;
+	instance of MyApp {
+		name: MyApp_on_EC2;
+	}
+}
     
-    # Deploy on Openstack VM (called VM2)
-    instance of VM_Openstack {
-        name: VM2;
-        instance of MyApp {
-                name: MyApp_on_Openstack;
-        }
-    }
+# Deploy on Openstack VM (called VM2)
+instance of VM_Openstack {
+	name: VM2;
+	instance of MyApp {
+		name: MyApp_on_Openstack;
+	}
+}
+</code></pre>
 
 Content of **VM_EC2/target.properties**:
 
-``` properties
+```properties
 # These properties are specific to Amazon Web Services
 target.id          = ec2
 ec2.endpoint       = eu-west-1.ec2.amazonaws.com
@@ -120,4 +124,3 @@ ec2.instance.type  = t1.micro
 ec2.ssh.key        = Your SSH Key
 ec2.security.group = Your Security Group
 ```
-

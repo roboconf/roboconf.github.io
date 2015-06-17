@@ -34,7 +34,7 @@ In-memory support is useful for...
 Sample **target.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for in-memory
 target.id = in-memory
 ```

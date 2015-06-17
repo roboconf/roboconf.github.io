@@ -53,7 +53,7 @@ Create a new file called **target.properties**.
 Copy the template below and update it with the information that comes from your AWS account.  
 All the properties can be completed here, except *ami*. This last one will be set later.
 
-``` properties
+```properties
 # Tell the agent it will run on EC2
 target.id = ec2
 

@@ -25,6 +25,7 @@ log4j.appender.roboconf.layout.ConversionPattern=%d{ISO8601} | %-5.5p | %-16.16c
 log4j.appender.roboconf.file=${karaf.data}/log/roboconf.log
 log4j.appender.roboconf.append=true
 ```
+
 Logs are rotated on a daily basis.
 The default logging level for the Roboconf classes is **INFO**.  
 All these logs are written in a specific file: **data/log/roboconf.log** (under the Karaf directory).

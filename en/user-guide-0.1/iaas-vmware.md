@@ -15,7 +15,7 @@ It only supports the creation of *compute* VMs.
 Sample **iaas.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for VMWare
 iaas.type = vmware
 

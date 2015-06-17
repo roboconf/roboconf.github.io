@@ -23,11 +23,13 @@ It stores regions and their content.
 
 As an example...
 
-	# This is a comment
-	Tomcat {
-		alias: a Tomcat component;
-		exports: ip, port = 8080;	# set the default port value
-	}
+<pre><code class="language-roboconf">
+# This is a comment
+Tomcat {
+	alias: a Tomcat component;
+	exports: ip, port = 8080;	# set the default port value
+}
+</code></pre>
 
 This small portion is made up of several regions.
 

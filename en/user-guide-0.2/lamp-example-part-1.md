@@ -30,7 +30,7 @@ hot re-configuration of the Apache node (so mod-proxy knows about all the availa
 
 Roboconf is told to deploy Apache, MySQL and Tomcat on 3 separate VMs, as follows:
 
-```
+<pre><code class="language-roboconf">
 # A VM with Apache only
 instance of VM {
         name: Apache VM;
@@ -54,7 +54,7 @@ instance of VM {
                 name: Tomcat;
         }
 }
-```
+</code></pre>
 
 What is a VM, what is a Tomcat... all of this is explained below.
 
@@ -66,7 +66,7 @@ Here, we will use Roboconf to deploy Apache (+ mod-proxy), Tomcat (+ webapp), an
 
 The application nodes (MySQL, Tomcat, Apache) are defined as follows:
 
-```
+<pre><code class="language-roboconf">
 # MySQL database
 MySQL { 
 	installer: puppet;
@@ -91,7 +91,7 @@ VM {
 	installer: target;
 	children: MySQL, Tomcat, Apache;
 }
-```
+</code></pre>
 
 As you can see, the VM is supposed to support the deployment of either Apache, Tomcat or MySQL components.
 

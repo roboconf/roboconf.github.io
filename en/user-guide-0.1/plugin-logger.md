@@ -12,7 +12,9 @@ As an example, the *start* method only logs that "the start method was invoked".
 This can be useful for debug purpose.  
 This plug-in is associated with the **logger** installer name.
 
-	Component_Y {
-		alias: an alias;
-		installer: logger;
-	}
+<pre><code class="language-roboconf">
+Component_Y {
+	alias: an alias;
+	installer: logger;
+}
+</code></pre>

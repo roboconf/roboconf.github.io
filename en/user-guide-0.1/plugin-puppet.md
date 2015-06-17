@@ -19,10 +19,12 @@ Concretely, this plug-in is in charge of executing a Puppet module during a life
 
 This plug-in is associated with the **puppet** installer name.
 
-	Component_Y {
-		alias: an alias;
-		installer: puppet;
-	}
+<pre><code class="language-roboconf">
+Component_Y {
+	alias: an alias;
+	installer: puppet;
+}
+</code></pre>
 
 The modulepath will automatically be set to the corresponding module path. The value of the MODULEPATH environment variable, if present, will be appended to it.
 
@@ -57,7 +59,7 @@ The line has the following format : <i>modulename = [version]</i>
 
 For example, to add the "thias-sysctl" module in version 0.3.0, and the "fsalum-redis" module with no version spec:
 
-``` properties
+```properties
 thias-sysctl = 0.3.0
 fsalum-redis =
 ```
@@ -66,18 +68,18 @@ fsalum-redis =
 
 Suppose an apache+load balancer component, that imports variables from Tomcat instances. It may look like this in your graph model:
 
-
-	Apache {
-        	alias: Apache Load Balancer;
-        	installer: puppet;
-        	imports: Tomcat.portAJP, Tomcat.ip;
-	}
+<pre><code class="language-roboconf">
+Apache {
+	alias: Apache Load Balancer;
+	installer: puppet;
+	imports: Tomcat.portAJP, Tomcat.ip;
+}
 	
-	Tomcat {
-		installer: puppet;
-        	exports: ip, portAJP = 8009;
-	}
-
+Tomcat {
+	installer: puppet;
+	exports: ip, portAJP = 8009;
+}
+</code></pre>
 
 Let's have a look at what the module looks like:
 
@@ -105,7 +107,7 @@ In our apache example, the module may look like the following:
 
 And the init.pp manifest look like this:
 
-``` puppet
+```puppet
 class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
 
 	# 'tomcat' is an array of hashes

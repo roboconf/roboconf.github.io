@@ -41,10 +41,12 @@ directory associated with a graph component.
 
 As an example, let's assume you have the following component.
 
-	Apache_Load_Balancer {
-		alias: An Apache load Balancer;
-		installer: puppet;
-	}
+<pre><code class="language-roboconf">
+Apache_Load_Balancer {
+	alias: An Apache load Balancer;
+	installer: puppet;
+}
+</code></pre>
 
 This implies there will be a directory called **Apache_Load_Balancer** which will contain at least
 one Puppet module. The fact it is a Puppet modules is due to the Puppet installer. If we had used the

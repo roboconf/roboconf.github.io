@@ -74,45 +74,49 @@ may rely on the extension (such as editors, to provide syntax highlighting).
 A component starts with the component name, followed by an opening curly bracket.  
 Components can be defined in any order. 
 
-	# This is a comment
-	# There are only in-line comments
+<pre><code class="language-roboconf">
+# This is a comment
+# There are only in-line comments
 	
-	# The VM
-	VM {
-		installer: iaas;
-		children: MySQL, Tomcat, Apache;
-	}
+# The VM
+VM {
+	installer: iaas;
+	children: MySQL, Tomcat, Apache;
+}
 	
-	# MySQL database
-	MySQL {
-		installer: puppet;
-		exports: ip, port = 3306;
-	}
+# MySQL database
+MySQL {
+	installer: puppet;
+	exports: ip, port = 3306;
+}
 	
-	# Tomcat
-	Tomcat {
-		installer: puppet;
-		exports: ip, portAJP = 8009;
-		imports: MySQL.ip, MySQL.port;
-	}
+# Tomcat
+Tomcat {
+	installer: puppet;
+	exports: ip, portAJP = 8009;
+	imports: MySQL.ip, MySQL.port;
+}
 	
-	# Apache Load Balancer
-	Apache {
-		installer: puppet;
-		imports: Tomcat.portAJP, Tomcat.ip;
-	}
+# Apache Load Balancer
+Apache {
+	installer: puppet;
+	imports: Tomcat.portAJP, Tomcat.ip;
+}
+</code></pre>
 
 > Every component property must be defined on **a single line**.
 
 Components can be defined in separate files and in any order. This is achieved thanks to the **import** keyword.  
 Graphs definitions can mix imports and components declaration, or, it can only contain imports.
 
-	import graph-part-1.graph;
-	import graph-part-2.graph;
+<pre><code class="language-roboconf">
+import graph-part-1.graph;
+import graph-part-2.graph;
 	
-	MyComponent{
-		# whatever
-	} 
+MyComponent{
+	# whatever
+}
+</code></pre> 
 
 Let's see the properties you can or have to set for a component.
 
@@ -138,15 +142,19 @@ Import can also be marked as **optional**.
 In this case, the instance will be able to start even if the imported variables are not resolved.
 As an example, if you think to a cluster mode, a cluster member may need to know where are the other members.
 
-	ClusterMember {
-		exports: varA, varB;
-		imports: ClusterMember.varA (optional), ClusterMember.varB (optional);
-	}
+<pre><code class="language-roboconf">
+ClusterMember {
+	exports: varA, varB;
+	imports: ClusterMember.varA (optional), ClusterMember.varB (optional);
+}
+</code></pre>
 	
 It is possible to group imports thanks to the *wildcard* symbol.  
 As an example, the previous imports could simply be written as...
 
-	imports: ClusterMember.* (optional);
+<pre><code class="language-roboconf">
+imports: ClusterMember.* (optional);
+</code></pre>
 
 * **extends** indicates this component extends another component.  
 A component that extends another one inherits its exports, its imports, its installer and its recipes.
@@ -171,30 +179,34 @@ cannot have recipes. Facets are useful to group common properties, as well as a 
 
 Let's take a first example.
 
-	# The VM facet
-	facet VM {
-		children: deployable;
-	}
+<pre><code class="language-roboconf">
+# The VM facet
+facet VM {
+	children: deployable;
+}
 	
-	# The deployable facet
-	facet deployable {
-		# nothing
-	}
+# The deployable facet
+facet deployable {
+	# nothing
+}
+</code></pre>
 	
 Let's take another example.
 
-	# An abstract type
-	facet load-balance-able {
-		exports: ip, port = 8080;
-	}
+<pre><code class="language-roboconf">
+# An abstract type
+facet load-balance-able {
+	exports: ip, port = 8080;
+}
 	
-	# A load balancer component
-	load-balancer {
-		installer: puppet;
-		facets: deployable;
-		exports: ip;
-		imports: load-balance-able.*;
-	}
+# A load balancer component
+load-balancer {
+	installer: puppet;
+	facets: deployable;
+	exports: ip;
+	imports: load-balance-able.*;
+}
+</code></pre>
 
 Thanks to facets, we can define independent definitions and reuse them
 when needed to create new links between Software components. Here, we could define another 

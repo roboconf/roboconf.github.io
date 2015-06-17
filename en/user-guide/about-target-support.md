@@ -38,19 +38,21 @@ from a template and properties given in the IaaS properties.
 Each one will be associated with various IaaS properties. Thus, to deploy a component *X* on an Open Stack
 VM or an AWS VM, you will have the following graph definition.
 
-	VM_AWS {
-		children: X;
-		installer: target;
-	}
+<pre><code class="language-roboconf">
+VM_AWS {
+	children: X;
+	installer: target;
+}
 	
-	VM_Open_Stack {
-		children: X;
-		installer: target;
-	}
+VM_Open_Stack {
+	children: X;
+	installer: target;
+}
 	
-	X {
-		# whatever
-	}
+X {
+	# whatever
+}
+</code></pre>
 
 And the resources directories.
 

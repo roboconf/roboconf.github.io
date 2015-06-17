@@ -16,25 +16,27 @@ use resources, associated with a component, to deploy real Software.
 So, for **every** component in the graph, a project must contain a sub-directory with the same name than the component.  
 If we take the following graph definition...
 
-	VM {
-		installer: target;
-		# ...
-	}
+<pre><code class="language-roboconf">
+VM {
+	installer: target;
+	# ...
+}
 	
-	MySQL {
-		installer: puppet;
-		# ...
-	}
+MySQL {
+	installer: puppet;
+	# ...
+}
 	
-	Tomcat {
-		installer: puppet;
-		# ...
-	}
+Tomcat {
+	installer: puppet;
+	# ...
+}
 	
-	Apache {
-		installer: puppet;
-		# ...
-	}
+Apache {
+	installer: puppet;
+	# ...
+}
+</code></pre>
 
 ... then the file structure will look like...
 

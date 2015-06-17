@@ -15,7 +15,7 @@ This address will be used by other components which resolve their dependencies t
 Sample **iaas.properties**.  
 Just copy / paste and edit.
 
-``` properties
+```properties
 # Configuration file for EC2
 iaas.type = ec2
 
