@@ -9,11 +9,20 @@ menus: [ "project", "events" ]
 Various events where Roboconf was shown.  
 Slides can help to understand the project and its uses cases.
 
+
+## &laquo; IEEE Cloud 2015 &raquo;
+
+* June 27<sup>th</sup>-July 2<sup>nd</sup>, 2015
+* Track's title: **Roboconf: a Hybrid Cloud Orchestrator to Deploy Complex Applications**
+* Here is the [event's page](http://www.thecloudcomputing.org/2015/)
+
+
 ## &laquo; RMLL 2014 &raquo;
 
 * July 7<sup>th</sup>-11<sup>th</sup>, 2014
 * There will be a talk about Roboconf at the [RMLL 2014](https://2014.rmll.info/conference285) in Montpellier (France).
 * The event's page is [here](https://2014.rmll.info/).
+* You will find [slides](https://2014.rmll.info/slides/67/Conf285-RMLL2014_Roboconf.pdf) and [a video](http://video.rmll.info/videos/roboconf-une-nouvelle-solution-de-deploiement/) on the RMLL web site.
 
 
 ## &laquo; EclipseCon France 2014 &raquo;

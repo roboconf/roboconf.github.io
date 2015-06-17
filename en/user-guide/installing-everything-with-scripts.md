@@ -1,16 +1,19 @@
 ---
-title: "Installing Everything"
+title: "Installing Everything with Scripts"
 layout: page
 cat: "ug-snapshot"
-id: "installing-everything"
+id: "installing-everything-with-scripts"
 menus: [ "users", "user-guide" ]
 ---
 
-The other pages explain all the manual steps to install and configure the various Roboconf parts.  
+> Roboconf has now Debian packages to ease installation.  
+> RPM packages are also planned. Scripts still exist and remain available for who might need them.
+
+Other pages explain all the manual steps to install and configure the various Roboconf parts.  
 This is fine when you do it once. But it can quickly become tedious when you do it several times.
 
 This is why the [system installers](https://github.com/roboconf/roboconf-system-installers) were created.  
-This project groups solutions to ease the installation of Roboconf. The most mature solution consists in Linux scripts.
+This project groups solutions to ease the installation of Roboconf. One of them consists in Linux scripts.
 Provided you can create machines on your target infrastructure, they will connect to them
 in SSH, upload and/or download the required artifacts and configure them. This includes RabbitMQ,
 the Roboconf agent (to create a virtual image) and the DM.
@@ -36,6 +39,3 @@ Here is how it works.
 
 This is not completely automatic because you need to interact with the target infrastructure (at least to create initial VM and create the virtual images).
 But this helps to gain time and avoids repetitive tasks.
-
-> There are plans to create Debian packages too.  
-> And we may provide another solution. We also have to dig existing solutions to create virtual appliances.

@@ -10,6 +10,8 @@ menus: [ "users", "user-guide", "0.3" ]
 	We use HTML syntax in this page because we need CSS classes for floating.
 	Markdown does not support it.
  -->
+ 
+ This is the user guide for Roboconf 0.3.
 
 <div class="floated">
 	<h2>Getting Started</h2>

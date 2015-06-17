@@ -17,25 +17,25 @@ The roadmap for the next months covers several aspects.
 
 * **From April 2015**
  
-	* Add a templating mechanism.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Add a templating mechanism. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Illustrate Nagios support with Roboconf.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Create Debian packages for Roboconf.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Rework the web administration.	&nbsp; <span class="glyphicon glyphicon-time"></span>
-	* Add support of commands in Roboconf.
-	* Make RabbitMQ optional.	&nbsp; <span class="glyphicon glyphicon-time"></span>
-	* Create examples to deploy Big Data stacks.	&nbsp; <span class="glyphicon glyphicon-time"></span>
-	* Web socket support in the Deployment Manager.
+	* Rework the web administration. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Create examples to deploy Big Data stacks. &nbsp; <span class="glyphicon glyphicon-time"></span>
 
 * **From July 2015**
 
+	* Add support of commands in Roboconf.
+	* Make RabbitMQ optional.
 	* Support place holders for environment switch.
+	* Web socket support in the Deployment Manager.
 	* Create RPM packages for Roboconf.
 	* Improve usability of the templating mechanism.
-	* Complete support in Eclipse and other editors.
 	* Fix reusable recipes and make them public.
 
 * **After October 2015**
 
+	* Complete support in Eclipse and other editors.
 	* Study TOSCA support.
 	* Add support to execute user scenarios.
 	* Support applications migration (continuous deployment).

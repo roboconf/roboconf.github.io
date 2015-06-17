@@ -329,10 +329,11 @@ span.roadmap-in-progress {
 
 .language-properties span.na,
 .language-puppet span.na,
-.language-html span.na,
+.language-html span.nt,
 .language-tcl,
 .language-java span.nf,
-.language-roboconf span.value {
+.language-roboconf span.value,
+.language-bash span.nb {
 	font-weight: bold;
 }
 
@@ -342,6 +343,7 @@ span.roadmap-in-progress {
 	color: #4978a7;
 }
 
+.language-bash span.k,
 .language-puppet span.k,
 .language-java span.k,
 .language-java span.kd,
@@ -357,11 +359,6 @@ span.roadmap-in-progress {
 
 .language-java span.nd {
 	font-style: italic;
-}
-
-.language-bash span.nb {
-	color: #025edb;
-	font-weight: bold;
 }
 
 /* Tables for parameters */
@@ -386,7 +383,7 @@ table th {
 	padding: 10px 14px;
 }
 
-table tr:nth-child(odd)	{ 
+table tr:nth-child(odd)	{
 	background-color: #dadada;
 }
 

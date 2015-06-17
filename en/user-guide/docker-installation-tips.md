@@ -8,13 +8,13 @@ menus: [ "users", "user-guide" ]
 
 ## Docker configuration
 
-Here, we assume Docker is already installed on your system (e.g. by using "apt-get install lxc-docker" on Ubuntu, or see 
-[docker.com](http://docker.com) for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some 
-ports may be available for other platforms.
+Here, we assume Docker is already installed on your system (e.g. by using "apt-get install lxc-docker" on Ubuntu, or see [docker.com](http://docker.com) for other platforms).  
+Note that Docker runs mainly on Linux 64-bit systems, although some ports may be available for other platforms.
 
-It is recommended to use docker version 1.5.x or later.
+> It is recommended to use docker version 1.5.x or higher.
 
-When docker is installed, make sure to obtain a Docker Linux image (e.g. Ubuntu), so you can use it later as a base image for Roboconf agent images. For example, run the following command:
+When docker is installed, make sure to obtain a Docker Linux image (e.g. Ubuntu), so you can use it later as a base image for Roboconf agent images.  
+For example, run the following command:
 
 ```tcl
 docker pull ubuntu

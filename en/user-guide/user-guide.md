@@ -29,21 +29,10 @@ menus: [ "users", "user-guide" ]
 </div>
 
 <div class="floated">
-	<h2>Installing Roboconf</h2>
+	<h2>Installing &amp; Configuring</h2>
 
 	<ul>
-	<li><a href="installing-the-messaging-server.html">Installing the Messaging Server...</a> by hand</li>
-	<li><a href="installing-the-deployment-manager.html">Installing the Deployment Manager...</a> by hand</li>
-	<li><a href="preparing-virtual-images-with-an-agent.html">Preparing Virtual Images with an Agent</a></li>
-	<li><a href="installing-an-agent.html">Installing an Agent...</a> by hand</li>
-	<li><a href="installing-everything.html">Installing Everything...</a> almost automatically</li>
-	</ul>
-</div>
-
-<div class="floated">
-	<h2>Configuring Roboconf</h2>
-
-	<ul>
+	<li><a href="installing-roboconf.html">Installing Roboconf</a></li>
 	<li><a href="configuring-the-deployment-manager.html">Configuring the DM</a></li>
 	<li><a href="configuring-an-agent.html">Configuring an Agent</a></li>
 	<li><a href="configuring-the-loggers.html">Configuring the Loggers</a></li>
@@ -74,20 +63,6 @@ menus: [ "users", "user-guide" ]
 </div>
 
 <div class="floated">
-	<h2>Tools</h2>
-
-	<ul>
-	<li><a href="web-administration.html">Web Administration</a></li>
-	<li><a href="editors.html">Editors</a></li>
-	<li><a href="eclipse-plugin.html">The Eclipse plug-in</a></li>
-	<li><a href="maven-plugin.html">The Maven plug-in</a></li>
-	<li><a href="monitoring-roboconf.html">Monitoring Roboconf</a></li>
-	<li><a href="monitoring-applications-deployed-with-roboconf.html">Monitoring Applications deployed with Roboconf</a></li>
-	<li><a href="autonomic-management-with-roboconf.html">Autonomic Management</a></li>
-	</ul>
-</div>
-
-<div class="floated">
 	<h2>Targets &amp; Plugins</h2>
 
 	<ul>
@@ -101,12 +76,34 @@ menus: [ "users", "user-guide" ]
 </div>
 
 <div class="floated">
+	<h2>Tools</h2>
+
+	<ul>
+	<li><a href="web-administration.html">Web Administration</a></li>
+	<li><a href="editors.html">Editors</a></li>
+	<li><a href="eclipse-plugin.html">The Eclipse plug-in</a></li>
+	<li><a href="maven-plugin.html">The Maven plug-in</a></li>
+	</ul>
+</div>
+
+<div class="floated">
+	<h2>Monitoring</h2>
+
+	<ul>
+	<li><a href="monitoring-roboconf.html">Monitoring Roboconf</a></li>
+	<li><a href="monitoring-applications-deployed-with-roboconf.html">Monitoring Applications deployed with Roboconf</a></li>
+	<li><a href="autonomic-management-with-roboconf.html">Autonomic Management</a></li>
+	</ul>
+</div>
+
+<div class="floated">
 	<h2>Resources</h2>
 
 	<ul>
 	<li><a href="reusable-slides.html">Reusable Slides</a></li>
 	<li><a href="tutorial-getting-started-with-roboconf.html">Tutorial - Getting started with Roboconf</a></li>
 	<li><a href="tutorial-first-deployment-in-the-cloud.html">Tutorial - First deployment in the cloud</a></li>
+	<li><a href="tutorial-apache-storm.html">Tutorial - Deploying Apache Storm</a></li>
 	</ul>
 </div>
 

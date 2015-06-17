@@ -15,22 +15,22 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Ajouter un mécanisme de <i>templating</i>.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Illustrer l'utilisation de Nagios avec Roboconf.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Créer des paquets Debian pour Roboconf.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Retravailler l'administration web.	&nbsp; <span class="glyphicon glyphicon-time"></span>
-	* Rajouter le support des commandes dans Roboconf.
-	* Rendre RabbitMQ optionnel.	&nbsp; <span class="glyphicon glyphicon-time"></span>
+	* Retravailler l'administration web.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Créer des démonstrateurs pour le déploiement de piles <i>Big Data</i>.	&nbsp; <span class="glyphicon glyphicon-time"></span>
-	* Utilisation d'une web socket dans le gestionnaire de déploiements.
 
 * **A partir de Juillet 2015**
 
+	* Rajouter le support des commandes dans Roboconf.
+	* Rendre RabbitMQ optionnel.
 	* Supporter des "place holders" pour les changements d'environnement.
+	* Utilisation d'une web socket dans le gestionnaire de déploiements.
 	* Créer des paquets RPM pour Roboconf.
 	* Améliorer l'utilisabilité du système de <i>templating</i>.
-	* Compléter le support de Roboconf dans Eclipse et certains éditeurs.
 	* Progresser sur les recettes réutilisables et les rendre publiques.
 
 * **Après Octobre 2015**
 
+	* Compléter le support de Roboconf dans Eclipse et certains éditeurs.
 	* Etudier le support de TOSCA.
 	* Supporter l'exécution de scénarios utilisateurs.
 	* Gérer la migration d'applications (déploiement continu).

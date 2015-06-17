@@ -10,11 +10,19 @@ Cette page liste les événements durant lesquels Roboconf a été présenté,
 ainsi que les publications dans lesquelles il a été mentionné.
 
 
+## &laquo; IEEE Cloud 2015 &raquo;
+
+* Du 27 juin au 2 juillet 2015
+* Titre de la session : **Roboconf: a Hybrid Cloud Orchestrator to Deploy Complex Applications**
+* Le site de l'événement se trouve [ici](http://www.thecloudcomputing.org/2015/)
+
+
 ## &laquo; RMLL 2014 &raquo;
 
 * Du 7 au 11 juillet 2014
 * Il y aura une session sur Roboconf aux [RMLL 2014](https://2014.rmll.info/conference285) à Montpellier.
 * La page de cet événement se trouve [ici](https://2014.rmll.info/).
+* Vous trouverez [les slides](https://2014.rmll.info/slides/67/Conf285-RMLL2014_Roboconf.pdf) et [une vidéo](http://video.rmll.info/videos/roboconf-une-nouvelle-solution-de-deploiement/) sur le site des RMLL.
 
 
 ## &laquo; EclipseCon France 2014 &raquo;

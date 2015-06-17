@@ -57,19 +57,6 @@ Let's detail it a little bit.
 * An instance is associated with only one component.
 
 
-## OCCI Diagram
-
-The following diagram was generated with Eclipse's ecore tooling.  
-It is based on the ecore model that was contributed in the [OCCIware project](https://github.com/occiware).
-
-This diagram is compliant with the OCCI meta-model.  
-The concepts described above extend **Resource**. And we defined relations that exist between them as **Link**s.
-There is no mix-in in Roboconf.
-
-> This mapping was made so that we can easily create Roboconf configuration files from a Roboconf OCCI model.
-> AND, it was made so that runtime conversion between Roboconf model classes and an OCCI RESTful API is efficient.
-
-
 ## Model Constraints
 
 There are also some constraints that cannot be represented on the class and OCCI diagrams.  
@@ -118,3 +105,28 @@ Here is a textual definition of these constraints.
 
 > Notice that all these constraints are already checked in the Roboconf validator.  
 > Except the Roboconf validator works on Roboconf classes and not on an OCCI-compliant meta-model.
+
+
+## OCCI Mapping
+
+Defining concepts and their relations is classic modeling.  
+However, we cannot simply map concepts to create an OCCI extension. After we tried to do it, we found it
+was not the right way.
+
+Here is a **methodology** we adopted.
+
+1. Define a use case. Why do you want to use OCCI?
+2. Model the concepts you need for this use case.
+3. Iterate if you have several use cases. It is also possible to define several extensions.
+
+Within the scope of Roboconf, here are the use cases we want to cover with OCCI.
+
+* Provide an OCCI-compliant REST API, in addition to our own REST API.
+* Be able to interact with OCCI-compliant resources (such as platforms).
+* Implement code generators that will be plugged with OCCI tools.
+
+The second use case has nothing to do with Roboconf concepts.  
+It is all about creating a dedicated plug-in or target.
+
+An OCCI-compliant REST API only needs instances concepts.  
+The generation use case will manipulate components and facets, but probably not instances.

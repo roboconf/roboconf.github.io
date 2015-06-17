@@ -35,14 +35,17 @@ script or template.
 All the templates can use import variables.  
 These variables will be inserted by Roboconf.
 
+
 # Action script and parameters
 
 Parameters are passed to action scripts (eg. start.sh, stop.py, update.perl ...) using environment variables, that respect naming conventions.
+
 
 ## Global environment-related variables
 
 - ROBOCONF\_INSTANCE\_NAME: The name of the current instance (the one whose script is invoked).
 - ROBOCONF\_FILES\_DIR: The directory where instance files are located (if any).
+
 
 ## Exported and imported variables
 
@@ -62,9 +65,8 @@ tomcat_N_ip = < ip address of tomcat N >
 tomcat_N_portAjp = < AJP port for tomcat N >
 ```
 
-So, the naming convention for imports is < componentName >\_< index >\_< exportName >, with index starting at 0 and max (index) given by < componentName >\_size .
-
-An example of how such variables may be used (in bash):
+So, the naming convention for imports is < componentName >\_< index >\_< exportName >, with index starting at 0 and max (index) given by < componentName >\_size.  
+Here is an example of how such variables can be used (in bash).
 
 ```bash
 for (( c=0; c<$tomcat_size; c++ ))
@@ -76,11 +78,9 @@ done
 
 ## Variables related to update actions
 
-- ROBOCONF\_UPDATE\_STATUS: the status of the instance that triggered the update (e.g. DEPLOYED\_STOPPED, DEPLOYED\_STARTED).
-
-In case of import change (e.g. instance started or stopped):
-
-- ROBOCONF\_IMPORT\_CHANGED\_COMPONENT: Name of the component for the changed import.
-- ROBOCONF\_IMPORT\_CHANGED\_INSTANCE\_PATH: Path to the instance that exports the changed import.
-- ROBOCONF\_IMPORT\_CHANGED\_< ImportName >: For each imported variable that changed, the corresponding value (e.g. if an "ipAddress" export changed, the "ROBOCONF\_IMPORT\_CHANGED_ipAddress" variable should contain its new value).
-
+| Variable name | Description |
+| ------------- | ----------- |
+| ROBOCONF\_UPDATE\_STATUS | The status of the instance that triggered the update (e.g. DEPLOYED\_STOPPED, DEPLOYED\_STARTED). |
+| ROBOCONF\_IMPORT\_CHANGED\_COMPONENT | Name of the component for the changed import. |
+| ROBOCONF\_IMPORT\_CHANGED\_INSTANCE\_PATH | Path of the instance that exports the changed import. |
+| ROBOCONF\_IMPORT\_CHANGED\_< ImportName > | The value of every imported variable that changed (e.g. if an exported *ipAddress* changed, the "ROBOCONF\_IMPORT\_CHANGED_ipAddress" variable should contain its new value). | 

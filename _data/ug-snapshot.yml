@@ -12,7 +12,7 @@ configuring-the-web-consoles:
   
 eclipse-plugin:
   en: user-guide/eclipse-plugin
-
+  
 maven-plugin:
   en: user-guide/maven-plugin
   
@@ -28,9 +28,6 @@ how-to-write-reusable-recipes:
 tutorial-getting-started-with-roboconf:
   en: user-guide/tutorial-getting-started-with-roboconf
   fr: guide-utilisateur/tutoriel-debuter-avec-roboconf
-  
-autonomic-management-with-roboconf:
-  en: user-guide/autonomic-management-with-roboconf
   
 tutorial-first-deployment-in-the-cloud:
   fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud
@@ -56,6 +53,15 @@ reusable-slides:
   en: user-guide/reusable-slides
   fr: guide-utilisateur/presentations-reutilisables
   
+docker-installation-tips.html:
+  en: user-guide/docker-installation-tips
+  
+autonomic-management-with-roboconf:
+  en: user-guide/autonomic-management-with-roboconf
+  
+tutorial-apache-storm:
+  en: user-guide/tutorial-apache-storm  
+  
 inheritance-and-variables:  
   en: user-guide/inheritance-and-variables
   
@@ -64,9 +70,12 @@ web-administration-screenshots:
   
 configuring-the-loggers:
   en: user-guide/configuring-the-loggers
+
+installing-roboconf:
+  en: user-guide/installing-roboconf
   
-installing-everything:
-  en: user-guide/installing-everything
+installing-everything-with-scripts:
+  en: user-guide/installing-everything-with-scripts
   
 installing-the-deployment-manager:
   en: user-guide/installing-the-deployment-manager

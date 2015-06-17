@@ -52,9 +52,10 @@ A new shell should appear. You will use it to enable or disable Roboconf extensi
 
 <img src="/resources/img/karaf-shell-console.jpg" alt="Karaf's customized shell for Roboconf" />
 
+<br />
 Type in the following command.
 
-```
+```tcl
 bundle:list 
 ```
 
@@ -65,7 +66,7 @@ infrastructures at the same time. So, it is better and more optimal to only enab
 
 Type in this new command.
 
-```
+```tcl
 feature:list
 ```
 
@@ -96,7 +97,7 @@ This requires some additional bundles to be installed.
 Hopefully, Karaf allows to deploy bundles directly from Maven repositories.  
 In Karaf's command line interface, execute the following commands. We here assume you use Roboconf 0.2.
 
-```
+```tcl
 bundle:install mvn:net.roboconf/roboconf-plugin-api/0.2
 bundle:install mvn:net.roboconf/roboconf-agent/0.2
 bundle:install mvn:net.roboconf/roboconf-target-in-memory/0.2
@@ -105,7 +106,7 @@ bundle:install mvn:net.roboconf/roboconf-target-in-memory/0.2
 Every time you install a bundle, it gets an identifier.  
 Use these identifiers to start these bundles (replace *id1*, *id2* and *id3* by their values).
 
-```
+```tcl
 bundle:start id1 id2 id3
 ```
 

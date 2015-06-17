@@ -32,10 +32,6 @@ Although we generally test Roboconf with Ubuntu systems, there is no reason it d
 However, **we recommend using Linux systems**.
 
 Several options are available to install an agent.
-
-<!--
-* Use our Debian package for the agent.
--->
  
 * Deploy our predefined OSGi distribution for the agent.
 * Deploy the agent as a Karaf feature on your own Karaf server.
@@ -77,22 +73,6 @@ On Ubuntu 14.04, the following command installs Java here...
 	/usr/lib/jvm/java-7-openjdk-amd64/jre
 
 If you use Karaf, you can define this variable in the Karaf's **bin/setenv** file.
-
-
-<!--
-
-# The Debian Package for the Agent
-
-The Debian package installs our custom Karaf distribution for Roboconf's agent.  
-Once installed, the Karaf server is started as a service. The agent runs within the Karaf server.
-
-> We do not have a public server yet to simply type in **sudo apt-get install roboconf-agent**.  
-> Hopefully, this will come soon.
-
-Grab the agent's Debian package on the [download page](../download.html) and install it.  
-This package installs the agent as a service that will start with the operating system.
-
--->
 
 
 # The Custom Karaf Distribution for the Agent

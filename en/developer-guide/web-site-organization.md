@@ -40,6 +40,9 @@ optimized for SEO (Search Engine Optimization).
 
 The structure of the sources is the following :
 
+* **data/** contains a map associating page IDs and HTML content.  
+It associates page IDs with translated pages (English version, French version, etc).
+
 * **includes/** contains the menus.  
 There is one menu per category. Each one supports i18n.
 
@@ -74,9 +77,8 @@ Their ID starts with *dg.&lt;version&gt;.*. Developer guides have a version.
 
 ## i18n
 
-Internationalization is handled through two means:
-
-Menus names are translated in the **_config.yml** file.  
+Internationalization is handled through two means.  
+Menus names are translated in a YML file (under **data**).  
 
 	locales:
 	  en:
@@ -88,7 +90,7 @@ Menus names are translated in the **_config.yml** file.
 > Be careful to YAML.  
 > A sub-element is indented by 2 spaces. No tabulation.
 
-URLs are translated in the **_config.yml** file.  
+URLs are translated in a YML file (under **data**).  
 
 	main.support:
 	  en: support
@@ -112,7 +114,7 @@ Pages must respect the following guidelines.
 	---
 	title: "The Management REST API"
 	layout: page
-cat: "dg-snapshot"
+	cat: "dg-snapshot"
 	id: "rest-api-management"
 	menus: [ "developers", "developer-guide" ]
 	---
