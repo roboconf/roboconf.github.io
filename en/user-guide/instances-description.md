@@ -56,7 +56,7 @@ Instances definitions can mix imports and instances declaration, or, it can only
 <pre><code class="language-roboconf">
 import database.instances;
 import servers.instances;
-	
+
 instance of MyApp {
 	# whatever
 }

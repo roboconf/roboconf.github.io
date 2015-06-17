@@ -29,7 +29,7 @@ Let's see a concrete example.
 # There are only in-line comments
 instanceof Vm_Tomcat {
 	name: Tomcat VM1;
-	
+
 	instanceof Tomcat {
 		name: Tomcat;
 	}

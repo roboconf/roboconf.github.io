@@ -29,7 +29,7 @@ Let's see a concrete example.
 # There are only in-line comments
 instance of Vm_Tomcat {
 	name: Tomcat VM1;
-	
+
 	instance of Tomcat {
 		name: Tomcat;
 	}
@@ -56,7 +56,7 @@ Instances definitions can mix imports and instances declaration, or, it can only
 <pre><code class="language-roboconf">
 import database.instances;
 import servers.instances;
-	
+
 instance of MyApp {
 	# whatever
 }

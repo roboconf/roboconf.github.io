@@ -24,7 +24,7 @@ La version en cours de développement est la **0.4-SNAPSHOT**.
 		<th>Fichiers</th>
 		<th>Liens</th>
 	</tr>
-	
+
 	<!-- Version 0.3 -->
 	<tr>
 		<td>0.3</td>
@@ -37,7 +37,7 @@ La version en cours de développement est la **0.4-SNAPSHOT**.
 			Agent: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.3/roboconf-karaf-dist-agent-0.3.tar.gz">Tar.gz</a>
 			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.3/roboconf-karaf-dist-agent-0.3.zip">Zip</a> (~ 20 Mo)
-			
+
 			<br /><br />
 			<a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.3/">Site de mise à jour</a> pour Eclipse
 		</td>
@@ -55,7 +55,7 @@ La version en cours de développement est la **0.4-SNAPSHOT**.
 			<a href="/en/user-guide-0.3/user-guide.html">Guide Utilisateur</a>
 		</td>
 	</tr>
-	
+
 	<!-- Version 0.2 -->
 	<tr>
 		<td>0.2</td>
@@ -68,7 +68,7 @@ La version en cours de développement est la **0.4-SNAPSHOT**.
 			Agent: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.2/roboconf-karaf-dist-agent-0.2.tar.gz">Tar.gz</a>
 			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.2/roboconf-karaf-dist-agent-0.2.zip">Zip</a> (~ 20 Mo)
-			
+
 			<br /><br />
 			<a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.2/">Site de mise à jour</a> pour Eclipse
 		</td>
@@ -83,7 +83,7 @@ La version en cours de développement est la **0.4-SNAPSHOT**.
 			<a href="/en/user-guide-0.2/user-guide.html">Guide Utilisateur</a>
 		</td>
 	</tr>
-	
+
 	<!-- Version 0.1 -->
 	<tr>
 		<td>0.1</td>

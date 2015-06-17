@@ -77,7 +77,7 @@ Apache {
 	installer: puppet;
 	imports: Tomcat.portAJP, Tomcat.ip;
 }
-	
+
 Tomcat {
 	installer: puppet;
 	exports: ip, portAJP = 8009;
@@ -119,7 +119,7 @@ class roboconf_apache_module($runningState = undef, $importAdded = undef, $impor
 	#              'tomcat1' => {'ip' => '127.0.0.1', 'portajp' => '8009'},
 	#              'tomcat2' => {'ip' => '127.0.0.2', 'portajp' => '8010'}
 	#            }
-	
+
 	...
 }
 ```

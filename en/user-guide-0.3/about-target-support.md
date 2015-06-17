@@ -43,12 +43,12 @@ VM_AWS {
 	children: X;
 	installer: target;
 }
-	
+
 VM_Open_Stack {
 	children: X;
 	installer: target;
 }
-	
+
 X {
 	# whatever
 }

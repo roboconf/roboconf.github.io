@@ -46,18 +46,18 @@ Here is a commented example of a component (without any facet).
 ApacheServer {
 	# Apache instances will be deployed by Roboconf's Puppet extension
 	installer: puppet;
-		
+
 	# Web applications could be deployed over this Apache server
 	children: My-Dash-Board, Marketing-Suite;
-		
+
 	# Properties exported by this component.
 	exports: ip, port = 19099;
 	# 'port' should have a default value, or we will have to set it when we create an instance.
 	# 'ip' will be updated at runtime by Roboconf's agent.
-		
+
 	# Other components properties that this server needs to have so that it can start.
 	imports: LB.port (optional), LB.ip (optional);
-		
+
 	# Here, the Apache may also be notified about components instances of type LB.
 	# The imports are marked as optional. It means that if there is no LB instance, an
 	# Apache instance will be able to start anyway. 
@@ -139,11 +139,11 @@ Here is an example.
 
 <pre><code class="language-roboconf">
 instance of VM {
-	
+
 	# This will create 5 VM instances, called VM 1, VM 2, VM3, VM 4 and VM 5.
 	name: VM ;	# Yes, there is a space at the end... :)
 	count: 5;
-		
+
 	# On every VM instance, we will deploy...
 	instance of Tomcat {
 		name: Tomcat;
@@ -159,7 +159,7 @@ Tomcat {
 	exports: ip, port = 8080;
 }
 </code></pre>
-	
+
 ... a Tomcat instance may override the port value.
 
 <pre><code class="language-roboconf">

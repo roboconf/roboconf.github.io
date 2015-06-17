@@ -21,7 +21,7 @@ You will get an error at runtime otherwise.
  
 <div class="floated">
 	<h2>Getting Started</h2>
-	
+
 	<ul>
 	<li>Understanding Roboconf: 
 		<a href="lamp-example-part-1.html">part 1</a>
@@ -73,7 +73,7 @@ You will get an error at runtime otherwise.
 </div>
 
 
-	
+
 <div class="floated">
 	<h2>IaaS</h2>
 

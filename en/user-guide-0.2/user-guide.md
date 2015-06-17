@@ -15,7 +15,7 @@ This is the user guide for Roboconf 0.2.
 
 <div class="floated">
 	<h2>Getting Started</h2>
-	
+
 	<ul>
 	<li>Understanding Roboconf: 
 		<a href="lamp-example-part-1.html">part 1</a>
@@ -81,7 +81,7 @@ This is the user guide for Roboconf 0.2.
 </div>
 
 
-	
+
 <div class="floated">
 	<h2>Deployment Targets</h2>
 

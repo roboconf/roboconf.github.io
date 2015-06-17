@@ -51,7 +51,7 @@ Since Amazon does not allow it, only the last created VM will be associated with
 instance of VM {
 	name: VM1;
 	data.ec2.elastic.ip: your-elastic-ip;
-	
+
 	# Put children instances next...
 }
 </code></pre>

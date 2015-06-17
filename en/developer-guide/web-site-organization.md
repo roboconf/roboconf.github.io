@@ -119,7 +119,7 @@ cat: "dg-snapshot"
 
 <!-- -->
 
-* **title** is the page title (to be displayed in the HTML tag &laquo; title &raquo;).	
+* **title** is the page title (to be displayed in the HTML tag &laquo; title &raquo;).
 * **layout** is always **page**.
 * **id** is the page ID. It is used by *_config.yml* to associated a page with its different translations.
 * **menus** is the menus this pages fits into. It is made up of two menus.

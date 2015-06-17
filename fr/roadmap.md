@@ -19,7 +19,7 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Rajouter le support des commandes dans Roboconf.
 	* Rendre RabbitMQ optionnel.	&nbsp; <span class="glyphicon glyphicon-time"></span>
 	* Créer des démonstrateurs pour le déploiement de piles <i>Big Data</i>.	&nbsp; <span class="glyphicon glyphicon-time"></span>
-	* Utilisation d'une web socket dans le gestionnaire de déploiements.	
+	* Utilisation d'une web socket dans le gestionnaire de déploiements.
 
 * **A partir de Juillet 2015**
 

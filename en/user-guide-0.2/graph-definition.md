@@ -77,26 +77,26 @@ Components can be defined in any order.
 <pre><code class="language-roboconf">
 # This is a comment
 # There are only in-line comments
-	
+
 # The VM
 VM {
 	installer: iaas;
 	children: MySQL, Tomcat, Apache;
 }
-	
+
 # MySQL database
 MySQL {
 	installer: puppet;
 	exports: ip, port = 3306;
 }
-	
+
 # Tomcat
 Tomcat {
 	installer: puppet;
 	exports: ip, portAJP = 8009;
 	imports: MySQL.ip, MySQL.port;
 }
-	
+
 # Apache Load Balancer
 Apache {
 	installer: puppet;
@@ -112,7 +112,7 @@ Graphs definitions can mix imports and components declaration, or, it can only c
 <pre><code class="language-roboconf">
 import graph-part-1.graph;
 import graph-part-2.graph;
-	
+
 MyComponent{
 	# whatever
 }
@@ -148,7 +148,7 @@ ClusterMember {
 	imports: ClusterMember.varA (optional), ClusterMember.varB (optional);
 }
 </code></pre>
-	
+
 It is possible to group imports thanks to the *wildcard* symbol.  
 As an example, the previous imports could simply be written as...
 
@@ -184,13 +184,13 @@ Let's take a first example.
 facet VM {
 	children: deployable;
 }
-	
+
 # The deployable facet
 facet deployable {
 	# nothing
 }
 </code></pre>
-	
+
 Let's take another example.
 
 <pre><code class="language-roboconf">
@@ -198,7 +198,7 @@ Let's take another example.
 facet load-balance-able {
 	exports: ip, port = 8080;
 }
-	
+
 # A load balancer component
 load-balancer {
 	installer: puppet;

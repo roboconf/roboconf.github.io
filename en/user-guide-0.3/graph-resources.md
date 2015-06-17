@@ -21,17 +21,17 @@ VM {
 	installer: target;
 	# ...
 }
-	
+
 MySQL {
 	installer: puppet;
 	# ...
 }
-	
+
 Tomcat {
 	installer: puppet;
 	# ...
 }
-	
+
 Apache {
 	installer: puppet;
 	# ...

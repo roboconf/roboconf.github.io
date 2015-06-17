@@ -22,13 +22,13 @@ Here is a sample **pom.xml** file for a Roboconf project.
 	<prerequisites>
 		<maven>3.0.3</maven>
 	</prerequisites>
-	
+
 	<groupId>net.roboconf</groupId>
 	<artifactId>my-project</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>This is a sample</name>
 	<packaging>roboconf-app</packaging>
-	
+
 	<build>
 		<plugins>
 			<plugin>

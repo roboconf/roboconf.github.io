@@ -78,21 +78,21 @@ Components can be defined in any order.
 <pre><code class="language-roboconf">
 # This is a comment
 # There are only in-line comments
-	
+
 # The VM
 VM {
 	alias: Virtual Machine;
 	installer: iaas;
 	children: MySQL, Tomcat, Apache;
 }
-	
+
 # MySQL database
 MySQL {
 	alias: MySQL;
 	installer: puppet;
 	exports: ip, port = 3306;
 }
-	
+
 # Tomcat
 Tomcat {
 	alias: Tomcat with Rubis;
@@ -100,7 +100,7 @@ Tomcat {
 	exports: ip, portAJP = 8009;
 	imports: MySQL.ip, MySQL.port;
 }
-	
+
 # Apache Load Balancer
 Apache {
 	alias: Apache Load Balancer;
@@ -167,18 +167,18 @@ Let's take a look at an example.
 ###################################
 ## First, components...
 ###################################
-	
+
 # The VM
 VM_EC2 {
 	alias: Virtual Machine on EC2;
 	facets: VM;
 }
-	
+
 VM_Azure {
 	alias: Virtual Machine on Azure;
 	facets: VM;
 }
-	
+
 # MySQL database
 MySQL {
 	alias: MySQL;
@@ -186,7 +186,7 @@ MySQL {
 	installer: puppet;
 	exports: ip, port = 3306;
 }
-	
+
 # Tomcat
 Tomcat {
 	alias: Tomcat with Rubis;
@@ -195,7 +195,7 @@ Tomcat {
 	exports: ip, portAJP = 8009;
 	imports: MySQL.ip, MySQL.port;
 }
-	
+
 # Apache Load Balancer
 Apache {
 	alias: Apache Load Balancer;
@@ -203,23 +203,23 @@ Apache {
 	installer: puppet;
 	imports: Tomcat.portAJP, Tomcat.ip;
 }
-	
-	
+
+
 ###################################
 ## Then, facets...
 ###################################
-	
+
 # The VM facet
 facet VM {
 	children: deployable;
 	installer: iaas;
 }
-	
+
 # The deployable facet
 facet deployable {
 	# nothing
 }
-	
+
 # Facets are not very useful here. We could put everything in components (see lamp-legacy-1).
 # However, it shows what can be seen as a good practice for bigger VM deployments.
 </code></pre>

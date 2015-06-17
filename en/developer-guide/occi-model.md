@@ -81,7 +81,7 @@ Here is a textual definition of these constraints.
 
 	A component can only extend directly one component.
 	You can compare facets to Java interfaces and components to Java classes.
-	
+
 	Like the diagram suggests it, a component can extend any number of facets.
 
 **2: facet-cannot-ext-itself**

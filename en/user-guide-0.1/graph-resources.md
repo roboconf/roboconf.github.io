@@ -22,19 +22,19 @@ VM {
 	installer: iaas;
 	# ...
 }
-	
+
 MySQL {
 	alias: MySQL;
 	installer: puppet;
 	# ...
 }
-	
+
 Tomcat {
 	alias: Tomcat with Rubis;
 	installer: puppet;
 	# ...
 }
-	
+
 Apache {
 	alias: Apache Load Balancer;
 	installer: puppet;

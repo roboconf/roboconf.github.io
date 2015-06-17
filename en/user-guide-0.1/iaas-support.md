@@ -43,13 +43,13 @@ VM_AWS {
 	children: X;
 	installer: iaas;
 }
-	
+
 VM_Open_Stack {
 	alias: a VM for Open Stack;
 	children: X;
 	installer: iaas;
 }
-	
+
 X {
 	# whatever
 }

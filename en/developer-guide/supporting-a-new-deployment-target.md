@@ -37,11 +37,11 @@ Let's suppose you want to develop a deployment target for a specific version of 
 	<name>Roboconf :: Target :: vSphere</name>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>bundle</packaging>
-	
+
 	<properties>
 		<roboconf.version>0.2</roboconf.version>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
   			<groupId>net.roboconf</groupId>
@@ -49,17 +49,17 @@ Let's suppose you want to develop a deployment target for a specific version of 
   			<version>${roboconf.version}</version>
   			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
   			<groupId>net.roboconf</groupId>
   			<artifactId>roboconf-target-api</artifactId>
   			<version>${roboconf.version}</version>
   			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- + All the other dependencies you need. -->
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -76,7 +76,7 @@ Let's suppose you want to develop a deployment target for a specific version of 
 					</instructions>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-ipojo-plugin</artifactId>
@@ -125,7 +125,7 @@ Copy the content below.
 	<component classname="net.roboconf.target.vsphere.internal.TargetVSphere" name="roboconf-target-vsphere">
 		<provides />
 	</component>
-	
+
 	<instance component="roboconf-target-vsphere" name="Roboconf Target - vSphere" />
 </ipojo>
 ```
@@ -173,7 +173,7 @@ public class TargetVSphere implements TargetHandler {
 			String rootInstanceName,
 			String applicationName )
 	throws TargetException {
-		
+
 		logger.info( "Creating a new machine." );
 		return "the VM's ID";
 	}
@@ -183,10 +183,10 @@ public class TargetVSphere implements TargetHandler {
 			Map<String,String> targetProperties, 
 			String machineId ) 
 	throws TargetException {
-		
+
 		logger.info( "Terminating a machine." );
 	}
-	
+
 	@Override
 	public void configureMachine(
 		Map<String,String> targetProperties,
@@ -197,7 +197,7 @@ public class TargetVSphere implements TargetHandler {
 		String rootInstanceName,
 		String applicationName )
 	throws TargetException {
-		
+
 		logger.info( "Configuring a machine." );
 	}
 
@@ -280,7 +280,7 @@ You indeed need to declare **start** and **stop** callbacks in the **metadata.xm
 		<callback transition="validate" method="start" />
 		<callback transition="invalidate" method="stop" />
 	</component>
-	
+
 	<instance component="roboconf-target-vsphere" name="Roboconf Target - vSphere" />
 </ipojo>
 ```

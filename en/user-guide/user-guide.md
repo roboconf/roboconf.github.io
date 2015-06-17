@@ -13,7 +13,7 @@ menus: [ "users", "user-guide" ]
 
 <div class="floated">
 	<h2>Getting Started</h2>
-	
+
 	<ul>
 	<li>Understanding Roboconf: 
 		<a href="lamp-example-part-1.html">part 1</a>
@@ -86,7 +86,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="autonomic-management-with-roboconf.html">Autonomic Management</a></li>
 	</ul>
 </div>
-	
+
 <div class="floated">
 	<h2>Targets &amp; Plugins</h2>
 

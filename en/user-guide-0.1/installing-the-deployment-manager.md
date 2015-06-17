@@ -28,7 +28,7 @@ and go to
 The REST services are exposed at
 
 	http://localhost:8080/roboconf-dm-webapp/rest
-	
+
 And the embedded web client for the REST services is available at
 
 	http://localhost:8080/roboconf-dm-webapp/client

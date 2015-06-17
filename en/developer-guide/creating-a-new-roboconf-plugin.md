@@ -38,11 +38,11 @@ At the moment this documentation is being written, there is not yet a Roboconf p
 	<name>Roboconf :: Plugin :: Chef</name>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>bundle</packaging>
-	
+
 	<properties>
 		<roboconf.version>0.2</roboconf.version>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
   			<groupId>net.roboconf</groupId>
@@ -50,17 +50,17 @@ At the moment this documentation is being written, there is not yet a Roboconf p
   			<version>${roboconf.version}</version>
   			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
   			<groupId>net.roboconf</groupId>
   			<artifactId>roboconf-plugin-api</artifactId>
   			<version>${roboconf.version}</version>
   			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- + All the other dependencies you need. -->
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -77,7 +77,7 @@ At the moment this documentation is being written, there is not yet a Roboconf p
 					</instructions>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-ipojo-plugin</artifactId>
@@ -126,7 +126,7 @@ Copy the content below.
 	<component classname="net.roboconf.plugin.chef.internal.PluginChef" name="roboconf-plugin-chef">
 		<provides />
 	</component>
-	
+
 	<instance component="roboconf-plugin-chef" name="Roboconf Plugin - Chef" />
 </ipojo>
 ```
