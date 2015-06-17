@@ -30,9 +30,9 @@ body {
   font-weight: normal;
   letter-spacing: -0.02em;
   color: #000; }
-  
+
 .reveal .slides {
-	
+
 }
 
 ::selection {
@@ -102,18 +102,18 @@ body {
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #b23e4b;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
 /*********************
-* Roboconf LOGO  
+* Roboconf LOGO
 **********************/
 .reveal {
 	background-image: url('../../../resources/img/roboconf--64x64.jpg');
 	background-position: 2% 97%;
 	background-repeat: no-repeat;
 }
-  
+
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
@@ -164,7 +164,7 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #b23e4b; }
-  
+
 section > p {
 	margin-bottom: 40px !important;
 }
@@ -174,7 +174,7 @@ section > p.notice {
 }
 
 .reveal table {
-	border: solid black 1px; 
+	border: solid black 1px;
 	border-collapse: collapse;
 }
 

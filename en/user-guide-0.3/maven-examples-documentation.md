@@ -30,7 +30,7 @@ it is supported. If it is not, English will be used.
 </build>
 ```
 
-Same thing but this time with French output.  
+Same thing but this time with French output.
 Translations for this language have been provided.
 
 ```xml
@@ -52,7 +52,7 @@ Translations for this language have been provided.
 </build>
 ```
 
-Next example, we generate HTML and Markdown files, in both French and English.  
+Next example, we generate HTML and Markdown files, in both French and English.
 It means we will have 4 output: HTML in French, HTML in English, Markdown in
 French and Markdown in English.
 
@@ -77,7 +77,7 @@ French and Markdown in English.
 </build>
 ```
 
-The following sample shows how to customize the generated images.  
+The following sample shows how to customize the generated images.
 It is configured to generate exploded HTML with a custom CSS file and the system's locale.
 
 ```xml

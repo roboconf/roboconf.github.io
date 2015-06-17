@@ -39,7 +39,7 @@ My-Client-Database {
 }
 </code></pre>
 
-We have two components, one extending the other.  
+We have two components, one extending the other.
 In the example above, **MySQL** exports...
 
 * MySQL.ip
@@ -51,7 +51,7 @@ And **My-Client-Database** exports...
 * My-Client-Database.ip and My-Client-Database.port (inherited variables, replicated with its own prefix).
 * My-Client-Database.my-own-variable (new variable added by the extending component).
 
-All the inherited variables are replicated in the component's scope.  
+All the inherited variables are replicated in the component's scope.
 This way, those who import MySQL.\* will receive notifications from **MySQL** and **My-Client-Database**.
 And those who import **My-Client-Database** will only receive notifications of **My-Client-Database** only, but with
 all the available information.
@@ -59,14 +59,14 @@ all the available information.
 
 ## Facets
 
-Facets can define variables too.  
+Facets can define variables too.
 When a component is associated with a facet, it proceeds the same way than for the components it exports.
 It inherits the variables with their original prefix, and replicates them with its own prefix.
 
 
 ## Overriding
 
-Components can override variables they inherit.  
+Components can override variables they inherit.
 *And instances can override variables they receive from their component.*
 
 Let's take back the example above.
@@ -86,7 +86,7 @@ Here are the default values of the variables.
 * My-Client-Database.port (3306, inherited from MySQL)
 * My-Client-Database.my-own-variable (something, defined in the graph)
 
-Now, how can we override the **port** value in **My-Client-Database**?  
+Now, how can we override the **port** value in **My-Client-Database**?
 There are two ways. This will override both port variables.
 
 <pre><code class="language-roboconf">
@@ -96,7 +96,7 @@ My-Client-Database {
 }
 </code></pre>
 
-Or we can override the MySQL.port value directly.  
+Or we can override the MySQL.port value directly.
 And by inheritance, we will get it.
 
 <pre><code class="language-roboconf">
@@ -115,5 +115,5 @@ My-Client-Database {
 }
 </code></pre>
 
-Setting the prefix defines a scope.  
+Setting the prefix defines a scope.
 When there is no prefix, then all the variables are updated.

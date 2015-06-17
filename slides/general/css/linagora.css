@@ -99,7 +99,7 @@ body {
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #cd1f48;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
 .reveal section img.no-border {
@@ -107,7 +107,7 @@ body {
 }
 
 /*********************
-* Linagora LOGO  
+* Linagora LOGO
 **********************/
 .reveal {
 	background-image: url('linagora-logo.gif');
@@ -115,7 +115,7 @@ body {
 	background-position: 2% 97%;
 	background-repeat: no-repeat;
 }
-  
+
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
@@ -166,7 +166,7 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #cd1f48; }
-  
+
 section > p {
 	margin-bottom: 40px !important;
 }
@@ -176,7 +176,7 @@ section > p.notice {
 }
 
 .reveal table {
-	border: solid black 1px; 
+	border: solid black 1px;
 	border-collapse: collapse;
 }
 

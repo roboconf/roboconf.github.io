@@ -14,7 +14,7 @@ Cette page regroupe des idées pour aller plus loin dans l'utilisation de Roboco
 
 **Nouvelles Briques**
 
-1. Rajoutez de nouvelles briques logicielles dans votre graphe.  
+1. Rajoutez de nouvelles briques logicielles dans votre graphe.
 2. Ecrivez les recettes adéquates, avec Bash ou Puppet, en fonction de ce qui vous arrange.
 
 <br />
@@ -31,6 +31,6 @@ Exemple : déployer une partie de votre application sur AWS et une autre sur Ope
 
 **Sécurité**
 
-1. Retravaillez les groupes de sécurité de votre infrastructure pour limiter le nombre de ports accessibles.  
+1. Retravaillez les groupes de sécurité de votre infrastructure pour limiter le nombre de ports accessibles.
 2. Améliorez votre image virtuelle avec l'agent en configurant **iptables** pour que seuls les ports nécessaires soient ouverts (SSH, RabbitMQ...).
 3. Retravaillez les scripts Bash ou Puppet de votre projet pour ouvrir ou fermer des ports via **iptables** lorsqu'une application démarre ou s'arrête.

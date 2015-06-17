@@ -14,7 +14,7 @@ This page lists ideas to go farther with Roboconf.
 
 **New Components**
 
-1. Add new components in the graph.  
+1. Add new components in the graph.
 2. Write their recipes by using the extension you prefer (Bash, Puppet, File...).
 
 <br />
@@ -31,6 +31,6 @@ Example: deploy parts of your application on AWS and other parts on Openstack.
 
 **Security**
 
-1. Rework your security groups to reduce the number of open ports.  
+1. Rework your security groups to reduce the number of open ports.
 2. Improve your virtual image for the agent by configuring **iptables** so that only the required ports are open (SSH, RabbitMQ...).
 3. Rework the component recipes to open or close ports via **iptables** when an application starts or is stopped.

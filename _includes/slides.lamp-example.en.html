@@ -14,7 +14,7 @@
 		<li>... an application server (Tomcat)...</li>
 		<li>... and a database (MySQL).</li>
 	</ul>
-	
+
 	<br /><br />
 	<p>
 		It illustrates both deployment and reconfiguration.<br />
@@ -30,7 +30,7 @@
 	<img src="../../resources/img/lamp-simple-graph.jpg" alt="Simplified graph" class="no-border" />
 	<p>
 		The Apache load balancer, Tomcat and MySQL can be deployed over a VM.<br />
-		Tomcat needs a MySQL database. And the load balancer must be notified every time we deploy 
+		Tomcat needs a MySQL database. And the load balancer must be notified every time we deploy
 		an instance of of Tomcat.
 	</p>
 	<p>
@@ -55,7 +55,7 @@
 			</ul>
 		</li>
 	</ul>
-	
+
 	<p class="clear"></p>
 	<ul>
 		<li>
@@ -65,7 +65,7 @@
 			</ul>
 		</li>
 	</ul>
-	
+
 	<br /><br />
 	<p>
 		This is just a model, something we define in our configuration files.<br />
@@ -133,7 +133,7 @@
 	<img src="../../resources/img/lamp-variable-exchange-01.jpg" alt="Variable Exchange 1" class="no-border" />
 	<p>
 		First, the local agent starts listening those that need Tomcat variables.<br />
-		Then, it requests the variables it needs (MySQL). It will not be able to start until 
+		Then, it requests the variables it needs (MySQL). It will not be able to start until
 		it has these variables. Since it is alone, nobody will answer its request.
 	</p>
 </section>
@@ -146,7 +146,7 @@
 	<img src="../../resources/img/lamp-variable-exchange-02.jpg" alt="Variable Exchange 2" class="no-border" />
 	<p>
 		First, the local agent starts listening those that need Apache variables.<br />
-		Then, it requests the variables it needs (Tomcat). It will not be able to start until 
+		Then, it requests the variables it needs (Tomcat). It will not be able to start until
 		it has these variables.
 	</p>
 </section>
@@ -168,7 +168,7 @@
 	<p>
 		Now, MySQL is up.<br />
 		The graph states that the MySQL component / type does not have any dependency.
-		So, it can directly start. 
+		So, it can directly start.
 	</p>
 	<img src="../../resources/img/lamp-variable-exchange-04.jpg" alt="Variable Exchange 4" class="no-border" />
 	<p>
@@ -204,13 +204,13 @@
 	<h3>Parallel Deployments</h3>
 	<p>
 		Roboconf parallelizes everything it can.<br />
-		Here, two flows were executed in parallel. 
+		Here, two flows were executed in parallel.
 	</p>
 	<ul>
 		<li>Create VM 1, deploy Apache and Tomcat.</li>
 		<li>Create VM 2 and deploy MySQL.</li>
 	</ul>
-	
+
 	<br /><br />
 	<p>
 		While things were progressing, information was exchanged between agents, so that
@@ -280,8 +280,8 @@
 	</p>
 	<p>
 		Using one or all the Tomcat instances is specified in the recipes.<br />
-		For a load balancer, we need to know ALL the instances. For a relational database, we 
-		need to ONE instance (others are ignored). 
+		For a load balancer, we need to know ALL the instances. For a relational database, we
+		need to ONE instance (others are ignored).
 	</p>
 </section>
 
@@ -304,7 +304,7 @@
 		matter what, the application will <i>land on its feet</i>.
 	</p>
 	<img src="../../resources/img/chat.gif" alt="a cat landing on its feet" />
-	
+
 	<p>
 		This mecanism is used at deployment time as well as during reconfiguration phasis<br />
 		(addition or removal of application parts).

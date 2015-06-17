@@ -6,11 +6,11 @@ id: "plugin-puppet"
 menus: [ "users", "user-guide" ]
 ---
 
-The Puppet plug-in enables Puppet deployment with Roboconf.  
+The Puppet plug-in enables Puppet deployment with Roboconf.
 It uses [Puppet](http://www.puppetlabs.com) to deploy and configure Software on target platforms.
 
-> This plug-in uses Puppet in server-less mode.  
-> It means it does not require a Puppet master to work but instead uses "puppet apply".  
+> This plug-in uses Puppet in server-less mode.
+> It means it does not require a Puppet master to work but instead uses "puppet apply".
 > See [Puppet's user guide about "apply"](http://docs.puppetlabs.com/references/3.3.1/man/apply.html).
 
 Concretely, this plug-in is in charge of executing a Puppet module during a life cycle step.
@@ -25,7 +25,7 @@ Component_Y {
 }
 </code></pre>
 
-The module path will automatically be set to the corresponding module path. The value of the MODULEPATH environment 
+The module path will automatically be set to the corresponding module path. The value of the MODULEPATH environment
 variable, if present, will be appended to it.
 
 ## Install prerequisites
@@ -50,8 +50,8 @@ recent enough.
 
 ## The puppet module
 
-The configuration for the Puppet plug-in must be a valid [Puppet module](http://docs.puppetlabs.com/learning/modules1.html).  
-It is also recommended that components and variables be in lower case characters in the Roboconf model: if not, they will be converted 
+The configuration for the Puppet plug-in must be a valid [Puppet module](http://docs.puppetlabs.com/learning/modules1.html).
+It is also recommended that components and variables be in lower case characters in the Roboconf model: if not, they will be converted
 to lower case prior to being passed to puppet (works fine, but can be quite confusing for developers).
 
 ### Importing external modules
@@ -69,7 +69,7 @@ fsalum-redis =
 
 ### Module content
 
-Suppose an apache+load balancer component, that imports variables from Tomcat instances.  
+Suppose an apache+load balancer component, that imports variables from Tomcat instances.
 It may look like this in your graph model.
 
 <pre><code class="language-roboconf">
@@ -77,7 +77,7 @@ Apache {
 	installer: puppet;
 	imports: Tomcat.portAJP, Tomcat.ip;
 }
-	
+
 Tomcat {
 	installer: puppet;
 	exports: ip, portAJP = 8009;
@@ -119,12 +119,12 @@ class roboconf_apache_module($runningState = undef, $importAdded = undef, $impor
 	#              'tomcat1' => {'ip' => '127.0.0.1', 'portajp' => '8009'},
 	#              'tomcat2' => {'ip' => '127.0.0.2', 'portajp' => '8010'}
 	#            }
-	
+
 	...
 }
 ```
 
 ## Possible Upgrade
 
-This plug-in may extended in the future to also work with a Puppet master.  
+This plug-in may extended in the future to also work with a Puppet master.
 Roboconf would then push the configuration to a master which would then propagate it to other agents.

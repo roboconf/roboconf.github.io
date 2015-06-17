@@ -6,12 +6,12 @@ id: "web-site-organization"
 menus: [ "developers", "developer-guide" ]
 ---
 
-The web site is generated from a Git repository.  
-Every time one pushes modifications on the [Git repository](https://github.com/roboconf/roboconf.github.io), 
-the web site is built by [Jekyll](http://jekyllrb.com/) and published on 
+The web site is generated from a Git repository.
+Every time one pushes modifications on the [Git repository](https://github.com/roboconf/roboconf.github.io),
+the web site is built by [Jekyll](http://jekyllrb.com/) and published on
 [GitHub pages](https://help.github.com/pages/).
 
-Jekyll generates static HTML files.  
+Jekyll generates static HTML files.
 As a reminder, to build the web site locally, you must:
 
 * Clone the web site repository from GitHub.
@@ -29,45 +29,45 @@ jekyll build
 jekyll serve -w
 ```
 
-The key file in the **roboconf.github.io** repository is the **_config.yml** file.  
+The key file in the **roboconf.github.io** repository is the **_config.yml** file.
 It is used by Jekyll to configure the generation. It also contains information for i18n.
 
 ## General Organization
 
-The web site is designed to be completely translated.  
+The web site is designed to be completely translated.
 This includes both page contents and page URLs. Therefore, it is entirely
 optimized for SEO (Search Engine Optimization).
 
 The structure of the sources is the following :
 
-* **includes/** contains the menus.  
+* **includes/** contains the menus.
 There is one menu per category. Each one supports i18n.
 
-* **layouts/** contains the page layouts.  
+* **layouts/** contains the page layouts.
 There is one layout for the welcome page and another one for all the other pages.
 
 * **downloads/** contains resources people can download from the web site.
 
-* **resources/** contains web resources (scripts, style sheets, images...). 
+* **resources/** contains web resources (scripts, style sheets, images...).
 
 * **slides/** contains documents related to presentations.
 
 * **en/** contains the English version of the web site. **fr/** contains the French one.
-This structure allows to create a different content for every language.  
+This structure allows to create a different content for every language.
 
 
 ## Details
 
 For a given language, the web site is organized as follows:
 
-* The associated directory contains the main pages.  
+* The associated directory contains the main pages.
 These pages give general information. Their ID starts with *main.*, except for **home**.
 
-* The associated directory contains a **user-guide** directory.  
+* The associated directory contains a **user-guide** directory.
 Its name depends on the language. This sub-directory contains the pages related to the user guide.
 Their ID starts with *ug.&lt;version&gt;.*. User guides have a version.
 
-* The associated directory contains a **developer-guide** directory.  
+* The associated directory contains a **developer-guide** directory.
 Its name depends on the language. This sub-directory contains the pages related to the developer guide.
 Their ID starts with *dg.&lt;version&gt;.*. Developer guides have a version.
 
@@ -76,7 +76,7 @@ Their ID starts with *dg.&lt;version&gt;.*. Developer guides have a version.
 
 Internationalization is handled through two means:
 
-Menus names are translated in the **_config.yml** file.  
+Menus names are translated in the **_config.yml** file.
 
 	locales:
 	  en:
@@ -85,16 +85,16 @@ Menus names are translated in the **_config.yml** file.
 	    menu-lang: Language
 	    ...
 
-> Be careful to YAML.  
+> Be careful to YAML.
 > A sub-element is indented by 2 spaces. No tabulation.
 
-URLs are translated in the **_config.yml** file.  
+URLs are translated in the **_config.yml** file.
 
 	main.support:
 	  en: support
 	  fr: support
 
-The *en* and *fr* suffix point to a Markdown file (*.md).  
+The *en* and *fr* suffix point to a Markdown file (*.md).
 The translated page is contained into this file.
 
 ## Pages
@@ -119,7 +119,7 @@ cat: "dg-snapshot"
 
 <!-- -->
 
-* **title** is the page title (to be displayed in the HTML tag &laquo; title &raquo;).	
+* **title** is the page title (to be displayed in the HTML tag &laquo; title &raquo;).
 * **layout** is always **page**.
 * **id** is the page ID. It is used by *_config.yml* to associated a page with its different translations.
 * **menus** is the menus this pages fits into. It is made up of two menus.

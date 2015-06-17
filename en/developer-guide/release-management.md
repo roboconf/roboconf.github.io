@@ -6,8 +6,8 @@ id: "release-management"
 menus: [ "developers", "developer-guide" ]
 ---
 
-Unlike continuous integration, releases must be performed **locally**.  
-Performing a release means running specific Maven commands **on a Git repository**.  
+Unlike continuous integration, releases must be performed **locally**.
+Performing a release means running specific Maven commands **on a Git repository**.
 We do not release a single Maven module, but a set of coherent projects. A Git repository defines the bounds of this coherence.
 
 ## Prerequisites
@@ -18,17 +18,17 @@ We do not release a single Maven module, but a set of coherent projects. A Git r
 
 ## Release Scripts
 
-A project with release scripts is available on [Github](https://github.com/roboconf/roboconf-release-scripts).  
+A project with release scripts is available on [Github](https://github.com/roboconf/roboconf-release-scripts).
 **Only update the conf.sh file**. Then, use the various scripts to release the Roboconf items. Release order is given in the next section.
 
-These scripts assume all the Roboconf projects have been checked out in the same directory.  
+These scripts assume all the Roboconf projects have been checked out in the same directory.
 Assuming you use *my-dir* as the Git default directory, you should have the following sub-directories:
 *my-dir/roboconf-platform*, *my-dir/roboconf-web-administration*, etc.
 
 
 ## Projects Release
 
-A release involve several source repositories.  
+A release involve several source repositories.
 Proceed as described below.
 
 1. Update and tag **roboconf-web-administration**.
@@ -41,13 +41,13 @@ Proceed as described below.
 
 # Manual Releases
 
-> The following sections indicate how to release projects by hand.  
+> The following sections indicate how to release projects by hand.
 > It is the basis used in the release scripts.
 
 
 ## Releasing a Maven project
 
-* Clone or update the concerned Git repository.  
+* Clone or update the concerned Git repository.
 * Make sure the root POM has a released version as its parent.
 
 	* If the parent is a SNAPSHOT version, release the parent first.
@@ -62,14 +62,14 @@ Proceed as described below.
 	* You can keep the default values for the versions.
 	* The tag names should follow the convention *&lt;git repository name&gt;-&lt;version&gt;*.
 
-Maven will then compile the code, run the tests, **generate javadoc and sources archives** (mandatory to deploy on Maven Central) 
+Maven will then compile the code, run the tests, **generate javadoc and sources archives** (mandatory to deploy on Maven Central)
 AND **sign** the artifacts (mandatory). It will also update the POM versions and tag the source code in the Git repository.
 
 * Eventually, type in **mvn release:perform**.
 
 	* This will upload the build artifacts to the staging repository.
 
-At this point, the artifacts have not been released.  
+At this point, the artifacts have not been released.
 They are in the staging repository at [Sonatype.org](https://oss.sonatype.org/). To validate this release, you should...
 
 * ... test it!
@@ -83,7 +83,7 @@ Reading [this page](http://central.sonatype.org/pages/releasing-the-deployment.h
 
 ## Releasing the Eclipse plug-in
 
-The Eclipse plug-in follow a slightly different build process.  
+The Eclipse plug-in follow a slightly different build process.
 Roughly, we do not use Maven to release it. We must use the Tycho approach, which means...
 
 1. Update the version by hand in the POM.

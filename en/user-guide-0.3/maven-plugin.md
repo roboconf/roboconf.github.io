@@ -6,29 +6,29 @@ id: "maven-plugin"
 menus: [ "users", "user-guide", "0.3" ]
 ---
 
-Roboconf's Maven plug-in allows to automate some tasks related to Roboconf.  
+Roboconf's Maven plug-in allows to automate some tasks related to Roboconf.
 It also allows a seamless integration with build tools, such as [Jenkins](http://jenkins-ci.org) or [Travis](http://travis-ci.org).
 
 Here is a sample **pom.xml** file for a Roboconf project.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<project 
-		xmlns="http://maven.apache.org/POM/4.0.0" 
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<project
+		xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<prerequisites>
 		<maven>3.0.3</maven>
 	</prerequisites>
-	
+
 	<groupId>net.roboconf</groupId>
 	<artifactId>my-project</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>This is a sample</name>
 	<packaging>roboconf-app</packaging>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -73,36 +73,36 @@ mvn archetype:generate                              \
 
 
 ## Maven Goals
-  
+
 The plug-in has the following goals.
 
 ### initialize
 
-This goal configures the project (model directory, build output).  
+This goal configures the project (model directory, build output).
 It has no parameter.
 
-Users are not supposed to invoke this goal manually.  
+Users are not supposed to invoke this goal manually.
 It is part of the default life cycle for **roboconf-app** projects.
 
 
 ### validate-project
 
-This goal validates the project's structure.  
+This goal validates the project's structure.
 It has no parameter.
 
-Users are not supposed to invoke this goal manually.  
+Users are not supposed to invoke this goal manually.
 It is part of the default life cycle for **roboconf-app** projects.
 
 
 ### validate-application
 
-This goal validates the Roboconf application.  
+This goal validates the Roboconf application.
 It is part of the default life cycle for **roboconf-app** projects. You can also invoke it manually.
 
 ```tcl
 mvn roboconf:validate-application
 ```
-  
+
 Its configuration accepts the following parameters.
 
 | Name | Type | Required | Default | Since | Description |
@@ -113,7 +113,7 @@ Its configuration accepts the following parameters.
 
 ### package
 
-This goal packages a Roboconf application as a ZIP file.  
+This goal packages a Roboconf application as a ZIP file.
 It has no parameter.
 
 It is part of the default life cycle for **roboconf-app** projects. You can also invoke it manually.
@@ -132,7 +132,7 @@ mvn roboconf:package
 
 ## documentation
 
-This goal generates documentation from the configuration files.  
+This goal generates documentation from the configuration files.
 Documentation includes text documents and images (as PNG files). It lists all the components
 of the application and their relations. Generated documents can be used by people in charge production
 environments, as well as for maintenance teams.
@@ -166,7 +166,7 @@ Available options for the documentation generator.
 
 You can find examples of configuration [here](maven-examples-documentation.html).
 
-In addition to the default output, users can include additional information in their project.  
+In addition to the default output, users can include additional information in their project.
 The generator will read and include them in the result.
 
 Thus, if you want to add a specific description for a component called **toto**, you can add a **toto.summary.txt** file under **src/main/doc**.
@@ -178,6 +178,6 @@ It will be added at the beginning of a component's description. You can also add
 using **extra.txt** files. As an example, if you want to add a warning or a caution section, you can add **toto.extra.txt**, **toto_en_US.extra.txt**
 or **toto_fr_FR.extra.txt** under **src/main/doc**.
 
-For recipes, information ca be specified for facets.  
+For recipes, information ca be specified for facets.
 To document a facet, create a file called *your-facet-name*.**facet.txt**. As usual, when you want to specify a locale, add it as a suffix
 (your-facet-name\_**en_US.facet.txt**).

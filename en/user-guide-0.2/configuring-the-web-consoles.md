@@ -6,10 +6,10 @@ id: "configuring-the-web-consoles"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 
-Both the DM and the agent distributions rely on Apache Karaf.  
+Both the DM and the agent distributions rely on Apache Karaf.
 And they both include a web server with an administration console.
 
-This console is, by default, available at [http://localhost:8181/system/console](http://localhost:8181/system/console).  
+This console is, by default, available at [http://localhost:8181/system/console](http://localhost:8181/system/console).
 Default credentials are **karaf** / **karaf**.
 
 This console provides several menus, including the bundle administration...

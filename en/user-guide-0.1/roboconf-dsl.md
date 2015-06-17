@@ -6,12 +6,12 @@ id: "roboconf-dsl"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 
-Here is a summary of Roboconf's DSL and keywords.  
+Here is a summary of Roboconf's DSL and keywords.
 Let's start with graph(s) definitions.
 
-The graph(s) is a set of graphs.  
+The graph(s) is a set of graphs.
 It is made up of roots components. A component can have several children, and several parents.
-A graph(s) must have at least one root component. Several root components indicate several entry points to 
+A graph(s) must have at least one root component. Several root components indicate several entry points to
 walk through the graph(s).
 
 
@@ -25,7 +25,7 @@ MyComp {
 }
 </code></pre>
 
-It is a name followed by an opening curly bracket.  
+It is a name followed by an opening curly bracket.
 Component properties must be defined from the next line, **one property per line**.
 
 Here are the supported properties for a component.
@@ -48,39 +48,39 @@ ApacheServer {
 	installer: puppet;			# Apache instances will be deployed by Roboconf's Puppet extension
 	alias: a Tomcat server;		# An alias
 	icon: apache.jpg;			# An icon located in the graph resources
-		
+
 	# Web applications could be deployed over this Apache server
 	children: My-Dash-Board, Marketing-Suite;
-		
+
 	# Properties exported by this component.
 	exports: ip, port = 19099;
 	# 'port' should have a default value, or we will have to set it when we create an instance.
 	# 'ip' will be updated at runtime by Roboconf's agent.
-		
+
 	# Other components properties that this server needs to have so that it can start.
 	imports: LB.port (optional), LB.ip (optional);
-		
+
 	# Here, the Apache may also be notified about components instances of type LB.
 	# The imports are marked as optional. It means that if there is no LB instance, an
-	# Apache instance will be able to start anyway. 
+	# Apache instance will be able to start anyway.
 	#
 	# If the import was not optional, e.g.
 	#
 	# imports: LB.port, LB.ip;
 	# or even
 	# imports: LB.port (optional), LB.ip;
-	# 
+	#
 	# ... then an Apache instance would need at least one LB instance somewhere.
 }
 </code></pre>
 
-Notice that exported variables are prefixed by the component (or the facet) name that defined them.  
+Notice that exported variables are prefixed by the component (or the facet) name that defined them.
 As an example, if a component Tomcat exports **port** and **ip**, and that another component wants to import them,
 it will need to import **Tomcat.port** and **Tomcat.ip**. Same thing if the variables are exported by a facet.
 
 ## Facets
 
-Facets are defined in graph(s) definitions.  
+Facets are defined in graph(s) definitions.
 A facet is almost like a component, except it is used to group properties and make their reusable (inheritable)
 among components.
 
@@ -104,13 +104,13 @@ Here are the supported properties for a facet.
 | extends | A facet may extend other facets. So, this is a list of facet names, separated by a comma. | no |
 
 
-Unlike components, facets do not have a resource directory.  
+Unlike components, facets do not have a resource directory.
 In fact, facets are just a way to shorten component definitions, by making reusability easier.
 
 
 ## Instances
 
-We have seen graph(s) definitions. Let's continue with instances definitions.  
+We have seen graph(s) definitions. Let's continue with instances definitions.
 Instances reference components an may override the value of exported properties. They cannot
 add or remove properties (neither exported, nor imported). They must be compliant with their component definition.
 
@@ -123,7 +123,7 @@ instanceof MyComp {
 }
 </code></pre>
 
-It starts with the **facet** keyword, followed by a component name and an opening curly bracket.  
+It starts with the **facet** keyword, followed by a component name and an opening curly bracket.
 Instance properties must be defined from the next line, **one property per line**.
 
 Here are the supported properties for an instance.
@@ -137,16 +137,16 @@ Here are the supported properties for an instance.
 | instance-state | The instance state. This is not expected to be set by hand. But you may encounter it. | no |
 
 
-Instances can be defined hierarchically.  
+Instances can be defined hierarchically.
 Here is an example.
 
 <pre><code class="language-roboconf">
 instanceof VM {
-	
+
 	# This will create 5 VM instances, called VM 1, VM 2, VM3, VM 4 and VM 5.
 	name: VM ;	# Yes, there is a space at the end... :)
 	count: 5;
-		
+
 	# On every VM instance, we will deploy...
 	instanceof Tomcat {
 		name: Tomcat;
@@ -154,7 +154,7 @@ instanceof VM {
 }
 </code></pre>
 
-Instances can also override properties from their component.  
+Instances can also override properties from their component.
 Assuming the Tomcat component specified...
 
 <pre><code class="language-roboconf">
@@ -162,7 +162,7 @@ Tomcat {
 	exports: ip, port = 8080;
 }
 </code></pre>
-	
+
 ... a Tomcat instance may override the port value.
 
 <pre><code class="language-roboconf">
@@ -172,7 +172,7 @@ instanceof Tomcat {
 }
 </code></pre>
 
-It may also define properties that were not defined in the component.  
+It may also define properties that were not defined in the component.
 This can be useful sometimes to pass specific data in a script or a Puppet module.
 
 <pre><code class="language-roboconf">

@@ -6,7 +6,7 @@ id: "rest-api-application"
 menus: [ "developers", "developer-guide" ]
 ---
 
-This API is used to update the instances of a given application.  
+This API is used to update the instances of a given application.
 
 <br />
 
@@ -30,7 +30,7 @@ To list instances under a given one.
 
 **Response JSON Object:**
 
-Array of instances: [ inst1, ..., instN ]  
+Array of instances: [ inst1, ..., instN ]
 An instance is an object with the following properties:
 
 - name: the instance name.
@@ -77,7 +77,7 @@ Content-Type: application/json
 
 ## <span class="glyphicon glyphicon-hand-right"></span> POST /app/{name}/change-state
 
-To change the state of a given instance.  
+To change the state of a given instance.
 In fact, this operation only request the DM to send a notification to the right agent. The response
 acknowledges the fact that the notification was sent. The agent will undertake the proper actions to
 update the instance state (including ignoring the request if it does not make sense).
@@ -259,7 +259,7 @@ POST /app/mongo-replicaset/stop-all?instance-path=/Mongo/primary HTTP/1.1
 Host: localhost:9998
 ```
 
-To stop and undeploy all the instances of the application.  
+To stop and undeploy all the instances of the application.
 This will result in simply terminating the machines.
 
 ```http
@@ -294,7 +294,7 @@ To list all the components that can be deployed on a given instance.
 
 **Response JSON Object:**
 
-Array of components: [ comp1, ..., compN ]  
+Array of components: [ comp1, ..., compN ]
 A component is an object with the following properties:
 
 - name: the component name.
@@ -347,7 +347,7 @@ To list all the components available in this application.
 
 **Response JSON Object:**
 
-Array of components: [ comp1, ..., compN ]  
+Array of components: [ comp1, ..., compN ]
 A component is an object with the following properties:
 
 - name: the component name.
@@ -401,7 +401,7 @@ To find instances where a given component could be instantiated.
 
 **Response JSON Object:**
 
-Array of instances: [ inst1, ..., instN ]  
+Array of instances: [ inst1, ..., instN ]
 An instance is an object with the following properties:
 
 - name: the instance name.

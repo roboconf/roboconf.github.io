@@ -26,7 +26,7 @@
 	</head>
 
 	<body>
-		
+
 <!-- *********************************** -->
 <!--        BEGINNING of Slides          -->
 <!-- *********************************** -->
@@ -36,7 +36,7 @@
 			<div class="slides">
 				{% for s in site[page.slides-id] %}
 					{% capture the_slides %}{{ s | append: '.' | append: page.lang | append: '.html' }}{% endcapture %}
-					
+
 <!-- {{ s }} -->
 					{% include {{the_slides}} %}
 				{% endfor %}
@@ -68,7 +68,7 @@
 				// parallaxBackgroundSize: '2100px 900px',
 				width: 1280,
 				height: 800,
-				
+
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
 					{ src: 'http://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -76,7 +76,7 @@
 					{ src: 'http://cdn.jsdelivr.net/reveal.js/2.6.2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'http://cdn.jsdelivr.net/reveal.js/2.6.2/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'http://cdn.jsdelivr.net/reveal.js/2.6.2/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-					
+
 					{ src: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: './js/highlight-integration.js', async: true }
 				]

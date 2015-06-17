@@ -10,15 +10,15 @@ menus: [ "users", "user-guide", "0.3" ]
 
 An application (let's call it *MyApp*) should provide 3 directories.
 
-**descriptor/** contains the main Roboconf configuration file, **application.properties**.  
+**descriptor/** contains the main Roboconf configuration file, **application.properties**.
 This file describes the application it self (name, description, location of the main model files...).
 
-**graph/** contains at least one *.graph* file (whose name is specified in **application.properties**).  
+**graph/** contains at least one *.graph* file (whose name is specified in **application.properties**).
 Graph files list components and their dependencies (components can be Software components to install, or VMs to deploy on).
 **graph/** also contains one sub-directory for each component listed in the graph model.
 This sub-directory must contain all the files necessary to deploy the component (e.g. scripts, Software packages, configuration files...)
 
-**instances/** contains an *.instances* file (whose name is specified in **application.properties**).  
+**instances/** contains an *.instances* file (whose name is specified in **application.properties**).
 This file lists all the initial instances. It means graph components will be pre-instantiated, ready to be deployed.
 
 	MyApp/
@@ -33,7 +33,7 @@ This file lists all the initial instances. It means graph components will be pre
 
 ## Example
 
-Let's assume you wish to deploy an application called *MyApp*, using bash scripts, on EC2 and OpenStack IaaS.  
+Let's assume you wish to deploy an application called *MyApp*, using bash scripts, on EC2 and OpenStack IaaS.
 Roboconf configuration files should be organized as follows:
 
 	MyApp/
@@ -83,7 +83,7 @@ VM_EC2 {
 	installer: target;
 	children: MyApp;
 }
-    
+
 VM_Openstack {
 	installer: target;
 	children: MyApp;
@@ -100,7 +100,7 @@ instance of VM_EC2 {
 		name: MyApp_on_EC2;
 	}
 }
-    
+
 # Deploy on Openstack VM (called VM2)
 instance of VM_Openstack {
 	name: VM2;

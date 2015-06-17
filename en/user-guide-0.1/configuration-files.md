@@ -32,7 +32,7 @@ This file lists all the initial instances. It means graph components will be pre
 
 # Example
 
-Let's assume you wish to deploy an application called *MyApp*, using bash scripts, on EC2 and OpenStack IaaS.  
+Let's assume you wish to deploy an application called *MyApp*, using bash scripts, on EC2 and OpenStack IaaS.
 Roboconf configuration files should be organized as follows:
 
 	MyApp/
@@ -81,7 +81,7 @@ VM_EC2 {
 	installer: iaas;
 	children: MyApp;
 }
-    
+
 VM_Openstack {
 	alias: Virtual Machine on Openstack;
 	installer: iaas;
@@ -99,7 +99,7 @@ instanceof VM_EC2 {
 		name: MyApp_on_EC2;
 	}
 }
-    
+
 # Deploy on Openstack VM (called VM2)
 instanceof VM_Openstack {
 	name: VM2;

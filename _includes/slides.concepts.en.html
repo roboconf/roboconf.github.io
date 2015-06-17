@@ -13,13 +13,13 @@
 	<p>
 		Two kinds of relations are considered.
 	</p>
-	
+
 	<h4>Containment</h4>
 	<p>
 		A component has to be deployed onto another one.<br />
 		<small>Example: a war onto a web application server.</small>
-	</p>	
-	
+	</p>
+
 	<h4>Runtime</h4>
 	<p>
 		A component needs another one to run.<br />
@@ -33,7 +33,7 @@
 	<img src="../../resources/img/graph-containment-example.jpg" alt="Example" class="no-border" />
 	<p>
 		We can deploy Tomcat either on an Amazon VM, or on an Azure VM.<br />
-		And we can deploy given applications only on Tomcat. 
+		And we can deploy given applications only on Tomcat.
 		If we wanted to deploy a third web application, we would have to update the graph.
 	</p>
 	<p>
@@ -48,7 +48,7 @@
 		This time, in addition to containment relations, we have a runtime dependency.<br />
 		In this graph, <strong>App 2</strong> depends on a MySQL database, which is not the case of <strong>App 1</strong>.
 		It means Roboconf cannot start <strong>App 2</strong> until it has the <strong>ip</strong> and <strong>port</strong>
-		of a MySQL database. 
+		of a MySQL database.
 	</p>
 </section>
 
@@ -87,7 +87,7 @@
 	<p>
 		This is useful because those that develop an application or plan its
 		deployment are not those who effectively deploy and manage it in production.
-		Constraining deployment of scalable parts reduces the risk of errors by the production team. 
+		Constraining deployment of scalable parts reduces the risk of errors by the production team.
 	</p>
 </section>
 
@@ -104,7 +104,7 @@
 	<h3>Appliance-like Graphs</h3>
 	<img src="../../resources/img/graph-lamp-constrained-example.jpg" alt="constrained graph" class="no-border" />
 	<p>
-		Here, we consider each of the 3 main applications must be deployed on their own VM type. 
+		Here, we consider each of the 3 main applications must be deployed on their own VM type.
 		It means we cannot deploy different applications on a given VM.
 	</p>
 	<p>

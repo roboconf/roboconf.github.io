@@ -6,7 +6,7 @@ id: "target-iaas-azure"
 menus: [ "users", "user-guide", "0.2" ]
 ---
 
-Roboconf has a target implementation for Microsoft Azure.  
+Roboconf has a target implementation for Microsoft Azure.
 It only supports the creation of *compute* VMs.
 
 To install it, open the DM's interactive mode and type in...
@@ -17,10 +17,10 @@ bundle:install mvn:net.roboconf/roboconf-target-iaas-azure/0.2
 bundle:start <bundle-id>
 ```
 
-Every new VM is associated with a public IP address.  
+Every new VM is associated with a public IP address.
 This address will be used by other components which resolve their dependencies through Roboconf.
 
-Sample **target.properties**.  
+Sample **target.properties**.
 Just copy / paste and edit.
 
 ```properties
@@ -57,20 +57,20 @@ Here is a complete description of the parameters for Microsoft Azure.
 
 ## Key Store
 
-To create a key store, you can use a tool called [Keytool][keytool].  
+To create a key store, you can use a tool called [Keytool][keytool].
 Here is the command used to create a key store.
 
 	keytool -genkeypair -alias mydomain -keyalg RSA -keystore WindowsAzureKeyStore.jks -keysize 2048 -storepass "test123";
 
-What we have done is creating a key store called **WindowsAzureKeyStore.jks** and set its access password to **test123**. 
-You should see a file called **WindowsAzureKeyStore.jks** in your current Java bin folder 
-(e.g. */usr/lib/jvm/java-1.7.0-openjdk-amd64/bin*). Next, we need to export a certificate from this key store. To do so, 
+What we have done is creating a key store called **WindowsAzureKeyStore.jks** and set its access password to **test123**.
+You should see a file called **WindowsAzureKeyStore.jks** in your current Java bin folder
+(e.g. */usr/lib/jvm/java-1.7.0-openjdk-amd64/bin*). Next, we need to export a certificate from this key store. To do so,
 we will once again use [Keytool][keytool]. Here is the command to use.
 
 	keytool -v -export -file ~/WindowsAzureSMAPI.cer -keystore WindowsAzureKeyStore.jks -alias mydomain
 
-Once this operation completes, we will get a **WindowsAzureSMAPI.cer** file under **~/**.  
-The next (final) step consists in uploading this certificate to the Windows Azure Portal. To do so, login into the 
+Once this operation completes, we will get a **WindowsAzureSMAPI.cer** file under **~/**.
+The next (final) step consists in uploading this certificate to the Windows Azure Portal. To do so, login into the
 [Windows Azure Portal](https://manage.windowsazure.com), click **Settings** > **Management Certificates**
 and upload the **WindowsAzureSMAPI.cer** file there.
 
@@ -80,12 +80,12 @@ and upload the **WindowsAzureSMAPI.cer** file there.
 Cloud service's XML template file should be similar to the following...
 
 ```xml
-<?xml version="1.0" encoding="utf-8" standalone="no"?>  
-<CreateHostedService xmlns="http://schemas.microsoft.com/windowsazure">  
-  <ServiceName>service-fake-name</ServiceName>  
-  <Label>VGVzdCBmcm9tIEFQSQ==</Label>  
-  <Description/>  
-  <Location>West Europe</Location>  
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<CreateHostedService xmlns="http://schemas.microsoft.com/windowsazure">
+  <ServiceName>service-fake-name</ServiceName>
+  <Label>VGVzdCBmcm9tIEFQSQ==</Label>
+  <Description/>
+  <Location>West Europe</Location>
 </CreateHostedService>
 ```
 
@@ -101,21 +101,21 @@ VM Deployment's XML template file should be similar to the following...
 <Deployment xmlns="http://schemas.microsoft.com/windowsazure" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <Name>deployment-fake-name</Name>
   <DeploymentSlot>Production</DeploymentSlot>
-  <Label>label-fake-name</Label>      
+  <Label>label-fake-name</Label>
   <RoleList>
     <Role>
       <RoleName>vm-fake-name</RoleName>
-      <RoleType>PersistentVMRole</RoleType>      
+      <RoleType>PersistentVMRole</RoleType>
       <ConfigurationSets>
         <ConfigurationSet i:type="LinuxProvisioningConfigurationSet">
           <ConfigurationSetType>LinuxProvisioningConfiguration</ConfigurationSetType>
           <HostName>vm-fake-host-name</HostName>
-          <UserName>username</UserName> 
-          <UserPassword>password</UserPassword> 
-          <DisableSshPasswordAuthentication>false</DisableSshPasswordAuthentication>           
+          <UserName>username</UserName>
+          <UserPassword>password</UserPassword>
+          <DisableSshPasswordAuthentication>false</DisableSshPasswordAuthentication>
           <CustomData>aXBNZXNzYWdpbmdTZXJ2ZXI9NTQuNzIuMjIwLjE2MgphcHBsaWNhdGlvbk5hbWU9aW90c3Rvcm0KY2hhbm5lbE5hbWU9dm1henVyZW1vc3F1aXR0bwo=</CustomData>
-        </ConfigurationSet>        
-        <ConfigurationSet> 
+        </ConfigurationSet>
+        <ConfigurationSet>
           <ConfigurationSetType>NetworkConfiguration</ConfigurationSetType>
           <InputEndpoints>
             <InputEndpoint>
@@ -124,7 +124,7 @@ VM Deployment's XML template file should be similar to the following...
               <Port>22</Port>
               <Protocol>tcp</Protocol>
             </InputEndpoint>
-	        <InputEndpoint>          
+	        <InputEndpoint>
               <LocalPort>8080</LocalPort>
               <Name>Tomcat</Name>
               <Port>8080</Port>
@@ -134,9 +134,9 @@ VM Deployment's XML template file should be similar to the following...
         </ConfigurationSet>
       </ConfigurationSets>
       <OSVirtualHardDisk>
-        <HostCaching>ReadWrite</HostCaching>    
+        <HostCaching>ReadWrite</HostCaching>
         <SourceImageName>vm-template</SourceImageName>
-      </OSVirtualHardDisk>      
+      </OSVirtualHardDisk>
       <RoleSize>Small</RoleSize>
       <ProvisionGuestAgent>true</ProvisionGuestAgent>
     </Role>

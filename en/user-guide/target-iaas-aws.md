@@ -6,7 +6,7 @@ id: "target-iaas-aws"
 menus: [ "users", "user-guide" ]
 ---
 
-Roboconf has a target implementation for Amazon Web Services (AWS).  
+Roboconf has a target implementation for Amazon Web Services (AWS).
 It only supports the creation of *compute* VMs.
 
 To install it, open the DM's interactive mode and type in...
@@ -17,10 +17,10 @@ bundle:install mvn:net.roboconf/roboconf-target-iaas-ec2/0.3
 bundle:start <bundle-id>
 ```
 
-Every new VM is associated with a public IP address.  
+Every new VM is associated with a public IP address.
 This address will be used by other components which resolve their dependencies through Roboconf.
 
-Sample **target.properties**.  
+Sample **target.properties**.
 Just copy / paste and edit.
 
 ```properties
@@ -28,35 +28,35 @@ Just copy / paste and edit.
 target.id = iaas-ec2
 
 # EC2 URL
-ec2.endpoint = 
+ec2.endpoint =
 
 # Credentials to connect
-ec2.access.key = 
-ec2.secret.key = 
+ec2.access.key =
+ec2.secret.key =
 
 # VM configuration
-ec2.ami	= 
+ec2.ami	=
 ec2.instance.type = t1.micro
-ec2.ssh.key = 
-ec2.security.group	= 
+ec2.ssh.key =
+ec2.security.group	=
 ```
 
-It is also possible to define an elastic IP address.  
+It is also possible to define an elastic IP address.
 It is not a good idea to set it in the **target.properties**, although it works.
 Indeed, all the VM instances created from this target configuration will try to use the same elastic IP.
-Since Amazon does not allow it, only the last created VM will be associated with this IP. 
+Since Amazon does not allow it, only the last created VM will be associated with this IP.
 **It is much better** to define the elastic IP in the instance definition, as shown below.
 
 <pre><code class="language-roboconf">
 instance of VM {
 	name: VM1;
 	data.ec2.elastic.ip: your-elastic-ip;
-	
+
 	# Put children instances next...
 }
 </code></pre>
 
-> In a general matter, VM instances can inject target parameters through their definitions.  
+> In a general matter, VM instances can inject target parameters through their definitions.
 > These properties must start with "data." followed by the target property.
 
 Here is a complete description of the parameters for Amazon Web Services.

@@ -6,7 +6,7 @@ id: "events"
 menus: [ "project", "events" ]
 ---
 
-Various events where Roboconf was shown.  
+Various events where Roboconf was shown.
 Slides can help to understand the project and its uses cases.
 
 ## &laquo; RMLL 2014 &raquo;
@@ -33,8 +33,8 @@ Slides can help to understand the project and its uses cases.
 
 * February 19<sup>th</sup>, 2014
 * [Event's page](http://wiki.eclipse.org/Eclipse_IoT_Day_Grenoble_2014) at Eclipse.org
-* Roboconf slides: 
-[PDF](/slides/eclipse-iot-2014/Roboconf--Cloud-Deployment--Eclipse-IoT--Grenoble-2014.pdf) / 
+* Roboconf slides:
+[PDF](/slides/eclipse-iot-2014/Roboconf--Cloud-Deployment--Eclipse-IoT--Grenoble-2014.pdf) /
 [ODP](/slides/eclipse-iot-2014/Roboconf--Cloud-Deployment--Eclipse-IoT--Grenoble-2014.odp)
 * Video on [Youtube](http://www.youtube.com/watch?v=h2FvWRtDoGM)
 

@@ -6,13 +6,13 @@ id: "iaas-vmware"
 menus: [ "users", "user-guide", "0.1" ]
 ---
 
-Roboconf has a IaaS implementation for VMWare.  
+Roboconf has a IaaS implementation for VMWare.
 It only supports the creation of *compute* VMs.
 
-> VMWare support depends on your version.  
+> VMWare support depends on your version.
 > What will most likely happens is that Roboconf will have several VMWare extensions, one per VMWare version.
 
-Sample **iaas.properties**.  
+Sample **iaas.properties**.
 Just copy / paste and edit.
 
 ```properties
@@ -20,21 +20,21 @@ Just copy / paste and edit.
 iaas.type = vmware
 
 # REST URL
-vmware.url = 
+vmware.url =
 
 # Credentials to connect
-vmware.user	= 
-vmware.password	= 
+vmware.user	=
+vmware.password	=
 vmware.ignorecert = true
 
 # Cluster information
-vmware.datacenter = 
-vmware.cluster = 
-vmware.vmuser = 
-vmware.vmpassword = 
+vmware.datacenter =
+vmware.cluster =
+vmware.vmuser =
+vmware.vmpassword =
 
 # VM configuration
-vmware.template =  
+vmware.template =
 ```
 
 Here is a complete description of the parameters for OpenStack.

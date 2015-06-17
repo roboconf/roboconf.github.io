@@ -17,7 +17,7 @@ de messagerie et de gestion de communautés professionnelles, Open PaaS vise à 
 des organisations. Bâtie autour des standards du web, cette plate-forme utilise Roboconf pour piloter et adapter ses
 déploiements dans des infrastructures de cloud.
 
-> Le site [hubl.in](http://hubl.in/) est un sous-projet d'Open PaaS.  
+> Le site [hubl.in](http://hubl.in/) est un sous-projet d'Open PaaS.
 > Hubl.in est une solution gratuite et [open source](https://github.com/linagora/hublin) qui se substitue à des logiciels comme Skype et Google Hangout.
 
 
@@ -30,9 +30,9 @@ Construite autour de standards, cette plate-forme utilise Roboconf comme socle d
 
 ## &laquo; ECOM &raquo;
 
-ECOM est un projet d'étude visant la réalisation et la mise en oeuvre un site de e-commerce.  
+ECOM est un projet d'étude visant la réalisation et la mise en oeuvre un site de e-commerce.
 Il constitue un ensemble de travaux pratiques pour des étudiants de
 Master 2 de l'Université Joseph Fourier, ainsi que pour les étudiants en
 informatique (RICM 5) de l'Institut National Polytechnique de Grenoble (INPG).
- 
+
 * [http://air.imag.fr/index.php/ECOM](http://air.imag.fr/index.php/ECOM)

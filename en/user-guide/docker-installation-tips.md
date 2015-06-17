@@ -8,8 +8,8 @@ menus: [ "users", "user-guide" ]
 
 ## Docker configuration
 
-Here, we assume Docker is already installed on your system (e.g. by using "apt-get install lxc-docker" on Ubuntu, or see 
-[docker.com](http://docker.com) for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some 
+Here, we assume Docker is already installed on your system (e.g. by using "apt-get install lxc-docker" on Ubuntu, or see
+[docker.com](http://docker.com) for other platforms). Note that Docker runs mainly on Linux 64-bit systems, although some
 ports may be available for other platforms.
 
 It is recommended to use docker version 1.5.x or later.
@@ -23,7 +23,7 @@ docker pull ubuntu
 
 ## Configure the TCP port for Docker Containers
 
-Roboconf needs Docker to be available on a TCP port.  
+Roboconf needs Docker to be available on a TCP port.
 To enable it, edit **/etc/default/docker**, and define DOCKER\_OPTS there.
 
 ```properties

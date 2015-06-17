@@ -8,7 +8,7 @@ menus: [ "users", "user-guide" ]
 
 ## Creating a Roboconf Application
 
-A Roboconf application is a Roboconf package to deploy a distributed application with Roboconf.  
+A Roboconf application is a Roboconf package to deploy a distributed application with Roboconf.
 It must contain configuration files for Roboconf, with some resources.
 
 Create the following file structure:
@@ -31,7 +31,7 @@ most simple to handle. The configuration of other components will depend on the 
 
 ## Deploying It
 
-Once you have created your Roboconf application, you have two means to deploy it.  
+Once you have created your Roboconf application, you have two means to deploy it.
 It is assumed here you already have installed Roboconf's parts (the DM, the messaging server, the
 web administration) and that you have prepared virtual images on the IaaS.
 
@@ -45,11 +45,11 @@ Once deployed, the application will be listed in the web administration applicat
 
 ## Monitoring It
 
-Monitoring is for the moment very basic with Roboconf.  
+Monitoring is for the moment very basic with Roboconf.
 Every agent regularly sends heart beats to the DM. So, the only thing Roboconf monitors now
 is whether agents (and thus the remote hosts) are alive.
 
-> It is planned to go deeper in the monitoring features.  
+> It is planned to go deeper in the monitoring features.
 > First, remote host's state will be checked (memory, CPU, available disk space...).
 > Then, it will be extended to applicative levels. Which tools will be used (Nagios, Cacti...)
 > is not known at this time.
