@@ -31,13 +31,34 @@ en fonction des messages qui transitent. Ces actions, effectuées par Roboconf, 
 (ou de plug-ins). Il y a par exemple un plug-in Bash, ainsi qu'un plug-in [Puppet](http://puppetlabs.com). 
 
 Roboconf est elle-même une application répartie, basée sur AMQP et REST / JSon. Elle supporte plusieurs IaaS (dont
- OpenStack, Amazon Web Services, Microsoft Azure, VMWare, ainsi qu'un déploiement "local" pour des hôtes pré-existants, voire
- même pour de l'embarqué).
+OpenStack, Amazon Web Services, Microsoft Azure, VMWare, ainsi qu'un déploiement "local" pour des hôtes pré-existants, voire
+même pour de l'embarqué).
+
+
+## Historique
+
+Roboconf a été créé pour être le socle d'[Open PaaS](http://open-paas.org/).  
+Open PaaS est un réseau social d'entreprise, c'est à dire une plate-forme dédiée à la collaboration au sein
+d'organisations (messagerie, gestion de groupes et de projets, vidéo conférence...).
+
+Le projet est mené par [Linagora](http://linagora.com), qui contribue aussi au projet Roboconf.  
+Les <strong>impératifs techniques</strong> pour le socle d'Open PaaS étaient clairs.
+	
+* Supporter des déploiements dans le cloud (clouds publics, privés et hybrides)
+* Garantir aux développeurs des parties hautes qu'ils pourraient choisir les solutions qu'ils souhaitent (bases de données, serveurs, langages de programmation...)
+* Fournir des mécanismes d'élasticité (adaptation automatique à la charge...)
+* Être totalement open-source (comme toutes les solutions utilisées et/ou développées par Linagora).
+
+La plus-value de la plate-forme réside clairement dans les applications au-dessus, et non dans le socle.  
+A l'époque (fin 2012), certaines solutions *cloud* commençaient à émerger, mais aucune ne satisfaisait tous les critères décris ci-dessus.
+Des contacts avec l'[Université Joseph Fourier](https://www.ujf-grenoble.fr/) (à Grenoble), et en particulier avec le [Laboratoire Informatique
+de Grenoble](https://www.liglab.fr/), aboutirent à la création d'une équipe commune pour protyper une telle solution. Ainsi est né Roboconf...
+ 
 
 ## Cas d'Usage
 
-Les cas d'usage suivants ont été validés et prototypés avec Roboconf.  
-Les sources des prototypes seront bientôt mises à disposition sur GitHub.
+Les cas d'usage généraux sont listés [ici](/slides/general/cas-d-usage-de-roboconf.html).  
+La liste suivante fait référence à des exemples, des démonstrations ou de vrais besoins.
 
 * **LAMP Patrimonial** : un cas classique, avec un équilibreur de charge basé sur un serveur Apache, une application web
 déployée sur Tomcat, et une base de données MySQL. L'intérêt de ce cas réside dans la facilité avec laquelle on peut rajouter

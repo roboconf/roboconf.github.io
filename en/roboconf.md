@@ -12,7 +12,7 @@ and handles deployment automatically of the entire application, or of a part of 
 and scale-down natively. Its main force is the support of dynamic (re)configuration. This provides a lot of flexibility and 
 allows elastic deployments.
 
-Roboconf takes as input the description of a whole application in terms of "components" and "instances".  
+Roboconf takes as input the description of a whole application in terms of *components* and *instances*.  
 From this model, it then takes the burden of launching Virtual Machines (VMs), deploying software on them, resolving dependencies 
 between software components, updating their configuration and starting the whole stuff when ready.
 
@@ -29,10 +29,32 @@ Roboconf is distributed technology, based on AMQP
 and REST / JSon. It is IaaS-agnostic, and supports many well-known IaaS (including OpenStack, Amazon Web Services, Microsoft Azure, VMWare, 
 as well as a "local" deployment plug-in for on-premise hosts).
 
+
+## History
+
+Roboconf was created to be the foundations of [Open PaaS](http://open-paas.org/).  
+Open PaaS is an Enterprise Social Network, i.e. a platform dedicated to collaborations
+within organizations (messaging, groups and projects management, video conference...).
+
+The project is led by [Linagora](http://linagora.com), which is also implied in Roboconf.  
+<strong>Technical requirements</strong> for Open PaaS' foundations were clear.
+	
+* Support cloud deployments (public, private and hybrid clouds)
+* Ensure developers could choose any solution they would (databases, servers, development languages...)
+* Provide elasticity mechanisms (automatic load-adaptation...)
+* Be fully open-source (as all the solutions used by Linagora).
+
+The real business value for the company was clearly about the applications to run in the cloud.  
+At the time (end of 2012), some cloud solutions were emerging, but none match all the criteria above.
+Contacts with [Université Joseph Fourier](https://www.ujf-grenoble.fr/) (in Grenoble, France), and in particular with
+the Computer Science and Software Engineering department, led to team up and prototype such a solution. This is how
+Roboconf started.
+
+
 ## Use Cases
 
-The following are use cases Roboconf has illustrated through samples.  
-The sources for these samples will be soon available on GitHub.
+General use cases are listed [here](/slides/general/roboconf-use-cases.html).  
+The following list includes cases we illustrated through samples, demos or for real requirements.
 
 * **Legacy LAMP**: a classic web application based on an Apache load balancer, a web application deployed on Tomcat and MySQL as the database.  
 The interest is to see how it is easy to add and remove new Tomcat servers. Tomcat instances are configured right after deployment. The connection
