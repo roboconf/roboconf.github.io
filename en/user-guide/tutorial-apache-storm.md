@@ -33,7 +33,7 @@ In this tutorial, we will use Roboconf to deploy a storm cluster on multiple VMs
 <img src="/resources/img/tutorial-storm-multivm.png" alt="Apache storm on multiple VMs" class="gs" />
 
 
-## Roboconf graph for storm clusters
+## Roboconf graph for Storm clusters
 
 Let's make it simple: we will consider 2 kinds of nodes, called **Nimbus** (the master node) and **Worker** (a slave node).
 
@@ -60,13 +60,13 @@ In this tutorial, we decided to design the Roboconf graph as follows:
 <img src="/resources/img/tutorial-storm-model.png" alt="Roboconf graph for Apache Storm" class="gs" />
 
 
-## Install prerequisites
+## Prerequisites
 
 Install the [messaging server (RabbitMQ)](installing-the-messaging-server.html) and the [Roboconf DM](installing-the-deployment-manager.html).  
 You may have already done this in the [getting started with Roboconf](tutorial-getting-started-with-roboconf.html).
 
 Docker will also be necessary (unless you reconfigure the tutorial to use another IaaS).  
-For details, see [Roboconf tips for Docker installation](docker-installation-tips.html).
+For details, see [Roboconf tips for Docker](docker-tips.html).
 
 Then, start the DM, and make it aware of Docker: open the DM's interactive mode and type in...
 

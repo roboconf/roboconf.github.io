@@ -29,8 +29,8 @@ for the VM. Use Ubuntu Server as the base image. Use the **small** flavor (other
 > As a reminder, the command to use is **ssh -i /path/to/your.pem ubuntu@ip-address**
 
 Then, you have 2 options.  
-Either you install everything [by hand](/en/user-guide/installing-an-agent.html), or you use
-[a script](/en/user-guide/installing-everything.html) to upload, install and configure the agent.
+Either you install everything [by hand](/en/user-guide/installing-an-agent.html), or you use a
+[Debian package](installing-roboconf.html) to install and configure the agent.
 
 Once the agent is installed, your VM should be operational.  
 If you restart it, the agent will boot with the system. Then, go to Amazon's web console and create a snapshot image of your VM.

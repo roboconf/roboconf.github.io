@@ -13,8 +13,8 @@ Roboconf may create and manage docker containers, that run Roboconf agents (just
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.3
-bundle:install mvn:net.roboconf/roboconf-target-docker/0.3
+# Here in version 0.4
+bundle:install mvn:net.roboconf/roboconf-target-docker/0.4
 bundle:start <bundle-id>
 ```
 
@@ -26,7 +26,7 @@ Just copy / paste and edit.
 target.id = docker
 
 docker.endpoint = http://localhost:4243
-docker.image = 0f3087570887
+docker.image = 0f3087570887fdgf14dfg1dd4f
 docker.user = guest
 docker.password = guest
 ```
@@ -37,23 +37,61 @@ Here is a complete description of the parameters for Docker.
 | --- | --- | --- | --- |
 | target.id | Determines the target handler to use. | none, must be "docker" | yes |
 | docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). | http://localhost:4243 | no |
-| docker.image | The ID or tag (name) of the docker image used as a template for the VM (as shown by "docker images", for example). If the image is not found, Roboconf will try to generate one, using "\<docker.image\>:\<docker.image\>" as its tag: if so, the "docker.agent.package" property is required so that Roboconf knows where to find the Roboconf agent to install on the generated image. | "generated.by.roboconf" | no |
+| docker.image | The ID or tag (name) of the docker image used as a template for the VM (as shown by "docker images", for example). If the image is not found, Roboconf will try to generate one, using "\<docker.image\>:\<docker.image\>" as its tag: if so, the **docker.agent.package** property is required so that Roboconf knows where to find the Roboconf agent to install on the generated image. If it is an image ID, it must be the full ID, that can be retrieved with **docker images --no-trunc**. | "generated.by.roboconf" | no |
 | docker.user | The name of the user to connect. | none | no |
 | docker.password | The password of the user to connect. | none | no |
 | docker.email | The email of the user to connect. | none | no |
 | docker.version | The Docker version (for API compatibility). | none | no |
 | docker.agent.package | If you want this extension to generate a Docker image for you, this parameter is an **URL** that points to the ZIP or TAR.GZ file of a Roboconf agent distribution. The generated image is based on **Ubuntu**. | none | no |
 | docker.agent.jre-packages | If you want this extension to generate a Docker image for you, this parameter indicates the JRE to install (as a system package), as well as other optional packages, separated by spaces. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | openjdk-7-jre-headless | no |
+| docker.base.image | If Roboconf generates an image for you, this property is used to determine the base image to use. | ubuntu | no |
 | docker.command.line | A command line to pass to the Docker container when it is created. | /usr/local/roboconf-agent/start.sh | no |
-| docker.command.use | A boolean to indicate whether Roboconf should pass a command when it creates a new Docker container. Set it to **false** if you added a **CMD** instruction in your Dockerfile. | /usr/local/roboconf-agent/start.sh | true |
+| docker.command.use | A boolean to indicate whether Roboconf should pass a command when it creates a new Docker container. Set it to **false** if you added a **CMD** instruction in your Dockerfile. | true | no |
+| docker.command.options | A string to pass additional options to Docker run. | (the empty string) | no |
 
-At least one of **docker.image** or **docker.agent.package** must be specified.
+At least one of **docker.image** or **docker.agent.package** must be specified.  
+
+> As a good practice, **docker.image** should always be specified.  
+> Even when Roboconf generates the image.
+
 
 ## Docker Configuration
 
-See [Roboconf docker installation tips](docker-installation-tips.html) for details about installing and preparing docker for Roboconf.
+See [Roboconf's Docker tips](docker-tips.html) for details about installing and preparing docker for Roboconf.  
+You will also find a reminder about basic Docker commands.
 
-## Prepare your own Docker image
+
+## Docker RUN with Roboconf
+
+This section clarified the way Roboconf creates Docker containers.  
+Here is what it executes, if **docker.command.use** is set to true (or not set at all).
+
+```
+docker run <docker.image> <docker.command.options> <docker.command.line>
+```
+
+With default values, and assuming **id** is the ID of an image tagged with **generated-by-roboconf**, then
+the previous command is equivalent to...
+
+```
+docker run id /usr/local/roboconf-agent/start.sh
+```
+
+**docker.command.options** can be used to change privileges.
+As an example, if set to `--cap-add SYS_PTRACE`, then Roboconf will execute...  
+
+```
+docker run --cap-add SYS_PTRACE id /usr/local/roboconf-agent/start.sh
+```
+
+Such permissions are sometimes necessary.  
+See these discussions on Github for additional information.
+
+* [How to use init script](https://github.com/roboconf/roboconf.github.io/issues/45)
+* [Add a property to pass options to run Docker containers](https://github.com/roboconf/roboconf-platform/issues/335)  
+
+
+## Preparing your own Docker image
 
 > This is NOT necessary if the image is generated by Roboconf,  
 > i.e. if **docker.agent.package** was specified in the **target.properties** file.
@@ -81,7 +119,7 @@ ln -s roboconf-karaf-dist-agent/ roboconf-agent
 Now, you have to add a **start.sh** executable script in the **/usr/local/roboconf-agent** directory.  
 Set the following content (the script is mainly used to complete the agent setup at startup time).
 
-```properties
+```bash
 #!/bin/bash"
 # Startup script for a Roboconf agent on Docker
 # Find the file containing the messaging configuration
@@ -115,42 +153,3 @@ Outside docker, keep track of its ID, that will be useful to build the image.
 
 Now, your image is created.  
 Retrieve its image ID using **docker images**, and use it as *docker.image* in the Roboconf configuration (**target.properties**).
-
-
-## Some Docker Tips
-
-Here is a reminder of some Docker commands.
-
-To list docker images:  
-**docker images**
-
-To remove a docker image:  
-**docker rmi \<image-ID\>**
-
-To run interactively a docker image (thus launching a container):  
-**docker run -i -v /tmp:/roboconf -t \<image-ID\> /bin/bash**
-
-Note: the -v option is used there to share the local "/tmp" as "/roboconf" in the container, which is useful to exchange files.
-
-To list running docker containers:  
-**docker ps** (or, to list them all, "docker ps -a")
-
-to attach a shell script to a running container:  
-**docker exec -ti \<container-ID\> /bin/bash**
-
-To remove a docker container:  
-**docker rm \<container-ID\>**
-
-To remove all exited containers:  
-**docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm**
-
-## Note to install latest Docker (Ubuntu)
-
-As of March 3, 2015 (docker 1.5.x)...
-
-```tcl
-$ wget -qO- https://get.docker.io/gpg | sudo apt-key add -
-$ sudo sh -c "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
-$ sudo apt-get update
-$ sudo apt-get install lxc-docker
-```

@@ -25,27 +25,47 @@ function formatRoboconfSnippets() {
   $( '.language-roboconf' ).each( function( index ) {
     var text = $( this ).text().trim();
     
-    // = <span class="value">something</span>
-    text = text.replace( /=(\s*)([^,;]+)/ig, '=$1<span class="value">$2</span>' );
+    var result = '';
+    text.split( '\n' ).forEach( function( line, index, arr ) {
+      var pos = line.indexOf( '#' );
+      var before, after;
+      
+      // Split the line
+      if( pos >= 0 ) {
+        before = line.substring( 0, pos );
+        after = line.substring( pos );
+      } else {
+        before = line;
+        after = '';
+      }
+      
+      // Make replacements
+      // <span class="comment"># a comment</span>
+      after = after.replace( /(#[^\n]*)/ig, '<span class="comment">$1</span>' );
+      
+      // = <span class="value">something</span>
+      before = before.replace( /=(\s*)([^,;]+)/ig, '=$1<span class="value">$2</span>' );
+      
+      // <span class="property">instance of</span>
+      before = before.replace( /\b(instance of)\b/ig, '<span class="property">$1</span>' );
+      
+      // <span class="property">facet</span>
+      before = before.replace( /\b(facet)\b/ig, '<span class="property">$1</span>' );
+      
+      // <span class="property">import</span>
+      before = before.replace( /\b(import)\b/ig, '<span class="property">$1</span>' );
+      
+      // <span class="property">name:</span>
+      before = before.replace( /\b([^:\n]+:)/ig, '<span class="property">$1</span>' );
+      
+      // <span class="value">(optional)</span>
+      before = before.replace( /\(([^)]*)\)/ig, '(<span class="value">$1</span>)' );
+      
+      // Update the result
+      result += before + after + '\n';
+    });
     
-    // <span class="comment"># a comment</span>
-    text = text.replace( /(#[^\n]*)/ig, '<span class="comment">$1</span>' );
-    
-    // <span class="property">instance of</span>
-    text = text.replace( /\b(instance of)\b/ig, '<span class="property">$1</span>' );
-    
-    // <span class="property">facet</span>
-    text = text.replace( /([^ ])(facet) /ig, '$1<span class="property">$2</span> ' );
-    
-    // <span class="property">import</span>
-    text = text.replace( /\b(import)\b/ig, '<span class="property">$1</span>' );
-    
-    // <span class="property">name:</span>
-    text = text.replace( /\b([^:\n]+:)/ig, '<span class="property">$1</span>' );
-    
-    // <span class="value">(optional)</span>
-    text = text.replace( /\(([^)]*)\)/ig, '(<span class="value">$1</span>)' );
-    $( this ).html( text );
+    $( this ).html( result.trim());
   });
 }
 

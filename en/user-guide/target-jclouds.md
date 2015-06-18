@@ -12,9 +12,9 @@ For the moment, it only supports the creation of *compute* VMs.
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.3
+# Here in version 0.4
 feature:install jclouds-for-roboconf
-bundle:install mvn:net.roboconf/roboconf-target-jclouds/0.3
+bundle:install mvn:net.roboconf/roboconf-target-jclouds/0.4
 bundle:start <bundle-id>
 ```
 

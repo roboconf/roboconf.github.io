@@ -33,7 +33,7 @@ Pour le type de VM, prenez **small** (sans quoi ce sera facturé).
 
 A partir de là, 2 options s'offrent à vous.  
 Soit vous installez [tout à la main](/en/user-guide/installing-an-agent.html), soit vous 
-utilisez [un script](/en/user-guide/installing-everything.html) qui va uploader, installer et
+utilisez un [paquet Debian](/en/user-guide/installing-roboconf.html) qui va installer et
 configurer l'agent pour vous.
 
 A l'issue de l'installation, votre VM devrait être opérationnelle.  

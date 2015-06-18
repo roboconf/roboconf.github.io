@@ -321,6 +321,7 @@ span.roadmap-in-progress {
 .language-properties span.c,
 .language-java span.c,
 .language-puppet span.c,
+.language-bash span.c,
 .language-xml span.nt,
 .language-json span.nt,
 .language-html span.s {
@@ -330,9 +331,9 @@ span.roadmap-in-progress {
 .language-properties span.na,
 .language-puppet span.na,
 .language-html span.nt,
-.language-tcl,
 .language-java span.nf,
 .language-roboconf span.value,
+.language-bash span.nv,
 .language-bash span.nb {
 	font-weight: bold;
 }
@@ -352,6 +353,7 @@ span.roadmap-in-progress {
 .language-http span.na,
 .language-http span.kr,
 .language-tcl span.nv,
+.language-tcl span.nb,
 .language-roboconf span.property {
 	color: #b23e4b;
 	font-weight: bold;

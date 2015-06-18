@@ -25,4 +25,4 @@ This page lists all the deployment targets Roboconf currently supports.
 
 ## Miscellaneous
 
-* [Docker installation tips for Roboconf](docker-installation-tips.html)
+* [Docker tips](docker-tips.html)

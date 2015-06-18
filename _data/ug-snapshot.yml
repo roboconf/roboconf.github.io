@@ -53,8 +53,8 @@ reusable-slides:
   en: user-guide/reusable-slides
   fr: guide-utilisateur/presentations-reutilisables
   
-docker-installation-tips.html:
-  en: user-guide/docker-installation-tips
+docker-tips.html:
+  en: user-guide/docker-tips
   
 autonomic-management-with-roboconf:
   en: user-guide/autonomic-management-with-roboconf

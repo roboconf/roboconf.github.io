@@ -13,7 +13,7 @@ Roboconf has a target implementation to run agents in memory.
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.3 (with its dependencies)
+# Here in version 0.4 (with its dependencies)
 bundle:install mvn:net.roboconf/roboconf-plugin-api/0.4
 bundle:install mvn:net.roboconf/roboconf-agent/0.4
 bundle:install mvn:net.roboconf/roboconf-target-in-memory/0.4
