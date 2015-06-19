@@ -44,7 +44,7 @@ Here is a complete description of the parameters for Docker.
 | docker.version | The Docker version (for API compatibility). | none | no |
 | docker.agent.package | If you want this extension to generate a Docker image for you, this parameter is an **URL** that points to the ZIP or TAR.GZ file of a Roboconf agent distribution. The generated image is based on **Ubuntu**. | none | no |
 | docker.agent.jre-packages | If you want this extension to generate a Docker image for you, this parameter indicates the JRE to install (as a system package), as well as other optional packages, separated by spaces. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | openjdk-7-jre-headless | no |
-| docker.base.image | If Roboconf generates an image for you, this property is used to determine the base image to use. | ubuntu | no |
+| docker.base.image | If Roboconf generates an image for you, this property is used to determine the base image to use. The generated Dockerfile will begin with **FROM** *docker.base.image*... It is your responsibility to verify this image already exists (either you created it, or you pulled it from Docker's hub). | ubuntu | no |
 | docker.command.line | A command line to pass to the Docker container when it is created. | /usr/local/roboconf-agent/start.sh | no |
 | docker.command.use | A boolean to indicate whether Roboconf should pass a command when it creates a new Docker container. Set it to **false** if you added a **CMD** instruction in your Dockerfile. | true | no |
 | docker.command.options | A string to pass additional options to Docker run. | (the empty string) | no |
