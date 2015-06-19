@@ -78,7 +78,7 @@ The Roboconf deployment archive is the zip file located in the target/ directory
 ### Project organization
 
 ```
-model
+src/main/model
 ├── descriptor
 │   └── application.properties
 ├── graph (The application graph is what Roboconf deploys).
@@ -134,4 +134,16 @@ Then, start the DM, and make it aware of Docker: open the DM's interactive mode 
 bundle:install mvn:net.roboconf/roboconf-target-docker/0.4
 bundle:start <bundle-id>
 ```
+
+Now, you can chech that everything is up and running by connecting to the Roboconf web admin:
+
+```
+http://localhost:8181/roboconf-web-administration/index.html
+```
+
+## Deploy the Storm tutorial with Roboconf
+
+* Load the zip archive you build in storm-bash/target, as a new application.
+* Browse the instances to deploy, and deploy/start VMs and underlying components
+
 
