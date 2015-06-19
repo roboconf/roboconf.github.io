@@ -59,7 +59,7 @@ In this tutorial, we decided to design the Roboconf graph as follows:
 
 <img src="/resources/img/tutorial-storm-model.png" alt="Roboconf graph for Apache Storm" class="gs" />
 
-### Download and build the tutorial
+## Download and build the tutorial
 
 The roboconf examples can be download from Github:
 
@@ -81,40 +81,40 @@ The Roboconf deployment archive is the zip file located in the target/ directory
 model
 ├── descriptor
 │   └── application.properties
-├── graph
+├── graph (The application graph is what Roboconf deploys).
 │   ├── graph.graph
-│   ├── storm_nimbus
+│   ├── storm_platform (The Apache storm software platform, without configuration)
 │   │   ├── files
+│   │   └── scripts (Lifecycle scripts, to be called by Roboconf).
+│   │       ├── deploy.sh
+│   │       ├── start.sh
+│   │       ├── stop.sh
+│   │       ├── undeploy.sh
+│   │       └── update.sh
+│   ├── storm_nimbus (The Storm master node, to deploy on storm_platform: brings ZooKeeper and StormUI).
+│   │   ├── files (Configuration files for Storm and zookeeper).
 │   │   │   ├── nimbus.cfg
 │   │   │   ├── storm.yaml
 │   │   │   └── zoo.cfg
-│   │   └── scripts
+│   │   └── scripts (Lifecycle scripts, to be called by Roboconf).
 │   │       ├── deploy.sh
 │   │       ├── start.sh
 │   │       ├── stop.sh
 │   │       ├── undeploy.sh
 │   │       └── update.sh
-│   ├── storm_platform
-│   │   ├── files
-│   │   └── scripts
-│   │       ├── deploy.sh
-│   │       ├── start.sh
-│   │       ├── stop.sh
-│   │       ├── undeploy.sh
-│   │       └── update.sh
-│   ├── storm_worker
-│   │   ├── files
+│   ├── storm_worker (A Storm slave node, to deploy on storm_platform: mostly configuration).
+│   │   ├── files (Configuration files for Storm).
 │   │   │   ├── storm.yaml
 │   │   │   └── worker.cfg
-│   │   └── scripts
+│   │   └── scripts (Lifecycle scripts, to be called by Roboconf).
 │   │       ├── deploy.sh
 │   │       ├── start.sh
 │   │       ├── stop.sh
 │   │       ├── undeploy.sh
 │   │       └── update.sh
-│   └── VM
+│   └── VM (The VM where to deploy Storm: here, configured for Docker).
 │       └── target.properties
-└── instances
+└── instances (An initial set of instances, ready to deploy with Roboconf).
     └── initial.instances
 ```
 
