@@ -59,6 +59,65 @@ In this tutorial, we decided to design the Roboconf graph as follows:
 
 <img src="/resources/img/tutorial-storm-model.png" alt="Roboconf graph for Apache Storm" class="gs" />
 
+### Download and build the tutorial
+
+The roboconf examples can be download from Github:
+
+```
+git clone https://github.com/roboconf/roboconf-examples.git
+```
+
+Then, go in the roboconf-examples/storm-bash directory: the tutorial is there. To build it using maven:
+
+```
+mvn clean install
+```
+
+The Roboconf deployment archive is the zip file located in the target/ directory (eg. storm-bash-0.2.zip).
+
+### Project organization
+
+```
+model
+├── descriptor
+│   └── application.properties
+├── graph
+│   ├── graph.graph
+│   ├── storm_nimbus
+│   │   ├── files
+│   │   │   ├── nimbus.cfg
+│   │   │   ├── storm.yaml
+│   │   │   └── zoo.cfg
+│   │   └── scripts
+│   │       ├── deploy.sh
+│   │       ├── start.sh
+│   │       ├── stop.sh
+│   │       ├── undeploy.sh
+│   │       └── update.sh
+│   ├── storm_platform
+│   │   ├── files
+│   │   └── scripts
+│   │       ├── deploy.sh
+│   │       ├── start.sh
+│   │       ├── stop.sh
+│   │       ├── undeploy.sh
+│   │       └── update.sh
+│   ├── storm_worker
+│   │   ├── files
+│   │   │   ├── storm.yaml
+│   │   │   └── worker.cfg
+│   │   └── scripts
+│   │       ├── deploy.sh
+│   │       ├── start.sh
+│   │       ├── stop.sh
+│   │       ├── undeploy.sh
+│   │       └── update.sh
+│   └── VM
+│       └── target.properties
+└── instances
+    └── initial.instances
+```
+
 
 ## Prerequisites
 
@@ -75,3 +134,4 @@ Then, start the DM, and make it aware of Docker: open the DM's interactive mode 
 bundle:install mvn:net.roboconf/roboconf-target-docker/0.4
 bundle:start <bundle-id>
 ```
+
