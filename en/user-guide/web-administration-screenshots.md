@@ -9,6 +9,9 @@ menus: [ "users", "user-guide" ]
 This page shows screenshots of [Roboconf's Web Administration](web-administration.html).  
 It involves the deployment of one of the initial use cases, the one about an Enterprise Social Network.
 
+> These screenshots are not exactly up-to-date.  
+> However, they give a global overview of what this web console looks like.
+
 This example involves the deployment of a load balancer (HA Proxy), a Node JS application (called RSE),
 Mongo DB (for storage) and Redis (for asynchronous communication between the instances of RSE).
 

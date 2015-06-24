@@ -59,21 +59,53 @@ In this tutorial, we decided to design the Roboconf graph as follows:
 
 <img src="/resources/img/tutorial-storm-model.png" alt="Roboconf graph for Apache Storm" class="gs" />
 
+Which is equivalent to this graph definition:
+
+<pre><code class="language-roboconf">
+# The VM
+VM {
+	installer: target;
+	children: storm_platform;
+}
+
+# Storm base platform
+storm_platform {
+	installer: script;
+	children: storm_nimbus, storm_worker;
+}
+
+# Storm nodes
+
+# Storm master node (Nimbus, along with zookeeper + stormUI)
+storm_nimbus {
+	installer: script;
+	exports: ip;
+}
+
+# Storm worker (slave) node
+storm_worker {
+	installer: script;
+	imports: storm_nimbus.ip;
+}
+</code></pre>
+
+
 ## Download and build the tutorial
 
 The roboconf examples can be download from Github:
 
-```
+```tcl
 git clone https://github.com/roboconf/roboconf-examples.git
 ```
 
-Then, go in the roboconf-examples/storm-bash directory: the tutorial is there. To build it using maven:
+Then, go in the **roboconf-examples/storm-bash** directory: the tutorial's resources are there.  
+To build it using Maven:
 
-```
+```tcl
 mvn clean install
 ```
 
-The Roboconf deployment archive is the zip file located in the target/ directory (eg. storm-bash-0.2.zip).
+The Roboconf deployment archive is the ZIP file located in the **target/** directory (e.g. storm-bash-0.2.zip).
 
 ### Project organization
 

@@ -31,7 +31,7 @@ variable, if present, will be appended to it.
 ## Install prerequisites
 
 Puppet has to be installed on every target platform for deployment: on a IaaS, it should be deployed in the
-virtual machine image (eg. EC2 AMI or OpenStack snapshot) that contains the Roboconf agent.
+virtual machine image (e.g. EC2 AMI or OpenStack snapshot) that contains the Roboconf agent.
 
 > Note that old releases of puppet may not work with Roboconf: the "puppet module" command must be supported.
 
@@ -92,11 +92,17 @@ Let's have a look at what the module looks like:
 
 The puppet manifests receive the following variables:
 
-* runningState ("running" for start, "stopped" for stop, and "undef" for other operations)
-* importComponent (only upon import add/remove: name of the corresponding component)
-* importAdded (value of the new import when one is added)
-* importRemoved (value of the removed import if applicable)
-* A list of all imports to be taken into account, for each components that we depend on (eg. in the Apache example, there will be a "tomcat" variable, which is a list of all the Tomcat, and for each Tomcat, a hash with its name + the values of (ip, portAJP)).
+* **runningState** ("running" for start, "stopped" for stop, and "undef" for other operations)
+* **importDiff** contains information about an import change.
+* A list of all imports to be taken into account, based on the graph dependencies.  
+With the Apache example, there will be a *tomcat* variable, which is a list of all the Tomcat, and for each Tomcat,
+a hash with its name and the values of (ip, portAJP).
+
+**importDiff** is a complex key that wraps information about an import change.
+
+* importDiff["added"] matches the added import, if any.
+* importDiff["removed"] matches the removed import, if any.
+* importDiff["component"] matches the component name of the modified import.
 
 In our Apache example, the module may look like the following:
 
@@ -111,7 +117,7 @@ In our Apache example, the module may look like the following:
 And the init.pp manifest look like this:
 
 ```puppet
-class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
+class roboconf_apache_module($runningState = undef, $importDiff = undef, $tomcat = undef) {
 
 	# 'tomcat' is an array of hashes
 	# It needs to be declared as the following:

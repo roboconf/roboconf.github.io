@@ -23,7 +23,7 @@ The script that highlights code on the web site is available at [the web site's 
 To use it, just wrap your Roboconf code snippet with HTML mark-ups.
 
 ```html
-<pre><code class="language-roboconf>
+<pre><code class="language-roboconf">
 	Your Roboconf snippet
 </code></pre>
 ```

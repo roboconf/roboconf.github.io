@@ -24,8 +24,8 @@ Here is the way this plug-in works.
 In the next lines, *action* is one of **deploy**, **start**, **update**, **stop** or **undeploy**. 
 
 * The plug-in will load **scripts/action*** (when multiple file names start with the action's name, the 1st one found will be used, so the result may be unpredictable: in such case, a warning message will be logged by Roboconf).
-* If it is not found, it will try to load **templates/action.template**
-* If it is not found, it will try to load **templates/default.template**
+* If it is not found, it will try to load **roboconf-templates/action.template**
+* If it is not found, it will try to load **roboconf-templates/default.template**
 * If it is not found, the plug-in will do nothing.
 
 Templates use [Mustache](http://mustache.github.io/) to generate a concrete script before executing it.  
@@ -36,9 +36,9 @@ All the templates can use import variables.
 These variables will be inserted by Roboconf.
 
 
-# Action script and parameters
+# Action Scripts and Parameters
 
-Parameters are passed to action scripts (eg. start.sh, stop.py, update.perl ...) using environment variables, that respect naming conventions.
+Parameters are passed to action scripts (e.g. start.sh, stop.py, update.perl ...) using environment variables, that respect naming conventions.
 
 
 ## Global environment-related variables
@@ -83,4 +83,68 @@ done
 | ROBOCONF\_UPDATE\_STATUS | The status of the instance that triggered the update (e.g. DEPLOYED\_STOPPED, DEPLOYED\_STARTED). |
 | ROBOCONF\_IMPORT\_CHANGED\_COMPONENT | Name of the component for the changed import. |
 | ROBOCONF\_IMPORT\_CHANGED\_INSTANCE\_PATH | Path of the instance that exports the changed import. |
-| ROBOCONF\_IMPORT\_CHANGED\_< ImportName > | The value of every imported variable that changed (e.g. if an exported *ipAddress* changed, the "ROBOCONF\_IMPORT\_CHANGED_ipAddress" variable should contain its new value). | 
+| ROBOCONF\_IMPORT\_CHANGED\_< ImportName > | The value of every imported variable that changed (e.g. if an exported *ipAddress* changed, the "ROBOCONF\_IMPORT\_CHANGED_ipAddress" variable should contain its new value). |
+
+<br />
+
+# Scripts Templating
+
+Rather than writing scripts that check variables, it is also possible to generate scripts from a template.  
+This can be easier in some cases, when you want the executed script to remain as simple as possible.  
+
+Templates are located under the **roboconf-templates** directory.  
+They should have a **.template** extension. [Mustache](http://mustache.github.io/) is used as the templating engine.
+
+For the moment, only imports variables are injected in the generation context.  
+Here is a sample template:
+
+```
+#!/bin/bash
+#
+# Instance imports...
+# Or what information an instance has about its dependencies.
+# 
+{% raw %}
+{{#importLists}}
+echo "Component: {{prefix}}"
+ 
+{{#imports}}
+	{{#exportedVars}}
+echo "Variable: {{name}} -> {{value}}"
+	{{/exportedVars}} 
+{{/imports}}
+	
+echo ""
+{{/importLists}}
+{% endraw %}
+```
+
+Assuming the instance to start has the following imports...
+
+* **mongo-db** => {ip=192.168.1.18, port=17501}, {ip=192.168.1.93, port=17501}
+* **rabbit-mq** => {ip=192.168.0.17, topic=main}
+
+... then it means it knows 2 instances of MongoDB and one of RabbitMQ.  
+The previous template would then result in...
+
+```bash
+#!/bin/bash
+#
+# Instance imports...
+# Or what information an instance has about its dependencies.
+# 
+
+echo "Component: mongo-db"
+
+echo "Variable: ip -> 192.168.1.18"
+echo "Variable: port -> 17501"
+echo "Variable: ip -> 192.168.1.93"
+echo "Variable: port -> 17501"
+
+echo "Component: rabbit-mq"
+
+echo "Variable: ip -> 192.168.0.17"
+echo "Variable: topic -> main"
+	
+echo ""
+```
