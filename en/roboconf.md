@@ -34,21 +34,22 @@ as well as a "local" deployment plug-in for on-premise hosts).
 
 Roboconf was created to be the foundations of [Open PaaS](http://open-paas.org/).  
 Open PaaS is an Enterprise Social Network, i.e. a platform dedicated to collaborations
-within organizations (messaging, groups and projects management, video conference...).
-
-The project is led by [Linagora](http://linagora.com), which is also implied in Roboconf.  
+within organizations (messaging, groups and projects management, video conference...). The project 
+is led by [Linagora](http://linagora.com), which also works on Roboconf in collaboration with the *[Laboratoire Informatique de Grenoble](https://www.liglab.fr/)*.
+This entity is part of the Research department in Computer Science and Software Engineering of [Université Joseph Fourier](https://www.ujf-grenoble.fr/),
+in Grenoble, France.
+  
 <strong>Technical requirements</strong> for Open PaaS' foundations were clear.
 	
 * Support cloud deployments (public, private and hybrid clouds)
 * Ensure developers could choose any solution they would (databases, servers, development languages...)
 * Provide elasticity mechanisms (automatic load-adaptation...)
-* Be fully open-source (as all the solutions used by Linagora).
+* Be fully open-source (as all the solutions used and developed by Linagora).
 
 The real business value for the company was clearly about the applications to run in the cloud.  
-At the time (end of 2012), some cloud solutions were emerging, but none match all the criteria above.
-Contacts with [Université Joseph Fourier](https://www.ujf-grenoble.fr/) (in Grenoble, France), and in particular with
-the Computer Science and Software Engineering department, led to team up and prototype such a solution. This is how
-Roboconf started.
+At the time (end of 2012), some cloud solutions were emerging, but none of them matched all the criteria above.
+Contacts between [Linagora](http://linagora.com) and [Université Joseph Fourier](https://www.ujf-grenoble.fr/) led to
+a partnership to prototype such a solution with a focus on industrial applications. Roboconf was born...
 
 
 ## Use Cases

@@ -39,9 +39,10 @@ même pour de l'embarqué).
 
 Roboconf a été créé pour être le socle d'[Open PaaS](http://open-paas.org/).  
 Open PaaS est un réseau social d'entreprise, c'est à dire une plate-forme dédiée à la collaboration au sein
-d'organisations (messagerie, gestion de groupes et de projets, vidéo conférence...).
+d'organisations (messagerie, gestion de groupes et de projets, vidéo conférence...). Le projet est mené par 
+[Linagora](http://linagora.com), qui développe également Roboconf en partenariat avec le 
+[Laboratoire Informatique de Grenoble](https://www.liglab.fr/), rattaché à l'[Université Joseph Fourier](https://www.ujf-grenoble.fr/).
 
-Le projet est mené par [Linagora](http://linagora.com), qui contribue aussi au projet Roboconf.  
 Les <strong>impératifs techniques</strong> pour le socle d'Open PaaS étaient clairs.
 	
 * Supporter des déploiements dans le cloud (clouds publics, privés et hybrides)
@@ -51,8 +52,8 @@ Les <strong>impératifs techniques</strong> pour le socle d'Open PaaS étaient c
 
 La plus-value de la plate-forme réside clairement dans les applications au-dessus, et non dans le socle.  
 A l'époque (fin 2012), certaines solutions *cloud* commençaient à émerger, mais aucune ne satisfaisait tous les critères décris ci-dessus.
-Des contacts avec l'[Université Joseph Fourier](https://www.ujf-grenoble.fr/) (à Grenoble), et en particulier avec le [Laboratoire Informatique
-de Grenoble](https://www.liglab.fr/), aboutirent à la création d'une équipe commune pour protyper une telle solution. Ainsi est né Roboconf...
+Des contacts établis entre [Linagora](http://linagora.com) et le [Laboratoire Informatique de Grenoble](https://www.liglab.fr/) aboutirent à un partenariat industriel
+avec l'[Université Joseph Fourier](https://www.ujf-grenoble.fr/) et à la création d'une équipe commune pour protyper une telle solution. Ainsi est né Roboconf...
  
 
 ## Cas d'Usage
