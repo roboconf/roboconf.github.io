@@ -68,4 +68,8 @@ dev-guide:
   
 new-and-noteworthy-0.3:
   en: new/new-and-noteworthy-0.3
-  fr: nouveautes/nouveautes-principales-0.3
+  fr: nouveautes/principales-nouveautes-0.3
+  
+new-and-noteworthy-0.4:
+  en: new/new-and-noteworthy-0.4
+  fr: nouveautes/principales-nouveautes-0.4

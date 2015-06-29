@@ -24,6 +24,43 @@ La version en cours de développement est la **0.4-SNAPSHOT**.
 		<th>Fichiers</th>
 		<th>Liens</th>
 	</tr>
+	
+	<!-- Version 0.4 -->
+	<!--
+	<tr>
+		<td>0.4</td>
+		<td>30 Juin 2015</td>
+		<td>
+			Deployment Manager: 
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.4/roboconf-karaf-dist-dm-0.4.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.4/roboconf-karaf-dist-dm-0.4.zip">Zip</a> (~ 30 MB)
+			<br />
+			Agent: 
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.4/roboconf-karaf-dist-agent-0.4.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.4/roboconf-karaf-dist-agent-0.4.zip">Zip</a> (~ 20 MB)
+
+			<br /><br />
+			<a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.4/">Site de mise à jour</a> pour Eclipse
+		</td>
+		<td>
+			<span class="octicon octicon-telescope"></span>
+			<a href="nouveautes/principales-nouveautes-0.4.html">Nouveautés</a>
+			&nbsp;
+			<span class="octicon octicon-person"></span>
+			<a href="guide-utilisateur-0.4/guide-utilisateur.html">Guide Utilisateur</a>
+			
+			<br /><br />
+			<span class="octicon octicon-mark-github"></span> Tickets: 
+			
+			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.4">Plat-forme</a>
+			-
+			<a href="https://github.com/roboconf/roboconf-web-administration/issues?q=milestone%3A0.4">Administration web</a>
+			-
+			<a href="https://github.com/roboconf/roboconf-eclipse/issues?q=milestone%3A0.4">Eclipse</a>
+			&nbsp;
+		</td>
+	</tr>
+	-->
 
 	<!-- Version 0.3 -->
 	<tr>
@@ -46,13 +83,13 @@ La version en cours de développement est la **0.4-SNAPSHOT**.
 			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.3">Entrées GitHub</a>
 			&nbsp;
 			<span class="octicon octicon-telescope"></span>
-			<a href="nouveautes/nouveautes-principales-0.3.html">Entrées GitHub</a>
+			<a href="nouveautes/principales-nouveautes-0.3.html">Nouveautés</a>
 			&nbsp;
 			<span class="octicon octicon-megaphone"></span>
 			<a href="liste-des-changements.html">Changements</a> 
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="/en/user-guide-0.3/user-guide.html">Guide Utilisateur</a>
+			<a href="guide-utilisateur-0.3/guide-utilisateur.html">Guide Utilisateur</a>
 		</td>
 	</tr>
 
@@ -80,7 +117,7 @@ La version en cours de développement est la **0.4-SNAPSHOT**.
 			<a href="liste-des-changements.html">Changements</a> 
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="/en/user-guide-0.2/user-guide.html">Guide Utilisateur</a>
+			<a href="guide-utilisateur-0.2/guide-utilisateur.html">Guide Utilisateur</a>
 		</td>
 	</tr>
 
@@ -101,7 +138,7 @@ La version en cours de développement est la **0.4-SNAPSHOT**.
 			<a href="liste-des-changements.html">Changements</a> 
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="/en/user-guide-0.1/user-guide.html">Guide Utilisateur</a>
+			<a href="guide-utilisateur-0.1/guide-utilisateur.html">Guide Utilisateur</a>
 		</td>
 	</tr>
 </table>

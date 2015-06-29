@@ -24,6 +24,43 @@ The current development version is **0.4-SNAPSHOT**.
 		<th>Files</th>
 		<th>Links</th>
 	</tr>
+	
+	<!-- Version 0.4 -->
+	<!--
+	<tr>
+		<td>0.4</td>
+		<td>June 30<sup>th</sup>, 2015</td>
+		<td>
+			Deployment Manager: 
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.4/roboconf-karaf-dist-dm-0.4.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.4/roboconf-karaf-dist-dm-0.4.zip">Zip</a> (~ 30 MB)
+			<br />
+			Agent: 
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.4/roboconf-karaf-dist-agent-0.4.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.4/roboconf-karaf-dist-agent-0.4.zip">Zip</a> (~ 20 MB)
+
+			<br /><br />
+			Eclipse <a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.4/">update site</a>
+		</td>
+		<td>
+			<span class="octicon octicon-telescope"></span>
+			<a href="new/new-and-noteworthy-0.4.html">New &amp; Noteworthy</a>
+			&nbsp;
+			<span class="octicon octicon-person"></span>
+			<a href="user-guide-0.4/user-guide.html">User Guide</a>
+			
+			<br /><br />
+			<span class="octicon octicon-mark-github"></span> Issues: 
+			
+			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.4">Platform</a>
+			-
+			<a href="https://github.com/roboconf/roboconf-web-administration/issues?q=milestone%3A0.4">Web administration</a>
+			-
+			<a href="https://github.com/roboconf/roboconf-eclipse/issues?q=milestone%3A0.4">Eclipse</a>
+			&nbsp;
+		</td>
+	</tr>
+	-->
 
 	<!-- Version 0.3 -->
 	<tr>
