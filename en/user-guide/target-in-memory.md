@@ -14,10 +14,9 @@ To install it, open the DM's interactive mode and type in...
 
 ```properties
 # Here in version 0.4 (with its dependencies)
-bundle:install mvn:net.roboconf/roboconf-plugin-api/0.4
-bundle:install mvn:net.roboconf/roboconf-agent/0.4
-bundle:install mvn:net.roboconf/roboconf-target-in-memory/0.4
-bundle:start <bundle-id1> <bundle-id2> <bundle-id3>
+bundle:install --start mvn:net.roboconf/roboconf-plugin-api/0.4
+bundle:install --start mvn:net.roboconf/roboconf-agent/0.4
+bundle:install --start mvn:net.roboconf/roboconf-target-in-memory/0.4
 ```
 
 The in-memory target acts as a simulation mode.  

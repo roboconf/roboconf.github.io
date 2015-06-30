@@ -13,8 +13,7 @@ To install it, open the DM's interactive mode and type in...
 
 ```properties
 # Here in version 0.4
-bundle:install mvn:net.roboconf/roboconf-target-iaas-vmware/0.4
-bundle:start <bundle-id>
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-vmware/0.4
 ```
 
 > VMWare support depends on your version.  

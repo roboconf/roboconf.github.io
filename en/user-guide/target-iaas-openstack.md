@@ -14,8 +14,7 @@ To install it, open the DM's interactive mode and type in...
 ```properties
 # Here in version 0.4
 feature:install jclouds-for-roboconf
-bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/0.4
-bundle:start <bundle-id>
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.4
 ```
 
 The implementation can associate a public address to the created VM.  
