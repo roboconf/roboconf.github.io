@@ -17,6 +17,11 @@ menus: [ "users", "links" ]
 * Dépôt Maven pour les *releases* sur [Maven Central](http://repo1.maven.org/maven2/net/roboconf/)
 * Dépôts sur [Bintray](https://bintray.com/roboconf)
 
+<!-- -->
+
+* Index pour [les sites de mise à jour](https://dl.bintray.com/roboconf/roboconf-eclipse/) Eclipse
+* [Dépôt Debian](https://dl.bintray.com/roboconf/roboconf-debian-packages/) @ Bintray
+
 ## Réseaux Sociaux
 
 * [Compte Twitter](https://twitter.com/Roboconf)

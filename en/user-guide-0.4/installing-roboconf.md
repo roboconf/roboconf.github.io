@@ -30,7 +30,7 @@ First, you need to add our Debian repository into your repo list.
 # For Ubuntu, or su if you are under Debian
 sudo -i
 
-# "jessie" is the Debian version we tested our package (~ Ubuntu 14.04).
+# "jessie" is the Debian version we tested our package on (~ Ubuntu 14.04).
 echo "deb https://dl.bintray.com/v1/content/roboconf/roboconf-debian-packages jessie main" >> /etc/apt/sources.list
 
 # Update the list of packages

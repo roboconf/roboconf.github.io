@@ -21,9 +21,9 @@ We do not release a single Maven module, but a set of coherent projects. A Git r
 A project with release scripts is available on [Github](https://github.com/roboconf/roboconf-release-scripts).  
 **Only update the conf.sh file**. Then, use the various scripts to release the Roboconf items. Release order is given in the next section.
 
-These scripts assume all the Roboconf projects have been checked out in the same directory.  
-Assuming you use *my-dir* as the Git default directory, you should have the following sub-directories:
-*my-dir/roboconf-platform*, *my-dir/roboconf-web-administration*, etc.
+These scripts will check out the project from Github in the temporary directory.  
+It is assume the release is performed under Linux (Debian systems essentially). Previous releases have been done
+with both JDK 7 and JDK 8.
 
 
 ## Projects Release
@@ -33,10 +33,14 @@ Proceed as described below.
 
 1. Update and tag **roboconf-web-administration**.
 2. Release **roboconf-platform**.
-3. Release **roboconf-eclipse-plugin**.
-4. Release **roboconf-system-installers**.
-5. Update the web site (no tag required).
-6. Update and tag **roboconf-examples** (no release required).
+
+Wait for the platform to be available on [Maven Central](http://repo1.maven.org/maven2/net/roboconf/roboconf-core/).  
+Next items can be released in any order.
+
+1. Release **roboconf-eclipse-plugin**.
+2. Release **roboconf-system-installers**.
+3. Update the web site (no tag required).
+4. Update and tag **roboconf-examples** (no release required).
 
 
 # Manual Releases
@@ -105,14 +109,14 @@ To upload a new version...
 
 1. Create a new version in the **main** package.
 2. Click to upload files.
-3. Specify the Debian platform: jessie, whizzy, etc. Ubuntu 14.014 => **jessie**
+3. Specify the Debian platform: jessie, whizzy, etc. Ubuntu 14.04 => **jessie**
 4. Specify the Debian component: generally, **main**.
 5. Specify the architecture: **i386,amd64** (no space)
 6. Select the DM's package. **Wait** before saving changes. You must see the underlined indication first!
 
 <img src="/resources/img/upload-debian-packages.png" alt="Upload Debian packages on Bintray" />
 
-Once it is done, save the changes. Then, click to upload new files in the same location 
-and proceed the same way for the agent.
+Once it is done, save the changes.  
+Then, click to upload new files in the same location and proceed the same way for the agent.
 
 Once the upload is done, **publish** your repository. That's it!

@@ -6,7 +6,7 @@ id: "projects"
 menus: [ "project", "projects" ]
 ---
 
-Cette page liste les projets qui utilisent Roboconf.
+Cette page liste les projets qui utilisent ou sont liés à Roboconf.
 
 
 ## &laquo; Open PaaS &raquo;

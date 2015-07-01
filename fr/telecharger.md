@@ -51,7 +51,7 @@ La version en cours de développement est la **0.5-SNAPSHOT**.
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Tickets: 
 			
-			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.4">Plat-forme</a>
+			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.4">Plate-forme</a>
 			-
 			<a href="https://github.com/roboconf/roboconf-web-administration/issues?q=milestone%3A0.4">Administration web</a>
 			-

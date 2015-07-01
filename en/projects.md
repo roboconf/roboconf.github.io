@@ -6,7 +6,7 @@ id: "projects"
 menus: [ "project", "projects" ]
 ---
 
-This page lists University projects that use Roboconf. 
+This page lists other projects that use or are related to Roboconf. 
 
 
 ## &laquo; Open PaaS &raquo;

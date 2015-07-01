@@ -65,8 +65,8 @@ The menu was reduced and made contextual.
 
 ## Application Templates
 
-Upload a ZIP defining an application and instantiates as many as times as you want.  
-Applications are now all created from an uploaded skeleton (or template).
+Applications are now all created from a skeleton (or template).  
+Upload a ZIP defining an application and instantiate it as many as times as you want.
 
 <img src="/resources/img/nn-0.4-web-admin-new-application.png" alt="Create a new application from a template" class="gs" />
 
@@ -78,7 +78,7 @@ Applications and application templates are managed separately.
 
 ## Apache Storm Tutorial
 
-A tutorial was written to show how one can deploy a small Big Data stack based on [Apache Storm](https://storm.apache.org/).  
+A tutorial was written to show how one can deploy a light &laquo; Big Data &raquo; stack based on [Apache Storm](https://storm.apache.org/).  
 It explains the basis of Storm, how its deployment is managed by Roboconf and how to run it.
 
 <img src="/resources/img/nn-0.4-apache-storm-with-roboconf.png" alt="Apache Storm with Roboconf" class="gs" />
