@@ -79,8 +79,8 @@ Les applications et leurs squelettes sont gérés séparément.
 
 ## Tutoriel avec Apache Storm
 
-Un tutoriel a été rédigé pour montrer comment déployer une pile &laquo; Big Data &raquop; légère basée sur [Apache Storm](https://storm.apache.org/).  
-Il explique les fondamentaux de Storm, son déploiement avec Roboconf et comment faire tourner cet exemple.
+Un tutoriel a été rédigé pour montrer comment déployer une pile &laquo; Big Data &raquo; légère basée sur [Apache Storm](https://storm.apache.org/).  
+Il explique les fondamentaux de Storm, le déploiement avec Roboconf et comment faire tourner cet exemple.
 
 <img src="/resources/img/nn-0.4-apache-storm-with-roboconf.png" alt="Apache Storm déployé avec Roboconf" class="gs" />
 
