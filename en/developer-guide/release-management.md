@@ -91,7 +91,28 @@ Roughly, we do not use Maven to release it. We must use the Tycho approach, whic
 3. Test...
 4. Upload the generated update site on [Bintray](https://bintray.com/roboconf/roboconf-eclipse).
 5. Make sure that the uploaded archive will be unzipped (there is an option for that).
-6. Specify a path when you upload. Use the new Roboconf version (e.g. 0.2, 0.3, etc) as the upload path.
+6. Specify a path when you upload. **Use the new Roboconf version (e.g. 0.2, 0.3, etc) as the upload path.**
 7. Tag the source repository.
 8. Add the new update site's location on the web site.
 
+
+## Releasing the Debian packages
+
+The Debian packages are built with Maven and JDeb.  
+However, they are not uploaded on Maven Central. Instead, we upload them on [Bintray](https://bintray.com/roboconf/roboconf-debian-packages).
+
+To upload a new version...
+
+1. Create a new version in the **main** package.
+2. Click to upload files.
+3. Specify the Debian platform: jessie, whizzy, etc. Ubuntu 14.014 => **jessie**
+4. Specify the Debian component: generally, **main**.
+5. Specify the architecture: **i386,amd64** (no space)
+6. Select the DM's package. **Wait** before saving changes. You must see the underlined indication first!
+
+<img src="/resources/img/upload-debian-packages.png" alt="Upload Debian packages on Bintray" />
+
+Once it is done, save the changes. Then, click to upload new files in the same location 
+and proceed the same way for the agent.
+
+Once the upload is done, **publish** your repository. That's it!

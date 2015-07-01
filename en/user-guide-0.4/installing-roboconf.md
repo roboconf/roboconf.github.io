@@ -24,11 +24,40 @@ this image and pre-install a Roboconf agent on it. More details are given on [th
 
 # Debian Packages
 
-> This part will be completed as soon as Debian packages are online.
+First, you need to add our Debian repository into your repo list.
 
-To install the Deployment Manager, ...
+```bash
+# For Ubuntu, or su if you are under Debian
+sudo -i
 
-To install the agent, ...
+# "jessie" is the Debian version we tested our package (~ Ubuntu 14.04).
+echo "deb https://dl.bintray.com/v1/content/roboconf/roboconf-debian-packages jessie main" >> /etc/apt/sources.list
+
+# Update the list of packages
+apt-get update
+exit
+```
+
+Then, run...
+
+```
+sudo apt-get install roboconf-dm
+```
+
+... to install Roboconf's DM and...
+
+```
+sudo apt-get install roboconf-agent
+```
+
+... to install a Roboconf agent.
+
+
+> You may encounter warnings with package signature.  
+> We are working on this issue.
+
+Configuration files are available under **/etc/roboconf-dm** or **/etc/roboconf-agent**.  
+Logs are located under **/var/log/roboconf-dm** or **/var/log/roboconf-agent**.
 
 
 # Manual Installation
