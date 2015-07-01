@@ -22,8 +22,7 @@ A project with release scripts is available on [Github](https://github.com/roboc
 **Only update the conf.sh file**. Then, use the various scripts to release the Roboconf items. Release order is given in the next section.
 
 These scripts will check out the project from Github in the temporary directory.  
-It is assume the release is performed under Linux (Debian systems essentially). Previous releases have been done
-with both JDK 7 and JDK 8.
+It is assumed the release is performed under Linux (Debian systems essentially), with a JDK 7 or JDK 8.
 
 
 ## Projects Release
