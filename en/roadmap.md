@@ -15,26 +15,19 @@ The roadmap for the next months covers several aspects.
 -->
 
 
-* **From April 2015**
- 
-	* Add a templating mechanism. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Illustrate Nagios support with Roboconf.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Create Debian packages for Roboconf.	&nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Rework the web administration. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Create examples to deploy Big Data stacks. &nbsp; <span class="glyphicon glyphicon-time"></span>
-
 * **From July 2015**
 
-	* Add support of commands in Roboconf.
 	* Make RabbitMQ optional.
+	* Make targets installation easier.
 	* Support place holders for environment switch.
 	* Web socket support in the Deployment Manager.
-	* Create RPM packages for Roboconf.
 	* Improve usability of the templating mechanism.
 	* Fix reusable recipes and make them public.
 
 * **After October 2015**
 
+	* Create RPM packages for Roboconf.
+	* Add support of commands in Roboconf.
 	* Complete support in Eclipse and other editors.
 	* Study TOSCA support.
 	* Add support to execute user scenarios.
@@ -49,4 +42,4 @@ The roadmap for the next months covers several aspects.
     * Implement a Puppet plug-in for Puppet masters.
     * Implement an ANT plug-in.
 
-Roboconf 0.4 will be released on June, <strike>16<sup>st</sup></strike> 25<sup>st</sup>.
+Roboconf 0.5 will be released on September, 22<sup>nd</sup>.
