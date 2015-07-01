@@ -9,7 +9,7 @@ menus: [ "users", "download" ]
 ## Snapshots
 
 You can download the last snapshots of Roboconf on our Maven repository.  
-The current development version is **0.4-SNAPSHOT**.
+The current development version is **0.5-SNAPSHOT**.
 
 * For the **Deployment Manager**, look [here](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-dist-dm).
 * For the **Agent**, look [here](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-dist-agent).
@@ -26,10 +26,9 @@ The current development version is **0.4-SNAPSHOT**.
 	</tr>
 	
 	<!-- Version 0.4 -->
-	<!--
 	<tr>
 		<td>0.4</td>
-		<td>June 30<sup>th</sup>, 2015</td>
+		<td>July 1<sup>st</sup>, 2015</td>
 		<td>
 			Deployment Manager: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.4/roboconf-karaf-dist-dm-0.4.tar.gz">Tar.gz</a>
@@ -60,7 +59,6 @@ The current development version is **0.4-SNAPSHOT**.
 			&nbsp;
 		</td>
 	</tr>
-	-->
 
 	<!-- Version 0.3 -->
 	<tr>
