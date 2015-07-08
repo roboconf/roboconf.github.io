@@ -137,6 +137,39 @@ More exactly, your bundle defines a component (a Java class) and an instance tha
 The iPojo framework ensures us that once you deploy your bundle in an OSGi container with a Roboconf's agent, your service will be
 injected into the agent.
 
+iPojo Meta-data can be inlined in your POM file in the configuration of **maven-ipojo-plugin** as following:
+
+```xml
+	 ...
+         <plugin>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>maven-ipojo-plugin</artifactId>
+            <version>1.12.0</version>
+            <executions>
+               <execution>
+                  <goals>
+                     <goal>ipojo-bundle</goal>
+                  </goals>
+               </execution>
+            </executions>
+            <configuration>
+               <metadata><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+                  <ipojo 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="org.apache.felix.ipojo http://felix.apache.org/ipojo/schemas/CURRENT/core.xsd"
+                      xmlns="org.apache.felix.ipojo">
+
+                     <component classname="net.roboconf.plugin.chef.internal.PluginChef" name="roboconf-plugin-chef">
+                        <provides />
+                     </component>
+
+                     <instance component="roboconf-plugin-chef" name="Roboconf Plugin - Chef" />
+                  </ipojo>]]>
+               </metadata>
+            </configuration>
+         </plugin>
+         ...
+```
 
 ## Implementing the Plug-in
 
