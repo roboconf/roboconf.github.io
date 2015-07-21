@@ -125,6 +125,7 @@ According to the substitution rules explained above, and for:
     "msg.medium=wire"
 ```
 
+The Roboconf agent's [start.sh](#start.sh) script will then use these parameters to set itself up.
 
 ## Docker Configuration
 
@@ -286,6 +287,8 @@ ln -s roboconf-karaf-dist-agent/ roboconf-agent
 
 Now, you have to add a **start.sh** executable script in the **/usr/local/roboconf-agent** directory.  
 Set the following content (the script is mainly used to complete the agent setup at startup time).
+
+<a name="start.sh"></a>
 
 ```bash
 #!/bin/bash"
