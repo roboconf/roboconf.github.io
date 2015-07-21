@@ -59,6 +59,7 @@ This target property holds a command line to pass to the Docker container when i
 By default, a Roboconf agent is started (see [default value](#default-value)), but it is possible to specify another command, for instance to do special things before/while the Roboconf agent is started.
 
 The value of this property  **must** be formatted using the JSON string array syntax:
+
 * if this property is left undefined, then Roboconf will use the [default value](#default-value).
 * if the property is set, its value will be used as the command to run the created container.
 * if a custom Dockerfile has been provided, and if the Dockerfile contains a `CMD` instruction, you can explicitly set this property to an empty array `[]`, so Roboconf will use the `CMD` from the Dockerfile.
@@ -105,6 +106,7 @@ The default value for the `docker.run.exec` property is:
 ]
 ```
 According to the substitution rules explained above, and for:
+
 * an application named `app`,
 * a scoped instance whose path is `/path/to/instance`,
 * a messaging factory type set to `telegraphy` with parameters:
