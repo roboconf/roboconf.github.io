@@ -328,7 +328,6 @@ span.roadmap-in-progress {
 	color: green;
 }
 
-.language-properties span.na,
 .language-puppet span.na,
 .language-html span.nt,
 .language-java span.nf,
@@ -359,7 +358,8 @@ span.roadmap-in-progress {
 	font-weight: bold;
 }
 
-.language-htmldjango span.cp {
+.language-htmldjango span.cp,
+.language-json span.p {
 	color: #b23e4b;
 	font-size: 14px;
 }
@@ -408,6 +408,11 @@ table td:nth-child(3) {
 
 table td:nth-child(4) {
 	text-align: center;
+}
+
+p > code,
+li > code {
+	color: black;
 }
 
 

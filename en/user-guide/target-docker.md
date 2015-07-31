@@ -30,7 +30,8 @@ docker.user = guest
 docker.password = guest
 ```
 
-Here is a complete description of the parameters for Docker.
+Here is a complete description of the parameters for Docker.  
+Let's begin with general parameters.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
@@ -41,11 +42,17 @@ Here is a complete description of the parameters for Docker.
 | docker.password | The password of the user to connect. | none | no |
 | docker.email | The email of the user to connect. | none | no |
 | docker.version | The Docker version (for API compatibility). This version supports versions until Docker v1.17. | none | no |
+| docker.run.exec | The command line to run in the created Docker container. *See dedicated [The docker.run.exec property](#the-docker.run.exec-property) section below* | *See the section below* | no |
+
+Let's now take a look at parameters related to image generation.
+
+| Property | Description | Default | Mandatory |
+| --- | --- | --- | --- |
 | docker.agent.package | If you want this extension to generate a Docker image for you, this parameter is an **URL** that points to the ZIP or TAR.GZ file of a Roboconf agent distribution. The generated image is based on **Ubuntu**. | none | no |
 | docker.agent.jre-packages | If you want this extension to generate a Docker image for you, this parameter indicates the JRE to install (as a system package), as well as other optional packages, separated by spaces. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | openjdk-7-jre-headless | no |
-| docker.additional.packages | Additional packages to install on the generated image, using `apt-get install`. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | *empty* | no |
+| docker.additional.packages | Additional packages to install on the generated image, using **apt-get install**. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | *empty* | no |
 | docker.base.image | If Roboconf generates an image for you, this property is used to determine the base image to use. The generated Dockerfile will begin with **FROM** *docker.base.image*... It is your responsibility to verify this image is available locally (either you created it, or you pulled it from Docker's hub). If the base image does not exist, an error will be thrown. | ubuntu | no |
-| docker.run.exec | The command line to run in the created Docker container.<p> *See dedicated [The docker.run.exec property](#the-docker.run.exec-property) section below* | `[ "/usr/local/roboconf-agent/start.sh", … ]` | no |
+ 
 
 At least one of **docker.image** or **docker.agent.package** must be specified.  
 
@@ -54,46 +61,17 @@ At least one of **docker.image** or **docker.agent.package** must be specified.
 
 ## <a name="the-docker.run.exec-property"></a>The docker.run.exec property
 
-This target property holds a command line to pass to the Docker container when it is started.
+This target property holds a command line to pass to the Docker container when it is started.  
+By default, a Roboconf agent is started, but it is possible to specify another command to do special things before/while the Roboconf agent is started.
 
-By default, a Roboconf agent is started (see [default value](#default-value)), but it is possible to specify another command, for instance to do special things before/while the Roboconf agent is started.
+The value of this property  **must** be formatted using the JSON string array syntax.
 
-The value of this property  **must** be formatted using the JSON string array syntax:
+* If this property is left undefined, then Roboconf will use the default value.
+* If the property is set, its value will be used as the command to run the created container.
+* If a custom Dockerfile has been provided, and if the Dockerfile contains a `CMD` instruction, you can explicitly
+set this property to an empty array `[]`, so Roboconf will use the `CMD` from the Dockerfile.
 
-* if this property is left undefined, then Roboconf will use the [default value](#default-value).
-* if the property is set, its value will be used as the command to run the created container.
-* if a custom Dockerfile has been provided, and if the Dockerfile contains a `CMD` instruction, you can explicitly set this property to an empty array `[]`, so Roboconf will use the `CMD` from the Dockerfile.
-
-
-### Injecting Roboconf Agent configuration in the command line
-
-A Roboconf agent need some configuration before it can run. The `docker.run.exec` property allows to use several markers, that will be substituted by the actual configuration for the agent:
-
-| Marker | Description |
-| --- | --- | --- |
-| `$applicationName$` | The name of the application |
-| `$instancePath$` | The path of the scoped instance |
-| `$messagingType$` | The type of the messaging factory |
-| `$msgConfig$` | The messaging configuration properties |
-
-There is one more thing about the `$msgConfig$` marker, which is a bit more special than the other ones. As it expands to several arguments, it can only be used alone *verbatim*, in its own argument. This marker is substituted by each one of the Roboconf agent messaging configuration property, in a separated argument, prefixed with `msg.`. For instance:
-
-```json
-"$msgConfig$"        # OK! will expand to "msg.property1=value1", "msg.property2=value2", …
-
-"msgParam:$msgConfig$"        # NOT OK! $msgConfig$ can only be used alone in its own argument.
-
-"$messagingType$ $msgConfig$"        # NOT OK! Same as above, only used alone.
-
-"type=$messagingType$", "$msgConfig$"        # OK! Used in separated arguments
-```
-
-The next section details the `docker.run.exec` property default value, but also illustrates the parameter substitution and expansion mechanics.
-
-
-### <a name="default-value"></a>Default value
-
-The default value for the `docker.run.exec` property is:
+The default value for this property is...
 
 ```json
 [
@@ -105,15 +83,29 @@ The default value for the `docker.run.exec` property is:
   "$msgConfig$"
 ]
 ```
-According to the substitution rules explained above, and for:
 
-* an application named `app`,
-* a scoped instance whose path is `/path/to/instance`,
-* a messaging factory type set to `telegraphy` with parameters:
-    * `code=morse` and
-    * `medium=wire`,
+The parameter values prefixed and suffixed by the dollar symbol are replaced at runtime by Roboconf.
+Indeed, a Roboconf agent needs some configuration before it can run.  
+The **docker.run.exec** property allows to use several markers, that will be substituted by the actual configuration for the agent.
 
-… the command line will be substituted and expanded to:
+| Marker | Description |
+| --- | --- | --- |
+| $applicationName$ | The name of the application |
+| $instancePath$ | The path of the scoped instance |
+| $messagingType$ | The type of the messaging factory |
+| $msgConfig$ | The messaging configuration properties |
+
+There is one more thing about the **$msgConfig$** marker, which is a bit more special than the other ones. As it expands to several
+arguments, it can only be used alone *verbatim*, in its own argument. This marker is substituted by each one of the Roboconf agent
+messaging configuration property, in a separated argument, prefixed with `msg.`.
+
+According to the substitution rules explained above, and for...
+
+* ... an application named *app*,
+* ... a scoped instance whose path is */path/to/instance*,
+* ... a messaging factory type set to *telegraphy* with 2 parameters, **code=morse** and **medium=wire**...
+
+... then the command line will be substituted and expanded to...
 
 ```bash
 /usr/local/roboconf-agent/start.sh \
@@ -125,7 +117,25 @@ According to the substitution rules explained above, and for:
     "msg.medium=wire"
 ```
 
-The Roboconf agent's [start.sh](#start.sh) script will then use these parameters to set itself up.
+
+Notice that parameters injection only works when variables are in their own argument.  
+Said differently, **if you override** the default value, the JSon array cannot mix a
+variable with something else.
+
+```properties
+# OK! will expand to "msg.property1=value1", "msg.property2=value2", …
+"$msgConfig$"
+
+# Not OK! $msgConfig$ can only be used alone in its own argument.
+"msgParam:$msgConfig$"
+
+# Not OK! Same as above, only usable alone.
+"$messagingType$ $msgConfig$"
+
+# OK! Used in separated arguments.
+"type=$messagingType$", "$msgConfig$"
+```
+
 
 ## Docker Configuration
 
