@@ -10,6 +10,9 @@ roboconf-architecture:
 configuring-the-web-consoles:
   en: user-guide/configuring-the-web-consoles
   
+dm-templating:
+  en: user-guide/dm-templating
+  
 eclipse-plugin:
   en: user-guide/eclipse-plugin
   

@@ -83,6 +83,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="editors.html">Editors</a></li>
 	<li><a href="eclipse-plugin.html">The Eclipse plug-in</a></li>
 	<li><a href="maven-plugin.html">The Maven plug-in</a></li>
+	<li><a href="dm-templating.html">The DM's templating</a></li>
 	</ul>
 </div>
 

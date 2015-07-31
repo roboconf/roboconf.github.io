@@ -359,6 +359,11 @@ span.roadmap-in-progress {
 	font-weight: bold;
 }
 
+.language-htmldjango span.cp {
+	color: #b23e4b;
+	font-size: 14px;
+}
+
 .language-java span.nd {
 	font-style: italic;
 }
