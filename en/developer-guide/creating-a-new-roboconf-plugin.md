@@ -67,6 +67,7 @@ At the moment this documentation is being written, there is not yet a Roboconf p
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
 				<version>2.4.0</version>
+				<extensions>true</extensions>
 				<configuration>
 					<instructions>
 						<Import-Package>

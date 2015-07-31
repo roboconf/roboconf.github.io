@@ -2,6 +2,9 @@
 # Huge thanks to http://www.jacobtomlinson.co.uk/jekyll/2015/02/18/test-you-jekyll-blog-with-travis-ci/
 ##
 language: ruby
+# Run in container-based infrastructure
+# See http://docs.travis-ci.com/user/migrating-from-legacy/
+sudo: false
 rvm:
   - 2.1
 script:
