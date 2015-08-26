@@ -33,6 +33,11 @@ menus: [ "developers", "developer-guide" ]
 * [Application](rest-api-application.html)
 * [Debug](rest-api-debug.html)
 
+## Advanced Topics
+
+* [About Integration Tests](about-integration-tests.html)
+* [Creating a new Messaging Implementation](creating-a-new-messaging-implementation.html)
+
 ## OCCI Support
 
 * [OCCI Model for Roboconf](occi-model.html)

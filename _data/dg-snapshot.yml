@@ -12,8 +12,14 @@ syntax-highlighting:
 version-management:
   en: developer-guide/version-management
   
+about-integration-tests:
+  en: developer-guide/about-integration-tests
+  
 ipojo-model:
   en: developer-guide/ipojo-model
+  
+creating-a-new-messaging-implementation:
+  en: developer-guide/creating-a-new-messaging-implementation
   
 creating-a-new-roboconf-plugin:
   en: developer-guide/creating-a-new-roboconf-plugin
