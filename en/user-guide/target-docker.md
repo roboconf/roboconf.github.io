@@ -48,7 +48,8 @@ Let's now take a look at parameters related to image generation.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| docker.agent.package | If you want this extension to generate a Docker image for you, this parameter is an **URL** that points to the ZIP or TAR.GZ file of a Roboconf agent distribution. The generated image is based on **Ubuntu**. | none | no |
+| docker.generate.image | A boolean value that indicate whether a Docker image for Roboconf should be generated. Disabled by default. | false | no |
+| docker.agent.package.url | If you want this extension to generate a Docker image for you, this parameter is an **URL** that points to the ZIP or TAR.GZ file of a Roboconf agent distribution. If not specified, Roboconf will try to guess it. The guess process is described in [this section](#the-docker.agent.package.url-property) below. | *See below* | no |
 | docker.agent.jre-packages | If you want this extension to generate a Docker image for you, this parameter indicates the JRE to install (as a system package), as well as other optional packages, separated by spaces. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | openjdk-7-jre-headless | no |
 | docker.additional.packages | Additional packages to install on the generated image, using **apt-get install**. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | none | no |
 | docker.base.image | If Roboconf generates an image for you, this property is used to determine the base image to use. The generated Dockerfile will begin with **FROM** *docker.base.image*... It is your responsibility to verify this image is available locally (either you created it, or you pulled it from Docker's hub). If the base image does not exist, an error will be thrown. | ubuntu | no |
@@ -136,6 +137,26 @@ variable with something else.
 # OK! Used in separated arguments.
 "type=$messagingType$", "$msgConfig$"
 ```
+
+
+## <a name="the-docker.agent.package.url-property"></a>The docker.agent.package.url property
+
+This property holds an URL that points to a Roboconf agent distribution (either a ZIP or a tar.GZ file).  
+If not specified, Roboconf tries to guess it. First, it assumes the agent's version should be the same that the DM's one.
+By introspecting its configuration, the DM can find it (provided it runs in an OSGi environment). Then, it tries to find a
+Maven artifact that will match the agent's distribution for this version.
+
+Here is the resolution order:
+
+1. Try to find it in the local Maven repository.
+2. If it is not found locally, contact [Sonatype's web service API](https://repository.sonatype.org/nexus-restlet1x-plugin/default/docs/index.html) to find it.
+
+Sonatype is the Maven provider/intermediate Roboconf uses for snapshots builds hosting and releases management.  
+Snapshot versions resolution will use the latest build. Released versions are hosted by public Maven repositories,
+including Maven Central.
+
+Notice that it is not possible to download snapshots of released versions. As soon as a version is released, all the snapshots
+are deleted.  
 
 
 ## Docker Configuration
