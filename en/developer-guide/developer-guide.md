@@ -37,10 +37,8 @@ menus: [ "developers", "developer-guide" ]
 
 * [About Integration Tests](about-integration-tests.html)
 * [Creating a new Messaging Implementation](creating-a-new-messaging-implementation.html)
-
-## OCCI Support
-
 * [OCCI Model for Roboconf](occi-model.html)
+* [Database Support in Apacha Karaf](database-support-in-karaf.html)
 
 ## Documentation and Website
 

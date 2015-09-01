@@ -18,6 +18,9 @@ about-integration-tests:
 ipojo-model:
   en: developer-guide/ipojo-model
   
+database-support-in-karaf:
+  en: developer-guide/database-support-in-karaf
+  
 creating-a-new-messaging-implementation:
   en: developer-guide/creating-a-new-messaging-implementation
   
