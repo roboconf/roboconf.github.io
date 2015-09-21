@@ -34,8 +34,8 @@ Here are the supported properties for a component.
 | --- | --- | --- |
 | installer | The installer name, that is to say, which Roboconf extension will handle the life cycle of this component instances. | yes |
 | children | A list of component names, separated by a comma. As an example, an Apache component being a child of a VM component means we could deploy Apache on a VM. | no |
-| exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. | no |
-| imports | A list of imported variables, separated by a comma. It means this component will need dependencies to be started. An import can be marked as **optional**. | no |
+| exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. For readability purpose, this keyword can appear more than once for a Roboconf component. | no |
+| imports | A list of imported variables, separated by a comma. It means this component will need dependencies to be started. An import can be marked as **optional**. For readability purpose, this keyword can appear more than once for a Roboconf component. | no |
 | facets | Some properties can be grouped together in facets. So, this is a list of facet names, separated by a comma. | no |
 | extends | The name of a component this component extends. All its properties and recipes will be inherited. | no |
 
@@ -51,9 +51,11 @@ ApacheServer {
 	children: My-Dash-Board, Marketing-Suite;
 
 	# Properties exported by this component.
-	exports: ip, port = 19099;
 	# 'port' should have a default value, or we will have to set it when we create an instance.
-	# 'ip' will be updated at runtime by Roboconf's agent.
+	exports: port = 19099;
+	
+	# 'ip' is a special variable. It will be updated at runtime by a Roboconf agent.
+	exports: ip;
 
 	# Other components properties that this server needs to have so that it can start.
 	imports: LB.port (optional), LB.ip (optional);
@@ -98,7 +100,7 @@ Here are the supported properties for a facet.
 | Property | Description | Required |
 | --- | --- | --- |
 | children | A list of component names, separated by a comma. As an example, an Apache component being a child of a VM component means we could deploy Apache on a VM. | no |
-| exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. | no |
+| exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. For readability purpose, this keyword can appear more than once for a Roboconf component. | no |
 | extends | A facet may extend other facets. So, this is a list of facet names, separated by a comma. | no |
 
 

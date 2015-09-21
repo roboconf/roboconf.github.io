@@ -30,11 +30,19 @@ First, you need to add our Debian repository into your repo list.
 # For Ubuntu, or su if you are under Debian
 sudo -i
 
+# If you do not have them installed...
+# Install https transport for APT and wget.
+apt-get install apt-transport-https wget
+
 # "jessie" is the Debian version we tested our package on (~ Ubuntu 14.04).
 echo "deb https://dl.bintray.com/v1/content/roboconf/roboconf-debian-packages jessie main" >> /etc/apt/sources.list
 
-# Update the list of packages
+# Add the SSH key.
+wget --quiet -O - "https://bintray.com/user/downloadSubjectPublicKey?username=bintray" | apt-key add -
+
+# Update the list of packages.
 apt-get update
+
 exit
 ```
 

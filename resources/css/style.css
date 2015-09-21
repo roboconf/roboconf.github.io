@@ -320,11 +320,13 @@ span.roadmap-in-progress {
 
 .language-properties span.c,
 .language-java span.c,
+.language-java span.c1,
 .language-puppet span.c,
 .language-bash span.c,
 .language-xml span.nt,
 .language-json span.nt,
-.language-html span.s {
+.language-html span.s,
+.language-roboconf span.comment {
 	color: green;
 }
 
@@ -338,8 +340,7 @@ span.roadmap-in-progress {
 }
 
 .language-java span.cm,
-.language-html span.cm,
-.language-roboconf span.comment {
+.language-html span.cm {
 	color: #4978a7;
 }
 

@@ -104,7 +104,22 @@ Apache {
 }
 </code></pre>
 
-> Every component property must be defined on **a single line**.
+Every component property must be defined on **a single line**.  
+However, for readability purpose, it is possible to repeat some properties, such as **exports** and imports**.
+
+<pre><code class="language-roboconf">
+Tomcat {
+	installer: puppet;
+	
+	# Exports
+	exports: ip;
+	exports: portAJP = 8009;
+	
+	# Imports
+	imports: MySQL.ip;
+	imports: MySQL.port;
+}
+</code></pre>
 
 Components can be defined in separate files and in any order. This is achieved thanks to the **import** keyword.  
 Graphs definitions can mix imports and components declaration, or, it can only contain imports.

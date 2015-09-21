@@ -19,6 +19,7 @@ menus: [ "developers", "developer-guide" ]
 
 * [Creating a new Roboconf Plug-in](creating-a-new-roboconf-plugin.html)
 * [Supporting a new Deployement Target](supporting-a-new-deployment-target.html)
+* [Creating a new Monitoring Handler](creating-a-new-monitoring-handler.html)
 
 ## Build
 

@@ -24,6 +24,9 @@ database-support-in-karaf:
 creating-a-new-messaging-implementation:
   en: developer-guide/creating-a-new-messaging-implementation
   
+creating-a-new-monitoring-handler:
+  en: developer-guide/creating-a-new-monitoring-handler
+  
 creating-a-new-roboconf-plugin:
   en: developer-guide/creating-a-new-roboconf-plugin
   
