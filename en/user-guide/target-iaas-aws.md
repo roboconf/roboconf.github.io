@@ -69,6 +69,6 @@ Here is a complete description of the parameters for Amazon Web Services.
 | ec2.ami | The ID of the VM image used as a template for the VM | none | yes |
 | ec2.instance.type | The VM "size" aka. instance type or flavor | t1.micro | no |
 | ec2.ssh.key | The name of the ssh key used to connect | none | yes |
-| ec2.security.group | The VM security group | default | no |
+| ec2.security.group | The VM security group name. *Caution to not set the security group id*. | default | no |
 | ec2.volume.snapshot.id | A snapshot volume to attach for storage | none | no |
 | ec2.elastic.ip | An elastic IP address | none | no |
