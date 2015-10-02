@@ -71,12 +71,17 @@ ApacheServer {
 	# imports: LB.port (optional), LB.ip;
 	# 
 	# ... then an Apache instance would need at least one LB instance somewhere.
+	
+	# Imports may also reference variables from other applications
+	imports: external Lamp.lb-ip;
 }
 </code></pre>
 
 Notice that exported variables are prefixed by the component (or the facet) name that defined them.  
 As an example, if a component Tomcat exports **port** and **ip**, and that another component wants to import them,
 it will need to import **Tomcat.port** and **Tomcat.ip**. Same thing if the variables are exported by a facet.
+
+For more information about external imports, read [this page](inter-application-dependencies.html).
 
 ## Facets
 

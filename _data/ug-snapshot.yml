@@ -7,6 +7,9 @@ maven-examples-documentation:
 roboconf-architecture:
   en: user-guide/roboconf-architecture
   
+inter-application-dependencies:
+  en: user-guide/inter-application-dependencies
+  
 configuring-the-web-consoles:
   en: user-guide/configuring-the-web-consoles
   

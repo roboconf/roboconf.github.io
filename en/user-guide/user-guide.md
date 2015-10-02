@@ -98,6 +98,14 @@ menus: [ "users", "user-guide" ]
 </div>
 
 <div class="floated">
+	<h2>Advanced Topics</h2>
+
+	<ul>
+	<li><a href="inter-application-dependencies.html">Inter-Application Dependencies</a></li>
+	</ul>
+</div>
+
+<div class="floated">
 	<h2>Resources</h2>
 
 	<ul>

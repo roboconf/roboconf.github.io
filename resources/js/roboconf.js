@@ -62,7 +62,7 @@ function formatRoboconfSnippets() {
       before = before.replace( /\(([^)]*)\)/ig, '(<span class="value">$1</span>)' );
       
       // <span class="value">external</span>
-      before = before.replace( /\b(external)\b/ig, '(<span class="value">$1</span>)' );
+      before = before.replace( /\b(external)\b/ig, '<span class="value">$1</span>' );
       
       // Update the result
       result += before + after + '\n';

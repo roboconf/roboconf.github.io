@@ -153,7 +153,7 @@ So, you need to create it. Start by creating the Maven structure (**src/main/jav
 Here is the skeleton of the class.
 
 ```java
-package net.roboconf.agent.monitoring.internal.rest;
+package net.roboconf.agent.monitoring.internal;
 
 import java.util.logging.Logger;
 
