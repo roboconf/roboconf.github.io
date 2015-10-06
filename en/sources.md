@@ -17,7 +17,13 @@ Roboconf's web administration is a Javascript project. And Roboconf's web site i
 They are the only exceptions.
 
 So, you must have [Maven](http://maven.apache.org/) (version 3) installed to build Roboconf.  
-You should also have [NodeJS](http://nodejs.org/) and [NPM](https://www.npmjs.org/) installed.
+You should also have [NodeJS](http://nodejs.org/), [NPM](https://www.npmjs.org/) and  [Gulp](http://gulpjs.com/) installed.
+
+```tcl 
+# Example on Ubuntu
+sudo apt-get install npm
+sudo npm install gulp -g
+```
 
 You must have both installed to build Roboconf source code.  
 NPM is used not only to build the web administration, but also the platform. In fact, the platform
