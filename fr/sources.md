@@ -17,7 +17,13 @@ L'administration web de Roboconf est un projet Javascript. Et le site web est qu
 Ce sont les seules exceptions notoires.
 
 Il vous faut avoir installé [Maven](http://maven.apache.org/) (version 3) pour compiler Roboconf.    
-Vous aurez aussi besoin de [NodeJS](http://nodejs.org/) et [NPM](https://www.npmjs.org/).
+Vous aurez aussi besoin de [NodeJS](http://nodejs.org/), de [NPM](https://www.npmjs.org/) et de [Gulp](http://gulpjs.com/).
+
+```tcl 
+# Exemple sur Ubuntu
+sudo apt-get install npm
+sudo npm install gulp -g
+```
 
 Vous aurez probablement besoin des deux pour compiler Roboconf.  
 NPM est utilisé pour construire l'administration web. Mais cette administration est aussi embarquée
