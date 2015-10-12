@@ -33,7 +33,9 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Openstack
-target.id = iaas-openstack
+handler = iaas-openstack
+name = 
+description = 
 
 # The URL of Keystone, Openstack's identity component
 openstack.keystone-url = 
@@ -58,7 +60,9 @@ Here is a complete description of the parameters for OpenStack.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use | none, must be "iaas-openstack" | yes |
+| handler | Determines the target handler to use | none, must be "iaas-openstack" | yes |
+| name | A human-readable name for the target | - | no |
+| description | A description of the target. | - | no |
 | openstack.keystone-url | The URL of Keystone, Openstack's *identity* component. The URL of all the other Openstack services will be found through Keystone. | none | yes |
 | openstack.tenant-name | The tenant name (not the ID). | none | yes |
 | openstack.user | The name of the user to connect. | none | yes |

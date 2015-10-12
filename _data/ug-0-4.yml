@@ -82,6 +82,9 @@ configuring-the-deployment-manager:
 configuring-an-agent:
   en: user-guide-0.4/configuring-an-agent
   
+configuring-the-messaging:
+  en: user-guide/configuring-the-messaging
+  
 installing-the-messaging-server:
   en: user-guide-0.4/installing-the-messaging-server
   

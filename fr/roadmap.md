@@ -10,31 +10,34 @@ Roboconf a démarré en tant que prototype de recherche et est maintenant en cou
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
 
-* **A partir de Juillet 2015**
+* **A partir d'Octobre 2015**
 
-	* Rendre RabbitMQ optionnel.
-	* Rendre l'installation des pilotes pour les cibles de déploiement plus simple.
-	* Supporter des "place holders" pour les changements d'environnement.
-	* Utilisation d'une web socket dans le gestionnaire de déploiements.
-	* Améliorer l'utilisabilité du système de <i>templating</i>.
-	* Progresser sur les recettes réutilisables et les rendre publiques.
+	* Proposer une nouvelle API pour la messagerie Roboconf.
+	* Rajouter le support des commandes dans Roboconf.
+	* Améliorer les mesures côté agent pour l'autonomique (moyenne, etc).
+	* Ajouter des quotas affinés pour l'autonomique côté DM.
+	* Gérer des combinaisons d'événements pour déclencher une réaction.
+	* Permettre la modification des seuils (autonomique côté agent) dans la console web.
 
-* **Après Octobre 2015**
+
+* **Après Janvier 2016**
 
 	* Créer des paquets RPM pour Roboconf.
-	* Rajouter le support des commandes dans Roboconf.
 	* Compléter le support de Roboconf dans Eclipse et certains éditeurs.
-	* Etudier le support de TOSCA.
 	* Supporter l'exécution de scénarios utilisateurs.
 	* Gérer la migration d'applications (déploiement continu).
 	* Créer une extension pour Jenkins.
-	* Compléter la messagerie pour des échanges sécurisés avec SSL.
 	* Implémenter une cible de déploiement SSH.
+
 
 * **Ouvert à Contributions**
 
     * Implémenter un plug-in pour Chef.
     * Implémenter un plug-in pour Puppet Master.
     * Implémenter un plug-in ANT.
+    * Etudier le support de TOSCA.
+    * Compléter la messagerie pour des échanges sécurisés avec SSL.
 
-La version 0.5 de Roboconf sortira le 22 septembre 2015.
+
+La version 0.5 de Roboconf sortira le 19 octobre 2015.  
+Roboconf 0.6 devrait sortir en janvier 2016.

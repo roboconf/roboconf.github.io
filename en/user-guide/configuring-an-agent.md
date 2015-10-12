@@ -10,13 +10,25 @@ Once the agent has been installed, you have to configure it.
 If the target is a IaaS (a cloud infrastructure), you only have to specify one thing, the target ID. 
 All the other parameters will be set dynamically by the DM or the IaaS itself.
 
-The agent comes with a default configuration that needs to be updated. Even if the configuration is
-wrong, the agent will keep on running (in a degraded mode).
+The agent comes with a default configuration that needs to be updated.  
+Even if the configuration is wrong, the agent will keep on running (in a degraded mode).
+The configuration is persisted by the OSGi container. It is restored upon restart.
 
-The configuration is persisted by the OSGi container.  
-It is restored upon restart.
+> Configuration parameters can be changed at runtime, without rebooting.
+
+This configuration is made of two parts:
+
+* First, there is the configuration of the agent itself.  
+It is associated with the PID **net.roboconf.agent.configuration**.
+
+* Then, there is the configuration of its messaging (the way it will interact with
+other agents and with the Deployment Manager). The associated PID depends on the messaging type
+specified in the agent's configuration. As an example, if the agent uses RabbitMQ, then the PID
+will be **net.roboconf.messaging.rabbitmq**. Generally, messaging configurations should have PIDs
+that begin with **net.roboconf.messaging**.
 
 There are 2 ways of updating the agent's configuration.  
+Configuring the messaging is discussed on [this page](configuring-the-messaging.html).
 
 
 # Config Admin
@@ -28,7 +40,7 @@ These pages give information about this mechanism.
 * [http://felix.apache.org/documentation/subprojects/apache-felix-config-admin.html](http://felix.apache.org/documentation/subprojects/apache-felix-config-admin.html)
 * [http://www.osgi.org/javadoc/r4v42/org/osgi/service/cm/ConfigurationAdmin.html](http://www.osgi.org/javadoc/r4v42/org/osgi/service/cm/ConfigurationAdmin.html)
 
-The ID of the managed service for the agent is **net.roboconf.agent.configuration**.
+The ID of the managed services for the agent match the PIDs given before.
 
 
 # File Install
@@ -38,16 +50,6 @@ The first one consists in editing (or creating) the **/etc/net.roboconf.agent.co
 A sample is given below.
 
 ```properties
-# The IP address and port of RabbitMQ.
-# Example: http://192.168.1.87
-# Example: http://192.168.1.89:4048
-message-server-ip = localhost
-
-# The user name and password to access RabbitMQ.
-message-server-username = guest
-message-server-password = guest
-
-
 # The target ID.
 # Depending on its value, the following parameters may be read from
 # another location than this file. This is the case for Amazon Web Services
@@ -71,6 +73,9 @@ root-instance-name =
 # The IP address of the agent.
 # This is useful if the machine has several network interfaces.
 ip-address-of-the-agent = 
+
+# The type of messaging we use: RabbitMQ.
+messaging-type = rabbitmq
 ```
 
 The second solution consists in using Karaf's web console.  
@@ -85,13 +90,11 @@ The following table summers up all the agent parameters.
 
 | Property | Description | Notice | Mandatory |
 | --- | --- | --- | --- |
-| message-server-ip | The IP address and the port of the messaging server. Examples: http://192.168.1.87 (default port), http://192.168.1.89:4048 (with a custom port). | **null** is interpreted as "localhost". | yes |
-| message-server-username | The user name for the messaging server. | **null** is interpreted as "guest". | yes |
-| message-server-password | The password for the messaging server. | **null** is interpreted as "guest". | yes |
 | target-id | The target ID. Some cloud infrastructures provide mechanisms to store information for the VM. On some IaaS, the DM passes information to the agent through these means. It implies that a part of the agent configuration is read from an external location. | See the next section. | yes |
 | application-name | An agent is associated with a single application. | Depending on the target ID, its value can be retrieved from *user data*. | yes |
 | root-instance-name | Within an application, machines are represented by a root instance. This parameter is the name of the instance associated with this agent. | Depending on the target ID, its value can be retrieved from *user data*. | yes |
 | ip-address-of-the-agent | The IP address of the agent's machine. | This is useful if the machine has several network interfaces. | no |
+| messaging-type | The kind of messaging used by the agent. | - | yes |
 
 These parameters are persisted and restored upon restart.  
 However, depending on the target ID, some values may be overridden.
@@ -122,12 +125,10 @@ It calls the right API in EC2 and sets user data for the new VM
 
 User data override the following parameters.
 
-* message-server-ip
-* message-server-username
-* message-server-password
-* application-name
-* root-instance-name
-* ip-address-of-the-agent
+* *application-name*
+* *root-instance-name*
+* *ip-address-of-the-agent*
+* All the messaging parameters (used in other configuration files).
 
 User data are used with almost all the cloud infrastructures.  
 The only IaaS it does not work with is the **embedded** one.

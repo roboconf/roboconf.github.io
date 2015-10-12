@@ -60,10 +60,6 @@ sudo apt-get install roboconf-agent
 
 ... to install a Roboconf agent.
 
-
-> You may encounter warnings with package signature.  
-> We are working on this issue.
-
 Configuration files are available under **/etc/roboconf-dm** or **/etc/roboconf-agent**.  
 Logs are located under **/var/log/roboconf-dm** or **/var/log/roboconf-agent**.
 

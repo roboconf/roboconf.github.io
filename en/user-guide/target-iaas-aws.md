@@ -24,7 +24,9 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for EC2
-target.id = iaas-ec2
+handler = iaas-ec2
+name = 
+description = 
 
 # EC2 URL
 ec2.endpoint = 
@@ -62,7 +64,9 @@ Here is a complete description of the parameters for Amazon Web Services.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use | none, must be "iaas-ec2" | yes |
+| handler | Determines the target handler to use | none, must be "iaas-ec2" | yes |
+| name | A human-readable name for the target | - | no |
+| description | A description of the target. | - | no |
 | ec2.endpoint | URL of the compute service (eg. eu-west-1.ec2.amazonaws.com)  | none | yes |
 | ec2.access.key | Access key defined in your ec2 account | none | yes |
 | ec2.secret.key | Secret key defined in your ec2 account | none | yes |

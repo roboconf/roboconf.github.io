@@ -22,7 +22,9 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for JClouds
-target.id = jclouds
+handler = jclouds
+name = 
+description = 
 
 # The JClouds provider
 jclouds.provider-id = 
@@ -45,7 +47,9 @@ Here is a complete description of the parameters for JClouds.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use | none, must be "jclouds" | yes |
+| handler | Determines the target handler to use | none, must be "jclouds" | yes |
+| name | A human-readable name for the target | - | no |
+| description | A description of the target. | - | no |
 | jclouds.provider-id | The ID of the JClouds provider (AWS, Rackspace, etc). | none | yes |
 | jclouds.endpoint | The URL to reach the cloud API. | none | yes |
 | jclouds.identity | The user name for the cloud API. | none | yes |

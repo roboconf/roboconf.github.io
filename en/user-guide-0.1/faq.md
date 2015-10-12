@@ -54,7 +54,7 @@ The current messaging server is RabbitMQ. It supports a wide variety of clients,
 # What does Roboconf bring in addition to classics like Bash and SSH?
 
 Roboconf could be replaced by some scripts executed by hand, but the result would be very complicated to maintain.  
-In fact, Roboconf receipts can use bash scripts. Roboconf only plugs dynamicity behind script invocations.
+In fact, Roboconf recipes can use bash scripts. Roboconf only plugs dynamicity behind script invocations.
 
 
 # How about Puppet, Chef or CFEngine?

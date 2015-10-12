@@ -37,6 +37,7 @@ menus: [ "users", "user-guide", "0.4" ]
 	<li><a href="installing-roboconf.html">Installing Roboconf</a></li>
 	<li><a href="configuring-the-deployment-manager.html">Configuring the DM</a></li>
 	<li><a href="configuring-an-agent.html">Configuring an Agent</a></li>
+	<li><a href="configuring-the-messaging.html">Configuring the Messaging</a></li>
 	<li><a href="configuring-the-loggers.html">Configuring the Loggers</a></li>
 	<li><a href="configuring-the-web-consoles.html">Configuring the Web Consoles</a></li>
 	</ul>

@@ -22,7 +22,9 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Docker
-target.id = docker
+handler = docker
+name = 
+description = 
 
 docker.endpoint = http://localhost:4243
 docker.image = 0f3087570887fdgf14dfg1dd4f
@@ -35,7 +37,9 @@ Let's begin with general parameters.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use. | none, must be "docker" | yes |
+| handler | Determines the target handler to use. | none, must be "docker" | yes |
+| name | A human-readable name for the target | - | no |
+| description | A description of the target. | - | no |
 | docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). | http://localhost:4243 | no |
 | docker.image | The ID or tag (name) of the docker image used as a template for the VM (as shown by "docker images", for example). If the image is not found, Roboconf will try to generate one, using "\<docker.image\>:\<docker.image\>" as its tag: if so, the **docker.agent.package** property is required so that Roboconf knows where to find the Roboconf agent to install on the generated image. If it is an image ID, it must be the full ID, that can be retrieved with **docker images --no-trunc**. | "generated.by.roboconf" | no |
 | docker.user | The name of the user to connect. | none | no |
