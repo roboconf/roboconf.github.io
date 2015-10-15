@@ -62,19 +62,19 @@ exports-prefix: Lamp
 # cannot. This prefix must be unique among all the application templates.
 
 # Now, lets export the internal variable outside.
-exports: Apache.ip as lb-ip
+exports: Apache.ip as lb_ip
 
-# Other applications will see it as Lamp.lb-ip
+# Other applications will see it as Lamp.lb_ip
 # Several variables can be exported if necessary.
 # 
 # exports: \
-#         Apache.ip as lb-ip,\
-#         MySQL.ip as db-ip
+#         Apache.ip as lb_ip,\
+#         MySQL.ip as db_ip
 # 
 ```
 
 It means every time an Apache instance appears or disappears, notifications will be propagated internally for
-variables **Apache.ip**, and externally for variables **Lamp.lb-ip**.
+variables **Apache.ip**, and externally for variables **Lamp.lb_ip**.
 
 
 ## Importing Applications
@@ -85,12 +85,12 @@ External variables are referenced in the graph with the **external** key word.
 MyApp { 
 	installer: script; 
 	imports: Tomcat.portAJP, Tomcat.ip; # local variables
-	imports: external Lamp.lb-ip;      # external variables
+	imports: external Lamp.lb_ip;      # external variables
 	exports: ip;
 }
 </code></pre>
 
-Every time an application exports Lamp.lb-ip, this application will be notified.  
+Every time an application exports **Lamp.lb_ip**, this application will be notified.  
 However, since an application template may be associated with several applications, we do not want this graph
 to be notified with all of them. So, for every application, it is possible to define which other application must
 be bound for this prefix.
