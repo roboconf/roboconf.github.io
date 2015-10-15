@@ -18,6 +18,7 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Ajouter des quotas affinés pour l'autonomique côté DM.
 	* Gérer des combinaisons d'événements pour déclencher une réaction.
 	* Permettre la modification des seuils (autonomique côté agent) dans la console web.
+	* Rendre RabbitMQ optionnel (solution alternative basée sur HTTP pour les débutants).
 
 
 * **Après Janvier 2016**

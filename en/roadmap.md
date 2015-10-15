@@ -23,6 +23,7 @@ The roadmap for the next months covers several aspects.
 	* Add fine-grained quotas for the autonomic on the DM's side.
 	* Handle complex combinations of events to trigger a reaction.
 	* Support the live update of thresholds (in the agent's autonomic) through the web console.
+	* Make RabbitMQ optional (alternative HTTP-based messaging for new beginners).
 
 
 * **After January 2016**
