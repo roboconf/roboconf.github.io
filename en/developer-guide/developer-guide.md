@@ -49,4 +49,5 @@ menus: [ "developers", "developer-guide" ]
 
 ## Guidelines
 
+* [OSGi Conventions](osgi-conventions.html)
 * [Development Guidelines](development-guidelines.html)

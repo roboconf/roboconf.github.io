@@ -42,6 +42,9 @@ roboconf-model:
 continuous-integration:
   en: developer-guide/continuous-integration
   
+osgi-conventions:
+  en: developer-guide/osgi-conventions
+  
 release-management:
   en: developer-guide/release-management
   
