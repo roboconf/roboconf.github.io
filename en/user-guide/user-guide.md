@@ -112,7 +112,7 @@ menus: [ "users", "user-guide" ]
 </div>
 
 <!-- TRWWR -->
-<!-- To remove when we release -->
+<!-- Do not remove these surrounding comments, they are used by the release scripts. -->
 <div class="floated">
 	<h2>Other Versions</h2>
 
