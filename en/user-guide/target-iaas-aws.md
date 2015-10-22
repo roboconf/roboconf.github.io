@@ -3,7 +3,7 @@ title: "Amazon Web Services Support"
 layout: page
 cat: "ug-last"
 id: "target-iaas-aws"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf has a target implementation for Amazon Web Services (AWS).  

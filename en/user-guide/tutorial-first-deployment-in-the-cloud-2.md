@@ -3,7 +3,7 @@ title: "Tutorial - First Deployment in the Cloud - 2/4"
 layout: page
 cat: "ug-last"
 id: "tutorial-first-deployment-in-the-cloud-2"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 ## Installing the Roboconf agent

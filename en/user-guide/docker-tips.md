@@ -3,7 +3,7 @@ title: "Docker Tips"
 layout: page
 cat: "ug-last"
 id: "docker-tips"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
   
 Note that Docker runs mainly on Linux 64-bit systems, although some ports may be available for other platforms.

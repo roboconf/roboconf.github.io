@@ -3,7 +3,7 @@ title: "Microsoft Azure Support"
 layout: page
 cat: "ug-last"
 id: "target-iaas-azure"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf has a target implementation for Microsoft Azure.  

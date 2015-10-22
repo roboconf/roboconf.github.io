@@ -3,7 +3,7 @@ title: "Configuring the Deployment Manager"
 layout: page
 cat: "ug-last"
 id: "configuring-the-deployment-manager"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Once the Deployment Manager (DM) has been installed, it needs to be configured.  

@@ -3,7 +3,7 @@ title: "LAMP Example - Part 1"
 layout: page
 cat: "ug-last"
 id: "lamp-example-part-1"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Let's take an example to understand the way Roboconf works.  

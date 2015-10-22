@@ -3,7 +3,7 @@ title: "Roboconf's Eclipse plug-in"
 layout: page
 cat: "ug-last"
 id: "eclipse-plugin"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 There is an Eclipse plug-in for Roboconf.  

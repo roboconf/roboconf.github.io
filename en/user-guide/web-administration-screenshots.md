@@ -3,7 +3,7 @@ title: "Screenshots of the Web Administration"
 layout: page
 cat: "ug-last"
 id: "web-administration-screenshots"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 This page shows screenshots of [Roboconf's Web Administration](web-administration.html).  

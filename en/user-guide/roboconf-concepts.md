@@ -3,7 +3,7 @@ title: "Roboconf Concepts"
 layout: page
 cat: "ug-last"
 id: "roboconf-concepts"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf is made up of several blocks.

@@ -3,7 +3,7 @@ title: "Roboconf DSL"
 layout: page
 cat: "ug-last"
 id: "roboconf-dsl"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Here is a summary of Roboconf's DSL and keywords.  

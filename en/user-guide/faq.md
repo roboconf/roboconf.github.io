@@ -3,7 +3,7 @@ title: "FAQ"
 layout: page
 cat: "ug-last"
 id: "faq"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 ## What is Roboconf?

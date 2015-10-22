@@ -3,7 +3,7 @@ title: "The Script Plug-in"
 layout: page
 cat: "ug-last"
 id: "plugin-script"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 The Script plug-in executes a script (e.g. bash, shell, perl, python...) on every life cycle step.  

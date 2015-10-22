@@ -3,7 +3,7 @@ title: "LAMP Example - Part 2"
 layout: page
 cat: "ug-last"
 id: "lamp-example-part-2"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 ## IaaS Elasticity Patterns

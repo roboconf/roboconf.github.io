@@ -3,7 +3,7 @@ title: "List of Plugins"
 layout: page
 cat: "ug-last"
 id: "list-of-plugins"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 This page lists all the available plug-ins for Roboconf agents.

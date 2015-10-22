@@ -3,7 +3,7 @@ title: "Roboconf Architecture"
 layout: page
 cat: "ug-last"
 id: "roboconf-architecture"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf relies on 3 elements: the DM, agents and a messaging server (RabbitMQ).  

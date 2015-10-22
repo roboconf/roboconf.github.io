@@ -3,7 +3,7 @@ title: "The File Plug-in"
 layout: page
 cat: "ug-last"
 id: "plugin-file"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 The file plug-in is a handy plug-in to perform basic file operations.  

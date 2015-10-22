@@ -3,7 +3,7 @@ title: "Configuring an Agent"
 layout: page
 cat: "ug-last"
 id: "configuring-an-agent"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Once the agent has been installed, you have to configure it.  

@@ -3,7 +3,7 @@ title: "Editors"
 layout: page
 cat: "ug-last"
 id: "editors"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf's configuration files use a custom notation.  

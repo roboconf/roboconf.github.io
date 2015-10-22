@@ -3,7 +3,7 @@ title: "Installing Everything with Scripts"
 layout: page
 cat: "ug-last"
 id: "installing-everything-with-scripts"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 > Roboconf has now Debian packages to ease installation.  

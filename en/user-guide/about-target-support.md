@@ -3,7 +3,7 @@ title: "About Target Support"
 layout: page
 cat: "ug-last"
 id: "about-target-support"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf can deploy an application on various targets.  

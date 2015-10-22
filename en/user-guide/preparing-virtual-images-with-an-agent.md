@@ -3,7 +3,7 @@ title: "Preparing Virtual Images with an Agent"
 layout: page
 cat: "ug-last"
 id: "preparing-virtual-images-with-an-agent"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 So that Roboconf can deploy Software components on remote hosts (VMs, devices...), there need to be a Roboconf

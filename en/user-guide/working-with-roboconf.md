@@ -3,7 +3,7 @@ title: "Working with Roboconf"
 layout: page
 cat: "ug-last"
 id: "working-with-roboconf"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 ## Creating a Roboconf Application

@@ -3,7 +3,7 @@ title: "Openstack Support"
 layout: page
 cat: "ug-last"
 id: "target-iaas-openstack"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf has a target implementation for Openstack.  

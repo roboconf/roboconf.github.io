@@ -3,7 +3,7 @@ title: "Reusable Slides"
 layout: page
 cat: "ug-last"
 id: "reusable-slides"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 A set of slides is available on this web site.  

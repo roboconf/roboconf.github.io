@@ -3,7 +3,7 @@ title: "Roboconf's Maven plug-in"
 layout: page
 cat: "ug-last"
 id: "maven-plugin"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf's Maven plug-in allows to automate some tasks related to Roboconf.  

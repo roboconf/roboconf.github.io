@@ -3,7 +3,7 @@ title: "Reusability in Models"
 layout: page
 cat: "ug-last"
 id: "reusability-in-models"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 This page explains several ways of creating reusable graph portions.  

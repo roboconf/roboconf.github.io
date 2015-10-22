@@ -3,7 +3,7 @@ title: "In-Memory Support"
 layout: page
 cat: "ug-last"
 id: "target-in-memory"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf has a target implementation to run agents in memory.    

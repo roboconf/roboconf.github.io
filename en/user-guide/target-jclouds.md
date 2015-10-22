@@ -3,7 +3,7 @@ title: "JClouds Support"
 layout: page
 cat: "ug-last"
 id: "target-jclouds"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf has a generic target implementation based on [Apache JClouds](http://jclouds.apache.org).  

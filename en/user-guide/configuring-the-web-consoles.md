@@ -3,7 +3,7 @@ title: "Configuring the Web Consoles"
 layout: page
 cat: "ug-last"
 id: "configuring-the-web-consoles"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "user-guide" ]
 ---
 
 Both the DM and the agent distributions rely on Apache Karaf.  
