@@ -1,9 +1,9 @@
 ---
 title: "Roboconf DSL"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "roboconf-dsl"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Here is a summary of Roboconf's DSL and keywords.  
@@ -34,8 +34,8 @@ Here are the supported properties for a component.
 | --- | --- | --- |
 | installer | The installer name, that is to say, which Roboconf extension will handle the life cycle of this component instances. | yes |
 | children | A list of component names, separated by a comma. As an example, an Apache component being a child of a VM component means we could deploy Apache on a VM. | no |
-| exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. For readability purpose, this keyword can appear more than once for a Roboconf component. | no |
-| imports | A list of imported variables, separated by a comma. It means this component will need dependencies to be started. An import can be marked as **optional**. An import can also be marked as **external** (see [this page](inter-application-dependencies.html) for more details). For readability purpose, the **imports** keyword can appear more than once for a Roboconf component. | no |
+| exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. | no |
+| imports | A list of imported variables, separated by a comma. It means this component will need dependencies to be started. An import can be marked as **optional**. | no |
 | facets | Some properties can be grouped together in facets. So, this is a list of facet names, separated by a comma. | no |
 | extends | The name of a component this component extends. All its properties and recipes will be inherited. | no |
 
@@ -51,11 +51,9 @@ ApacheServer {
 	children: My-Dash-Board, Marketing-Suite;
 
 	# Properties exported by this component.
+	exports: ip, port = 19099;
 	# 'port' should have a default value, or we will have to set it when we create an instance.
-	exports: port = 19099;
-	
-	# 'ip' is a special variable. It will be updated at runtime by a Roboconf agent.
-	exports: ip;
+	# 'ip' will be updated at runtime by Roboconf's agent.
 
 	# Other components properties that this server needs to have so that it can start.
 	imports: LB.port (optional), LB.ip (optional);
@@ -71,17 +69,12 @@ ApacheServer {
 	# imports: LB.port (optional), LB.ip;
 	# 
 	# ... then an Apache instance would need at least one LB instance somewhere.
-	
-	# Imports may also reference variables from other applications
-	imports: external Lamp.lb-ip;
 }
 </code></pre>
 
 Notice that exported variables are prefixed by the component (or the facet) name that defined them.  
 As an example, if a component Tomcat exports **port** and **ip**, and that another component wants to import them,
 it will need to import **Tomcat.port** and **Tomcat.ip**. Same thing if the variables are exported by a facet.
-
-For more information about external imports, read [this page](inter-application-dependencies.html).
 
 ## Facets
 
@@ -105,7 +98,7 @@ Here are the supported properties for a facet.
 | Property | Description | Required |
 | --- | --- | --- |
 | children | A list of component names, separated by a comma. As an example, an Apache component being a child of a VM component means we could deploy Apache on a VM. | no |
-| exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. For readability purpose, this keyword can appear more than once for a Roboconf component. | no |
+| exports | A list of exported variables, separated by a comma. Network properties are set dynamically by Roboconf. Others (e.g. a port) must have a default value. | no |
 | extends | A facet may extend other facets. So, this is a list of facet names, separated by a comma. | no |
 
 

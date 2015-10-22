@@ -1,9 +1,9 @@
 ---
 title: "Installing the Messaging Server"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "installing-the-messaging-server"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 The messaging server is a crucial element so that Roboconf can work.  

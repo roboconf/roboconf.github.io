@@ -1,9 +1,9 @@
 ---
 title: "Working with Roboconf"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "working-with-roboconf"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 ## Creating a Roboconf Application

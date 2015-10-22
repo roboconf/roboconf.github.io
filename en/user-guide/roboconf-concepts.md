@@ -1,9 +1,9 @@
 ---
 title: "Roboconf Concepts"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "roboconf-concepts"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Roboconf is made up of several blocks.

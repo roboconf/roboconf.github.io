@@ -1,9 +1,9 @@
 ---
 title: "In-Memory Support"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "target-in-memory"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Roboconf has a target implementation to run agents in memory.    
@@ -35,16 +35,12 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for in-memory
-handler = in-memory
-name = 
-description = 
+target.id = in-memory
 ```
 
 Here is a complete description of the parameters for Amazon Web Services.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| handler | Determines the target handler to use | none, must be "in-memory" | yes |
-| name | A human-readable name for the target | - | no |
-| description | A description of the target. | - | no |
+| target.id | Determines the target handler to use | none, must be "in-memory" | yes |
 | in-memory.delay | The delay (in milliseconds) to wait for before instantiating a new agent in memory. | 0 | yes |

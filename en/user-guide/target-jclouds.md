@@ -1,9 +1,9 @@
 ---
 title: "JClouds Support"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "target-jclouds"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Roboconf has a generic target implementation based on [Apache JClouds](http://jclouds.apache.org).  
@@ -22,9 +22,7 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for JClouds
-handler = jclouds
-name = 
-description = 
+target.id = jclouds
 
 # The JClouds provider
 jclouds.provider-id = 
@@ -47,9 +45,7 @@ Here is a complete description of the parameters for JClouds.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| handler | Determines the target handler to use | none, must be "jclouds" | yes |
-| name | A human-readable name for the target | - | no |
-| description | A description of the target. | - | no |
+| target.id | Determines the target handler to use | none, must be "jclouds" | yes |
 | jclouds.provider-id | The ID of the JClouds provider (AWS, Rackspace, etc). | none | yes |
 | jclouds.endpoint | The URL to reach the cloud API. | none | yes |
 | jclouds.identity | The user name for the cloud API. | none | yes |

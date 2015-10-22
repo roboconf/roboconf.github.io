@@ -1,9 +1,9 @@
 ---
 title: "Tutorial - Apache Storm"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "tutorial-apache-storm"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 ## Introduction

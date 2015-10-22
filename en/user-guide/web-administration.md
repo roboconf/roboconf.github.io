@@ -1,9 +1,9 @@
 ---
 title: "Web Administration"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "web-administration"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Roboconf is a distributed application.  

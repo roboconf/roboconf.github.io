@@ -1,9 +1,9 @@
 ---
 title: "Autonomic Management"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "autonomic-management-with-roboconf"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Autonomic management is an experimental feature of Roboconf.  
@@ -263,10 +263,9 @@ There are 4 available handlers.
 * **Log**: to log an entry. There is no parameter.
 * **Mail**: to send an e-mail. It accepts only one parameter, which is an e-mail address.
 * **Replicate-Service**: to replicate a component on a new machine. It takes a chain of component names as parameter.
-* **Replicate-Instance**: to replicate a template instance on a new machine. It takes the name of a root instance as parameter.
 * **Delete-Service**: to delete a component that was replicated. It takes a component name as parameter. 
  
-Let's see an example with 5 different reactions to 5 different measures.
+Let's see an example with 4 different reactions to 4 different measures.
 
 ```properties
 # This is a comment ;)
@@ -294,10 +293,6 @@ The subject line is optional.
 
 # When "event-4" is triggered, log an entry.
 [reaction event-4 Log]
-
-# When "event-5" is triggered, repicate a root instance with all its children.
-[reaction event-5 Replicate-Instance]
-my-root-instance-name
 ```
 
 To send an e-mail, you have to create a properties file.  
@@ -322,53 +317,6 @@ mail.smtp.ssl.trust: my.mail.server
 ```
 
 See **javax.mail** properties for more details.
-
-
-## Delay between Reactions
-
-Reactions cannot behave like crazy horses.  
-They have some native limits, and some other can be defined by users.
-
-For **Mail**, a delay can be set between each email sending.  
-That might prevent spamming during heavy periods.
-
-```properties
-# Add a delay of 60 seconds between every e-mail sending.
-[reaction event-3 Mail 60]
-```
-
-For **Replicate-Service** and **Replicate-Instance**, a subsequent invocation will only work if the previously created
-instances still exist in the model and if it was entirely started. If the new instance is still under
-deployment, the reaction will not be executed while the previous one has not yet completed. It is also
-possible to define, in addition, a safety delay. This delay is compared with the moment the VM (root instance)
-is deployed and started. It means it does not check for children components.
-
-```properties
-# We here define that no service can be replicated during a period of
-# 30 seconds after a new VM created by "Replicate-Service" is started.
-#
-# This 90-second delay is the estimated time taken to deploy all the software on this 
-# VM and for it to impact the overall application - e.g. reduce the charge on other servers.
-[reaction event-2 Replicate-Service 90]
-```
-
-Eventually, for **Delete-Service**, there are both a user-defined delay and a native control.  
-Native control means you cannot delete a service if the previously deleted one is totally stopped.
-The opposite would mean the previous automated reaction is still in progress, and it would make
-no sense to execute it twice. The user-delay can be used to set a minimum-period between the execution of
-this reaction.
-
-```properties
-# We here define that no service can be deleted during a period of
-# 30 seconds after its invocation.
-#
-# This 90-second delay is the estimated time taken to kill the VM
-# and for it to impact the overall application - e.g. dispatch the charge on the remaining servers.
-[reaction event-5 Delete-Service 90]
-```
-
-As a reminder, the **Delete-Service** reaction can only remove machines it created.  
-Machines created by users are not impacted by this reaction.
 
 
 ## Activation

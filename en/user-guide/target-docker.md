@@ -1,9 +1,9 @@
 ---
 title: "Docker Support"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "target-docker"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Roboconf has a target implementation for Docker.  
@@ -22,9 +22,7 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Docker
-handler = docker
-name = 
-description = 
+target.id = docker
 
 docker.endpoint = http://localhost:4243
 docker.image = 0f3087570887fdgf14dfg1dd4f
@@ -32,135 +30,27 @@ docker.user = guest
 docker.password = guest
 ```
 
-Here is a complete description of the parameters for Docker.  
-Let's begin with general parameters.
+Here is a complete description of the parameters for Docker.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| handler | Determines the target handler to use. | none, must be "docker" | yes |
-| name | A human-readable name for the target | - | no |
-| description | A description of the target. | - | no |
+| target.id | Determines the target handler to use. | none, must be "docker" | yes |
 | docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). | http://localhost:4243 | no |
 | docker.image | The ID or tag (name) of the docker image used as a template for the VM (as shown by "docker images", for example). If the image is not found, Roboconf will try to generate one, using "\<docker.image\>:\<docker.image\>" as its tag: if so, the **docker.agent.package** property is required so that Roboconf knows where to find the Roboconf agent to install on the generated image. If it is an image ID, it must be the full ID, that can be retrieved with **docker images --no-trunc**. | "generated.by.roboconf" | no |
 | docker.user | The name of the user to connect. | none | no |
 | docker.password | The password of the user to connect. | none | no |
 | docker.email | The email of the user to connect. | none | no |
 | docker.version | The Docker version (for API compatibility). This version supports versions until Docker v1.17. | none | no |
-| docker.run.exec | The command line to run in the created Docker container. *See dedicated [The docker.run.exec property](#the-docker.run.exec-property) section below* | *See the section below* | no |
-
-Let's now take a look at parameters related to image generation.
-
-| Property | Description | Default | Mandatory |
-| --- | --- | --- | --- |
-| docker.generate.image | A boolean value that indicate whether a Docker image for Roboconf should be generated. Disabled by default. | false | no |
-| docker.agent.package.url | If you want this extension to generate a Docker image for you, this parameter is an **URL** that points to the ZIP or TAR.GZ file of a Roboconf agent distribution. If not specified, Roboconf will try to guess it. The guess process is described in [this section](#the-docker.agent.package.url-property) below. | *See below* | no |
+| docker.agent.package | If you want this extension to generate a Docker image for you, this parameter is an **URL** that points to the ZIP or TAR.GZ file of a Roboconf agent distribution. The generated image is based on **Ubuntu**. | none | no |
 | docker.agent.jre-packages | If you want this extension to generate a Docker image for you, this parameter indicates the JRE to install (as a system package), as well as other optional packages, separated by spaces. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | openjdk-7-jre-headless | no |
-| docker.additional.packages | Additional packages to install on the generated image, using **apt-get install**. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | none | no |
 | docker.base.image | If Roboconf generates an image for you, this property is used to determine the base image to use. The generated Dockerfile will begin with **FROM** *docker.base.image*... It is your responsibility to verify this image is available locally (either you created it, or you pulled it from Docker's hub). If the base image does not exist, an error will be thrown. | ubuntu | no |
-| docker.additional.deploy | A list of URLs that point to additional elements you would like to deploy in Karaf / the Roboconf agent. Example: bundles. Local and remote URLs are supported (http, file...). URLs should be separated by spaces. If you have several ones, we suggest you put one URL per line, each line ending with ` \`, except the last one. This will keep your **target.properties** file readable. | none | no |
- 
+| docker.command.line | A command line to pass to the Docker container when it is created. | /usr/local/roboconf-agent/start.sh | no |
+| docker.command.use | A boolean to indicate whether Roboconf should pass a command when it creates a new Docker container. Set it to **false** if you added a **CMD** instruction in your Dockerfile. | true | no |
 
 At least one of **docker.image** or **docker.agent.package** must be specified.  
 
 > As a good practice, **docker.image** should always be specified.  
 > Even when Roboconf generates the image.
-
-## <a name="the-docker.run.exec-property"></a>The docker.run.exec property
-
-This target property holds a command line to pass to the Docker container when it is started.  
-By default, a Roboconf agent is started, but it is possible to specify another command to do special things before/while the Roboconf agent is started.
-
-The value of this property  **must** be formatted using the JSON string array syntax.
-
-* If this property is left undefined, then Roboconf will use the default value.
-* If the property is set, its value will be used as the command to run the created container.
-* If a custom Dockerfile has been provided, and if the Dockerfile contains a `CMD` instruction, you can explicitly
-set this property to an empty array `[]`, so Roboconf will use the `CMD` from the Dockerfile.
-
-The default value for this property is...
-
-```json
-[
-  "/usr/local/roboconf-agent/start.sh",
-  "etc/net.roboconf.messaging.$messagingType$.cfg",
-  "agent.application-name=$applicationName$",
-  "agent.scoped-instance-path=$instancePath$",
-  "agent.messaging-type=$messagingType$",
-  "$msgConfig$"
-]
-```
-
-The parameter values prefixed and suffixed by the dollar symbol are replaced at runtime by Roboconf.
-Indeed, a Roboconf agent needs some configuration before it can run.  
-The **docker.run.exec** property allows to use several markers, that will be substituted by the actual configuration for the agent.
-
-| Marker | Description |
-| --- | --- | --- |
-| $applicationName$ | The name of the application |
-| $instancePath$ | The path of the scoped instance |
-| $messagingType$ | The type of the messaging factory |
-| $msgConfig$ | The messaging configuration properties |
-
-There is one more thing about the **$msgConfig$** marker, which is a bit more special than the other ones. As it expands to several
-arguments, it can only be used alone *verbatim*, in its own argument. This marker is substituted by each one of the Roboconf agent
-messaging configuration property, in a separated argument, prefixed with `msg.`.
-
-According to the substitution rules explained above, and for...
-
-* ... an application named *app*,
-* ... a scoped instance whose path is */path/to/instance*,
-* ... a messaging factory type set to *telegraphy* with 2 parameters, **code=morse** and **medium=wire**...
-
-... then the command line will be substituted and expanded to...
-
-```bash
-/usr/local/roboconf-agent/start.sh \
-    "etc/net.roboconf.messaging.telegraphy.cfg" \
-    "agent.application-name=app" \
-    "agent.scoped-instance-path=/path/to/instance" \
-    "agent.messaging-type=telegraphy" \
-    "msg.code=morse" \
-    "msg.medium=wire"
-```
-
-
-Notice that parameters injection only works when variables are in their own argument.  
-Said differently, **if you override** the default value, the JSon array cannot mix a
-variable with something else.
-
-```properties
-# OK! will expand to "msg.property1=value1", "msg.property2=value2", …
-"$msgConfig$"
-
-# Not OK! $msgConfig$ can only be used alone in its own argument.
-"msgParam:$msgConfig$"
-
-# Not OK! Same as above, only usable alone.
-"$messagingType$ $msgConfig$"
-
-# OK! Used in separated arguments.
-"type=$messagingType$", "$msgConfig$"
-```
-
-
-## <a name="the-docker.agent.package.url-property"></a>The docker.agent.package.url property
-
-This property holds an URL that points to a Roboconf agent distribution (either a ZIP or a tar.GZ file).  
-If not specified, Roboconf tries to guess it. First, it assumes the agent's version should be the same that the DM's one.
-By introspecting its configuration, the DM can find it (provided it runs in an OSGi environment). Then, it tries to find a
-Maven artifact that will match the agent's distribution for this version.
-
-Here is the resolution order:
-
-1. Try to find it in the local Maven repository.
-2. If it is not found locally, contact [Sonatype's web service API](https://repository.sonatype.org/nexus-restlet1x-plugin/default/docs/index.html) to find it.
-
-Sonatype is the Maven provider/intermediate Roboconf uses for snapshots builds hosting and releases management.  
-Snapshot versions resolution will use the latest build. Released versions are hosted by public Maven repositories,
-including Maven Central.
-
-Notice that it is not possible to download snapshots of released versions. As soon as a version is released, all the snapshots
-are deleted.  
 
 
 ## Docker Configuration
@@ -323,8 +213,6 @@ ln -s roboconf-karaf-dist-agent/ roboconf-agent
 
 Now, you have to add a **start.sh** executable script in the **/usr/local/roboconf-agent** directory.  
 Set the following content (the script is mainly used to complete the agent setup at startup time).
-
-<a name="start.sh"></a>
 
 ```bash
 #!/bin/bash"

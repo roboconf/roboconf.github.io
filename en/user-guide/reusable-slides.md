@@ -1,9 +1,9 @@
 ---
 title: "Reusable Slides"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "reusable-slides"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 A set of slides is available on this web site.  

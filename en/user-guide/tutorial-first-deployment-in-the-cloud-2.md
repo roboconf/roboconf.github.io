@@ -1,9 +1,9 @@
 ---
 title: "Tutorial - First Deployment in the Cloud - 2/4"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "tutorial-first-deployment-in-the-cloud-2"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 ## Installing the Roboconf agent

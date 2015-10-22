@@ -1,9 +1,9 @@
 ---
 title: "Inheritance and variables"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "inheritance-and-variables"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 This page explains how component inheritance and facets impact the

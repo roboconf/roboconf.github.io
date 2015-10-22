@@ -1,9 +1,9 @@
 ---
 title: "Roboconf Architecture"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "roboconf-architecture"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Roboconf relies on 3 elements: the DM, agents and a messaging server (RabbitMQ).  
@@ -19,6 +19,3 @@ The next diagram illustrates this with some cloud infrastructures.
 It only shows interaction between Roboconf parts, and not between the parts of the applications that Roboconf deploys. 
 
 <img src="/resources/img/roboconf-architecture-example.jpg" alt="Sample Architecture Diagram" class="gs" />
-
-The overall idea is that the agents run remotely (e.g. in the cloud), while the DM (Deployment Manager)
-can run in a secured area. The DM is indeed a administration tool that requires a safer installation. 

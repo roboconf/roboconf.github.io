@@ -47,7 +47,7 @@ La version en cours de développement est la **0.5-SNAPSHOT**.
 			<a href="nouveautes/principales-nouveautes-0.4.html">Nouveautés</a>
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="guide-utilisateur-0.4/guide-utilisateur.html">Guide Utilisateur</a>
+			<a href="guide-utilisateur/guide-utilisateur.html">Guide Utilisateur</a>
 			
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Tickets: 

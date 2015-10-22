@@ -1,9 +1,9 @@
 ---
 title: "Embedded Support"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "target-embedded"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Embedded support addresses the cases where the machines already exist or are created manually.  
@@ -26,15 +26,7 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Embedded Machines
-handler = embedded
-name = 
-description = 
+target.id = embedded
 ```
 
-Here is a complete description of the parameters for OpenStack.
-
-| Property | Description | Default | Mandatory |
-| --- | --- | --- | --- |
-| handler | Determines the target handler to use | none, must be "embedded" | yes |
-| name | A human-readable name for the target | - | no |
-| description | A description of the target. | - | no |
+This kind of target does not have any specific property.

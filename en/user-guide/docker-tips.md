@@ -1,18 +1,33 @@
 ---
 title: "Docker Tips"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "docker-tips"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
   
 Note that Docker runs mainly on Linux 64-bit systems, although some ports may be available for other platforms.
 
 
-## Note to install latest Docker
+## Note to install latest Docker (Ubuntu)
 
-Docker has known many installation ways.  
-The best solution is to read the [official Docker guide](https://docs.docker.com/installation) to get the last version.
+On Debian systems, you can install Docker with...
+
+```tcl
+sudo apt-get install lxc-docker
+```
+
+Or see [docker.com](http://docker.com) for other platforms).  
+For Ubuntu, since March 3<sup>rd</sup>, 2015 (Docker 1.5.x), you may have to use...
+
+```tcl
+wget -qO- https://get.docker.io/gpg | sudo apt-key add -
+sudo sh -c "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+sudo apt-get update
+sudo apt-get install lxc-docker
+```
+
+.. to get the last version.
 
 
 ## Docker Configuration

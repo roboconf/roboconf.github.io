@@ -1,9 +1,9 @@
 ---
 title: "The File Plug-in"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "plugin-file"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 The file plug-in is a handy plug-in to perform basic file operations.  

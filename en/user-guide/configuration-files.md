@@ -1,9 +1,9 @@
 ---
 title: "Configuration Files"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "configuration-files"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 ## Outline
@@ -42,9 +42,9 @@ Roboconf configuration files should be organized as follows:
 	├── graph
 	│   ├── main.graph
 	│   ├── VM_EC2
-	│   │   └── target.properties (optional)
+	│   │   └── target.properties
 	│   ├── VM_Openstack
-	│   │   └── target.properties (optional)
+	│   │   └── target.properties
 	│   └── MyApp
 	│       ├── files
 	│       └── script
@@ -53,7 +53,7 @@ Roboconf configuration files should be organized as follows:
 	│           ├── stop.sh
 	│           └── update.sh
 	└── instances
-	    └── model.instances (optional)
+	    └── model.instances
 
 Content of **application.properties**:
 

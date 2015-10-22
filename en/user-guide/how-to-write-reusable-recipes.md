@@ -1,9 +1,9 @@
 ---
 title: "How to write Reusable Recipes?"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "how-to-write-reusable-recipes"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Here are some good practices to write reusable recipes.

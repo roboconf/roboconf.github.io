@@ -1,9 +1,9 @@
 ---
 title: "The Puppet Plug-in"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "plugin-puppet"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 The Puppet plug-in enables Puppet deployment with Roboconf.  

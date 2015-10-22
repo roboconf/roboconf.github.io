@@ -1,9 +1,9 @@
 ---
 title: "Graph Resources"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "graph-resources"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 The graph definition has already been introduced.  

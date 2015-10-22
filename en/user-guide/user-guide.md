@@ -1,7 +1,7 @@
 ---
 title: "User Guide"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "index"
 menus: [ "users", "user-guide" ]
 ---
@@ -10,6 +10,9 @@ menus: [ "users", "user-guide" ]
 	We use HTML syntax in this page because we need CSS classes for floating.
 	Markdown does not support it.
  -->
+
+> This is the user guide for Roboconf 0.4.
+
 
 <div class="floated">
 	<h2>Getting Started</h2>
@@ -84,7 +87,6 @@ menus: [ "users", "user-guide" ]
 	<li><a href="editors.html">Editors</a></li>
 	<li><a href="eclipse-plugin.html">The Eclipse plug-in</a></li>
 	<li><a href="maven-plugin.html">The Maven plug-in</a></li>
-	<li><a href="dm-templating.html">The DM's templating</a></li>
 	</ul>
 </div>
 
@@ -99,14 +101,6 @@ menus: [ "users", "user-guide" ]
 </div>
 
 <div class="floated">
-	<h2>Advanced Topics</h2>
-
-	<ul>
-	<li><a href="inter-application-dependencies.html">Inter-Application Dependencies</a></li>
-	</ul>
-</div>
-
-<div class="floated">
 	<h2>Resources</h2>
 
 	<ul>
@@ -117,15 +111,18 @@ menus: [ "users", "user-guide" ]
 	</ul>
 </div>
 
+<!-- TRWWR -->
+<!-- To remove when we release -->
 <div class="floated">
-	<h2>Released Versions</h2>
+	<h2>Other Versions</h2>
 
 	<ul>
-	<li><a href="../user-guide-0.4/user-guide.html">User Guide for version 0.4</a></li>
+	<li><a href="../user-guide-snapshot/user-guide.html">User Guide (snapshot)</a></li>
 	<li><a href="../user-guide-0.3/user-guide.html">User Guide for version 0.3</a></li>
 	<li><a href="../user-guide-0.2/user-guide.html">User Guide for version 0.2</a></li>
 	<li><a href="../user-guide-0.1/user-guide.html">User Guide for version 0.1</a></li>
 	</ul>
 </div>
+<!-- TRWWR -->
 
 <div class="clear"></div>

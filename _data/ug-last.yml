@@ -1,0 +1,189 @@
+#
+# User Guide Version 0.4
+#
+maven-examples-documentation:
+  en: user-guide/maven-examples-documentation
+  
+roboconf-architecture:
+  en: user-guide/roboconf-architecture
+  
+configuring-the-web-consoles:
+  en: user-guide/configuring-the-web-consoles
+  
+eclipse-plugin:
+  en: user-guide/eclipse-plugin
+  
+maven-plugin:
+  en: user-guide/maven-plugin
+  
+reusability-in-models:
+  en: user-guide/reusability-in-models
+    
+reusable-recipes-index:
+  en: user-guide/reusable-recipes-index
+  
+how-to-write-reusable-recipes:
+  en: user-guide/how-to-write-reusable-recipes
+  
+tutorial-getting-started-with-roboconf:
+  en: user-guide/tutorial-getting-started-with-roboconf
+  
+tutorial-first-deployment-in-the-cloud:
+  en: user-guide/tutorial-first-deployment-in-the-cloud
+  
+tutorial-first-deployment-in-the-cloud-1:
+  en: user-guide/tutorial-first-deployment-in-the-cloud-1
+  
+tutorial-first-deployment-in-the-cloud-2:
+  en: user-guide/tutorial-first-deployment-in-the-cloud-2
+  
+tutorial-first-deployment-in-the-cloud-3:
+  en: user-guide/tutorial-first-deployment-in-the-cloud-3
+  
+tutorial-first-deployment-in-the-cloud-4:
+  en: user-guide/tutorial-first-deployment-in-the-cloud-4
+  
+reusable-slides:
+  en: user-guide/reusable-slides
+  
+docker-tips.html:
+  en: user-guide/docker-tips
+  
+autonomic-management-with-roboconf:
+  en: user-guide/autonomic-management-with-roboconf
+  
+tutorial-apache-storm:
+  en: user-guide/tutorial-apache-storm  
+  
+inheritance-and-variables:  
+  en: user-guide/inheritance-and-variables
+  
+web-administration-screenshots:
+  en: user-guide/web-administration-screenshots
+  
+configuring-the-loggers:
+  en: user-guide/configuring-the-loggers
+
+installing-roboconf:
+  en: user-guide/installing-roboconf
+  
+installing-everything-with-scripts:
+  en: user-guide/installing-everything-with-scripts
+  
+installing-the-deployment-manager:
+  en: user-guide/installing-the-deployment-manager
+  
+installing-an-agent:
+  en: user-guide/installing-an-agent
+  
+configuring-the-deployment-manager:
+  en: user-guide/configuring-the-deployment-manager
+  
+configuring-an-agent:
+  en: user-guide/configuring-an-agent
+  
+configuring-the-messaging:
+  en: user-guide/configuring-the-messaging
+  
+installing-the-messaging-server:
+  en: user-guide/installing-the-messaging-server
+  
+preparing-virtual-images-with-an-agent:
+  en: user-guide/preparing-virtual-images-with-an-agent
+  
+about-target-support:
+  en: user-guide/about-target-support
+  
+list-of-deployment-targets:
+  en: user-guide/list-of-deployment-targets
+  
+target-iaas-openstack:
+  en: user-guide/target-iaas-openstack
+  
+target-jclouds:
+  en: user-guide/target-jclouds
+  
+target-docker:
+  en: user-guide/target-docker
+  
+target-embedded:
+  en: user-guide/target-embedded
+  
+target-iaas-aws:
+  en: user-guide/target-iaas-aws
+  
+target-iaas-vmware:
+  en: user-guide/target-iaas-vmware
+  
+target-iaas-azure:
+  en: user-guide/target-iaas-azure
+  
+target-in-memory:
+  en: user-guide/target-in-memory
+  
+about-plugins:
+  en: user-guide/about-plugins
+  
+list-of-plugins:
+  en: user-guide/list-of-plugins
+  
+plugin-logger:
+  en: user-guide/plugin-logger
+  
+plugin-file:
+  en: user-guide/plugin-file
+  
+plugin-script:
+  en: user-guide/plugin-script
+  
+plugin-puppet:
+  en: user-guide/plugin-puppet
+  
+roboconf-dsl:
+  en: user-guide/roboconf-dsl
+  
+monitoring-roboconf:
+  en: user-guide/monitoring-roboconf
+  
+monitoring-applications-deployed-with-roboconf:
+  en: user-guide/monitoring-applications-deployed-with-roboconf
+  
+editors:
+  en: user-guide/editors
+  
+configuration-files:
+  en: user-guide/configuration-files
+  
+faq:
+  en: user-guide/faq
+  
+roboconf-concepts:
+  en: user-guide/roboconf-concepts
+  
+application-descriptor:
+  en: user-guide/application-descriptor
+  
+instances-description:
+  en: user-guide/instances-description
+  
+graph-definition:
+  en: user-guide/graph-definition
+  
+graph-resources:
+  en: user-guide/graph-resources
+  
+web-administration:
+  en: user-guide/web-administration
+  
+lamp-example-part-1:
+  en: user-guide/lamp-example-part-1
+  
+lamp-example-part-2:
+  en: user-guide/lamp-example-part-2
+  
+index:
+  en: user-guide/user-guide
+  fr: guide-utilisateur/guide-utilisateur
+  
+working-with-roboconf:
+  en: user-guide/working-with-roboconf

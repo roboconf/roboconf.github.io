@@ -1,9 +1,9 @@
 ---
 title: "Monitoring"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "monitoring"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Monitoring applications deployed with Roboconf (application servers, databases...) still needs to be addressed.  

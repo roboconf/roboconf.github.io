@@ -1,9 +1,9 @@
 ---
 title: "Application Descriptor"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "application-descriptor"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 A Roboconf project must contain a **descriptor** directory with an application descriptor inside.  
@@ -43,9 +43,3 @@ graph-entry-point = main.graph
 # indicates the one to read first.
 instance-entry-point = definition.instances
 ```
-
-
-## Advanced Properties
-
-Additional properties can appear in this descriptor.  
-See the page related to [inter-applications dependencies](inter-application-dependencies.html) for more details.

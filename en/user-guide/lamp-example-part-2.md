@@ -1,9 +1,9 @@
 ---
 title: "LAMP Example - Part 2"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "lamp-example-part-2"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 ## IaaS Elasticity Patterns

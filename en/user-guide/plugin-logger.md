@@ -1,9 +1,9 @@
 ---
 title: "The Logger Plug-in"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "plugin-logger"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 The logger plug-in is a plug-in which only logs invocations.  

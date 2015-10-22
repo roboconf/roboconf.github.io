@@ -47,7 +47,7 @@ The current development version is **0.5-SNAPSHOT**.
 			<a href="new/new-and-noteworthy-0.4.html">New &amp; Noteworthy</a>
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="user-guide-0.4/user-guide.html">User Guide</a>
+			<a href="user-guide/user-guide.html">User Guide</a>
 			
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Issues: 

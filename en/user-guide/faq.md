@@ -1,9 +1,9 @@
 ---
 title: "FAQ"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "faq"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 ## What is Roboconf?

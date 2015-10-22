@@ -1,9 +1,9 @@
 ---
 title: "Installing Roboconf"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "installing-roboconf"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 Roboconf is implemented in Java. So, it should work on any system.  
@@ -59,10 +59,6 @@ sudo apt-get install roboconf-agent
 ```
 
 ... to install a Roboconf agent.
-
-
-> Notice the package for the Roboconf agent asks a question.  
-> This prevents from having to configure the agent after the installation.
 
 Configuration files are available under **/etc/roboconf-dm** or **/etc/roboconf-agent**.  
 Logs are located under **/var/log/roboconf-dm** or **/var/log/roboconf-agent**.

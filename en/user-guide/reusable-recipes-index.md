@@ -1,9 +1,9 @@
 ---
 title: "Index of Reusable Recipes"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "reusable-recipes-index"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 This page acts as a central hub to index and reference reusable recipes.

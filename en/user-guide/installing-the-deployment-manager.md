@@ -1,9 +1,9 @@
 ---
 title: "Installing the Deployment Manager"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "installing-the-deployment-manager"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.4" ]
 ---
 
 The Deployment Manager (or DM) is an OSGi application that drives deployments and administration actions.  
