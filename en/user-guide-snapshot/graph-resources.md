@@ -3,7 +3,7 @@ title: "Graph Resources"
 layout: page
 cat: "ug-snapshot"
 id: "graph-resources"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 The graph definition has already been introduced.  

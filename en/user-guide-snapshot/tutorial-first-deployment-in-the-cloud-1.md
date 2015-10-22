@@ -3,7 +3,7 @@ title: "Tutoriel - Premier Déploiement dans le Cloud - 1/4"
 layout: page
 cat: "ug-snapshot"
 id: "tutorial-first-deployment-in-the-cloud-1"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 ## Configuring Amazon Web Services

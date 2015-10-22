@@ -3,7 +3,7 @@ title: "Roboconf DSL"
 layout: page
 cat: "ug-snapshot"
 id: "roboconf-dsl"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 Here is a summary of Roboconf's DSL and keywords.  

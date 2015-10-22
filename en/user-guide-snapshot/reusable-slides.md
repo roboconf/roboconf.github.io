@@ -3,7 +3,7 @@ title: "Reusable Slides"
 layout: page
 cat: "ug-snapshot"
 id: "reusable-slides"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 A set of slides is available on this web site.  

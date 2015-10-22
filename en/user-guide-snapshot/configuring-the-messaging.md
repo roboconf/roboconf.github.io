@@ -3,7 +3,7 @@ title: "Configuring the Messaging"
 layout: page
 cat: "ug-snapshot"
 id: "configuring-the-messaging"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 The messaging designates the means the DM and agents use to exchange messages.  

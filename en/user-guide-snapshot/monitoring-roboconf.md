@@ -3,7 +3,7 @@ title: "Monitoring"
 layout: page
 cat: "ug-snapshot"
 id: "monitoring-roboconf"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 Roboconf's monitoring means monitoring the DM, the messaging server (RabbitMQ) and agents.  

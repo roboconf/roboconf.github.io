@@ -3,7 +3,7 @@ title: "Inter-Application Dependencies"
 layout: page
 cat: "ug-snapshot"
 id: "inter-application-dependencies"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 Until now, Roboconf has been used to exchange information within a given application.  

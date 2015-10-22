@@ -3,7 +3,7 @@ title: "M2R Lab"
 layout: page
 cat: "ug-snapshot"
 id: "m2r_lab"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 ## Installation

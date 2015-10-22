@@ -3,7 +3,7 @@ title: "Installing Roboconf"
 layout: page
 cat: "ug-snapshot"
 id: "installing-roboconf"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 Roboconf is implemented in Java. So, it should work on any system.  

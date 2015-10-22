@@ -3,7 +3,7 @@ title: "Installing an Agent"
 layout: page
 cat: "ug-snapshot"
 id: "installing-an-agent"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 A Roboconf agent is an OSGi application which is in charge of executing instructions on the host it is deployed on.  

@@ -3,7 +3,7 @@ title: "Index of Reusable Recipes"
 layout: page
 cat: "ug-snapshot"
 id: "reusable-recipes-index"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 This page acts as a central hub to index and reference reusable recipes.

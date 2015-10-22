@@ -3,7 +3,7 @@ title: "DM's Templating"
 layout: page
 cat: "ug-snapshot"
 id: "dm-templating"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 The DM's templating is about generating live documents at runtime.  

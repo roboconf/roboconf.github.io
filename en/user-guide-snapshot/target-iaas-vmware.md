@@ -3,7 +3,7 @@ title: "VMWare Support"
 layout: page
 cat: "ug-snapshot"
 id: "target-iaas-vmware"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 Roboconf has a target implementation for VMWare.  

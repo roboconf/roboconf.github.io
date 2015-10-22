@@ -3,7 +3,7 @@ title: "Tutorial - First Deployment in the Cloud"
 layout: page
 cat: "ug-snapshot"
 id: "tutorial-first-deployment-in-the-cloud"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 ## Introduction

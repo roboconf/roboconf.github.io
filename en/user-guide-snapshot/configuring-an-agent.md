@@ -3,7 +3,7 @@ title: "Configuring an Agent"
 layout: page
 cat: "ug-snapshot"
 id: "configuring-an-agent"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 Once the agent has been installed, you have to configure it.  

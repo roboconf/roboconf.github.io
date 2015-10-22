@@ -3,7 +3,7 @@ title: "Maven Examples for the &laquo; documentation &raquo; goal"
 layout: page
 cat: "ug-snapshot"
 id: "maven-examples-documentation"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 This page shows some examples about how to configure documentation generation with the Roboconf

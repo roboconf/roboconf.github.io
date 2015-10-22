@@ -3,7 +3,7 @@ title: "Autonomic Management"
 layout: page
 cat: "ug-snapshot"
 id: "autonomic-management-with-roboconf"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 Autonomic management is an experimental feature of Roboconf.  

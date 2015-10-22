@@ -3,7 +3,7 @@ title: "Application Descriptor"
 layout: page
 cat: "ug-snapshot"
 id: "application-descriptor"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 A Roboconf project must contain a **descriptor** directory with an application descriptor inside.  

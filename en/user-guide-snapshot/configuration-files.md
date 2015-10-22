@@ -3,7 +3,7 @@ title: "Configuration Files"
 layout: page
 cat: "ug-snapshot"
 id: "configuration-files"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 ## Outline

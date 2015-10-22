@@ -3,7 +3,7 @@ title: "Graph Definition"
 layout: page
 cat: "ug-snapshot"
 id: "graph-definition"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 ## The Graph

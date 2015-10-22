@@ -3,7 +3,7 @@ title: "Configuring the Loggers"
 layout: page
 cat: "ug-snapshot"
 id: "configuring-the-loggers"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 Updating the logging configuration is the same thing for both the DM and the agent.

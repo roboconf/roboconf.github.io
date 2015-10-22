@@ -3,7 +3,7 @@ title: "Tutorial - Apache Storm"
 layout: page
 cat: "ug-snapshot"
 id: "tutorial-apache-storm"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 ## Introduction

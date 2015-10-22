@@ -3,7 +3,7 @@ title: "The Logger Plug-in"
 layout: page
 cat: "ug-snapshot"
 id: "plugin-logger"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 The logger plug-in is a plug-in which only logs invocations.  

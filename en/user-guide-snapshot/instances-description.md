@@ -3,7 +3,7 @@ title: "Instances Description"
 layout: page
 cat: "ug-snapshot"
 id: "instances-description"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 A Roboconf project may contain an **instances** directory with the definition of instances.  

@@ -3,7 +3,7 @@ title: "List of Deployment Targets"
 layout: page
 cat: "ug-snapshot"
 id: "list-of-deployment-targets"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 This page lists all the deployment targets Roboconf currently supports.

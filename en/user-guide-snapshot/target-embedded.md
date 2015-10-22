@@ -3,7 +3,7 @@ title: "Embedded Support"
 layout: page
 cat: "ug-snapshot"
 id: "target-embedded"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 Embedded support addresses the cases where the machines already exist or are created manually.  
