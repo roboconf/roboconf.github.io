@@ -10,11 +10,13 @@ Unlike continuous integration, releases must be performed **locally**.
 Performing a release means running specific Maven commands **on a Git repository**.  
 We do not release a single Maven module, but a set of coherent projects. A Git repository defines the bounds of this coherence.
 
+
 ## Prerequisites
 
 1. You must have an account at [Sonatype.org](https://oss.sonatype.org/).
 2. You must have been added as a manager on Roboconf @ Sonatype. See [this ticket](https://issues.sonatype.org/browse/OSSRH-11576).
 3. You must have a signing key, generated with PGP. See [these instructions](http://central.sonatype.org/pages/working-with-pgp-signatures.html).
+
 
 ## Release Scripts
 
@@ -23,6 +25,8 @@ A project with release scripts is available on [Github](https://github.com/roboc
 
 These scripts will check out the project from Github in the temporary directory.  
 It is assumed the release is performed under Linux (Debian systems essentially), with a JDK 7 or JDK 8.
+
+> Read the next section to determine in which order scripts should be executed.
 
 
 ## Projects Release

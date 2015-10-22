@@ -36,3 +36,12 @@ Master 2 de l'Université Joseph Fourier, ainsi que pour les étudiants en
 informatique (RICM 5) de l'Institut National Polytechnique de Grenoble (INPG).
  
 * [http://air.imag.fr/index.php/ECOM](http://air.imag.fr/index.php/ECOM)
+
+
+## &laquo; Projet pour étudiants en Master 2 Recherche &raquo;
+
+Il s'agît d'un projet pour étudiants en Master 2 Recherche à l'Université Joseph Fourier (Grenoble, France).  
+Cela consiste à créer une grammaire et un éditeur [XText](https://eclipse.org/Xtext/) pour le DSL de Roboconf. Une session pratique
+est également organisée pour que les étudiants voient comment fonctionne Roboconf.
+  
+* [Session pratique](/en/user-guide-snapshot/m2r_lab.html) (indisponible en français pour le moment)

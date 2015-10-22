@@ -1,7 +1,7 @@
 ---
 title: "Guide Utilisateur"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "index"
 menus: [ "users", "user-guide" ]
 ---

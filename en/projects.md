@@ -34,3 +34,12 @@ It is practical work for graduate students in Software Engineering at
 Université Joseph Fourier (Grenoble, France).
   
 * [http://air.imag.fr/index.php/ECOM](http://air.imag.fr/index.php/ECOM)
+
+
+## &laquo; Student's Research Project &raquo;
+
+A research project for graduate students at Université Joseph Fourier (Grenoble, France).  
+The project is about creating a [XText](https://eclipse.org/Xtext/) grammar and editor for Roboconf's DSL. A practical session
+about Roboconf is also done so that users see how it works.
+  
+* [Roboconf's Hands on session](user-guide-snapshot/m2r_lab.html)

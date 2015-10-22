@@ -26,6 +26,40 @@ The current development version is **0.5-SNAPSHOT**.
 		<th>Links</th>
 	</tr>
 	
+	<!-- Version 0.5 -->
+	<!--
+	<tr>
+		<td>0.5</td>
+		<td>October 23<sup>rd</sup>, 2015</td>
+		<td>
+			Deployment Manager: 
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.5/roboconf-karaf-dist-dm-0.5.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.5/roboconf-karaf-dist-dm-0.5.zip">Zip</a> (~ 30 MB)
+			<br />
+			Agent: 
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.5/roboconf-karaf-dist-agent-0.5.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.5/roboconf-karaf-dist-agent-0.5.zip">Zip</a> (~ 20 MB)
+
+			<br /><br />
+			Eclipse <a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.5/">update site</a>
+		</td>
+		<td>
+			<span class="octicon octicon-telescope"></span>
+			<a href="new/new-and-noteworthy-0.5.html">New &amp; Noteworthy</a>
+			&nbsp;
+			<span class="octicon octicon-person"></span>
+			<a href="user-guide/user-guide.html">User Guide</a>
+			
+			<br /><br />
+			<span class="octicon octicon-mark-github"></span> Issues: 
+			
+			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.5">Platform</a>
+			-
+			<a href="https://github.com/roboconf/roboconf-web-administration/issues?q=milestone%3A0.5">Web administration</a>
+		</td>
+	</tr>
+	-->
+	
 	<!-- Version 0.4 -->
 	<tr>
 		<td>0.4</td>
@@ -57,14 +91,17 @@ The current development version is **0.5-SNAPSHOT**.
 			<a href="https://github.com/roboconf/roboconf-web-administration/issues?q=milestone%3A0.4">Web administration</a>
 			-
 			<a href="https://github.com/roboconf/roboconf-eclipse/issues?q=milestone%3A0.4">Eclipse</a>
-			&nbsp;
 		</td>
 	</tr>
 
 	<!-- Version 0.3 -->
 	<tr>
 		<td>0.3</td>
-		<td>April 1<sup>st</sup>, 2015</td>
+		<td>
+			April 1<sup>st</sup>, 2015
+			<br /><br />
+			 :tropical_fish:  :tropical_fish:  :tropical_fish:
+		</td>
 		<td>
 			Deployment Manager: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.3/roboconf-karaf-dist-dm-0.3.tar.gz">Tar.gz</a>
