@@ -15,6 +15,7 @@ For this work, you need:
 * [Maven](https://maven.apache.org) (3.x).
 * [RabbitMQ](https://www.rabbitmq.com) (follow [these instructions](http://localhost:4000/en/user-guide-snapshot/installing-the-messaging-server.html) to install and configure it).
 * [Docker](https://docs.docker.com/installation/) (1.5+).
+* A **good** internet connection.
 
 > If you do NOT have a Linux system, you will be able to do everything EXCEPT the Docker part.
 
