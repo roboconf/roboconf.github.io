@@ -24,7 +24,9 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Azure
-target.id = iaas-azure
+handler = iaas-azure
+name = 
+description = 
 
 # Credentials to connect
 azure.key.store.file =
@@ -43,7 +45,9 @@ Here is a complete description of the parameters for Microsoft Azure.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use. | none, must be "iaas-azure" | yes |
+| handler | Determines the target handler to use. | none, must be "iaas-azure" | yes |
+| name | A human-readable name for the target | - | no |
+| description | A description of the target. | - | no |
 | azure.key.store.file | Path to [JKS Key store][jks] file (see below for help). | none | yes |
 | azure.key.store.password | Key store password. | none | yes |
 | azure.subscription.id | Subscription ID of an Azure account using value of "azure.key.store.file" parameter as credential. | none | yes |

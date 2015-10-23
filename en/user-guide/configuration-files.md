@@ -42,9 +42,9 @@ Roboconf configuration files should be organized as follows:
 	├── graph
 	│   ├── main.graph
 	│   ├── VM_EC2
-	│   │   └── target.properties
+	│   │   └── target.properties (optional)
 	│   ├── VM_Openstack
-	│   │   └── target.properties
+	│   │   └── target.properties (optional)
 	│   └── MyApp
 	│       ├── files
 	│       └── script
@@ -53,7 +53,7 @@ Roboconf configuration files should be organized as follows:
 	│           ├── stop.sh
 	│           └── update.sh
 	└── instances
-	    └── model.instances
+	    └── model.instances (optional)
 
 Content of **application.properties**:
 

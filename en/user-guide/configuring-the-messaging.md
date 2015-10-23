@@ -1,7 +1,7 @@
 ---
 title: "Configuring the Messaging"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "configuring-the-messaging"
 menus: [ "users", "user-guide" ]
 ---

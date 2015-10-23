@@ -24,7 +24,9 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for EC2
-target.id = iaas-ec2
+handler = iaas-ec2
+name = 
+description = 
 
 # EC2 URL
 ec2.endpoint = 
@@ -62,13 +64,15 @@ Here is a complete description of the parameters for Amazon Web Services.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use | none, must be "iaas-ec2" | yes |
+| handler | Determines the target handler to use | none, must be "iaas-ec2" | yes |
+| name | A human-readable name for the target | - | no |
+| description | A description of the target. | - | no |
 | ec2.endpoint | URL of the compute service (eg. eu-west-1.ec2.amazonaws.com)  | none | yes |
 | ec2.access.key | Access key defined in your ec2 account | none | yes |
 | ec2.secret.key | Secret key defined in your ec2 account | none | yes |
 | ec2.ami | The ID of the VM image used as a template for the VM | none | yes |
 | ec2.instance.type | The VM "size" aka. instance type or flavor | t1.micro | no |
 | ec2.ssh.key | The name of the ssh key used to connect | none | yes |
-| ec2.security.group | The VM security group | default | no |
+| ec2.security.group | The VM security group name. *Caution to not set the security group id*. | default | no |
 | ec2.volume.snapshot.id | A snapshot volume to attach for storage | none | no |
 | ec2.elastic.ip | An elastic IP address | none | no |

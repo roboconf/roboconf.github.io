@@ -26,7 +26,15 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Embedded Machines
-target.id = embedded
+handler = embedded
+name = 
+description = 
 ```
 
-This kind of target does not have any specific property.
+Here is a complete description of the parameters for OpenStack.
+
+| Property | Description | Default | Mandatory |
+| --- | --- | --- | --- |
+| handler | Determines the target handler to use | none, must be "embedded" | yes |
+| name | A human-readable name for the target | - | no |
+| description | A description of the target. | - | no |

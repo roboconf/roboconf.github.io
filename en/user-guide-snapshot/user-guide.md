@@ -128,6 +128,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<li><a href="../user-guide-snapshot/user-guide.html">User Guide (snapshot)</a></li>
 	<li><a href="../user-guide/user-guide.html">User Guide for the last released version</a></li>
 	<!-- RELEASE_MARKER -->
+	<li><a href="../user-guide-0.4/user-guide.html">User Guide for version 0.4</a></li>
 	<li><a href="../user-guide-0.3/user-guide.html">User Guide for version 0.3</a></li>
 	<li><a href="../user-guide-0.2/user-guide.html">User Guide for version 0.2</a></li>
 	<li><a href="../user-guide-0.1/user-guide.html">User Guide for version 0.1</a></li>

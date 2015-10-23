@@ -45,5 +45,4 @@ The roadmap for the next months covers several aspects.
     * Upgrade Roboconf's messaging with SSL support.
 
 
-Roboconf 0.5 will be released on October, 19<sup>th</sup>.  
 Roboconf 0.6 will be released in January 2016.

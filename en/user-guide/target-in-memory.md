@@ -35,12 +35,16 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for in-memory
-target.id = in-memory
+handler = in-memory
+name = 
+description = 
 ```
 
 Here is a complete description of the parameters for Amazon Web Services.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use | none, must be "in-memory" | yes |
+| handler | Determines the target handler to use | none, must be "in-memory" | yes |
+| name | A human-readable name for the target | - | no |
+| description | A description of the target. | - | no |
 | in-memory.delay | The delay (in milliseconds) to wait for before instantiating a new agent in memory. | 0 | yes |

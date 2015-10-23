@@ -27,7 +27,6 @@ The current development version is **0.5-SNAPSHOT**.
 	</tr>
 	
 	<!-- Version 0.5 -->
-	<!--
 	<tr>
 		<td>0.5</td>
 		<td>October 23<sup>rd</sup>, 2015</td>
@@ -58,7 +57,6 @@ The current development version is **0.5-SNAPSHOT**.
 			<a href="https://github.com/roboconf/roboconf-web-administration/issues?q=milestone%3A0.5">Web administration</a>
 		</td>
 	</tr>
-	-->
 	
 	<!-- Version 0.4 -->
 	<tr>
@@ -81,7 +79,7 @@ The current development version is **0.5-SNAPSHOT**.
 			<a href="new/new-and-noteworthy-0.4.html">New &amp; Noteworthy</a>
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="user-guide/user-guide.html">User Guide</a>
+			<a href="user-guide-0.4/user-guide.html">User Guide</a>
 			
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Issues: 

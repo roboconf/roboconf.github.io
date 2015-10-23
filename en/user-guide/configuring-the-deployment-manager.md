@@ -159,41 +159,11 @@ bundle:start 63
 # The target handler for EC2 is now started and registered into the DM.
 ```
 
-<br />
+You can also use a specific Karaf command (**roboconf:target**) that will install predefined target handlers into the DM.  
+Example:
 
-# The Configuration Directory
-
-The configuration directory stores all the application files (graphs, instances, recipes).  
-The directory's structure is the following:
-
-	DM's directory/
-	├── applications/
-	└── instances/
-
-The **applications** directory will be populated every time an application is deployed.
-
-The **instances** directory will contain the states of component instances. Every application will have
-its own file storing instances states. These file are read once, on startup of the DM. And for a given application, 
-they are written on every instance creation or deletion, or every change on a root instance (usually a VM). This makes
-very few write operations (unless you create and delete VMs all the time).
-
-Instance files are updated every time the life cycle of an instance changes.    
-It means the DM can restart and restore the state of an application from these files (in fact, on restart,
-the DM first reads these files, and then synchronizes instance states with the agents).
-
-The DM can thus be moved from one machine to another.
-
-> As a reminder, the DM can be stopped when it is not used.  
-> It does not aim at running all the time. Once initialized, the agents do not need it.
-
-The DM is only an administration interface.  
-Making the DM stoppable reduce attack threats on the REST API and makes it quite easy to secure. Besides, 
-**it is preferable to run the DM in your internal information system**, rather than putting it on a cloud or 
-external host (although it remains possible). 
-
-Since all the DM's applicative configuration is contained in this directory, it is quite simple to prevent information loss.
-A periodic backup of the directory is easy to set up. Or the directory can be put on a replicated file system
-(e.g. a RAID configuration).
-
-Eventually, system administrators will be able to get information on the instances even when the DM is stopped. The
-*instances* files under the **instances** directory contain states, IP addresses and machine IDs (for IaaS dashboards).
+```properties
+# You can type in the 'tab' character after the command name.
+# The command indeed provides auto-completion.
+roboconf:target docker
+```

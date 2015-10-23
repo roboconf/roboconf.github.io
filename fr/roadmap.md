@@ -40,5 +40,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
     * Compléter la messagerie pour des échanges sécurisés avec SSL.
 
 
-La version 0.5 de Roboconf sortira le 19 octobre 2015.  
 Roboconf 0.6 devrait sortir en janvier 2016.

@@ -24,7 +24,9 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for VMWare
-target.id = iaas-vmware
+handler = iaas-vmware
+name = 
+description = 
 
 # REST URL
 vmware.url = 
@@ -48,7 +50,9 @@ Here is a complete description of the parameters for OpenStack.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| target.id | Determines the target handler to use | none, must be "iaas-vmware" | yes |
+| handler | Determines the target handler to use | none, must be "iaas-vmware" | yes |
+| name | A human-readable name for the target | - | no |
+| description | A description of the target. | - | no |
 | vmware.url | The URL to interact with VMWare's manager. | none | yes |
 | vmware.user | The user name to connect. | none | yes |
 | vmware.password | The user password to connect. | none | yes |

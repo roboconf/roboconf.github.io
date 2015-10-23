@@ -27,7 +27,6 @@ La version en cours de développement est la **0.5-SNAPSHOT**.
 	</tr>
 	
 	<!-- Version 0.5 -->
-	<!--
 	<tr>
 		<td>0.5</td>
 		<td>23 Octobre 2015</td>
@@ -58,7 +57,6 @@ La version en cours de développement est la **0.5-SNAPSHOT**.
 			<a href="https://github.com/roboconf/roboconf-web-administration/issues?q=milestone%3A0.5">Administration web</a>
 		</td>
 	</tr>
-	-->
 	
 	<!-- Version 0.4 -->
 	<tr>
