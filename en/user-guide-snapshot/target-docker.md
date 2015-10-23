@@ -13,8 +13,8 @@ Roboconf may create and manage docker containers, that run Roboconf agents (just
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.4
-bundle:install --start mvn:net.roboconf/roboconf-target-docker/0.4
+# Here in version %v_SNAP%
+bundle:install --start mvn:net.roboconf/roboconf-target-docker/%v_SNAP%
 ```
 
 Sample **target.properties**.  

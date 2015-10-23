@@ -101,7 +101,7 @@ Start your karaf and execute...
 
 ```properties
 # Add the feature URL
-features:addurl https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-feature-dm/0.2-SNAPSHOT/feature.feature.xml
+features:addurl https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-feature-dm/%v_SNAP%/feature.feature.xml
 
 # Install the feature 
 feature:install roboconf-dm

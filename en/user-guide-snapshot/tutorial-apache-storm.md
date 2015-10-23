@@ -105,7 +105,7 @@ To build it using Maven:
 mvn clean install
 ```
 
-The Roboconf deployment archive is the ZIP file located in the **target/** directory (e.g. storm-bash-0.2.zip).
+The Roboconf deployment archive is the ZIP file located in the **target/** directory (e.g. storm-bash-%v_SNAP%.zip).
 
 ### Project organization
 
@@ -162,8 +162,8 @@ For details, see [Roboconf tips for Docker](docker-tips.html).
 Then, start the DM, and make it aware of Docker: open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.4
-bundle:install mvn:net.roboconf/roboconf-target-docker/0.4
+# Here in version %v_SNAP%
+bundle:install mvn:net.roboconf/roboconf-target-docker/%v_SNAP%
 bundle:start <bundle-id>
 ```
 

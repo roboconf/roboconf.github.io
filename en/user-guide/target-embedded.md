@@ -13,8 +13,8 @@ manually (e.g. with Virtual Box).
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.4
-bundle:install --start mvn:net.roboconf/roboconf-target-embedded/0.4
+# Here in version 0.5
+bundle:install --start mvn:net.roboconf/roboconf-target-embedded/0.5
 ```
 
 With this configuration, you need to start the agent directly.  

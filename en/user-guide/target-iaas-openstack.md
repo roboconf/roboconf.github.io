@@ -12,9 +12,9 @@ It only supports the creation of *compute* VMs.
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.4
+# Here in version 0.5
 feature:install jclouds-for-roboconf
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.4
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.5
 ```
 
 The implementation can associate a public address to the created VM.  

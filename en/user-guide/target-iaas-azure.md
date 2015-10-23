@@ -12,8 +12,8 @@ It only supports the creation of *compute* VMs.
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.4
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-azure/0.4
+# Here in version 0.5
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-azure/0.5
 ```
 
 Every new VM is associated with a public IP address.  

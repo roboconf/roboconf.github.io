@@ -20,7 +20,7 @@ Give it a name, like...
 	Roboconf's update site
 
 ... and this URL: 
-[http://dl.bintray.com/roboconf/roboconf-eclipse/0.2/](http://dl.bintray.com/roboconf/roboconf-eclipse/0.2/)
+[http://dl.bintray.com/roboconf/roboconf-eclipse/0.4/](http://dl.bintray.com/roboconf/roboconf-eclipse/0.4/)
 
 <img src="/resources/img/eclipse-install.jpg" alt="The update dialog" />
 

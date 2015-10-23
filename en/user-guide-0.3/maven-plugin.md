@@ -34,7 +34,7 @@ Here is a sample **pom.xml** file for a Roboconf project.
 			<plugin>
 				<groupId>net.roboconf</groupId>
 				<artifactId>roboconf-maven-plugin</artifactId>
-				<version>0.2</version>
+				<version>0.3</version>
 				<extensions>true</extensions>
 			</plugin>
 		</plugins>

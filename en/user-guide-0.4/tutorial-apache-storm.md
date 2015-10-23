@@ -105,7 +105,7 @@ To build it using Maven:
 mvn clean install
 ```
 
-The Roboconf deployment archive is the ZIP file located in the **target/** directory (e.g. storm-bash-0.2.zip).
+The Roboconf deployment archive is the ZIP file located in the **target/** directory (e.g. storm-bash-0.4.zip).
 
 ### Project organization
 

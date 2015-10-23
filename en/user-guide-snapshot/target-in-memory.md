@@ -13,10 +13,10 @@ Roboconf has a target implementation to run agents in memory.
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.4 (with its dependencies)
-bundle:install --start mvn:net.roboconf/roboconf-plugin-api/0.4
-bundle:install --start mvn:net.roboconf/roboconf-agent/0.4
-bundle:install --start mvn:net.roboconf/roboconf-target-in-memory/0.4
+# Here in version %v_SNAP% (with its dependencies)
+bundle:install --start mvn:net.roboconf/roboconf-plugin-api/%v_SNAP%
+bundle:install --start mvn:net.roboconf/roboconf-agent/%v_SNAP%
+bundle:install --start mvn:net.roboconf/roboconf-target-in-memory/%v_SNAP%
 ```
 
 The in-memory target acts as a simulation mode.  

@@ -12,8 +12,8 @@ It only supports the creation of *compute* VMs.
 To install it, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.4
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-ec2/0.4
+# Here in version %v_SNAP%
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-ec2/%v_SNAP%
 ```
 
 Every new VM is associated with a public IP address.  

@@ -104,8 +104,8 @@ desired targets.
 cd bin
 ./karaf
 
-# Install the bundles you want (here in version 0.2)
-bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/0.2
+# Install the bundles you want (here in version 0.4)
+bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/0.4
 
 # Install other targets if you want
 # ...
@@ -135,19 +135,19 @@ START LEVEL 100 , List Threshold: 50
  50 | Active   |  80 | 2.3.1          | Jackson-annotations
  51 | Active   |  80 | 2.3.1          | Jackson-JAXRS-base
  52 | Active   |  80 | 2.3.1          | Jackson-JAXRS-JSON
- 53 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Core
- 54 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Messaging
- 55 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Deployment Manager :: REST Commons
- 56 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Deployment Manager :: REST Services
- 57 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Deployment Manager
- 58 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Deployment Manager :: Web Administration
- 59 | Active   |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: API
- 60 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: Docker
- 61 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: Embedded
- 62 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: Azure IaaS
- 63 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: EC2 IaaS
- 64 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: OpenStack IaaS
- 65 | Resolved |  80 | 0.2.0.SNAPSHOT | Roboconf :: Target :: VMWare IaaS
+ 53 | Active   |  80 | 0.4.0.SNAPSHOT | Roboconf :: Core
+ 54 | Active   |  80 | 0.4.0.SNAPSHOT | Roboconf :: Messaging
+ 55 | Active   |  80 | 0.4.0.SNAPSHOT | Roboconf :: Deployment Manager :: REST Commons
+ 56 | Active   |  80 | 0.4.0.SNAPSHOT | Roboconf :: Deployment Manager :: REST Services
+ 57 | Active   |  80 | 0.4.0.SNAPSHOT | Roboconf :: Deployment Manager
+ 58 | Active   |  80 | 0.4.0.SNAPSHOT | Roboconf :: Deployment Manager :: Web Administration
+ 59 | Active   |  80 | 0.4.0.SNAPSHOT | Roboconf :: Target :: API
+ 60 | Resolved |  80 | 0.4.0.SNAPSHOT | Roboconf :: Target :: Docker
+ 61 | Resolved |  80 | 0.4.0.SNAPSHOT | Roboconf :: Target :: Embedded
+ 62 | Resolved |  80 | 0.4.0.SNAPSHOT | Roboconf :: Target :: Azure IaaS
+ 63 | Resolved |  80 | 0.4.0.SNAPSHOT | Roboconf :: Target :: EC2 IaaS
+ 64 | Resolved |  80 | 0.4.0.SNAPSHOT | Roboconf :: Target :: OpenStack IaaS
+ 65 | Resolved |  80 | 0.4.0.SNAPSHOT | Roboconf :: Target :: VMWare IaaS
 105 | Active   |  80 | 1.7.0          | Apache Felix iPOJO WebConsole Plugins
 ```
 
