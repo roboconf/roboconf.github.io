@@ -27,6 +27,9 @@ specified in the agent's configuration. As an example, if the agent uses RabbitM
 will be **net.roboconf.messaging.rabbitmq**. Generally, messaging configurations should have PIDs
 that begin with **net.roboconf.messaging**.
 
+> If the agent's **target-id** property is set to one of the *iaas-...* values, then
+> you do NOT have to configure other properties. They will be passed by the DM through cloud mechanisms (e.g. with CloudInit).
+
 There are 2 ways of updating the agent's configuration.  
 Configuring the messaging is discussed on [this page](configuring-the-messaging.html).
 
@@ -110,6 +113,9 @@ The couple **application name** and **root instance name** are unique. Two agent
 Instead of hard-coding these parameters, it is possible to let them blank. And the DM will pass them to the agents.
 This is only possible in cloud infrastructures, since they support, in one way or another, a mechanism of *user data*. When one
 creates a VM (virtual machine) from a virtual image, it is possible to pass data to the new VM. Once the VM is running, it can access these data and do whatever it needs with.  
+
+> To summer it up, when the **target-id** property is set to one of the *iaas-...* values, then
+> you do NOT have to configure other properties. The agent will retrieve its configuration from user data and overwrite its configuration.
 
 Let's take an example with Amazon Web Services.  
 We assume we created a virtual image with a Roboconf agent. This one was partially configured. It has the right target ID.
