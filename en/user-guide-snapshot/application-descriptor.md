@@ -49,3 +49,16 @@ instance-entry-point = definition.instances
 
 Additional properties can appear in this descriptor.  
 See the page related to [inter-applications dependencies](inter-application-dependencies.html) for more details.
+
+
+## Maven Integration
+
+By using the [Roboconf Maven plug-in](maven-plugin.html), it is possible to inject Maven properties in the descriptor.  
+Example:
+
+```properties
+application-name = Tomcat 8 cluster
+application-qualifier = ${project.artifactId}-${project.version}
+
+# Etc.
+```

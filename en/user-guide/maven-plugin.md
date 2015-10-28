@@ -72,6 +72,21 @@ mvn archetype:generate                              \
 ```
 
 
+## Maven Properties
+
+Filtering is enabled in the Roboconf Maven plug-in.  
+It means you can inject Maven properties in your resource files.
+
+Example with the **application.properties** file:
+
+```properties
+application-name = Tomcat 8 cluster
+application-qualifier = ${project.artifactId}-${project.version}
+
+# Etc.
+```
+
+
 ## Maven Goals
   
 The plug-in has the following goals.
