@@ -43,8 +43,29 @@ Parameters are passed to action scripts (e.g. start.sh, stop.py, update.perl ...
 
 ## Global environment-related variables
 
-- ROBOCONF\_INSTANCE\_NAME: The name of the current instance (the one whose script is invoked).
-- ROBOCONF\_FILES\_DIR: The directory where instance files are located (if any).
+In the next lines, the *current instance* means the one whose script is invoked.
+
+- ROBOCONF\_FILES\_DIR: the directory where instance files are located (if any).
+- ROBOCONF\_INSTANCE\_NAME: the name of the current instance.
+- ROBOCONF\_INSTANCE\_PATH: the path of the current instance.
+- ROBOCONF\_CLEAN\_INSTANCE\_PATH: the path of the current instance but with the non-alphanumeric characters being replaced by an underscore.
+- ROBOCONF\_CLEAN\_REVERSED\_INSTANCE\_PATH: the reversed path of the current instance and with the non-alphanumeric characters being replaced by an underscore.
+
+Example:
+
+```bash
+echo ${ROBOCONF_INSTANCE_NAME}
+my-server
+
+echo ${ROBOCONF_INSTANCE_PATH}
+/VM/my-server
+
+echo ${ROBOCONF_CLEAN_INSTANCE_PATH}
+VM_my_server
+
+echo ${ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH}
+my_server_vm
+```
 
 
 ## Exported and imported variables

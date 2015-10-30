@@ -105,7 +105,7 @@ Apache {
 </code></pre>
 
 Every component property must be defined on **a single line**.  
-However, for readability purpose, it is possible to repeat some properties, such as **exports** and imports**.
+However, for readability purpose, it is possible to repeat some properties, such as **exports** and **imports**.
 
 <pre><code class="language-roboconf">
 Tomcat {

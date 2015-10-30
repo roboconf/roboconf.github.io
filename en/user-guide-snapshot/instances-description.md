@@ -39,6 +39,9 @@ instance of Vm_Tomcat {
 The Tomcat instance is defined inside a VM instance.  
 Defining it else where would result in an error.
 
+
+## Instances Properties
+
 An instance must have the **name** property, which is the instance name. It must be unique among its parent.
 The instance may also declare properties to override component properties. As an example, if a component exports
 a *port* property with the default value 8080, the instance may override it (e.g. with 8081).
@@ -50,7 +53,36 @@ instance of Tomcat {
 }
 </code></pre>
 
-Instances definition can be split into several files. It is indeed possible to import other instance definitions.  
+It is possible to force a value for a [random exported variable](graph-definition.html) in the instances definition.  
+As an example, with a graph declaration like...
+
+<pre><code class="language-roboconf">
+Tomcat {
+	installer: puppet;
+	exports: random[port] httpPort;
+}
+</code></pre>
+
+... we could force the value of the *httpPort* with...
+
+<pre><code class="language-roboconf">
+instance of Vm_Tomcat {
+	name: Tomcat VM1;
+
+	instance of Tomcat {
+		name: Tomcat;
+		httpPort: 9000;
+	}
+}
+</code></pre>
+
+> Forcing values of random variables must be used at your own risks!  
+> Users should avoid to do that when possible.
+
+
+## Instances Files
+
+Instances definitions can be split into several files. It is indeed possible to import other instance definitions.  
 Instances definitions can mix imports and instances declaration, or, it can only contain imports.
 
 <pre><code class="language-roboconf">

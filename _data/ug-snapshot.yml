@@ -7,6 +7,9 @@ maven-examples-documentation:
 roboconf-architecture:
   en: user-guide-snapshot/roboconf-architecture
   
+using-docker-on-the-agent-side:
+  en: user-guide-snapshot/using-docker-on-the-agent-side
+  
 m2r_lab:
   en: user-guide-snapshot/m2r_lab
   

@@ -44,7 +44,7 @@ function formatRoboconfSnippets() {
       after = after.replace( /(#[^\n]*)/ig, '<span class="comment">$1</span>' );
       
       // = <span class="value">something</span>
-      before = before.replace( /=(\s*)([^,;]+)/ig, '=$1<span class="value">$2</span>' );
+      //before = before.replace( /=(\s*)([^,;]+)/ig, '=$1<span class="value">$2</span>' );
       
       // <span class="property">instance of</span>
       before = before.replace( /\b(instance of)\b/ig, '<span class="property">$1</span>' );
@@ -63,6 +63,9 @@ function formatRoboconfSnippets() {
       
       // <span class="value">external</span>
       before = before.replace( /\b(external)\b/ig, '<span class="value">$1</span>' );
+      
+      // <span class="value">random[port]</span>
+      before = before.replace( /\b(random\[port\]) /ig, '<span class="value">$1</span> ' );
       
       // Update the result
       result += before + after + '\n';
