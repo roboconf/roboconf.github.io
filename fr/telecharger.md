@@ -33,11 +33,11 @@ La version en cours de développement est la **0.5-SNAPSHOT**.
 		<td>
 			Deployment Manager: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.5/roboconf-karaf-dist-dm-0.5.tar.gz">Tar.gz</a>
-			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.5/roboconf-karaf-dist-dm-0.5.zip">Zip</a> (~ 30 MB)
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.5/roboconf-karaf-dist-dm-0.5.zip">Zip</a> (~ 28 MB)
 			<br />
 			Agent: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.5/roboconf-karaf-dist-agent-0.5.tar.gz">Tar.gz</a>
-			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.5/roboconf-karaf-dist-agent-0.5.zip">Zip</a> (~ 20 MB)
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.5/roboconf-karaf-dist-agent-0.5.zip">Zip</a> (~ 15 MB)
 
 			<br /><br />
 			<a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.5/">Site de mise à jour</a> pour Eclipse

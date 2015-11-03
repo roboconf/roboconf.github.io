@@ -6,51 +6,10 @@ id: "using-docker-on-the-agent-side"
 menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
-## Using Docker with Roboconf
+This page discusses the case where Docker containers are launched by Roboconf agents.  
+See [here](using-docker-with-roboconf.html) for other uses cases of Docker with Roboconf.
 
-There are several ways of using Docker with Roboconf.  
-
-1\. One usage consists in using Docker in replacement of Virtual Machines.
-This is particularly useful for tests and local deployments. For such a use case,
-please refer to the [Docker target](target-docker.html) documentation.
-
-2\. Another use case consists in having Docker containers running on remote VMs.  
-Roboconf can create these VMs, as well as Docker containers on it. There are two ways
-of achieving it.
-
-A way to do that is to still rely on the [Docker target](target-docker.html).  
-With this approach, you consider remote Docker containers as *VMs into VMs*. It
-means Docker containers will have a Roboconf agent running it. Said differently,
-it works the same way than local Docker deployments, except the Docker API's end-point
-is located remotely.
-
-To achieve this, you must have Docker installed in your virtual image (for the agent).  
-And you need to indicate in your **target.properties** file that the Docker API's end-point
-is located on a machine that will be created by Roboconf.
-
-```properties
-# Basic information
-handler = docker
-name = 
-description = 
-
-# "ip" will be injected y Roboconf and resolved to the target machine.
-# Pre-condition: this machine must have been created by Roboconf.
-# If not, just put the IP address by hand in the file.
-docker.endpoint = http://{{ ip }}:4243
-# ...
-```
-
-3\. The third use case is probably the one that interests Docker users.  
-Indeed, the two previous ones are more interesting for Roboconf users (e.g. for tests).
-
-This third approach consists in having Roboconf agents managing Docker containers.  
-These Docker contains do not contain any Roboconf agent. They just run with what users want.
-
-Let's discuss this third option in details.
-
-
-## Docker Containers maintained by Roboconf Agents
+<img src="/resources/img/docker-containers-managed-by-agents.png" alt="Docker containers managed by Roboconf agents" class="gs" />
 
 To give the maximum control to users, this approach relies on scripts and usual Docker commands.  
 Roboconf only plugs dynamic and remote configuration to Docker containers. Compared to [Docker-Compose](https://docs.docker.com/compose/),
@@ -110,8 +69,8 @@ In the **start.sh** script, you will then perform the port mapping.
 ```bash
 docker run your-image-id \
            -name ${ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH}
-           -p 8080:${httpPort}
-           -p 8009:${ajpPort}
+           -p ${httpPort}:8080
+           -p ${ajpPort}:8009
            -your-docker-options
 ```
 
@@ -125,7 +84,8 @@ containers will be able to access them from the outside.
 ```bash
 # Stop can be followed by undeploy OR start.
 # Given the way our start script works, it is better to stop the container and delete it.
-docker kill ${ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH} && docker rm ${ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH}
+docker kill ${ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH}
+docker rm ${ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH}
 ``` 
 
 
@@ -176,4 +136,3 @@ Basically, it consists in 2 steps:
 docker exec ${ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH} /bin/bash -c\
       "sed -i /port/8081/ server.conf"
 ```  
-

@@ -56,3 +56,7 @@ We reproduce this table here.
 
 In the *cfg* file, you must use Log4J levels.  
 They will be converted into levels for the JDK logging.
+
+More information about how to configure loggers can be found on [Karaf's web site](https://karaf.apache.org/manual/latest/users-guide/log.html)
+(e.g. how to log directly in console, etc) and [Log4j's web site](https://logging.apache.org/log4j/2.x/manual/configuration.html) (look for the
+**Configuration with Properties** section).

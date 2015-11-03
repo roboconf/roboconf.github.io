@@ -38,6 +38,14 @@ Just copy / paste and edit.
 handler = in-memory
 name = 
 description = 
+
+# The delay (in ms) to wait between the request to create an agent
+# and the moment it is created. This helps to simulate the time
+# necessary to launch a virtual machine.
+# in-memory.delay = 0
+
+# Execute real recipes? False by default.
+#in-memory.execute-real-recipes = false
 ```
 
 Here is a complete description of the parameters for Amazon Web Services.
@@ -47,4 +55,5 @@ Here is a complete description of the parameters for Amazon Web Services.
 | handler | Determines the target handler to use | none, must be "in-memory" | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
-| in-memory.delay | The delay (in milliseconds) to wait for before instantiating a new agent in memory. | 0 | yes |
+| in-memory.delay | The delay (in milliseconds) to wait for before instantiating a new agent in memory. | 0 | no |
+| in-memory.execute-real-recipes | Indicate whether agents should execute the real recipes or simulate them. By default, they simulate them. | false | no |

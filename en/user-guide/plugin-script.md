@@ -51,7 +51,7 @@ Parameters are passed to action scripts (e.g. start.sh, stop.py, update.perl ...
 
 All the exports of the instance are available as environment variables (their names are left unchanged).  
 Imports are more complex, as there may be multiple ones: let's take the example of an Apache load balancer, 
-that imports Tomcat "ip" and "portAjp" variables. The imports will look like this (for N+1 Tomcat instances
+that imports Tomcat (spelled *tomcat* in the graph) "ip" and "portAjp" variables. The imports will look like this (for N+1 Tomcat instances
 named "tomcat0" to "tomcatN"):
 
 ```properties
@@ -69,7 +69,7 @@ So, the naming convention for imports is < componentName >\_< index >\_< exportN
 Here is an example of how such variables can be used (in bash).
 
 ```bash
-for (( c=0; c<$tomcat_size; c++ ))
+for (( c=0; c<${tomcat_size}; c++ ))
 do
  IP_ADDRESS=tomcat_${c}_ip
  echo $IP_ADDRESS

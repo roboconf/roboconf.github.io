@@ -10,6 +10,9 @@ roboconf-architecture:
 using-docker-on-the-agent-side:
   en: user-guide-snapshot/using-docker-on-the-agent-side
   
+using-docker-with-roboconf:
+  en: user-guide-snapshot/using-docker-with-roboconf
+  
 m2r_lab:
   en: user-guide-snapshot/m2r_lab
   

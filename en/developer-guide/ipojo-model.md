@@ -19,17 +19,23 @@ It only lists the various iPojo components we have and their relations.
 
 ## DM Distribution
 
-Here is a UML diagram that illustrates the components we have and their relations.  
+The DM has two extension points.
+
+* One is about `ITargetHandler`s (defined in **roboconf-target-api**).
+* The second one is about `IDmListener`s (defined in **roboconf-dm**).
+
+The following UML diagram illustrates the components we have and their relations.  
+DM listeners do not appear but work the same way than target handlers (with their own extension-point in the DM).
 
 <br />
 <img src="/resources/img/ipojo-dm.png" alt="The iPojo model on the DM's side" />
 
 <br />
 
-Basically, every (deployment) target handler is associated with an iPojo component.  
+Basically, every (deployment) target handler is associated with an iPojo component (same thing for DM listeners).  
 All the target handlers implement a same interface. They are injected into the DM's component. We can see this
 as an extension mechanism, with all the benefits of OSGi (class loader isolation, hot deployment...).
-The DM component can run even when there is no target handler.
+The DM component can run even when there is no target handler (and no DM listener).
 
 When the DM's component is started, it is injected in another component, called **roboconf-dm-rest-component**.
 This last component depends on the DM and on the OSGi HTTP service (not represented here since it is not an iPojo
@@ -37,7 +43,7 @@ component). This component is in charge of registering and if necessary, unregis
 the HTTP server of the OSGi container.
 
 iPojo guarantees that all the dependencies are available and started.  
-It means that if the REST resources are registered, then there is a (Roboconf) manager behind to handle the requests.
+It means that if the REST resources are registered, then there is a (Roboconf) manager behind to handle the requests.  
 
 
 ## Agent Distribution
@@ -63,12 +69,7 @@ to reuse its messaging client.
 > we kept everything in the agent (and in the DM). By having a component for the messaging client,
 > we could have directly shared the messaging client between these two bundles.
 
-A specific thing on the agent is that **there are 2 agent components**.  
-Once is the **default** one, that uses plug-ins and works with the monitoring component.
-The second one is a light component that is used only for in-memory deployment. This second agent type
-is associated with the **roboconf-target-in-memory** target handler (on the DM side). Basically, when used, this 
-extension creates new instances of the **roboconf-agent-in-memory** component. This is convenient for unit tests 
-and to debug Roboconf's internal mechanism.
-
-> Even if there are 2 components for the agent, there is only one Java class behind.  
-> What changes is the configuration for this class when it is instantiated by iPojo.
+A specific thing on the agent is that **there are 2 agent use cases**.  
+By default, agents are launched and configured through Karaf. However, the **in-memory** target
+creates and configures agent instances on the fly (and through iPojo factories). In both cases, it
+is the same Java class behind. Only its configuration changes.
