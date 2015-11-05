@@ -13,6 +13,9 @@ using-docker-on-the-agent-side:
 using-docker-with-roboconf:
   en: user-guide-snapshot/using-docker-with-roboconf
   
+testing-an-application-locally:
+  en: user-guide-snapshot/testing-an-application-locally
+  
 m2r_lab:
   en: user-guide-snapshot/m2r_lab
   

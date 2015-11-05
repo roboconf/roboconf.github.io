@@ -46,6 +46,9 @@ description =
 
 # Execute real recipes? False by default.
 #in-memory.execute-real-recipes = false
+
+# Force an IP address for the in-memory agent.
+#in-memory.ip-address-of-the-agent = 
 ```
 
 Here is a complete description of the parameters for Amazon Web Services.
@@ -57,3 +60,4 @@ Here is a complete description of the parameters for Amazon Web Services.
 | description | A description of the target. | - | no |
 | in-memory.delay | The delay (in milliseconds) to wait for before instantiating a new agent in memory. | 0 | no |
 | in-memory.execute-real-recipes | Indicate whether agents should execute the real recipes or simulate them. By default, they simulate them. | false | no |
+| in-memory.ip-address-of-the-agent | Force the agent to use this IP address as its own. Let it empty to let the agent guess it. | If recipes are simulated, and that no value is set, then *localhost* is used. If real recipes are used, there is no default value. | no |

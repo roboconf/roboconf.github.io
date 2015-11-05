@@ -108,6 +108,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<li><a href="inter-application-dependencies.html">Inter-Application Dependencies</a></li>
 	<li><a href="using-docker-with-roboconf.html">Using Docker with Roboconf</a></li>
 	<li><a href="using-docker-on-the-agent-side.html">Using Docker on the Agent's side</a></li>
+	<li><a href="testing-an-application-locally.html">Testing an Application Locally</a></li>
 	</ul>
 </div>
 
