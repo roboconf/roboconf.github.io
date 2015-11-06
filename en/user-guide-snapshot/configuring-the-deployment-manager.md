@@ -91,7 +91,9 @@ The following table summers up all the DM parameters.
 
 <br />
 
-# Installing the Target Handlers
+# Installing Additional Bundles
+
+## Installing Target Handlers
 
 By default, no target handler is installed.  
 A target handler is in charge of creating and terminating machines in a given infrastructure.
@@ -105,58 +107,7 @@ cd bin
 ./karaf
 
 # Install the bundles you want (here in version %v_SNAP%)
-bundle:install mvn:net.roboconf/roboconf-target-iaas-openstack/%v_SNAP%
-
-# Install other targets if you want
-# ...
-
-# List all the bundles
-bundle:list
-```
-
-This will display something like...
-
-```
-roboconf-dm > bundle:list
-START LEVEL 100 , List Threshold: 50
- ID | State    | Lvl | Version        | Name
---------------------------------------------------------------------------------------------
- 37 | Active   |  80 | 1.12.0         | Apache Felix iPOJO
- 38 | Active   |  80 | 1.12.0         | Apache Felix iPOJO Gogo Command
- 39 | Active   |  80 | 1.12.0         | Apache Felix iPOJO Composite
- 40 | Active   |  80 | 1.12.0         | Apache Felix iPOJO API
- 43 | Active   |  80 | 1.18.1         | jersey-core
- 44 | Active   |  80 | 1.18.1         | jersey-server
- 45 | Active   |  80 | 1.18.1         | jersey-servlet
- 46 | Active   |  80 | 1.18.1         | jersey-multipart
- 47 | Active   |  80 | 1.6            | MIME streaming extension
- 48 | Active   |  80 | 2.3.1          | Jackson-core
- 49 | Active   |  80 | 2.3.1          | jackson-databind
- 50 | Active   |  80 | 2.3.1          | Jackson-annotations
- 51 | Active   |  80 | 2.3.1          | Jackson-JAXRS-base
- 52 | Active   |  80 | 2.3.1          | Jackson-JAXRS-JSON
- 53 | Active   |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Core
- 54 | Active   |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Messaging
- 55 | Active   |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Deployment Manager :: REST Commons
- 56 | Active   |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Deployment Manager :: REST Services
- 57 | Active   |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Deployment Manager
- 58 | Active   |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Deployment Manager :: Web Administration
- 59 | Active   |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Target :: API
- 60 | Resolved |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Target :: Docker
- 61 | Resolved |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Target :: Embedded
- 62 | Resolved |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Target :: Azure IaaS
- 63 | Resolved |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Target :: EC2 IaaS
- 64 | Resolved |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Target :: OpenStack IaaS
- 65 | Resolved |  80 | %v_SNAP%.0.SNAPSHOT | Roboconf :: Target :: VMWare IaaS
-105 | Active   |  80 | 1.7.0          | Apache Felix iPOJO WebConsole Plugins
-```
-
-```properties
-# Identify the ID of the bundle associated with your target.
-# Let's take EC2 in this case. It bundle ID is 63. We start it...
-bundle:start 63
-
-# The target handler for EC2 is now started and registered into the DM.
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/%v_SNAP%
 ```
 
 You can also use a specific Karaf command (**roboconf:target**) that will install predefined target handlers into the DM.  
@@ -167,3 +118,28 @@ Example:
 # The command indeed provides auto-completion.
 roboconf:target docker
 ```
+
+
+## Installing DM Listeners or Templating Handlers
+
+To install another DM extension, just proceed like you would deploy any other bundle.  
+You can either drop it in Karaf's *deploy* directory, or use Karaf commands to deploy a new bundle.
+
+
+## Maven Snapshots Resolution
+
+If you install bundles from Maven repositories, and that they are in development versions
+(snapshot), you may have to configure the snapshots resolution. By default, Karaf will always pick
+up snapshot bundles in the local repository. If no local artifact was found, it will download it
+from a remote repository, provided it is referenced in the Maven settings.
+
+When a local artifact exists, it will always be picked up, no matter if more recent snapshots
+exist remotely. To force Karaf to pick up the most recent snapshot, edit the **etc/org.ops4j.pax.url.mvn.cfg**
+file and add the following property.
+
+```properties
+org.ops4j.pax.url.mvn.globalUpdatePolicy = always
+```
+
+Please, refer to [this issue](https://github.com/roboconf/roboconf-platform/issues/499) and to
+[PAX-URL's wiki](https://ops4j1.jira.com/wiki/display/paxurl/Mvn+Protocol) for more information about this property.

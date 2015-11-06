@@ -93,6 +93,12 @@ in-memory.execute-real-recipes = true
 in-memory.ip-address-of-the-agent = your.ip.address
 ```
 
+Generally, Docker sets up a local network interface which is a kind of *localhost* alias, but 
+restricted to the same sub-net than Docker containers. Generally, this interface is associated with
+the **172.17.42.1** IP address. So, if you only deploy Docker containers, you can force the IP address to 172.17.42.1.
+See [this page](http://docs.docker.com/engine/userguide/networking/) for more details about Docker network
+configuration.
+
 **Notice 1:** if you have several root/scoped instanced in your application,
 you may prefer to deploy them one by one instead of &laquo; deploying and starting &raquo; them all.
 That's because every agent executes recipes independently of the others. An agent execute ITS recipes

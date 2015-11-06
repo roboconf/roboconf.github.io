@@ -34,7 +34,7 @@ There are 2 ways of updating the agent's configuration.
 Configuring the messaging is discussed on [this page](configuring-the-messaging.html).
 
 
-# Config Admin
+## Config Admin
 
 If you installed the agent as bundles, you can use *Config Admin* to update the agent's parameters.  
 These pages give information about this mechanism.
@@ -46,7 +46,7 @@ These pages give information about this mechanism.
 The ID of the managed services for the agent match the PIDs given before.
 
 
-# File Install
+## File Install
 
 If you installed the agent in a Karaf distribution, there are two ways.  
 The first one consists in editing (or creating) the **/etc/net.roboconf.agent.configuration.cfg** file.  
@@ -87,7 +87,7 @@ Look for the **net.roboconf.agent.configuration** key and double-click it. A dia
 listing all the parameters in a form.
 
 
-# Agent Parameters
+## Agent Parameters
 
 The following table summers up all the agent parameters.
 
@@ -103,7 +103,7 @@ These parameters are persisted and restored upon restart.
 However, depending on the target ID, some values may be overridden.
 
 
-# Target ID
+## Target ID
 
 The target ID indicates on which target the agent runs.  
 Normally, the agent parameters should be hard-written in configuration files. However, each agent has its own configuration.
@@ -144,3 +144,10 @@ The only IaaS it does not work with is the **embedded** one.
 
 Notice that if you stop the agent and restart it, and that its target ID involves user data, 
 the agent will once again read these user data.
+
+
+## Maven Snapshots Resolution
+
+If you need to install snapshot bundles in your agent distribution, you may have to configure the way they
+are resolved. Please, refer to [this page](configuring-the-deployment-manager.html) to find more information
+about snapshots resolution. It indeed works the same way for both the DM and agents (since it is a Karaf configuration).
