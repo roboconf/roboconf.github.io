@@ -92,9 +92,10 @@ menus: [ "users", "user-guide", "Snapshot" ]
 </div>
 
 <div class="floated">
-	<h2>Monitoring</h2>
+	<h2>Automation</h2>
 
 	<ul>
+	<li><a href="roboconf-commands.html">Roboconf Commands</a></li>
 	<li><a href="monitoring-roboconf.html">Monitoring Roboconf</a></li>
 	<li><a href="monitoring-applications-deployed-with-roboconf.html">Monitoring Applications deployed with Roboconf</a></li>
 	<li><a href="autonomic-management-with-roboconf.html">Autonomic Management</a></li>

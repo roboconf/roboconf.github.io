@@ -326,7 +326,8 @@ span.roadmap-in-progress {
 .language-xml span.nt,
 .language-json span.nt,
 .language-html span.s,
-.language-roboconf span.comment {
+.language-roboconf span.comment,
+.language-roboconf-commands span.comment {
 	color: green;
 }
 
@@ -354,7 +355,8 @@ span.roadmap-in-progress {
 .language-http span.kr,
 .language-tcl span.nv,
 .language-tcl span.nb,
-.language-roboconf span.property {
+.language-roboconf span.property,
+.language-roboconf-commands span.keyword {
 	color: #b23e4b;
 	font-weight: bold;
 }

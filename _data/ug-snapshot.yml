@@ -13,6 +13,9 @@ using-docker-on-the-agent-side:
 using-docker-with-roboconf:
   en: user-guide-snapshot/using-docker-with-roboconf
   
+roboconf-commands:
+  en: user-guide-snapshot/roboconf-commands
+  
 testing-an-application-locally:
   en: user-guide-snapshot/testing-an-application-locally
   
