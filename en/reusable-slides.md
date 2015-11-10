@@ -1,9 +1,9 @@
 ---
 title: "Reusable Slides"
 layout: page
-cat: "ug-0-4"
+cat: "main"
 id: "reusable-slides"
-menus: [ "users", "user-guide", "0.4" ]
+menus: [ "users", "links" ]
 ---
 
 A set of slides is available on this web site.  
@@ -12,16 +12,23 @@ You can also copy and adapt them for your own context.
 
 **Short presentation** (use cases)
 
-* [Slides In English](/slides/general/roboconf-use-cases.html)
-* [Slides in French](/slides/general/cas-d-usage-de-roboconf.html)
+* Slides In English: 
+[Presentation](/slides/general/roboconf-use-cases.html) - [Printing](/slides/general/roboconf-use-cases.html?print-pdf) - [PDF](/slides/general/pdf/roboconf-use-cases.pdf)
+* Slides in French: 
+[Presentation](/slides/general/cas-d-usage-de-roboconf.html) - [Printing](/slides/general/cas-d-usage-de-roboconf.html?print-pdf) - [PDF](/slides/general/pdf/cas-d-usage-de-roboconf.pdf)
 
 **Long presentation** (general and technical)
 
-* [Slides In English](/slides/general/roboconf-presentation.html)
-* [Slides in French](/slides/general/presentation-roboconf.html)
+* Slides In English: 
+[Presentation](/slides/general/roboconf-presentation.html) - [Printing](/slides/general/roboconf-presentation.html?print-pdf) - [PDF](/slides/general/pdf/roboconf-presentation.pdf)
+* Slides in French: 
+[Presentation](/slides/general/presentation-roboconf.html) - [Printing](/slides/general/presentation-roboconf.html?print-pdf) - [PDF](/slides/general/pdf/presentation-roboconf.pdf)
 
 They are based on [reveal.js](http://lab.hakim.se/reveal-js).  
 You can copy the HTML page and remove or add sections.
+
+> To print them, click the **printing** links.  
+> Printing should rather be used with Chrome or Chromium. It is not guaranted to work on other web browsers.
 
 Several style sheets (CSS) are available.  
 But you can create and use your own one if you want.

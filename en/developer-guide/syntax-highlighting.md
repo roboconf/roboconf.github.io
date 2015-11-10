@@ -33,7 +33,7 @@ To use it, just wrap your Roboconf code snippet with HTML mark-ups.
 
 Web site: [http://highlightjs.org](http://highlightjs.org)  
 **Highlight.js** aims at using syntax highlighting in HTML pages.  
-It is used, as an example, in the [reusable slides](../user-guide/reusable-slides.html) that we provide.
+It is used, as an example, in the [reusable slides](../reusable-slides.html) that we provide.
 
 If for some reason, the Roboconf DSL is upgraded, or if there is an enhancement to bring to Roboconf's support
 in **highlight.js**, here are some tips to update it.

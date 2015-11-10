@@ -1,9 +1,6 @@
 #
 # User Guide Version 0.1
-#
-reusable-slides:
-  en: user-guide-0.1/reusable-slides
-  
+# 
 web-administration-screenshots:
   en: user-guide-0.1/web-administration-screenshots
   

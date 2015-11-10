@@ -28,6 +28,10 @@ menus: [ "users", "links" ]
 * Chat room @ [Gitter.im](https://gitter.im/roboconf/roboconf)
 * [Ohloh](https://www.ohloh.net/p/roboconf) page
 
+## Slides and Presentations
+
+* [Reusable slides](reusable-slides.html)
+
 ## Related Projects
 
 * [Open PaaS](http://open-paas.org/)

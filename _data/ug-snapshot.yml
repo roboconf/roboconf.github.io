@@ -70,10 +70,6 @@ tutorial-first-deployment-in-the-cloud-4:
   fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-4
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud-4
   
-reusable-slides:
-  en: user-guide-snapshot/reusable-slides
-  fr: guide-utilisateur/presentations-reutilisables
-  
 docker-tips.html:
   en: user-guide-snapshot/docker-tips
   

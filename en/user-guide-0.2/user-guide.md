@@ -108,7 +108,6 @@ menus: [ "users", "user-guide", "0.2" ]
 	<h2>Resources</h2>
 
 	<ul>
-	<li><a href="reusable-slides.html">Reusable Slides</a></li>
 	<li><a href="tutorial-getting-started-with-roboconf.html">Tutorial - Getting started with Roboconf</a></li>
 	<li><a href="tutorial-first-deployment-in-the-cloud.html">Tutorial - First deployment in the cloud</a></li>
 	</ul>

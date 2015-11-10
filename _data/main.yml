@@ -49,6 +49,10 @@ download-changelog:
   en: change-log
   fr: liste-des-changements
   
+reusable-slides:
+  en: reusable-slides
+  fr: presentations-reutilisables
+  
 support:
   en: support
   fr: support

@@ -1,0 +1,18 @@
+
+body, p, td, li, div {
+	font-size: 23pt !important;
+}
+
+.reveal small a {
+	font-size: 14pt !important;
+}
+
+.rbcf-transition-slide {
+	position: relative;
+	top: 40%;
+	transform: translateY(-40%);
+}
+
+img.too-big {
+	max-height: 560px;
+}

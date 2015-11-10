@@ -1,6 +1,6 @@
 
 <section>
-	<h1>Exemple : LAMP</h1>
+	<h1 class="rbcf-transition-slide">Exemple : LAMP</h1>
 </section>
 
 <section>
@@ -30,7 +30,7 @@
 	<h3>Le Graphe</h3>
 	<img src="../../resources/img/lamp-simple-graph.jpg" alt="graphe simplifié" class="no-border" />
 	<p>
-		Nos briques, Apache, Tomcat et MySQL, peuvent être déployées sur une VM.<br />
+		Nos briques, Apache, Tomcat et MySQL, peuvent être déployées sur une VM.
 		Tomcat a besoin d'une base MySQL. Et l'équilibreur de charge doit être notifié chaque fois qu'un nouveau
 		Tomcat est instancié ou supprimé.
 	</p>
@@ -78,13 +78,13 @@
 	<h3>Création de VM</h3>
 	<img src="../../resources/img/lamp-scenario.jpg" alt="scénario du LAMP" class="no-border" />
 	<p>
-		Le DM envoie une demande de création de VM au gestionnaire de cloud (EC2).<br />
+		Le DM envoie une demande de création de VM au gestionnaire de cloud (EC2).
 		La requête précise l'ID de l'image et la configuration matérielle à utiliser pour créer une nouvelle VM.
 	</p>
 	<p>
-		L'image virtuelle contient un système d'exploitation, ainsi qu'un agent Roboconf.
-		Lorsque l'agent démarre avec le système, il récupère sa configuration, puis envoie un message
-		au DM pour l'informer qu'il est maintenant opérationnel.
+		L'image virtuelle contient un OS et un agent Roboconf.
+		Lorsque l'agent démarre avec le système, il récupère sa configuration, puis notifie
+		le DM qu'il est opérationnel.
 	</p>
 </section>
 
@@ -292,7 +292,7 @@
 	<h3>Résultat du Déploiement</h3>
 	<img src="../../resources/img/lamp-result-2.jpg" alt="Another LAMP deployment" class="no-border" />
 	<p>
-		Le serveur Apache peut maintenant répartir les requêtes sur 2 serveurs Tomcat.<br />
+		Le serveur Apache peut maintenant répartir les requêtes sur 2 serveurs Tomcat.
 		Les deux utilisent la même base MySQL.
 	</p>
 </section>
@@ -309,7 +309,7 @@
 	<img src="../../resources/img/chat.gif" alt="un chat qui retombe sur ses pattes" />
 
 	<p>
-		Ce mécanisme est utilisé au déploiement comme dans les phases de reconfiguration<br />
+		Ce mécanisme est utilisé au déploiement comme dans les phases de reconfiguration
 		(rajout ou retrait de blocs applicatifs).
 	</p>
 </section>
@@ -317,7 +317,7 @@
 <section>
 	<h3>LAMP est l'exemple basique</h3>
 	<p>
-		Si quelqu'un devait vraiment déployer ce cas d'usage, Roboconf ferait l'affaire.<br />
+		Roboconf sait gérer ce cas d'usage.<br />
 		Toutefois, une solution comme <a href="https://juju.ubuntu.com/">Juju</a> (d'Ubuntu) doit aussi s'en sortir, et peut-être d'une manière plus accessible.
 	</p>
 	<p>

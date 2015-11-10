@@ -28,6 +28,10 @@ menus: [ "users", "links" ]
 * Salle de discussion @ [Gitter.im](https://gitter.im/roboconf/roboconf)
 * La page du projet sur [Ohloh](https://www.ohloh.net/p/roboconf)
 
+## Présentations
+
+* [Présentations réutilisables](presentations-reutilisables.html)
+
 ## Projects Liés
 
 * [Open PaaS](http://open-paas.org/)

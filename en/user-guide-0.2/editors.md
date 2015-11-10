@@ -47,5 +47,5 @@ Just add the right JS and CSS links in your HTML page and wrap your code as foll
 </code></pre>
 ```
 
-This is what is used for syntax highlighting in the [online presentations](reusable-slides.html).
+This is what is used for syntax highlighting in the [online presentations](../reusable-slides.html).
 

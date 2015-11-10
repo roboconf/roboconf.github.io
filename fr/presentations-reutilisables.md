@@ -1,9 +1,9 @@
 ---
 title: "Présentations Réutilisables"
 layout: page
-cat: "ug-snapshot"
+cat: "main"
 id: "reusable-slides"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "links" ]
 ---
 
 Un jeu de *slides* est disponible sur ce site web.  
@@ -12,16 +12,24 @@ Vous pouvez aussi les copier et les adapter pour votre propre besoin.
 
 **Présentation courte** (cas d'usage)
 
-* [*Slides* en anglais](/slides/general/roboconf-use-cases.html)
-* [*Slides* en français](/slides/general/cas-d-usage-de-roboconf.html)
+* *Slides* en anglais : 
+[Présentation](/slides/general/roboconf-use-cases.html) - [Impression](/slides/general/roboconf-use-cases.html?print-pdf) - [PDF](/slides/general/pdf/roboconf-use-cases.pdf)
+* *Slides* en français : 
+[Présentation](/slides/general/cas-d-usage-de-roboconf.html) - [Impression](/slides/general/cas-d-usage-de-roboconf.html?print-pdf) - [PDF](/slides/general/pdf/cas-d-usage-de-roboconf.pdf)
 
 **Présentation longue** (générale et technique)
 
-* [*Slides* en anglais](/slides/general/roboconf-presentation.html)
-* [*Slides* en français](/slides/general/presentation-roboconf.html)
+* *Slides* en anglais : 
+[Présentation](/slides/general/roboconf-presentation.html) - [Impression](/slides/general/roboconf-presentation.html?print-pdf) - [PDF](/slides/general/pdf/roboconf-presentation.pdf)
+* *Slides* en français : 
+[Présentation](/slides/general/presentation-roboconf.html) - [Impression](/slides/general/presentation-roboconf.html?print-pdf) - [PDF](/slides/general/pdf/presentation-roboconf.pdf)
 
 Le tout est basé sur [reveal.js](http://lab.hakim.se/reveal-js).  
 Vous pouvez donc copier la page HTML et enlever ou rajouter des sections.
+
+> Vous pouvez imprimer ces présentations en cliquant sur les liens d'**impression**.  
+> Celles-ci devraient être effectuées de préférence avec Chrome ou Chromium, le résultat n'étant 
+> pas garanti avec d'autres navigateurs.
 
 Plusieurs styles (ou thèmes CSS) ont été créés.  
 Vous pouvez également créer et utiliser le vôtre si vous le souhaitez.

@@ -1,40 +1,51 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
 /**
- * Solarized Dark theme for reveal.js.
- * Author: Achim Staebler
+ * Linagora theme for reveal.js.
+ * Based on "Solarized" Dark by Achim Staebler.
  */
 @font-face {
   font-family: 'League Gothic';
-  src: url("../../lib/font/league_gothic-webfont.eot");
-  src: url("../../lib/font/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/league_gothic-webfont.woff") format("woff"), url("../../lib/font/league_gothic-webfont.ttf") format("truetype"), url("../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
+  src: url("http://http://cdn.jsdelivr.net/reveal.js/2.6.2/lib/font/league_gothic-webfont.eot");
+  src: url("http://http://cdn.jsdelivr.net/reveal.js/2.6.2/lib/font/league_gothic-webfont.eot?#iefix")
+    format("embedded-opentype"),
+    url("http://http://cdn.jsdelivr.net/reveal.js/2.6.2/lib/font/league_gothic-webfont.woff")
+    format("woff"), url("../../lib/font/league_gothic-webfont.ttf") format("truetype"),
+    url("http://http://cdn.jsdelivr.net/reveal.js/2.6.2/lib/font/league_gothic-webfont.svg#LeagueGothicRegular")
+    format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 
 /**
  * Solarized colors by Ethan Schoonover
  */
 html * {
   color-profile: sRGB;
-  rendering-intent: auto; }
+  rendering-intent: auto;
+}
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
   background: #eaeaea;
-  background-color: #eaeaea; }
+  background-color: #eaeaea;
+}
 
 .reveal {
   font-family: "Lato", sans-serif;
   font-size: 36px;
   font-weight: normal;
   letter-spacing: -0.02em;
-  color: #000; }
+  color: #000;
+}
 
 ::selection {
   color: white;
   background: #d33682;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 /*********************************************
  * HEADERS
@@ -50,7 +61,8 @@ body {
   font-family: "League Gothic", Impact, sans-serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 .reveal h1,
 .reveal h2 {
@@ -58,7 +70,8 @@ body {
 }
 
 .reveal h1 {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
 
 /*********************************************
  * LINKS
@@ -70,16 +83,19 @@ body {
   -moz-transition: color .15s ease;
   -ms-transition: color .15s ease;
   -o-transition: color .15s ease;
-  transition: color .15s ease; }
+  transition: color .15s ease;
+}
 
 .reveal a:not(.image):hover {
   color: #78b9e6;
   text-shadow: none;
-  border: none; }
+  border: none;
+}
 
 .reveal .roll span:after {
   color: #fff;
-  background: #1a6091; }
+  background: #1a6091;
+}
 
 /*********************************************
  * IMAGES
@@ -99,7 +115,7 @@ body {
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #cd1f48;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
 .reveal section img.no-border {
@@ -107,7 +123,7 @@ body {
 }
 
 /*********************
-* Linagora LOGO  
+* Linagora LOGO
 **********************/
 .reveal {
 	background-image: url('linagora-logo.gif');
@@ -115,43 +131,52 @@ body {
 	background-position: 2% 97%;
 	background-repeat: no-repeat;
 }
-  
+
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #cd1f48; }
+  border-right-color: #cd1f48;
+}
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #cd1f48; }
+  border-left-color: #cd1f48;
+}
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #cd1f48; }
+  border-bottom-color: #cd1f48;
+}
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #cd1f48; }
+  border-top-color: #cd1f48;
+}
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #78b9e6; }
+  border-right-color: #78b9e6;
+}
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #78b9e6; }
+  border-left-color: #78b9e6;
+}
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #78b9e6; }
+  border-bottom-color: #78b9e6;
+}
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #78b9e6; }
+  border-top-color: #78b9e6;
+}
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(0, 0, 0, 0.2);
+}
 
 .reveal .progress span {
   background: #cd1f48;
@@ -159,14 +184,16 @@ body {
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
 
 /*********************************************
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #cd1f48; }
-  
+  color: #cd1f48;
+}
+
 section > p {
 	margin-bottom: 40px !important;
 }
@@ -176,7 +203,7 @@ section > p.notice {
 }
 
 .reveal table {
-	border: solid black 1px; 
+	border: solid black 1px;
 	border-collapse: collapse;
 }
 
