@@ -65,7 +65,7 @@ html, body {
 
 #welcome-dl {
 	position: absolute;
-	right: 8%;
+	right: 6%;
 	top: 7%;
 }
 
@@ -85,7 +85,7 @@ html, body {
 }
 
 #welcome-logo {
-	padding-top: 14%;
+	padding-top: 15%;
 	text-align: center;
 }
 
