@@ -65,8 +65,12 @@ html, body {
 
 #welcome-dl {
 	position: absolute;
-	right: 15%;
+	right: 8%;
 	top: 7%;
+}
+
+#welcome-dl div:FIRST-CHILD {
+	margin-bottom: 16px;
 }
 
 #last-update {
@@ -81,7 +85,7 @@ html, body {
 }
 
 #welcome-logo {
-	padding-top: 13%;
+	padding-top: 14%;
 	text-align: center;
 }
 
@@ -112,6 +116,12 @@ html, body {
 .info-main {
 	font-size: 1.4em;
 	color: #b23e4b;
+	padding: 0;
+	width: 12em;
+}
+
+.info-main .octicon {
+	vertical-align: 3px;
 }
 
 .info-main a:hover {
