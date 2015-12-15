@@ -38,7 +38,7 @@ It means the DM should not be stopped when this messaging is used. It replaces, 
 | Property | Description | Notice | Mandatory |
 | --- | --- | --- | --- |
 | server.ip | The DM's IP address. | If left blank, the DM will try to guess it. | no |
-| server.port | The DM's web server port. | Left blank is interpreted as "8081". | no |
+| server.port | The DM's web server port. | Left blank is interpreted as "8181". | no |
 
 All these properties are prefixed with **net.roboconf.messaging.http.**.
 
