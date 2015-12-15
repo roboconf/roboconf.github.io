@@ -51,6 +51,12 @@ openstack.flavor-name = m1.small
 openstack.security-group = default
 openstack.key-pair = default
 
+# Block storage
+openstack.use-block-storage = 
+openstack.volume-mount-point = /dev/vdb
+openstack.volume-name = roboconf-volume
+openstack.volume-size = 
+
 # VM networking.
 openstack.floating-ip-pool = 
 openstack.network-id = 
@@ -71,6 +77,10 @@ Here is a complete description of the parameters for OpenStack.
 | openstack.flavor-name | The hardware configuration for new VMs. Example: m1.tiny | none | yes |
 | openstack.security-group | The VM security group | default | yes |
 | openstack.key-pair | The name of the key pair used to connect to new VMs. | none | yes |
+| openstack.use-block-storage | A boolean parameter that is set *true* if a block storage is used. | false | no |
+| openstack.volume-mount-point | The mounting point of the volume. | /dev/vdb | no |
+| openstack.volume-name | The name of the volume. | roboconf-volume | no |
+| openstack.volume-size | The size of the volume in Gb. | 5 | no |
 | openstack.floating-ip-pool | A pool of available public IPs, so that one of them be associated to the VM (if no pool is provided, the VM only has a private IP). | none | no |
 | openstack.network-id | A neutron (aka quantum) network ID, to use for networking. | none | no |
 
