@@ -106,6 +106,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<h2>Advanced Topics</h2>
 
 	<ul>
+	<li><a href="security.html">Security</a></li>
 	<li><a href="inter-application-dependencies.html">Inter-Application Dependencies</a></li>
 	<li><a href="using-docker-with-roboconf.html">Using Docker with Roboconf</a></li>
 	<li><a href="using-docker-on-the-agent-side.html">Using Docker on the Agent's side</a></li>

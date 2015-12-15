@@ -1,10 +1,14 @@
 ---
-title: "Understand the Messaging with Rabbit MQ"
+title: "Understanding the Messaging with Rabbit MQ"
 layout: page
 cat: "dg-snapshot"
-id: "understand-the-messaging-with-rabbit-mq"
+id: "understanding-the-messaging-with-rabbit-mq--up-to-v0.5"
 menus: [ "developers", "developer-guide" ]
 ---
+
+> This page explains Rabbit MQ's support in Roboconf for versions from 0.1 to 0.5 (included).  
+> For more recent versions, please refer to [this page](understanding-the-messaging-with-rabbit-mq.html).
+
 
 First, it is **highly recommended** to read [Rabbit MQ's tutorial](https://www.rabbitmq.com/getstarted.html).  
 It explains the basics and the concepts of this messaging server.
@@ -20,7 +24,7 @@ This schema illustrates what is discussed below.
 ## Clients and Queues
 
 The DM and all the agents have their own client for RabbitMQ.  
-Each of them has also its own queue.
+Each of them has also its own queue. And all of this is contextual within an application.
 
 The DM's queue is called...
 
@@ -28,9 +32,9 @@ The DM's queue is called...
 <application-name>.dm
 ```
 
-The queue for an agent is named according to the root instance it is associated with.  
-Within a Roboconf application, a root instance name is unique. When an agent starts, it is associated
-with a root instance. The name of an agent's queue is thus...
+The queue for an agent is named according to the root/scoped instance it is associated with.  
+Within a Roboconf application, instance paths are unique. When an agent starts, it is associated
+with a root/scoped instance. The name of an agent's queue is thus...
 
 ```xml
 <application-name>.<root-instance-name>

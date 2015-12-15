@@ -9,9 +9,8 @@ menus: [ "developers", "developer-guide" ]
 ## Main Topics
 
 * [Roboconf Model](roboconf-model.html)
-* [Understanding the Messaging with RabbitMQ](understand-the-messaging-with-rabbit-mq.html)
+* [Understanding the Messaging with RabbitMQ](understanding-the-messaging-with-rabbit-mq.html)
 * [Understanding the Life Cycle](life-cycle.html)
-* [Debugging Roboconf](debugging-roboconf.html)
 * [Launching the Web Administration](launching-the-web-administration.html)
 * [Understanding the iPojo Model](ipojo-model.html)
 
@@ -20,6 +19,7 @@ menus: [ "developers", "developer-guide" ]
 * [Creating a new Roboconf Plug-in](creating-a-new-roboconf-plugin.html)
 * [Supporting a new Deployement Target](supporting-a-new-deployment-target.html)
 * [Creating a new Monitoring Handler](creating-a-new-monitoring-handler.html)
+* [Creating a new Messaging Implementation](creating-a-new-messaging-implementation.html)
 
 ## Build
 
@@ -37,9 +37,9 @@ menus: [ "developers", "developer-guide" ]
 ## Advanced Topics
 
 * [About Integration Tests](about-integration-tests.html)
-* [Creating a new Messaging Implementation](creating-a-new-messaging-implementation.html)
 * [OCCI Model for Roboconf](occi-model.html)
 * [Database Support in Apacha Karaf](database-support-in-karaf.html)
+* [Debugging Roboconf](debugging-roboconf.html)
 
 ## Documentation and Website
 

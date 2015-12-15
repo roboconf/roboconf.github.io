@@ -73,3 +73,23 @@ A specific thing on the agent is that **there are 2 agent use cases**.
 By default, agents are launched and configured through Karaf. However, the **in-memory** target
 creates and configures agent instances on the fly (and through iPojo factories). In both cases, it
 is the same Java class behind. Only its configuration changes.
+
+
+## Roboconf Messaging
+
+In addition to these extensions points, which are either specific to the DM or to agents,
+there is an extension point in the Roboconf messaging.  
+This is clearly the most complex part of Roboconf. It is used by both the DM and agents.
+
+Roboconf allows to...
+
+* ... change the messaging implementation at runtime.
+* ... change the configuration of a messaging implementation at runtime.
+
+When we say at runtime, it means that you only need to update the configuration files and
+it is automatically propagated and reconfigured. And the extension point for messaging implementations was designed
+to support this. So, what is complex is not creating a new messaging implementation. What is complex is not the way
+the DM and agents use the messaging. What is complex is the glue between these 2 layers.
+
+However, the essential part is to remember that there is an extension point to plug new messaging implementation, and that
+this extension is based on iPojo. And it does not register messaging clients but factories to create messaging clients.

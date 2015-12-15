@@ -13,6 +13,9 @@ using-docker-on-the-agent-side:
 using-docker-with-roboconf:
   en: user-guide-snapshot/using-docker-with-roboconf
   
+security:
+  en: user-guide-snapshot/security
+  
 roboconf-commands:
   en: user-guide-snapshot/roboconf-commands
   

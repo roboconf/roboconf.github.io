@@ -63,8 +63,11 @@ web-site-organization:
 documenting-a-new-version:
   en: developer-guide/documenting-a-new-version
   
-understand-the-messaging-with-rabbit-mq:
-  en: developer-guide/understand-the-messaging-with-rabbit-mq
+understanding-the-messaging-with-rabbit-mq--up-to-v0.5:
+  en: developer-guide/understanding-the-messaging-with-rabbit-mq--up-to-v0.5
+      
+understanding-the-messaging-with-rabbit-mq:
+  en: developer-guide/understanding-the-messaging-with-rabbit-mq
   
 debugging-roboconf:
   en: developer-guide/debugging-roboconf

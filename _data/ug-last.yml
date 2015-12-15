@@ -12,6 +12,9 @@ m2r_lab:
   
 inter-application-dependencies:
   en: user-guide/inter-application-dependencies
+
+security:
+  en: user-guide-snapshot/security
   
 configuring-the-web-consoles:
   en: user-guide/configuring-the-web-consoles

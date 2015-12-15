@@ -20,6 +20,29 @@ that begin with **net.roboconf.messaging**.
 Here is a short overview of all the messaging implementations.
 
 
+## HTTP
+
+HTTP is a messaging implementation of the Roboconf messaging API.  
+It is associated with the messaging-type **http** (to use in the DM and agent's configuration files).
+
+> It is the default messaging type for the DM and agents.
+
+It was created to simplify the installation of Roboconf for new beginners.  
+With this messaging, the DM must be available on a public location. With this implementation, agents will connect to the DM
+with web-sockets. This bi-directional channel will be used to exchange messages. Exchanges between agents go through the DM.
+It means the DM should not be stopped when this messaging is used. It replaces, it is the messaging server.
+
+> Given the way it works, this solution only supports a very limited traffic.  
+> It is clearly not designed to work in production environments.
+
+| Property | Description | Notice | Mandatory |
+| --- | --- | --- | --- |
+| server.ip | The DM's IP address. | If left blank, the DM will try to guess it. | no |
+| server.port | The DM's web server port. | Left blank is interpreted as "8081". | no |
+
+All these properties are prefixed with **net.roboconf.messaging.http.**.
+
+
 ## RabbitMQ
 
 RabbitMQ was the initial choice to enable exchanges between the DM and agents.  
@@ -38,22 +61,22 @@ Here is a description of the various parameters.
 
 | Property | Description | Notice | Mandatory |
 | --- | --- | --- | --- |
-| message-server-ip | The IP address and the port of the messaging server. Examples: http://192.168.1.87 (default port), http://192.168.1.89:4048 (with a custom port). | **null** is interpreted as "localhost". | yes |
-| message-server-username | The user name for the messaging server. | **null** is interpreted as "guest". | yes |
-| message-server-password | The password for the messaging server. | **null** is interpreted as "guest". | yes |
+| message-server-ip | The IP address and the port of the messaging server. Examples: http://192.168.1.87 (default port), http://192.168.1.89:4048 (with a custom port). | Left blank is interpreted as "localhost". | yes |
+| message-server-username | The user name for the messaging server. | Left blank is interpreted as "guest". | yes |
+| message-server-password | The password for the messaging server. | Left blank is interpreted as "guest". | yes |
+
+All these properties are prefixed with **net.roboconf.messaging.rabbitmq.**.
 
 
-## HTTP
+## In-Memory
 
-HTTP is an alternative implementation of the Roboconf messaging API.  
-It is associated with the messaging-type **http** (to use in the DM and agent's configuration files).
+The in-memory implementation was created for both a proof of concept and for potential use for tests.  
+With this kind of messaging, clients directly route messages to the right message queue. It can only work when the DM
+and agents run inside the same JVM.
 
-It was created to simplify the installation of Roboconf for new beginners.  
-With this messaging, the DM must be available on a public location. With this implementation, agents will connect to the DM
-with web-sockets. This bi-directional channel will be used to exchange messages. Exchanges between agents go through the DM.
-It means the DM should not be stopped when this messaging is used.
+However, its base implementation can be reused to create other kinds of messaging, such as peer-to-peer clients.
+Instead of routing messages to queues directly, it could route messages to specific locations. The HTTP implementation partially
+relies on this base implementation.
 
-> Given the way it works, this solution only supports a very limited traffic.  
-> It is clearly not designed to work in production environments.
-
-This implementation does not provide (nor require) any configuration.
+The in-memory implementation does not have any parameter.  
+It is associated with the **in-memory** messaging type.

@@ -105,6 +105,7 @@ menus: [ "users", "user-guide" ]
 	<h2>Advanced Topics</h2>
 
 	<ul>
+	<li><a href="security.html">Security</a></li>
 	<li><a href="inter-application-dependencies.html">Inter-Application Dependencies</a></li>
 	</ul>
 </div>
