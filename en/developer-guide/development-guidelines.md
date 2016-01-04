@@ -38,6 +38,18 @@ This section is widely inspired (and partially copied) from [Atom.io's web site]
     * :arrow_down: <code>:<span>arrow_down</span>:</code> when downgrading dependencies
 
 
+## Squash your Commits
+
+Sometimes, and for whatever reason, it takes several commits to solve an issue.  
+To improve the readability and the history browsing, it is better to squash your commits when you can.
+
+Squashing means merging contiguous commits into a single one.  
+Squashing should be ONLY be done on forks. They are acceptable on pull requests provided they have not yet been
+accepted (`git push -force` will be necessary then).
+
+To squash your commits, we suggest you follow [this very good tutorial](https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/) from the web.
+
+
 ## CheckStyle
 
 Roboconf's Maven configuration comes with a [CheckStyle](http://checkstyle.sourceforge.net/) configuration.  

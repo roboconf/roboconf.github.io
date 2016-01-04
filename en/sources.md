@@ -56,8 +56,7 @@ When projects use a different build mechanism, it is described in the readme of 
 
 # Contributing
 
-Feel free to fork the project and contribute back through push requests. ;)
-
+Feel free to fork the project and contribute back through push requests. ;)  
 These links may help you.
 
 * [Understanding pull requests](https://help.github.com/articles/using-pull-requests)

@@ -8,7 +8,7 @@ menus: [ "developers", "developer-guide" ]
 
 ## Main Topics
 
-* [Roboconf Model](roboconf-model.html)
+* [Roboconf's Java Model](roboconf-model.html)
 * [Understanding the Messaging with RabbitMQ](understanding-the-messaging-with-rabbit-mq.html)
 * [Understanding the Life Cycle](life-cycle.html)
 * [Launching the Web Administration](launching-the-web-administration.html)
