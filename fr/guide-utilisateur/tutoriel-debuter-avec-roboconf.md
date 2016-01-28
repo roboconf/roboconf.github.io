@@ -29,7 +29,7 @@ Vous aurez besoin d'une machine virtuelle Java pour le faire tourner (JDK 7).
 Pour l'installer, il suffit de dézipper l'archive. Optez de préférence pour le \*.tar.gz, qui
 conserve les permissions sur les fichiers.
 
-En ce qui concerne RabbitMQ, reportez-vous au [guide utilisateur](/en/user-guide/installing-the-messaging-server.html) 
+En ce qui concerne RabbitMQ, reportez-vous au [guide utilisateur](/en/user-guide/installing-rabbit-mq.html) 
 qui documente la procédure à suivre pour l'installer. Malheureusement, cette partie du guide utilisateur n'a
 pas encore été traduite.
 

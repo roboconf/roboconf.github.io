@@ -94,8 +94,8 @@ configuring-an-agent:
 configuring-the-messaging:
   en: user-guide/configuring-the-messaging
   
-installing-the-messaging-server:
-  en: user-guide/installing-the-messaging-server
+installing-rabbit-mq:
+  en: user-guide/installing-rabbit-mq
   
 preparing-virtual-images-with-an-agent:
   en: user-guide/preparing-virtual-images-with-an-agent

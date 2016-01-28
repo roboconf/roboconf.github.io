@@ -15,7 +15,7 @@ First versions of Roboconf were also heavily tested on Windows, but this is not 
 
 At the moment, Roboconf needs a [RabbitMQ](https://www.rabbitmq.com) instance to run.  
 This messaging server enables communication between Roboconf parts.  
-Follow the instructions on this page to [install the messaging server](installing-the-messaging-server.html).
+Follow the instructions on this page to [install the messaging server](installing-rabbit-mq.html).
 
 If you deploy on a cloud infrastructure (such as Amazon Web Services, Microsoft Azure or Openstack),
 Roboconf will create virtual machines from an appliance (or virtual image). You will have to create
@@ -75,8 +75,15 @@ Please, refer to the links below for more details.
 
 * [Installing the Deployment Manager](installing-the-deployment-manager.html) by hand
 * [Installing an Agent](installing-an-agent.html) by hand
+* If you use RabbitMQ, [installing RabbitMQ](installing-rabbit-mq.html)
 
 It is also possible to install everything (RabbitMQ included) through scripts.  
 They were written for Linux, but could be (quite) easily adapted for other systems.
 
 * [Installing Everything](installing-everything-with-scripts.html) with Linux scripts
+
+Once installed, please refer to the configuration pages:
+
+* [Configuring the DM](configuring-the-deployment-manager.html)
+* [Configuring an Agent](configuring-an-agent.html)
+* [Configuring the Messaging](configuring-the-messaging.html)

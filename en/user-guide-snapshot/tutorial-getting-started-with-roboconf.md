@@ -29,7 +29,7 @@ You will need a Java Virtual Machine to run it (JDK 7).
 To install it, unzip the archive. It may be better to prefer the \*.tar.gz archive, since this format preserves
 file permissions.
 
-About RabbitMQ, please refer to our [user guide](/en/user-guide/installing-the-messaging-server.html) 
+About RabbitMQ, please refer to our [user guide](installing-rabbit-mq.html) 
 which explains the procedure to install it.
 
 

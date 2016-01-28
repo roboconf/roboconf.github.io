@@ -1,9 +1,9 @@
 ---
-title: "Installing the Messaging Server"
+title: "Installing RabbitMQ"
 layout: page
-cat: "ug-snapshot"
-id: "installing-the-messaging-server"
-menus: [ "users", "user-guide", "Snapshot" ]
+cat: "ug-last"
+id: "installing-rabbit-mq"
+menus: [ "users", "user-guide" ]
 ---
 
 The messaging server is a crucial element so that Roboconf can work.  

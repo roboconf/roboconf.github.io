@@ -153,7 +153,7 @@ src/main/model
 
 ## Prerequisites
 
-Install the [messaging server (RabbitMQ)](installing-the-messaging-server.html) and the [Roboconf DM](installing-the-deployment-manager.html).  
+Install the [messaging server (RabbitMQ)](installing-rabbit-mq.html) and the [Roboconf DM](installing-the-deployment-manager.html).  
 You may have already done this in the [getting started with Roboconf](tutorial-getting-started-with-roboconf.html).
 
 Docker will also be necessary (unless you reconfigure the tutorial to use another IaaS).  

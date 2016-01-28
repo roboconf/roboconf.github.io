@@ -132,6 +132,48 @@ Create component \
 </code></pre>
 
 
-## Advanced Command Instructions
+## Other Command Instructions
 
-To complete: email, etc.
+Here are additional commands that might be useful.
+
+
+### Email Command
+
+Send an e-mail to someone.  
+SMTP settings are stored in the DM's preferences, not in command files.  
+These preferences also allow to define default recipients.
+
+<pre><code class="language-roboconf-commands"># Send an e-mail with a default subject (Roboconf event).
+email user@company.net with this message
+</code></pre>
+
+<pre><code class="language-roboconf-commands"># Send an e-mail with a default subject (Roboconf event)...
+# ... to several recipients.
+email user1@company.net, user2@company.net with this message
+</code></pre>
+
+<pre><code class="language-roboconf-commands"># Send an e-mail with a default subject (Roboconf event)...
+# ... to the default recipients (defined in the preferences).
+email with this message
+</code></pre>
+
+<pre><code class="language-roboconf-commands"># Define a mail subject and a body.
+email user@company.net with with @n@
+    Subject: Alert! @n@
+    This is an example.
+</code></pre>
+
+
+### Write Command
+
+Write into a file.
+
+<pre><code class="language-roboconf-commands">Write some text into /this/file
+
+# Write into the system's temporary directory
+# %TMP% will be replaced by the location of the system's temporary directory.
+Write something else into %TMP%/temporary-file.txt
+
+# Create an empty file
+Write into /that/file
+</code></pre>

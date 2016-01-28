@@ -46,7 +46,8 @@ All these properties are prefixed with **net.roboconf.messaging.http.**.
 ## RabbitMQ
 
 RabbitMQ was the initial choice to enable exchanges between the DM and agents.  
-It is associated with the messaging-type **rabbitmq** (to use in the DM and agent's configuration files).
+It is associated with the messaging-type **rabbitmq** (to use in the DM and agent's configuration files).  
+As a reminder, here is the page that explains [its installation](installing-rabbit-mq.html).
 
 With this messaging, the DM is only required to create agents.  
 Agents can then communicate without the DM (which means it can be stopped when it is not necessary).

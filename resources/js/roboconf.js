@@ -119,6 +119,8 @@ function formatRoboconfCommandsSnippets() {
     result = result.replace( /(^create)\s+(.*)\s+(as)\s+(.*)\s+(under)/igm, '<span class="keyword">$1</span> $2 <span class="keyword">$3</span> $4 <span class="keyword">$5</span>' );
     result = result.replace( /(^create)\s+(.*)\s+(as)/igm, '<span class="keyword">$1</span> $2 <span class="keyword">$3</span>' );
     result = result.replace( /(^define)\s+(.*)\s*=/igm, '<span class="keyword">$1</span> $2 <span class="keyword">=</span>' );
+    result = result.replace( /(^write)\s+(.*)(\s*)(into)\s+(.*)/igm, '<span class="keyword">$1</span> $2$3<span class="keyword">$4</span> $5' );
+    result = result.replace( /(^email)\s+(.*)(\s*)(with)\s+(.*)/igm, '<span class="keyword">$1</span> $2$3<span class="keyword">$4</span> $5' );
 
     result = result.replace( /(\$\(INDEX\))/igm, '<i>$1</i>' );
     result = result.replace( /(\$\(NANO_TIME\))/igm, '<i>$1</i>' );
@@ -127,6 +129,7 @@ function formatRoboconfCommandsSnippets() {
 
     // Line breaks
     result = result.replace( /\\/igm, '\\\n\t' );
+    result = result.replace( /@n@/igm, '\\n\\' );
 
     // Set the new HTML content
     $( this ).html( result.trim());

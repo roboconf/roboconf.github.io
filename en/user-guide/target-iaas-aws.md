@@ -75,10 +75,3 @@ Here is a complete description of the parameters for Amazon Web Services.
 | ec2.ssh.key | The name of the ssh key used to connect | none | yes |
 | ec2.security.group | The VM security group name. *Caution to not set the security group id*. | default | no |
 | ec2.elastic.ip | An elastic IP address | none | no |
-| ec2.availability-zone | Availability zone for instances and EBS volumes: necessary to reuse volumes (they must be in the same availability zone as instances they are attached to) | none | no |
-| ec2.use-block-storage | Use EBS block storage (create / reuse and mount EBS volume) | false | no |
-| ec2.ebs-snapshot-id | Snapshot ID for volume, or volume name that can be reused is delete-on-termination is false | none | no |
-| ec2.ebs-delete-on-termination | Delete volume on instance termination, or not | false | no |
-| ec2.ebs-size | Volume size (Mb) | 2 | no |
-| ec2.ebs-mount-point | Volume mount point | /dev/sdf | no |
-| ec2.ebs-type | Volume type | standard | no |
