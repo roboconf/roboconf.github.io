@@ -1,51 +1,22 @@
 ---
-title: "Autonomic Management"
+title: "Configuring Probes for the Autonomic"
 layout: page
-cat: "ug-0-4"
-id: "autonomic-management-with-roboconf"
-menus: [ "users", "user-guide", "0.4" ]
+cat: "ug-snapshot"
+id: "configuring-probes-for-the-autonomic"
+menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
-Autonomic management is an experimental feature of Roboconf.  
-It consists in two parts:
+In this page, probes refer to the Roboconf features that allow
+to throw alarm signals when a threshold is reached or when a resource is starving. Alarms
+are propagated to the DM as messages. The DM's decision engine will then determine what to
+do of the alarm. 
 
-* On one side, agents retrieve metrics on their local node.  
-These metrics are compared against some values given in the agent's configuration.
-If they exceed, equal or are lower than given values (depending on the configuration rules),
-agents send a notification to the DM.
-* On the other side, when the DM receives such a notification, it checks its configuration
-to determine which action to undertake. This can go from a single log entry, to e-mail notification
-or even replicating a service on another machine. 
-
-> Autonomic management is complementary to usual monitoring tools.  
-> One does not replace the other.
-
-
-## Schema
-
-This schema summers up the way autonomic management works.  
-Detection is delegated to agents. Reactions are managed by the Deployment Manager (DM).
-
-<br />
-<img src="/resources/img/autonomic-diagram.png" alt="An overview of the way autonomic management works" />
-
-
-## Configuration
-
-The configuration is in fact defined in application projects.  
-It means every project has its own rules and reactions.
-
-In this perspective, the project structure is enriched with a new directory, called **autonomic**.  
-With the **descriptor**, **graph** and **instances** directories, it makes 4. The **autonomic** directory
-expects two kinds of files.
-
-* **measures** files include a set of measures to perform by the agent.  
-Such a file is associated with a given component in the graph. Hence, we can consider
-the autonomic rules as an annotation on a component in the graph.  
-These files must be named **&lt;component name&gt;.measures**.
-
-* **rules** files define the actions to undertake by the DM when a measure has reached a given limit.  
-Such a file is associated with the whole application. It must be named **rules.cfg**.
+Probes include a Roboconf monitoring handler and its configuration for a given component.
+This configuration is defined in a **.measures** file. Such a file is associated with a
+given component in the graph. Hence, we can consider it as an annotation on a component in the graph. 
+ 
+A probe configuration for a Roboconf component must be named **&lt;component name&gt;.measures**.  
+It must be located under the **probes** directory in the application (template)'s directory.
 
 
 ## Measures Files
@@ -54,8 +25,7 @@ Measures files indicate measures an agent will have to perform regularly on its 
 The delay between each check is for the moment hard-coded.
 
 These files use a custom syntax.  
-Comments start with the sharp (#) character.  
-Every measure must have a unique name.
+Comments start with the sharp (#) character.
 
 An agent can use several options to measure something.  
 The option or extension to use to perform the measure is indicated on the same line than
@@ -63,8 +33,13 @@ the measure name. Here is the syntax for the declaration of a measure.
 
 	[EVENT measure-extension measure-name]
 
+Notice that for a given instance, monitoring assertions only run when the instance's status
+is DEPLOYED_STARTED, that is to say when Roboconf completed its deployment and its bootstrap.
 
-### LiveStatus
+The next sections describe the available monitoring handlers.
+
+
+## LiveStatus
 
 We can use **LiveStatus** (which is the protocol used by Nagios and Shinken).  
 This allows to query a local Nagios or Shinken agent. We simply write a live status request.
@@ -136,13 +111,14 @@ service xinetd restart
 
 Test livestatus / nagios config:
 
-```
+```bash
 echo 'get HOSTS' | netcat localhost 50000
 ```
 
 Note concerning Shinken: livestatus is installed by default, and configured to listen on port 50000. It may be necessary to enable the "livestatus" module: check the Shinken documentation to do so.
 
-### REST
+
+## REST
 
 An agent can query a REST service.  
 The result can be interpreted as an integer or as a string.
@@ -173,7 +149,7 @@ The following operators are supported.
 | >= | yes |
 
 
-### File
+## File
 
 An agent can check the local file system.  
 Depending on the existence of a file or a directory, or based on the absence
@@ -208,9 +184,62 @@ not the job of the agent. The agent measures and notify when needed. It is not u
 these measures. This will be up to the Deployment Manager.
 
 
+## Docker
+
+This monitoring handlers allows to verify a given Docker contains runs.  
+When a container does not run anymore (while it should, i.e. its status is still DEPLOYED_STARTED),
+then this handle will detect it and send an alarm to the DM.
+
+This handler takes a single optional parameter.
+
+```properties
+# This is a comment ;)
+# These can be seen as probes configurations, all associated with a same Roboconf component.
+# The "docker" handler verifies Docker containers are running.
+
+# Notify the DM if 'my-container-name' is not running.
+[EVENT docker myRuleName-1]
+my-container-name
+
+# Find the container name from the instance name.
+[EVENT docker myRuleName-2]
+ROBOCONF\_INSTANCE\_NAME
+
+# No container name specified, a default variable is used to find the container name.
+[EVENT file myRuleName]
+```
+
+Available variables (replaced by Roboconf) are:
+
+- ROBOCONF\_INSTANCE\_NAME: the name of the current instance.
+- ROBOCONF\_INSTANCE\_PATH: the path of the current instance.
+- ROBOCONF\_CLEAN\_INSTANCE\_PATH: the path of the current instance but with the non-alphanumeric characters being replaced by an underscore.
+- ROBOCONF\_CLEAN\_REVERSED\_INSTANCE\_PATH: the reversed path of the current instance and with the non-alphanumeric characters being replaced by an underscore.
+
+Example:
+
+```bash
+ROBOCONF_INSTANCE_NAME => my-server
+ROBOCONF_INSTANCE_PATH => /VM/my-server
+ROBOCONF_CLEAN_INSTANCE_PATH => VM_my_server
+ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH => my_server_vm
+```
+
+There are the same than those used in the [script plug-in](plugin-script.html).  
+When no container name is specified, be it as a hard-coded name or as Roboconf variable, then it is assumed
+the name is the ROBOCONF\_CLEAN\_REVERSED\_INSTANCE\_PATH variable.
+
+
+## Your Own Monitoring Handler
+
+It is possible to write its own monitoring handler.  
+A monitoring handler is a Java bundle that can be developed and hot-deployed in your Karaf distribution
+for the agent. Please, refer to [the developer guide](../developer-guide/developer-guide.html) for more details.
+
+
 ## Parameterized Measures Files
 
-Measures files can be parametrized.  
+Measures files can be parameterized.  
 It means values can be externalized in a properties file.
 
 This an be used, for the moment, for environment switch (test, production, etc).  
@@ -240,93 +269,3 @@ And here is the content of the **my-component.measures.properties** file.
 accept_passive_checks = 1
 a-directory-to-not-delete = roboconf
 ```
-
-
-## Rules Files
-
-Rules files contain the reactions to undertake by the DM when a measure verified a given rule
-on the agent side.
-
-> For the moment, the DM implementation is very basic.  
-> It reacts to every message. There is no complex event processing or real rule engine for the moment.
-
-These files use a custom syntax. **This syntax may change later, in particular if we had
-to switch to real rule engine.**  
-Comments start with the sharp (#) character.
-
-The syntax is the following one...
-
-	[REACTION measure-name reaction-handler]
-	Optional parameters for the handler
-
-There are 4 available handlers.  
-
-* **Log**: to log an entry. There is no parameter.
-* **Mail**: to send an e-mail. It accepts only one parameter, which is an e-mail address.
-* **Replicate-Service**: to replicate a component on a new machine. It takes a chain of component names as parameter.
-* **Delete-Service**: to delete a component that was replicated. It takes a component name as parameter. 
- 
-Let's see an example with 4 different reactions to 4 different measures.
-
-```properties
-# This is a comment ;)
-# This files gathers all the reactions for a given application.
-
-# When "event-1" is triggered, replicate a service.
-# The service is instantiated given the path on the next line.
-# Each path segment designates a component name. Here, it means we will create...
-# ... a new VM, with a new Tomcat, with a new instance of War 1.
-[reaction event-1 Replicate-Service]
-/vm/tomcat/war1
-
-# When "event-2" is triggered, delete a service.
-# The service to delete is associated with the component described on the next line (war1).
-# The entire VM will be deleted. Only VM that were created with "Replicate-Service" can be
-# deleted by "Delete-Service".
-[reaction event-2 Delete-Service]
-war1
-
-# When "event-3" is triggered, send an e-mail.
-[reaction event-3 Mail]
-Subject: event-3 was detected
-Put the e-mail content here.
-The subject line is optional.
-
-# When "event-4" is triggered, log an entry.
-[reaction event-4 Log]
-```
-
-To send an e-mail, you have to create a properties file.  
-For the moment, it must be located in the rules directory, and be called *rules.cfg.properties*.
-It must contain all the mail configuration. Here is a sample.
-
-```properties
-# From... to...
-mail.from: dm@roboconf.net
-mail.to: someone@domain.com
-
-# SMTP configuration
-mail.user: me
-mail.password: mypassword
-mail.smtp.host: my.mail.server
-mail.smtp.port: 1234
-
-# SSL configuration
-mail.smtp.auth: true
-mail.smtp.starttls.enable: true
-mail.smtp.ssl.trust: my.mail.server
-```
-
-See **javax.mail** properties for more details.
-
-
-## Activation
-
-On the agent side, autonomic is handled in the **roboconf-agent-monitoring** bundle.  
-So, you can disable autonomic management by stopping or uninstalling this bundle.
-
-On the DM, you have nothing to do.  
-Reacting to agent messaging is the normal job of the DM.
-
-> The DM can usually be stopped when it is not used.  
-> However, it has to run ALL the time when autonomic management is used.

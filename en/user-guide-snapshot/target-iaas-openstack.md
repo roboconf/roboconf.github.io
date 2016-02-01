@@ -111,7 +111,7 @@ openstack.use-block-storage = vol1, vol2
 # Volume 1
 openstack.volume-name.vol1 = cache-%APP%-%NAME%
 openstack.volume-size.vol1 = 10	# Gb
-openstack.volume-mount-point.vol1 = /dev/sdf
+openstack.volume-mount-point.vol1 = /dev/vdf
 openstack.volume-type.vol1 = SSD
 openstack.delete-volume-on-termination.vol1 = true 
 
@@ -182,3 +182,18 @@ Notice that when <i>openstack.delete-volume-on-termination</i> is <b>false</b>, 
 and try to reuse it. If it does not exist, or if the volume is supposed to be deleted after VM termination, then Roboconf will create
 the volume. This is why persistent block storages should have a unique name in your installation. Roboconf guarantees the uniqueness of the
 couple *(application name, root instance name)*. This is why you can use the <b>%APP%</b> and <b>%NAME%</b> tags to generate the volume name.
+
+Notice also that creating a volume only means creating a disk.  
+Attaching it means linking your server with this disk. So, once your server is up, you should find the disk.
+On Linux systems, you can use the following command to list the available disks.
+
+```tcl
+sudo fdisk -l
+```
+
+If your volumes were never initialized, you might see something like `Disk /dev/vdb doesn't contain a valid partition table`.
+It means you need to format the disk and mount it in the system. This is not an operation performed by the IaaS. You have to do
+it in your system. For Roboconf, we suggest you create a script that will be invoked at startup to format and mount partitions if necessary.
+
+This last point may be improved in the future.  
+Additional information about volumes configuration can be found [here](https://community.hpcloud.com/article/preparing-your-block-storage-volume-use).

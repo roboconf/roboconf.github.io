@@ -136,7 +136,27 @@ function formatRoboconfCommandsSnippets() {
   });
 }
 
+/**
+ * Formats Drools rules.
+ */
+function formatRoboconfRulesSnippets() {
+
+  $( '.language-roboconf-rules' ).each( function( index ) {
+    var text = $( this ).text().trim();
+    text = text.replace( /\b(rule)\b/igm, '<span class="keyword">$1</span>' );
+    text = text.replace( /\b(when)\b/igm, '<span class="keyword">$1</span>' );
+    text = text.replace( /\b(then)\b/igm, '<span class="keyword">$1</span>' );
+    text = text.replace( /\b(end)\b/igm, '<span class="keyword">$1</span>' );
+    text = text.replace( /\b(sleep period is)\b/igm, '<span class="attribute">$1</span>' );
+    text = text.replace( /\b(time window is)\b/igm, '<span class="attribute">$1</span>' );
+
+    // Set the new HTML content
+    $( this ).html( text.trim());
+  });
+}
+
 $( window ).ready( function() {
   formatRoboconfSnippets();
   formatRoboconfCommandsSnippets();
+  formatRoboconfRulesSnippets();
 });

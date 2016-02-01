@@ -19,6 +19,12 @@ security:
 roboconf-commands:
   en: user-guide-snapshot/roboconf-commands
   
+configuring-probes-for-the-autonomic:
+  en: user-guide-snapshot/configuring-probes-for-the-autonomic
+  
+specifying-automatic-reactions:
+  en: user-guide-snapshot/specifying-automatic-reactions
+  
 testing-an-application-locally:
   en: user-guide-snapshot/testing-an-application-locally
   

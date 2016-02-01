@@ -55,7 +55,7 @@ The delay between each check is for the moment hard-coded.
 
 These files use a custom syntax.  
 Comments start with the sharp (#) character.  
-Ever measure must have a unique name.
+Every measure must have a unique name.
 
 An agent can use several options to measure something.  
 The option or extension to use to perform the measure is indicated on the same line than
@@ -106,7 +106,7 @@ broker_module=/usr/lib/check_mk/livestatus.o /var/lib/nagios3/rw/livestatus
 ```
 Add a new file called "livestatus" in /etc/xinetd.d, with the following content (makes livestatus available on TCP port 50000, you might prefer another one):
 
-```
+```tcl
 service livestatus
 {
 	type = UNLISTED
@@ -121,7 +121,8 @@ service livestatus
 	user = nagios
 	server = /usr/bin/unixcat
 	server_args = /var/lib/nagios3/rw/livestatus
-	#only_from = 127.0.0.1 # modify this to only allow specific hosts to connect, currenly localhost only
+	# Only_from = 127.0.0.1 
+	# Modify this to only allow specific hosts to connect, currently localhost only
 	disable = no
 }
 ```
@@ -135,7 +136,7 @@ service xinetd restart
 
 Test livestatus / nagios config:
 
-```
+```bash
 echo 'get HOSTS' | netcat localhost 50000
 ```
 

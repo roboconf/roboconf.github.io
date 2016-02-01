@@ -55,7 +55,7 @@ The delay between each check is for the moment hard-coded.
 
 These files use a custom syntax.  
 Comments start with the sharp (#) character.  
-Ever measure must have a unique name.
+Every measure must have a unique name.
 
 An agent can use several options to measure something.  
 The option or extension to use to perform the measure is indicated on the same line than

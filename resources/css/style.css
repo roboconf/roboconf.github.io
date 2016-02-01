@@ -333,6 +333,7 @@ span.roadmap-in-progress {
 .language-java span.c1,
 .language-puppet span.c,
 .language-bash span.c,
+.language-tcl span.c,
 .language-xml span.nt,
 .language-json span.nt,
 .language-html span.s,
@@ -366,13 +367,15 @@ span.roadmap-in-progress {
 .language-tcl span.nv,
 .language-tcl span.nb,
 .language-roboconf span.property,
-.language-roboconf-commands span.keyword {
+.language-roboconf-commands span.keyword,
+.language-roboconf-rules span.keyword {
 	color: #b23e4b;
 	font-weight: bold;
 }
 
 .language-htmldjango span.cp,
-.language-json span.p {
+.language-json span.p,
+.language-roboconf-rules span.attribute {
 	color: #b23e4b;
 	font-size: 14px;
 }
