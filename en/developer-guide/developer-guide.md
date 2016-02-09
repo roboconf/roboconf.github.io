@@ -38,7 +38,7 @@ menus: [ "developers", "developer-guide" ]
 
 * [About Integration Tests](about-integration-tests.html)
 * [OCCI Model for Roboconf](occi-model.html)
-* [Database Support in Apacha Karaf](database-support-in-karaf.html)
+* [Database Support in Apache Karaf](database-support-in-karaf.html)
 * [Debugging Roboconf](debugging-roboconf.html)
 
 ## Documentation and Website
