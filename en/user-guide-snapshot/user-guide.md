@@ -36,11 +36,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 
 	<ul>
 	<li><a href="installing-roboconf.html">Installing Roboconf</a></li>
-	<li><a href="configuring-the-deployment-manager.html">Configuring the DM</a></li>
-	<li><a href="configuring-an-agent.html">Configuring an Agent</a></li>
-	<li><a href="configuring-the-messaging.html">Configuring the Messaging</a></li>
-	<li><a href="configuring-the-loggers.html">Configuring the Loggers</a></li>
-	<li><a href="configuring-the-web-consoles.html">Configuring the Web Consoles</a></li>
+	<li><a href="configuring-roboconf.html">Configuring Roboconf</a></li>
 	</ul>
 </div>
 
@@ -53,16 +49,6 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<li><a href="graph-resources.html">The Graph Resources</a></li>
 	<li><a href="instances-description.html">The Instances</a></li>
 	<li><a href="roboconf-dsl.html">Roboconf DSL</a></li>
-	</ul>
-</div>
-
-<div class="floated">
-	<h2>Reusability</h2>
-
-	<ul>
-	<li><a href="reusability-in-models.html">Reusability in Models</a></li>
-	<li><a href="reusable-recipes-index.html">Index of Reusable Recipes</a></li>
-	<li><a href="how-to-write-reusable-recipes.html">How to write reusable recipes?</a></li>
 	</ul>
 </div>
 
@@ -80,18 +66,6 @@ menus: [ "users", "user-guide", "Snapshot" ]
 </div>
 
 <div class="floated">
-	<h2>Tools</h2>
-
-	<ul>
-	<li><a href="web-administration.html">Web Administration</a></li>
-	<li><a href="editors.html">Editors</a></li>
-	<li><a href="eclipse-plugin.html">The Eclipse plug-in</a></li>
-	<li><a href="maven-plugin.html">The Maven plug-in</a></li>
-	<li><a href="dm-templating.html">The DM's templating</a></li>
-	</ul>
-</div>
-
-<div class="floated">
 	<h2>Automation</h2>
 
 	<ul>
@@ -99,6 +73,28 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<li><a href="monitoring-roboconf.html">Monitoring Roboconf</a></li>
 	<li><a href="monitoring-applications-deployed-with-roboconf.html">Monitoring Applications deployed with Roboconf</a></li>
 	<li><a href="autonomic-management-with-roboconf.html">Autonomic Management</a></li>
+	</ul>
+</div>
+
+<div class="floated">
+	<h2>Tools</h2>
+
+	<ul>
+	<li><a href="web-administration.html">Web Administration</a></li>
+	<li><a href="eclipse-plugin.html">The Eclipse plug-in</a></li>
+	<li><a href="maven-plugin.html">The Maven plug-in</a></li>
+	<li><a href="karaf-commands-for-roboconf.html">Karaf Commands for Roboconf</a></li>
+	<li><a href="other-tools.html">Other Tools</a></li>
+	</ul>
+</div>
+
+<div class="floated">
+	<h2>Reusability</h2>
+
+	<ul>
+	<li><a href="reusability-in-models.html">Reusability in Models</a></li>
+	<li><a href="reusable-recipes-index.html">Index of Reusable Recipes</a></li>
+	<li><a href="how-to-write-reusable-recipes.html">How to write reusable recipes?</a></li>
 	</ul>
 </div>
 

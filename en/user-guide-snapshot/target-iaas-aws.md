@@ -9,7 +9,15 @@ menus: [ "users", "user-guide", "Snapshot" ]
 Roboconf has a target implementation for Amazon Web Services (AWS).  
 It only supports the creation of *compute* VMs.
 
-To install it, open the DM's interactive mode and type in...
+To install it, open the DM's interactive mode and use one of the following options.  
+With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+
+```properties
+# The version will be deduced automatically by the DM
+roboconf:target aws
+```
+
+Or with the native Karaf commands:
 
 ```properties
 # Here in version %v_SNAP%
@@ -25,6 +33,8 @@ Just copy / paste and edit.
 ```properties
 # Configuration file for EC2
 handler = iaas-ec2
+
+# Provide a meaningful description of the target
 name = 
 description = 
 
@@ -36,10 +46,22 @@ ec2.access.key =
 ec2.secret.key = 
 
 # VM configuration
-ec2.ami	= 
+ec2.ami = 
 ec2.instance.type = t1.micro
 ec2.ssh.key = 
-ec2.security.group	= 
+ec2.security.group =
+
+# Elastic IP address
+# ec2.elastic.ip =  
+
+# Block Storage
+# ec2.availability-zone = 
+# ec2.use-block-storage = true
+# ec2.ebs-snapshot-id = 
+# ec2.ebs-delete-on-termination = true
+# ec2.ebs-size = 2
+# ec2.ebs-mount-point = /dev/sdf
+# ec2.ebs-type = standard
 ```
 
 It is also possible to define an elastic IP address.  

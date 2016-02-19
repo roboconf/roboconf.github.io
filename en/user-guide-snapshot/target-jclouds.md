@@ -9,7 +9,15 @@ menus: [ "users", "user-guide", "Snapshot" ]
 Roboconf has a generic target implementation based on [Apache JClouds](http://jclouds.apache.org).  
 For the moment, it only supports the creation of *compute* VMs.
 
-To install it, open the DM's interactive mode and type in...
+To install it, open the DM's interactive mode and use one of the following options.  
+With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+
+```properties
+# The version will be deduced automatically by the DM
+roboconf:target jclouds
+```
+
+Or with the native Karaf commands:
 
 ```properties
 # Here in version %v_SNAP%

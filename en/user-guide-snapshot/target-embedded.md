@@ -10,7 +10,15 @@ Embedded support addresses the cases where the machines already exist or are cre
 Therefore, it covers existing (physical) machines, devices (such as cards) and virtual machines created
 manually (e.g. with Virtual Box).
 
-To install it, open the DM's interactive mode and type in...
+To install it, open the DM's interactive mode and use one of the following options.  
+With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+
+```properties
+# The version will be deduced automatically by the DM
+roboconf:target embedded
+```
+
+Or with the native Karaf commands:
 
 ```properties
 # Here in version %v_SNAP%

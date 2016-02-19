@@ -69,7 +69,7 @@ Let's suppose you want to develop a deployment target for a specific version of 
 				<configuration>
 					<instructions>
 						<Import-Package>
-							net.roboconf.*;version="${roboconf.version}"
+							net.roboconf.*;version="${version.range}"
 						</Import-Package>
 						<Embed-Dependency>*;scope=compile|runtime;inline=true;groupId=!net.roboconf</Embed-Dependency>
 						<Embed-Transitive>true</Embed-Transitive>

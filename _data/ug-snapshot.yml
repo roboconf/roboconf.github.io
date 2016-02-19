@@ -10,6 +10,21 @@ roboconf-architecture:
 using-docker-on-the-agent-side:
   en: user-guide-snapshot/using-docker-on-the-agent-side
   
+configuring-roboconf:
+  en: user-guide-snapshot/configuring-roboconf
+  
+karaf-commands-for-roboconf:
+  en: user-guide-snapshot/karaf-commands-for-roboconf
+  
+other-tools:
+  en: user-guide-snapshot/other-tools
+  
+installing-roboconf-with-debian-packages:
+  en: user-guide-snapshot/installing-roboconf-with-debian-packages
+  
+installing-roboconf-with-rpm:
+  en: user-guide-snapshot/installing-roboconf-with-rpm
+  
 using-docker-with-roboconf:
   en: user-guide-snapshot/using-docker-with-roboconf
   

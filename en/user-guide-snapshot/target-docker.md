@@ -10,26 +10,38 @@ Roboconf has a target implementation for Docker.
 From the Roboconf perspective, Docker is seen as a kind of IaaS.
 Roboconf may create and manage docker containers, that run Roboconf agents (just like VMs) and can be used as deployment targets.
 
-To install it, open the DM's interactive mode and type in...
-
-```properties
-# Here in version %v_SNAP%
-bundle:install --start mvn:net.roboconf/roboconf-target-docker/%v_SNAP%
-```
-
-Sample **target.properties**.  
-Just copy / paste and edit.
+To install it, open the DM's interactive mode and use one of the following options.  
+With the [roboconf:target](karaf-commands-for-roboconf.html) command:
 
 ```properties
 # Configuration file for Docker
 handler = docker
+
+# Provide a meaningful description of the target
 name = 
 description = 
 
+# Docker API
 docker.endpoint = http://localhost:4243
-docker.image = 0f3087570887fdgf14dfg1dd4f
-docker.user = guest
-docker.password = guest
+docker.image = 
+
+#docker.user = guest
+#docker.password = guest
+#docker.email = guest@something.com
+#docker.version = 
+#docker.run.exec = 
+
+# Image Generation
+
+#docker.generate.image = 
+#docker.agent.package.url = 
+#docker.agent.jre-packages = 
+#docker.additional.packages =  
+#docker.additional.deploy = 
+
+# docker.base.image = ubuntu:latest
+# docker.download.base-image = true
+# docker.image.registry = registry.hub.docker.com
 ```
 
 Here is a complete description of the parameters for Docker.  

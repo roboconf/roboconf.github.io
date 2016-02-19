@@ -18,7 +18,7 @@ You **should** follow the instructions on [RabbitMQ's web site](http://www.rabbi
 > The most simple solution is generally to put it in a public cloud infrastructure.
 
 RabbitMQ needs to be configured with a user and a password.  
-Otherwise, client connections will be refused. See this page about [access control](http://www.rabbitmq.com/access-control.html) wit RabbitMQ.
+Otherwise, client connections will be refused. See this page about [access control](http://www.rabbitmq.com/access-control.html) with RabbitMQ.
 
 > You should clear the guest/guest credentials.  
 > The user name and password are the one you set in the Deployment Manager's configuration.

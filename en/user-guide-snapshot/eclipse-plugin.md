@@ -15,11 +15,7 @@ and text editors to edit configuration files.
 
 In Eclipse, click **Help &gt; Install New Software...**.  
 Click **Add...** and complete the dialog that shows up.  
-Give it a name, like...
-
-	Roboconf's update site
-
-... and this URL: 
+Give it a name, like `Roboconf's update site` and this URL: 
 [http://dl.bintray.com/roboconf/roboconf-eclipse/%v_SNAP%/](http://dl.bintray.com/roboconf/roboconf-eclipse/%v_SNAP%/)
 
 <img src="/resources/img/eclipse-install.jpg" alt="The update dialog" />

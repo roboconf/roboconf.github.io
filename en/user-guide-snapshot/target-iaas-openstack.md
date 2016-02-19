@@ -7,9 +7,17 @@ menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
 Roboconf has a target implementation for Openstack.  
-It only supports the creation of *compute* VMs.
+It supports the creation of *compute* VMs and block storage.
 
-To install it, open the DM's interactive mode and type in...
+To install it, open the DM's interactive mode and use one of the following options.  
+With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+
+```properties
+# The version will be deduced automatically by the DM
+roboconf:target openstack
+```
+
+Or with the native Karaf commands:
 
 ```properties
 # Here in version %v_SNAP%
@@ -34,6 +42,8 @@ Just copy / paste and edit.
 ```properties
 # Configuration file for Openstack
 handler = iaas-openstack
+
+# Provide a meaningful description of the target
 name = 
 description = 
 
@@ -50,10 +60,22 @@ openstack.image-name =
 openstack.flavor-name = m1.small
 openstack.security-group = default
 openstack.key-pair = default
+# openstack.region-name = 
 
-# VM networking.
-openstack.floating-ip-pool = 
-openstack.network-id = 
+# VM networking
+# openstack.floating-ip-pool = 
+# openstack.network-id = 
+
+# Block storage
+# openstack.use-block-storage = vol1, vol2
+#
+# openstack.volume-name.vol1 = cache-%APP%-%NAME%
+# openstack.volume-size.vol1 = 10
+# openstack.volume-mount-point.vol1 = /dev/vdf
+# openstack.volume-type.vol1 = SSD
+# openstack.delete-volume-on-termination.vol1 = true 
+#
+# openstack.volume-size.vol2 = 100
 ```
 
 ## General Parameters
@@ -76,25 +98,7 @@ Block storage is detailed further in the page.
 | openstack.key-pair | The name of the key pair used to connect to new VMs. | none | yes |
 | openstack.floating-ip-pool | A pool of available public IPs, so that one of them be associated to the VM (if no pool is provided, the VM only has a private IP). | none | no |
 | openstack.network-id | A neutron (aka quantum) network ID, to use for networking. | none | no |
-
-
-Notice we do not use image and flavor IDs in our configuration files.  
-This is because this IaaS extension is implemented with Apache JClouds which requires region settings when specifying identifiers.
-
-As an example, if you wanted to create a new VM from image ID *abcdef* with a flavor (or hardware) called *m1.small* in Openstack, you
-would have a configuration looking-like...
-
-```properties
-# ...
-openstack.image-id = RegionOne/abcdef
-openstack.hardware-id = RegionOne/2
-# ... assuming 2 is the ID for flavor m1.small...
-# ... and RegionOne is the associated region.
-```
-
-Since region settings and hardware ID are not always easy to retrieve, we prefer to rely on names.  
-We assume cloud infrastructures will be managed so that these names remain unique. Otherwise, feel free to post a feature request
-in our issues tracker.
+| openstack.region-name | The name of the region to use. If not specified, then the first available region will be used. | none | no |
 
 
 ## Block Storage

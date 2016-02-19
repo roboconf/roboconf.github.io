@@ -71,7 +71,7 @@ At the moment this documentation is being written, there is not yet a Roboconf p
 				<configuration>
 					<instructions>
 						<Import-Package>
-							net.roboconf.*;version="${roboconf.version}"
+							net.roboconf.*;version="${version.range}"
 						</Import-Package>
 						<Embed-Dependency>*;scope=compile|runtime;inline=true;groupId=!net.roboconf</Embed-Dependency>
 						<Embed-Transitive>true</Embed-Transitive>

@@ -33,6 +33,8 @@
 	<!-- Temporarily set the severity to warning -->
 	<property name="severity" value="error" />
 
+
+	<!-- Java style -->
 	<module name="TreeWalker">
 
 		<!-- Basic Checks -->
@@ -62,6 +64,7 @@
 		</module>
 		<module name="JavadocStyle" />
     </module>
+
 
 	<!-- File Headers -->
 	<module name="RegexpHeader">
