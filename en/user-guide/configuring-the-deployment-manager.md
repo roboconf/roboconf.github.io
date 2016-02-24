@@ -93,7 +93,7 @@ The following table summers up all the DM parameters.
 
 # Installing Additional Bundles
 
-## Installing the Target Handlers
+## Installing Target Handlers
 
 By default, no target handler is installed.  
 A target handler is in charge of creating and terminating machines in a given infrastructure.
@@ -106,8 +106,8 @@ desired targets.
 cd bin
 ./karaf
 
-# Install the bundles you want (here in version 0.5)
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.5
+# Install the bundles you want (here in version 0.6)
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.6
 ```
 
 You can also use a specific Karaf command (**roboconf:target**) that will install predefined target handlers into the DM.  

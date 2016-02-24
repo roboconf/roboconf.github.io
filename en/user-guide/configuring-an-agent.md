@@ -146,6 +146,60 @@ Notice that if you stop the agent and restart it, and that its target ID involve
 the agent will once again read these user data.
 
 
+## Additional Plug-ins
+
+You may want to deploy additional bundles in your agent.  
+As an example, you might have developed your own Roboconf plug-in (or monitoring extension).
+
+There are 2 possibilities for that:
+
+* If you installed the agent yourself (with Debian packages or whatever), just
+connect to the agent with the *bin/client* script. Then, install your bundles with **bundle:install** or
+**feature:install** commands. You can also just drop them in Karaf's *deploy* folder.
+
+* If you use the [Docker target](target-docker.html), you can generate ask to Roboconf to generate a Docker
+image and pre-install additional plug-ins and/or bundles. Please, refer to the [associated documentation](target-docker.html)
+for more details.
+
+> Work is planned to provide virtual images generation directly in Roboconf.  
+> The principle will be the same than for Docker. You will provide a Dockerfile
+> that will perform actions to configure the base image.
+
+When this feature is available, you will only have to indicate the bundles to deploy in the agent.  
+If these bundles depend on Roboconf ones, and since it is not possible to guarantee start order in OSGi,
+we suggest you use a Karaf feature. Examples of Karaf features can be found in 
+[Roboconf's source code](https://github.com/roboconf/roboconf-platform/tree/master/karaf).
+What you will have to ensure is that your feature will depend on the Roboconf agent feature. This way,
+Karaf will first start the agent feature, and only then start your own one.
+
+For the record, when Roboconf generates a Docker image with additional plug-ins, it generates
+a Karaf feature on the fly to guarantee start order.
+
+Here is a sample **feature.xml** for such a use case.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<features 
+		name="your-additional-features"
+		xmlns="http://karaf.apache.org/xmlns/features/v1.3.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
+
+	<feature name="your-additional-feature" version="1.0" description="..." install="auto">
+		<feature>roboconf-agent</feature>
+
+		<bundle>file:/a/local/bundle.jar</bundle>
+		<bundle>http://a/remote/bundle.jar</bundle>
+		<bundle>mvn:groupId/artifactId/version</bundle>
+	</feature>
+</features>
+```
+
+All the URLs supported by PAX-URL can be used.  
+Please, refer to [Karaf's URLs guide](http://karaf.apache.org/manual/latest/users-guide/urls.html)
+and [PAX-URL's wiki](https://ops4j1.jira.com/wiki/display/paxurl/Pax+URL) for more details about URLs.
+
+
 ## Maven Snapshots Resolution
 
 If you need to install snapshot bundles in your agent distribution, you may have to configure the way they

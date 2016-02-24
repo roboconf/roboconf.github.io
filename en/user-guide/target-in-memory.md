@@ -10,13 +10,21 @@ Roboconf has a target implementation to run agents in memory.
 
 > This implementation has no interest for production environments.
 
-To install it, open the DM's interactive mode and type in...
+To install it, open the DM's interactive mode and use one of the following options.  
+With the [roboconf:target](karaf-commands-for-roboconf.html) command:
 
 ```properties
-# Here in version 0.5 (with its dependencies)
-bundle:install --start mvn:net.roboconf/roboconf-plugin-api/0.5
-bundle:install --start mvn:net.roboconf/roboconf-agent/0.5
-bundle:install --start mvn:net.roboconf/roboconf-target-in-memory/0.5
+# The version will be deduced automatically by the DM
+roboconf:target in-memory
+```
+
+Or with the native Karaf commands:
+
+```properties
+# Here in version 0.6 (with its dependencies)
+bundle:install --start mvn:net.roboconf/roboconf-plugin-api/0.6
+bundle:install --start mvn:net.roboconf/roboconf-agent/0.6
+bundle:install --start mvn:net.roboconf/roboconf-target-in-memory/0.6
 ```
 
 The in-memory target acts as a simulation mode.  
@@ -38,6 +46,17 @@ Just copy / paste and edit.
 handler = in-memory
 name = 
 description = 
+
+# The delay (in ms) to wait between the request to create an agent
+# and the moment it is created. This helps to simulate the time
+# necessary to launch a virtual machine.
+# in-memory.delay = 0
+
+# Execute real recipes? False by default.
+#in-memory.execute-real-recipes = false
+
+# Force an IP address for the in-memory agent.
+#in-memory.ip-address-of-the-agent = 
 ```
 
 Here is a complete description of the parameters for Amazon Web Services.
@@ -47,4 +66,6 @@ Here is a complete description of the parameters for Amazon Web Services.
 | handler | Determines the target handler to use | none, must be "in-memory" | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
-| in-memory.delay | The delay (in milliseconds) to wait for before instantiating a new agent in memory. | 0 | yes |
+| in-memory.delay | The delay (in milliseconds) to wait for before instantiating a new agent in memory. | 0 | no |
+| in-memory.execute-real-recipes | Indicate whether agents should execute the real recipes or simulate them. By default, they simulate them. | false | no |
+| in-memory.ip-address-of-the-agent | Force the agent to use this IP address as its own. Let it empty to let the agent guess it. | If recipes are simulated, and that no value is set, then *localhost* is used. If real recipes are used, there is no default value. | no |

@@ -9,11 +9,19 @@ menus: [ "users", "user-guide" ]
 Roboconf has a target implementation for Microsoft Azure.  
 It only supports the creation of *compute* VMs.
 
-To install it, open the DM's interactive mode and type in...
+To install it, open the DM's interactive mode and use one of the following options.  
+With the [roboconf:target](karaf-commands-for-roboconf.html) command:
 
 ```properties
-# Here in version 0.5
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-azure/0.5
+# The version will be deduced automatically by the DM
+roboconf:target azure
+```
+
+Or with the native Karaf commands:
+
+```properties
+# Here in version 0.6
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-azure/0.6
 ```
 
 Every new VM is associated with a public IP address.  

@@ -9,11 +9,19 @@ menus: [ "users", "user-guide" ]
 Roboconf has a target implementation for Amazon Web Services (AWS).  
 It only supports the creation of *compute* VMs.
 
-To install it, open the DM's interactive mode and type in...
+To install it, open the DM's interactive mode and use one of the following options.  
+With the [roboconf:target](karaf-commands-for-roboconf.html) command:
 
 ```properties
-# Here in version 0.5
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-ec2/0.5
+# The version will be deduced automatically by the DM
+roboconf:target aws
+```
+
+Or with the native Karaf commands:
+
+```properties
+# Here in version 0.6
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-ec2/0.6
 ```
 
 Every new VM is associated with a public IP address.  
@@ -25,6 +33,8 @@ Just copy / paste and edit.
 ```properties
 # Configuration file for EC2
 handler = iaas-ec2
+
+# Provide a meaningful description of the target
 name = 
 description = 
 
@@ -36,10 +46,22 @@ ec2.access.key =
 ec2.secret.key = 
 
 # VM configuration
-ec2.ami	= 
+ec2.ami = 
 ec2.instance.type = t1.micro
 ec2.ssh.key = 
-ec2.security.group	= 
+ec2.security.group =
+
+# Elastic IP address
+# ec2.elastic.ip =  
+
+# Block Storage
+# ec2.availability-zone = 
+# ec2.use-block-storage = true
+# ec2.ebs-snapshot-id = 
+# ec2.ebs-delete-on-termination = true
+# ec2.ebs-size = 2
+# ec2.ebs-mount-point = /dev/sdf
+# ec2.ebs-type = standard
 ```
 
 It is also possible to define an elastic IP address.  
@@ -75,3 +97,10 @@ Here is a complete description of the parameters for Amazon Web Services.
 | ec2.ssh.key | The name of the ssh key used to connect | none | yes |
 | ec2.security.group | The VM security group name. *Caution to not set the security group id*. | default | no |
 | ec2.elastic.ip | An elastic IP address | none | no |
+| ec2.availability-zone | Availability zone for instances and EBS volumes: necessary to reuse volumes (they must be in the same availability zone as instances they are attached to) | none | no |
+| ec2.use-block-storage | Use EBS block storage (create / reuse and mount EBS volume) | false | no |
+| ec2.ebs-snapshot-id | Snapshot ID for volume, or volume name that can be reused if delete-on-termination is false | none | no |
+| ec2.ebs-delete-on-termination | Delete volume on instance termination, or not | false | no |
+| ec2.ebs-size | Volume size (Gb) | 2 | no |
+| ec2.ebs-mount-point | Volume mount point | /dev/sdf | no |
+| ec2.ebs-type | Volume type. Can be *standard*, *io1* (Provisioned IOPS - SSD) or *gp2* (General Purpose - SSD). | standard | no |

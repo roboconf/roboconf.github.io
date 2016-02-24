@@ -1,5 +1,5 @@
 #
-# User Guide Version 0.5
+# User Guide Version 0.6
 #
 maven-examples-documentation:
   en: user-guide/maven-examples-documentation
@@ -7,14 +7,47 @@ maven-examples-documentation:
 roboconf-architecture:
   en: user-guide/roboconf-architecture
   
+using-docker-on-the-agent-side:
+  en: user-guide/using-docker-on-the-agent-side
+  
+configuring-roboconf:
+  en: user-guide/configuring-roboconf
+  
+karaf-commands-for-roboconf:
+  en: user-guide/karaf-commands-for-roboconf
+  
+other-tools:
+  en: user-guide/other-tools
+  
+installing-roboconf-with-debian-packages:
+  en: user-guide/installing-roboconf-with-debian-packages
+  
+installing-roboconf-with-rpm:
+  en: user-guide/installing-roboconf-with-rpm
+  
+using-docker-with-roboconf:
+  en: user-guide/using-docker-with-roboconf
+  
+security:
+  en: user-guide/security
+  
+roboconf-commands:
+  en: user-guide/roboconf-commands
+  
+configuring-probes-for-the-autonomic:
+  en: user-guide/configuring-probes-for-the-autonomic
+  
+specifying-automatic-reactions:
+  en: user-guide/specifying-automatic-reactions
+  
+testing-an-application-locally:
+  en: user-guide/testing-an-application-locally
+  
 m2r_lab:
   en: user-guide/m2r_lab
   
 inter-application-dependencies:
   en: user-guide/inter-application-dependencies
-
-security:
-  en: user-guide-snapshot/security
   
 configuring-the-web-consoles:
   en: user-guide/configuring-the-web-consoles
@@ -160,14 +193,11 @@ monitoring-applications-deployed-with-roboconf:
 editors:
   en: user-guide/editors
   
-configuration-files:
-  en: user-guide/configuration-files
+anatomy-of-a-roboconf-application:
+  en: user-guide/anatomy-of-a-roboconf-application
   
 faq:
   en: user-guide/faq
-  
-roboconf-concepts:
-  en: user-guide/roboconf-concepts
   
 application-descriptor:
   en: user-guide/application-descriptor
@@ -193,6 +223,3 @@ lamp-example-part-2:
 index:
   en: user-guide/user-guide
   fr: guide-utilisateur/guide-utilisateur
-  
-working-with-roboconf:
-  en: user-guide/working-with-roboconf
