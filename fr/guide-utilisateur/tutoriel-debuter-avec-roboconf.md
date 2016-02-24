@@ -22,35 +22,28 @@ Vous allez ici...
 ## Installation
 
 Dans le cadre de ce tutoriel, vous allez simplement utiliser la brique d'administration
-de Roboconf (le DM, pour *Deployment Manager*), ainsi que le serveur de messagerie RabbitMQ.
+de Roboconf (le DM, pour *Deployment Manager*), ainsi que la messagerie HTTP (ce qui signifie que le
+DM et les agents Roboconf interagiront par le biais de web sockets).
 
-Téléchargez le DM sur [cette page](../telecharger.html).  
-Vous aurez besoin d'une machine virtuelle Java pour le faire tourner (JDK 7).  
-Pour l'installer, il suffit de dézipper l'archive. Optez de préférence pour le \*.tar.gz, qui
-conserve les permissions sur les fichiers.
+Téléchargez le DM sur [cette page](../telecharger.html). Vous aurez besoin d'une machine virtuelle Java 
+pour le faire tourner (JDK 7). Pour l'installer, il suffit de dézipper l'archive. Optez de préférence 
+pour le \*.tar.gz, qui conserve les permissions sur les fichiers.
 
-En ce qui concerne RabbitMQ, reportez-vous au [guide utilisateur](/en/user-guide/installing-rabbit-mq.html) 
-qui documente la procédure à suivre pour l'installer. Malheureusement, cette partie du guide utilisateur n'a
-pas encore été traduite.
+Voilà, c'est installé et prêt à l'emploi.  
+HTTP est la messagerie configurée par défaut. Elle est parfaitement adaptée pour les débutants. Elle
+n'est toutefois pas adaptée aux environnements de production. On la remplacera alors par [RabbitMQ](https://www.rabbitmq.com). 
 
 
 ## Administration
 
 Une fois l'installation terminée, nous allons explorer la configuration et les commandes offertes par le DM.
-Pour commencer, il va falloir indiquer au DM où se trouve le serveur de messagerie (RabbitMQ), ainsi que les
-identifiants à utiliser pour s'y connecter.
 
 Le DM est en fait un ensemble de librairies Java, organisées sous la forme de bundles OSGi.  
 Il est conditionné sous la forme d'une distribution [Karaf](http://karaf.apache.org/). 
 Autrement dit, vous avez téléchargé un serveur OSGi pré-conditionné, avec tout ce qu'il 
-faut et (quasiment) prêt à l'emploi.
+faut et prêt à l'emploi.
 
-Ouvrez le fichier **etc/net.roboconf.dm.configuration.cfg** de Karaf.  
-Mettez à jour les propriétés de messagerie, conformément à ce que vous avez défini lors de son installation.
-Mettez également à jour le répertoire qui sera utilisé pour stocker les applications et leurs états. Par défaut,
-tout est stocké dans le répertoire temporaire de votre système d'exploitation.
-
-Lancez ensuite le fichier **bin/karaf** de Karaf.  
+Lancez le DM en exécutant le fichier **bin/karaf** de Karaf.  
 Un shell s'ouvre avec une invite de commande. C'est au travers de cette fenêtre que vous allez pouvoir
 activer ou désactiver certaines extensions de Roboconf.
 
@@ -102,22 +95,9 @@ Avant de déployer une application "pour de faux", nous allons configurer la pla
 pour un mode simulation. Ce mode nécessite des bundles qui ne sont pas installés par défaut dans le DM.
 
 Karaf permet de déployer des bundles directement depuis un dépôt Maven.  
-Dans la console de Karaf, exécutez les commandes suivantes. On suppose ici que vous utilisez
-la version 0.2 de Roboconf.
+De plus, Roboconf fournit des commandes shell qui facilitent l'installation de telles extensions. Tapez `roboconf:target in-memory`.
 
-```
-bundle:install mvn:net.roboconf/roboconf-plugin-api/0.2
-bundle:install mvn:net.roboconf/roboconf-agent/0.2
-bundle:install mvn:net.roboconf/roboconf-target-in-memory/0.2
-```
-
-A chaque installation, Karaf vous indique l'identifiant du bundle installé.  
-Utilisez ces identifiants pour démarrer ces bundles (remplacez *id1*, *id2* et *id3* par leurs valeurs).
-
-```
-bundle:start id1 id2 id3
-```
-
+Cette commande télécharge les bundles adéquats, les installe et les démarre.  
 Listez les bundles et vérifiez qu'ils sont bien démarrés (et non juste installés).  
 Observez les logs de Roboconf. Vous devriez trouver la mention suivante...
 
@@ -134,7 +114,7 @@ ce biais.
 ## Première Application Roboconf
 
 Nous allons maintenant nous intéresser à l'application que nous allons déployer.  
-Téléchargez-la [ici](https://bintray.com/artifact/download/roboconf/roboconf-tutorial-samples/lamp-webapp-bash-0.2.0-1.0.zip). Il s'agît d'une archive ZIP avec une structure particulière.
+Téléchargez-la [ici](https://bintray.com/artifact/download/roboconf/roboconf-tutorial-samples/lamp-webapp-bash-0.6.0-1.0.zip). Il s'agît d'une archive ZIP avec une structure particulière.
 Les répertoires que l'on retrouve à chaque fois sont **descriptor**, **graph** et **instances**.
 
 <img src="/resources/img/tutorial-sample-app-structure.jpg" alt="Structure de l'archive" />
@@ -184,66 +164,89 @@ utiliser la console d'administration de Roboconf, ce sont des instances que vous
 ## Premier Déploiement
 
 Vous avez dû remarquer dans le graphe que le composant **VM** est associé à l'installeur **target**.  
-En gros, c'est notre machine cible. Si vous observez le contenu du fichier **graph/VM/target.properties**,
-vous allez voir que la cible est en mémoire.
+En gros, c'est notre machine cible. Où cette machine sera créée est déterminé par le contenu des fichiers de propriétés
+dans **graph/VM/**.
 
-Lorsque vous allez instanciez une **VM** et la déployer, Roboconf va lire le contenu de ce fichier et déterminer
-ce qu'il doit faire. La propriété **target-id** référence une extension de Roboconf (ici, celle que vous avez installée
-tout à l'heure, le **target-in-memory**). Cette extension exploite le contenu du fichier pour créer votre VM sur
-l'infrastructure de votre choix. Ainsi, si vous voulez passer d'une VM en mémoire à une VM sur Amazon Web Services
-(ou n'importe quel autre cloud supporté), il vous suffit de mettre à jour le contenu du fichier **target.properties**.
+Dans le cadre de ce tutoriel, on souhaite déployer *en mémoire*.  
+Cela signifie que nous n'allons rien déployer réellement. Au lieu de créer des machines virtuelles,  nous allons
+lancer des agents Roboconf en mémoires. Les tâches habituellement réalisées par ces agents (déploiement, démarrage,
+confiugration....) seront ici simulées.
 
-Ici, le déploiement d'une **VM** donnera lieu à l'instanciation d'un agent Roboconf en mémoire. Chaque machine-cible
-est sensée avoir son propre agent. C'est cet agent qui va gérer les déploiements et les actions à effectuer sur la
-machine en question.
+Procédez comme suit :
 
-Allez à l'adresse [http://localhost:8181/roboconf-web-administration/index.html](http://localhost:8181/roboconf-web-administration/index.html).
+1\. Lancez votre navigateur web et allez à l'adresse 
+[http://localhost:8181/roboconf-web-administration/index.html](http://localhost:8181/roboconf-web-administration/index.html).
 
-<img src="/resources/img/roboconf--web-administration--welcome.jpg" alt="La console d'administration de Roboconf" class="gs" />
+<img src="/resources/img/tutorial-sample-web-admin-1.jpg" alt="Page d'accueil" class="gs" />
 
-Vérifiez que la configuration est valide. Puis uploadez l'archive de l'application. Une fois uploadée, jouez avec
-le cycle de vie des différentes briques. Pour manipuler une brique, il est essentiel que son parent (ou son conteneur)
+Suivez les instructions à l'écran pour charger l'archive et créer une application.
+
+<img src="/resources/img/tutorial-sample-web-admin-2.jpg" alt="Créer une application depuis l'archive" class="gs" />
+
+2\. Dans la console web, cliquez sur votre application, puis rendez-vous dans le menu **application targets**.  
+Définissez la cible par défaut comme étant **in-memory**.
+
+<img src="/resources/img/tutorial-sample-web-admin-3.jpg" alt="Définissez la cible de déploiement par défaut (ici, en mémoire)" class="gs" />
+
+3\. Allez dans le sous-menu **instances** et jouez avec le cycle de vie des composants.  
+Pour manipuler une brique, il est essentiel que son parent (ou son conteneur)
 soit déployé et démarré. La seule exception concerne les instances racines (autrement dit, les machines), qui
 elles ne connaissent que 2 états : déployées et démarrées, ou non-déployées (certaines solutions de virtualisation
 ne connaissent pas d'état *déployée mais stoppée*).
 
-Pour tester la gestion des dépendances, essayez le scénario suivant.  
+<img src="/resources/img/tutorial-sample-web-admin-4.jpg" alt="Jouez avec le cycle de vie des différents composants" class="gs" />
+
+4\. Pour tester la gestion des dépendances, essayez le scénario suivant.  
 Assurez-vous au préalable que tout est arrêté.
 
-1. Démarrez et lancez l'équilibreur de charge (le *load balancer*).  
+* Démarrez et lancez l'équilibreur de charge (le *load balancer*).  
 Le serveur Apache devrait rester en état **starting**. C'est parce qu'une de ses dépendances (l'application web)
 n'est pas encore démarrée.
 
-2. Faîtes de même avec l'application web.  
+* Faîtes de même avec l'application web.  
 Elle devrait également rester en état **starting**, et ce, parce que la base de données dont elle dépend n'est
 pas encore démarrée.
 
-3. Enfin, démarrez le base de données.  
+* Enfin, démarrez le base de données.  
 Toutes les briques devraient être démarrées désormais.
 
-A chaque fois qu'une brique démarre ou s'arrête, elle publie des notifications sur la messagerie (RabbitMQ)
-pour informer les briques qui dépendent d'elle de son état et de ses propriétés (adresse IP, port, etc). Ce ne sont
-pas les briques logicielles elle-mêmes qui gèrent ça, mais l'agent Roboconf qui tourne sur leur machine. Ici, les agents
-tournent en mémoire (mode simulation). Sur une vraie machine, cet agent doit être installé et lancé. Tout cela est
-automatisable, notamment avec les solutions de virtualisation, ce qui inclut le *cloud computing*.
 
-Un autre point à préciser concerne ce qui se passe lorsque vous déclenchez une action depuis la console
-d'administration. En effet, puisque nous sommes dans un mode "simulation", Roboconf change simplement l'état
-des instances. Si nous étions dans un autre mode, sur une véritable infrastructure, l'agent exécuterait **en plus** une
-recette (soit pour installer, soit pour démarrer... l'instance). Pour rappel, les recettes se trouvent dans le
-répertoire **graph**. Un autre élément, c'est qu'une action n'est pas forcément suivie d'un effet immédiat. Cette
-interface permet simplement de donner une instruction à un agent donné. Le fait que cette instruction soit valide
-ou exécutable est d'abord évalué par l'agent. C'est lui le plus à même de déterminer s'il peut l'exécuter ou s'il
-doit la rejeter.
+
+<!-- Bootstrap -->
+<a class="btn btn-roboconf" role="button" data-toggle="collapse" href="#whatIsHappening" aria-expanded="false" aria-controls="whatIsHappening">
+  Montrer ce qui se passe en arrière-plan...
+</a>
+<span class="glyphicon glyphicon-info-sign"></span>
+<div class="collapse more-about" id="whatIsHappening">
+
+	<p>
+	A chaque fois qu'une brique démarre ou s'arrête, elle publie des notifications sur la messagerie (RabbitMQ)
+	pour informer les briques qui dépendent d'elle de son état et de ses propriétés (adresse IP, port, etc). Ce ne sont
+	pas les briques logicielles elle-mêmes qui gèrent ça, mais l'agent Roboconf qui tourne sur leur machine. Ici, les agents
+	tournent en mémoire (mode simulation). Sur une vraie machine, cet agent doit être installé et lancé. Tout cela est
+	automatisable, notamment avec les solutions de virtualisation, ce qui inclut le *cloud computing*.
+	</p>
+	<p>
+	Un autre point à préciser concerne ce qui se passe lorsque vous déclenchez une action depuis la console
+	d'administration. En effet, puisque nous sommes dans un mode "simulation", Roboconf change simplement l'état
+	des instances. Si nous étions dans un autre mode, sur une véritable infrastructure, l'agent exécuterait **en plus** une
+	recette (soit pour installer, soit pour démarrer... l'instance). Pour rappel, les recettes se trouvent dans le
+	répertoire **graph**. Un autre élément, c'est qu'une action n'est pas forcément suivie d'un effet immédiat. Cette
+	interface permet simplement de donner une instruction à un agent donné. Le fait que cette instruction soit valide
+	ou exécutable est d'abord évalué par l'agent. C'est lui le plus à même de déterminer s'il peut l'exécuter ou s'il
+	doit la rejeter.
+	</p>
+
+	<a class="btn btn-roboconf" role="button" data-toggle="collapse" href="#whatIsHappening" aria-expanded="false" aria-controls="whatIsHappening">
+  		Masquer ces détails...
+	</a>
+
+</div>
+<!-- Bootstrap -->
 
 
 ## Conclusion
 
 Voilà pour ce premier tutoriel.  
-Vous devez désormais être familier avec le DM, avec son installation, ainsi que celle de RabbitMQ.
-Vous avez aussi pu voir comment définir une application à déployer avec Roboconf. Comme vous avez pu le noter,
-il n'y a pas de contrainte sur ce qu'on peut modéliser et déployer avec Roboconf. Toutes les architectures et tous
-les langages sont envisageables.
-
-Enfin, vous avez manipulé la console en ligne de commande, ainsi que l'administration web de Roboconf.
-Vous savez désormais installer une application et modifier l'état d'une de ses composantes.
+Vous devez désormais être familier avec le DM, son installation et ses commandes. Vous avez aussi pu voir comment 
+définir une application Roboconf, l'installer et modifier l'état de ses composantes.

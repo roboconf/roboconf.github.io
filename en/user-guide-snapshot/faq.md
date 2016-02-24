@@ -8,17 +8,48 @@ menus: [ "users", "user-guide", "Snapshot" ]
 
 ## What is Roboconf?
 
-Roboconf is a deployment tool for distributed applications.  
-It is in particular adapted to deployments in cloud infrastructures, but not only.
+Roboconf is a platform to manage elastic deployments in the cloud.  
+It manages deployments, probes, automatic reactions and reconfigurations. It can be defined as « Paas framework »:
+a solution to build Platform as a Service. Most PaaS, such as Cloud Foundry or Openshift, target developers and
+support application patterns. However, some application require more flexible architectures or design. Roboconf
+addresses such cases.
+
+With Roboconf, you can create PaaS for any programming language, any kind of application and any operating system.
+You define what you put in your platform, you specify all the interactions, administration procedures and so on.
+
+
+## How does it work?
+
 Roboconf takes as input the description of a whole application in terms of "components" and "instances".
-  
 From this model, it then takes the burden of launching Virtual Machines (VMs), deploying software on them, resolving dependencies 
 between software components, updating their configuration and starting the whole stuff when ready. Roboconf also handles the 
 application life cycle: hot reconfiguration (e.g. for elasticity issues) and consistency (e.g. maintaining a consistent state 
 when a component starts or stops, even accidentally).
 
 
-## What are its key points?
+## Methodology and DevOps
+
+In the past, teams were mainly separated into developers and operators teams.  
+Now, we talk a lot about **DevOps**. It does not means the developer and operator roles
+have disappeared. But they are more and more addressed by the same persons / same team.
+
+The main interest of DevOps approaches is that developers know what operators need (probes,
+administration procedures, etc). With Roboconf, such elements are parts of the **development
+deliverables** (what we call a « Roboconf application »). And this reduce the need of improvisation
+and long text notice in production environments.
+
+The following schema explains the approach Roboconf promotes.
+
+<img src="/resources/img/roboconf-workflow.png" alt="Roboconf's workflow" class="gs" />
+
+The application's development is one project's part.  
+It can be hosted in its own source repository and independently of the Roboconf part.
+The Roboconf deployment is another project, which can be hosted somewhere else. Therefore,
+Roboconf is not intrusive in the application's code. It is only about how you will manage
+your application at runtime.
+
+
+## What are Roboconf's key points?
 
 Roboconf allows to define a model of the application that one wants to deploy.  
 It then offers a vision of this model during deployment and at runtime.
@@ -48,7 +79,8 @@ Although the agent is developed in Java, it would be possible to implement your 
 This could suit constrained environments (such as connected objects). The only requirement is that this agent can
 access a messaging server to interact with the Deployment Manager.
 
-The current messaging server is RabbitMQ. It supports a wide variety of clients, implemented in different languages. 
+The current messaging server we recommend in production is RabbitMQ.  
+It supports a wide variety of clients, implemented in different languages. 
 
 
 ## What does Roboconf bring in addition to classics like Bash and SSH?
@@ -60,7 +92,7 @@ In fact, Roboconf recipes can use bash scripts. Roboconf only plugs dynamicity b
 ## What is Roboconf's position with respect to standards?
 
 In terms of concepts, Roboconf is very close from [TOSCA](http://en.wikipedia.org/wiki/OASIS_TOSCA).  
-We should investigate this deeper in the future, since Roboconf may be seen as a deployment orchestrator.
+We should investigate this deeper in the future, since Roboconf may be seen as a deployment orchestrator (**but not only**).
 
 
 ## How about Puppet, Chef or CFEngine?

@@ -199,14 +199,11 @@ monitoring-applications-deployed-with-roboconf:
 editors:
   en: user-guide-snapshot/editors
   
-configuration-files:
-  en: user-guide-snapshot/configuration-files
+anatomy-of-a-roboconf-application:
+  en: user-guide-snapshot/anatomy-of-a-roboconf-application
   
 faq:
   en: user-guide-snapshot/faq
-  
-roboconf-concepts:
-  en: user-guide-snapshot/roboconf-concepts
   
 application-descriptor:
   en: user-guide-snapshot/application-descriptor
@@ -232,6 +229,3 @@ lamp-example-part-2:
 index:
   en: user-guide-snapshot/user-guide
   fr: guide-utilisateur/guide-utilisateur
-  
-working-with-roboconf:
-  en: user-guide-snapshot/working-with-roboconf

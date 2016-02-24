@@ -6,16 +6,10 @@ id: "what-is-roboconf"
 menus: [ "project", "what-is-roboconf" ]
 ---
 
-Roboconf est une plateforme pour déployer des applications réparties.  
-C'est une solution adaptée pour les déploiements dans le *cloud*, mais pas seulement. Roboconf permet
-de décrire une application répartie et se charge ensuite de la déployer automatiquement, de manière intégrale
-ou en partie, selon le choix de l'administrateur. Roboconf est conçu pour supporter nativement les passages à l'échelle
-(qu'ils soient ascendants ou descendants). Son point fort est donc la reconfiguration dynamique, ce qui offre
-une grande flexibilité et autorise des déploiements élastiques. 
+Roboconf est une plate-forme pour gérer des déploiements applicatifs élastiques dans le nuage.  
+Il prend en charge les déploiements, la gestion des sondes, des procédures automatisées ainsi que des reconfigurations. On peut voir Roboconf comme un « PaaS framework », c'est à dire une solution pour construire des PaaS (*Platform as a Service*). La plupart des PaaS, comme Cloud Foundry ou Openshift, ciblent des développeurs avec des patrons applicatifs et architecturaux prédéfinis. Roboconf vous autorise à créer vos propres patrons et ainsi supporter des cas exigeant plus de flexibilité.
 
-Roboconf prend en entrée la description d'une application en termes de "compoosants" et "d'instances".  
-A partir de ce modèle, la plateforme prend en charge le lancement de machines virtuelles (VMs), le déploiement
-de composants logiciels sur ces mêmes VMs, leur configuration et leur démarrage.
+Avec Roboconf, vous pouvez créer des PaaS supportant n'importe quel langage de programmation, *framework*, type d'application ou système d'exploitation. Vous définissez ce qu'il y a dans votre plate-forme, ainsi que les interactions en son sein, les procédures d'administration, etc.
 
 Roboconf gère le cycle de vie des applications. Cela passe par la reconfiguration à chaud (pour s'adapter aux phases
 d'élasticité) ainsi que la consistence globale (s'assurer que l'état de l'aplication répartie reste cohérent, même
@@ -32,7 +26,7 @@ en fonction des messages qui transitent. Ces actions, effectuées par Roboconf, 
 
 Roboconf est elle-même une application répartie, basée sur AMQP et REST / JSon. Elle supporte plusieurs IaaS (dont
 OpenStack, Amazon Web Services, Microsoft Azure, VMWare, ainsi qu'un déploiement "local" pour des hôtes pré-existants, voire
-même pour de l'embarqué).
+même pour de l'embarqué). Merci de vous reporter sur [la FAQ](/en/user-guide/faq.html) (en anglais) pour de plus amples détails.
 
 
 ## Historique

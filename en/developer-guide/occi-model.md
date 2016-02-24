@@ -121,12 +121,17 @@ Here is a **methodology** we adopted.
 
 Within the scope of Roboconf, here are the use cases we want to cover with OCCI.
 
-* Provide an OCCI-compliant REST API, in addition to our own REST API.
-* Be able to interact with OCCI-compliant resources (such as platforms).
-* Implement code generators that will be plugged with OCCI tools.
+1. **Provide an OCCI-compliant REST API, in addition to our own REST API.**  
+An OCCI-compliant REST API only needs instances concepts. It was decided it would
+be better to try to fit into the OCCI Platform model. It may require some modifications in
+this specification to make it more flexible (it is mainly oriented towards developer PaaS such
+as Cloud Foundry, Openshift, etc). This work is mainly led by academic partners of the 
+[OCCiware](http://www.occiware.org) project.  
 
-The second use case has nothing to do with Roboconf concepts.  
-It is all about creating a dedicated plug-in or target.
+2. **Be able to interact with OCCI-compliant resources (such as IaaS).**  
+This has nothing to do with Roboconf concepts. It is all about creating a dedicated plug-in or target
+for OCCI infrastructure.
 
-An OCCI-compliant REST API only needs instances concepts.  
-The generation use case will manipulate components and facets, but probably not instances.
+3. **Implement code generators that will be plugged with OCCI tools.**  
+This part will require its own OCCI extension to define Roboconf concepts, such as the graph,
+instances and so on.

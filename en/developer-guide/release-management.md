@@ -21,105 +21,24 @@ We do not release a single Maven module, but a set of coherent projects. A Git r
 ## Release Scripts
 
 A project with release scripts is available on [Github](https://github.com/roboconf/roboconf-release-scripts).  
-**Only update the conf.sh file**. Then, use the various scripts to release the Roboconf items. Release order is given in the next section.
+Clone it on your local repository. Scripts are numbered to indicate in which order they should be executed.
 
 These scripts will check out the project from Github in the temporary directory.  
 It is assumed the release is performed under Linux (Debian systems essentially), with a JDK 7 or JDK 8.
 
-> Read the next section to determine in which order scripts should be executed.
+1. **0.help.sh** indicates the process to follow.
+2. Copy **1.conf.bintray.sh-sample** to **1.conf.bintray.sh**.  
+Add your Bintray credentials in it. This file is already set in the *.gitignore* file.
 
+3. Update the **1.conf.sh** file with the new release information.
+4. Release the web administration first (**2.web-administration.sh**).
+5. Release the platform then (**3.platform.sh**).  
+Then go to [http://oss.sonatype.org](http://oss.sonatype.org). Login and check the staging repositories.
+You should find one about Roboconf. Verify the content and then click **close**. Sonatype will then verify
+some quality rules about your upload (sources JAR, javadoc JAR...). Once this is done, click **release**.
 
-## Projects Release
+6. Wait for the platform to be available on [Maven Central](http://repo1.maven.org/maven2/net/roboconf/roboconf-core/).  
+This can take some minutes (generally about 15 minutes). Next scripts can be executed in any order.
+The order we defined is somehow arbitrary.
 
-A release involve several source repositories.  
-Proceed as described below.
-
-1. Update and tag **roboconf-web-administration**.
-2. Release **roboconf-platform**.
-
-Wait for the platform to be available on [Maven Central](http://repo1.maven.org/maven2/net/roboconf/roboconf-core/).  
-Next items can be released in any order.
-
-1. Release **roboconf-eclipse-plugin**.
-2. Release **roboconf-system-installers**.
-3. Update the web site (no tag required).
-4. Update and tag **roboconf-examples** (no release required).
-
-
-# Manual Releases
-
-> The following sections indicate how to release projects by hand.  
-> It is the basis used in the release scripts.
-
-
-## Releasing a Maven project
-
-* Clone or update the concerned Git repository.  
-* Make sure the root POM has a released version as its parent.
-
-	* If the parent is a SNAPSHOT version, release the parent first.
-
-<!-- -->
-
-* Type in **mvn clean**.
-* Type in **mvn release:clean**.
-* Type in **mvn release:prepare**.
-
-	* You will be asked several questions.
-	* You can keep the default values for the versions.
-	* The tag names should follow the convention *&lt;git repository name&gt;-&lt;version&gt;*.
-
-Maven will then compile the code, run the tests, **generate javadoc and sources archives** (mandatory to deploy on Maven Central) 
-AND **sign** the artifacts (mandatory). It will also update the POM versions and tag the source code in the Git repository.
-
-* Eventually, type in **mvn release:perform**.
-
-	* This will upload the build artifacts to the staging repository.
-
-At this point, the artifacts have not been released.  
-They are in the staging repository at [Sonatype.org](https://oss.sonatype.org/). To validate this release, you should...
-
-* ... test it!
-* ... test it, again.
-* ... connect to [Sonatype.org](https://oss.sonatype.org/) and **close** the staging repository.
-* ... make sure no error was found by Sonatype after you closed the staging repository.
-* ... **release** the staging repository. This will deploy and synchronize the artifacts with Maven Central.
-
-Reading [this page](http://central.sonatype.org/pages/releasing-the-deployment.html) may help for the last steps.
-
-
-## Releasing the Eclipse plug-in
-
-The Eclipse plug-in follow a slightly different build process.  
-Roughly, we do not use Maven to release it. We must use the Tycho approach, which means...
-
-1. Update the version by hand in the POM.
-2. Build locally.
-3. Test...
-4. Upload the generated update site on [Bintray](https://bintray.com/roboconf/roboconf-eclipse).
-5. Make sure that the uploaded archive will be unzipped (there is an option for that).
-6. Specify a path when you upload. **Use the new Roboconf version (e.g. 0.2, 0.3, etc) as the upload path.**
-7. Tag the source repository.
-8. Add the new update site's location on the web site.
-
-
-## Releasing the Debian packages
-
-The Debian packages are built with Maven and JDeb.  
-However, they are not uploaded on Maven Central. Instead, we upload them on [Bintray](https://bintray.com/roboconf/roboconf-debian-packages).
-
-To upload a new version...
-
-1. Create a new version in the **main** package.
-2. Click to upload files.
-3. Specify the Debian platform: jessie, whizzy, etc. Ubuntu 14.04 => **jessie**
-4. Specify the Debian component: generally, **main**.
-5. Specify the architecture: **i386,amd64** (no space)
-6. Select the DM's package. **Wait** before saving changes. You must see the underlined indication first!
-
-<img src="/resources/img/upload-debian-packages.png" alt="Upload Debian packages on Bintray" />
-
-Once it is done, save the changes.  
-Then, click to upload new files in the same location and proceed the same way for the agent.
-
-Once the upload is done, **publish** your repository. That's it!
+For details about the manual release process, please refer to [this page](release-management-by-hand.html).

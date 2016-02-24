@@ -11,6 +11,22 @@ VM designate Virtual Machines or any kind of machine (server, device...).
 
 <img src="/resources/img/roboconf-architecture.jpg" alt="Architecture Diagram" class="gs" />
 
+* The **Deployment Manager** (or DM) is in charge of managing
+Virtual Machines (or VM) and the agents.  
+It acts as an interface to the set of VMs or devices. It is also in charge of instantiating VMs.
+
+* The **Agent** is a Software component that must be deployed on every VM and device
+on which Roboconf must deploy or control something.  
+Agents use plug-ins to delegate the manipulation of Software instances. As an example, there are a 
+Bash and a Puppet plug-ins. Roboconf does not reinvent the wheel, it tries to reuse existing and robust 
+solutions. Roboconf agents communicate with each other through the messaging server.
+
+* The **Messaging Server** is the key component that enable communications between
+the DM and the agents.  
+The DM and the agents always communicate asynchronously through this server.
+Depending on the Roboconf messaging implementation, this server may be available
+in the DM itself.
+
 Multi-target and hybrid deployments are supported.
 This can be used for critical periods (load increase) or for migration purpose.  
 It can also serve strategic objectives (like data security and privacy issues).

@@ -384,6 +384,17 @@ span.roadmap-in-progress {
 	font-style: italic;
 }
 
+pre.file-hierarchy {
+	line-height: 14px;
+	padding-left: 12px;
+}
+
+div.more-about {
+	border-top: solid #b03e4d 2px;
+	border-bottom: solid #b03e4d 2px;
+	padding: 14px 10px 10px;
+}
+
 /* Tables for parameters */
 
 table {

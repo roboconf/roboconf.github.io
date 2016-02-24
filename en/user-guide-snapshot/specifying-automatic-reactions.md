@@ -34,7 +34,7 @@ Therefore, the following rule should be defined...
 
 <pre><code class="language-roboconf-rules">rule "scale"
 	when
-		cpuIsToHigh
+		cpuIsTooHigh
 	then
 		replicateMachine
 end
@@ -50,7 +50,7 @@ the *replicateMachine* command file will be executed.
 
 <pre><code class="language-roboconf-rules">rule "basic-scale"
 	when
-		cpuIsToHigh
+		cpuIsTooHigh
 	then
 		replicateMachine
 end
@@ -60,7 +60,7 @@ It is possible to execute (sequentially) several command files.
 
 <pre><code class="language-roboconf-rules">rule "stronger-scale"
 	when
-		cpuIsToHigh
+		cpuIsTooHigh
 	then
 		replicateMachine;
 		replicateThis
@@ -91,7 +91,7 @@ commands) to produce the required effects. Such a period is defined as follows..
 <pre><code class="language-roboconf-rules">rule "basic-scale"
 sleep period is 50s
 when
-	cpuIsToHigh
+	cpuIsTooHigh
 then
 	replicateMachine
 end
@@ -122,7 +122,7 @@ As an example...
 <pre><code class="language-roboconf-rules">rule "basic-scale"
 time window is 120s
 when
-	cpuIsToHigh
+	cpuIsTooHigh
 	freeMemoryIsRunningOut
 then
 	replicateMachine

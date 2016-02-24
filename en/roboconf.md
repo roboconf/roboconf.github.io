@@ -6,15 +6,10 @@ id: "what-is-roboconf"
 menus: [ "project", "what-is-roboconf" ]
 ---
 
-Roboconf is a distributed solution to deploy distributed applications.  
-It is a deployment tool for the cloud, but not only. It allows to describe distributed applications
-and handles deployment automatically of the entire application, or of a part of it. Consequently, Roboconf supports scale-up
-and scale-down natively. Its main force is the support of dynamic (re)configuration. This provides a lot of flexibility and 
-allows elastic deployments.
+Roboconf is a platform to manage elastic deployments in the cloud.
+It manages deployments, probes, automatic reactions and reconfigurations. It can be defined as « PaaS framework »: a solution to build PaaS (Platform as a Service). Most PaaS, such as Cloud Foundry or Openshift, target developers and support application patterns. However, some application require more flexible architectures or design. Roboconf addresses such cases.
 
-Roboconf takes as input the description of a whole application in terms of *components* and *instances*.  
-From this model, it then takes the burden of launching Virtual Machines (VMs), deploying software on them, resolving dependencies 
-between software components, updating their configuration and starting the whole stuff when ready.
+With Roboconf, you can create PaaS for any programming language, any kind of application and any operating system. You define what you put in your platform, you specify all the interactions, administration procedures and so on.
 
 Roboconf handles application life cycle: hot reconfiguration (e.g. for elasticity issues) and consistency 
 (e.g. maintaining a consistent state when a component starts or stops, even accidentally). This relies on a messaging queue 
@@ -27,7 +22,7 @@ These *appropriate* actions are executed by plug-ins (such as bash or [Puppet](h
 
 Roboconf is distributed technology, based on AMQP 
 and REST / JSon. It is IaaS-agnostic, and supports many well-known IaaS (including OpenStack, Amazon Web Services, Microsoft Azure, VMWare, 
-as well as a "local" deployment plug-in for on-premise hosts).
+as well as a "local" deployment plug-in for on-premise hosts). Please, [refer to the FAQ](user-guide/faq.html) for more details.
 
 
 ## History
