@@ -70,6 +70,9 @@ reusable-recipes-index:
 how-to-write-reusable-recipes:
   en: user-guide/how-to-write-reusable-recipes
   
+tutorial-local-deployment-with-docker:
+  en: user-guide/tutorial-local-deployment-with-docker
+  
 tutorial-getting-started-with-roboconf:
   en: user-guide/tutorial-getting-started-with-roboconf
   

@@ -40,7 +40,8 @@ It means the DM should not be stopped when this messaging is used. It replaces, 
 | server.ip | The DM's IP address. | If left blank, the DM will try to guess it. | no |
 | server.port | The DM's web server port. | Left blank is interpreted as "8181". | no |
 
-All these properties are prefixed with **net.roboconf.messaging.http.**.
+All these properties are prefixed with **net.roboconf.messaging.http.**.  
+As a reminder, if you use this messaging with **local Docker containers**, you should set the IP address to 172.17.42.1.
 
 
 ## RabbitMQ

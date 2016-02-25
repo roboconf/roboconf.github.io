@@ -237,3 +237,6 @@ You have completed the first Roboconf tutorial.
 And you should now be familiar with the DM, its installation and its command. 
 You played with the command line interface and roboconf's web administration. Eventually, you also studied and
 deployed a first application with Roboconf.
+
+You can now [try our next tutorial](tutorial-local-deployment-with-docker.html), which consists in deploying this application
+for real on local Docker containers.

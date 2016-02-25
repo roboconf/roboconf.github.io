@@ -22,6 +22,7 @@ La seule exception concerne la présentation en ligne, ainsi que les tutoriaux.
 
 	<ul>
 	<li><a href="tutoriel-debuter-avec-roboconf.html">Débuter avec Roboconf</a></li>
+	<li><a href="tutoriel-deploiement-local-avec-docker.html">Déploiement local avec Docker</a></li>
 	<li><a href="tutoriel-premier-deploiement-dans-le-cloud.html">Premier déploiement dans le Cloud</a></li>
 	</ul>
 </div>

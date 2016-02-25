@@ -113,6 +113,7 @@ menus: [ "users", "user-guide" ]
 
 	<ul>
 	<li><a href="tutorial-getting-started-with-roboconf.html">Tutorial - Getting started with Roboconf</a></li>
+	<li><a href="tutorial-local-deployment-with-docker.html">Tutorial - Local deployment with Docker</a></li>
 	<li><a href="tutorial-first-deployment-in-the-cloud.html">Tutorial - First deployment in the cloud</a></li>
 	<li><a href="tutorial-apache-storm.html">Tutorial - Deploying Apache Storm</a></li>
 	</ul>

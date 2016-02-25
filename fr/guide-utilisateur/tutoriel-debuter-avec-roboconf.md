@@ -214,7 +214,7 @@ Toutes les briques devraient être démarrées désormais.
 
 <!-- Bootstrap -->
 <a class="btn btn-roboconf" role="button" data-toggle="collapse" href="#whatIsHappening" aria-expanded="false" aria-controls="whatIsHappening">
-  Montrer ce qui se passe en arrière-plan...
+  Expliquer ce qui se passe en arrière-plan...
 </a>
 <span class="glyphicon glyphicon-info-sign"></span>
 <div class="collapse more-about" id="whatIsHappening">
@@ -250,3 +250,6 @@ Toutes les briques devraient être démarrées désormais.
 Voilà pour ce premier tutoriel.  
 Vous devez désormais être familier avec le DM, son installation et ses commandes. Vous avez aussi pu voir comment 
 définir une application Roboconf, l'installer et modifier l'état de ses composantes.
+
+Vous pouvez maintenant essayer [notre tutoriel suivant](tutoriel-deploiement-local-avec-docker.html), qui consiste à déployer cette
+même application sur des conteneurs Docker locaux.

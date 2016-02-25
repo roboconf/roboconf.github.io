@@ -9,7 +9,7 @@ menus: [ "users", "user-guide" ]
 ## Déployer l'Application
 
 Reprenez l'application du premier tutoriel de Roboconf.  
-Pour rappel, elle est disponible [ici](https://bintray.com/artifact/download/roboconf/roboconf-tutorial-samples/lamp-webapp-bash-0.2.0-1.0.zip).
+Pour rappel, elle est disponible [ici](https://bintray.com/artifact/download/roboconf/roboconf-tutorial-samples/lamp-webapp-bash-0.6.0-1.0.zip).
 
 Extrayez-la et apportez les modifications suivantes :
 
