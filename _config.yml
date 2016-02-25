@@ -1,20 +1,10 @@
 encoding: utf-8
-
-# Legacy
-markdown: redcarpet
-highlighter: pygments
-redcarpet:
-  extensions: ["tables", "no_intra_emphasis"]
-
-# To uncomment once Github Pages switched to Jekyll 3.1.2
-# See https://vzurczak.wordpress.com/2016/02/12/github-pages-kramdown-rouge-jekyll-3-0-the-final-struggle/
-
-#markdown: kramdown
-#highlighter: rouge
-#kramdown:
-#  input: GFM
-#  hard_wrap: false
-#  syntax_highlighter: rouge
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 
 gems: [ "jemoji" ]
 
