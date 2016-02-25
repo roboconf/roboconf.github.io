@@ -9,7 +9,7 @@ menus: [ "users", "download" ]
 ## Snapshots
 
 Vous pouvez récupérer une version *snapshot* de Roboconf sur notre dépôt Maven.  
-La version en cours de développement est la **0.5-SNAPSHOT**.
+La version en cours de développement est la **0.7-SNAPSHOT**.
 
 * **Deployment Manager**: [ZIP](https://oss.sonatype.org/service/local/artifact/maven/redirect?g=net.roboconf&r=snapshots&a=roboconf-karaf-dist-dm&v=LATEST&p=zip) - [Tar.gz](https://oss.sonatype.org/service/local/artifact/maven/redirect?g=net.roboconf&r=snapshots&a=roboconf-karaf-dist-dm&v=LATEST&p=tar.gz) - [Répertoire Maven](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-dist-dm)
 * **Agent**: [ZIP](https://oss.sonatype.org/service/local/artifact/maven/redirect?g=net.roboconf&r=snapshots&a=roboconf-karaf-dist-agent&v=LATEST&p=zip) - [Tar.gz](https://oss.sonatype.org/service/local/artifact/maven/redirect?g=net.roboconf&r=snapshots&a=roboconf-karaf-dist-agent&v=LATEST&p=tar.gz) - [Répertoire Maven](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-dist-agent)
