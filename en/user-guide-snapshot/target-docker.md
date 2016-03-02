@@ -14,6 +14,21 @@ To install it, open the DM's interactive mode and use one of the following optio
 With the [roboconf:target](karaf-commands-for-roboconf.html) command:
 
 ```properties
+# The version will be deduced automatically by the DM
+roboconf:target docker
+```
+
+Or with the native Karaf commands:
+
+```properties
+# Here in version %v_SNAP%
+bundle:install --start mvn:net.roboconf/roboconf-target-docker/%v_SNAP%
+```
+
+Sample **target.properties**.  
+Just copy / paste and edit.
+
+```properties
 # Configuration file for Docker
 handler = docker
 
