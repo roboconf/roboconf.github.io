@@ -43,7 +43,7 @@ It imports the required Roboconf dependencies.
 	<version>1.0-SNAPSHOT</version>
 	
 	<properties>
-		<roboconf.version>0.7-SNAPSHOT</roboconf.version>
+		<roboconf.version>%v_SNAP%</roboconf.version>
 	</properties>
 
 	<dependencies>
@@ -236,7 +236,7 @@ public class SampleTest {
 		// Perform a full deployment.
 		this.manager.instancesMngr().deployAndStartAll( ma, null );
 
-		// This make time!
+		// This may take time!
 		for( int i=0; i<10; i++ ) {
 
 			// Are all the instance deployed?
