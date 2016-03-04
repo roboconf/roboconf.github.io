@@ -10,22 +10,24 @@ Roboconf a démarré en tant que prototype de recherche et est maintenant en cou
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
 
-* **A partir d'Octobre 2015**
+* **Pour Avril 2016**
+
+	* Réparer automatiquement les connexion à Rabbit MQ.
+	* Autoriser l'exécution planifiée de commandes Roboconf.
+	* Tester Roboconf en conditions de production sur plusieurs jours (traque des fuites mémoires, etc).
+	* Créer des modeleurs graphiques (Eclipse) pour Roboconf.
+	* Définir une procédure (manuelle ou automatisée) pour migrer vers une nouvelle version de Roboconf.
+	* Implémenter une cible de déploiement pour OCCI Infrastructure.
 
 	* Proposer une nouvelle API pour la messagerie Roboconf.
 	* Rajouter le support des commandes dans Roboconf.
+
+
+* **Pour Plus Tard**
+
 	* Améliorer les mesures côté agent pour l'autonomique (moyenne, etc).
-	* Ajouter des quotas affinés pour l'autonomique côté DM.
-	* Gérer des combinaisons d'événements pour déclencher une réaction.
 	* Permettre la modification des seuils (autonomique côté agent) dans la console web.
-	* Rendre RabbitMQ optionnel (solution alternative basée sur HTTP pour les débutants).
-
-
-* **Après Janvier 2016**
-
-	* Créer des paquets RPM pour Roboconf.
-	* Compléter le support de Roboconf dans Eclipse et certains éditeurs.
-	* Supporter l'exécution de scénarios utilisateurs.
+	* Ajouter des quotas affinés pour l'autonomique côté DM.
 	* Gérer la migration d'applications (déploiement continu).
 	* Créer une extension pour Jenkins.
 	* Implémenter une cible de déploiement SSH.
@@ -40,4 +42,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
     * Compléter la messagerie pour des échanges sécurisés avec SSL.
 
 
-Roboconf 0.6 devrait sortir en janvier 2016.
+Roboconf 0.7 devrait sortir en avril 2016.
