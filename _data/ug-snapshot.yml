@@ -1,6 +1,15 @@
 #
 # User Guide Snapshot
 #
+writing-validation-tests-with-junit:
+  en: user-guide/writing-validation-tests-with-junit
+  
+writing-validation-tests-with-pax-exam:
+  en: user-guide/writing-validation-tests-with-pax-exam
+  
+writing-validation-tests-with-scripts:
+  en: user-guide/writing-validation-tests-with-scripts
+  
 maven-examples-documentation:
   en: user-guide-snapshot/maven-examples-documentation
   
