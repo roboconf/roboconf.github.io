@@ -121,6 +121,7 @@ function formatRoboconfCommandsSnippets() {
     result = result.replace( /(^define)\s+(.*)\s*=/igm, '<span class="keyword">$1</span> $2 <span class="keyword">=</span>' );
     result = result.replace( /(^write)\s+(.*)(\s*)(into)\s+(.*)/igm, '<span class="keyword">$1</span> $2$3<span class="keyword">$4</span> $5' );
     result = result.replace( /(^email)\s+(.*)(\s*)(with)\s+(.*)/igm, '<span class="keyword">$1</span> $2$3<span class="keyword">$4</span> $5' );
+    result = result.replace( /(^execute)\s+(.*)/igm, '<span class="keyword">$1</span> $2' );
 
     result = result.replace( /(\$\(INDEX\))/igm, '<i>$1</i>' );
     result = result.replace( /(\$\(NANO_TIME\))/igm, '<i>$1</i>' );

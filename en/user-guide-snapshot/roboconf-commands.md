@@ -170,10 +170,22 @@ Write into a file.
 
 <pre><code class="language-roboconf-commands">Write some text into /this/file
 
-# Write into the system's temporary directory
+# Write into the system's temporary directory.
 # %TMP% will be replaced by the location of the system's temporary directory.
 Write something else into %TMP%/temporary-file.txt
 
-# Create an empty file
+# Create an empty file.
 Write into /that/file
+</code></pre>
+
+
+### Execute Command
+
+This command instruction allows to execute another *commands* file.
+
+<pre><code class="language-roboconf-commands">Execute command-file-name
+
+# You use or omit the file extension.
+# But the extension must be "commands".
+Execute command-file-name.commands
 </code></pre>

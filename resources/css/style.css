@@ -307,6 +307,12 @@ p > img.gs {
 	margin: 18px auto;
 }
 
+div.more-about {
+	border-top: solid #b03e4d 2px;
+	border-bottom: solid #b03e4d 2px;
+	padding: 14px 10px 10px;
+}
+
 /* Twitter */
 
 #twitter-widget-0 {
@@ -338,7 +344,11 @@ span.roadmap-in-progress {
 .language-json span.nt,
 .language-html span.s,
 .language-roboconf span.comment,
-.language-roboconf-commands span.comment {
+.language-roboconf-commands span.comment,
+/* FIXME: rouge */
+.highlighter-rouge span.c,
+.highlighter-rouge span.c1,
+.highlighter-rouge span.nt {
 	color: green;
 }
 
@@ -368,7 +378,10 @@ span.roadmap-in-progress {
 .language-tcl span.nb,
 .language-roboconf span.property,
 .language-roboconf-commands span.keyword,
-.language-roboconf-rules span.keyword {
+.language-roboconf-rules span.keyword,
+/* FIXME: rouge */
+.highlighter-rouge span.kn,
+.highlighter-rouge span.kd {
 	color: #b23e4b;
 	font-weight: bold;
 }
@@ -387,12 +400,6 @@ span.roadmap-in-progress {
 pre.file-hierarchy {
 	line-height: 14px;
 	padding-left: 12px;
-}
-
-div.more-about {
-	border-top: solid #b03e4d 2px;
-	border-bottom: solid #b03e4d 2px;
-	padding: 14px 10px 10px;
 }
 
 /* Tables for parameters */
