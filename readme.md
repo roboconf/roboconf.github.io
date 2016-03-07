@@ -24,3 +24,5 @@ When using Jekyll on your own machine, you may have errors about missing gems or
 
 	sudo gem install jemoji
 	sudo gem install github-pages
+
+You will find more information on [Github's web site](https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/).

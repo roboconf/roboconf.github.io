@@ -26,7 +26,7 @@ menus: [ "users", "links" ]
 
 * [Twitter](https://twitter.com/Roboconf) account
 * Chat room @ [Gitter.im](https://gitter.im/roboconf/roboconf)
-* [Ohloh](https://www.ohloh.net/p/roboconf) page
+* [Openhub](https://www.openhub.net/p/roboconf) page
 
 ## Slides and Presentations
 
