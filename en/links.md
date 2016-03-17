@@ -21,6 +21,7 @@ menus: [ "users", "links" ]
 
 * Index for all the [Eclipse's update sites](https://dl.bintray.com/roboconf/roboconf-eclipse/)
 * [Debian repository](https://dl.bintray.com/roboconf/roboconf-debian-packages/) @ Bintray
+* [RPM repository](https://dl.bintray.com/roboconf/roboconf-rpm) @ Bintray
 
 ## Social
 

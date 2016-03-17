@@ -35,10 +35,10 @@ Example: version 1.0.0 is written 1.0. Version 2.4.0 is written 2.4. But version
 ## Roboconf's Relatives
 
 The version management is almost similar for projects that relative to the platform.  
-This implies Eclipse tools, the Maven plug-in, Debian packages, and so on.
+This implies Eclipse tools, the Maven plug-in and so on.
 
-> All the project relatives must have a three-digit version.  
-> **major.minor.maintenance**
+> All the project relatives must have a three-digit version: **major.minor.maintenance**  
+> The system installers are the only exception to this rule.
 
 What really matters are the 2 first digits of the platform.  
 Project relatives that are associated with a given version must have the same two first digits.
@@ -60,3 +60,36 @@ through the download pages on the web site.
 
 If the platform version 1.0.1 needs the Maven plug-in 1.0.4, they will be mentioned on the same page on the web site.  
 This is also why all the releases must appear on the web site. And this is why all the download sections must be archived.
+
+
+## System Installers
+
+System installers are a little bit different.  
+This includes RPM and Debian packages. Their version is made up three parts:
+
+* The platform's version.
+* The package's version.
+* The version qualifier.
+
+Roughly, the version of a system installer is built as the following concatenation.
+
+```
+${platform.version}-${package.version}${version.qualifier}
+```
+
+Let's see examples.  
+
+| Version | Platform version | Comment |
+| :---: | :---: | :--- |
+| 0.6-1.0 | 0.6 | The first package that deploys Roboconf 0.6. |
+| 0.6.1-1.0 | 0.6.1 | The first package that deploys Roboconf 0.6.1. |
+| 0.6.1-1.1 | 0.6.1 | The first **maintenance** package for Roboconf 0.6.1. Example: there was a bug in the package (but not in the platform). |
+| 0.6.1-1.2 | 0.6.1 | The second **maintenance** package for Roboconf 0.6.1.  Example: there was a bug in the package (but not in the platform). |
+| 0.6-1.0-SNAPSHOT | 0.6-SNAPSHOT | The first package that deploys Roboconf 0.6-SNAPSHOT. |
+| 0.6-2.0 | 0.6 | A full-rewrite of the package for Roboconf. Not likely to happen, but we never know... |
+
+These examples illustrate some rules.
+
+* Snapshot versions of the platform should have their package version set 1.0.
+* Platform releases should have their package version set 1.0.
+* The only case where a package version is incremented is when **there is a bug** in a system installer (not in the platform).

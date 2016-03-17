@@ -6,31 +6,46 @@ id: "installing-roboconf-with-debian-packages"
 menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
-> Notice these packages may ask questions.  
-> This prevents from having to configure Roboconf after the installation.
-
-
 ## Releases
 
-Roboconf has packages for RPM (Red Hat Release Manager). They are are hosted by [Bintray](https://bintray.com/roboconf/roboconf-debian-packages).  
+Roboconf has packages for RPM (Red Hat Release Manager). They are are hosted by [Bintray](https://bintray.com/roboconf/roboconf-rpm).  
 To install the DM or agents with these packages, follow this procedure.
 
-First, you need to add our RPM repository into your repo list.
+First, you need to add our RPM repository into your repo list.  
+We here assume you are logged in as an administrator.
+
+You can either...
 
 ```bash
-# todo
+# Download the repo file...
+yum install -y wget
+wget https://bintray.com/roboconf/roboconf-rpm/rpm -O bintray-roboconf-roboconf-rpm.repo
+
+# ... and move it into YUM's directory
+mv bintray-roboconf-roboconf-rpm.repo /etc/yum.repos.d/
+```
+
+... or copy the following content into **/etc/yum.repos.d/bintray-roboconf-roboconf-rpm.repo**...
+
+```properties
+#bintraybintray-roboconf-roboconf-rpm - packages by roboconf from Bintray
+[bintraybintray-roboconf-roboconf-rpm]
+name=bintray-roboconf-roboconf-rpm
+baseurl=https://dl.bintray.com/roboconf/roboconf-rpm
+gpgcheck=0
+enabled=1
 ```
 
 Then, run...
 
 ```
-sudo yum install roboconf-dm
+yum install roboconf-dm
 ```
 
 ... to install Roboconf's DM and...
 
 ```
-sudo yum install roboconf-agent
+yum install roboconf-agent
 ```
 
 ... to install a Roboconf agent.
@@ -39,15 +54,27 @@ sudo yum install roboconf-agent
 ## Snapshots
 
 Snapshot packages are not hosted on Bintray.  
-You will have to build and upload them manually. Once available on your system, run one
-of the following commands to install the DEB file.
+You can download them from 
+[our Maven snapshots repository](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/),
+which is hosted by Sonatype.
+
+Once available on your system, run one of the following commands to install the RPM file.
+
+```bash
+# Install the Java version you want (optional)
+yum install java-1.7.0-openjdk
+
+# Install the RPM with its dependencies
+yum install your.rpm
+```
 
 
 ## Configuration
 
 Configuration files are available under **/etc/roboconf-dm** or **/etc/roboconf-agent**.  
-Logs are located under **/var/log/roboconf-dm** or **/var/log/roboconf-agent**.  
-The binaries are located under **/var/lib/roboconf-dm** or **/var/lib/roboconf-agent**.
+The data are located under **/var/lib/roboconf-dm** or **/var/lib/roboconf-agent** (KARAF\_DATA).  
+The binaries are located under **/var/lib/roboconf-dm** or **/var/lib/roboconf-agent**.  
+Logs are located under **/var/log/roboconf-dm** or **/var/log/roboconf-agent**.
 
 Once installed, please refer to the configuration pages:
 

@@ -45,6 +45,10 @@ download:
   en: download
   fr: telecharger
   
+older-downloads:
+  en: older-downloads
+  fr: anciens-telechargements
+  
 download-changelog:
   en: change-log
   fr: liste-des-changements

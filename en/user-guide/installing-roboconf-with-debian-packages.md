@@ -14,12 +14,10 @@ menus: [ "users", "user-guide" ]
 Released Debian packages for Roboconf are hosted by [Bintray](https://bintray.com/roboconf/roboconf-debian-packages).  
 To install the DM or agents with these packages, follow this procedure.
 
-First, you need to add our Debian repository into your repo list.
+First, you need to add our Debian repository into your repo list.  
+We here assume you are logged in as an administrator.
 
 ```bash
-# For Ubuntu, or su if you are under Debian
-sudo -i
-
 # If you do not have them installed...
 # Install https transport for APT and wget.
 apt-get install apt-transport-https wget
@@ -54,8 +52,11 @@ sudo apt-get install roboconf-agent
 ## Snapshots
 
 Snapshot packages are not hosted on Bintray.  
-You will have to build and upload them manually. Once available on your system, run one
-of the following commands to install the DEB file.
+You can download them from 
+[our Maven snapshots repository](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/),
+which is hosted by Sonatype.
+
+Once available on your system, run one of the following commands to install the DEB file.
 
 ```bash
 sudo apt-get update

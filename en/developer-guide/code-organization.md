@@ -19,7 +19,7 @@ It contains common configuration for plug-ins, as well as information about the 
 This includes the OSGi bundles and user-ready distributions (for the moment, based on Apache Karaf). All the core and
 runtime modules are hosted in this repository.
 
-* [Roboconf-maven-plugin](https://github.com/roboconf/roboconf-maven-plugin) contains the sources for the Roboconf Maven plug-in. 
+* [Roboconf-maven-plugin](https://github.com/roboconf/roboconf-maven-plugin) *(deprecated)* contains the sources for the Roboconf Maven plug-in. 
 The plug-in has since moved into the platform repository. We keep this repository to hold the tag for the Maven plug-in 0.2.
 
 * [Roboconf-eclipse](https://github.com/roboconf/roboconf-eclipse) contains Eclipse plug-ins for Roboconf.  
@@ -30,7 +30,7 @@ and to the resulting size, that can be important depending on what we want).
 It is based on Javascript technologies (Angular JS and related).
 
 * [Roboconf-system-installers](https://github.com/roboconf/roboconf-system-installers) contains sources to build
-installers (Linux scripts, Debian packages for the Karaf distributions, etc).
+installers (Linux scripts, RPM and Debian packages for the Karaf distributions, etc).
 
 * [Roboconf-examples](https://github.com/roboconf/roboconf-examples) contains examples of Roboconf applications.
 
@@ -44,6 +44,12 @@ in [Atom.io](https://atom.io/).
 Since it will not be upgraded very often, it was placed in its own repository. Just like for the **roboconf-parent**, it will be released
 on demand and independently of the Roboconf roadmap.
 
+* [Roboconf-release-scripts](https://github.com/roboconf/roboconf-release-scripts) contains the scripts to release Roboconf.  
+They allow to automate most of the release process.
+
+* [Roboconf-occi-extensions](https://github.com/roboconf/roboconf-occi-extensions) contains OCCI extensions for Roboconf.
+They were built upon the [OCCIware](https://github.com/occiware) project and allowed to build a part of the Eclipse tooling.
+
 
 ## Impact on Releases
 
@@ -56,7 +62,7 @@ It should almost never be modified (once a year seems reasonable).
 **Roboconf-platform** is a multi-module project.  
 **All these modules must be released together. They must have the same version.**
 
-**Roboconf-maven-plugin** and **Roboconf-eclipse** depend on modules from **Roboconf-platform**.  
+**Roboconf-maven-plugin**, **Roboconf-system-installers** and **Roboconf-eclipse** depend on modules from **Roboconf-platform**.  
 But still, they can be managed and released independently.
 
 **Roboconf.github.io** does not need to be *released*.  
@@ -67,6 +73,8 @@ So, releasing it does not make sense. However, it may a good idea to tag it from
 
 **Roboconf-examples** do not aim at being released.  
 As for the web administration, only tagging would make sense.
+
+> Other repositories do not need to be released.
 
 
 ## Maven Modules
