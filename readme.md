@@ -1,10 +1,8 @@
 # Roboconf's Web Site
-
 [![Build Status](https://travis-ci.org/roboconf/roboconf.github.io.svg?branch=master)](https://travis-ci.org/roboconf/roboconf.github.io)
-
-Website: [http://roboconf.net](http://roboconf.net)  
-Roboconf is licensed under the terms of the **Apache License v2**.  
-The web site documentation is licensed under [Creative Commons](http://creativecommons.org/licenses/by/3.0/).
+[![License](https://img.shields.io/badge/Creative%20Commons-blue.svg)](http://creativecommons.org/licenses/by/3.0/)
+[![Join us on Gitter.im](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg)](https://gitter.im/roboconf/roboconf)
+[![Web site](https://img.shields.io/badge/website-roboconf.net-b23e4b.svg)](http://roboconf.net)
 
 This repository contains the sources for Roboconf's web site.  
 On every commit, a [routine](http://jekyllrb.com/) is executed. It generates static HTML files and host 
