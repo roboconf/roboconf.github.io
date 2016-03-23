@@ -27,6 +27,10 @@ It shows how to use [Logstash](http://logstash.net/), [ElasticSearch](http://www
 [Kibana](http://www.elasticsearch.org/overview/kibana) to monitor several Karaf instances by aggregating and sorting
 data collected from logs and JMX probes. A similar system should be feasible with Roboconf.
 
+### Montoring with Apache Karaf Decanter
+
+Apache Karaf Decanter is a monitoring tool for Karaf solutions and applications running on it. 
+So The DM and the agent can be monitored using Decanter, it suffices to install it. You can follow this [blog](http://blog.nanthrax.net/2015/07/monitoring-and-alerting-with-apache-karaf-decanter/) to install and configure Decanter.  
 
 ## Monitoring RabbitMQ
 
