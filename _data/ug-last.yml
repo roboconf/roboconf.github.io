@@ -4,6 +4,9 @@
 writing-validation-tests-with-junit:
   en: user-guide/writing-validation-tests-with-junit
   
+installation-tips:
+  en: user-guide/installation-tips
+  
 writing-validation-tests-with-pax-exam:
   en: user-guide/writing-validation-tests-with-pax-exam
   

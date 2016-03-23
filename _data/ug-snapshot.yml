@@ -2,13 +2,16 @@
 # User Guide Snapshot
 #
 writing-validation-tests-with-junit:
-  en: user-guide/writing-validation-tests-with-junit
+  en: user-guide-snapshot/writing-validation-tests-with-junit
+  
+installation-tips:
+  en: user-guide-snapshot/installation-tips
   
 writing-validation-tests-with-pax-exam:
-  en: user-guide/writing-validation-tests-with-pax-exam
+  en: user-guide-snapshot/writing-validation-tests-with-pax-exam
   
 writing-validation-tests-with-scripts:
-  en: user-guide/writing-validation-tests-with-scripts
+  en: user-guide-snapshot/writing-validation-tests-with-scripts
   
 maven-examples-documentation:
   en: user-guide-snapshot/maven-examples-documentation
@@ -80,7 +83,7 @@ how-to-write-reusable-recipes:
   en: user-guide-snapshot/how-to-write-reusable-recipes
   
 tutorial-local-deployment-with-docker:
-  en: user-guide/tutorial-local-deployment-with-docker
+  en: user-guide-snapshot/tutorial-local-deployment-with-docker
   fr: guide-utilisateur/tutoriel-deploiement-local-avec-docker
   
 tutorial-getting-started-with-roboconf:

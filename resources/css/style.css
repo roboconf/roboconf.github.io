@@ -381,7 +381,8 @@ span.roadmap-in-progress {
 .language-roboconf-rules span.keyword,
 /* FIXME: rouge */
 .highlighter-rouge span.kn,
-.highlighter-rouge span.kd {
+.highlighter-rouge span.kd,
+.highlighter-rouge span.k {
 	color: #b23e4b;
 	font-weight: bold;
 }

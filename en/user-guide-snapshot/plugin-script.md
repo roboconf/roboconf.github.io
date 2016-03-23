@@ -38,10 +38,11 @@ These variables will be inserted by Roboconf.
 
 # Action Scripts and Parameters
 
-Parameters are passed to action scripts (e.g. start.sh, stop.py, update.perl ...) using environment variables, that respect naming conventions.
+Parameters are passed to action scripts (e.g. start.sh, stop.py, update.perl ...) using environment variables.  
+When you use script recipes, it is recommenced to name your graph components smartly (e.g. no space).
 
 
-## Global environment-related variables
+## Global Variables
 
 In the next lines, the *current instance* means the one whose script is invoked.
 
@@ -68,9 +69,57 @@ my_server_vm
 ```
 
 
-## Exported and imported variables
+## Exported Variables
 
-All the exports of the instance are available as environment variables (their names are left unchanged).  
+All the exports of the instance are available as environment variables.  
+Their name is left unchanged, except that spaces and the `-` character are replaced by `_`.
+
+Assuming a component is defined as...
+
+<pre><code class="language-roboconf">
+MyComp {
+	exports: ip, port = 8080;
+}
+</code></pre>
+
+... then the following variables will be available: `${ip}` and `${port}`.  
+
+
+## Ancestor Variables
+
+Sometimes, it is useful to use parent information.  
+The script recipes of a component may use variables exported by a parent instance.
+Such variables are built with the ANCESTOR\_*&lt;component-name&gt;*_*&lt;variable-name&gt;* pattern. 
+
+Consider the following example.
+
+<pre><code class="language-roboconf">
+VM {
+	exports: ip;
+	children: server;
+}
+
+server {
+	exports: path = "apps/";
+	children: app;
+}
+
+
+app {
+	exports: name = "app";
+}
+</code></pre>
+
+A script for the **app** component could use the following variables: `${name}`,
+`${ANCESTOR_server_path}` and `${ANCESTOR_VM_ip}`.
+A script for the **server** component could use the following variables: `${path}` and `${ANCESTOR_VM_ip}`.
+
+Variable names are left unchanged, except that spaces and the `-` character are replaced by `_`.  
+Also, notice an instance can not access children variables. Only ancestor ones.
+
+
+## Imported Variables
+
 Imports are more complex, as there may be multiple ones: let's take the example of an Apache load balancer, 
 that imports Tomcat (spelled *tomcat* in the graph) "ip" and "portAjp" variables. The imports will look like this (for N+1 Tomcat instances
 named "tomcat0" to "tomcatN"):
@@ -97,7 +146,9 @@ do
 done
 ```
 
-## Variables related to update actions
+## Updated-related Variables
+
+These variables are only made available in the **update** script.
 
 | Variable name | Description |
 | ------------- | ----------- |
@@ -119,7 +170,7 @@ They should have a **.template** extension. [Mustache](http://mustache.github.io
 For the moment, only imports variables are injected in the generation context.  
 Here is a sample template:
 
-```
+```properties
 #!/bin/bash
 #
 # Instance imports...

@@ -41,7 +41,7 @@ Then go to [http://oss.sonatype.org](http://oss.sonatype.org). Login and check t
 You should find one about Roboconf. Verify the content and then click **close**. Sonatype will then verify
 some quality rules about your upload (sources JAR, javadoc JAR...). Once this is done, click **release**.
 
-6\. Wait for the platform to be available on [Maven Central](http://repo1.maven.org/maven2/net/roboconf/roboconf-core/).  
+6\. Wait for the platform to be available on [Maven Central](http://repo1.maven.org/maven2/net/roboconf).  
 This can take some minutes (generally about 15 minutes). Next scripts can be executed in any order.
 The order we defined is somehow arbitrary.
 

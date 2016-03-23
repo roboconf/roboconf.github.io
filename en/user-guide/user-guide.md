@@ -35,6 +35,7 @@ menus: [ "users", "user-guide" ]
 	<ul>
 	<li><a href="installing-roboconf.html">Installing Roboconf</a></li>
 	<li><a href="configuring-roboconf.html">Configuring Roboconf</a></li>
+	<li><a href="installation-tips.html">Installation Tips</a></li>
 	</ul>
 </div>
 

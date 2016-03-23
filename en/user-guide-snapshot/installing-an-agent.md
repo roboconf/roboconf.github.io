@@ -168,7 +168,7 @@ Start your karaf and execute...
 
 ```properties
 # Add the feature URL
-features:addurl https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-feature-agent/%v_SNAP%/feature.feature.xml
+feature:repo-add http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-feature-agent/%v_SNAP%/roboconf-karaf-feature-agent-%v_SNAP%-features.xml
 
 # Install the feature 
 feature:install roboconf-agent
