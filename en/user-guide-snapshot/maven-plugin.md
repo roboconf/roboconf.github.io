@@ -162,7 +162,7 @@ It accepts the following parameters.
 
 | Name | Type | Required | Default | Since | Description |
 | ---- | ---- | -------- | ------- | ----- | ----------- |
-| **renderers** | List&lt;String&gt; | yes | - | 0.3 | A list of renderers to use. Currently available: **html** and **markdown**. Unknown renderers are ignored. |
+| **renderers** | List&lt;String&gt; | yes | - | 0.3 | A list of renderers to use. Currently available: **html**, **markdown**, **fop** and **pdf**. Unknown renderers are ignored. |
 | **locales** | List&lt;String&gt; | no | The system's locale. | 0.3 | A list of locales for the generated documentation. Currently available: **en_US** and **fr_FR**. |
 | **options** | Map&lt;String,String&gt; | no | - | 0.3 | A map associating rendering options and their values. Available options are documented below. |
 
