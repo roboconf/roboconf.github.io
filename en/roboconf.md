@@ -7,7 +7,7 @@ menus: [ "project", "what-is-roboconf" ]
 ---
 
 Roboconf is a platform to manage elastic deployments in the cloud.
-It manages deployments, probes, automatic reactions and reconfigurations. It can be defined as « PaaS framework »: a solution to build PaaS (Platform as a Service). Most PaaS, such as Cloud Foundry or Openshift, target developers and support application patterns. However, some application require more flexible architectures or design. Roboconf addresses such cases.
+It manages deployments, probes, automatic reactions and reconfigurations. It can be defined as « PaaS framework »: a solution to build PaaS (Platform as a Service). Most PaaS, such as Cloud Foundry or Openshift, target developers and support application patterns. However, some applications require more flexible architectures or design. Roboconf addresses such cases.
 
 With Roboconf, you can create PaaS for any programming language, any kind of application and any operating system. You define what you put in your platform, you specify all the interactions, administration procedures and so on.
 

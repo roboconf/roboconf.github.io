@@ -70,6 +70,12 @@ dm-templating:
 eclipse-plugin:
   en: user-guide-snapshot/eclipse-plugin
   
+eclipse-plugins:
+  en: user-guide-snapshot/eclipse-plugins
+  
+eclipse-modeling-plugin:
+  en: user-guide-snapshot/eclipse-modeling-plugin
+  
 maven-plugin:
   en: user-guide-snapshot/maven-plugin
   

@@ -6,24 +6,7 @@ id: "eclipse-plugin"
 menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
-There is an Eclipse plug-in for Roboconf.  
-This plug-in includes a creation wizard for new Roboconf projects,
-and text editors to edit configuration files.
-
-
-## Installation
-
-In Eclipse, click **Help &gt; Install New Software...**.  
-Click **Add...** and complete the dialog that shows up.  
-Give it a name, like `Roboconf's update site` and this URL: 
-[http://dl.bintray.com/roboconf/roboconf-eclipse/%v_SNAP%/](http://dl.bintray.com/roboconf/roboconf-eclipse/%v_SNAP%/)
-
-<img src="/resources/img/eclipse-install.jpg" alt="The update dialog" />
-
-Click **OK**.    
-Wait few seconds. An item containing **Roboconf** should appear. Check it and click **Next**.  
-Keep on clicking **Next** and **OK** until you are asked to restart your Eclipse.  
-Confirm. After the restart, the plug-in is installed. 
+This page lists the standard [Eclipse features](eclipse-plugins.html) for Roboconf.
 
 
 ## New Project Wizard

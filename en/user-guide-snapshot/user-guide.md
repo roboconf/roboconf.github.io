@@ -80,7 +80,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 
 	<ul>
 	<li><a href="web-administration.html">Web Administration</a></li>
-	<li><a href="eclipse-plugin.html">The Eclipse plug-in</a></li>
+	<li><a href="eclipse-plugins.html">The Eclipse plug-ins</a></li>
 	<li><a href="maven-plugin.html">The Maven plug-in</a></li>
 	<li><a href="karaf-commands-for-roboconf.html">Karaf Commands for Roboconf</a></li>
 	<li><a href="other-tools.html">Other Tools</a></li>
