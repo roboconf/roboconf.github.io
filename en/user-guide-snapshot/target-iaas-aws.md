@@ -134,7 +134,7 @@ ec2.ebs-mount-point.volume2 = /dev/sdg
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
 | ec2.use-block-storage | A list of block storage IDs. Items are separated by a comma. | - | no |
-| ec2.ebs-snapshot-id. | Snapshot ID for volume, or volume name that can be reused if delete-on-termination is false. Since several Roboconf instances may share the same Openstack configuration, it is strongly recommended to use a template tag to define the name. Two templates tags are currently available. %NAME% will be replaced by the instance name. %APP% will be replaced by the application name. | roboconf-%APP%-%NAME% | no |
+| ec2.ebs-snapshot-id. | Snapshot ID for volume, or volume name that can be reused if delete-on-termination is false. Since several Roboconf instances may share the same EC2 configuration, it is strongly recommended to use a template tag to define the name. Two templates tags are currently available. %NAME% will be replaced by the instance name. %APP% will be replaced by the application name. | roboconf-%APP%-%NAME% | no |
 | ec2.ebs-delete-on-termination. | Delete volume on instance termination, or not | false | no |
 | ec2.ebs-size. | Volume size (Gb) | 2 | no |
 | ec2.ebs-mount-point. | Volume mount point | /dev/sdf | no |
