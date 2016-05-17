@@ -29,7 +29,7 @@ mv bintray-roboconf-roboconf-rpm.repo /etc/yum.repos.d/
 
 ```properties
 #bintraybintray-roboconf-roboconf-rpm - packages by roboconf from Bintray
-[bintraybintray-roboconf-roboconf-rpm]
+[bintray-roboconf-rpm]
 name=bintray-roboconf-roboconf-rpm
 baseurl=https://dl.bintray.com/roboconf/roboconf-rpm
 gpgcheck=0
