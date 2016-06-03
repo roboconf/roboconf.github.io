@@ -10,6 +10,13 @@ Cette page liste les événements durant lesquels Roboconf a été présenté,
 ainsi que les publications dans lesquelles il a été mentionné.
 
 
+## &laquo; Sophia Conf 2016 &raquo;
+
+* Du 4 juin au 7 juillet 2016
+* Titre de la session : **Déploiement élastique dans le cloud par Roboconf**
+* Le site de l'événement se trouve [ici](http://www.telecom-valley.fr/sophiaconf2016-intelligence-artificielle-economie-collaborative-iot-devops/)
+
+
 ## &laquo; IEEE Cloud 2015 &raquo;
 
 * Du 27 juin au 2 juillet 2015

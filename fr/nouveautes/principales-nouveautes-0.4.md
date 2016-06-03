@@ -93,3 +93,4 @@ Un certain nombre de bugs ont également été corrigés. Veuillez vous référe
 * [Plate-forme](https://github.com/roboconf/roboconf-platform/issues?utf8=%E2%9C%93&q=milestone%3A0.4)
 * [Administration Web](https://github.com/roboconf/roboconf-web-administration/issues?utf8=%E2%9C%93&q=milestone%3A0.4)
 * [Outillage Eclipse](https://github.com/roboconf/roboconf-eclipse/issues?utf8=%E2%9C%93&q=milestone%3A0.4)
+

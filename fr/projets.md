@@ -21,6 +21,14 @@ déploiements dans des infrastructures de cloud.
 > Hubl.in est une solution gratuite et [open source](https://github.com/linagora/hublin) qui se substitue à des logiciels comme Skype et Google Hangout.
 
 
+## &laquo; OCCIware &raquo;
+
+[OCCIware](http://www.occiware.org) est un projet de recherche qui vise à compléter les spécifications OCCI et à développer
+de nouveaux outils. OCCI en lui-même est un ensemble de spécifications ouvertes pour standardiser les APIs de gestion des
+plate-formes *cloud*. Roboconf participe au projet pour enrichir ces nouveaux outils. Il sert aussi de cas d'usage afin de
+profiter d'API REST basées sur OCCI.
+
+
 ## &laquo; gSafe &raquo;
 
 [gSafe](https://research.linagora.com/display/gsafe/gSafe+Overview) est un projet associant

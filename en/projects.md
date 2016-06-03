@@ -20,6 +20,13 @@ Built upon web standards, this platform uses Roboconf to drive and adapt its dep
 > Free and fully [open source](https://github.com/linagora/hublin), Hubl.in is a robust alternative to Skype and Google Hangout.
 
 
+## &laquo; OCCIware &raquo;
+
+[OCCIware](http://www.occiware.org) is a Research project that aims at completing OCCI specifiations and developing
+a set of related tools. OCCI by itself is a set of open specifications with a focus to standardize cloud APIs management.
+Roboconf is part of the project to contribute to these new tools. It also acts as use case to benefit from REST APIs based on OCCI.
+
+
 ## &laquo; gSafe &raquo;
 
 [gSafe](https://research.linagora.com/display/gsafe/gSafe+Overview) is a Research project that involves

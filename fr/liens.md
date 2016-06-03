@@ -20,8 +20,8 @@ menus: [ "users", "links" ]
 <!-- -->
 
 * Index pour [les sites de mise à jour](https://dl.bintray.com/roboconf/roboconf-eclipse/) Eclipse
-* [Dépôt Debian](https://dl.bintray.com/roboconf/roboconf-debian-packages/) @ Bintray
-* [Dépôt RPM](https://dl.bintray.com/roboconf/roboconf-rpm) @ Bintray
+* Dépôts Debian @ Bintray: [versions stables](https://dl.bintray.com/roboconf/roboconf-debian-packages/) / [versions dev](https://dl.bintray.com/roboconf/roboconf-debian-packages-unstable/)
+* Dépôts RPM @ Bintray: [versions stables](https://dl.bintray.com/roboconf/roboconf-rpm) / [versions dev](https://dl.bintray.com/roboconf/roboconf-rpm-unstable)
 
 ## Réseaux Sociaux
 
@@ -33,15 +33,16 @@ menus: [ "users", "links" ]
 
 * [Présentations réutilisables](presentations-reutilisables.html)
 
-## Projects Liés
+## Projets Liés
 
-* [Open PaaS](http://open-paas.org/)
-* [OCCIware](http://www.occiware.org/bin/view/Main/)
+* [Open PaaS](http://open-paas.org)
+* OCCIware: [site officiel](http://www.occiware.org) / [site communautaire](http://occiware.github.io)
 
 ## Sponsors
 
-<a href="http://linagora.com/"><img src="/resources/img/sponsor-linagora.gif" alt="Linagora" width="400" /></a>
+<a href="http://linagora.com"><img src="/resources/img/sponsor-linagora.gif" alt="Linagora" width="400" /></a>
 <img src="/resources/img/sponsor-fsn.jpg" alt="FSN" height="180" />
 
-<a href="http://www.ujf-grenoble.fr/"><img src="/resources/img/sponsor-ujf.jpg" alt="Université Joseph Fourier" width="400" /></a>
-<a href="http://www.liglab.fr/"><img src="/resources/img/sponsor-lig.jpg" alt="Laboratoire d'Informatique de Grenoble" height="180" /></a>
+<a href="http://www.univ-grenoble-alpes.fr"><img src="/resources/img/sponsor-uga.jpg" alt="Université Grenoble-Alpes" width="400" /></a>
+<a href="http://www.liglab.fr"><img src="/resources/img/sponsor-lig.jpg" alt="Laboratoire d'Informatique de Grenoble" height="180" /></a>
+<a href="http://www.ujf-grenoble.fr"><img src="/resources/img/sponsor-ujf.jpg" alt="Université Joseph Fourier" width="400" /></a>

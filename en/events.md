@@ -10,6 +10,13 @@ Various events where Roboconf was shown.
 Slides can help to understand the project and its uses cases.
 
 
+## &laquo; Sophia Conf 2016 &raquo;
+
+* July 4<sup>th</sup>-July 7<sup>th</sup>, 2016
+* Track's title: **Déploiement élastique dans le cloud par Roboconf**
+* The event's web site is [here](http://www.telecom-valley.fr/sophiaconf2016-intelligence-artificielle-economie-collaborative-iot-devops/)
+
+
 ## &laquo; IEEE Cloud 2015 &raquo;
 
 * June 27<sup>th</sup>-July 2<sup>nd</sup>, 2015
