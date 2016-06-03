@@ -32,6 +32,9 @@ It is based on Javascript technologies (Angular JS and related).
 * [Roboconf-system-installers](https://github.com/roboconf/roboconf-system-installers) contains sources to build
 installers (Linux scripts, RPM and Debian packages for the Karaf distributions, etc).
 
+* [Roboconf-dockerfile](https://github.com/roboconf/roboconf-dockerfile) contains a Dockerfile to build (Docker) images
+for both the DM and agents.
+
 * [Roboconf-examples](https://github.com/roboconf/roboconf-examples) contains examples of Roboconf applications.
 
 * [Roboconf.github.io](https://github.com/roboconf/roboconf.github.io) contains the source for this web site.  
@@ -62,7 +65,7 @@ It should almost never be modified (once a year seems reasonable).
 **Roboconf-platform** is a multi-module project.  
 **All these modules must be released together. They must have the same version.**
 
-**Roboconf-maven-plugin**, **Roboconf-system-installers** and **Roboconf-eclipse** depend on modules from **Roboconf-platform**.  
+**Roboconf-maven-plugin**, **Roboconf-system-installers**, **Roboconf-dockerfile** and **Roboconf-eclipse** depend on modules from **Roboconf-platform**.  
 But still, they can be managed and released independently.
 
 **Roboconf.github.io** does not need to be *released*.  
@@ -71,7 +74,7 @@ It does not make sense. The web site contains documentation for the current and 
 **Roboconf-web-administration** is downloaded and packaged into an OSGi bundle during **Roboconf-platform**'s build.  
 So, releasing it does not make sense. However, it may a good idea to tag it from time to time.
 
-**Roboconf-examples** do not aim at being released.  
+**Roboconf-examples** does not aim at being released.  
 As for the web administration, only tagging would make sense.
 
 > Other repositories do not need to be released.
@@ -119,17 +122,20 @@ It contains utilities to transform Java beans into JSon.
 * **roboconf-dm-webapp**: a packaging of the DM into a web application (WAR) for Tomcat and other
 application servers.
 
-* **roboconf-iaas-api**: the API to implement to support a given IaaS.  
-In Roboconf's model, a IaaS is in fact a root instance. A root instance could also be
-an existing host, or a device. So, a IaaS plug-in does not only handle a cloud infrastructure.
+* **roboconf-target-api**: the API to implement to support a given deployment target.  
+In Roboconf's model, a target is very often a root instance. A root instance could also be
+an existing host, or a device. So, a target plug-in does not only handle a cloud infrastructure.
 
-* **roboconf-iaas-**\*: IaaS implementations.
+* **roboconf-target-\***: implementations for deployment targets.
 
-* **roboconf-messaging**: all the stuff related to messaging.  
+* **roboconf-messaging-api**: the API to implement a new messaging solution.  
 It includes the message definitions, the interface to interact with a given messaging server
-and their implementations. For the moment, there is only one implementation for RabbitMQ. If
-other implementations had to appear, then this module may have to be split.
+and their implementations. This bundle also provides the business API for messaging. It is
+used by both the DM and agents.
 
-* **roboconf-plugin-api**: the API to implement for a new Roboconf plug-in.  
+* **roboconf-messaging-\***: the implementations of the messaging API.
 
-* **roboconf-plugin-**\*: all the implementations of Roboconf plug-ins.
+* **roboconf-plugin-api**: the API to implement for a new Roboconf plug-in.
+
+* **roboconf-plugin-\***: all the implementations of Roboconf plug-ins.
+

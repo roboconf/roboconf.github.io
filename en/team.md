@@ -8,9 +8,9 @@ menus: [ "developers", "team" ]
 
 Roboconf's team is made up of the following persons.
 
-* Noël De Palma (Université Joseph Fourier)
-* [Amadou Diarra](https://github.com/diarraa) (Université Joseph Fourier)
-* [Didier Donsez](https://github.com/donsez) (Université Joseph Fourier) - [@FablabAIR](https://twitter.com/FablabAIR)
+* Noël De Palma (Université Grenoble-Alpes)
+* [Amadou Diarra](https://github.com/diarraa) (Université Grenoble-Alpes)
+* [Didier Donsez](https://github.com/donsez) (Université Grenoble-Alpes) - [@FablabAIR](https://twitter.com/FablabAIR)
 * [Pierre-Yves Gibello](https://github.com/gibello) (Linagora) - [Blog](http://planet.petalslink.com/home/pygibello/)
 * [Vincent Zurczak](https://github.com/vincent-zurczak) (Linagora) - [@VincentZurczak](https://twitter.com/VincentZurczak) - [Blog (EN)](http://vzurczak.wordpress.com) - [Blog (FR)](http://vzurczak2.wordpress.com)
 
@@ -28,4 +28,5 @@ Roboconf's team is made up of the following persons.
 * [Graham Crosmarie](https://github.com/GrahamLinagora) (Linagora)
 * [Christophe Hamerling](https://github.com/chamerling) (Linagora) - [@chamerling](https://twitter.com/chamerling)
 * [Linh-Manh Pham](https://github.com/linkbutler) (Université Joseph Fourier)
+* [Thomas Sarboni](https://github.com/max-k) (Linagora)
 

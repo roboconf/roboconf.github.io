@@ -6,9 +6,7 @@ id: "continuous-integration"
 menus: [ "developers", "developer-guide" ]
 ---
 
-Continuous Integration (CI) is applied to [Roboconf-platform](https://github.com/roboconf/roboconf-platform),
-[Roboconf-maven-plugin](https://github.com/roboconf/roboconf-maven-plugin) and 
-[Roboconf-eclipse](https://github.com/roboconf/roboconf-eclipse).  
+Continuous Integration (CI) is applied to almost all the Git repositories of Roboconf.  
 On these repositories, every commit triggers a build that will compile the code and run the tests.
 
 CI is hanled by [Travis](https://travis-ci.org/).  
@@ -61,3 +59,4 @@ This is not a problem for snapshots. But this would not be suitable for a releas
 Build results can be checked on [Travis](https://travis-ci.org/)'s web site.  
 In the case of **roboconf-platform**, the outputs are so big we also configured the Maven build to hide basic log entries.
 Otherwise, the console output is truncated by Travis and this is a problem in case of build failure.
+
