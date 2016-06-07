@@ -29,9 +29,7 @@
 <!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 <module name="Checker">
 	<property name="charset" value="UTF-8" />
-
-	<!-- Temporarily set the severity to warning -->
-	<property name="severity" value="warning" />
+	<property name="severity" value="error" />
 	
 	<!-- XML style -->
 	<module name="TreeWalker">
@@ -42,16 +40,13 @@
 			<property name="message" value="Indent must use tab characters" />
 			<property name="ignoreComments" value="true" />
 		</module>
-		
-		<!-- No trailing white space -->
-		<module name="RegexpSinglelineJava">
-			<property name="format" value="(\t| )$" />
-			<property name="message" value="Trailing white spaces are forbidden" />
-		</module>
     </module>
 
 	<!-- File Headers -->
 	<module name="RegexpHeader">
 		<property name="headerFile" value="${checkstyle.header.file}" />
 	</module>
+	
+	<!-- Files must end with a new line -->
+	<module name="NewlineAtEndOfFile" />
 </module>

@@ -29,8 +29,6 @@
 <!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 <module name="Checker">
 	<property name="charset" value="UTF-8" />
-
-	<!-- Temporarily set the severity to warning -->
 	<property name="severity" value="error" />
 
 
