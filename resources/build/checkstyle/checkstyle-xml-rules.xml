@@ -43,9 +43,9 @@
 			<property name="ignoreComments" value="true" />
 		</module>
 		
-		<!-- No trailing space -->
+		<!-- No trailing white space -->
 		<module name="RegexpSinglelineJava">
-			<property name="format" value="\t| $" />
+			<property name="format" value="(\t| )$" />
 			<property name="message" value="Trailing white spaces are forbidden" />
 		</module>
     </module>
