@@ -37,7 +37,7 @@
 	<!-- Java style -->
 	<module name="TreeWalker">
 
-		<!-- Basic Checks -->
+		<!-- Basic Java Checks -->
         <module name="AvoidStarImport" />
         <module name="ConstantName" />
         <module name="EmptyBlock">
@@ -63,6 +63,19 @@
 			<property name="authorFormat" value=".+ - .+" />
 		</module>
 		<module name="JavadocStyle" />
+
+		<!-- Indentation must use tabs -->
+		<module name="RegexpSinglelineJava">
+			<property name="format" value="^\t* " />
+			<property name="message" value="Indent must use tab characters" />
+			<property name="ignoreComments" value="true" />
+		</module>
+		
+		<!-- No trailing space -->
+		<module name="RegexpSinglelineJava">
+			<property name="format" value="\t| $" />
+			<property name="message" value="Trailing white spaces are forbidden" />
+		</module>
     </module>
 
 
@@ -70,4 +83,8 @@
 	<module name="RegexpHeader">
 		<property name="headerFile" value="${checkstyle.header.file}" />
 	</module>
+
+
+	<!-- Files must end with a new line -->
+	<module name="NewlineAtEndOfFile" />
 </module>

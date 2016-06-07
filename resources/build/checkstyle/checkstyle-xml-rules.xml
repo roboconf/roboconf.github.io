@@ -32,6 +32,23 @@
 
 	<!-- Temporarily set the severity to warning -->
 	<property name="severity" value="warning" />
+	
+	<!-- XML style -->
+	<module name="TreeWalker">
+
+		<!-- Indentation must use tabs -->
+		<module name="RegexpSinglelineJava">
+			<property name="format" value="^\t* " />
+			<property name="message" value="Indent must use tab characters" />
+			<property name="ignoreComments" value="true" />
+		</module>
+		
+		<!-- No trailing space -->
+		<module name="RegexpSinglelineJava">
+			<property name="format" value="\t| $" />
+			<property name="message" value="Trailing white spaces are forbidden" />
+		</module>
+    </module>
 
 	<!-- File Headers -->
 	<module name="RegexpHeader">
