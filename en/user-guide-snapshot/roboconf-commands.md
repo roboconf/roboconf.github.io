@@ -73,10 +73,22 @@ Deploy and start all /myRootCopy
 Stop all /myRootCopy
 Undeploy all /myRootCopy
 
+# These bulk actions can also be applied by component name.
+# @parameter: a component name
+Deploy and start all instances of VM
+Stop all instances of VM
+Undeploy all instances of VM
+
 # Delete an instance.
 # This instance must be in the "not_deployed" state.
+# If the deletion fails, the command script is not interrupted.
 # @parameter: an instance's path
 Delete /myRootCopy
+
+# A bulk mode also exists for deletion.
+# If the deletion fails for an instance, the command script is not interrupted.
+# @parameter: a component name
+Delete all instances of VM
 </code></pre>
 
 Instance creation only impacts the runtime model.  
@@ -158,7 +170,7 @@ email with this message
 </code></pre>
 
 <pre><code class="language-roboconf-commands"># Define a mail subject and a body.
-email user@company.net with with @n@
+email user@company.net with @n@
     Subject: Alert! @n@
     This is an example.
 </code></pre>
@@ -176,6 +188,23 @@ Write something else into %TMP%/temporary-file.txt
 
 # Create an empty file.
 Write into /that/file
+</code></pre>
+
+
+### Append Command
+
+A variant of the **write** command.  
+Append text into a file. If the file does not exist, it is created.  
+When the file exists and is not empty, the content is appended after a line break.
+
+<pre><code class="language-roboconf-commands">Append some text into /this/file
+
+# Write into the system's temporary directory.
+# %TMP% will be replaced by the location of the system's temporary directory.
+Append something else into %TMP%/temporary-file.txt
+
+# Create an empty file.
+Append into /that/file
 </code></pre>
 
 

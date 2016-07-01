@@ -158,7 +158,7 @@ email with this message
 </code></pre>
 
 <pre><code class="language-roboconf-commands"># Define a mail subject and a body.
-email user@company.net with with @n@
+email user@company.net with @n@
     Subject: Alert! @n@
     This is an example.
 </code></pre>
