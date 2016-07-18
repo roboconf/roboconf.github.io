@@ -196,7 +196,7 @@ Here is a sample **feature.xml** for such a use case.
 ```
 
 All the URLs supported by PAX-URL can be used.  
-Please, refer to [Karaf's URLs guide](http://karaf.apache.org/manual/latest/users-guide/urls.html)
+Please, refer to [Karaf's URLs guide](http://karaf.apache.org/manual/latest/)
 and [PAX-URL's wiki](https://ops4j1.jira.com/wiki/display/paxurl/Pax+URL) for more details about URLs.
 
 

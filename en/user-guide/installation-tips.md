@@ -26,7 +26,7 @@ Eventually, you may want to configure [the location of log files](configuring-th
 > Notice that when you use Debian and/or RPM packages,
 > these practices are already set up.
 
-You can refer to [Karaf's user guide](https://karaf.apache.org/manual/latest/users-guide/configuration.html)
+You can refer to [Karaf's user guide](https://karaf.apache.org/manual/latest/)
 for more details.
 
 

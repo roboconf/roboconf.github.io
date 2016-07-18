@@ -7,7 +7,7 @@ menus: [ "users", "user-guide" ]
 ---
 
 The Karaf distributions for Roboconf come with dedicated Karaf commands.  
-They come in addition to [those already available](https://karaf.apache.org/manual/latest/users-guide/console.html)
+They come in addition to [those already available](https://karaf.apache.org/manual/latest/)
 with Karaf. They are available from the Karaf command line.
 
 > For the moment, only the DM has commands.

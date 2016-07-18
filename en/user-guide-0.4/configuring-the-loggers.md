@@ -31,7 +31,7 @@ All these logs are written in a specific file: **data/log/roboconf.log** (under 
 
 Editing and saving this file will automatically propagate the new logging configuration.  
 You can also use Karaf commands to update the logging configuration. See 
-[this section](http://karaf.apache.org/manual/latest/users-guide/log.html#Commands) on Karaf's web site for more information.
+[Karaf's web site](http://karaf.apache.org/manual/latest/) for more information.
 
 > Be careful about log level names.
 

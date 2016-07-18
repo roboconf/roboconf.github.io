@@ -106,7 +106,7 @@ logout
 
 You can find help and more instructions about Karaf on [its web site](http://karaf.apache.org/).  
 Anyway, you need to make Karaf start at boot time with the system. Fortunately, Karaf has very useful
-features such as [system wrappers](http://karaf.apache.org/manual/latest/users-guide/wrapper.html).
+features such as [system wrappers](http://karaf.apache.org/manual/latest/).
 
 ```properties
 # Start the agent

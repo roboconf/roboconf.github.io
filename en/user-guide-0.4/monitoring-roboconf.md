@@ -17,7 +17,7 @@ The OSGi bundles do not embed anything related to monitoring. But Karaf
 exposes a JMX interface. You can use it to retrieve information and manage
 the OSGi servers.
 
-See [Karaf's web site](http://karaf.apache.org/manual/latest/users-guide/monitoring.html) for more information.
+See [Karaf's web site](http://karaf.apache.org/manual/latest/) for more information.
 
 JMX access can be completed with the web consoles and shell access.  
 Once again, you will find information on Karaf's web site.

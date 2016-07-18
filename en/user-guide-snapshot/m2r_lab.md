@@ -14,7 +14,7 @@ For this work, you need:
 * A Java Development Kit (JDK 1.7+). OpenJDK and Oracle JDK both work.
 * [Maven](https://maven.apache.org) (3.x).
 * [RabbitMQ](https://www.rabbitmq.com) (follow [these instructions](http://localhost:4000/en/user-guide-snapshot/installing-the-messaging-server.html) to install and configure it).
-* [Docker](https://docs.docker.com/installation/) (1.5+).
+* [Docker](https://docs.docker.com/engine/installation/) (1.5+).
 * A **good** internet connection.
 
 > If you do NOT have a Linux system, you will be able to do everything EXCEPT the Docker part.

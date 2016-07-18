@@ -26,6 +26,10 @@ These editors provide syntax highlighting for Roboconf's DSL.
 
 <img src="/resources/img/eclipse-editor.jpg" alt="Overview of the Eclipse editor(s)" />
 
+The text editor also provides auto-completion...
 
-> Validation and context assistance (such as auto-completion)
-> have not yet been implemented in these editors.
+<img src="/resources/img/eclipse-editor-with-auto-completion.png" alt="Auto-completion" />
+
+... and on-the-fly validation.
+
+<img src="/resources/img/eclipse-editor-with-validation.png" alt="Validation on the fly" />

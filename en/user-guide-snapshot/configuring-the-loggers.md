@@ -31,7 +31,7 @@ All these logs are written in a specific file: **data/log/roboconf.log** (under 
 
 Editing and saving this file will automatically propagate the new logging configuration.  
 You can also use Karaf commands to update the logging configuration. See 
-[this section](http://karaf.apache.org/manual/latest/users-guide/log.html#Commands) on Karaf's web site for more information.
+[Karaf's web site](http://karaf.apache.org/manual/latest/) for more information.
 
 > Be careful about log level names.
 
@@ -57,6 +57,6 @@ We reproduce this table here.
 In the *cfg* file, you must use Log4J levels.  
 They will be converted into levels for the JDK logging.
 
-More information about how to configure loggers can be found on [Karaf's web site](https://karaf.apache.org/manual/latest/users-guide/log.html)
+More information about how to configure loggers can be found on [Karaf's web site](https://karaf.apache.org/manual/latest/)
 (e.g. how to log directly in console, etc) and [Log4j's web site](https://logging.apache.org/log4j/2.x/manual/configuration.html) (look for the
 **Configuration with Properties** section).

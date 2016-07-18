@@ -87,7 +87,7 @@ for more details.
 ## Tip: debugging Karaf
 
 Karaf supports launching with JVM arguments to enable remote debug.  
-Please, refer to [the official Karaf documentation](https://karaf.apache.org/manual/latest/developers-guide/debugging.html) for more information.
+Please, refer to [the official Karaf documentation](https://karaf.apache.org/manual/latest/) for more information.
 
 
 ## Tip: create your own handy project

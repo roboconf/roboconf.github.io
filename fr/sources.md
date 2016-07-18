@@ -68,6 +68,12 @@ Sinon, il y a probablement des blogs francophones qui auront fourni d'autres exp
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request)
 
 
+# Contribuer à l'Administration Web
+
+Les informations relatives au développement de l'administration web (Angular JS) sont regroupées
+dans le [fichier « readme »](https://github.com/roboconf/roboconf-web-administration) du projet.
+
+
 # Contribuer au Site Web
 
 Le site est généré avec [Jekyll](http://jekyllrb.com). Il est hébergé avec [GitHub](http://github.com),

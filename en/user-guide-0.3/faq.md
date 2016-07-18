@@ -65,7 +65,7 @@ We should investigate this deeper in the future, since Roboconf may be seen as a
 
 ## How about Puppet, Chef or CFEngine?
 
-[Puppet](http://puppetlabs.com/), [Chef](http://docs.opscode.com/) and [CFEngine](http://cfengine.com/) are various
+[Puppet](http://puppetlabs.com/), [Chef](https://www.chef.io) and [CFEngine](http://cfengine.com/) are various
 deployment solutions. Roboconf does not pretend to be a concurrent, but instead, a complement to these solutions. 
 The real key feature of Roboconf is the asynchronous exchanges to adapt and deploy concurrently Software components. How
 Roboconf concretely deploys something (once the asynchronous thing worked) is delegated to plug-ins. For the moment, we have

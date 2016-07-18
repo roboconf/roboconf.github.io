@@ -69,6 +69,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 
 	<ul>
 	<li><a href="roboconf-commands.html">Roboconf Commands</a></li>
+	<li><a href="roboconf-commands-scheduling.html">Roboconf Commands Scheduling</a></li>
 	<li><a href="monitoring-roboconf.html">Monitoring Roboconf</a></li>
 	<li><a href="monitoring-applications-deployed-with-roboconf.html">Monitoring Applications deployed with Roboconf</a></li>
 	<li><a href="autonomic-management-with-roboconf.html">Autonomic Management</a></li>
@@ -94,6 +95,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<li><a href="reusability-in-models.html">Reusability in Models</a></li>
 	<li><a href="reusable-recipes-index.html">Index of Reusable Recipes</a></li>
 	<li><a href="how-to-write-reusable-recipes.html">How to write reusable recipes?</a></li>
+	<li><a href="good-practices-for-recipes.html">Good practices for recipes</a></li>
 	</ul>
 </div>
 
@@ -127,12 +129,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<ul>
 	<li><a href="../user-guide-snapshot/user-guide.html">User Guide (snapshot)</a></li>
 	<li><a href="../user-guide/user-guide.html">User Guide for the last released version</a></li>
-	<!-- RELEASE_MARKER -->
-	<li><a href="../user-guide-0.5/user-guide.html">User Guide for version 0.5</a></li>
-	<li><a href="../user-guide-0.4/user-guide.html">User Guide for version 0.4</a></li>
-	<li><a href="../user-guide-0.3/user-guide.html">User Guide for version 0.3</a></li>
-	<li><a href="../user-guide-0.2/user-guide.html">User Guide for version 0.2</a></li>
-	<li><a href="../user-guide-0.1/user-guide.html">User Guide for version 0.1</a></li>
+	<li><a href="user-guide-older-versions.html">Older Versions</a></li>
 	</ul>
 </div>
 

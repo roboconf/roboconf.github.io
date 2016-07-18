@@ -64,6 +64,12 @@ These links may help you.
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request)
 
 
+# Contributing to the Web Administration
+
+Information related to the development of the web administration (Angular JS) is mentioned in [the
+project's read me file](https://github.com/roboconf/roboconf-web-administration).
+
+
 # Contributing to the Web Site
 
 The web site is powered by [Jekyll](http://jekyllrb.com), [GitHub](http://github.com), 

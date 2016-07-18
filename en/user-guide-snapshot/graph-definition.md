@@ -121,6 +121,9 @@ Tomcat {
 }
 </code></pre>
 
+
+## Graph Files
+
 Components can be defined in separate files and in any order. This is achieved thanks to the **import** keyword.  
 Graphs definitions can mix imports and components declaration, or, it can only contain imports.
 
@@ -132,6 +135,12 @@ MyComponent{
 	# whatever
 }
 </code></pre>
+
+> File imports are not relative to the current's file location.  
+> They are resolved from the graph directory.
+
+As an example, `import dir1/dir2/servers.graph;` means we import the file *servers.graph* located under
+**graph/dir1/dir2** directory of the project.
 
 
 ## Properties Overview

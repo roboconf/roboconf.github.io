@@ -6,7 +6,7 @@ id: "new-and-noteworthy-0.6"
 menus: [ "users", "download" ]
 ---
 
-Cette page liste les nouvelles fonctionnalités et améliorations apportées à Roboconf 0.5.
+Cette page liste les nouvelles fonctionnalités et améliorations apportées à Roboconf 0.6.
 
 
 ## Messagerie HTTP

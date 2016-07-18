@@ -12,7 +12,7 @@ Note that Docker runs mainly on Linux 64-bit systems, although some ports may be
 ## Note to install latest Docker
 
 Docker has known many installation ways.  
-The best solution is to read the [official Docker guide](https://docs.docker.com/installation) to get the last version.
+The best solution is to read the [official Docker guide](https://docs.docker.com/engine/installation) to get the last version.
 
 
 ## Docker Configuration

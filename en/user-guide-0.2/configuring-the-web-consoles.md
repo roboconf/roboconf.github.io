@@ -28,4 +28,4 @@ By default, the port is 8181. When you start one of the Karaf distributions for 
 file is created under Karaf's **etc** directory. You can change the port and other web settings by editing this
 file. This configuration is also used by the DM's web administration.
 
-More information can be found at [http://karaf.apache.org/manual/latest/users-guide/webconsole.html](http://karaf.apache.org/manual/latest/users-guide/webconsole.html).
+More information can be found at [http://karaf.apache.org/manual/latest/](http://karaf.apache.org/manual/latest/).

@@ -11,7 +11,7 @@ It uses [Puppet](http://www.puppetlabs.com) to deploy and configure Software on 
 
 > This plug-in uses Puppet in server-less mode.  
 > It means it does not require a Puppet master to work but instead uses "puppet apply".  
-> See [Puppet's user guide about "apply"](http://docs.puppetlabs.com/references/3.3.1/man/apply.html).
+> See [Puppet's user guide about "apply"](https://docs.puppet.com/puppet/latest/reference/man/apply.html).
 
 Concretely, this plug-in is in charge of executing a Puppet module during a life cycle step.
 

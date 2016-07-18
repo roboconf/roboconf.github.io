@@ -15,22 +15,24 @@ The roadmap for the next months covers several aspects.
 -->
 
 
-* **For June 2016**
+* **For September 2016**
 
-	* Repair automatically broken Rabbit MQ connections.
-	* Allow scheduled executions of Roboconf commands.
-	* Create graphical Eclipse editors for Roboconf.
-	* Find a (manual or automated) procedure to migrate Roboconf to a new version.
-	* Have Docker images for Roboconf.
+	* Multi-tenant installations.
+	* Upgrade Roboconf's messaging with SSL support.
+	* CORS policy review.
+	* Environment switch procedures.
+	* Customization of the look'n'feel of the web administration.
+	* Internationalization of the web administration.
+	* Introduce user and role management in Roboconf.
 
 
 * **Items for Later**
 
-	* Upgrade Roboconf's messaging with SSL support.
 	* Test Roboconf over several days in production conditions (track memory leaks and other bugs).
 	* Implement a deployment target for OCCI Infrastructure.
 	* Improve agent measures for the autonomic (average measures, etc.).
 	* Support the live update of thresholds (in the agent's autonomic) through the web console.
+	* Smart placement.
 	* Add fine-grained quotas for the autonomic on the DM's side.
 	* Support applications migration (continuous deployment).
 	* Create a Jenkins plugin.
@@ -45,4 +47,4 @@ The roadmap for the next months covers several aspects.
 	* Study TOSCA support.
 
 
-Roboconf 0.7 will be released in June 2016.
+Roboconf 0.8 will be released by the end of September 2016.
