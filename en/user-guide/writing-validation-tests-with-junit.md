@@ -1,7 +1,7 @@
 ---
 title: "Writing Validation Tests with JUnit"
 layout: page
-cat: "ug"
+cat: "ug-last"
 id: "writing-validation-tests-with-junit"
 menus: [ "users", "user-guide" ]
 ---
@@ -43,7 +43,7 @@ It imports the required Roboconf dependencies.
 	<version>1.0-SNAPSHOT</version>
 	
 	<properties>
-		<roboconf.version>0.6</roboconf.version>
+		<roboconf.version>0.7</roboconf.version>
 	</properties>
 
 	<dependencies>
@@ -84,14 +84,6 @@ It imports the required Roboconf dependencies.
 			<version>${javax.mail.version}</version>
 		</dependency>
 		-->
-		
-		<dependency>
-			<groupId>net.roboconf</groupId>
-  			<artifactId>roboconf-core</artifactId>
-  			<version>${project.version}</version>
-			<type>test-jar</type>
-			<scope>test</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -190,18 +182,7 @@ public class SampleTest {
 		// Set the messaging by hand.
 		// Normally, this is managed automatically by our OSGi framework.
 		// Here, you have to do this by hand.
-		
-		// This part is a little bit complex.
-		// A more simple solution was provided for Roboconf 0.7.
-		MessagingClientFactoryRegistry registry = new MessagingClientFactoryRegistry();
-		registry.addMessagingClientFactory( new RabbitMqClientFactory());
-
-		ReconfigurableClientDm internalClient = TestUtils.getInternalField(
-				this.manager,
-				"messagingClient",
-				ReconfigurableClientDm.class );
-
-		internalClient.setRegistry( registry );
+		this.manager.addMessagingFactory( new RabbitMqClientFactory());
 		
 		// Set the messaging type
 		manager.setMessagingType( "rabbitmq" );

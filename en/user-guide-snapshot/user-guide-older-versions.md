@@ -17,6 +17,7 @@ User guides for previous releases.
 
 <ul>
 	<!-- RELEASE_MARKER -->
+	<li><a href="../user-guide-0.6/user-guide.html">User Guide for version 0.6</a></li>
 	<li><a href="../user-guide-0.5/user-guide.html">User Guide for version 0.5</a></li>
 	<li><a href="../user-guide-0.4/user-guide.html">User Guide for version 0.4</a></li>
 	<li><a href="../user-guide-0.3/user-guide.html">User Guide for version 0.3</a></li>

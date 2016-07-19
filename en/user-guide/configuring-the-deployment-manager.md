@@ -106,8 +106,8 @@ desired targets.
 cd bin
 ./karaf
 
-# Install the bundles you want (here in version 0.6)
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.6
+# Install the bundles you want (here in version 0.7)
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.7
 ```
 
 You can also use a specific Karaf command (**roboconf:target**) that will install predefined target handlers into the DM.  

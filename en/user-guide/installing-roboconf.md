@@ -15,6 +15,7 @@ First versions of Roboconf were also heavily tested on Windows, but this is not 
 
 * Installing [Roboconf with Debian packages](installing-roboconf-with-debian-packages.html)
 * Installing [Roboconf with RPM](installing-roboconf-with-rpm.html)
+* Installing [Roboconf with Docker](installing-roboconf-with-docker.html)
 
 
 ## Manual Installation

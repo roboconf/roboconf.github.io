@@ -1,8 +1,11 @@
 #
-# User Guide Version 0.6
+# User Guide Version 0.7
 #
 writing-validation-tests-with-junit:
   en: user-guide/writing-validation-tests-with-junit
+  
+user-guide-older-versions:
+  en: user-guide/user-guide-older-versions
   
 installation-tips:
   en: user-guide/installation-tips
@@ -37,14 +40,35 @@ installing-roboconf-with-debian-packages:
 installing-roboconf-with-rpm:
   en: user-guide/installing-roboconf-with-rpm
   
+installing-roboconf-with-docker:
+  en: user-guide/installing-roboconf-with-docker
+  
 using-docker-with-roboconf:
   en: user-guide/using-docker-with-roboconf
+  
+good-practices-for-recipes:
+  en: user-guide/good-practices-for-recipes
   
 security:
   en: user-guide/security
   
+security-and-topologies:
+  en: user-guide/security-and-topologies
+  
+security-and-software:
+  en: user-guide/security-and-software
+  
+security-and-https-console:
+  en: user-guide/security-and-https-console
+  
+security-and-roboconf-ports:
+  en: user-guide/security-and-roboconf-ports
+  
 roboconf-commands:
   en: user-guide/roboconf-commands
+  
+roboconf-commands-scheduling:
+  en: user-guide/roboconf-commands-scheduling
   
 configuring-probes-for-the-autonomic:
   en: user-guide/configuring-probes-for-the-autonomic
@@ -69,6 +93,12 @@ dm-templating:
   
 eclipse-plugin:
   en: user-guide/eclipse-plugin
+  
+eclipse-plugins:
+  en: user-guide/eclipse-plugins
+  
+eclipse-modeling-plugin:
+  en: user-guide/eclipse-modeling-plugin
   
 maven-plugin:
   en: user-guide/maven-plugin

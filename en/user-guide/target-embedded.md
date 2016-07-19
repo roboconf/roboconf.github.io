@@ -21,8 +21,8 @@ roboconf:target embedded
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.6
-bundle:install --start mvn:net.roboconf/roboconf-target-embedded/0.6
+# Here in version 0.7
+bundle:install --start mvn:net.roboconf/roboconf-target-embedded/0.7
 ```
 
 With this configuration, you need to start the agent directly.  

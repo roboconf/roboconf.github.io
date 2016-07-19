@@ -20,9 +20,9 @@ roboconf:target jclouds
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.6
+# Here in version 0.7
 feature:install jclouds-for-roboconf
-bundle:install --start mvn:net.roboconf/roboconf-target-jclouds/0.6
+bundle:install --start mvn:net.roboconf/roboconf-target-jclouds/0.7
 ```
 
 Sample **target.properties**.  

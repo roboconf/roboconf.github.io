@@ -51,11 +51,12 @@ sudo apt-get install roboconf-agent
 
 ## Snapshots
 
-Snapshot packages are not hosted on Bintray.  
-You can download them from 
-[our Maven snapshots repository](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/),
-which is hosted by Sonatype.
+Snapshot packages are available on both Sonatype and Bintray.  
+On Bintray, use the **roboconf-debian-packages-unstable** repository instead of **roboconf-debian-packages**.
 
+You can also download them from 
+[our Maven snapshots repository](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/),
+which is hosted by Sonatype.  
 Once available on your system, run one of the following commands to install the DEB file.
 
 ```bash

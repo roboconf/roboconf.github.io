@@ -39,7 +39,7 @@ menus: [ "users", "download" ]
 			<a href="new/new-and-noteworthy-0.6.html">New &amp; Noteworthy</a>
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="user-guide/user-guide.html">User Guide</a>
+			<a href="user-guide-0.6/user-guide.html">User Guide</a>
 			
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Issues: 
@@ -57,7 +57,7 @@ Older stable downloads are available [here](older-downloads.html).
 ## Nightly Builds
 
 You can download the last snapshots of Roboconf on our Maven repository.  
-The current development version is **0.7-SNAPSHOT**.
+The current development version is **0.8-SNAPSHOT**.
 
 * **Deployment Manager**: [ZIP](https://oss.sonatype.org/service/local/artifact/maven/redirect?g=net.roboconf&r=snapshots&a=roboconf-karaf-dist-dm&v=LATEST&p=zip) - [Tar.gz](https://oss.sonatype.org/service/local/artifact/maven/redirect?g=net.roboconf&r=snapshots&a=roboconf-karaf-dist-dm&v=LATEST&p=tar.gz) - [Maven directory](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-dist-dm)
 * **Agent**: [ZIP](https://oss.sonatype.org/service/local/artifact/maven/redirect?g=net.roboconf&r=snapshots&a=roboconf-karaf-dist-agent&v=LATEST&p=zip) - [Tar.gz](https://oss.sonatype.org/service/local/artifact/maven/redirect?g=net.roboconf&r=snapshots&a=roboconf-karaf-dist-agent&v=LATEST&p=tar.gz) - [Maven directory](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/roboconf-karaf-dist-agent)

@@ -21,10 +21,10 @@ roboconf:target in-memory
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.6 (with its dependencies)
-bundle:install --start mvn:net.roboconf/roboconf-plugin-api/0.6
-bundle:install --start mvn:net.roboconf/roboconf-agent/0.6
-bundle:install --start mvn:net.roboconf/roboconf-target-in-memory/0.6
+# Here in version 0.7 (with its dependencies)
+bundle:install --start mvn:net.roboconf/roboconf-plugin-api/0.7
+bundle:install --start mvn:net.roboconf/roboconf-agent/0.7
+bundle:install --start mvn:net.roboconf/roboconf-target-in-memory/0.7
 ```
 
 The in-memory target acts as a simulation mode.  

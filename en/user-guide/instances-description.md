@@ -93,3 +93,9 @@ instance of MyApp {
 	# whatever
 }
 </code></pre>
+
+> File imports are not relative to the current's file location.  
+> They are resolved from the instances directory.
+
+As an example, `import dir1/dir2/servers.instances;` means we import the file *servers.instances* located under
+**instances/dir1/dir2** directory of the project.
