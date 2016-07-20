@@ -58,11 +58,17 @@ security-and-topologies:
 security-and-software:
   en: user-guide-snapshot/security-and-software
   
+security-and-cors:
+  en: user-guide-snapshot/security-and-cors
+  
 security-and-https-console:
   en: user-guide-snapshot/security-and-https-console
   
 security-and-roboconf-ports:
   en: user-guide-snapshot/security-and-roboconf-ports
+  
+security-and-agents:
+  en: user-guide-snapshot/security-and-agents
   
 roboconf-commands:
   en: user-guide-snapshot/roboconf-commands

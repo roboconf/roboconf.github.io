@@ -77,6 +77,11 @@ root-instance-name =
 # This is useful if the machine has several network interfaces.
 ip-address-of-the-agent = 
 
+# The network interface to use when searching the IP address
+# to send to other agents. This should be the network interface
+# used to exchange with other applications.
+network-interface = eth0
+
 # The type of messaging we use: RabbitMQ.
 messaging-type = rabbitmq
 ```
@@ -97,6 +102,7 @@ The following table summers up all the agent parameters.
 | application-name | An agent is associated with a single application. | Depending on the target ID, its value can be retrieved from *user data*. | yes |
 | root-instance-name | Within an application, machines are represented by a root instance. This parameter is the name of the instance associated with this agent. | Depending on the target ID, its value can be retrieved from *user data*. | yes |
 | ip-address-of-the-agent | The IP address of the agent's machine. | This is useful if the machine has several network interfaces. | no |
+| network-interface | The network interface to use when searching the IP address to send to other agents. This should be the network interface used to exchange with other applications. | Useful when machines have several network interfaces. If the specified interface does not exist, the picked up IP will be the host's default one. | yes |
 | messaging-type | The kind of messaging used by the agent. | - | yes |
 
 These parameters are persisted and restored upon restart.  
