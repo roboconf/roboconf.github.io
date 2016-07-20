@@ -21,7 +21,7 @@ Des paquets RPM sont désormais disponibles pour installer Roboconf sur CentOS, 
 
 ## Docker Images
 
-Des images Docker pour Roboconf sont désormais disponibles depuis [Docker Hub](https://hub.docker.com).
+Des images Docker pour Roboconf sont désormais disponibles depuis [Docker Hub](https://hub.docker.com/u/roboconf/).
 
 > docker pull roboconf/roboconf-dm  
 > docker run...

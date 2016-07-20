@@ -21,7 +21,7 @@ RPM packages are now available to install Roboconf on CentOS, Fedora and related
 
 ## Docker Images
 
-Docker images for Roboconf are now available on [Docker Hub](https://hub.docker.com).
+Docker images for Roboconf are now available on [Docker Hub](https://hub.docker.com/u/roboconf/).
 
 > docker pull roboconf/roboconf-dm  
 > docker run...
