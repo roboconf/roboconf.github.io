@@ -51,6 +51,13 @@ Same thing when you want to compile offline.
 mvn clean install -o -Dcheckstyle.skip=true
 ```
 
+For the platform, integration tests are not part of the default build.  
+To run them, use...
+
+```tcl
+mvn clean install -P run-integration-tests
+```
+
 When projects use a different build mechanism, it is described in the readme of the project.
 
 

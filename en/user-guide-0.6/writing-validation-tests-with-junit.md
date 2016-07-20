@@ -1,7 +1,7 @@
 ---
 title: "Writing Validation Tests with JUnit"
 layout: page
-cat: "ug"
+cat: "ug-0-6"
 id: "writing-validation-tests-with-junit"
 menus: [ "users", "user-guide", "0.6" ]
 ---

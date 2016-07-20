@@ -79,7 +79,7 @@ is the same Java class behind. Only its configuration changes.
 
 In addition to these extensions points, which are either specific to the DM or to agents,
 there is an extension point in the Roboconf messaging.  
-This is clearly the most complex part of Roboconf. It is used by both the DM and agents.
+**This is clearly the most complex part of Roboconf. It is used by both the DM and agents.**
 
 Roboconf allows to...
 
@@ -91,5 +91,19 @@ it is automatically propagated and reconfigured. And the extension point for mes
 to support this. So, what is complex is not creating a new messaging implementation. What is complex is not the way
 the DM and agents use the messaging. What is complex is the glue between these 2 layers.
 
-However, the essential part is to remember that there is an extension point to plug new messaging implementation, and that
-this extension is based on iPojo. And it does not register messaging clients but factories to create messaging clients.
+<br />
+<img src="/resources/img/ipojo-messaging.png" alt="A big picture of the messaging in Roboconf" class="gs" />
+<br /><br />
+
+However, the essential part is to remember that **there is an extension point to plug new messaging implementations**, and that
+this extension is based on iPojo. Notice it does not register messaging clients but factories to create messaging clients.
+The diagram below gives a more detailed overview of the way messaging is implemented. Again, this is clearly the most complex part of Roboconf.
+
+<br />
+<img src="/resources/img/ipojo-messaging-detailed.png" alt="A more detailed picture of the messaging in Roboconf" class="gs" />
+<br />
+
+It mixes iPojo and casual Java. This mechanism works in both OSGi and non-OSGi environments. The way reconfigurable clients
+get the registry for messaging factories is quite simple in fact: they check whether there are in an OSGi environment. If so,
+they get the registry from the OSGi service registry. Such a service was registered by our iPojo configuration. When we are
+outside OSGi, a registry has to be set by hand in the code. Roboconf provides shortcuts for that.

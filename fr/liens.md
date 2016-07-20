@@ -16,6 +16,7 @@ menus: [ "users", "links" ]
 * Dépôt Maven pour les *snapshots* sur [Sonatype](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/)
 * Dépôt Maven pour les *releases* sur [Maven Central](http://repo1.maven.org/maven2/net/roboconf/)
 * Dépôts sur [Bintray](https://bintray.com/roboconf)
+* Dépôts sur [Docker Hub](https://hub.docker.com/u/roboconf/) 
 
 <!-- -->
 

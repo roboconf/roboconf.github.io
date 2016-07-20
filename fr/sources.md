@@ -52,6 +52,13 @@ Même chopse si vous souhaitez travailler en mode déconnecté.
 mvn clean install -o -Dcheckstyle.skip=true
 ```
 
+Par défaut, les tests d'intégration ne sont pas exécutés lors de l'assemblage standard.    
+Pour les faire tourner, vous devez utiliser...
+
+```tcl
+mvn clean install -P run-integration-tests
+```
+
 Quand les projets utilisent un outil d'assemblage différent, des instructions sont données dans le *readme* du projet. 
 
 

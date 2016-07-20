@@ -104,7 +104,10 @@ An error code has an ID, an error message, a severity (severe or simple warning)
 3. Conversion Errors
 4. Runtime Model Errors
 5. Projects Errors (if files are missing, such as the application descriptor)
-6. Execution Errors (not yet setup in the code, but for runtime errors)
+6. Recipes Errors (related to scripts or Puppet modules as an example)
+7. Commands Errors (related to Roboconf commands)
+8. Rules Errors (related the autonomic)
+9. Execution Errors (not yet setup in the code, but for runtime errors)
 
 The *ErrorCode* class aims at centralizing every error information.  
 This should help to create a catalog of errors for production environments.

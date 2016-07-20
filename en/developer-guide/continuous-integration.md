@@ -9,7 +9,7 @@ menus: [ "developers", "developer-guide" ]
 Continuous Integration (CI) is applied to almost all the Git repositories of Roboconf.  
 On these repositories, every commit triggers a build that will compile the code and run the tests.
 
-CI is hanled by [Travis](https://travis-ci.org/).  
+CI is handled by [Travis](https://travis-ci.org/).  
 The build is configured through a **.travis.yml** file, located at the root of the Git repository.
 
 Our Java projects are generally built against 3 JDK: Oracle JDK 7, OpenJDK 7 and Oracle JDK 8.  
@@ -24,12 +24,13 @@ This kind of features is directly handled by Travis.
 
 The checks include:
 
-* Checkstyle verifications (about the well-formedness of the code).
+* Checkstyle verifications (verify the code is well-formed).
 * Dependencies analysis (to avoid cycles and version conflicts).
 
 They rely on some resources.  
 To avoid another project (and circular dependencies issues), these resources are hosted statically on Roboconf's web site.  
 They are located under the **/resources/build/** directory.
+
 
 ## Deployment and Code Coverage
 
@@ -38,9 +39,8 @@ Some actions may be performed in case of successful build.
 * **Code coverage analysis** is handled by [Coveralls](https://coveralls.io/).
 * **Deployment** of the built artifacts to a Maven repository (hosted by [Sonatype](http://www.sonatype.org/)).
 
-Since we build against 2 JDK, and that we do not want to perform these actions twice per build, we only
-run them for the OpenJDK 7. These actions are defined in the **travis-build** and **travis-after-success.sh** scripts 
-that are located at the root of the concerned projects.
+Since we build against 3 JDKs, and that we do not want to perform these actions twice per build, we only
+run them for the OpenJDK 7.
 
 The Maven deployment is run by the **mvn deploy** command.  
 The Maven settings (where do we upload the artifacts, with which credentials) are specified [here](/resources/build/settings.xml).  
@@ -54,9 +54,21 @@ Artifacts are uploaded to the **snapshots Maven repository**. So, they are not s
 These artifacts have neither Javadoc, nor sources archives. And they are not signed.  
 This is not a problem for snapshots. But this would not be suitable for a release.
 
+
+## Build Matrix for the Platform
+
+[Roboconf-platform](https://github.com/roboconf/roboconf-platform) has the most complex build.  
+It follows what was explained in the previous lines. However, this section gives some additional
+information about its build matrix.
+
+* Oracle JDK 7: simple build (`mvn clean install`).
+* Oracle JDK 8: simple build with a profile to customize Javadoc checks.
+* Open JDK 7: a first build verifies code coverage metrics (Cobertura + Coveralls) and deploys snapshot artifacts on Sonatype.
+* Open JDK 7: a second build is in charge of running integration tests (but not unit tests, as other builds already do it).
+
+
 ## Build Outputs
 
 Build results can be checked on [Travis](https://travis-ci.org/)'s web site.  
 In the case of **roboconf-platform**, the outputs are so big we also configured the Maven build to hide basic log entries.
 Otherwise, the console output is truncated by Travis and this is a problem in case of build failure.
-

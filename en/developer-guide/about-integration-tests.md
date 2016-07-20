@@ -15,32 +15,37 @@ Roboconf has two kinds of tests.
 ## Integration Tests
 
 Integration tests rely on [PAX-Exam](https://ops4j1.jira.com/wiki/display/PAXEXAM3/Pax+Exam).  
-They are located under **miscellaneous/integration-tests**. It is always good to write such tests, as they
+They are located in **miscellaneous/roboconf-integration-tests...** modules. It is always good to write such tests, as they
 validate our bundles behavior in an OSGi environment. Not only PAX-Exam runs these tests, but it also allow
 to control the Karaf distributions (configuration files, which bundles to deploy, etc).
 
-Here is a short description of the packages inside this Maven module.
+Here is a short description of the Maven IT modules.
 
-* `net.roboconf.integration.probes` contains abstract test classes for **paxrunner** tests.  
-In particular, they define the Karaf distributions we can use in these tests.
+* The `roboconf-integration-tests-commons` module defines classes used in other integration tests.
+* The `roboconf-integration-tests-agent` module includes integration tests that imply the Karaf distribution for the agent.
+* The `roboconf-integration-tests-dm` module includes integration tests that imply the Karaf distribution for the DM.
+* The `roboconf-integration-tests-dm-with-agents-in-memory` module includes integration tests that imply the Karaf distribution for the DM
+with agents running in memory.
 
-* `net.roboconf.integration.tests.paxrunner` contains **paxrunner** tests.  
-These tests are wrapped into a dynamic bundle. They are then deployed and executed INSIDE Karaf.
+Every module that include tests matches a different (configured) Karaf installation.  
+In these modules, packages named `net.roboconf.integration...probes` packages contain abstract test classes for **paxrunner** tests.  
+In particular, they define the Karaf distribution to use.
+
+There are 2 kinds of integration tests.
+
+* **Probe-based**: these tests are wrapped into a dynamic bundle that is deployed and executed INSIDE Karaf.
 Such tests are useful to verify assertions on internal bundle objects.
- 
-* `net.roboconf.integration.tests.servermode` contains tests that launch Karaf distributions but
+* **Server-based**: these tests launch Karaf distributions but
 execute tests OUTSIDE the container. They are used as an example to verify the DM's web socket, the REST API
-and the Karaf console work as expected. 
+and the Karaf console work as expected.
 
-* `net.roboconf.integration.tests.internal` contains utility classes for integration tests.
-
-> The **roboconf-integration-tests** bundle only contains test classes.  
-> It is not deployed on Maven Central.
+> IT modules only contains test classes. They are not deployed on Maven Central.  
+> They are not part of the default build. To run them, use `mvn clean install -P run-integration-tests`
 
 
 ## The PAX Probe
 
-This section explains a little more how **paxrunner** tests work.  
+This section explains a little more how **probe-based** tests work.  
 Theses tests...
 
 1. ... launch real OSG runtime platforms (here, Roboconf's Karaf distributions).
@@ -56,7 +61,7 @@ the test classes. So, people must be careful when they add or modify the probe's
 Adding classes to the probe (*addTest*) should be reserved for internal classes, that is to say those that
 are not exported by bundles. Other ones should be automatically resolved by the framework. Indeed, it is
 possible to specify OSGi directives through the *setHeader* method. By default, there is a dynamic import
-directive set to \*. It means the probe can automatically import all the classes other bundles make public. 
+directive set to \*. It means the probe can automatically import all the classes other bundles export (make public). 
 
 It was once *discussed* the possibility of [having one probe per test](https://github.com/roboconf/roboconf-platform/issues/413).  
 But we dropped the idea as nothing in PAX-Exam was planned for this. If for any reason, we could not, one day,

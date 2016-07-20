@@ -28,11 +28,14 @@ It is assumed the release is performed under Linux (Debian systems essentially),
 
 1\. **0.help.sh** indicates the process to follow.  
 2\. Copy **1.conf.bintray.sh-sample** to **1.conf.bintray.sh**.  
-Add your Bintray credentials in it. This file is already set in the *.gitignore* file.
+Add your Bintray credentials in it. This file is already listed in the *.gitignore* file.
 
-3\. Update the **1.conf.sh** file with the new release information.  
-4\. Release the web administration first (**2.web-administration.sh**).  
-5\. Release the platform then.
+3\. Copy **1.conf.dockerhub.sh-sample** to **1.conf.dockerhub.sh**.  
+Add your credentials for Docekr Hub in this file. It is already listed in the *.gitignore* file.
+
+4\. Update the **1.conf.sh** file with the new release information.  
+5\. Release the web administration first (**2.web-administration.sh**).  
+6\. Release the platform then.
 
 > Use **3.platform.sh** for major and minor releases (e.g. 0.6, 0.7, etc).  
 > Use **3.platform.maintenance.sh** for maintenance releases (e.g. 0.6.1, 0.6.2, etc).
@@ -41,8 +44,8 @@ Then go to [http://oss.sonatype.org](http://oss.sonatype.org). Login and check t
 You should find one about Roboconf. Verify the content and then click **close**. Sonatype will then verify
 some quality rules about your upload (sources JAR, javadoc JAR...). Once this is done, click **release**.
 
-6\. Wait for the platform to be available on [Maven Central](http://repo1.maven.org/maven2/net/roboconf).  
-This can take some minutes (generally about 15 minutes). Next scripts can be executed in any order.
+7\. Wait for the platform to be available on [Maven Central](http://repo1.maven.org/maven2/net/roboconf).  
+This can take some minutes (generally about 20 minutes). Next scripts can be executed in any order.
 The order we defined is somehow arbitrary.
 
 
