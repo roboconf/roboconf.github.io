@@ -60,7 +60,7 @@ Elles peuvent être listées et exécutées depuis la console web...
 
 <img src="/resources/img/nn-0.6-commands-in-the-web-console.png" alt="Listing de commandes Roboconf depuis la console web" class="gs" />
 
-... mais aussi être utilisée avec l'autonomique.
+... mais aussi être utilisées avec l'autonomique.
 
 <img src="/resources/img/autonomic-diagram.png" alt="Rappel sur le fonctionnement de l'autonomique" class="gs" />
 <br />

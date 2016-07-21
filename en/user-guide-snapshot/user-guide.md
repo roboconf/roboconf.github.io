@@ -106,8 +106,8 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<li><a href="security.html">Security</a></li>
 	<li><a href="inter-application-dependencies.html">Inter-Application Dependencies</a></li>
 	<li><a href="using-docker-with-roboconf.html">Using Docker with Roboconf</a></li>
-	<li><a href="using-docker-on-the-agent-side.html">Using Docker on the Agent's side</a></li>
 	<li><a href="testing-an-application-locally.html">Testing an Application Locally</a></li>
+	<li><a href="customizing-the-web-administration-look-n-feel.html">Customizing the Web Console's Look and Feel</a></li>
 	</ul>
 </div>
 
