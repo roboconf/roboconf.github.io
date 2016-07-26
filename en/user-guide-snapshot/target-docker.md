@@ -11,7 +11,7 @@ From the Roboconf perspective, Docker is seen as a kind of IaaS.
 Roboconf may create and manage docker containers, that run Roboconf agents (just like VMs) and can be used as deployment targets.
 
 To install it, open the DM's interactive mode and use one of the following options.  
-With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+With the [roboconf:target](karaf-commands-for-the-dm.html) command:
 
 ```properties
 # The version will be deduced automatically by the DM

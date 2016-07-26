@@ -30,4 +30,4 @@ rm -f pid
 
 Roboconf's REST API is documented in the [developer guide](../developer-guide/developer-guide.html).  
 Notice than there are alternatives to this solution.  
-They are listed on the [other tools](other-tools.html) page.
+They are listed on the [tooling](all-the-tools.html) page.

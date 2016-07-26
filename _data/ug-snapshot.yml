@@ -31,11 +31,20 @@ using-docker-on-the-agent-side:
 configuring-roboconf:
   en: user-guide-snapshot/configuring-roboconf
   
-karaf-commands-for-roboconf:
-  en: user-guide-snapshot/karaf-commands-for-roboconf
+karaf-commands-for-the-dm:
+  en: user-guide-snapshot/karaf-commands-for-the-dm
   
-other-tools:
-  en: user-guide-snapshot/other-tools
+karaf-commands-for-the-agent:
+  en: user-guide-snapshot/karaf-commands-for-the-agent
+  
+all-the-tools:
+  en: user-guide-snapshot/all-the-tools
+  
+all-the-advanced-topics:
+  en: user-guide-snapshot/all-the-advanced-topics
+  
+roboconf-domains:
+  en: user-guide-snapshot/roboconf-domains
   
 installing-roboconf-with-debian-packages:
   en: user-guide-snapshot/installing-roboconf-with-debian-packages

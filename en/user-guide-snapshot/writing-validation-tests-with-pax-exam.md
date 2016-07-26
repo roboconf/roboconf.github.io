@@ -19,7 +19,7 @@ There is an existing Maven module with a Java client for Roboconf's REST API.
 necessary.
 
 Notice than there are alternatives to this solution.  
-They are listed on the [other tools](other-tools.html) page.
+They are listed on the [tooling](all-the-tools.html) page.
 
 
 ## Create a Maven Project

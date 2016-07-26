@@ -11,7 +11,7 @@ Therefore, it covers existing (physical) machines, devices (such as cards) and v
 manually (e.g. with Virtual Box).
 
 To install it, open the DM's interactive mode and use one of the following options.  
-With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+With the [roboconf:target](karaf-commands-for-the-dm.html) command:
 
 ```properties
 # The version will be deduced automatically by the DM

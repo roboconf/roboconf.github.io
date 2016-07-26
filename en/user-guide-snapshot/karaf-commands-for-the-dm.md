@@ -1,22 +1,22 @@
 ---
-title: "Configuring the Loggers"
+title: "Karaf Commands for the DM"
 layout: page
 cat: "ug-snapshot"
-id: "karaf-commands-for-roboconf"
+id: "karaf-commands-for-the-dm"
 menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
-The Karaf distributions for Roboconf come with dedicated Karaf commands.  
+The Karaf distributions for Roboconf's DM come with dedicated Karaf commands.  
 They come in addition to [those already available](https://karaf.apache.org/manual/latest/)
 with Karaf. They are available from the Karaf command line.
-
-> For the moment, only the DM has commands.
 
 This page lists and explains these additional commands.
 
 * [roboconf:target](#roboconftarget)
 * [roboconf:set-log-level](#roboconfset-log-level)
 * [roboconf:gather-logs](#roboconfgather-logs)
+* [roboconf:reload-config](#roboconfreload-config)
+* [roboconf:diagnostic-messaging](#roboconfdiagnostic-messaging)
 
 
 ## roboconf:target
@@ -75,3 +75,28 @@ for every application, and a sub-directory for every scoped instance.
 Remember that Karaf overwrites the location of the temporary directory.  
 You should look under the **data/tmp** directory if you installed it by hand, or under **/var/lib/roboconf...** if you
 installed it with Debian packages.
+
+
+## roboconf:reload-config
+
+This command allows you to force the DM to reload its configuration.  
+
+Syntax: `roboconf:reload-config`  
+No parameter is expected.
+
+
+## roboconf:diagnostic-messaging
+
+This command allows the DM to verify the messaging works correctly.  
+It can be to verify messages can reach a given agent or that the DM can access and use the messaging server.
+
+Syntax: `roboconf:diagnostic-messaging <application-name> <scoped-instance-name>`  
+Auto-completion is available for the application and scoped instance names.  
+Notice the scoped instance name is optional. When not specified, all the scoped instances will be
+updated.
+
+> Reminder: a scoped instance is an instance associated with a Roboconf agent (their installer is **target**).  
+> Example: a VM is a scoped instance.
+
+By default, this command waits for ping backs for 5 seconds.  
+Then, it considers unresponding agents as not reachable in its diagnostic. 

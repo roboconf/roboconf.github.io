@@ -83,8 +83,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<li><a href="web-administration.html">Web Administration</a></li>
 	<li><a href="eclipse-plugins.html">The Eclipse plug-ins</a></li>
 	<li><a href="maven-plugin.html">The Maven plug-in</a></li>
-	<li><a href="karaf-commands-for-roboconf.html">Karaf Commands for Roboconf</a></li>
-	<li><a href="other-tools.html">Other Tools</a></li>
+	<li><a href="all-the-tools.html">All the Tools</a></li>
 	</ul>
 </div>
 
@@ -107,7 +106,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<li><a href="inter-application-dependencies.html">Inter-Application Dependencies</a></li>
 	<li><a href="using-docker-with-roboconf.html">Using Docker with Roboconf</a></li>
 	<li><a href="testing-an-application-locally.html">Testing an Application Locally</a></li>
-	<li><a href="customizing-the-web-administration-look-n-feel.html">Customizing the Web Console's Look and Feel</a></li>
+	<li><a href="all-the-advanced-topics.html">All the Advanced Topics</a></li>
 	</ul>
 </div>
 
