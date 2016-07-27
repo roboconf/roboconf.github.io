@@ -68,7 +68,10 @@ documenting-a-new-version:
   
 understanding-the-messaging-with-rabbit-mq--up-to-v0.5:
   en: developer-guide/understanding-the-messaging-with-rabbit-mq--up-to-v0.5
-      
+  
+understanding-the-messaging-with-rabbit-mq--from-0.6-to-0.7:
+  en: developer-guide/understanding-the-messaging-with-rabbit-mq--from-0.6-to-0.7
+  
 understanding-the-messaging-with-rabbit-mq:
   en: developer-guide/understanding-the-messaging-with-rabbit-mq
   

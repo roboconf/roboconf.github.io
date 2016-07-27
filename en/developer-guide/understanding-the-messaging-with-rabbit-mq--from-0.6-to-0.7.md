@@ -2,13 +2,12 @@
 title: "Understanding the Messaging with Rabbit MQ"
 layout: page
 cat: "dg-snapshot"
-id: "understanding-the-messaging-with-rabbit-mq"
+id: "understanding-the-messaging-with-rabbit-mq--from-0.6-to-0.7"
 menus: [ "developers", "developer-guide" ]
 ---
 
-> This page explains Rabbit MQ's support in Roboconf from version 0.8 (included).  
-> For older versions, please refer to the following pages: versions [0.1 to 0.5](understanding-the-messaging-with-rabbit-mq--up-to-v0.5.html), 
-versions [0.6 to 0.7](understanding-the-messaging-with-rabbit-mq--from-0.6-to-0.7.html).
+> This page explains Rabbit MQ's support in Roboconf for versions from 0.6 to 0.7 (included).  
+> For more recent versions, please refer to [this page](understanding-the-messaging-with-rabbit-mq.html).
 
 
 First, it is **highly recommended** to read [Rabbit MQ's tutorial](https://www.rabbitmq.com/getstarted.html).  
@@ -23,9 +22,6 @@ This schema illustrates what is discussed below.
 
 <img src="/resources/img/rabbit-mq-usage-0.6.png" alt="Messaging Interactions" />
 
-This organization applies to a given [Roboconf domain](../user-guide-snapshot/roboconf-domains.html).  
-Every domain follow this architecture, but all the queues, exchanges and clients are isolated from other domains.
-
 
 ## Clients and Queues
 
@@ -34,16 +30,14 @@ Each of them has also its own queue. Unlike in former versions, this is not cont
 The DM has a single queue and a single exchange, used for all the applications. Agents are by definition tied to
 a given application.
 
-The DM's queue is called `<domain>.roboconf-dm`.
-
-> Queue names are prefixed with the domain name.  
+The DM's queue is called `roboconf.queue.dm`.  
 
 The queue for an agent is named according to the scoped instance it is associated with.  
 Within a Roboconf application, an instance path is unique. When an agent starts, it is associated
 with a scoped instance. The name of an agent's queue is thus...
 
 ```
-<domain>.<application-name>.<scoped-instance-path>
+<application-name>.<scoped-instance-path>
 ```
 
 Notice that we replace the `/` character by `_` in queue names.
@@ -56,11 +50,9 @@ Exchanges are important because no client sends directly a message to a queue.
 Queues are hidden behind exchanges. Exchanges act as filters for messages. They will be routed 
 (or dropped) according to routing rules (routing keys).
 
-The first exchange is for the Deployment Manager. It is called `<domain>.roboconf.dm`.  
-The second exchange is used by agents within an application: `<domain>.<application-name>.agents`.  
-The third and last one is used by agents for inter-application exchanges: `<domain>.roboconf.inter-app`.
-
-> Exchange names are prefixed with the domain name.
+The first exchange is for the Deployment Manager. It is called `roboconf.dm`.  
+The second exchange is used by agents within an application: `<application-name>.agents`.  
+The third and last one is used by agents for inter-application exchanges: `roboconf.inter-app`.
 
 
 ## Routing Keys
@@ -71,8 +63,6 @@ As a reminder, variables are what component instances export or import (the *fam
 
 Routing keys are used for the 3 exchanges.  
 This corresponds to the **topic** keyword in Rabbit MQ.
-
-> Routing keys do not use domain names.
 
 
 ## Routing Keys Example
