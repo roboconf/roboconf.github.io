@@ -23,6 +23,7 @@ menus: [ "users", "links" ]
 * Index for all the [Eclipse's update sites](https://dl.bintray.com/roboconf/roboconf-eclipse/)
 * Debian repositories @ Bintray: [stable](https://dl.bintray.com/roboconf/roboconf-debian-packages/) / [unstable](https://dl.bintray.com/roboconf/roboconf-debian-packages-unstable/)
 * RPM repositories @ Bintray: [stable](https://dl.bintray.com/roboconf/roboconf-rpm) / [unstable](https://dl.bintray.com/roboconf/roboconf-rpm-unstable)
+* Archived distributions of the web administration @ [Bintray](https://dl.bintray.com/roboconf/roboconf-web-administration/all/)
 
 ## Social
 

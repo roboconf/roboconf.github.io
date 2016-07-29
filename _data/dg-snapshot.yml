@@ -81,9 +81,12 @@ debugging-roboconf:
 life-cycle:
   en: developer-guide/life-cycle
   
-development-guidelines:
-  en: developer-guide/development-guidelines
-
+javascript-development-guidelines:
+  en: developer-guide/javascript-development-guidelines
+  
+java-development-guidelines:
+  en: developer-guide/java-development-guidelines
+  
 occi-model:
   en: developer-guide/occi-model
  

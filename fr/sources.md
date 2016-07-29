@@ -14,24 +14,9 @@ Voir [https://github.com/roboconf](https://github.com/roboconf).
 
 La plupart des projets Roboconf sont des projets Java. Ils utilisent tous Maven comme outil de *construction*.
 L'administration web de Roboconf est un projet Javascript. Et le site web est quant à lui construit avec Jekyll.
-Ce sont les seules exceptions notoires.
+Ce sont les seules exceptions notoires. Elles sont évoquées plus en détail en bas de cette page.
 
-Il vous faut avoir installé [Maven](http://maven.apache.org/) (version 3) pour compiler Roboconf.    
-Vous aurez aussi besoin de [NodeJS](http://nodejs.org/), de [NPM](https://www.npmjs.org/) et de [Gulp](http://gulpjs.com/).
-
-```tcl 
-# Exemple sur Ubuntu
-sudo apt-get install npm
-sudo npm install gulp -g
-```
-
-Vous aurez probablement besoin des deux pour compiler Roboconf.  
-NPM est utilisé pour construire l'administration web. Mais cette administration est aussi embarquée
-dans la plate-fome.
-
-> Sur Debian/Ubuntu, l'exécutable de NodeJS s'appelle parfois **nodejs** au lieu de **node**.  
-> Il suffit alors d'aller dans **/usr/bin** et d'exécuter **ln -s nodejs node**.
-
+Il vous faut avoir installé [Maven](http://maven.apache.org/) (version 3) pour compiler Roboconf.  
 Pour les projets Java comme la plate-forme, le plug-in Maven ou les outils Eclipse, il vous suffit
 de cloner le dépôt de sources et d'exécuter...
 
@@ -75,13 +60,13 @@ Sinon, il y a probablement des blogs francophones qui auront fourni d'autres exp
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request)
 
 
-# Contribuer à l'Administration Web
+# Assembler / Contribuer à l'Administration Web
 
 Les informations relatives au développement de l'administration web (Angular JS) sont regroupées
 dans le [fichier « readme »](https://github.com/roboconf/roboconf-web-administration) du projet.
 
 
-# Contribuer au Site Web
+# Assembler / Contribuer au Site Web
 
 Le site est généré avec [Jekyll](http://jekyllrb.com). Il est hébergé avec [GitHub](http://github.com),
 et est réalisé avec [Twitter Bootstrap](http://getbootstrap.com) et [Glyph Icons](http://glyphicons.com).

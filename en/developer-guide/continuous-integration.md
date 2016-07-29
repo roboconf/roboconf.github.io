@@ -72,3 +72,21 @@ information about its build matrix.
 Build results can be checked on [Travis](https://travis-ci.org/)'s web site.  
 In the case of **roboconf-platform**, the outputs are so big we also configured the Maven build to hide basic log entries.
 Otherwise, the console output is truncated by Travis and this is a problem in case of build failure.
+
+
+## Other Projects
+
+* Most of the Java projects have continuous integration and are similar to what is done for the platform
+(in less complex).
+
+* The web administration is built on Travis CI and uses NPM and Gulp to run integration tests, verify the code
+formatting and so on. On success, the CI uploads a zipped distribution of the application on 
+[Bintray](https://dl.bintray.com/roboconf/roboconf-web-administration/all/).
+
+* The system installers are built on Travis CI.  
+Scripts allow to verify assertions on the installers. On success, they are upload on both
+Sonatype's snapshot repository and Bintray.
+
+* The Docker images are built automatically by Travis CI.  
+There are test scripts that are run and used to verify the images work correctly.
+They are NOT pushed automatically on Dockerhub or anywhere else.

@@ -50,4 +50,5 @@ menus: [ "developers", "developer-guide" ]
 ## Guidelines
 
 * [OSGi Conventions](osgi-conventions.html)
-* [Development Guidelines](development-guidelines.html)
+* [Development Guidelines for Java](java-development-guidelines.html)
+* [Development Guidelines for Javascript](javascript-development-guidelines.html)

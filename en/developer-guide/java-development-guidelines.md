@@ -1,8 +1,8 @@
 ---
-title: "Development Guidelines"
+title: "Development Guidelines for Java"
 layout: page
 cat: "dg-snapshot"
-id: "development-guidelines"
+id: "java-development-guidelines"
 menus: [ "developers", "developer-guide" ]
 ---
 
@@ -11,10 +11,10 @@ menus: [ "developers", "developer-guide" ]
 There is no constraint over which development environment people use.  
 However, the build tool is Maven (3.x). So, use it.
 
-And before every commit or pull request, run...
+Before every commit or pull request, run...
 
 ```tcl
-mvn clean install
+mvn clean install -P run-integration-tests
 ```
 
 

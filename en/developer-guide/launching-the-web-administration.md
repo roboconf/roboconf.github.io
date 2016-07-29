@@ -19,6 +19,13 @@ Get the sources of Roboconf's web administration.
 git clone git://github.com/roboconf/roboconf-web-administration.git
 ```
 
+> When the platform is built, it downloads a cached (zipped) distribution of
+> the web administration and then wraps it into an OSGi bundle.
+
+For development, it is possible (and recommended) to use a DM on one side, and
+a stand-alone version of the web administration.
+Read carefully [the console's readme file](https://github.com/roboconf/roboconf-web-administration/blob/master/readme.md).
+
 
 # Reminder
 
@@ -39,11 +46,11 @@ You must have [NPM](https://www.npmjs.org/) installed.
 Once NPM installed, go into the **roboconf-web-administration** folder, and type in
 
 ```properties
-# Download Javascript dependencies
-npm install
-
 # Install Gulp
 sudo npm install gulp -g
+
+# Download Javascript dependencies
+npm install
 
 # Build the application for DEV mode
 gulp watch-dev
