@@ -30,6 +30,7 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Docker
+id = <to set>
 handler = docker
 
 # Provide a meaningful description of the target
@@ -64,6 +65,7 @@ Let's begin with general parameters.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
+| id | The target's ID. | none, must be set | yes |
 | handler | Determines the target handler to use. | none, must be "docker" | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
@@ -314,7 +316,7 @@ Here is a sample **target.properties** for Docker in this use case.
 
 ```properties
 # Configuration file for Docker
-target.id = docker
+handler = docker
 
 {% raw %}docker.endpoint = http://{{ ip }}:4243{% endraw %}
 docker.image = gen

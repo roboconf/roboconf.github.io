@@ -41,6 +41,7 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Openstack
+id = <to set>
 handler = iaas-openstack
 
 # Provide a meaningful description of the target
@@ -85,6 +86,7 @@ Block storage is detailed further in the page.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
+| id | The target's ID. | none, must be set | yes |
 | handler | Determines the target handler to use | none, must be "iaas-openstack" | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |

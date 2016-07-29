@@ -1,12 +1,12 @@
 ---
-title: "Inheritance and variables"
+title: "Inheritance and Variables"
 layout: page
 cat: "ug-snapshot"
 id: "inheritance-and-variables"
 menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
-This page explains how component inheritance and facets impact the
+This page explains how component inheritance and facets impact the 
 definition of variables. As a reminder, variables are exchanged by and among
 Roboconf agents to update configuration files dynamically.
 
@@ -64,7 +64,7 @@ When a component is associated with a facet, it proceeds the same way than for t
 It inherits the variables with their original prefix, and replicates them with its own prefix.
 
 
-## Overriding
+## Overriding Variables in the Graph
 
 Components can override variables they inherit.  
 *And instances can override variables they receive from their component.*
@@ -117,3 +117,82 @@ My-Client-Database {
 
 Setting the prefix defines a scope.  
 When there is no prefix, then all the variables are updated.
+
+
+## Overriding Variables in Instances
+
+Let's keep our previous graph.  
+Let's consider the following instances definition.
+
+<pre><code class="language-roboconf">
+instance of MySQL {
+	port: 33107;
+}
+</code></pre>
+
+We have an instance of **MySQL** with a **port** property.  
+Since there is only one variable exported by this component with this name, it is thus equivalent to
+writing...
+
+<pre><code class="language-roboconf">
+instance of MySQL {
+	MySQL.port: 33107;
+}
+</code></pre>
+
+Let's now see what we can do with an instance of a sub-component.  
+Here, we have two variables whose name is **port** (onr from the component itself (My-Client-Database)
+and one from its super component (MySQL). So, we should write...
+
+<pre><code class="language-roboconf">
+instance of My-Client-Database {
+	MySQL.port: 33107;
+	My-Client-Database.port: 33107;
+}
+</code></pre>
+
+Remember, this component exports both variables.  
+However, Roboconf allows the following (simplified) notation.
+
+<pre><code class="language-roboconf">
+instance of My-Client-Database {
+	port: 33107;
+}
+</code></pre>
+
+In this case, 3 variables will be defined or overridden:
+
+* MySQL.port
+* My-Client-Database.port
+* port (without any prefix)
+
+And a warning will appear in the validation.  
+What all of this implies is that an instance may export one value for a given variable
+and another one for another sibling. Example:
+
+<pre><code class="language-roboconf">
+instance of My-Client-Database {
+	MySQL.port: 33108;
+	My-Client-Database.port: 33107;
+}
+</code></pre>
+
+This may be used for some customization or behavior configuration.  
+We here took component extension as our main example, but it works the same way with inherited facets.
+
+As a reminder, variables that are defined by an instance but not in their component are not prefixed.  
+As an example, the following definition...
+
+<pre><code class="language-roboconf">
+instance of My-Client-Database {
+	port: 33107;
+	setup: true;
+}
+</code></pre>
+
+...  would export...
+
+* MySQL.port
+* My-Client-Database.port
+* port (without any prefix, due to the ambiguity)
+* setup (without any prefix, due to the fact there is no match in the component variables)

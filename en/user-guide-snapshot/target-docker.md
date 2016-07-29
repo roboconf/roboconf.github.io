@@ -314,7 +314,7 @@ Here is a sample **target.properties** for Docker in this use case.
 
 ```properties
 # Configuration file for Docker
-target.id = docker
+handler = docker
 
 {% raw %}docker.endpoint = http://{{ ip }}:4243{% endraw %}
 docker.image = gen

@@ -121,6 +121,12 @@ eclipse-modeling-plugin:
 maven-plugin:
   en: user-guide-snapshot/maven-plugin
   
+maven-plugin-for-applications:
+  en: user-guide-snapshot/maven-plugin-for-applications
+  
+maven-plugin-for-targets:
+  en: user-guide-snapshot/maven-plugin-for-targets
+  
 reusability-in-models:
   en: user-guide-snapshot/reusability-in-models
     

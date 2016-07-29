@@ -43,6 +43,7 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for in-memory
+id = <to set>
 handler = in-memory
 name = 
 description = 
@@ -63,6 +64,7 @@ Here is a complete description of the parameters for Amazon Web Services.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
+| id | The target's ID. | none, must be set | yes |
 | handler | Determines the target handler to use | none, must be "in-memory" | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |

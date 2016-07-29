@@ -32,6 +32,7 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for EC2
+id = <to set>
 handler = iaas-ec2
 
 # Provide a meaningful description of the target
@@ -95,6 +96,7 @@ Block storage parameters are detailed further.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
+| id | The target's ID. | none, must be set | yes |
 | handler | Determines the target handler to use | none, must be "iaas-ec2" | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |

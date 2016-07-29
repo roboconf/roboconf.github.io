@@ -32,6 +32,7 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for VMWare
+id = <to set>
 handler = iaas-vmware
 name = 
 description = 
@@ -58,6 +59,7 @@ Here is a complete description of the parameters for OpenStack.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
+| id | The target's ID. | none, must be set | yes |
 | handler | Determines the target handler to use | none, must be "iaas-vmware" | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |

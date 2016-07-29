@@ -55,7 +55,7 @@ All the properties can be completed here, except *ami*. This last one will be se
 
 ```properties
 # Tell the agent it will run on EC2
-target.id = ec2
+handler = ec2
 
 # EC2 access
 ec2.endpoint = ec2.eu-west-1.amazonaws.com

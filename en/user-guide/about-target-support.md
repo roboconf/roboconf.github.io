@@ -33,6 +33,7 @@ A target includes the identifier of a "*target handler*" library and some proper
 
 A target is defined by:
 
+* An **id** that must be set by hand (or through tools, such as [Roboconf's Maven plug-in](maven-plugin.html)).
 * A **handler**, which points to a **target handler** (an OSGi bundle to deploy in Roboconf).
 * A **name** (optional), that will be more explicit for users.
 * A **description** (optional), that will help users to understand it.
@@ -59,8 +60,11 @@ This includes:
 * Associating a target with a specific instance of a given application.
 * Defining a target as the default one for an application.
 
+Since version 0.8, it is also possible to upload directly ZIP archives that contain
+one or several target definitions.
 
-## Predefined Targets
+
+## Predefined Targets for Applications
 
 Although targets can now be defined in the web administration, it remains possible to embed
 predefined targets in deployment archives. Notice that these targets and their associations can
