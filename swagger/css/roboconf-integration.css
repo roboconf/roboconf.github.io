@@ -1,0 +1,74 @@
+#rbcf {
+	float: right;
+	padding-right: 40px;
+	color: white;
+}
+
+#rbcf > a {
+	margin-left: 12px;
+	margin-top: 6px;
+}
+
+#api_info {
+	margin-bottom: 18px;
+}
+
+.markdown {
+	margin-top: 8px !important;
+}
+
+.markdown p {
+	margin: 8px 0 0 0; !important;
+	padding: 0 !important;
+}
+
+.markdown ul {
+	margin: 0 !important; 
+}
+
+.markdown li > ul {
+	margin: 10px 0 6px 24px !important;
+}
+
+.markdown li {
+	font-size: 1em !important;
+}
+
+.signature-nav {
+	margin-top: 14px !important;
+}
+
+.footer h4 {
+	margin-bottom: 8px;
+}
+
+#back-link {
+	float: right;
+	padding: 16px 0 12px 24px;
+}
+
+#back-link a,
+#back-link a:link,
+#back-link a:visited {
+	text-decoration: none;
+	color: #b23e4b;
+}
+
+#back-link a:hover {
+	text-decoration: underline;
+	color: #b23e4b;
+}
+
+/* Copied from the web's site CSS */
+
+.navbar-rbcf {
+	margin: 0 0 28px 0;
+	padding-right: 24px;
+}
+
+#header-img {
+	height: 90px;
+	margin: 8px 0 0 10px;
+	padding: 0 34px 14px 18px;
+	border-bottom: solid black 3px;
+}

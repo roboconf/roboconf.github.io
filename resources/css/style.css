@@ -29,6 +29,7 @@ html, body {
 }
 
 /* Index */
+
 #first-index {
 	text-align: center;
 	padding-top: 8em;
@@ -458,6 +459,11 @@ table#download-table td:nth-child(2) {
 }
 
 table#download-table td {
+	text-align: center;
+	vertical-align: top;
+}
+
+table#apis-table td:nth-child(1) {
 	text-align: center;
 	vertical-align: top;
 }

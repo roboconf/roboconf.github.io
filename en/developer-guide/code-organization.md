@@ -53,6 +53,11 @@ They allow to automate most of the release process.
 * [Roboconf-occi-extensions](https://github.com/roboconf/roboconf-occi-extensions) contains OCCI extensions for Roboconf.
 They were built upon the [OCCIware](https://github.com/occiware) project and allowed to build a part of the Eclipse tooling.
 
+* [Swagger UI](https://github.com/roboconf/swagger-ui) is a fork of the [Swagger UI](https://github.com/swagger-api/swagger-ui) project.  
+It was customized and tailored to be embedded on our web site and provide documentation about out REST API.
+This is only about viewing / browsing the documentation. The documentation basis is a JSon file (swagger.json) hosted on
+our Maven repositories.
+
 
 ## Impact on Releases
 

@@ -51,14 +51,11 @@ osgi-conventions:
 release-management:
   en: developer-guide/release-management
   
-rest-api-application:
-  en: developer-guide/rest-api-application
+rest-api:
+  en: developer-guide/rest-api
   
-rest-api-management:
-  en: developer-guide/rest-api-management
-  
-rest-api-debug:
-  en: developer-guide/rest-api-debug
+programmers-api:
+  en: developer-guide/programmers-api
   
 web-site-organization:
   en: developer-guide/web-site-organization

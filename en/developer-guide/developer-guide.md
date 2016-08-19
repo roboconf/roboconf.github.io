@@ -28,11 +28,10 @@ menus: [ "developers", "developer-guide" ]
 * [Continuous Integration](continuous-integration.html)
 * [Release Management](release-management.html)
 
-## Rest API
+## APIs
 
-* [Management](rest-api-management.html)
-* [Application](rest-api-application.html)
-* [Debug](rest-api-debug.html)
+* [DM's REST API](rest-api.html)
+* [Programmer APIs](programmers-api.html)
 
 ## Advanced Topics
 
