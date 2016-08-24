@@ -20,7 +20,7 @@ savent ce qu'ils exposent et ce dont ils dépendent vis-à-vis des autres partie
 un niveau applicatif, les concepts que l'on retrouve dans des modèles à composants comme OSGi, le tout de manière non-invasive.
 Cela permet notamment d'utiliser Roboconf sur des systèmes patrimoniaux.
 
-<img src="/resources/img/roboconf-workflow.png" alt="Workflow Roboconf" class="gs" />
+<img src="/resources/img/roboconf-workflow-fr.png" alt="Workflow Roboconf" class="gs" />
 
 Ainsi, un serveur d'application a connaissance
 des bases de données. Cette information est relayée via la messagerie. Roboconf se charge de prendre les décisions adéquates
