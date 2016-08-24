@@ -8,6 +8,8 @@ This repository contains the sources for Roboconf's web site.
 On every commit, a [routine](http://jekyllrb.com/) is executed. It generates static HTML files and host 
 them on [GitHub pages](https://pages.github.com/).
 
+<img src="http://roboconf.net/resources/img/readme_website.png" alt="Roboconf's web site overview" />
+
 To build the web site locally, you must install [Jekyll](http://jekyllrb.com/).    
 Then, use...
 

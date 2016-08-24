@@ -6,10 +6,11 @@ id: "what-is-roboconf"
 menus: [ "project", "what-is-roboconf" ]
 ---
 
-Roboconf est une plate-forme pour gérer des déploiements applicatifs élastiques dans le nuage.  
-Il prend en charge les déploiements, la gestion des sondes, des procédures automatisées ainsi que des reconfigurations. On peut voir Roboconf comme un « PaaS framework », c'est à dire une solution pour construire des PaaS (*Platform as a Service*). La plupart des PaaS, comme Cloud Foundry ou Openshift, ciblent des développeurs avec des patrons applicatifs et architecturaux prédéfinis. Roboconf vous autorise à créer vos propres patrons et ainsi supporter des cas exigeant plus de flexibilité.
+Roboconf est à la fois une plate-forme et un *framework* pour gérer des applications élastiques dans le nuage.  
+Par élastiques, on entend les applications dont la topologie va évoluer au cours du temps (par exemple pour un passage à l'échelle).
+Roboconf prend en charge les déploiements, la gestion des sondes, des procédures automatisées ainsi que des reconfigurations. Au-delà des applications, on peut voir Roboconf comme un « PaaS framework », c'est à dire une solution pour construire des PaaS (*Platform as a Service*). La plupart des PaaS, comme Cloud Foundry ou Openshift, ciblent des développeurs avec des patrons applicatifs et architecturaux prédéfinis. Roboconf vous autorise à créer vos propres patrons et ainsi supporter des cas exigeant plus de flexibilité.
 
-Avec Roboconf, vous pouvez créer des PaaS supportant n'importe quel langage de programmation, *framework*, type d'application ou système d'exploitation. Vous définissez ce qu'il y a dans votre plate-forme, ainsi que les interactions en son sein, les procédures d'administration, etc.
+Avec Roboconf, il n'y a pas de contrainte sur les langages de programmation, les *frameworks*, types d'application ou avec le système d'exploitation. Vous définissez ce qu'il y a dans votre plate-forme, ainsi que les interactions en son sein, les procédures d'administration, etc.
 
 Roboconf gère le cycle de vie des applications. Cela passe par la reconfiguration à chaud (pour s'adapter aux phases
 d'élasticité) ainsi que la consistence globale (s'assurer que l'état de l'aplication répartie reste cohérent, même
@@ -17,12 +18,16 @@ quand un de ses constituants vient à s'arrêter, que ce soit accidentel ou non)
 d'un serveur de messagerie (actuellement, [Rabbit MQ](https://www.rabbitmq.com)). Les constituants de l'application répartie
 savent ce qu'ils exposent et ce dont ils dépendent vis-à-vis des autres parties. Globalement, l'idée est de retranscrire à
 un niveau applicatif, les concepts que l'on retrouve dans des modèles à composants comme OSGi, le tout de manière non-invasive.
-Cela permet notamment d'utiliser Roboconf sur des systèmes pré-existants.
+Cela permet notamment d'utiliser Roboconf sur des systèmes patrimoniaux.
+
+<img src="/img/roboconf-workflow.png" alt="Workflow Roboconf" class="gs" />
 
 Ainsi, un serveur d'application a connaissance
 des bases de données. Cette information est relayée via la messagerie. Roboconf se charge de prendre les décisions adéquates
 en fonction des messages qui transitent. Ces actions, effectuées par Roboconf, sont en réalité exécutées au travers d'extensions
-(ou de plug-ins). Il y a par exemple un plug-in Bash, ainsi qu'un plug-in [Puppet](http://puppetlabs.com). 
+(ou de plug-ins). Il y a par exemple un plug-in Bash, ainsi qu'un plug-in [Puppet](http://puppetlabs.com).
+
+<img src="/img/roboconf-architecture-example.jpg" alt="Architecture de Roboconf" class="gs" />
 
 Roboconf est elle-même une application répartie, basée sur AMQP et REST / JSon. Elle supporte plusieurs IaaS (dont
 OpenStack, Amazon Web Services, Microsoft Azure, VMWare, ainsi qu'un déploiement "local" pour des hôtes pré-existants, voire
