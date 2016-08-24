@@ -10,6 +10,9 @@ them on [GitHub pages](https://pages.github.com/).
 
 <img src="http://roboconf.net/resources/img/readme_website.png" alt="Roboconf's web site overview" />
 
+
+## Building the Web Site
+
 To build the web site locally, you must install [Jekyll](http://jekyllrb.com/).    
 Then, use...
 

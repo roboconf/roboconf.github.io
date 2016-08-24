@@ -18,12 +18,12 @@ Roboconf handles application life cycle: hot reconfiguration (e.g. for elasticit
 The global idea is to apply to applications the concepts used in component technologies like OSGi. Roboconf achieves this in a non-intrusive
 way, so that it can work with legacy Software.
 
-<img src="/img/roboconf-workflow.png" alt="Roboconf's workflow" class="gs" />
+<img src="/resources/img/roboconf-workflow.png" alt="Roboconf's workflow" class="gs" />
 
 Application parts use the message queue to communicate and take the appropriate actions depending on what is deployed or started.
 These *appropriate* actions are executed by plug-ins (such as bash or [Puppet](http://puppetlabs.com)). 
 
-<img src="/img/roboconf-architecture-example.jpg" alt="Roboconf's architecture" class="gs" />
+<img src="/resources/img/roboconf-architecture-example.jpg" alt="Roboconf's architecture" class="gs" />
 
 Roboconf is distributed technology, based on AMQP 
 and REST / JSon. It is IaaS-agnostic, and supports many well-known IaaS (including OpenStack, Amazon Web Services, Microsoft Azure, VMWare, 
