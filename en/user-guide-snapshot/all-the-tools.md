@@ -11,14 +11,14 @@ This page lists all the tools related to Roboconf.
 
 ## Administration
 
-The [Web Administration](web-administration.html) console.
+* The [Web Administration](web-administration.html) console.
 
 
 ## Development Tools
 
 * The [Eclipse plug-ins](eclipse-plugins.html).
 * Other [editors](editors.html) for Roboconf files.
-* The [The Maven plug-in](maven-plugin.html).
+* The [Maven plug-in](maven-plugin.html).
 
 
 ## DM &amp; Agents
