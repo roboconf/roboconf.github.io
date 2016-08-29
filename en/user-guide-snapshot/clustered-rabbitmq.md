@@ -48,6 +48,7 @@ rabbit1$ rabbitmqctl set_policy ha-all "" '{"ha-mode":"all","ha-sync-mode":"auto
 ## Node rabbit2
 
 First:
+
 * Declare node rabbit1 in /etc/hosts
 * Edit /var/lib/rabbitmq/.erlang.cookie, and insert the same content as on node rabbit1.
 (note: if creating the file, make sure it belongs to rabbitmq:rabbitmq with access rights restricted to 400).
@@ -109,6 +110,7 @@ Upload an application with dependencies (eg. apache/tomcat sample :
 test messaging with apache started, then alternately start/stop tomcat and check apache status change).
 
 Then:
+
 * Stop either node rabbit1 or rabbit2:
 ```
 rabbitmqctl stop
