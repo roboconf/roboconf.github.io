@@ -106,6 +106,7 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<li><a href="inter-application-dependencies.html">Inter-Application Dependencies</a></li>
 	<li><a href="using-docker-with-roboconf.html">Using Docker with Roboconf</a></li>
 	<li><a href="testing-an-application-locally.html">Testing an Application Locally</a></li>
+	<li><a href="clustered-rabbitmq.html">RabbitMQ message queue clustering + HA</a></li>
 	<li><a href="all-the-advanced-topics.html">All the Advanced Topics</a></li>
 	</ul>
 </div>
