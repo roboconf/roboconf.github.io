@@ -12,6 +12,7 @@ This page lists all the advanced topics related to Roboconf.
 ## General
 
 * [Security](security.html)
+* [RabbitMQ message queue clustering + HA](clustered-rabbitmq.html)
 
 
 ## Web Administration
