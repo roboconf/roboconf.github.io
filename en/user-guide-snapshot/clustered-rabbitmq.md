@@ -13,6 +13,11 @@ Failover can be provided, by adding a round-robin load balancer in front of the 
 
 This documentation explains how to cluster RabbitMQ on two nodes, then add a haproxy load-balancer in front of them.
 
+For detailed information about rabbitmq clustering, see rabbitmq documentation:
+
+* [Distributing rabbitmq](https://www.rabbitmq.com/distributed.html)
+* [Clustering rabbitmq](https://www.rabbitmq.com/clustering.html)
+
 ## Node rabbit1
 
 Install rabbitmq:
