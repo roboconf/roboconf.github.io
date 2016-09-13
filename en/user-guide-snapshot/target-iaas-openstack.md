@@ -76,6 +76,9 @@ openstack.key-pair = default
 # openstack.delete-volume-on-termination.vol1 = true 
 #
 # openstack.volume-size.vol2 = 100
+
+# Object storage
+#openstack.obj-storage = domain1, domain2
 ```
 
 ## General Parameters
@@ -99,6 +102,7 @@ Block storage is detailed further in the page.
 | openstack.floating-ip-pool | A pool of available public IPs, so that one of them be associated to the VM (if no pool is provided, the VM only has a private IP). | none | no |
 | openstack.network-id | A neutron (aka quantum) network ID, to use for networking. | none | no |
 | openstack.region-name | The name of the region to use. If not specified, then the first available region will be used. | none | no |
+| openstack.obj-storage | A list of container names, separated by a comma, for object storage. Only those that do not already exist will be created. | none | no |
 
 
 ## Block Storage

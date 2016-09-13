@@ -10,6 +10,9 @@ writing-validation-tests-with-junit:
 user-guide-older-versions:
   en: user-guide-snapshot/user-guide-older-versions
   
+clustered-rabbitmq:
+  en: user-guide-snapshot/clustered-rabbitmq
+  
 installation-tips:
   en: user-guide-snapshot/installation-tips
   
