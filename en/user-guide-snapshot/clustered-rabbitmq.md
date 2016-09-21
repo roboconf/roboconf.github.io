@@ -8,27 +8,32 @@ menus: [ "users", "user-guide", "Snapshot" ]
 
 ## Overview
 
-RabbitMQ can be configured for multi-node clustering (replicating messages from a master node to slave nodes).
-Failover can be provided, by adding a round-robin load balancer in front of the rabbit cluster nodes.
+RabbitMQ can be configured for multi-node clustering (replicating messages from a master node to slave nodes).  
+Fail-over can be provided, by adding a round-robin load balancer in front of the rabbit cluster nodes.
 
-This documentation explains how to cluster RabbitMQ on two nodes, then add a haproxy load-balancer in front of them.
+This documentation explains how to cluster RabbitMQ on two nodes, then add a HA-proxy load-balancer in front of them.  
+For detailed information about RabbitMQ clustering, see RabbitMQ's documentation:
 
-For detailed information about rabbitmq clustering, see rabbitmq documentation:
+* [Distributing RabbitMQ](https://www.rabbitmq.com/distributed.html)
+* [Clustering RabbitMQ](https://www.rabbitmq.com/clustering.html)
 
-* [Distributing rabbitmq](https://www.rabbitmq.com/distributed.html)
-* [Clustering rabbitmq](https://www.rabbitmq.com/clustering.html)
+Notice there also exist highly available queues, which are an alternative to clustering.  
+This is has not been documented here, but you can refer to the official documentation of RabbitMQ. 
+
+* [High Availability with RabbitMQ](https://www.rabbitmq.com/ha.html)
+
 
 ## Node rabbit1
 
-Install rabbitmq:
+Install RabbitMQ:
 
-```
+```shell
 rabbit1$ apt-get install rabbitmq
 ```
 
-Start rabbitmq in cluster mode:
+Start RabbitMQ in cluster mode:
 
-```
+```shell
 rabbit1$ rabbitmq-server -detached
 
 rabbit1$ rabbitmqctl cluster_status
@@ -37,36 +42,37 @@ Cluster status of node rabbit@rabbit1 ...
 ...done.
 ```
 
-Create roboconf user (on node #1 only, will be available for the whole cluster):
+Create a **roboconf** user (on node #1 only, will be available for the whole cluster):
 
-```
+```shell
 rabbit1$ rabbitmqctl add_user roboconf roboconf
 rabbit1$ rabbitmqctl set_permissions roboconf ".*" ".*" ".*"
 ```
 
 Make sure HA sync mode on cluster is automatic (optional):
 
-```
+```shell
 rabbit1$ rabbitmqctl set_policy ha-all "" '{"ha-mode":"all","ha-sync-mode":"automatic"}'
 ```
+
 
 ## Node rabbit2
 
 First:
 
-* Declare node rabbit1 in /etc/hosts
-* Edit /var/lib/rabbitmq/.erlang.cookie, and insert the same content as on node rabbit1.
-(note: if creating the file, make sure it belongs to rabbitmq:rabbitmq with access rights restricted to 400).
+* Declare the **rabbit1** node in `/etc/hosts`.
+* Edit **/var/lib/rabbitmq/.erlang.cookie** and insert the same content as on node **rabbit1**.  
+(note: if creating the file, make sure it belongs to `rabbitmq:rabbitmq` with access rights restricted to 400).
 
-Install rabbitmq:
+Install RabbitMQ:
 
-```
+```shell
 rabbit2$ apt-get install rabbitmq
 ```
 
-Start rabbitmq and join cluster:
+Start RabbitMQ and join the cluster:
 
-```
+```shell
 rabbit2$ rabbitmq-server -detached
 
 rabbit2$ rabbitmqctl stop_app
@@ -79,17 +85,16 @@ rabbit2$ rabbitmqctl start_app
 Starting node rabbit@rabbit2 ...done.
 ```
 
+
 ## Node haproxy
 
-Install haproxy:
+Install HA-proxy:
 
-```
+```shell
 haproxy$ apt-get install haproxy
 ```
 
-Edit /etc/haproxy/haproxy.cfg, then add the following:
-(note that client and server timeouts must be set to a long period,
-otherwise idle connections may get closed by HAProxy, causing errors).
+Edit **/etc/haproxy/haproxy.cfg** and add the following content:
 
 ```
 listen rabbitcluster 0.0.0.0:5672
@@ -101,30 +106,39 @@ listen rabbitcluster 0.0.0.0:5672
          server rabbit-02 <IP-of-node-rabbit2>:5672 check fall 3 rise 2
 ```
 
+<!-- FIXME: weird design IMO -->
+
+> Note that client and server timeouts must be set to a long period.  
+> Otherwise idle connections may get closed by HAProxy, causing errors.
+
 Start haproxy:
 
-```
+```shell
 haproxy$ sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg -D -p /var/run/haproxy.pid
 ```
 
+
 ## Testing
 
-Start roboconf DM with node haproxy as messaging server.
-
-Upload an application with dependencies (eg. apache/tomcat sample :
-test messaging with apache started, then alternately start/stop tomcat and check apache status change).
+Start Roboconf's DM with the messaging server's location set to the HA-proxy's one.  
+Upload an application with dependencies (e.g. Apache / Tomcat sample :
+test messaging with Apache started, then alternately start/stop Tomcat and check Apache status changes).
 
 Then:
 
 * Stop either node rabbit1 or rabbit2:
+
 ```
 rabbitmqctl stop
 ```
-(check status on node: rabbitmqctl cluster_status)
-* Test again : alternately start/stop tomcat and check apache status change.
-* Restart node proviously stopped
+
+* Check the node status: `rabbitmqctl cluster_status`.
+* Test again : alternately start/stop Tomcat and check Apache status change.
+* Restart the node previously stopped.
+
 ```
 rabbitmq-server -detached
 ```
-(check status on node: rabbitmqctl cluster_status)
-* Test again : alternately start/stop tomcat and check apache status change.
+
+* Check the node status: `rabbitmqctl cluster_status`.
+* Test again : alternately start/stop Tomcat and check Apache status change.

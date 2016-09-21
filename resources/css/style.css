@@ -363,7 +363,8 @@ span.roadmap-in-progress {
 }
 
 .language-java span.cm,
-.language-html span.cm {
+.language-html span.cm,
+.highlighter-rouge span.gp {
 	color: #4978a7;
 }
 

@@ -73,18 +73,18 @@ Let's begin with general parameters.
 | docker.password | The password of the user to connect. | none | no |
 | docker.email | The email of the user to connect. | none | no |
 | docker.version | The Docker version (for API compatibility). This version supports versions until Docker v1.17. | none | no |
-| docker.run.exec | The command line to run in the created Docker container. *See dedicated [The docker.run.exec property](#the-docker.run.exec-property) section below* | *See the section below* | no |
+| docker.run.exec | The command line to run in the created Docker container. *Check the dedicated [docker.run.exec property](#the-docker.run.exec-property) section below* | *See the section below* | no |
 
 Let's now take a look at parameters related to image generation.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
 | docker.generate.image | A boolean value that indicate whether a Docker image for Roboconf should be generated. Disabled by default. | false | no |
-| docker.agent.package.url | If you want this extension to generate a Docker image for you, this parameter is an **URL** that points to the ZIP or TAR.GZ file of a Roboconf agent distribution. If not specified, Roboconf will try to guess it. The guess process is described in [this section](#the-docker.agent.package.url-property) below. | *See below* | no |
+| docker.agent.package.url | If you want this extension to generate a Docker image for you, this parameter is an **URL** that points to the ZIP or TAR.GZ file of a Roboconf agent distribution. `file:/`, `http://` and `mvn:` schemes are supported. *Check the dedicated [Maven URLs](#maven-urls) section below* about Maven URLs. If this property is not specified, Roboconf will try to guess it. The guess process is described in [this section](#the-docker.agent.package.url-property) below. | *See below* | no |
 | docker.agent.jre-packages | If you want this extension to generate a Docker image for you, this parameter indicates the JRE to install (as a system package), as well as other optional packages, separated by spaces. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | openjdk-7-jre-headless | no |
 | docker.additional.packages | Additional packages to install on the generated image, using **apt-get install**. The package name(s) must be understandable by the apt package manager (Debian-based Linux distributions). | none | no |
 | docker.base.image | If Roboconf generates an image for you, this property is used to determine the base image to use. The generated Dockerfile will begin with **FROM** *docker.base.image*... If the base image does not exist, it can be downloaded if *docker.download.base-image** is set to true. Otherwise, an error will be thrown. Examples: ubuntu, ubuntu:latest | ubuntu:14.04 | no |
-| docker.additional.deploy | A list of URLs that point to additional elements you would like to deploy in Karaf / the Roboconf agent. Example: bundles. Local and remote URLs are supported (http, file...). URLs should be separated by spaces. If you have several ones, we suggest you put one URL per line, each line ending with ` \`, except the last one. This will keep your **target.properties** file readable. | none | no |
+| docker.additional.deploy | A list of URLs that point to additional elements you would like to deploy in Karaf / the Roboconf agent. Example: bundles. `file:/`, `http://` and `mvn:` schemes are supported. *Check the dedicated [Maven URLs](#maven-urls) section below* about Maven URLs. URLs should be separated by spaces. If you have several ones, we suggest you put one URL per line, each line ending with ` \\`, except the last one. This will keep your **target.properties** file readable. | none | no |
 | docker.download.base-image | If set to true, and that the base image does not exist, then it will be downloaded from a Docker registry. | false | no |
 | docker.image.registry | If the base image must be downloaded, then it will be retrieved from this Docker registry. | registry.hub.docker.com | no |
  
@@ -278,6 +278,30 @@ See these discussions on Github for additional information.
 
 * [How to use init script](https://github.com/roboconf/roboconf.github.io/issues/45)
 * [Add a property to pass options to run Docker containers](https://github.com/roboconf/roboconf-platform/issues/335)
+
+
+## Maven URLs
+
+Maven URLs are supported by Roboconf through [PAX-URL](https://ops4j1.jira.com/wiki/display/paxurl/).  
+This library allows to specify Maven artifacts through an URL. Wherever this artifacts is located
+(local Maven repository, remote one), Roboconf will find it and download it if necessary.
+
+The short syntax for a Maven URL is...
+
+```
+'mvn:' group-id '/' artifact-id '/' version 
+'mvn:' group-id '/' artifact-id '/' version '/' type
+'mvn:' group-id '/' artifact-id '/' version '/' type '/' classifier
+```
+
+Here are examples of Maven URLs:
+
+* `mvn:org.ow2.petals/petals-roboconf-plugin/1.0.1-SNAPSHOT` points to a JAR artifact.
+* `mvn:net.roboconf/roboconf-karaf-dist-agent/0.7/tar.gz` points to the TAR.GZ distribution of a Roboconf agent.
+* `mvn:net.roboconf/roboconf-karaf-dist-agent/0.7/zip` points to the ZIP distribution of a Roboconf agent.
+
+You can find the full syntax on [PAX URL's web site](https://ops4j1.jira.com/wiki/display/paxurl/Mvn+Protocol).  
+Roboconf relies on the Maven settings defined in Karaf's **etc** directory (in the **org.ops4j.pax.url.mvn.cfg** file).
 
 
 ## Running Docker in a VM
