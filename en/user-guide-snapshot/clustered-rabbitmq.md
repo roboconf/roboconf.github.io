@@ -1,5 +1,5 @@
 ---
-title: "Clustered RabbitMQ"
+title: "RabbitMQ Clustering and High Availability"
 layout: page
 cat: "ug-snapshot"
 id: "clustered-rabbitmq"
@@ -11,6 +11,12 @@ menus: [ "users", "user-guide", "Snapshot" ]
 RabbitMQ can be configured for multi-node clustering (replicating messages from a master node to slave nodes).  
 Fail-over can be provided, by adding a round-robin load balancer in front of the rabbit cluster nodes.
 
+> Although clustering and HA are possible, they are very complex to setup.  
+> Our experiments allowed us to verify that a single node, coupled with a solution like [Pacemaker](http://clusterlabs.org), is generally enough.
+
+
+## Goal and Related Links
+
 This documentation explains how to cluster RabbitMQ on two nodes, then add a HA-proxy load-balancer in front of them.  
 For detailed information about RabbitMQ clustering, see RabbitMQ's documentation:
 
@@ -21,6 +27,9 @@ Notice there also exist highly available queues, which are an alternative to clu
 This is has not been documented here, but you can refer to the official documentation of RabbitMQ. 
 
 * [High Availability with RabbitMQ](https://www.rabbitmq.com/ha.html)
+* [High Availability with Pacemaker](https://www.rabbitmq.com/pacemaker.html)
+
+You may also find [this blog entry](https://insidethecpu.com/2014/11/17/load-balancing-a-rabbitmq-cluster/) useful.
 
 
 ## Node rabbit1

@@ -12,7 +12,7 @@ This page lists all the advanced topics related to Roboconf.
 ## General
 
 * [Security](security.html)
-* [RabbitMQ Clustering + High Availability](clustered-rabbitmq.html)
+* [RabbitMQ Clustering and High Availability](clustered-rabbitmq.html)
 
 
 ## Web Administration
