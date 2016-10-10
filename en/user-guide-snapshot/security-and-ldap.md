@@ -1,5 +1,5 @@
 ---
-title: "Security: LDAP authentication"
+title: "Security: LDAP Authentication"
 layout: page
 cat: "ug-snapshot"
 id: "security-and-ldap"
@@ -8,11 +8,96 @@ menus: [ "users", "user-guide", "Snapshot" ]
 
 This document explains how Roboconf DM can be configured for LDAP authentication, using OpenLDAP.
 
-**OpenLDAP installation and configuration**
+
+## In Roboconf's DM
+
+Prepare a (blueprint) file with the connection properties.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+		xmlns:jaas="http://karaf.apache.org/xmlns/jaas/v1.1.0"
+		xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0">
+
+	<jaas:config name="karaf" rank="1">
+		<jaas:module className="org.apache.karaf.jaas.modules.ldap.LDAPLoginModule" flags="required">
+			initialContextFactory=com.sun.jndi.ldap.LdapCtxFactory
+			connection.username=cn=admin,dc=nodomain
+			connection.password=admin
+			connection.protocol=
+			connection.url=ldap://localhost:389
+			user.base.dn=ou=people,dc=nodomain
+			user.filter=(uid=%u)
+			user.search.subtree=true
+			role.base.dn=ou=groups,dc=nodomain
+			role.name.attribute=cn
+			role.filter=(member:=uid=%u)
+			role.search.subtree=true
+			authentication=simple
+		</jaas:module>
+	</jaas:config>
+</blueprint>
+```
+
+This login module creates a JAAS realm called **karaf**. It overrides the default JAAS realm (used by Karaf)
+by using a rank attribute value greater than 0 (the default **karaf** realm has a rank of 0).
+
+Get the Karaf shell and deploy the *blueprint* in Karaf.  
+
+```properties
+# Log into the Karaf shell
+./client -u user -p password
+
+# Install it using the blueprint deployer
+bundle:install --start blueprint:file:/path/to/blueprint.xml
+
+# Verify it is installed
+bundle:list
+```
+
+Notice that you could also use the **deployer** feature. By default, it is not installed in Roboconf.
+
+```properties
+# Log into the Karaf shell
+./client -u user -p password
+
+# Install it using the WRAP protocol
+feature:install deployer
+```
+
+Then, copy the XML file under Karaf's **deploy** directory.  
+Or you can also create a Karaf feature that reference the blueprint.
+
+Then, you can verify your users are found...
 
 ```
+./client -u gibello
+```
+
+The client should prompt for the user password.  
+The password will be verified against the LDAP server.
+
+> Notice that unlike other modules, the LDAP login module does not provide any command to manage the LDAP server.  
+> It means that the administration of the users and roles should be performed directly on the LDAP back-end.
+
+You can find more information (module parameters, SSL connection to the LDAP...) on 
+[Karaf's web site](https://karaf.apache.org/manual/latest/#_available_realm_and_login_modules).
+
+
+## Retry Policies
+
+The number of login attempts must be configured at the LDAP level.  
+Roboconf and Karaf do not manage this part.
+
+
+## Installing a LDAP Server
+
+> This is only a short hint for test purpose.
+
+```bash
+# Ubuntu
 sudo apt-get install slapd ldap-utils
-(user / pwd dialog: admin / admin).
+# (user / pwd dialog: admin / admin)
 ```
 
 Load standard schemas:
@@ -23,16 +108,9 @@ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/nis.ldif
 sudo ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/inetorgperson.ldif
 ```
 
-LDIF file to add (replace "dc=nodomain" - for hosts with no FQDN - with adequate value if applicable, eg. "dc=example,dc=com" for FQDN example.com).
-Also change the "secret" password (olcRootPW) if needed.
+Create a LDIF file (let's call it `backend.ldif`)...
 
-To add the file (let's call it backend.ldif):
-
-```
-sudo ldapadd -Y EXTERNAL -H ldapi:/// -f backend.ldif
-```
-
-```
+```properties
 # File: backend.ldif
 # Load dynamic backend modules
 dn: cn=module,cn=config
@@ -40,6 +118,7 @@ objectClass: olcModuleList
 cn: module
 olcModulepath: /usr/lib/ldap
 olcModuleload: back_hdb
+
 # Database settings
 dn: olcDatabase=hdb,cn=config
 objectClass: olcDatabaseConfig
@@ -63,9 +142,22 @@ olcAccess: to * by dn="cn=admin,dc=nodomain" write by * read
 # End of file backend.ldif
 ```
 
-Create a "frontend.ldif" file to declare a user / organization etc...
+Update the values.  
+
+* `dc=nodomain` is for hosts with no qualified domain name.  
+Otherwise, here is an example for **example.com**: `dc=example,dc=com`
+
+* Change the *secret* password (`olcRootPW`) if necessary.
+
+Add the file.
 
 ```
+sudo ldapadd -Y EXTERNAL -H ldapi:/// -f backend.ldif
+```
+
+Create a `frontend.ldif` file to declare a user / organization, etc.
+
+```properties
 # frontend.ldif file (replace values according to your own setup)
 # Create top-level object in domain
 dn: dc=nodomain
@@ -113,7 +205,7 @@ shadowWarning: 7
 shadowMin: 8
 shadowMax: 999999
 shadowLastChange: 10877
-mail: pygibello@linagora.com
+mail: pygibello@toto.com
 postalCode: 38000
 l: Grenoble
 o: Linagora
@@ -130,63 +222,18 @@ gidNumber: 1000
 # End of file frontend.ldif
 ```
 
-To add the frontend.ldif file:
+Add the `frontend.ldif` file.
 
 ```
 sudo ldapadd -x -D cn=admin,dc=nodomain -W -f frontend.ldif
 ```
 
-Then to check the user is created:
+Then, check the user was successfully created.
 
 ```
 ldapsearch -xLLL -b "dc=nodomain" uid=gibello sn givenName cndn: uid=gibello,ou=people,dc=nodomain
 ```
 
-OpenLDAP logs:
-http://tutoriels.meddeb.net/openldap-log-2/
-(/var/log/slapd.log)
-
-**Roboconf**
-
-In karaf shell:
-
-```
-feature:install deployer
-```
-
-File to copy in deploy/ directory:
-
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
-  xmlns:jaas="http://karaf.apache.org/xmlns/jaas/v1.1.0"
-  xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0">
-
-  <jaas:config name="karaf" rank="1">
-    <jaas:module className="org.apache.karaf.jaas.modules.ldap.LDAPLoginModule"
-                 flags="required">
-      initialContextFactory=com.sun.jndi.ldap.LdapCtxFactory
-      connection.username=cn=admin,dc=nodomain
-      connection.password=admin
-      connection.protocol=
-      connection.url=ldap://localhost:389
-      user.base.dn=ou=people,dc=nodomain
-      user.filter=(uid=%u)
-      user.search.subtree=true
-      role.base.dn=ou=groups,dc=nodomain
-      role.name.attribute=cn
-      role.filter=(member:=uid=%u)
-      role.search.subtree=true
-      authentication=simple
-    </jaas:module>
-  </jaas:config>
-</blueprint>
-```
-
-To test (from bin/ directory):
-
-```
-./client -u gibello
-```
-
-(the client should prompt for user password, "test" as defined in the LDIF above).
+You can now test you can connect Roboconf's DM to this LDAP.  
+For OpenLDAP logs, you can refer to [this tutorial](http://tutoriels.meddeb.net/openldap-log-2/) (in French).
+Short answer: `/var/log/slapd.log`

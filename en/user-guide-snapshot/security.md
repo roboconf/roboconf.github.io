@@ -23,4 +23,5 @@ We discuss every of them on these pages.
 ## Karaf Distributions
 
 * [Roboconf Agents](security-and-agents.html)
+* [Users authentication](security-and-authentication.html)
 * [LDAP authentication](security-and-ldap.html)
