@@ -31,7 +31,7 @@ Just copy / paste and edit.
 ```properties
 # Configuration file for OCCI
 id = anything
-handler = iaas-vmware
+handler = iaas-occi
 name = 
 description = 
 
