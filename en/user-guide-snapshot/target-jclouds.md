@@ -31,6 +31,7 @@ Just copy / paste and edit.
 ```properties
 # Configuration file for JClouds
 handler = jclouds
+id = a unique identifier
 name = 
 description = 
 
@@ -56,6 +57,7 @@ Here is a complete description of the parameters for JClouds.
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
 | handler | Determines the target handler to use | none, must be "jclouds" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | jclouds.provider-id | The ID of the JClouds provider (AWS, Rackspace, etc). | none | yes |

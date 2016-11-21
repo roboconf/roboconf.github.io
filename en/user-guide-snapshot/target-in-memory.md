@@ -44,6 +44,7 @@ Just copy / paste and edit.
 ```properties
 # Configuration file for in-memory
 handler = in-memory
+id = a unique identifier
 name = 
 description = 
 
@@ -64,6 +65,7 @@ Here is a complete description of the parameters for Amazon Web Services.
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
 | handler | Determines the target handler to use | none, must be "in-memory" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | in-memory.delay | The delay (in milliseconds) to wait for before instantiating a new agent in memory. | 0 | no |

@@ -44,6 +44,7 @@ Just copy / paste and edit.
 handler = iaas-openstack
 
 # Provide a meaningful description of the target
+id = a unique identifier
 name = 
 description = 
 
@@ -89,6 +90,7 @@ Block storage is detailed further in the page.
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
 | handler | Determines the target handler to use | none, must be "iaas-openstack" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | openstack.keystone-url | The URL of Keystone, Openstack's *identity* component. The URL of all the other Openstack services will be found through Keystone. | none | yes |

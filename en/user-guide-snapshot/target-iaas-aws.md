@@ -35,6 +35,7 @@ Just copy / paste and edit.
 handler = iaas-ec2
 
 # Provide a meaningful description of the target
+id = a unique identifier
 name = 
 description = 
 
@@ -96,6 +97,7 @@ Block storage parameters are detailed further.
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
 | handler | Determines the target handler to use | none, must be "iaas-ec2" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | ec2.endpoint | URL of the compute service (eg. eu-west-1.ec2.amazonaws.com)  | none | yes |

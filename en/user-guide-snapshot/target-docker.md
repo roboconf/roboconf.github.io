@@ -33,6 +33,7 @@ Just copy / paste and edit.
 handler = docker
 
 # Provide a meaningful description of the target
+id = a unique identifier
 name = 
 description = 
 
@@ -65,6 +66,7 @@ Let's begin with general parameters.
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
 | handler | Determines the target handler to use. | none, must be "docker" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). Only 'tcp://' or 'unix://' URLs are supported. | tcp://localhost:4243 | no |

@@ -30,8 +30,8 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for OCCI
-id = anything
 handler = iaas-occi
+id = a unique identifier
 name = 
 description = 
 
@@ -53,6 +53,7 @@ Here is a complete description of the parameters for OCCI.
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
 | handler | Determines the target handler to use | none, must be "iaas-occi" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | occi.serverIpPort | The URL to interact with VMWare's manager. | none | yes |
