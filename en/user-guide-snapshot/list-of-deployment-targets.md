@@ -15,11 +15,14 @@ This page lists all the deployment targets Roboconf currently supports.
 * [Microsoft Azure](target-iaas-azure.html)
 * [VMWare](target-iaas-vmware.html)
 
+## Cloud Libraries and APIs
+
+* [Apache JClouds](target-jclouds.html)
+* [OCCI Infrastructure](target-iaas-occi.html)
 
 ## Other Targets
 
 * [Docker](target-docker.html)
-* [Apache JClouds](target-jclouds.html)
 * [Embedded](target-embedded.html)
 * [In-Memory](target-in-memory.html)
 

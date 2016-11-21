@@ -236,6 +236,9 @@ target-docker:
 target-embedded:
   en: user-guide-snapshot/target-embedded
   
+target-iaas-occi:
+  en: user-guide-snapshot/target-iaas-occi
+  
 target-iaas-aws:
   en: user-guide-snapshot/target-iaas-aws
   
