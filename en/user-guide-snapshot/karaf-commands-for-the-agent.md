@@ -13,6 +13,7 @@ with Karaf. They are available from the Karaf command line.
 This page lists and explains these additional commands.
 
 * [roboconf:reload-config](#roboconfreload-config)
+* [roboconf:info](#roboconfinfo)
 * [roboconf:agent-status](#roboconfagent-status)
 * [roboconf:cancel-recipe](#roboconfcancel-recipe)
 
@@ -22,6 +23,16 @@ This page lists and explains these additional commands.
 This command allows you to force an agent to reload its configuration.  
 
 Syntax: `roboconf:reload-config`  
+No parameter is expected.
+
+
+## roboconf:info
+
+This command displays the Roboconf version(s) available as well as information about the
+environment (Karaf version, JVM, operating system...). Roughly, it is an enhanced version
+of the `info` command.
+
+Syntax: `roboconf:info`  
 No parameter is expected.
 
 

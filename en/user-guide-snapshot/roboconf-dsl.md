@@ -54,6 +54,9 @@ ApacheServer {
 	# 'port' should have a default value, or we will have to set it when we create an instance.
 	exports: port = 19099;
 	
+	# Exported variables can also use quotes for their values.
+	exports: message = "This is a complex value ;;";
+	
 	# 'ip' is a special variable. It will be updated at runtime by a Roboconf agent.
 	exports: ip;
 
@@ -150,6 +153,7 @@ instance of VM {
 	# This will create 5 VM instances, called VM 1, VM 2, VM3, VM 4 and VM 5.
 	name: VM ;	# Yes, there is a space at the end... :)
 	count: 5;
+	message: "We can define complex values between quotes.";
 
 	# On every VM instance, we will deploy...
 	instance of Tomcat {

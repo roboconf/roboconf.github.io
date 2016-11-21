@@ -42,6 +42,9 @@ Defining it else where would result in an error.
 
 ## Instances Properties
 
+> This page is an introduction.  
+> Please, refer to the [full DSL syntax](roboconf-dsl.html) for more details.
+
 An instance must have the **name** property, which is the instance name. It must be unique among its parent.
 The instance may also declare properties to override component properties. As an example, if a component exports
 a *port* property with the default value 8080, the instance may override it (e.g. with 8081).
@@ -53,7 +56,35 @@ instance of Tomcat {
 }
 </code></pre>
 
-It is possible to force a value for a [random exported variable](graph-definition.html) in the instances definition.  
+Just like for graph definitions, it is possible to surround values with quotes.
+
+<pre><code class="language-roboconf">
+instance of Tomcat {
+	name: Tomcat;
+	port: "8081";
+	welcome_message: "We can use a complex value and insert several semicolons ;; on the same line.";
+}
+</code></pre>
+
+> Be careful, unlike for graphs, property values are not entirely trimmed.  
+> Use quotes if necessary, or do not set spaces after instance properties.
+> This can be used to create several instances at once.
+
+<pre><code class="language-roboconf">
+instance of VM {
+	name: vm ;
+	count: 5;
+	
+	instance of Server {
+		name: server;
+	}
+}
+</code></pre>
+
+... will create « vm 1 », « vm 2 », « vm 3 », « vm 4 » and « vm 5 ».  
+All of them will have child instance called « server ».
+
+It is also possible to force a value for a [random exported variable](graph-definition.html) in the instances definition.  
 As an example, with a graph declaration like...
 
 <pre><code class="language-roboconf">

@@ -110,7 +110,7 @@ You may also want to create certificates for clients. Usually, there should be o
 
 ```properties
 # We generate a new (here, self-signed) certificate
-keytool -genkey -keyalg RSA -validity 365 -alias serverkey -keypass key-pwd -storepass store-pwd -keystore client1.jks
+keytool -genkey -keyalg RSA -validity 365 -alias client1key -keypass key-pwd -storepass store-pwd -keystore client1.jks
 
 # Export it so that we can import it in the server's store
 keytool -export -rfc -keystore client1.jks -storepass store-pwd -alias client1key -file client1.cer

@@ -13,6 +13,7 @@ with Karaf. They are available from the Karaf command line.
 This page lists and explains these additional commands.
 
 * [roboconf:target](#roboconftarget)
+* [roboconf:info](#roboconfinfo)
 * [roboconf:set-log-level](#roboconfset-log-level)
 * [roboconf:gather-logs](#roboconfgather-logs)
 * [roboconf:reload-config](#roboconfreload-config)
@@ -26,6 +27,16 @@ This command allows you to install a Roboconf target in a single command line.
 Syntax: `roboconf:target <target-name>`  
 Auto-completion is available to indicate the known targets.  
 Unknown targets will have to be installed manually (e.g. with the **bundle:install** command).
+
+
+## roboconf:info
+
+This command displays the Roboconf version(s) available as well as information about the
+environment (Karaf version, JVM, operating system...). Roughly, it is an enhanced version
+of the `info` command.
+
+Syntax: `roboconf:info`  
+No parameter is expected.
 
 
 ## roboconf:set-log-level
