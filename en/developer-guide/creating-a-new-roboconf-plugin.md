@@ -3,7 +3,7 @@ title: "Creating a new Roboconf plug-in"
 layout: page
 cat: "dg-snapshot"
 id: "creating-a-new-roboconf-plugin"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 A Roboconf plug-in is an extension for a Roboconf agent.  

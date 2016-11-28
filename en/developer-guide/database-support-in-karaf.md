@@ -3,7 +3,7 @@ title: "Database Support in Apache Karaf"
 layout: page
 cat: "dg-snapshot"
 id: "database-support-in-karaf"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 From summer 2015, Roboconf is based on Karaf 4.x.  

@@ -3,7 +3,7 @@ title: "Development Guidelines for Javascript"
 layout: page
 cat: "dg-snapshot"
 id: "javascript-development-guidelines"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 ## Use NPM and Gulp

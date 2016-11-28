@@ -3,7 +3,7 @@ title: "Launching the Web Administration"
 layout: page
 cat: "dg-snapshot"
 id: "launching-the-web-administration"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 Roboconf's Web Administration is a web application developed with [AngularJS](http://angularjs.org/).  

@@ -1,7 +1,7 @@
 ---
 title: "Tutoriel - Déploiement Local avec Docker"
 layout: page
-cat: "ug-snapshot"
+cat: "ug-last"
 id: "tutorial-local-deployment-with-docker"
 menus: [ "users", "user-guide" ]
 ---

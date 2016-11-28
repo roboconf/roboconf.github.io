@@ -3,7 +3,7 @@ title: "About Integration Tests"
 layout: page
 cat: "dg-snapshot"
 id: "about-integration-tests"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 Roboconf has two kinds of tests.

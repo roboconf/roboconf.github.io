@@ -3,7 +3,7 @@ title: "Web Site Organization"
 layout: page
 cat: "dg-snapshot"
 id: "web-site-organization"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 The web site is generated from a Git repository.  

@@ -3,7 +3,7 @@ title: "Release Management by hand"
 layout: page
 cat: "dg-snapshot"
 id: "release-management-by-hand"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 This page explains the detailed procedures to release Maven modules by hand.  

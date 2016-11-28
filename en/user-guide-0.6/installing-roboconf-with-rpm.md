@@ -2,7 +2,7 @@
 title: "Installing Roboconf with RPM"
 layout: page
 cat: "ug-0-6"
-id: "installing-roboconf-with-debian-packages"
+id: "installing-roboconf-with-rpm"
 menus: [ "users", "user-guide", "0.6" ]
 ---
 

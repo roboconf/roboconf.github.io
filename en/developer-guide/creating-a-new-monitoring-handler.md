@@ -3,7 +3,7 @@ title: "Creating a new Monitoring Handler"
 layout: page
 cat: "dg-snapshot"
 id: "creating-a-new-monitoring-handler"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 A monitoring handler is an extension for a Roboconf agent's monitoring.  

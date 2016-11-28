@@ -3,7 +3,7 @@ title: "Continuous Integration"
 layout: page
 cat: "dg-snapshot"
 id: "continuous-integration"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 Continuous Integration (CI) is applied to almost all the Git repositories of Roboconf.  

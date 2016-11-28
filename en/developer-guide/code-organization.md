@@ -3,7 +3,7 @@ title: "Code Organization"
 layout: page
 cat: "dg-snapshot"
 id: "code-organization"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 Roboconf's source code is located among several Git repositories.  

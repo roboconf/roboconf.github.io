@@ -3,7 +3,7 @@ title: "OCCI Model for Roboconf"
 layout: page
 cat: "dg-snapshot"
 id: "occi-model"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 This page aims at specifying an OCCI-compliant extension for Roboconf.  

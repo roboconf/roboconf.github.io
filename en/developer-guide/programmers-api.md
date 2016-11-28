@@ -3,7 +3,7 @@ title: "Programmer APIs"
 layout: page
 cat: "dg-snapshot"
 id: "programmers-api"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 There are several APIs within Roboconf:

@@ -3,7 +3,7 @@ title: "Version Management"
 layout: page
 cat: "dg-snapshot"
 id: "version-management"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 ## Roboconf Platform

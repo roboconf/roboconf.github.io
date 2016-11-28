@@ -5,7 +5,7 @@ cat: "ug-snapshot"
 id: "docker-tips"
 menus: [ "users", "user-guide", "Snapshot" ]
 ---
-  
+
 Note that Docker runs mainly on Linux 64-bit systems, although some ports may be available for other platforms.
 
 

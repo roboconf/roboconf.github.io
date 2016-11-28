@@ -2,7 +2,7 @@
 title: "Configuring Probes for the Autonomic"
 layout: page
 cat: "ug-last"
-id: "configuring-probes-for-the-autonomic"
+id: "specifying-automatic-reactions"
 menus: [ "users", "user-guide" ]
 ---
 

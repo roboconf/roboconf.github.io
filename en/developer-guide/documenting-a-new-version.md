@@ -3,7 +3,7 @@ title: "Documenting a New Version"
 layout: page
 cat: "dg-snapshot"
 id: "documenting-a-new-version"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 As explained [here](web-site-organization.html), the user and developer guides have a version.  

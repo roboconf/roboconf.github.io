@@ -3,196 +3,196 @@
 #
 maven-examples-documentation:
   en: user-guide-0.5/maven-examples-documentation
-  
+
 roboconf-architecture:
   en: user-guide-0.5/roboconf-architecture
-  
+
 m2r_lab:
   en: user-guide-0.5/m2r_lab
-  
+
 inter-application-dependencies:
   en: user-guide-0.5/inter-application-dependencies
 
 security:
   en: user-guide-0.5/security
-  
+
 configuring-the-web-consoles:
   en: user-guide-0.5/configuring-the-web-consoles
-  
+
 dm-templating:
   en: user-guide-0.5/dm-templating
-  
+
 eclipse-plugin:
   en: user-guide-0.5/eclipse-plugin
-  
+
 maven-plugin:
   en: user-guide-0.5/maven-plugin
-  
+
 reusability-in-models:
   en: user-guide-0.5/reusability-in-models
-    
+
 reusable-recipes-index:
   en: user-guide-0.5/reusable-recipes-index
-  
+
 how-to-write-reusable-recipes:
   en: user-guide-0.5/how-to-write-reusable-recipes
-  
+
 tutorial-getting-started-with-roboconf:
   en: user-guide-0.5/tutorial-getting-started-with-roboconf
-  
+
 tutorial-first-deployment-in-the-cloud:
   en: user-guide-0.5/tutorial-first-deployment-in-the-cloud
-  
+
 tutorial-first-deployment-in-the-cloud-1:
   en: user-guide-0.5/tutorial-first-deployment-in-the-cloud-1
-  
+
 tutorial-first-deployment-in-the-cloud-2:
   en: user-guide-0.5/tutorial-first-deployment-in-the-cloud-2
-  
+
 tutorial-first-deployment-in-the-cloud-3:
   en: user-guide-0.5/tutorial-first-deployment-in-the-cloud-3
-  
+
 tutorial-first-deployment-in-the-cloud-4:
   en: user-guide-0.5/tutorial-first-deployment-in-the-cloud-4
-  
-docker-tips.html:
+
+docker-tips:
   en: user-guide-0.5/docker-tips
-  
+
 autonomic-management-with-roboconf:
   en: user-guide-0.5/autonomic-management-with-roboconf
-  
+
 tutorial-apache-storm:
-  en: user-guide-0.5/tutorial-apache-storm  
-  
-inheritance-and-variables:  
+  en: user-guide-0.5/tutorial-apache-storm
+
+inheritance-and-variables:
   en: user-guide-0.5/inheritance-and-variables
-  
+
 web-administration-screenshots:
   en: user-guide-0.5/web-administration-screenshots
-  
+
 configuring-the-loggers:
   en: user-guide-0.5/configuring-the-loggers
 
 installing-roboconf:
   en: user-guide-0.5/installing-roboconf
-  
+
 installing-everything-with-scripts:
   en: user-guide-0.5/installing-everything-with-scripts
-  
+
 installing-the-deployment-manager:
   en: user-guide-0.5/installing-the-deployment-manager
-  
+
 installing-an-agent:
   en: user-guide-0.5/installing-an-agent
-  
+
 configuring-the-deployment-manager:
   en: user-guide-0.5/configuring-the-deployment-manager
-  
+
 configuring-an-agent:
   en: user-guide-0.5/configuring-an-agent
-  
+
 configuring-the-messaging:
   en: user-guide-0.5/configuring-the-messaging
-  
+
 installing-rabbit-mq:
   en: user-guide-0.5/installing-rabbit-mq
-  
+
 preparing-virtual-images-with-an-agent:
   en: user-guide-0.5/preparing-virtual-images-with-an-agent
-  
+
 about-target-support:
   en: user-guide-0.5/about-target-support
-  
+
 list-of-deployment-targets:
   en: user-guide-0.5/list-of-deployment-targets
-  
+
 target-iaas-openstack:
   en: user-guide-0.5/target-iaas-openstack
-  
+
 target-jclouds:
   en: user-guide-0.5/target-jclouds
-  
+
 target-docker:
   en: user-guide-0.5/target-docker
-  
+
 target-embedded:
   en: user-guide-0.5/target-embedded
-  
+
 target-iaas-aws:
   en: user-guide-0.5/target-iaas-aws
-  
+
 target-iaas-vmware:
   en: user-guide-0.5/target-iaas-vmware
-  
+
 target-iaas-azure:
   en: user-guide-0.5/target-iaas-azure
-  
+
 target-in-memory:
   en: user-guide-0.5/target-in-memory
-  
+
 about-plugins:
   en: user-guide-0.5/about-plugins
-  
+
 list-of-plugins:
   en: user-guide-0.5/list-of-plugins
-  
+
 plugin-logger:
   en: user-guide-0.5/plugin-logger
-  
+
 plugin-file:
   en: user-guide-0.5/plugin-file
-  
+
 plugin-script:
   en: user-guide-0.5/plugin-script
-  
+
 plugin-puppet:
   en: user-guide-0.5/plugin-puppet
-  
+
 roboconf-dsl:
   en: user-guide-0.5/roboconf-dsl
-  
+
 monitoring-roboconf:
   en: user-guide-0.5/monitoring-roboconf
-  
+
 monitoring-applications-deployed-with-roboconf:
   en: user-guide-0.5/monitoring-applications-deployed-with-roboconf
-  
+
 editors:
   en: user-guide-0.5/editors
-  
+
 configuration-files:
   en: user-guide-0.5/configuration-files
-  
+
 faq:
   en: user-guide-0.5/faq
-  
+
 roboconf-concepts:
   en: user-guide-0.5/roboconf-concepts
-  
+
 application-descriptor:
   en: user-guide-0.5/application-descriptor
-  
+
 instances-description:
   en: user-guide-0.5/instances-description
-  
+
 graph-definition:
   en: user-guide-0.5/graph-definition
-  
+
 graph-resources:
   en: user-guide-0.5/graph-resources
-  
+
 web-administration:
   en: user-guide-0.5/web-administration
-  
+
 lamp-example-part-1:
   en: user-guide-0.5/lamp-example-part-1
-  
+
 lamp-example-part-2:
   en: user-guide-0.5/lamp-example-part-2
-  
+
 index:
   en: user-guide-0.5/user-guide
   fr: guide-utilisateur-0.5/guide-utilisateur
-  
+
 working-with-roboconf:
   en: user-guide-0.5/working-with-roboconf

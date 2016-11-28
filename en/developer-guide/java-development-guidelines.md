@@ -3,7 +3,7 @@ title: "Development Guidelines for Java"
 layout: page
 cat: "dg-snapshot"
 id: "java-development-guidelines"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 ## Use Maven

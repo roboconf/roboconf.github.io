@@ -3,7 +3,7 @@ title: "Debugging Roboconf"
 layout: page
 cat: "dg-snapshot"
 id: "debugging-roboconf"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 Roboconf is still under development.  

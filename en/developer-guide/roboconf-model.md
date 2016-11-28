@@ -3,7 +3,7 @@ title: "Roboconf Model"
 layout: page
 cat: "dg-snapshot"
 id: "roboconf-model"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 This page explains the way Roboconf manages the model things.  

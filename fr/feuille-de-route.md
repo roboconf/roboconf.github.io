@@ -10,21 +10,21 @@ Roboconf a démarré en tant que prototype de recherche et est maintenant en cou
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
 
-* **Pour Septembre 2016**
+* **Pour Décembre 2016**
 
-	* Installations multi-tenants.
+	* Installations multi-tenants. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Compléter la messagerie pour des échanges sécurisés avec SSL.
-	* Revoir la politique de sécurité liée aux CORS.
+	* Revoir la politique de sécurité liée aux CORS. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Procédures pour le changement d'environnements.
-	* Personnalisation de l'apparence de l'administration web.
-	* Internationalisation de l'administration web.
-	* Définition d'utilisateurs et de rôles dans Roboconf.
+	* Personnalisation de l'apparence de l'administration web. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Internationalisation de l'administration web. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Implémenter une cible de déploiement pour OCCI Infrastructure. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 
 
 * **Pour Plus Tard**
 
+	* Définition d'utilisateurs et de rôles dans Roboconf.
 	* Tester Roboconf en conditions de production sur plusieurs jours (traque des fuites mémoires, etc).
-	* Implémenter une cible de déploiement pour OCCI Infrastructure.
 	* Améliorer les mesures côté agent pour l'autonomique (moyenne, etc).
 	* Permettre la modification des seuils (autonomique côté agent) dans la console web.
 	* Placement intelligent.
@@ -42,4 +42,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Etudier le support de TOSCA.
 
 
-Roboconf 0.8 devrait sortir fin septembre (2016).
+Roboconf 0.8 devrait en décembre 2016.

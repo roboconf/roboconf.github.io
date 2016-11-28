@@ -3,7 +3,7 @@ title: "Understanding the Messaging with Rabbit MQ"
 layout: page
 cat: "dg-snapshot"
 id: "understanding-the-messaging-with-rabbit-mq--from-0.6-to-0.7"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 > This page explains Rabbit MQ's support in Roboconf for versions from 0.6 to 0.7 (included).  

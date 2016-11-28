@@ -3,7 +3,7 @@ title: "Syntax Highlighting"
 layout: page
 cat: "dg-snapshot"
 id: "syntax-highlighting"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 Several moves have been made to promote Roboconf's DSL and provide syntax highlighting.  

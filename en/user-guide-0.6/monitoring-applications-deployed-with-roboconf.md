@@ -2,7 +2,7 @@
 title: "Monitoring"
 layout: page
 cat: "ug-0-6"
-id: "monitoring"
+id: "monitoring-applications-deployed-with-roboconf"
 menus: [ "users", "user-guide", "0.6" ]
 ---
 

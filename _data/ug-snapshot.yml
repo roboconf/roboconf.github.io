@@ -3,311 +3,311 @@
 #
 customizing-the-web-administration-look-n-feel:
   en: user-guide-snapshot/customizing-the-web-administration-look-n-feel
-  
+
 writing-validation-tests-with-junit:
   en: user-guide-snapshot/writing-validation-tests-with-junit
-  
+
 security-and-ldap:
   en: user-guide-snapshot/security-and-ldap
-  
+
 security-and-authentication:
   en: user-guide-snapshot/security-and-authentication
-  
+
 user-guide-older-versions:
   en: user-guide-snapshot/user-guide-older-versions
-  
+
 clustered-rabbitmq:
   en: user-guide-snapshot/clustered-rabbitmq
-  
+
 installation-tips:
   en: user-guide-snapshot/installation-tips
-  
+
 writing-validation-tests-with-pax-exam:
   en: user-guide-snapshot/writing-validation-tests-with-pax-exam
-  
+
 writing-validation-tests-with-scripts:
   en: user-guide-snapshot/writing-validation-tests-with-scripts
-  
+
 maven-examples-documentation:
   en: user-guide-snapshot/maven-examples-documentation
-  
+
 roboconf-architecture:
   en: user-guide-snapshot/roboconf-architecture
-  
+
 using-docker-on-the-agent-side:
   en: user-guide-snapshot/using-docker-on-the-agent-side
-  
+
 configuring-roboconf:
   en: user-guide-snapshot/configuring-roboconf
-  
+
 karaf-commands-for-the-dm:
   en: user-guide-snapshot/karaf-commands-for-the-dm
-  
+
 karaf-commands-for-the-agent:
   en: user-guide-snapshot/karaf-commands-for-the-agent
-  
+
 all-the-tools:
   en: user-guide-snapshot/all-the-tools
-  
+
 all-the-advanced-topics:
   en: user-guide-snapshot/all-the-advanced-topics
-  
+
 roboconf-domains:
   en: user-guide-snapshot/roboconf-domains
-  
+
 installing-roboconf-with-debian-packages:
   en: user-guide-snapshot/installing-roboconf-with-debian-packages
-  
+
 installing-roboconf-with-rpm:
   en: user-guide-snapshot/installing-roboconf-with-rpm
-  
+
 installing-roboconf-with-docker:
   en: user-guide-snapshot/installing-roboconf-with-docker
-  
+
 using-docker-with-roboconf:
   en: user-guide-snapshot/using-docker-with-roboconf
-  
+
 good-practices-for-recipes:
   en: user-guide-snapshot/good-practices-for-recipes
-  
+
 security:
   en: user-guide-snapshot/security
-  
+
 security-and-topologies:
   en: user-guide-snapshot/security-and-topologies
-  
+
 security-and-software:
   en: user-guide-snapshot/security-and-software
-  
+
 security-and-cors:
   en: user-guide-snapshot/security-and-cors
-  
+
 security-and-https-console:
   en: user-guide-snapshot/security-and-https-console
-  
+
 security-and-roboconf-ports:
   en: user-guide-snapshot/security-and-roboconf-ports
-  
+
 security-and-agents:
   en: user-guide-snapshot/security-and-agents
-  
+
 roboconf-commands:
   en: user-guide-snapshot/roboconf-commands
-  
+
 roboconf-commands-scheduling:
   en: user-guide-snapshot/roboconf-commands-scheduling
-  
+
 configuring-probes-for-the-autonomic:
   en: user-guide-snapshot/configuring-probes-for-the-autonomic
-  
+
 specifying-automatic-reactions:
   en: user-guide-snapshot/specifying-automatic-reactions
-  
+
 testing-an-application-locally:
   en: user-guide-snapshot/testing-an-application-locally
-  
+
 m2r_lab:
   en: user-guide-snapshot/m2r_lab
-  
+
 inter-application-dependencies:
   en: user-guide-snapshot/inter-application-dependencies
-  
+
 configuring-the-web-consoles:
   en: user-guide-snapshot/configuring-the-web-consoles
-  
+
 dm-templating:
   en: user-guide-snapshot/dm-templating
-  
+
 eclipse-plugin:
   en: user-guide-snapshot/eclipse-plugin
-  
+
 eclipse-plugins:
   en: user-guide-snapshot/eclipse-plugins
-  
+
 eclipse-modeling-plugin:
   en: user-guide-snapshot/eclipse-modeling-plugin
-  
+
 maven-plugin:
   en: user-guide-snapshot/maven-plugin
-  
+
 maven-plugin-for-applications:
   en: user-guide-snapshot/maven-plugin-for-applications
-  
+
 maven-plugin-for-targets:
   en: user-guide-snapshot/maven-plugin-for-targets
-  
+
 reusability-in-models:
   en: user-guide-snapshot/reusability-in-models
-    
+
 reusable-recipes-index:
   en: user-guide-snapshot/reusable-recipes-index
-  
+
 how-to-write-reusable-recipes:
   en: user-guide-snapshot/how-to-write-reusable-recipes
-  
+
 tutorial-local-deployment-with-docker:
   en: user-guide-snapshot/tutorial-local-deployment-with-docker
   fr: guide-utilisateur/tutoriel-deploiement-local-avec-docker
-  
+
 tutorial-getting-started-with-roboconf:
   en: user-guide-snapshot/tutorial-getting-started-with-roboconf
   fr: guide-utilisateur/tutoriel-debuter-avec-roboconf
-  
+
 tutorial-first-deployment-in-the-cloud:
   fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud
-  
+
 tutorial-first-deployment-in-the-cloud-1:
   fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-1
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud-1
-  
+
 tutorial-first-deployment-in-the-cloud-2:
   fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-2
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud-2
-  
+
 tutorial-first-deployment-in-the-cloud-3:
   fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-3
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud-3
-  
+
 tutorial-first-deployment-in-the-cloud-4:
   fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-4
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud-4
-  
-docker-tips.html:
+
+docker-tips:
   en: user-guide-snapshot/docker-tips
-  
+
 autonomic-management-with-roboconf:
   en: user-guide-snapshot/autonomic-management-with-roboconf
-  
+
 tutorial-apache-storm:
-  en: user-guide-snapshot/tutorial-apache-storm  
-  
-inheritance-and-variables:  
+  en: user-guide-snapshot/tutorial-apache-storm
+
+inheritance-and-variables:
   en: user-guide-snapshot/inheritance-and-variables
-  
+
 web-administration-screenshots:
   en: user-guide-snapshot/web-administration-screenshots
-  
+
 configuring-the-loggers:
   en: user-guide-snapshot/configuring-the-loggers
 
 installing-roboconf:
   en: user-guide-snapshot/installing-roboconf
-  
+
 installing-everything-with-scripts:
   en: user-guide-snapshot/installing-everything-with-scripts
-  
+
 installing-the-deployment-manager:
   en: user-guide-snapshot/installing-the-deployment-manager
-  
+
 installing-an-agent:
   en: user-guide-snapshot/installing-an-agent
-  
+
 configuring-the-deployment-manager:
   en: user-guide-snapshot/configuring-the-deployment-manager
-  
+
 configuring-an-agent:
   en: user-guide-snapshot/configuring-an-agent
-  
+
 configuring-the-messaging:
   en: user-guide-snapshot/configuring-the-messaging
-  
+
 installing-rabbit-mq:
   en: user-guide-snapshot/installing-rabbit-mq
-  
+
 preparing-virtual-images-with-an-agent:
   en: user-guide-snapshot/preparing-virtual-images-with-an-agent
-  
+
 about-target-support:
   en: user-guide-snapshot/about-target-support
-  
+
 list-of-deployment-targets:
   en: user-guide-snapshot/list-of-deployment-targets
-  
+
 target-iaas-openstack:
   en: user-guide-snapshot/target-iaas-openstack
-  
+
 target-jclouds:
   en: user-guide-snapshot/target-jclouds
-  
+
 target-docker:
   en: user-guide-snapshot/target-docker
-  
+
 target-embedded:
   en: user-guide-snapshot/target-embedded
-  
+
 target-iaas-occi:
   en: user-guide-snapshot/target-iaas-occi
-  
+
 target-iaas-aws:
   en: user-guide-snapshot/target-iaas-aws
-  
+
 target-iaas-vmware:
   en: user-guide-snapshot/target-iaas-vmware
-  
+
 target-iaas-azure:
   en: user-guide-snapshot/target-iaas-azure
-  
+
 target-in-memory:
   en: user-guide-snapshot/target-in-memory
-  
+
 about-plugins:
   en: user-guide-snapshot/about-plugins
-  
+
 list-of-plugins:
   en: user-guide-snapshot/list-of-plugins
-  
+
 plugin-logger:
   en: user-guide-snapshot/plugin-logger
-  
+
 plugin-file:
   en: user-guide-snapshot/plugin-file
-  
+
 plugin-script:
   en: user-guide-snapshot/plugin-script
-  
+
 plugin-puppet:
   en: user-guide-snapshot/plugin-puppet
-  
+
 roboconf-dsl:
   en: user-guide-snapshot/roboconf-dsl
-  
+
 monitoring-roboconf:
   en: user-guide-snapshot/monitoring-roboconf
-  
+
 monitoring-applications-deployed-with-roboconf:
   en: user-guide-snapshot/monitoring-applications-deployed-with-roboconf
-  
+
 editors:
   en: user-guide-snapshot/editors
-  
+
 anatomy-of-a-roboconf-application:
   en: user-guide-snapshot/anatomy-of-a-roboconf-application
-  
+
 faq:
   en: user-guide-snapshot/faq
-  
+
 application-descriptor:
   en: user-guide-snapshot/application-descriptor
-  
+
 instances-description:
   en: user-guide-snapshot/instances-description
-  
+
 graph-definition:
   en: user-guide-snapshot/graph-definition
-  
+
 graph-resources:
   en: user-guide-snapshot/graph-resources
-  
+
 web-administration:
   en: user-guide-snapshot/web-administration
-  
+
 lamp-example-part-1:
   en: user-guide-snapshot/lamp-example-part-1
-  
+
 lamp-example-part-2:
   en: user-guide-snapshot/lamp-example-part-2
-  
+
 index:
   en: user-guide-snapshot/user-guide
-  fr: guide-utilisateur/guide-utilisateur
+  fr: guide-utilisateur-snapshot/guide-utilisateur

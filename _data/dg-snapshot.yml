@@ -1,89 +1,91 @@
 #
 # Dev' Guide Snapshot
 #
-  
+
 index:
   en: developer-guide/developer-guide
   fr: guide-developpeur/guide-developpeur
-  
+
 syntax-highlighting:
   en: developer-guide/syntax-highlighting
-  
+
 version-management:
   en: developer-guide/version-management
-  
+
 about-integration-tests:
   en: developer-guide/about-integration-tests
-  
+
 ipojo-model:
   en: developer-guide/ipojo-model
-  
+
 database-support-in-karaf:
   en: developer-guide/database-support-in-karaf
-  
+
 creating-a-new-messaging-implementation:
   en: developer-guide/creating-a-new-messaging-implementation
-  
+
 creating-a-new-monitoring-handler:
   en: developer-guide/creating-a-new-monitoring-handler
-  
+
+code-organization:
+  en: developer-guide/code-organization
+
 creating-a-new-roboconf-plugin:
   en: developer-guide/creating-a-new-roboconf-plugin
-  
+
 supporting-a-new-deployment-target:
   en: developer-guide/supporting-a-new-deployment-target
-  
+
 launching-the-web-administration:
   en: developer-guide/launching-the-web-administration
-  
+
 roboconf-model:
   en: developer-guide/roboconf-model
-  
+
 continuous-integration:
   en: developer-guide/continuous-integration
-  
+
 release-management-by-hand:
   en: developer-guide/release-management-by-hand
-  
+
 osgi-conventions:
   en: developer-guide/osgi-conventions
-  
+
 release-management:
   en: developer-guide/release-management
-  
+
 rest-api:
   en: developer-guide/rest-api
-  
+
 programmers-api:
   en: developer-guide/programmers-api
-  
+
 web-site-organization:
   en: developer-guide/web-site-organization
-  
+
 documenting-a-new-version:
   en: developer-guide/documenting-a-new-version
-  
+
 understanding-the-messaging-with-rabbit-mq--up-to-v0.5:
   en: developer-guide/understanding-the-messaging-with-rabbit-mq--up-to-v0.5
-  
+
 understanding-the-messaging-with-rabbit-mq--from-0.6-to-0.7:
   en: developer-guide/understanding-the-messaging-with-rabbit-mq--from-0.6-to-0.7
-  
+
 understanding-the-messaging-with-rabbit-mq:
   en: developer-guide/understanding-the-messaging-with-rabbit-mq
-  
+
 debugging-roboconf:
   en: developer-guide/debugging-roboconf
-  
+
 life-cycle:
   en: developer-guide/life-cycle
-  
+
 javascript-development-guidelines:
   en: developer-guide/javascript-development-guidelines
-  
+
 java-development-guidelines:
   en: developer-guide/java-development-guidelines
-  
+
 occi-model:
   en: developer-guide/occi-model
- 

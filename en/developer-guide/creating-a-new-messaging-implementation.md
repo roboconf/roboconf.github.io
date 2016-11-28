@@ -3,7 +3,7 @@ title: "Creating a new Messaging Implementation"
 layout: page
 cat: "dg-snapshot"
 id: "creating-a-new-messaging-implementation"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 The key part of Roboconf is about notifications.  

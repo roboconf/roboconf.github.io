@@ -3,7 +3,7 @@ title: "OSGi Conventions"
 layout: page
 cat: "dg-snapshot"
 id: "osgi-conventions"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 This page does not aim at defining OSGi best practices.  

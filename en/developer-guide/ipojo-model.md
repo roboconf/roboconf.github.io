@@ -3,7 +3,7 @@ title: "The iPojo Model"
 layout: page
 cat: "dg-snapshot"
 id: "ipojo-model"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 [iPojo](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo.html) is the component model Roboconf uses to ease OSGi development.  

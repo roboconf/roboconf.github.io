@@ -3,7 +3,7 @@ title: "Supporting a new Deployment Target"
 layout: page
 cat: "dg-snapshot"
 id: "supporting-a-new-deployment-target"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 A deployment target designates a platform or a solution on which Roboconf can deploy Software.  

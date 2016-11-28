@@ -2,7 +2,7 @@
 title: "Monitoring"
 layout: page
 cat: "ug-snapshot"
-id: "monitoring"
+id: "monitoring-applications-deployed-with-roboconf"
 menus: [ "users", "user-guide", "Snapshot" ]
 ---
 

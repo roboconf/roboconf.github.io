@@ -3,7 +3,7 @@ title: "Developer Guide"
 layout: page
 cat: "dg-snapshot"
 id: "index"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 Aucune traduction en français n'est disponible pour les versions antérieures à la 1.0.  

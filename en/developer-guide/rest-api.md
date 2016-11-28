@@ -3,7 +3,7 @@ title: "Roboconf's REST API"
 layout: page
 cat: "dg-snapshot"
 id: "rest-api"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 Roboconf's DM exposes a REST API.  

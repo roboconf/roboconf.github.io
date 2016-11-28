@@ -3,238 +3,238 @@
 #
 writing-validation-tests-with-junit:
   en: user-guide-0.6/writing-validation-tests-with-junit
-  
+
 installation-tips:
   en: user-guide-0.6/installation-tips
-  
+
 writing-validation-tests-with-pax-exam:
   en: user-guide-0.6/writing-validation-tests-with-pax-exam
-  
+
 writing-validation-tests-with-scripts:
   en: user-guide-0.6/writing-validation-tests-with-scripts
-  
+
 maven-examples-documentation:
   en: user-guide-0.6/maven-examples-documentation
-  
+
 roboconf-architecture:
   en: user-guide-0.6/roboconf-architecture
-  
+
 using-docker-on-the-agent-side:
   en: user-guide-0.6/using-docker-on-the-agent-side
-  
+
 configuring-roboconf:
   en: user-guide-0.6/configuring-roboconf
-  
+
 karaf-commands-for-roboconf:
   en: user-guide-0.6/karaf-commands-for-roboconf
-  
+
 other-tools:
   en: user-guide-0.6/other-tools
-  
+
 installing-roboconf-with-debian-packages:
   en: user-guide-0.6/installing-roboconf-with-debian-packages
-  
+
 installing-roboconf-with-rpm:
   en: user-guide-0.6/installing-roboconf-with-rpm
-  
+
 using-docker-with-roboconf:
   en: user-guide-0.6/using-docker-with-roboconf
-  
+
 security:
   en: user-guide-0.6/security
-  
+
 roboconf-commands:
   en: user-guide-0.6/roboconf-commands
-  
+
 configuring-probes-for-the-autonomic:
   en: user-guide-0.6/configuring-probes-for-the-autonomic
-  
+
 specifying-automatic-reactions:
   en: user-guide-0.6/specifying-automatic-reactions
-  
+
 testing-an-application-locally:
   en: user-guide-0.6/testing-an-application-locally
-  
+
 m2r_lab:
   en: user-guide-0.6/m2r_lab
-  
+
 inter-application-dependencies:
   en: user-guide-0.6/inter-application-dependencies
-  
+
 configuring-the-web-consoles:
   en: user-guide-0.6/configuring-the-web-consoles
-  
+
 dm-templating:
   en: user-guide-0.6/dm-templating
-  
+
 eclipse-plugin:
   en: user-guide-0.6/eclipse-plugin
-  
+
 maven-plugin:
   en: user-guide-0.6/maven-plugin
-  
+
 reusability-in-models:
   en: user-guide-0.6/reusability-in-models
-    
+
 reusable-recipes-index:
   en: user-guide-0.6/reusable-recipes-index
-  
+
 how-to-write-reusable-recipes:
   en: user-guide-0.6/how-to-write-reusable-recipes
-  
+
 tutorial-local-deployment-with-docker:
   en: user-guide-0.6/tutorial-local-deployment-with-docker
-  
+
 tutorial-getting-started-with-roboconf:
   en: user-guide-0.6/tutorial-getting-started-with-roboconf
-  
+
 tutorial-first-deployment-in-the-cloud:
   en: user-guide-0.6/tutorial-first-deployment-in-the-cloud
-  
+
 tutorial-first-deployment-in-the-cloud-1:
   en: user-guide-0.6/tutorial-first-deployment-in-the-cloud-1
-  
+
 tutorial-first-deployment-in-the-cloud-2:
   en: user-guide-0.6/tutorial-first-deployment-in-the-cloud-2
-  
+
 tutorial-first-deployment-in-the-cloud-3:
   en: user-guide-0.6/tutorial-first-deployment-in-the-cloud-3
-  
+
 tutorial-first-deployment-in-the-cloud-4:
   en: user-guide-0.6/tutorial-first-deployment-in-the-cloud-4
-  
-docker-tips.html:
+
+docker-tips:
   en: user-guide-0.6/docker-tips
-  
+
 autonomic-management-with-roboconf:
   en: user-guide-0.6/autonomic-management-with-roboconf
-  
+
 tutorial-apache-storm:
-  en: user-guide-0.6/tutorial-apache-storm  
-  
-inheritance-and-variables:  
+  en: user-guide-0.6/tutorial-apache-storm
+
+inheritance-and-variables:
   en: user-guide-0.6/inheritance-and-variables
-  
+
 web-administration-screenshots:
   en: user-guide-0.6/web-administration-screenshots
-  
+
 configuring-the-loggers:
   en: user-guide-0.6/configuring-the-loggers
 
 installing-roboconf:
   en: user-guide-0.6/installing-roboconf
-  
+
 installing-everything-with-scripts:
   en: user-guide-0.6/installing-everything-with-scripts
-  
+
 installing-the-deployment-manager:
   en: user-guide-0.6/installing-the-deployment-manager
-  
+
 installing-an-agent:
   en: user-guide-0.6/installing-an-agent
-  
+
 configuring-the-deployment-manager:
   en: user-guide-0.6/configuring-the-deployment-manager
-  
+
 configuring-an-agent:
   en: user-guide-0.6/configuring-an-agent
-  
+
 configuring-the-messaging:
   en: user-guide-0.6/configuring-the-messaging
-  
+
 installing-rabbit-mq:
   en: user-guide-0.6/installing-rabbit-mq
-  
+
 preparing-virtual-images-with-an-agent:
   en: user-guide-0.6/preparing-virtual-images-with-an-agent
-  
+
 about-target-support:
   en: user-guide-0.6/about-target-support
-  
+
 list-of-deployment-targets:
   en: user-guide-0.6/list-of-deployment-targets
-  
+
 target-iaas-openstack:
   en: user-guide-0.6/target-iaas-openstack
-  
+
 target-jclouds:
   en: user-guide-0.6/target-jclouds
-  
+
 target-docker:
   en: user-guide-0.6/target-docker
-  
+
 target-embedded:
   en: user-guide-0.6/target-embedded
-  
+
 target-iaas-aws:
   en: user-guide-0.6/target-iaas-aws
-  
+
 target-iaas-vmware:
   en: user-guide-0.6/target-iaas-vmware
-  
+
 target-iaas-azure:
   en: user-guide-0.6/target-iaas-azure
-  
+
 target-in-memory:
   en: user-guide-0.6/target-in-memory
-  
+
 about-plugins:
   en: user-guide-0.6/about-plugins
-  
+
 list-of-plugins:
   en: user-guide-0.6/list-of-plugins
-  
+
 plugin-logger:
   en: user-guide-0.6/plugin-logger
-  
+
 plugin-file:
   en: user-guide-0.6/plugin-file
-  
+
 plugin-script:
   en: user-guide-0.6/plugin-script
-  
+
 plugin-puppet:
   en: user-guide-0.6/plugin-puppet
-  
+
 roboconf-dsl:
   en: user-guide-0.6/roboconf-dsl
-  
+
 monitoring-roboconf:
   en: user-guide-0.6/monitoring-roboconf
-  
+
 monitoring-applications-deployed-with-roboconf:
   en: user-guide-0.6/monitoring-applications-deployed-with-roboconf
-  
+
 editors:
   en: user-guide-0.6/editors
-  
+
 anatomy-of-a-roboconf-application:
   en: user-guide-0.6/anatomy-of-a-roboconf-application
-  
+
 faq:
   en: user-guide-0.6/faq
-  
+
 application-descriptor:
   en: user-guide-0.6/application-descriptor
-  
+
 instances-description:
   en: user-guide-0.6/instances-description
-  
+
 graph-definition:
   en: user-guide-0.6/graph-definition
-  
+
 graph-resources:
   en: user-guide-0.6/graph-resources
-  
+
 web-administration:
   en: user-guide-0.6/web-administration
-  
+
 lamp-example-part-1:
   en: user-guide-0.6/lamp-example-part-1
-  
+
 lamp-example-part-2:
   en: user-guide-0.6/lamp-example-part-2
-  
+
 index:
   en: user-guide-0.6/user-guide
   fr: guide-utilisateur-0.6/guide-utilisateur

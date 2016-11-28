@@ -3,7 +3,7 @@ title: "Life Cycle"
 layout: page
 cat: "dg-snapshot"
 id: "life-cycle"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 ## Applications

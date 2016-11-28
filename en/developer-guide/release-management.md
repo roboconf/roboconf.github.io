@@ -3,7 +3,7 @@ title: "Release Management"
 layout: page
 cat: "dg-snapshot"
 id: "release-management"
-menus: [ "developers", "developer-guide" ]
+menus: [ "developers", "developer-guide", "Snapshot" ]
 ---
 
 Unlike continuous integration, releases must be performed **locally**.  

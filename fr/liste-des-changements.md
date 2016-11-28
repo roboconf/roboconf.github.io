@@ -2,7 +2,7 @@
 title: "Liste des Changements"
 layout: page
 cat: "main"
-id: "download.changelog"
+id: "download-changelog"
 menus: [ "users", "download" ]
 ---
 
