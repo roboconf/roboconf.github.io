@@ -11,17 +11,29 @@ We discuss every of them on these pages.
 
 ## General Topics
 
-* [Roboconf ports](security-and-roboconf-ports.html)
-* [Deployment Topologies](security-and-topologies.html)
-* [Deployed Software](security-and-software.html)
+* [Roboconf messaging ports](security-and-roboconf-messaging-ports.html)
+* [Deployment topologies](security-and-topologies.html)
+* [Deployed software](security-and-software.html)
+* [SSL and certificates](security-ssl-and-certificates.html)
 
 ## Web Administration
 
-* [Web Console over HTTPS](security-and-https-console.html)
+* [Web console over HTTPS](security-and-https-console.html)
 * [Cross-Origin Resource Sharing](security-and-cors.html) (CORS)
 
 ## Karaf Distributions
 
-* [Roboconf Agents](security-and-agents.html)
+* [Remote Access to Karaf's Console](security-remote-access-to-karaf-s-console.html)
+* [Roboconf agents](security-and-agents.html)
+
+<!-- -->
+
 * [Users authentication](security-and-authentication.html)
-* [LDAP authentication](security-and-ldap.html)
+* [Authentication through properties files](security-and-authentication-with-properties-files.html)
+* [Authentication from a LDAP server](security-and-authentication-with-a-ldap-server.html)
+* [Authentication from a database](security-and-authentication-with-a-database.html)
+
+## Secured Messaging
+
+* [Changing RabbitMQ's default port](security-rabbitmq-change-the-default-port.html)
+* [Using RabbitMQ over SSL](security-rabbitmq-over-ssl.html)

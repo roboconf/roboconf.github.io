@@ -67,7 +67,8 @@ Here is a description of the various parameters.
 | message-server-username | The user name for the messaging server. | Left blank is interpreted as "guest". | yes |
 | message-server-password | The password for the messaging server. | Left blank is interpreted as "guest". | yes |
 
-All these properties are prefixed with **net.roboconf.messaging.rabbitmq.**.
+All these properties are prefixed with **net.roboconf.messaging.rabbitmq.**.  
+There are also properties related to the SSL configuration for RabbitMQ. These properties are documented [here](security-rabbitmq-over-ssl.html).
 
 
 ## In-Memory

@@ -60,7 +60,7 @@ description =
 #in-memory.ip-address-of-the-agent = 
 ```
 
-Here is a complete description of the parameters for Amazon Web Services.
+Here is a complete description of the parameters for this handler.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |

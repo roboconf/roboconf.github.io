@@ -23,5 +23,4 @@ User guides for previous releases.
 	<li><a href="../user-guide-0.3/user-guide.html">User Guide for version 0.3</a></li>
 	<li><a href="../user-guide-0.2/user-guide.html">User Guide for version 0.2</a></li>
 	<li><a href="../user-guide-0.1/user-guide.html">User Guide for version 0.1</a></li>
-</li>
 </ul>

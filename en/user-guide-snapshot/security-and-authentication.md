@@ -43,9 +43,15 @@ This login module authenticates the users and returns the users' roles.
 * The **PublickeyLoginModule** is especially used by the SSHd.  
 It uses the **etc/keys.properties** file. This file contains the users and a public key associated to each user.
 
-You may want to read these links for more information.
+You may want to read these links for more information.  
+On Karaf's web site:
 
 * [Users, groups, roles and passwords](https://karaf.apache.org/manual/latest/#_users_groups_roles_and_passwords)
 * [Passwords encryption](https://karaf.apache.org/manual/latest/#_passwords_encryption)
 * [Available REALM and login modules](https://karaf.apache.org/manual/latest/#_available_realm_and_login_modules)
-* [LDAP authentication with Roboconf](security-and-ldap.html)
+
+On Roboconf's web site:
+
+* [Authentication from a properties file](security-and-authentication-with-properties-files.html)
+* [Authentication from a LDAP server](security-and-authentication-with-a-ldap-server.html)
+* [Authentication from a database](security-and-authentication-with-a-database.html)

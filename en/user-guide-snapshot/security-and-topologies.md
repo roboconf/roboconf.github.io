@@ -1,5 +1,5 @@
 ---
-title: "Security: Roboconf Topologies"
+title: "Security :: Roboconf Topologies"
 layout: page
 cat: "ug-snapshot"
 id: "security-and-topologies"

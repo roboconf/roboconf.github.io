@@ -1,15 +1,15 @@
 ---
-title: "Security: LDAP Authentication"
+title: "Security :: LDAP Authentication"
 layout: page
 cat: "ug-snapshot"
-id: "security-and-ldap"
+id: "security-and-authentication-with-a-ldap-server"
 menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
-This document explains how Roboconf DM can be configured for LDAP authentication, using OpenLDAP.
+This document explains how Roboconf distributions can be configured for LDAP authentication, using OpenLDAP.
 
 
-## In Roboconf's DM
+## In Roboconf
 
 Prepare a (blueprint) file with the connection properties.
 
@@ -48,6 +48,9 @@ Get the Karaf shell and deploy the *blueprint* in Karaf.
 # Log into the Karaf shell
 ./client -u user -p password
 
+# Install the deployer feature
+feature:install deployer
+
 # Install it using the blueprint deployer
 bundle:install --start blueprint:file:/path/to/blueprint.xml
 
@@ -55,18 +58,8 @@ bundle:install --start blueprint:file:/path/to/blueprint.xml
 bundle:list
 ```
 
-Notice that you could also use the **deployer** feature. By default, it is not installed in Roboconf.
-
-```properties
-# Log into the Karaf shell
-./client -u user -p password
-
-# Install it using the WRAP protocol
-feature:install deployer
-```
-
-Then, copy the XML file under Karaf's **deploy** directory.  
-Or you can also create a Karaf feature that reference the blueprint.
+You could also copy the XML file under Karaf's **deploy** directory.  
+Or create a Karaf feature that reference the blueprint.
 
 Then, you can verify your users are found...
 

@@ -118,10 +118,10 @@ menus: [ "users", "user-guide", "Snapshot" ]
 	<li><a href="tutorial-local-deployment-with-docker.html">Tutorial - Local deployment with Docker</a></li>
 	<li><a href="tutorial-first-deployment-in-the-cloud.html">Tutorial - First deployment in the cloud</a></li>
 	<li><a href="tutorial-apache-storm.html">Tutorial - Deploying Apache Storm</a></li>
+	<li><a href="tutorial-monitoring-roboconf-with-apache-decanter.html">Tutorial - Monitoring Roboconf with Apache Decanter</a></li>
 	</ul>
 </div>
 
-<!--To update on every release -->
 <div class="floated">
 	<h2>Other Versions</h2>
 

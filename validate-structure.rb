@@ -68,7 +68,7 @@ def verify_md_file(id, cat, lang, location)
 
     # Lines 0 and 6 must be '---'
     if (line_num % 6 == 0) && ! line.eql?('---')
-      output_error('--- was expected.',  fullLocation, line_num)
+      output_error('--- was expected.', fullLocation, line_num)
       return ''
     end
 
@@ -76,26 +76,26 @@ def verify_md_file(id, cat, lang, location)
     if line_num == 1
       match = /title: "([^"]+)"/i.match(line)
       if ! match
-        output_error('The title attribute is missing or is invalid.',  fullLocation, line_num)
+        output_error('The title attribute is missing or is invalid.', fullLocation, line_num)
         return ''
       end
     end
 
     # Layout
     if line_num == 2 && ! line.eql?('layout: page')
-      output_error('The layout attribute is missing or invalid. "layout: page" was expected.',  fullLocation, line_num)
+      output_error('The layout attribute is missing or invalid. "layout: page" was expected.', fullLocation, line_num)
       return ''
     end
 
     # Category
     if line_num == 3 && ! line.eql?('cat: "' + cat + '"')
-      output_error('Invalid category. cat: "' + cat + '" was expected.',  fullLocation, line_num)
+      output_error('Invalid category. cat: "' + cat + '" was expected.', fullLocation, line_num)
       return ''
     end
 
     # Id
     if line_num == 4 && ! line.eql?('id: "' + id + '"')
-      output_error('Invalid ID. "id: "' + id + '" was expected.',  fullLocation, line_num)
+      output_error('Invalid ID. "id: "' + id + '" was expected.', fullLocation, line_num)
       return ''
     end
 
@@ -106,22 +106,29 @@ def verify_md_file(id, cat, lang, location)
 
       pattern = '';
       if version.eql?('last') || version.eql?('main')
-        pattern = /menus: \[ "[^"]+", "[^"]+" \]/
+        pattern = /menus: \[ "([^"]+)", "[^"]+" \]/
       elsif version.eql?('snapshot')
-        pattern = /menus: \[ "[^"]+", "[^"]+", "Snapshot" \]/
+        pattern = /menus: \[ "([^"]+)", "[^"]+", "Snapshot" \]/
       else
-        pattern = Regexp.new('menus: \[ "[^"]+", "[^"]+", "' + escapedVersion + '" \]')
+        pattern = Regexp.new('menus: \[ "([^"]+)", "[^"]+", "' + escapedVersion + '" \]')
       end
 
-      if ! line.match(pattern)
-        output_error('Invalid menu declaration. Respect the formatting and the spaces. Expected version: ' + version,  fullLocation, line_num)
+      match = pattern.match(line)
+      if ! match
+        output_error('Invalid menu declaration. Respect the formatting and the spaces. Expected version: ' + version, fullLocation, line_num)
         return ''
-      end 
+      end
+
+      menu = match.captures[0]
+      if menu != 'users' && menu != 'developers' && menu != 'project'
+        output_error('Invalid menu. "users", "developers" or "project" were expected. Found: ' + menu, fullLocation, line_num)
+        return ''
+      end
     end
 
     # Empty line (for readability)
     if line_num == 7 && ! line.empty?()
-      output_error('The 7th line must be empty (source readability).',  fullLocation, line_num)
+      output_error('The 7th line must be empty (source readability).', fullLocation, line_num)
       return ''
     end
   end
@@ -204,6 +211,12 @@ for dataFile in Dir['./_data/*.yml'] do
 
       # Extract the important parts      
       groups = my_match.captures
+
+      # FIXME: remove or update this check once we have more languages
+      if groups[0] != 'fr' && groups[0] != 'en'
+        error = output_error('Invalid language. "fr" or "en" were expected.', dataFile, line_num)
+        next
+      end
 
       # Add the file to the list of found ones
       fullLocation = './' + groups[0] + '/' + groups[1] + '.md'

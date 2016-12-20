@@ -52,7 +52,7 @@ description =
 # "ip" will be injected y Roboconf and resolved to the target machine.
 # Pre-condition: this machine must have been created by Roboconf.
 # If not, just put the IP address by hand in the file.
-docker.endpoint = http://{{ ip }}:4243
+{% raw %}docker.endpoint = http://{{ ip }}:4243{% endraw %}
 # ...
 ```
 

@@ -30,6 +30,10 @@ html, body {
 
 /* Index */
 
+#top-logo {
+	float: left;
+}
+
 #first-index {
 	text-align: center;
 	padding-top: 8em;
@@ -312,6 +316,15 @@ div.more-about {
 	border-top: solid #b03e4d 2px;
 	border-bottom: solid #b03e4d 2px;
 	padding: 14px 10px 10px;
+}
+
+/* Search bar */
+
+#search-bar {
+	width: 30%;
+	margin-top: 10px;
+	margin-right: 10px;
+	display: none;
 }
 
 /* Twitter */

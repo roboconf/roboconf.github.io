@@ -1,5 +1,5 @@
 ---
-title: "Security: Deployed Software"
+title: "Security :: Deployed Software"
 layout: page
 cat: "ug-snapshot"
 id: "security-and-software"

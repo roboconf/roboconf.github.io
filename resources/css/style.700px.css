@@ -1,0 +1,15 @@
+#top-logo {
+	float: none;
+}
+
+#top-menu {
+	float: none;
+}
+
+#search-bar {
+	width: 96%;
+}
+
+.menu {
+	position: absolute;
+}

@@ -16,16 +16,15 @@ them on [GitHub pages](https://pages.github.com/).
 To build the web site locally, you must install [Jekyll](http://jekyllrb.com/).    
 Then, use...
 
-	jekyll serve -w
+	bundle exec jekyll serve -w
 
 ... to run a web server locally, or... 
 
-	jekyll build
+	bundle exec jekyll build
 
 ... to simply generate static HTML files.  
 When using Jekyll on your own machine, you may have errors about missing gems or dependencies.
 
-	sudo gem install jemoji
-	sudo gem install github-pages
+	sudo bundle install
 
 You will find more information on [Github's web site](https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/).

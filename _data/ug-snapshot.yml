@@ -7,8 +7,26 @@ customizing-the-web-administration-look-n-feel:
 writing-validation-tests-with-junit:
   en: user-guide-snapshot/writing-validation-tests-with-junit
 
-security-and-ldap:
-  en: user-guide-snapshot/security-and-ldap
+security-and-authentication-with-a-ldap-server:
+  en: user-guide-snapshot/security-and-authentication-with-a-ldap-server
+
+security-and-authentication-with-properties-files:
+  en: user-guide-snapshot/security-and-authentication-with-properties-files
+
+security-and-authentication-with-a-database:
+  en: user-guide-snapshot/security-and-authentication-with-a-database
+
+security-rabbitmq-change-the-default-port:
+  en: user-guide-snapshot/security-rabbitmq-change-the-default-port
+
+security-rabbitmq-over-ssl:
+  en: user-guide-snapshot/security-rabbitmq-over-ssl
+
+security-remote-access-to-karaf-s-console:
+  en: user-guide-snapshot/security-remote-access-to-karaf-s-console
+
+security-ssl-and-certificates:
+  en: user-guide-snapshot/security-ssl-and-certificates
 
 security-and-authentication:
   en: user-guide-snapshot/security-and-authentication
@@ -85,8 +103,8 @@ security-and-cors:
 security-and-https-console:
   en: user-guide-snapshot/security-and-https-console
 
-security-and-roboconf-ports:
-  en: user-guide-snapshot/security-and-roboconf-ports
+security-and-roboconf-messaging-ports:
+  en: user-guide-snapshot/security-and-roboconf-messaging-ports
 
 security-and-agents:
   en: user-guide-snapshot/security-and-agents
@@ -148,6 +166,9 @@ how-to-write-reusable-recipes:
 tutorial-local-deployment-with-docker:
   en: user-guide-snapshot/tutorial-local-deployment-with-docker
   fr: guide-utilisateur/tutoriel-deploiement-local-avec-docker
+
+tutorial-monitoring-roboconf-with-apache-decanter:
+  en: user-guide-snapshot/tutorial-monitoring-roboconf-with-apache-decanter
 
 tutorial-getting-started-with-roboconf:
   en: user-guide-snapshot/tutorial-getting-started-with-roboconf

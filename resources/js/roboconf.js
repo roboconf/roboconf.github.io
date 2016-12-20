@@ -18,6 +18,27 @@ $( window ).ready( moveFooter );
 $( window ).resize( moveFooter );
 
 /**
+ * Manage the search bar.
+ */
+function switchSearchBar() {
+  $( '#search-bar' ).fadeToggle('fast');
+  return false;
+}
+
+function openSearchPage(e) {
+
+  var code = e.which;
+  if( code === 13 ) {
+    e.preventDefault();
+    var query = $( '#search-bar' ).val();
+    query = encodeURIComponent( query ).replace( /%20/g, '+' );
+    window.location = 'https://duckduckgo.com/?q=' + query + '+site%3Aroboconf.net&t=hs&ia=web', '_blank';
+  }
+
+  return false;
+}
+
+/**
  * Formats Roboconf code snippets.
  */
 function formatRoboconfSnippets() {

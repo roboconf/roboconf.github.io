@@ -172,7 +172,7 @@ Let's take an example.
 Here is the content of the **my-component.measures** file.  
 It contains two variables whose value will be injected from a properties file.
 They are here called *a-directory-to-not-delete* and *accept_passive_checks*. They are
-wrapped between *{{* and *}}* (like Mustache does).
+wrapped between {% raw %}`{{` and `}}`{% endraw %} (like Mustache does).
 
 ```properties
 # A simple query for Live Status, Nagios' protocol.

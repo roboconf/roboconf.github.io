@@ -7,6 +7,8 @@ kramdown:
   syntax_highlighter: rouge
 
 gems: [ "jemoji" ]
+safe: true
+lsi: false
 
 ##########################
 # Slides.
@@ -42,6 +44,8 @@ locales:
     menu-project: Project
     menu-users: Users
     menu-developers: Developers
+    menu-search: Search
+    search: Search...
     s-menu-download: Download
     s-menu-user-guide: User Guide
     s-menu-support: Support
@@ -56,7 +60,7 @@ locales:
     s-menu-graphics: Graphics
     s-menu-links: Links
     s-menu-dev-guide: Developer Guide
-  
+
   fr:
     icon: fr.png
     language: Français
@@ -64,6 +68,8 @@ locales:
     menu-project: Projet
     menu-users: Utilisateurs
     menu-developers: Développeurs
+    menu-search: Recherche
+    search: Rechercher...
     s-menu-download: Télécharger
     s-menu-user-guide: Guide Utilisateur
     s-menu-support: Support

@@ -1,15 +1,15 @@
 ---
-title: "Security: Roboconf Agents"
+title: "Security :: Roboconf Agents"
 layout: page
 cat: "ug-snapshot"
 id: "security-and-agents"
 menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
-Roboconf agents use the same basis than the DM: Apache Karaf.  
+Roboconf agents use the same basis than the DM: [Apache Karaf](http://karaf.apache.org).  
 So, they should follow the same principles to be secured.
 
-This pages only deals with the specifics for agents.
+This page only deals with the specifics for agents.
 
 
 ## Network interface

@@ -1,5 +1,5 @@
 ---
-title: "Security: CORS"
+title: "Security :: CORS"
 layout: page
 cat: "ug-snapshot"
 id: "security-and-cors"

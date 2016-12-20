@@ -44,7 +44,7 @@ vmware.vmpassword =
 vmware.template =  
 ```
 
-Here is a complete description of the parameters for OpenStack.
+Here is a complete description of the parameters for VMWare.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
