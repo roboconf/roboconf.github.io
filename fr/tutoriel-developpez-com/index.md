@@ -1,5 +1,9 @@
 ---
-layout: null
+title: "Tutoriel pour Développez.com"
+layout: page
+cat: "main"
+id: "tutoriel-developpez.com"
+menus: [ "users", "Développez.com" ]
 ---
 
 Cloud et BigData avec Roboconf

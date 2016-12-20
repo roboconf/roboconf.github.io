@@ -240,12 +240,10 @@ end
 Dir['./**/*.md'].each do |file_name|
 
   # Exclude some files from the check.
-  # FIXME: there should be no exclusion!
   if file_name.start_with?('./slides/') ||
       file_name.start_with?('./_site/') ||
       file_name.match(/\.\/[^\/]+\/index\.md/) ||
-      file_name.eql?('./readme.md') ||
-      file_name.start_with?('./fr/tutoriel-developpez-com/')
+      file_name.eql?('./readme.md')
      next
   end
 
