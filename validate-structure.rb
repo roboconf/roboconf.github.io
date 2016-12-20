@@ -7,11 +7,11 @@
 
 # The following assertions are verified:
 # - All the files referenced in "_data/*.yml" files exist.
-# - MD files have the right layout.
-# - MD files have the right ID.
-# - MD files have a title (not empty).
-# - MD files have the right declaration of menus.
-# - MD files have the right header (properties sorted correctly).
+# - Referenced MD files have the right layout.
+# - Referenced MD files have the right ID.
+# - Referenced MD files have a title (not empty).
+# - Referenced MD files have the right declaration of menus.
+# - Referenced MD files have the right header (properties sorted correctly).
 # - Keys in MD files have the right formatting (no trailing space, right indentation).
 # - Data files do not contain duplicate keys.
 # - All the MD files are referenced in the data files.
@@ -239,7 +239,8 @@ end
 # Verify all the MD files were listed in the data file
 Dir['./**/*.md'].each do |file_name|
 
-  # Exclude some files from the check
+  # Exclude some files from the check.
+  # FIXME: there should be no exclusion!
   if file_name.start_with?('./slides/') ||
       file_name.start_with?('./_site/') ||
       file_name.match(/\.\/[^\/]+\/index\.md/) ||

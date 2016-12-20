@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 Cloud et BigData avec Roboconf
 ==============================
 
