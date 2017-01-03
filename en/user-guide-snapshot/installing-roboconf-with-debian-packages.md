@@ -85,3 +85,14 @@ Once installed, please refer to the configuration pages:
 
 * [Configuring the DM](configuring-the-deployment-manager.html)
 * [Configuring an Agent](configuring-an-agent.html)
+
+## Troubleshooting
+
+On Ubuntu 16.x, some releases of Roboconf can cause dependency problems, due to openjdk 7 which is no more supported.
+OpenJdk 7 still can be installed, as follows:
+
+```
+sudo add-apt-repository ppa:openjdk-r/ppa  
+sudo apt-get update   
+sudo apt-get install openjdk-7-jre
+```
