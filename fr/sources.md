@@ -38,10 +38,26 @@ mvn clean install -o -Dcheckstyle.skip=true
 ```
 
 Par défaut, les tests d'intégration ne sont pas exécutés lors de l'assemblage standard.    
-Pour les faire tourner, vous devez utiliser...
+Pour les faire tourner (seuls), vous devez utiliser...
 
 ```tcl
-mvn clean install -P run-integration-tests
+mvn clean install -Dit-only
+```
+
+Pour compiler la plate-forme et exécuter les tests d'intégration, vous devez utiliser...
+
+```tcl
+mvn clean install -P it-all
+```
+
+Pour faire tourner un test spécifique (unitaire ou d'intégration)...
+
+```tcl
+# Naviguer jusqu'au module
+cd ...
+
+# Ajouter la propriété ou le profil Maven adéquat
+mvn test -Dtest=*nom-partiel*
 ```
 
 Quand les projets utilisent un outil d'assemblage différent, des instructions sont données dans le *readme* du projet. 

@@ -20,6 +20,7 @@ menus: [ "developers", "developer-guide", "Snapshot" ]
 * [Supporting a new Deployement Target](supporting-a-new-deployment-target.html)
 * [Creating a new Monitoring Handler](creating-a-new-monitoring-handler.html)
 * [Creating a new Messaging Implementation](creating-a-new-messaging-implementation.html)
+* [Creating a new Web Extension](creating-a-new-web-extension.html)
 
 ## Build
 

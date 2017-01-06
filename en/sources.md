@@ -37,10 +37,26 @@ mvn clean install -o -Dcheckstyle.skip=true
 ```
 
 For the platform, integration tests are not part of the default build.  
-To run them, use...
+To run them (and only them), use...
+
+```tcl
+mvn clean install -Dit-only
+```
+
+To compile the platform and run integration tests, use...
 
 ```tcl
 mvn clean install -P it-all
+```
+
+To run a specific test (unit or integration)...
+
+```tcl
+# Get into the right module
+cd ...
+
+# Add a Maven property or profile if necessary
+mvn test -Dtest=*partial-name*
 ```
 
 When projects use a different build mechanism, it is described in the readme of the project.

@@ -153,6 +153,7 @@ import net.roboconf.core.model.runtime.Instance;
 import net.roboconf.core.model.runtime.Instance.InstanceStatus;
 import net.roboconf.plugin.api.PluginException;
 import net.roboconf.plugin.api.PluginInterface;
+import net.roboconf.target.api.TargetHandlerParameters;
 
 public class TargetVSphere implements TargetHandler {
 
@@ -165,13 +166,7 @@ public class TargetVSphere implements TargetHandler {
 	}
 
 	@Override
-	public String createMachine(
-		Map<String, String> targetProperties,
-			String messagingIp,
-			String messagingUsername,
-			String messagingPassword,
-			String rootInstanceName,
-			String applicationName )
+	public String createMachine( TargetHandlerParameters parameters )
 	throws TargetException {
 
 		logger.info( "Creating a new machine." );
@@ -188,24 +183,26 @@ public class TargetVSphere implements TargetHandler {
 	}
 
 	@Override
-	public void configureMachine(
-		Map<String,String> targetProperties,
+	public void configureMachine( 
+		TargetHandlerParameters parameters,
 		String machineId,
-		String messagingIp,
-		String messagingUsername,
-		String messagingPassword,
-		String rootInstanceName,
-		String applicationName )
+		Instance scopedInstance )
 	throws TargetException {
 
 		logger.info( "Configuring a machine." );
 	}
 
-
 	@Override
-	public boolean isMachineRunning( Map<String,String> targetProperties, String machineId )
+	public boolean isMachineRunning( TargetHandlerParameters parameters, String machineId )
 	throws TargetException {
 		return false;
+	}
+
+	@Override
+	public String retrievePublicIpAddress( TargetHandlerParameters parameters, String machineId )
+	throws TargetException {
+
+		return "127.0.0.1";
 	}
 }
 ```

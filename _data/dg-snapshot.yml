@@ -9,6 +9,9 @@ index:
 syntax-highlighting:
   en: developer-guide/syntax-highlighting
 
+creating-a-new-web-extension:
+  en: developer-guide/creating-a-new-web-extension
+
 version-management:
   en: developer-guide/version-management
 
