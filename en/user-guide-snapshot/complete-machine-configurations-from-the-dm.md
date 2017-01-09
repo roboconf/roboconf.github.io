@@ -79,7 +79,7 @@ This was tested with Ubuntu 16.04.
 
 # Configuration
 PEM_LOC=~/.ssh/your.pem
-VERSION=0.8-1.0-SNAPSHOT
+VERSION=%v_SNAP%-1.0-SNAPSHOT
 TARGET_ID=iaas-ec2
 SSH_OPTIONS="-i $PEM_LOC -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 AGENT_DEB=~/.m2/repository/net/roboconf/roboconf-dist-debian-agent/$VERSION/roboconf-dist-debian-agent-$VERSION.deb

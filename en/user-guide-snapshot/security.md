@@ -23,7 +23,8 @@ We discuss every of them on these pages.
 
 ## Karaf Distributions
 
-* [Remote Access to Karaf's Console](security-remote-access-to-karaf-s-console.html)
+* [JMX Configuration](security-and-jmx-configuration.html)
+* [Remote access to Karaf's Console](security-remote-access-to-karaf-s-console.html)
 * [Roboconf agents](security-and-agents.html)
 
 <!-- -->
