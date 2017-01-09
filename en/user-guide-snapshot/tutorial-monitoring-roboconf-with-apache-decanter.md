@@ -204,6 +204,17 @@ You should see a new menu.
 
 <img src="/resources/img/web-extension-menu.png" alt="A menu to access all the web extensions" class="gs" />
 
+You also need to indicate to Roboconf where Kibana runs.  
+Create **etc/net.roboconf.dm.web-extension.kibana.cfg** and put it the following content, with updated information.
+
+```properties
+# The base URL for applications dashboards.
+dashboard-url.applications = http://localhost:5601/app/kibana
+
+# The base URL for agent dashboards.
+dashboard-url.agents = http://localhost:5601/app/kibana
+```
+
 The **Kibana** web extension provides a list to access all the Kibana dashboards.  
 Be careful, the fact a dashboard is linked does not mean there are data in Elastic Search.
 

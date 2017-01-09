@@ -14,3 +14,16 @@ You can find more information on [Karaf's web site](https://karaf.apache.org/man
 
 In Roboconf, the JMX server is now installed by default.  
 To install it, just type in `feature:install management`. 
+
+
+## JMX over HTTP
+
+It is also possible to use HTTP to access JMX with Jolokia.  
+
+```properties
+feature:install jolokia
+```
+
+REST requests can then be sent to [http://localhost:8181/jolokia](http://localhost:8181/jolokia).  
+Check [https://karaf.apache.org/manual/latest/monitoring](https://karaf.apache.org/manual/latest/monitoring)
+for more details.
