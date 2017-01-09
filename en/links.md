@@ -47,7 +47,5 @@ menus: [ "users", "links" ]
 
 <a href="http://www.univ-grenoble-alpes.fr"><img src="/resources/img/sponsor-uga.jpg" alt="Université Grenoble-Alpes" width="260" /></a>
 &nbsp;
-<a href="http://www.ujf-grenoble.fr"><img src="/resources/img/sponsor-ujf.jpg" alt="Université Joseph Fourier" width="400" /></a>
-&nbsp;
 <a href="http://www.liglab.fr"><img src="/resources/img/sponsor-lig.jpg" alt="Laboratoire d'Informatique de Grenoble" height="180" /></a>
 
