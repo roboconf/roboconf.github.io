@@ -69,3 +69,41 @@ Applied to our example...
     ├── scripts.that.will.be.sent.to.agents.sh
     └── other resources
 ```
+
+And here is an example of `LOCAL.dm.configure.script.sh` script that
+install Java, deploys and initializes a Roboconf agents on a fresh VM.
+This was tested with Ubuntu 16.04.
+
+```properties
+#!/bin/bash
+
+# Configuration
+PEM_LOC=~/.ssh/your.pem
+VERSION=0.8-1.0-SNAPSHOT
+TARGET_ID=iaas-ec2
+SSH_OPTIONS="-i $PEM_LOC -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+AGENT_DEB=~/.m2/repository/net/roboconf/roboconf-dist-debian-agent/$VERSION/roboconf-dist-debian-agent-$VERSION.deb
+
+
+# Do not edit further, unless you know exactly what to change.
+# Upload the Debian package for the agent
+scp $SSH_OPTIONS $AGENT_DEB ubuntu@${IP_ADDRESS}:
+echo "The agent was successfully uploaded."
+
+# Connect to the agent VM
+ssh -t $SSH_OPTIONS ubuntu@${IP_ADDRESS} bash <<ENDOFSCRIPT
+
+# Install Java
+sudo add-apt-repository ppa:openjdk-r/ppa  
+sudo apt-get update
+sudo apt-get install openjdk-7-jdk -y
+	
+# Install the agent
+export DEBIAN_FRONTEND="noninteractive"
+echo "roboconf-agent roboconf-agent/target select $TARGET_ID" | sudo debconf-set-selections
+sudo dpkg -i roboconf*.deb
+
+ENDOFSCRIPT
+
+echo "Installation and configuration of the agent completed successfully."
+```
