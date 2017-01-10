@@ -25,7 +25,7 @@ description: Roboconf est une solution pour déployer des applications distribu�
 </div>
 
 <div id="last-update" class="button">
-	Dernière Mise à Jour le {{ site.time | date: '%d / %m / %Y' }}
+	Dernière mise à jour le {{ site.time | date: '%d / %m / %Y' }}
 </div>
 
 <div id="welcome-logo">

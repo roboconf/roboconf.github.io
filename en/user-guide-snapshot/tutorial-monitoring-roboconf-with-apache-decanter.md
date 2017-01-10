@@ -32,14 +32,19 @@ To make things simple, it is possible to deploy both containers on the same mach
 Lets begin with [Elastic Search](https://hub.docker.com/_/elasticsearch/).
 
 ```tcl
-docker pull elasticsearch:5.1.1
-docker run --name rbcf-elasticsearch -p 9200:9200 -d elasticsearch
+docker pull elasticsearch:5.1.1-alpine
+docker run --name rbcf-elasticsearch -p 9200:9200 -d elasticsearch:5.1.1-alpine -E "http.host=0.0.0.0" -E "transport.host=127.0.0.1"
 ```
 
 By default, the container exposes the ports 9200 and 9300.  
 9300 is the port to retrieve data. The Kibana container will contact it
 locally. On the other hand, the port 9200 is used to inject data. It will be
 used by remote Roboconf agents. This is why we make it available at the host level.
+
+Notice that we start Elastic Search in development mode.  
+If you want to build a cluster of Elastic Search nodes, you may have to
+[upgrade settings of the host system](https://www.elastic.co/guide/en/elasticsearch/reference/current/system-config.html),
+even when you use Docker.
 
 If one wants to make data persistent, use a volume.
 
@@ -52,7 +57,7 @@ It must be started after Elastic Search.
 
 ```tcl
 docker pull kibana:5.1.1
-docker run --name rbcf-kibana --link rbcf-elasticsearch:elasticsearch -p 5601:5601 -d kibana
+docker run --name rbcf-kibana --link rbcf-elasticsearch:elasticsearch -p 5601:5601 -d kibana:5.1.1
 ```
 
 We expose the port 5601, so that web browsers can access it.  
@@ -184,9 +189,19 @@ The JMX polling can be configured in **etc/org.apache.karaf.decanter.scheduler.s
 ## Kibana Configuration
 
 Until then, the DM and agents send data to Elastc Search.  
-Now, it would be great to visualize them. Connect to Kibana ([http://localhost:5601/app/kibana](http://localhost:5601/app/kibana)) and import [these
+Now, it would be great to visualize them. Connect to Kibana ([http://localhost:5601/app/kibana](http://localhost:5601/app/kibana)).
+Once there, create a default index. It is based on time. The time field sent by Karaf is called **@timestamp**.
+
+Then, go into the **Management** tab. Select **Saved Objects** and import [these
 predefined dashboards](/resources/tutorials/kibana_5.0__roboconf__v251116.json). This file defines dashboards.
-We then want to apply them to specific data. We can use the search bar to filter the source (e.g. `source = DM` to
+You may have to reload Kibana to view the imported data. Imports include both visualizations and dashboards.
+
+> This tutorial was written with Apache Karaf 4.0.8.  
+> Depending on the version, some field names may have changed. Just edit the JSon file and update the field
+> names if necessary.
+
+We then want to apply them to specific data.  
+We can use the search bar to filter the source (e.g. `source = DM` to
 visualize data from the DM).
 
 

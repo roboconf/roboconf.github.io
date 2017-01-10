@@ -77,7 +77,7 @@
     "_type": "visualization",
     "_source": {
       "title": "Free Physical Memory",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"metric\",\"params\":{\"fontSize\":\"40\",\"handleNoResults\":true},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"FreePhysicalMemoryInMB\",\"customLabel\":\"Free Physical Memory\"}}],\"listeners\":{}}",
+      "visState": "{\"title\":\"New Visualization\",\"type\":\"metric\",\"params\":{\"fontSize\":\"40\",\"handleNoResults\":true},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"FreePhysicalMemorySize\",\"customLabel\":\"Free Physical Memory\"}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
