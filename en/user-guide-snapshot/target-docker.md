@@ -245,6 +245,26 @@ If you need support for new options, or if one does not work, please
 [submit a feature request and/or a bug report](https://github.com/roboconf/roboconf-platform/issues).
 
 
+## Docker Environment Variables
+
+It is possible to pass environment variables when the DM starts a Docker container.  
+Such variables must be prefixed with **docker.option.env.**. It is also possible few
+place holders in values.
+
+Example:
+
+```properties
+# "VAR=value"
+docker.option.env.VAR = value
+
+#  AGENT_APPLICATION_NAME="application name injected by the DM"
+docker.option.env.AGENT_APPLICATION_NAME = <application-name>
+
+#  AGENT_SCOPED_INSTANCE_PATH="scoped instance path injected by the DM"
+docker.option.env.AGENT_SCOPED_INSTANCE_PATH = <scoped-instance-path>
+```
+
+
 ## Docker RUN with Roboconf
 
 This section clarified the way Roboconf creates Docker containers.  

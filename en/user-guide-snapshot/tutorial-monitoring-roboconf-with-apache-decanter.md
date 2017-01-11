@@ -200,9 +200,14 @@ You may have to reload Kibana to view the imported data. Imports include both vi
 > Depending on the version, some field names may have changed. Just edit the JSon file and update the field
 > names if necessary.
 
-We then want to apply them to specific data.  
-We can use the search bar to filter the source (e.g. `source = DM` to
-visualize data from the DM).
+You can then open the imported dashboard under the **visualize** tab.
+
+<img src="/resources/img/kibana-dashboard-example.png" alt="Kibana dashboards" class="gs" />
+
+What we want then is to apply specific data.  
+Example: what are the metrics for machine in this application? We can use the search bar to filter the source (e.g. `source = DM` to
+visualize data from the DM, `source=agent AND app=my app` for a specific application, etc).
+Or we can use shortcut links provided by Roboconf's web administration.
 
 
 ## Roboconf's Web Administration
@@ -224,10 +229,10 @@ Create **etc/net.roboconf.dm.web.extension.kibana.cfg** and put it the following
 
 ```properties
 # The base URL for applications dashboards.
-dashboard-url-applications = http://localhost:5601/app/kibana
+dashboard-url-applications = http://localhost:5601/app/kibana#/dashboard/Global-Dashboard
 
 # The base URL for agent dashboards.
-dashboard-url-agents = http://localhost:5601/app/kibana
+dashboard-url-agents = http://localhost:5601/app/kibana#/dashboard/Global-Dashboard
 ```
 
 The **Kibana** web extension provides a list to access all the Kibana dashboards.  

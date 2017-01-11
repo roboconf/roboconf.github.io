@@ -35,7 +35,8 @@ Now, install RabbitMQ by following [the user guide](installing-rabbit-mq.html).
 You can also use [www.cloudamqp.com](https://www.cloudamqp.com/) with a free account.
 
 > Notice that the HTTP messaging also works with local Docker containers.  
-> The only thing to do is to set the IP address of the DM to 172.17.42.1 in the **etc/net.roboconf.messaging.http.cfg** file.
+> The only thing to do is to set the IP address of the DM to 172.17.0.1 (172.17.42.1 in former Docker versions)
+> in the **etc/net.roboconf.messaging.http.cfg** file.
 
 
 ## DM Configuration

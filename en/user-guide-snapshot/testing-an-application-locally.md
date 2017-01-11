@@ -95,7 +95,7 @@ in-memory.ip-address-of-the-agent = your.ip.address
 
 Generally, Docker sets up a local network interface which is a kind of *localhost* alias, but 
 restricted to the same sub-net than Docker containers. Generally, this interface is associated with
-the **172.17.42.1** IP address. So, if you only deploy Docker containers, you can force the IP address to 172.17.42.1.
+the **172.17.0.1** IP address (172.17.42.1 in former Docker versions). So, if you only deploy Docker containers, you can force the IP address to 172.17.42.1.
 See [this page](http://docs.docker.com/engine/userguide/networking/) for more details about Docker network
 configuration.
 
