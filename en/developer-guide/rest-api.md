@@ -13,6 +13,8 @@ To be updated once version 0.8 is released.
 
 <!--
 
+TODO: add the web socket too.
+
 | Roboconf Version | Web Description | swagger.json file |
 | :--------------: | :-----------------------: | :---------------: |
 | 0.8 | <a href="/swagger/index.html?url=http://repo1.maven.org/maven2/net/roboconf/roboconf-dm-rest-services/0.8/roboconf-dm-rest-services-0.8-swagger.json">Swagger UI</a> | <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-dm-rest-services/0.8/roboconf-dm-rest-services-0.8-swagger.json">here</a> |

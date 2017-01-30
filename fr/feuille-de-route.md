@@ -10,15 +10,14 @@ Roboconf a démarré en tant que prototype de recherche et est maintenant en cou
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
 
-* **Pour Décembre 2016**
+* **Pour Avril 2017**
 
-	* Installations multi-tenants. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Compléter la messagerie pour des échanges sécurisés avec SSL.
-	* Revoir la politique de sécurité liée aux CORS. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Procédures pour le changement d'environnements.
-	* Personnalisation de l'apparence de l'administration web. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Internationalisation de l'administration web. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Implémenter une cible de déploiement pour OCCI Infrastructure. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Gestion des environnements et des « secrets ».
+	* Conditions complexes pour l'autonomique.
+	* Contrôle des décisions automatisées (formulaire de validation).
+	* Authentification des utilisateurs dans la console web.
+	* Vidéos de promotion.
 
 
 * **Pour Plus Tard**
@@ -31,7 +30,6 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Ajouter des quotas affinés pour l'autonomique côté DM.
 	* Gérer la migration d'applications (déploiement continu).
 	* Créer une extension pour Jenkins.
-	* Implémenter une cible de déploiement SSH.
 
 
 * **Ouvert à Contributions**
@@ -42,4 +40,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Etudier le support de TOSCA.
 
 
-Roboconf 0.8 devrait en décembre 2016.
+Roboconf 0.9 devrait être disponible en avril 2017.

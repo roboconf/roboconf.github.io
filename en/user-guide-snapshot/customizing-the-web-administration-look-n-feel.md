@@ -31,7 +31,7 @@ Be careful, these files must have a specific name.
 
 ## How to use our LESS file?
 
-1. Get our [LESS file](https://github.com/roboconf/roboconf-web-administration/blob/master/src/roboconf.less) from the web administration's Git repository.
+1. Get our [LESS file](https://raw.githubusercontent.com/roboconf/roboconf-web-administration/master/src/roboconf.less) from the web administration's Git repository.
 2. Update the LESS variables at the beginning of the file.  
 Customization is only about colors for the moment.
 

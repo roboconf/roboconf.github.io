@@ -74,8 +74,36 @@ And here is an example of `LOCAL.dm.configure.script.sh` script that
 install Java, deploys and initializes a Roboconf agents on a fresh VM.
 This was tested with Ubuntu 16.04.
 
+> Notice we first ping (and wait) the target machine.  
+> Indeed, on EC2, a VM, even once created, may take few seconds to become reachable from the outside.
+
 ```properties
 #!/bin/bash
+
+# Wait for the target machine to be reachable.
+# We try ten times and wait 3 seconds between every ping.
+((count = 10))
+while [[ $count -ne 0 ]] ; do
+    ping -c 1 ${IP_ADDRESS}
+    rc=$?
+    if [[ $rc -eq 0 ]] ; then
+        ((count = 1))
+    else
+      sleep 3
+    fi
+    ((count = count - 1))
+done
+
+
+# Decide what to do
+if [[ $rc -eq 0 ]] ; then
+    echo `say The internet is back up.`
+else
+    echo `say Timeout.`
+    # You may notice a system service that configuration failed
+    exit 2
+fi
+
 
 # Configuration
 PEM_LOC=~/.ssh/your.pem

@@ -15,15 +15,14 @@ The roadmap for the next months covers several aspects.
 -->
 
 
-* **For December 2016**
+* **For April 2017**
 
-	* Multi-tenant installations. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Upgrade Roboconf's messaging with SSL support.
-	* CORS policy review. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Environment switch procedures.
-	* Customization of the look'n'feel of the web administration. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Internationalization of the web administration. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Implement a deployment target for OCCI Infrastructure. &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Environment and secrets management.
+	* Complex conditions for the autonomic.
+	* Autonomic decision control (validation form).
+	* User authentication in the web console.
+	* Promotion videos.
 
 
 * **Items for Later**
@@ -36,7 +35,6 @@ The roadmap for the next months covers several aspects.
 	* Add fine-grained quotas for the autonomic on the DM's side.
 	* Support applications migration (continuous deployment).
 	* Create a Jenkins plugin.
-	* Implement a SSH target.
 
 
 * **For Contributions**
@@ -47,4 +45,4 @@ The roadmap for the next months covers several aspects.
 	* Study TOSCA support.
 
 
-Roboconf 0.8 will be released in December 2016.
+Roboconf 0.9 will be released in April 2017.

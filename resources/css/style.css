@@ -9,6 +9,10 @@ html, body {
 	height: 100%;
 }
 
+hr.darker {
+	border-color: #CCCCCC;
+}
+
 .button {
 	display: inline-block;
 	-webkit-border-radius: 5px;

@@ -66,4 +66,3 @@ A lot of tiny enhancements have been brought to this new version.
 And many bugs were fixed too. Please, refer to the 
 [release notes](https://github.com/roboconf/roboconf-platform/issues?utf8=%E2%9C%93&q=milestone%3A0.3)
 for details.
-
