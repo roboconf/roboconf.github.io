@@ -8,46 +8,47 @@ menus: [ "users", "download" ]
 
 Cette page liste les nouvelles fonctionnalités et améliorations apportées à Roboconf 0.7.
 
+<!-- FIXME: all the links should point to 0.8. --> 
 
-## Security
 
-An important work has been done about security.
+## Securité
 
-* Enable or disable [CORS support](../user-guide-0.8/security-and-cors.html) for the REST clients.
-* Specify [the network interface](../user-guide-0.8/security-and-agents.html) for Roboconf agents.
-* User authentication for CLI with various back-ends
-([properties files](../user-guide-0.8/security-and-authentication-with-properties-files.html),
-[LDAP server](../user-guide-0.8/security-and-authentication-with-a-ldap-server.html),
-[database](../user-guide-0.8/security-and-authentication-with-a-database.html)).
-* [Configure the web console for HTTPS](../user-guide-0.8/security-and-https-console.html).
+Plusieurs travaux ont été menés concernant la sécurité.
 
-<img src="/resources/img/nn-0.8-web-console-in-https.png" alt="Web Console in HTTPS" class="gs" />
+* Activer ou désactiver le support des « [CORS](../user-guide/security-and-cors.html) » pour les clients REST.
+* Pouvoir spécifier [l'interface réseau](../user-guide/security-and-agents.html) utilisée par les agents Roboconf.
+* Authentifier les utilisateurs en ligne de commande depuis diverses soruces
+([fichiers de propriétés](../../en/user-guide/security-and-authentication-with-properties-files.html),
+[annuaire LDAP](../../en/user-guide/security-and-authentication-with-a-ldap-server.html),
+[base de données](../../en/user-guide/security-and-authentication-with-a-database.html)).
+* [Configurer la console web en HTTPS](../../en/user-guide/security-and-https-console.html).
 
-Other tasks are planned about security for the next version.
+<img src="/resources/img/nn-0.8-web-console-in-https.png" alt="Console web en HTTPS" class="gs" />
+
+D'autres chantiers sont prévus sur la sécurité pour la prochaine version.
 <br />
 <div><hr class="darker" /></div>
 
 
-## New Deployment Topologies
+## Nouvelles Topologies de Déploiement
 
-Several deployment topologies are now possible with Roboconf.  
-The last upgrade was about introducing [Roboconf domains](../user-guide-0.8/roboconf-domains.html).
+De nouvelles topologies de déploiement sont désormais possibles avec Roboconf.  
+La notion de [domaines Roboconf](../../en/user-guide/roboconf-domains.html) en constitue l'un des ressorts.
 
-<img src="/resources/img/nn-0.8-en-roboconf-domains--same-messaging.png" alt="An installation with several DMs" class="gs" />
+<img src="/resources/img/nn-0.8-fr-roboconf-domains--same-messaging.png" alt="Installation avec plusieurs DMs" class="gs" />
 
-Please, refer to this [page](../user-guide-0.8/roboconf-domains.html) for more examples.
+Vous pouvez vous reporter sur cette [page](../../en/user-guide/roboconf-domains.html) pour de plus amples détails.
 <br />
-
 <div><hr class="darker" /></div>
 
 
-## Internationalization of the Web Administration
+## Internationalisation de la Console d'Administration
 
-The web administration has been internationalized.  
+La console web d'administration peut désormais être affichée en plusieurs langues.
 
-<img src="/resources/img/nn-0.8-i18n.png" alt="Internationalization of the web console" class="gs" />
+<img src="/resources/img/nn-0.8-i18n.png" alt="Internationalisation de la console web" class="gs" />
 
-Administrators can set the default language in the [DM's preferences](../user-guide-0.8/roboconf-preferences.html).
+La langue utilisée peut être définie par les administrateurs dans [les préférences du DM](../../en/user-guide/roboconf-preferences.html).
 
 ```properties
 # The user language (e.g. for the web console).
@@ -56,103 +57,105 @@ Administrators can set the default language in the [DM's preferences](../user-gu
 #  - EN (for English)
 #  - FR (for French)
 #
-user.language = EN
+user.language = FR
 ```
 
-For the moment, English and French translations have been provided.
+Pour le moment, seuls le français et l'anglais sont disponibles.
 <div><hr class="darker" /></div>
 
 
-## Customizing the Look'n'Feel of the Web Administration
+## Personnalisation de la Console d'Administration
 
-It is now possible to add
-[its own CSS file and image banner](../user-guide-snapshot/customizing-the-web-administration-look-n-feel.html)
-for Roboconf's web administration.
+Il est maintenant possible d'utiliser ses [propres feuilles de style et bannière](../../en/user-guide-snapshot/customizing-the-web-administration-look-n-feel.html)
+dans la console web d'administration.
 
-<img src="/resources/img/nn-0.8-customizing-the-web-administration.png" alt="Web administration with custom CSS and banner image" class="gs" />
+<img src="/resources/img/nn-0.8-customizing-the-web-administration.png" alt="Console web avec feuille de style et bannière personnalisées" class="gs" />
 <div><hr class="darker" /></div>
 
 
-## Documentation for our REST API
+## Documentation de notre REST API
 
-There is now a [Swagger UI installation](../developer-guide/rest-api.html) on our web site to get information
-about our REST API and web socket.
+Le site web de Roboconf héberge désormais une page avec [Swagger UI](../developer-guide/rest-api.html)
+qui documente notre API REST, ainsi que notre web socket.
 
 <img src="/resources/img/nn-0.8-swagger-ui-for-roboconf.png" alt="Swagger UI" class="gs" />
 <div><hr class="darker" /></div>
 
 
-## Mavenized Deployment Targets
+## Artefacts Maven pour les Cibles de Déploiement
 
-Deployment targets could already be defined in the web administration or embedded
-in application templates. They can now be packaged independently and managed as
-[stand-alone Maven artifacts](http://localhost:4000/en/user-guide-snapshot/maven-plugin-for-targets.html)
-that you can deploy with the web administration.
+Les cibles de déploiement pouvaient jusqu'à présent être créées de 2 manières :
+en passant par la console web, ou bien en les déployant au sein d'un modèle d'application.
+Elles peuvent dorénavant être empaquetées dans leurs 
+[propres modules Maven](../../en//user-guide-snapshot/maven-plugin-for-targets.html),
+et installées de manière indépendante via la console web.
 
-<img src="/resources/img/nn-0.8-targets-upload.png" alt="Deployment targets" class="gs" />
+<img src="/resources/img/nn-0.8-targets-upload.png" alt="Cibles de déploiement" class="gs" />
 <div><hr class="darker" /></div>
 
 
-## Fine-Grained Associations for Deployment Targets
+## Associations Affinées des Cibles de Déploiement
 
-Deployment targets can be associated with applications (default setting),
-with specific instances...
+Les cibles de déploiement peuvent être associées avec une application (choix par défaut),
+avec des instances spécifiques....
 
-<img src="/resources/img/nn-0.8-fine-grained-associations-for-targets-2.png" alt="Associate targets with instances" class="gs" />
+<img src="/resources/img/nn-0.8-fine-grained-associations-for-targets-2.png" alt="Association avec des instances" class="gs" />
 
-...  and now with components.  
-This brings a lot more flexibility when defining these associations.
+...  et désormais avec des composants.  
+Roboconf propose ainsi une approche plus flexible pour ces associations.
 
-<img src="/resources/img/nn-0.8-fine-grained-associations-for-targets-1.png" alt="Associate targets with components" class="gs" />
+<img src="/resources/img/nn-0.8-fine-grained-associations-for-targets-1.png" alt="Association avec des composants" class="gs" />
 <div><hr class="darker" /></div>
 
 
-## Monitoring with Apache Decanter and ELK
+## Supervision avec Apache Decanter et ELK
 
-We wrote a [tutorial](../user-guide-snapshot/tutorial-monitoring-roboconf-with-apache-decanter.html)
-to show how to use Apache Decanter, Elastic Search and
-Kibana to monitor Roboconf installations. For the moment, we mainly monitor
-OS and agent metrics. Applications monitoring will be shown later.
+Nous avons rédigé un [tutoriel](../guide-utilisateur/tutoriel-superviser-roboconf-avec-apache-decanter.html)
+qui illustre la supervision de Roboconf avec [Apache Decanter](https://karaf.apache.org/manual/decanter/latest-1/),
+[Elastic Search](https://www.elastic.co) et [Kibana](https://www.elastic.co/products/kibana).
+Pour le moment, nous ne monitorons que le système hôte et des métriques de l'agent.
+Le monitoring des applications viendra plus tard.
 
-<img src="/resources/img/nn-0.8-kibana-dashboard-example.png" alt="Example of Kibana dashboard for Roboconf" class="gs" />
+<img src="/resources/img/nn-0.8-kibana-dashboard-example.png" alt="Exemple de tableau de bord Kibana pour Roboconf" class="gs" />
 <div><hr class="darker" /></div>
 
 
-## Advanced Machine Configurations
+## Configuration Avancée des Machines
 
-Configuration scripts can now be added to deployment targets to complete machine configurations.
+Il est maintenant possible d'enrichir les cibles de déploiements de scripts qui
+peaufineront la configuration des machines.
 
-* On the agent's side, these scripts can be use to format and mount partitions.
-* On the DM's side, these scripts can be used to complete the configuration
-of a machine (e.g. passing parameters to an agent, or even uploading and installing an agent).
+* Du côté des agents, un tel script peut être utilisé pour partitionner et monter des partitions.
+* Du côté du DM, de tels scripts peuvent servir à compléter la configuration d'une machine
+(exemple : passage de paramètres à l'agent, voire même envoi et installation d'un agent).
 
-<img src="/resources/img/nn-0.8-advanced-machine-configurations.png" alt="Completing machine configuration" class="gs" />
+<img src="/resources/img/nn-0.8-advanced-machine-configurations.png" alt="Configuration avancée d'une machine" class="gs" />
 <div><hr class="darker" /></div>
 
 
-## 1-\* Bindings for Inter-Application Links
+## Relations 1-\* pour les Liens Inter-Applications
 
-Formerly, we could only bind two applications together (1-1 relation).  
-Now, these bounds can follow a 1-* relation.
+Les versions précédentes de Roboconf limitaient ces relations (1-1).  
+On peut désormais lier plusieurs applications ensemble (relations 1-\*).
 
-<img src="/resources/img/nn-0.8-multi-bindings.png" alt="1-n relations for inter-application links" class="gs" />
+<img src="/resources/img/nn-0.8-multi-bindings.png" alt="Relations 1-n pour les liens inter-applications" class="gs" />
 <div><hr class="darker" /></div>
 
 
-## Object Storage Configuration in Openstack
+## Stockage Objet pour Openstack
 
-Roboconf can now create domain in Openstack's Swift component.
+Roboconf peut maintenant créer des domaines dans le composant Swift d'Openstack.
 
-<img src="/resources/img/openstack.jpg" alt="Support of object storage in Openstack" class="gs" />
+<img src="/resources/img/openstack.jpg" alt="Stockage objet pour Openstack" class="gs" />
 <div><hr class="darker" /></div>
 
 
-## OCCI Infrastructure Support
+## Support d'OCCI Infrastructure
 
-Roboconf can now manage cloud infrastructures by using the REST specification OCCI
-Infrastructure.
+Roboconf est maintenant capable de piloter des infrastructures cloud au travers de la spécification
+[OCCI Infrastructure](http://occi-wg.org/about/specification/).
 
-<img src="/resources/img/nn-0.8-occi-support.png" alt="Support OCCI Infrastructure" class="gs" />
+<img src="/resources/img/nn-0.8-occi-support.png" alt="Support d'OCCI Infrastructure" class="gs" />
 <div><hr class="darker" /></div>
 
 

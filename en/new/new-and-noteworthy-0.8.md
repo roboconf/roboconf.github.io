@@ -8,18 +8,20 @@ menus: [ "users", "download" ]
 
 This page lists the enhancements and new features brought by Roboconf 0.8.
 
+<!-- FIXME: all the links should point to 0.8. -->
+
 
 ## Security
 
 An important work has been done about security.
 
-* Enable or disable [CORS support](../user-guide-0.8/security-and-cors.html) for the REST clients.
-* Specify [the network interface](../user-guide-0.8/security-and-agents.html) for Roboconf agents.
+* Enable or disable [CORS support](../user-guide/security-and-cors.html) for the REST clients.
+* Specify [the network interface](../user-guide/security-and-agents.html) for Roboconf agents.
 * User authentication for CLI with various back-ends
-([properties files](../user-guide-0.8/security-and-authentication-with-properties-files.html),
-[LDAP server](../user-guide-0.8/security-and-authentication-with-a-ldap-server.html),
-[database](../user-guide-0.8/security-and-authentication-with-a-database.html)).
-* [Configure the web console for HTTPS](../user-guide-0.8/security-and-https-console.html).
+([properties files](../user-guide/security-and-authentication-with-properties-files.html),
+[LDAP server](../user-guide/security-and-authentication-with-a-ldap-server.html),
+[database](../user-guide/security-and-authentication-with-a-database.html)).
+* [Configure the web console for HTTPS](../user-guide/security-and-https-console.html).
 
 <img src="/resources/img/nn-0.8-web-console-in-https.png" alt="Web Console in HTTPS" class="gs" />
 
@@ -31,11 +33,11 @@ Other tasks are planned about security for the next version.
 ## New Deployment Topologies
 
 Several deployment topologies are now possible with Roboconf.  
-The last upgrade was about introducing [Roboconf domains](../user-guide-0.8/roboconf-domains.html).
+The last upgrade was about introducing [Roboconf domains](../user-guide/roboconf-domains.html).
 
 <img src="/resources/img/nn-0.8-en-roboconf-domains--same-messaging.png" alt="An installation with several DMs" class="gs" />
 
-Please, refer to this [page](../user-guide-0.8/roboconf-domains.html) for more examples.
+Please, refer to this [page](../user-guide/roboconf-domains.html) for more examples.
 <br />
 
 <div><hr class="darker" /></div>
@@ -47,7 +49,7 @@ The web administration has been internationalized.
 
 <img src="/resources/img/nn-0.8-i18n.png" alt="Internationalization of the web console" class="gs" />
 
-Administrators can set the default language in the [DM's preferences](../user-guide-0.8/roboconf-preferences.html).
+Administrators can set the default language in the [DM's preferences](../user-guide/roboconf-preferences.html).
 
 ```properties
 # The user language (e.g. for the web console).
@@ -110,8 +112,9 @@ This brings a lot more flexibility when defining these associations.
 ## Monitoring with Apache Decanter and ELK
 
 We wrote a [tutorial](../user-guide-snapshot/tutorial-monitoring-roboconf-with-apache-decanter.html)
-to show how to use Apache Decanter, Elastic Search and
-Kibana to monitor Roboconf installations. For the moment, we mainly monitor
+to show how to use [Apache Decanter](https://karaf.apache.org/manual/decanter/latest-1/),
+[Elastic Search](https://www.elastic.co) and [Kibana](https://www.elastic.co/products/kibana)
+to monitor Roboconf installations. For the moment, we mainly monitor
 OS and agent metrics. Applications monitoring will be shown later.
 
 <img src="/resources/img/nn-0.8-kibana-dashboard-example.png" alt="Example of Kibana dashboard for Roboconf" class="gs" />
@@ -149,8 +152,8 @@ Roboconf can now create domain in Openstack's Swift component.
 
 ## OCCI Infrastructure Support
 
-Roboconf can now manage cloud infrastructures by using the REST specification OCCI
-Infrastructure.
+Roboconf can now manage cloud infrastructures by using the REST specification
+[OCCI Infrastructure](http://occi-wg.org/about/specification/).
 
 <img src="/resources/img/nn-0.8-occi-support.png" alt="Support OCCI Infrastructure" class="gs" />
 <div><hr class="darker" /></div>

@@ -21,6 +21,7 @@ The roadmap for the next months covers several aspects.
 	* Environment and secrets management.
 	* Complex conditions for the autonomic.
 	* Autonomic decision control (validation form).
+	* Add JMX probes in Roboconf.
 	* User authentication in the web console.
 	* Promotion videos.
 

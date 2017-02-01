@@ -16,6 +16,7 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Gestion des environnements et des « secrets ».
 	* Conditions complexes pour l'autonomique.
 	* Contrôle des décisions automatisées (formulaire de validation).
+	* Ajouter des sondes JMX dans Roboconf.
 	* Authentification des utilisateurs dans la console web.
 	* Vidéos de promotion.
 

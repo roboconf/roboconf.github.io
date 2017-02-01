@@ -184,6 +184,7 @@ tutorial-local-deployment-with-docker:
 
 tutorial-monitoring-roboconf-with-apache-decanter:
   en: user-guide-snapshot/tutorial-monitoring-roboconf-with-apache-decanter
+  fr: guide-utilisateur/tutoriel-superviser-roboconf-avec-apache-decanter
 
 tutorial-getting-started-with-roboconf:
   en: user-guide-snapshot/tutorial-getting-started-with-roboconf

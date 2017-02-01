@@ -17,6 +17,40 @@ Pour rappel, les derniers liens sont disponibles [là](telecharger.html).
 		<th>Liens</th>
 	</tr>
 	
+	<!-- Version 0.7 -->
+	<tr>
+		<td>0.7</td>
+		<td>20 Juillet 2016</td>
+		<td>
+			Deployment Manager: 
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.7/roboconf-karaf-dist-dm-0.7.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.7/roboconf-karaf-dist-dm-0.7.zip">Zip</a> (~ 31 MB)
+			<br />
+			Agent: 
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.7/roboconf-karaf-dist-agent-0.7.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.7/roboconf-karaf-dist-agent-0.7.zip">Zip</a> (~ 25 MB)
+
+			<br /><br />
+			<a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.7/">Site de mise à jour</a> pour Eclipse
+		</td>
+		<td>
+			<span class="octicon octicon-telescope"></span>
+			<a href="nouveautes/principales-nouveautes-0.7.html">Nouveautés</a>
+			&nbsp;
+			<span class="octicon octicon-person"></span>
+			<a href="guide-utilisateur-0.7/guide-utilisateur.html">Guide Utilisateur</a>
+			
+			<br /><br />
+			<span class="octicon octicon-mark-github"></span> Tickets: 
+			
+			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.7">Plate-forme</a>
+			-
+			<a href="https://github.com/roboconf/roboconf-web-administration/issues?q=milestone%3A0.7">Administration web</a>
+			-
+			<a href="https://github.com/roboconf/roboconf-eclipse/issues?q=milestone%3A0.7">Eclipse</a>
+		</td>
+	</tr>
+	
 	<!-- Version 0.6.1 -->
 	<tr>
 		<td>0.6.1</td>
@@ -38,7 +72,7 @@ Pour rappel, les derniers liens sont disponibles [là](telecharger.html).
 			<a href="nouveautes/principales-nouveautes-0.6.html">Nouveautés</a>
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="guide-utilisateur/guide-utilisateur.html">Guide Utilisateur</a>
+			<a href="guide-utilisateur-0.6/guide-utilisateur.html">Guide Utilisateur</a>
 			
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Tickets: 
@@ -70,7 +104,7 @@ Pour rappel, les derniers liens sont disponibles [là](telecharger.html).
 			<a href="nouveautes/principales-nouveautes-0.6.html">Nouveautés</a>
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="guide-utilisateur/guide-utilisateur.html">Guide Utilisateur</a>
+			<a href="guide-utilisateur-0.6/guide-utilisateur.html">Guide Utilisateur</a>
 			
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Tickets: 
@@ -104,7 +138,7 @@ Pour rappel, les derniers liens sont disponibles [là](telecharger.html).
 			<a href="nouveautes/principales-nouveautes-0.5.html">Nouveautés</a>
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="guide-utilisateur/guide-utilisateur.html">Guide Utilisateur</a>
+			<a href="guide-utilisateur-0.5/guide-utilisateur.html">Guide Utilisateur</a>
 			
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Tickets: 
@@ -136,7 +170,7 @@ Pour rappel, les derniers liens sont disponibles [là](telecharger.html).
 			<a href="nouveautes/principales-nouveautes-0.4.html">Nouveautés</a>
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="guide-utilisateur/guide-utilisateur.html">Guide Utilisateur</a>
+			<a href="guide-utilisateur-0.4/guide-utilisateur.html">Guide Utilisateur</a>
 			
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Tickets: 
