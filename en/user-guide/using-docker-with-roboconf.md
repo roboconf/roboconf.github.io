@@ -60,7 +60,7 @@ description =
 
 ## Docker Container managed by Roboconf Agents
 
-The third use case is probably the one that interests Docker users.  
+The third use case is probably **the one that interests Docker users**.  
 Indeed, the two previous ones are more interesting for Roboconf users (e.g. for tests).
 
 This third approach consists in having Roboconf agents managing Docker containers.  

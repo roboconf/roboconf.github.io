@@ -17,7 +17,7 @@ But for those who would like to manage this through code, it is possible to use 
 directly in JUnit tests. This page describes how to do this.
 
 Notice than there are alternatives to this solution.  
-They are listed on the [other tools](other-tools.html) page.
+They are listed on the [tooling](all-the-tools.html) page.
 
 
 ## New Maven Project
@@ -43,7 +43,7 @@ It imports the required Roboconf dependencies.
 	<version>1.0-SNAPSHOT</version>
 	
 	<properties>
-		<roboconf.version>0.7</roboconf.version>
+		<roboconf.version>0.8</roboconf.version>
 	</properties>
 
 	<dependencies>

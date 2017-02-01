@@ -11,7 +11,7 @@ menus: [ "users", "user-guide" ]
 	Markdown does not support it.
  -->
 
-> This is the user guide for Roboconf 0.7.
+> This is the user guide for Roboconf 0.8.
 
 
 <div class="floated">
@@ -83,8 +83,7 @@ menus: [ "users", "user-guide" ]
 	<li><a href="web-administration.html">Web Administration</a></li>
 	<li><a href="eclipse-plugins.html">The Eclipse plug-ins</a></li>
 	<li><a href="maven-plugin.html">The Maven plug-in</a></li>
-	<li><a href="karaf-commands-for-roboconf.html">Karaf Commands for Roboconf</a></li>
-	<li><a href="other-tools.html">Other Tools</a></li>
+	<li><a href="all-the-tools.html">All the Tools</a></li>
 	</ul>
 </div>
 
@@ -106,8 +105,8 @@ menus: [ "users", "user-guide" ]
 	<li><a href="security.html">Security</a></li>
 	<li><a href="inter-application-dependencies.html">Inter-Application Dependencies</a></li>
 	<li><a href="using-docker-with-roboconf.html">Using Docker with Roboconf</a></li>
-	<li><a href="using-docker-on-the-agent-side.html">Using Docker on the Agent's side</a></li>
 	<li><a href="testing-an-application-locally.html">Testing an Application Locally</a></li>
+	<li><a href="all-the-advanced-topics.html">All the Advanced Topics</a></li>
 	</ul>
 </div>
 
@@ -119,10 +118,10 @@ menus: [ "users", "user-guide" ]
 	<li><a href="tutorial-local-deployment-with-docker.html">Tutorial - Local deployment with Docker</a></li>
 	<li><a href="tutorial-first-deployment-in-the-cloud.html">Tutorial - First deployment in the cloud</a></li>
 	<li><a href="tutorial-apache-storm.html">Tutorial - Deploying Apache Storm</a></li>
+	<li><a href="tutorial-monitoring-roboconf-with-apache-decanter.html">Tutorial - Monitoring with Apache Decanter</a></li>
 	</ul>
 </div>
 
-<!--To update on every release -->
 <div class="floated">
 	<h2>Other Versions</h2>
 

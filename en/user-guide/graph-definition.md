@@ -63,6 +63,9 @@ The IaaS on which the VM is will be created is defined in the component's resour
 
 ## Graph Configuration
 
+> This page is an introduction.  
+> Please, refer to the [full DSL syntax](roboconf-dsl.html) for more details.
+
 A Roboconf project must contain an **graph** directory with the definition of a graph.  
 As a reminder, like a Java class, a Roboconf component is only a definition.
 It needs to be instantiated to be used.
@@ -182,7 +185,24 @@ Tomcat {
 }
 </code></pre>
 
-ALL the exported variables must have a value.  
+It is also possible to wrap variable values with quotes.
+
+<pre><code class="language-roboconf">
+Tomcat {
+	installer: puppet;
+	exports: ip;
+	exports: portAJP = "8009", welcome_message = "This is my welcome message, say hi!";
+}
+</code></pre>
+
+**ALL** the exported variables must have a default value.  
+These values can be overridden by instances. Empty values are possible but must be surrounded with quotes.
+
+<pre><code class="language-roboconf">
+exports: message = "";
+</code></pre>
+
+**ALL** the exported variables must have a default value.    
 Only two kinds of exceptions exist:
 
 * **ip** is a special variable name.  

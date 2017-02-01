@@ -19,7 +19,7 @@ There is an existing Maven module with a Java client for Roboconf's REST API.
 necessary.
 
 Notice than there are alternatives to this solution.  
-They are listed on the [other tools](other-tools.html) page.
+They are listed on the [tooling](all-the-tools.html) page.
 
 
 ## Create a Maven Project
@@ -45,7 +45,7 @@ It imports the required dependencies.
 	<version>1.0-SNAPSHOT</version>
 	
 	<properties>
-		<roboconf.version>0.7</roboconf.version>
+		<roboconf.version>0.8</roboconf.version>
 		<pax.exam.version>4.7.0</pax.exam.version>
 		<pax.url.aether.version>2.4.1</pax.url.aether.version>
 	</properties>

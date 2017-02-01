@@ -1,0 +1,270 @@
+#
+# User Guide Version 0.7
+#
+writing-validation-tests-with-junit:
+  en: user-guide-0.7/writing-validation-tests-with-junit
+
+user-guide-older-versions:
+  en: user-guide-0.7/user-guide-older-versions
+
+installation-tips:
+  en: user-guide-0.7/installation-tips
+
+writing-validation-tests-with-pax-exam:
+  en: user-guide-0.7/writing-validation-tests-with-pax-exam
+
+writing-validation-tests-with-scripts:
+  en: user-guide-0.7/writing-validation-tests-with-scripts
+
+maven-examples-documentation:
+  en: user-guide-0.7/maven-examples-documentation
+
+roboconf-architecture:
+  en: user-guide-0.7/roboconf-architecture
+
+using-docker-on-the-agent-side:
+  en: user-guide-0.7/using-docker-on-the-agent-side
+
+configuring-roboconf:
+  en: user-guide-0.7/configuring-roboconf
+
+karaf-commands-for-roboconf:
+  en: user-guide-0.7/karaf-commands-for-roboconf
+
+other-tools:
+  en: user-guide-0.7/other-tools
+
+installing-roboconf-with-debian-packages:
+  en: user-guide-0.7/installing-roboconf-with-debian-packages
+
+installing-roboconf-with-rpm:
+  en: user-guide-0.7/installing-roboconf-with-rpm
+
+installing-roboconf-with-docker:
+  en: user-guide-0.7/installing-roboconf-with-docker
+
+using-docker-with-roboconf:
+  en: user-guide-0.7/using-docker-with-roboconf
+
+good-practices-for-recipes:
+  en: user-guide-0.7/good-practices-for-recipes
+
+security:
+  en: user-guide-0.7/security
+
+security-and-topologies:
+  en: user-guide-0.7/security-and-topologies
+
+security-and-software:
+  en: user-guide-0.7/security-and-software
+
+security-and-https-console:
+  en: user-guide-0.7/security-and-https-console
+
+security-and-roboconf-ports:
+  en: user-guide-0.7/security-and-roboconf-ports
+
+roboconf-commands:
+  en: user-guide-0.7/roboconf-commands
+
+roboconf-commands-scheduling:
+  en: user-guide-0.7/roboconf-commands-scheduling
+
+configuring-probes-for-the-autonomic:
+  en: user-guide-0.7/configuring-probes-for-the-autonomic
+
+specifying-automatic-reactions:
+  en: user-guide-0.7/specifying-automatic-reactions
+
+testing-an-application-locally:
+  en: user-guide-0.7/testing-an-application-locally
+
+m2r_lab:
+  en: user-guide-0.7/m2r_lab
+
+inter-application-dependencies:
+  en: user-guide-0.7/inter-application-dependencies
+
+configuring-the-web-consoles:
+  en: user-guide-0.7/configuring-the-web-consoles
+
+dm-templating:
+  en: user-guide-0.7/dm-templating
+
+eclipse-plugin:
+  en: user-guide-0.7/eclipse-plugin
+
+eclipse-plugins:
+  en: user-guide-0.7/eclipse-plugins
+
+eclipse-modeling-plugin:
+  en: user-guide-0.7/eclipse-modeling-plugin
+
+maven-plugin:
+  en: user-guide-0.7/maven-plugin
+
+reusability-in-models:
+  en: user-guide-0.7/reusability-in-models
+
+reusable-recipes-index:
+  en: user-guide-0.7/reusable-recipes-index
+
+how-to-write-reusable-recipes:
+  en: user-guide-0.7/how-to-write-reusable-recipes
+
+tutorial-local-deployment-with-docker:
+  en: user-guide-0.7/tutorial-local-deployment-with-docker
+
+tutorial-getting-started-with-roboconf:
+  en: user-guide-0.7/tutorial-getting-started-with-roboconf
+
+tutorial-first-deployment-in-the-cloud:
+  en: user-guide-0.7/tutorial-first-deployment-in-the-cloud
+
+tutorial-first-deployment-in-the-cloud-1:
+  en: user-guide-0.7/tutorial-first-deployment-in-the-cloud-1
+
+tutorial-first-deployment-in-the-cloud-2:
+  en: user-guide-0.7/tutorial-first-deployment-in-the-cloud-2
+
+tutorial-first-deployment-in-the-cloud-3:
+  en: user-guide-0.7/tutorial-first-deployment-in-the-cloud-3
+
+tutorial-first-deployment-in-the-cloud-4:
+  en: user-guide-0.7/tutorial-first-deployment-in-the-cloud-4
+
+docker-tips:
+  en: user-guide-0.7/docker-tips
+
+autonomic-management-with-roboconf:
+  en: user-guide-0.7/autonomic-management-with-roboconf
+
+tutorial-apache-storm:
+  en: user-guide-0.7/tutorial-apache-storm
+
+inheritance-and-variables:
+  en: user-guide-0.7/inheritance-and-variables
+
+web-administration-screenshots:
+  en: user-guide-0.7/web-administration-screenshots
+
+configuring-the-loggers:
+  en: user-guide-0.7/configuring-the-loggers
+
+installing-roboconf:
+  en: user-guide-0.7/installing-roboconf
+
+installing-everything-with-scripts:
+  en: user-guide-0.7/installing-everything-with-scripts
+
+installing-the-deployment-manager:
+  en: user-guide-0.7/installing-the-deployment-manager
+
+installing-an-agent:
+  en: user-guide-0.7/installing-an-agent
+
+configuring-the-deployment-manager:
+  en: user-guide-0.7/configuring-the-deployment-manager
+
+configuring-an-agent:
+  en: user-guide-0.7/configuring-an-agent
+
+configuring-the-messaging:
+  en: user-guide-0.7/configuring-the-messaging
+
+installing-rabbit-mq:
+  en: user-guide-0.7/installing-rabbit-mq
+
+preparing-virtual-images-with-an-agent:
+  en: user-guide-0.7/preparing-virtual-images-with-an-agent
+
+about-target-support:
+  en: user-guide-0.7/about-target-support
+
+list-of-deployment-targets:
+  en: user-guide-0.7/list-of-deployment-targets
+
+target-iaas-openstack:
+  en: user-guide-0.7/target-iaas-openstack
+
+target-jclouds:
+  en: user-guide-0.7/target-jclouds
+
+target-docker:
+  en: user-guide-0.7/target-docker
+
+target-embedded:
+  en: user-guide-0.7/target-embedded
+
+target-iaas-aws:
+  en: user-guide-0.7/target-iaas-aws
+
+target-iaas-vmware:
+  en: user-guide-0.7/target-iaas-vmware
+
+target-iaas-azure:
+  en: user-guide-0.7/target-iaas-azure
+
+target-in-memory:
+  en: user-guide-0.7/target-in-memory
+
+about-plugins:
+  en: user-guide-0.7/about-plugins
+
+list-of-plugins:
+  en: user-guide-0.7/list-of-plugins
+
+plugin-logger:
+  en: user-guide-0.7/plugin-logger
+
+plugin-file:
+  en: user-guide-0.7/plugin-file
+
+plugin-script:
+  en: user-guide-0.7/plugin-script
+
+plugin-puppet:
+  en: user-guide-0.7/plugin-puppet
+
+roboconf-dsl:
+  en: user-guide-0.7/roboconf-dsl
+
+monitoring-roboconf:
+  en: user-guide-0.7/monitoring-roboconf
+
+monitoring-applications-deployed-with-roboconf:
+  en: user-guide-0.7/monitoring-applications-deployed-with-roboconf
+
+editors:
+  en: user-guide-0.7/editors
+
+anatomy-of-a-roboconf-application:
+  en: user-guide-0.7/anatomy-of-a-roboconf-application
+
+faq:
+  en: user-guide-0.7/faq
+
+application-descriptor:
+  en: user-guide-0.7/application-descriptor
+
+instances-description:
+  en: user-guide-0.7/instances-description
+
+graph-definition:
+  en: user-guide-0.7/graph-definition
+
+graph-resources:
+  en: user-guide-0.7/graph-resources
+
+web-administration:
+  en: user-guide-0.7/web-administration
+
+lamp-example-part-1:
+  en: user-guide-0.7/lamp-example-part-1
+
+lamp-example-part-2:
+  en: user-guide-0.7/lamp-example-part-2
+
+index:
+  en: user-guide-0.7/user-guide
+  fr: guide-utilisateur-0.7/guide-utilisateur

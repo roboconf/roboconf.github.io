@@ -1,9 +1,9 @@
 ---
 title: "Configuring the Loggers"
 layout: page
-cat: "ug-last"
+cat: "ug-0-7"
 id: "karaf-commands-for-roboconf"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.7" ]
 ---
 
 The Karaf distributions for Roboconf come with dedicated Karaf commands.  

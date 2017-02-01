@@ -105,6 +105,17 @@ Rename /myRootCopy as myRootCopy_$(NANO_TIME)
 Define mtime = $(MILLI_TIME)
 Create component as myInstance $(mtime) under /myRoot
 
+# $(FORMATTED_TIME) is a predefined variable with the time formatted by the user.
+# The variable includes a pattern to format the text, separated from the prefix by a space.
+# The date pattern follows the one of the java.text.SimpleDateFormat class.
+# See https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+Define ftime = $(FORMATTED_TIME hh:mm:ss)
+Write $(ftime) into /that/file
+
+# Be careful, the $(FORMATTED_TIME) variable must be used alone in a line.
+# To create something complex with it, use a temporary variable.
+Define my complex sentence = Something happened at $(ftime).
+
 # $(UUID) is a predefined variable that generates a random (unique) string.
 Define randomString = $(UUID)
 Create component as myInstance $(randomString) under /myRoot

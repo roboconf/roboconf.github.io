@@ -10,7 +10,7 @@ Roboconf has a target implementation for Amazon Web Services (AWS).
 It only supports the creation of *compute* VMs.
 
 To install it, open the DM's interactive mode and use one of the following options.  
-With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+With the [roboconf:target](karaf-commands-for-the-dm.html) command:
 
 ```properties
 # The version will be deduced automatically by the DM
@@ -20,8 +20,8 @@ roboconf:target aws
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.7
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-ec2/0.7
+# Here in version 0.8
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-ec2/0.8
 ```
 
 Every new VM is associated with a public IP address.  
@@ -32,10 +32,10 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for EC2
-id = <to set>
 handler = iaas-ec2
 
 # Provide a meaningful description of the target
+id = a unique identifier
 name = 
 description = 
 
@@ -96,8 +96,8 @@ Block storage parameters are detailed further.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| id | The target's ID. | none, must be set | yes |
 | handler | Determines the target handler to use | none, must be "iaas-ec2" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | ec2.endpoint | URL of the compute service (eg. eu-west-1.ec2.amazonaws.com)  | none | yes |

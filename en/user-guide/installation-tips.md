@@ -55,10 +55,10 @@ feature:uninstall roboconf-dm
 ```
 
 Then, register the newly released Karaf feature for Roboconf.    
-We here use a maintenance release (0.7.1)
+We here use a maintenance release (0.8.1)
 
 ```properties
-feature:repo-add http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-feature-dm/0.7.1/roboconf-karaf-feature-dm-0.7.1-features.xml
+feature:repo-add http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-feature-dm/0.8.1/roboconf-karaf-feature-dm-0.8.1-features.xml
 ```
 
 Eventually, install it.
@@ -67,7 +67,7 @@ Eventually, install it.
 feature:install roboconf-dm
 ```
 
-Verify the used version is the right one (0.7.1).
+Verify the used version is the right one (0.8.1).
 
 ```properties
 feature:list

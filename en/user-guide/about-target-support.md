@@ -19,8 +19,8 @@ in your (self-hosted) information system or even on embedded systems (connected 
 ## Overview
 
 Roboconf is about applications.  
-Applications are made up of instances, each instance having a component which defines its
-behavior with respect to other components. Some of these components designates machines, being
+Applications are made up of instances, each instance having a (Software) component which defines its
+behavior with respect to other components. Some of these components designate machines, being
 virtual or physical. Containers, such as Docker containers, are included in this definition as well.
 
 These specific "*scoped*" instances can be recognized because their installer is called **target**.  
@@ -33,8 +33,8 @@ A target includes the identifier of a "*target handler*" library and some proper
 
 A target is defined by:
 
-* An **id** that must be set by hand (or through tools, such as [Roboconf's Maven plug-in](maven-plugin.html)).
-* A **handler**, which points to a **target handler** (an OSGi bundle to deploy in Roboconf).
+* A **handler** (required), which points to a **target handler** (an OSGi bundle to deploy in Roboconf).
+* An **id** (required), which identifies a target and makes it unique.
 * A **name** (optional), that will be more explicit for users.
 * A **description** (optional), that will help users to understand it.
 * Various properties, that depend on the **handler**.
@@ -47,10 +47,38 @@ When a scoped instance is not associated with any target, and that you try to de
 target to deploy the instance. 
 
 **Multi-IaaS** (for hybrid cloud) is handled by defining several scoped instances and by associating them
-with different targets. Thus, one can target an Openstack infrastructure, while another one can be deployed on Amazon Web Services. 
+with different targets. Thus, one can target an Openstack infrastructure, while another one can be deployed on Amazon Web Services.
 
 
-## Web Definition and Management
+## Defining Targets
+
+There are 3 ways to create targets.
+
+1. Deploy a zipped target.
+2. Create one through the web console
+3. Deploy an application template with predefined targets.
+
+
+## 1. Zipped Target
+
+Targets can be specified in [their own project](maven-plugin-for-targets.html).  
+Once zipped, they can be deployed through the web console or through Roboconf's REST API.
+
+> Notice that these targets and their associations can be modified with the web console.
+
+A target is made up of...
+
+* ... a properties files, with parameters for the infrastructure.
+* ... optionally, scripts that will complete the configuration of a machine.  
+These scripts cannot be edited through the web console.
+
+Please, refer to the following links for more details.
+
+* [Complete machine configurations from the DM](complete-machine-configurations-from-the-dm.html)
+* [Complete machine configurations from an agent](complete-machine-configurations-from-an-agent.html)
+
+
+## 2. Web Definition and Management
 
 Since version 0.5, deployment targets can be defined and associated with applications through the web console.  
 This includes:
@@ -60,15 +88,14 @@ This includes:
 * Associating a target with a specific instance of a given application.
 * Defining a target as the default one for an application.
 
-Since version 0.8, it is also possible to upload directly ZIP archives that contain
-one or several target definitions.
+Unlike what is possible for other solutions, it is not possible to add configuration scripts.
 
 
-## Predefined Targets for Applications
+## 3. Predefined Targets
 
-Although targets can now be defined in the web administration, it remains possible to embed
-predefined targets in deployment archives. Notice that these targets and their associations can
-be modifiable with the web console.
+It remains possible to embed predefined targets in application templates.
+
+> Notice that these targets and their associations can be modified with the web console.
 
 For every predefined target, the definition follows the same schema.
 In the graph model, root components are associated with hardware elements. This can be virtual machines (VMs),

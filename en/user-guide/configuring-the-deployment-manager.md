@@ -73,6 +73,9 @@ A sample is given below.
 ```properties
 # The type of messaging we use: RabbitMQ.
 messaging-type = rabbitmq
+
+# The domain.
+domain = default
 ```
 
 > If the configuration is invalid, no error will be shown.  
@@ -87,7 +90,8 @@ The following table summers up all the DM parameters.
 
 | Property | Description | Notice | Mandatory |
 | --- | --- | --- | --- |
-| messaging-type | The kind of messaging used by the agent. Agent should use the same messaging type. | - | yes |
+| messaging-type | The kind of messaging used to interact with agents. Agents should use the same messaging type. | - | yes |
+| domain | The domain. See [Roboconf domains](roboconf-domains.html) for more information. Agents should use the same. | - | yes |
 
 <br />
 
@@ -106,8 +110,8 @@ desired targets.
 cd bin
 ./karaf
 
-# Install the bundles you want (here in version 0.7)
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.7
+# Install the bundles you want (here in version 0.8)
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.8
 ```
 
 You can also use a specific Karaf command (**roboconf:target**) that will install predefined target handlers into the DM.  

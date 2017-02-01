@@ -11,7 +11,7 @@ Roboconf has a target implementation to run agents in memory.
 > This implementation has no interest for production environments.
 
 To install it, open the DM's interactive mode and use one of the following options.  
-With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+With the [roboconf:target](karaf-commands-for-the-dm.html) command:
 
 ```properties
 # The version will be deduced automatically by the DM
@@ -21,10 +21,10 @@ roboconf:target in-memory
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.7 (with its dependencies)
-bundle:install --start mvn:net.roboconf/roboconf-plugin-api/0.7
-bundle:install --start mvn:net.roboconf/roboconf-agent/0.7
-bundle:install --start mvn:net.roboconf/roboconf-target-in-memory/0.7
+# Here in version 0.8 (with its dependencies)
+bundle:install --start mvn:net.roboconf/roboconf-plugin-api/0.8
+bundle:install --start mvn:net.roboconf/roboconf-agent/0.8
+bundle:install --start mvn:net.roboconf/roboconf-target-in-memory/0.8
 ```
 
 The in-memory target acts as a simulation mode.  
@@ -43,8 +43,8 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for in-memory
-id = <to set>
 handler = in-memory
+id = a unique identifier
 name = 
 description = 
 
@@ -64,8 +64,8 @@ Here is a complete description of the parameters for this handler.
 
 | Property | Description | Default | Mandatory
 | --- | --- | --- | --- |
-| id | The target's ID. | none, must be set | yes |
 | handler | Determines the target handler to use | none, must be "in-memory" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | in-memory.delay | The delay (in milliseconds) to wait for before instantiating a new agent in memory. | 0 | no |

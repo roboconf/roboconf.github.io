@@ -1,11 +1,56 @@
 #
-# User Guide Version 0.7
+# User Guide Version 0.8
 #
+customizing-the-web-administration-look-n-feel:
+  en: user-guide/customizing-the-web-administration-look-n-feel
+
+roboconf-preferences:
+  en: user-guide/roboconf-preferences
+
+security-and-jmx-configuration:
+  en: user-guide/security-and-jmx-configuration
+
+complete-machine-configurations-from-an-agent:
+  en: user-guide/complete-machine-configurations-from-an-agent
+
+complete-machine-configurations-from-the-dm:
+  en: user-guide/complete-machine-configurations-from-the-dm
+
+dynamic-configuration-files-for-agents:
+  en: user-guide/dynamic-configuration-files-for-agents
+
 writing-validation-tests-with-junit:
   en: user-guide/writing-validation-tests-with-junit
 
+security-and-authentication-with-a-ldap-server:
+  en: user-guide/security-and-authentication-with-a-ldap-server
+
+security-and-authentication-with-properties-files:
+  en: user-guide/security-and-authentication-with-properties-files
+
+security-and-authentication-with-a-database:
+  en: user-guide/security-and-authentication-with-a-database
+
+security-rabbitmq-change-the-default-port:
+  en: user-guide/security-rabbitmq-change-the-default-port
+
+security-rabbitmq-over-ssl:
+  en: user-guide/security-rabbitmq-over-ssl
+
+security-remote-access-to-karaf-s-console:
+  en: user-guide/security-remote-access-to-karaf-s-console
+
+security-ssl-and-certificates:
+  en: user-guide/security-ssl-and-certificates
+
+security-and-authentication:
+  en: user-guide/security-and-authentication
+
 user-guide-older-versions:
   en: user-guide/user-guide-older-versions
+
+clustered-rabbitmq:
+  en: user-guide/clustered-rabbitmq
 
 installation-tips:
   en: user-guide/installation-tips
@@ -28,11 +73,20 @@ using-docker-on-the-agent-side:
 configuring-roboconf:
   en: user-guide/configuring-roboconf
 
-karaf-commands-for-roboconf:
-  en: user-guide/karaf-commands-for-roboconf
+karaf-commands-for-the-dm:
+  en: user-guide/karaf-commands-for-the-dm
 
-other-tools:
-  en: user-guide/other-tools
+karaf-commands-for-the-agent:
+  en: user-guide/karaf-commands-for-the-agent
+
+all-the-tools:
+  en: user-guide/all-the-tools
+
+all-the-advanced-topics:
+  en: user-guide/all-the-advanced-topics
+
+roboconf-domains:
+  en: user-guide/roboconf-domains
 
 installing-roboconf-with-debian-packages:
   en: user-guide/installing-roboconf-with-debian-packages
@@ -58,11 +112,17 @@ security-and-topologies:
 security-and-software:
   en: user-guide/security-and-software
 
+security-and-cors:
+  en: user-guide/security-and-cors
+
 security-and-https-console:
   en: user-guide/security-and-https-console
 
-security-and-roboconf-ports:
-  en: user-guide/security-and-roboconf-ports
+security-and-roboconf-messaging-ports:
+  en: user-guide/security-and-roboconf-messaging-ports
+
+security-and-agents:
+  en: user-guide/security-and-agents
 
 roboconf-commands:
   en: user-guide/roboconf-commands
@@ -103,6 +163,12 @@ eclipse-modeling-plugin:
 maven-plugin:
   en: user-guide/maven-plugin
 
+maven-plugin-for-applications:
+  en: user-guide/maven-plugin-for-applications
+
+maven-plugin-for-targets:
+  en: user-guide/maven-plugin-for-targets
+
 reusability-in-models:
   en: user-guide/reusability-in-models
 
@@ -114,6 +180,9 @@ how-to-write-reusable-recipes:
 
 tutorial-local-deployment-with-docker:
   en: user-guide/tutorial-local-deployment-with-docker
+
+tutorial-monitoring-roboconf-with-apache-decanter:
+  en: user-guide/tutorial-monitoring-roboconf-with-apache-decanter
 
 tutorial-getting-started-with-roboconf:
   en: user-guide/tutorial-getting-started-with-roboconf
@@ -195,6 +264,9 @@ target-docker:
 
 target-embedded:
   en: user-guide/target-embedded
+
+target-iaas-occi:
+  en: user-guide/target-iaas-occi
 
 target-iaas-aws:
   en: user-guide/target-iaas-aws

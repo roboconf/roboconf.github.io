@@ -11,7 +11,7 @@ Therefore, it covers existing (physical) machines, devices (such as cards) and v
 manually (e.g. with Virtual Box).
 
 To install it, open the DM's interactive mode and use one of the following options.  
-With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+With the [roboconf:target](karaf-commands-for-the-dm.html) command:
 
 ```properties
 # The version will be deduced automatically by the DM
@@ -21,8 +21,8 @@ roboconf:target embedded
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.7
-bundle:install --start mvn:net.roboconf/roboconf-target-embedded/0.7
+# Here in version 0.8
+bundle:install --start mvn:net.roboconf/roboconf-target-embedded/0.8
 ```
 
 With this configuration, you need to start the agent directly.  
@@ -34,8 +34,8 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Embedded Machines
-id = <to set>
 handler = embedded
+id = a unique identifier
 name = 
 description = 
 ```
@@ -44,7 +44,7 @@ Here is a complete description of the parameters for OpenStack.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| id | The target's ID. | none, must be set | yes |
 | handler | Determines the target handler to use | none, must be "embedded" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |

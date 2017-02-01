@@ -76,7 +76,9 @@ docker run your-image-id \
 
 Roboconf guarantees that for a given VM (Roboconf agent), random ports will not
 conflict. And since these ports are exchanged by Roboconf as dependency information, other
-containers will be able to access them from the outside.
+containers will be able to access them from the outside. You can also define ports to ignore
+in [Roboconf preferences](roboconf-preferences.html) so that they are never picked up during the
+random generation.
 
 
 **stop.sh**

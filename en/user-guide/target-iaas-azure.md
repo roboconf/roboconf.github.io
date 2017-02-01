@@ -10,7 +10,7 @@ Roboconf has a target implementation for Microsoft Azure.
 It only supports the creation of *compute* VMs.
 
 To install it, open the DM's interactive mode and use one of the following options.  
-With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+With the [roboconf:target](karaf-commands-for-the-dm.html) command:
 
 ```properties
 # The version will be deduced automatically by the DM
@@ -20,8 +20,8 @@ roboconf:target azure
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.7
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-azure/0.7
+# Here in version 0.8
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-azure/0.8
 ```
 
 Every new VM is associated with a public IP address.  
@@ -32,8 +32,8 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Azure
-id = <to set>
 handler = iaas-azure
+id = a unique identifier
 name = 
 description = 
 
@@ -54,8 +54,8 @@ Here is a complete description of the parameters for Microsoft Azure.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| id | The target's ID. | none, must be set | yes |
 | handler | Determines the target handler to use. | none, must be "iaas-azure" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | azure.key.store.file | Path to [JKS Key store][jks] file (see below for help). | none | yes |

@@ -41,7 +41,7 @@ It means the DM should not be stopped when this messaging is used. It replaces, 
 | server.port | The DM's web server port. | Left blank is interpreted as "8181". | no |
 
 All these properties are prefixed with **net.roboconf.messaging.http.**.  
-As a reminder, if you use this messaging with **local Docker containers**, you should set the IP address to 172.17.42.1.
+As a reminder, if you use this messaging with **local Docker containers**, you should set the IP address to 172.17.0.1 (172.17.42.1 in former Docker versions).
 
 
 ## RabbitMQ
@@ -67,7 +67,8 @@ Here is a description of the various parameters.
 | message-server-username | The user name for the messaging server. | Left blank is interpreted as "guest". | yes |
 | message-server-password | The password for the messaging server. | Left blank is interpreted as "guest". | yes |
 
-All these properties are prefixed with **net.roboconf.messaging.rabbitmq.**.
+All these properties are prefixed with **net.roboconf.messaging.rabbitmq.**.  
+There are also properties related to the SSL configuration for RabbitMQ. These properties are documented [here](security-rabbitmq-over-ssl.html).
 
 
 ## In-Memory

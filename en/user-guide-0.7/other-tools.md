@@ -1,9 +1,9 @@
 ---
 title: "Other Tools"
 layout: page
-cat: "ug-last"
+cat: "ug-0-7"
 id: "other-tools"
-menus: [ "users", "user-guide" ]
+menus: [ "users", "user-guide", "0.7" ]
 ---
 
 This page points to other tools related to Roboconf.

@@ -167,7 +167,7 @@ source=DM
 Du côté de l'agent, la source est différente et demande plus de détails.  
 En effet, on est en droit d'espérer faire la différence entre les données remontées par différentes
 applications et machines. Nous allons pour cela utiliser
-[l'injection de configurations dans les agents](../en/user-guide/dynamic-configuration-files-for-agents.html).
+[l'injection de configurations dans les agents](../../en/user-guide/dynamic-configuration-files-for-agents.html).
 
 Prenez le fichier de configuration décrit plus haut et copiez-le dans le dossier **etc/roboconf/cfg-injection**
 de Karaf. Ajoutez-lui le suffixe **.cfg**. Par exemple, vous pourriez appeler ce fichier

@@ -15,8 +15,8 @@ Cette page liste les nouvelles fonctionnalités et améliorations apportées à 
 
 Plusieurs travaux ont été menés concernant la sécurité.
 
-* Activer ou désactiver le support des « [CORS](../user-guide/security-and-cors.html) » pour les clients REST.
-* Pouvoir spécifier [l'interface réseau](../user-guide/security-and-agents.html) utilisée par les agents Roboconf.
+* Activer ou désactiver le support des « [CORS](../../en/user-guide/security-and-cors.html) » pour les clients REST.
+* Pouvoir spécifier [l'interface réseau](../../en/user-guide/security-and-agents.html) utilisée par les agents Roboconf.
 * Authentifier les utilisateurs en ligne de commande depuis diverses soruces
 ([fichiers de propriétés](../../en/user-guide/security-and-authentication-with-properties-files.html),
 [annuaire LDAP](../../en/user-guide/security-and-authentication-with-a-ldap-server.html),
@@ -75,7 +75,7 @@ dans la console web d'administration.
 
 ## Documentation de notre REST API
 
-Le site web de Roboconf héberge désormais une page avec [Swagger UI](../developer-guide/rest-api.html)
+Le site web de Roboconf héberge désormais une page avec [Swagger UI](../../en/developer-guide/rest-api.html)
 qui documente notre API REST, ainsi que notre web socket.
 
 <img src="/resources/img/nn-0.8-swagger-ui-for-roboconf.png" alt="Swagger UI" class="gs" />

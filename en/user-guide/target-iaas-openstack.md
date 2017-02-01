@@ -10,7 +10,7 @@ Roboconf has a target implementation for Openstack.
 It supports the creation of *compute* VMs and block storage.
 
 To install it, open the DM's interactive mode and use one of the following options.  
-With the [roboconf:target](karaf-commands-for-roboconf.html) command:
+With the [roboconf:target](karaf-commands-for-the-dm.html) command:
 
 ```properties
 # The version will be deduced automatically by the DM
@@ -20,9 +20,9 @@ roboconf:target openstack
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.7
+# Here in version 0.8
 feature:install jclouds-for-roboconf
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.7
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.8
 ```
 
 The implementation can associate a public address to the created VM.  
@@ -41,10 +41,10 @@ Just copy / paste and edit.
 
 ```properties
 # Configuration file for Openstack
-id = <to set>
 handler = iaas-openstack
 
 # Provide a meaningful description of the target
+id = a unique identifier
 name = 
 description = 
 
@@ -77,6 +77,9 @@ openstack.key-pair = default
 # openstack.delete-volume-on-termination.vol1 = true 
 #
 # openstack.volume-size.vol2 = 100
+
+# Object storage
+#openstack.obj-storage = domain1, domain2
 ```
 
 ## General Parameters
@@ -86,8 +89,8 @@ Block storage is detailed further in the page.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
-| id | The target's ID. | none, must be set | yes |
 | handler | Determines the target handler to use | none, must be "iaas-openstack" | yes |
+| id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | openstack.keystone-url | The URL of Keystone, Openstack's *identity* component. The URL of all the other Openstack services will be found through Keystone. | none | yes |
@@ -101,6 +104,7 @@ Block storage is detailed further in the page.
 | openstack.floating-ip-pool | A pool of available public IPs, so that one of them be associated to the VM (if no pool is provided, the VM only has a private IP). | none | no |
 | openstack.network-id | A neutron (aka quantum) network ID, to use for networking. | none | no |
 | openstack.region-name | The name of the region to use. If not specified, then the first available region will be used. | none | no |
+| openstack.obj-storage | A list of container names, separated by a comma, for object storage. Only those that do not already exist will be created. | none | no |
 
 
 ## Block Storage
