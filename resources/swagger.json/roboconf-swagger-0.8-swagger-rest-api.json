@@ -1,0 +1,2195 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "The REST API for Roboconf\u0027s Administration",
+    "contact": {
+      "url": "http://roboconf.net",
+      "name": "the Roboconf team"
+    },
+    "license": {
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "name": "The Apache Software License, Version 2.0"
+    },
+    "version": "0.8",
+    "title": "REST API"
+  },
+  "host": "localhost:8181",
+  "basePath": "/roboconf-dm",
+  "schemes": [],
+  "tags": [
+    {
+      "name": "ApplicationResource"
+    },
+    {
+      "name": "DebugResource"
+    },
+    {
+      "name": "ManagementResource"
+    },
+    {
+      "name": "PreferencesResource"
+    },
+    {
+      "name": "SchedulerResource"
+    },
+    {
+      "name": "TargetResource"
+    }
+  ],
+  "definitions": {
+    "json_Application": {
+      "title": "Application",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "name": "My Application with special characters",
+        "displayName": "My Application with special chàràcters",
+        "tplName": "test-app",
+        "tplQualifier": "test",
+        "tplEep": "externalExportPrefix",
+        "extVars": {
+          "internalGraphVariable": "variableAlias"
+        }
+      }
+    },
+    "json_ApplicationTemplate": {
+      "title": "ApplicationTemplate",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "name": "test-app",
+        "displayName": "test-app",
+        "desc": "some description",
+        "qualifier": "test",
+        "eep": "externalExportPrefix",
+        "extVars": {
+          "internalGraphVariable": "variableAlias"
+        },
+        "apps": [
+          "My Application with special characters"
+        ]
+      }
+    },
+    "json_Component": {
+      "title": "Component",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "name": "war",
+        "installer": "script"
+      }
+    },
+    "json_Instance": {
+      "title": "Instance",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "name": "hello-world",
+        "path": "/tomcat-vm/tomcat-server/hello-world",
+        "status": "NOT_DEPLOYED",
+        "component": {
+          "name": "war",
+          "installer": "script"
+        },
+        "exports": {
+          "war.port": "8080"
+        }
+      }
+    },
+    "json_Diagnostic": {
+      "title": "Diagnostic",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "path": "/vm1/server1",
+        "dependencies": [
+          {
+            "name": "facetOrComponentName",
+            "optional": "true",
+            "resolved": "false"
+          }
+        ]
+      }
+    },
+    "json_DependencyInformation": {
+      "title": "DependencyInformation",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "name": "facetOrComponentName",
+        "optional": "true",
+        "resolved": "false"
+      }
+    },
+    "json_TargetWrapperDescriptor": {
+      "title": "TargetWrapperDescriptor",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "id": "target-id",
+        "name": "target name",
+        "handler": "iaas-ec2",
+        "desc": "some description",
+        "default": "true"
+      }
+    },
+    "json_TargetUsageItem": {
+      "title": "TargetUsageItem",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "name": "app or template name",
+        "qualifier": "template qualifier (null for applications)",
+        "using": "true",
+        "referencing": "true"
+      }
+    },
+    "json_TargetAssociation": {
+      "title": "TargetAssociation",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "path": "/vm-1",
+        "component": "VM",
+        "desc": {
+          "id": "target-id",
+          "name": "target name",
+          "handler": "iaas-ec2",
+          "desc": "some description",
+          "default": "true"
+        }
+      }
+    },
+    "json_Preference": {
+      "title": "Preference",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "name": "key",
+        "value": "value",
+        "category": "autonomic"
+      }
+    },
+    "json_ScheduledJob": {
+      "title": "ScheduledJob",
+      "definition": "",
+      "type": "object",
+      "properties": "",
+      "example": {
+        "id": "job-id",
+        "app-name": "application name",
+        "cmd-name": "command name",
+        "job-name": "job name",
+        "cron": "0 0 12 ? * WED"
+      }
+    }
+  },
+  "paths": {
+    "/app/{name}/bind": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Binds an application for external exports.",
+        "description": "Binds an application for external exports.",
+        "operationId": "resource_ApplicationResource_bindApplication_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "bound-app",
+            "in": "query",
+            "type": "string",
+            "description": "the name of the application (instance of \u003ccode\u003eboundTplName\u003c/code\u003e)"
+          },
+          {
+            "name": "bound-tpl",
+            "in": "query",
+            "type": "string",
+            "description": "the name of the prefix for external variables"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application was not found."
+          },
+          "403": {
+            "description": "Such a binding is not allowed."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Gets the application bindings (as a map).",
+        "description": "Gets the application bindings (as a map).",
+        "operationId": "resource_ApplicationResource_getApplicationBindings_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine (application bindings were returned too)."
+          },
+          "404": {
+            "description": "The application was not found."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/bind-x": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Replaces application bindings for external exports.",
+        "description": "Replaces application bindings for external exports.",
+        "operationId": "resource_ApplicationResource_replaceApplicationBindings_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "app",
+            "in": "query",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi",
+            "description": "the application names (instance of \u003ccode\u003eboundTplName\u003c/code\u003e)"
+          },
+          {
+            "name": "bound-tpl",
+            "in": "query",
+            "type": "string",
+            "description": "the name of the prefix for external variables"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application was not found."
+          },
+          "403": {
+            "description": "Such a binding is not allowed."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/change-state": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Changes the state of an instance for a given application.",
+        "description": "Changes the state of an instance for a given application.",
+        "operationId": "resource_ApplicationResource_changeInstanceState_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "instance-path",
+            "in": "query",
+            "type": "string",
+            "description": "the instance path (not null)"
+          },
+          {
+            "name": "new-state",
+            "in": "query",
+            "type": "string",
+            "description": "the new state (see InstanceStatus)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application or the instance was not found."
+          },
+          "403": {
+            "description": "Invalid state or permission issue."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/commands": {
+      "get": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Lists all the available commands for an application.",
+        "description": "Lists all the available commands for an application.",
+        "operationId": "resource_ApplicationResource_listCommands_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the associated application"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/components": {
+      "get": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Lists the available components in this application.",
+        "description": "Lists the available components in this application.",
+        "operationId": "resource_ApplicationResource_listComponents_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_Component"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/deploy-all": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Deploys and starts several instances at once.",
+        "description": "Deploys and starts several instances at once.",
+        "operationId": "resource_ApplicationResource_deployAndStartAll_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "instance-path",
+            "in": "query",
+            "type": "string",
+            "description": "the instance path (null to consider the whole application)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application or the instance was not found."
+          },
+          "403": {
+            "description": "Invalid state or permission issue."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/description": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Sets the description of the application.",
+        "description": "Sets the description of the application.",
+        "operationId": "resource_ApplicationResource_setDescription_POST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "description": "",
+              "type": "string"
+            },
+            "description": "the new description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application was not found."
+          },
+          "403": {
+            "description": "The application\u0027s description could not be updated."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/instances": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Adds a new instance.",
+        "description": "Adds a new instance.",
+        "operationId": "resource_ApplicationResource_addInstance_POST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "instance-path",
+            "in": "query",
+            "type": "string",
+            "description": "the path of the parent instance (optional, null to consider the application as the root)"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "description": "",
+              "$ref": "#/definitions/json_Instance"
+            },
+            "description": "the new instance"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application or the instance\u0027s component was not found."
+          },
+          "403": {
+            "description": "The insertion does not comply with the graph definition."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Removes an instance.",
+        "description": "Removes an instance.",
+        "operationId": "resource_ApplicationResource_removeInstance_DELETE",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "instance-path",
+            "in": "query",
+            "type": "string",
+            "description": "the path of the instance to remove"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application or the instance was not found."
+          },
+          "403": {
+            "description": "Invalid instance state."
+          },
+          "406": {
+            "description": "The request could not be handled."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Lists instances of a given application.",
+        "description": "Lists instances of a given application.",
+        "operationId": "resource_ApplicationResource_listChildrenInstances_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "all-children",
+            "in": "query",
+            "type": "boolean",
+            "description": "true to get all the children, false to only get the direct children"
+          },
+          {
+            "name": "instance-path",
+            "in": "query",
+            "type": "string",
+            "description": "the instance path (null to consider the whole application)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_Instance"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/resynchronize": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Resynchronizes all the instances / agents.",
+        "description": "Resynchronizes all the instances / agents.",
+        "operationId": "resource_ApplicationResource_resynchronize_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application was not found."
+          },
+          "406": {
+            "description": "The request could not be processed."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/stop-all": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Stops several instances at once.",
+        "description": "Stops several instances at once.",
+        "operationId": "resource_ApplicationResource_stopAll_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "instance-path",
+            "in": "query",
+            "type": "string",
+            "description": "the instance path (null to consider the whole application)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application or the instance was not found."
+          },
+          "403": {
+            "description": "Invalid state or permission issue."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/targets": {
+      "get": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Finds the associations between the application \"scoped\" instances and targets.",
+        "description": "Finds the associations between the application \"scoped\" instances and targets.",
+        "operationId": "resource_ApplicationResource_findTargetAssociations_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_TargetAssociation"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/unbind": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Unbinds an application for external exports.",
+        "description": "Unbinds an application for external exports.",
+        "operationId": "resource_ApplicationResource_unbindApplication_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "bound-app",
+            "in": "query",
+            "type": "string",
+            "description": "the name of the application (instance of \u003ccode\u003eboundTplName\u003c/code\u003e)"
+          },
+          {
+            "name": "bound-tpl",
+            "in": "query",
+            "type": "string",
+            "description": "the name of the prefix for external variables"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application was not found."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/undeploy-all": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Undeploys several instances at once.",
+        "description": "Undeploys several instances at once.",
+        "operationId": "resource_ApplicationResource_undeployAll_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "instance-path",
+            "in": "query",
+            "type": "string",
+            "description": "the instance path (null to consider the whole application)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application or the instance was not found."
+          },
+          "403": {
+            "description": "Invalid state or permission issue."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/commands/execute": {
+      "post": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Executes a given command.",
+        "description": "Executes a given command.",
+        "operationId": "resource_ApplicationResource_executeCommand_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the associated application"
+          },
+          {
+            "name": "command-name",
+            "in": "query",
+            "type": "string",
+            "description": "the command name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The command was found and successfully executed."
+          },
+          "404": {
+            "description": "The application or the command was not found."
+          },
+          "409": {
+            "description": "If the command execution failed."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/commands/{command-name}": {
+      "get": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Gets the instructions contained by a command.",
+        "description": "Gets the instructions contained by a command.",
+        "operationId": "resource_ApplicationResource_getCommandInstructions_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "command-name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the command name"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the associated application"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "204": {
+            "description": "No instruction was found."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/components/ancestors": {
+      "get": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Finds possible parent components for a given component.",
+        "description": "Finds possible parent components for a given component.",
+        "operationId": "resource_ApplicationResource_findComponentAncestors_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "component-name",
+            "in": "query",
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_Component"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/app/{name}/components/children": {
+      "get": {
+        "tags": [
+          "ApplicationResource"
+        ],
+        "summary": "Finds possible components under a given component.",
+        "description": "Finds possible components under a given component.",
+        "operationId": "resource_ApplicationResource_findComponentChildren_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          },
+          {
+            "name": "component-name",
+            "in": "query",
+            "type": "string",
+            "description": "a component name (if not specified, returns all the root components)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_Component"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/debug/check-agent": {
+      "get": {
+        "tags": [
+          "DebugResource"
+        ],
+        "summary": "Checks the DM can correctly exchange with an agent through the messaging server.",
+        "description": "Checks the DM can correctly exchange with an agent through the messaging server.\n\u003cp\u003e\nThis method acts as followed:\n\u003col\u003e\n\u003cli\u003eIf no message is provided (null), it generates a unique UUID.\u003c/li\u003e\n\u003cli\u003eIt sends the \u0027PING\u0027 message to the specified root-instance-name.\u003c/li\u003e\n\u003cli\u003eIt waits for the agent to respond a \u0027PONG\u0027 to the DM. A wait timeout can be specified by the timeout\nparameter (default is 1000ms, max\nDebugResource#MAXIMUM_TIMEOUT ms). Then:\n\u003cul\u003e\n\u003cli\u003eIf the message is received before the timeout expires, a positive 200 OK response is\nreturned.\u003c/li\u003e\n\u003cli\u003eOtherwise, a negative 408 Request Time-out response is returned.\u003c/li\u003e\n\u003cli\u003eIf any unexpected error occurs, a 500 Internal error response is returned.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
+        "operationId": "resource_DebugResource_checkMessagingConnectionWithAgent_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "application-name",
+            "in": "query",
+            "type": "string",
+            "description": "the name of the application holding the targeted agent"
+          },
+          {
+            "name": "message",
+            "in": "query",
+            "type": "string",
+            "description": "a customized message content (not null)"
+          },
+          {
+            "name": "scoped-instance-path",
+            "in": "query",
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application or the instance was not found."
+          },
+          "400": {
+            "description": "The agent is not started."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/debug/check-dm": {
+      "get": {
+        "tags": [
+          "DebugResource"
+        ],
+        "summary": "Checks the DM is correctly connected with the messaging server.",
+        "description": "Checks the DM is correctly connected with the messaging server.\n\u003cp\u003e\nThis method acts as followed:\n\u003col\u003e\n\u003cli\u003eIf no message is provided (null), it generates a unique UUID.\u003c/li\u003e\n\u003cli\u003eIt sends the message to the messaging server. The recipient is the DM itself.\u003c/li\u003e\n\u003cli\u003eIt waits for the messaging server to propagate the message to the DM. A wait timeout can be specified by the\ntimeout parameter (default is 1000ms, max\nDebugResource#MAXIMUM_TIMEOUT ms). Then:\n\u003cul\u003e\n\u003cli\u003eIf the message is received before the timeout expires, a positive 200 OK response is\nreturned.\u003c/li\u003e\n\u003cli\u003eOtherwise, a negative 408 Request Time-out response is returned.\u003c/li\u003e\n\u003cli\u003eIf any unexpected error occurs, a 500 Internal error response is returned.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
+        "operationId": "resource_DebugResource_checkMessagingConnectionForTheDm_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "message",
+            "in": "query",
+            "type": "string",
+            "description": "a customized message content (not null)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/debug/diagnose-application": {
+      "get": {
+        "tags": [
+          "DebugResource"
+        ],
+        "summary": "Runs a diagnostic for a given application.",
+        "description": "Runs a diagnostic for a given application.\n\u003cp\u003e\nThe diagnostic is based on the information hold by the DM, and not by the agent.\n\u003c/p\u003e",
+        "operationId": "resource_DebugResource_diagnoseApplication_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "application-name",
+            "in": "query",
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_Diagnostic"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/debug/diagnose-instance": {
+      "get": {
+        "tags": [
+          "DebugResource"
+        ],
+        "summary": "Runs a diagnostic for a given instance.",
+        "description": "Runs a diagnostic for a given instance.\n\u003cp\u003e\nThe diagnostic is based on the information hold by the DM, and not by the agent.\n\u003c/p\u003e",
+        "operationId": "resource_DebugResource_diagnoseInstance_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "application-name",
+            "in": "query",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "instance-path",
+            "in": "query",
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application or the instance was not found."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/applications": {
+      "post": {
+        "tags": [
+          "ManagementResource"
+        ],
+        "summary": "Creates a new application.",
+        "description": "Creates a new application.",
+        "operationId": "resource_ManagementResource_createApplication_POST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "description": "",
+              "$ref": "#/definitions/json_Application"
+            },
+            "description": "an application"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application\u0027s template was not found."
+          },
+          "403": {
+            "description": "An application with this name already exists."
+          },
+          "401": {
+            "description": "The application could not be created (e.g. DM not ready)."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "ManagementResource"
+        ],
+        "summary": "Lists applications.",
+        "description": "Lists applications.",
+        "operationId": "resource_ManagementResource_listApplications_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "type": "string",
+            "description": "if specified, only the application with this name will be returned in the list (null to match all)\n\u003cp\u003e\nWe only consider the application name, not the display name.\nIt means that the parameter should not contain special characters.\n\u003c/p\u003e"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_Application"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/applications/image": {
+      "post": {
+        "tags": [
+          "ManagementResource"
+        ],
+        "summary": "Uploads an image for a template/application.",
+        "description": "Uploads an image for a template/application.\n\u003cp\u003e\nIf an image was already set, it is overridden by the new one.\n\u003c/p\u003e",
+        "operationId": "resource_ManagementResource_setImage_POST",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "fileDetail",
+            "in": "formData",
+            "description": "the image details."
+          },
+          {
+            "name": "image",
+            "in": "formData",
+            "description": "the uploaded image."
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "type": "string",
+            "description": "the name of the template/application."
+          },
+          {
+            "name": "qualifier",
+            "in": "query",
+            "type": "string",
+            "description": "the qualifier of the template, or null for an application."
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "400": {
+            "description": "The application was not found or the image type or extension is invalid."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/applications/templates": {
+      "post": {
+        "tags": [
+          "ManagementResource"
+        ],
+        "summary": "Loads an application template from a ZIP file.",
+        "description": "Loads an application template from a ZIP file.",
+        "operationId": "resource_ManagementResource_loadApplicationTemplate_POST",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "fileDetail",
+            "in": "formData",
+            "description": "the file details"
+          },
+          {
+            "name": "uploadedInputStream",
+            "in": "formData",
+            "description": "the uploaded archive"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "406": {
+            "description": "The application could not be created (e.g. invalid)."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "ManagementResource"
+        ],
+        "summary": "Lists the application templates.",
+        "description": "Lists the application templates.",
+        "operationId": "resource_ManagementResource_listApplicationTemplates_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "type": "string",
+            "description": "if specified, only the templates with this name will be returned (null to match all)\n\u003cp\u003e\nWe only consider the application name, not the display name.\nIt means that the parameter should not contain special characters.\n\u003c/p\u003e"
+          },
+          {
+            "name": "qualifier",
+            "in": "query",
+            "type": "string",
+            "description": "the exact qualifier to search (null to match all)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_ApplicationTemplate"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/applications/{name}": {
+      "delete": {
+        "tags": [
+          "ManagementResource"
+        ],
+        "summary": "Deletes an application.",
+        "description": "Deletes an application.",
+        "operationId": "resource_ManagementResource_deleteApplication_DELETE",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application was not found."
+          },
+          "403": {
+            "description": "The application could not be deleted (e.g. messaging error)."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/applications/templates/local": {
+      "post": {
+        "tags": [
+          "ManagementResource"
+        ],
+        "summary": "Loads an application template from a local ZIP file.",
+        "description": "Loads an application template from a local ZIP file.\n\u003cp\u003e\nA directory containing a Roboconf application (model + resources)\ncould be fairly heavy (several hundreds of megabytes). We must\nconsider the possibility someone uses a (S)FTP server (or some\nequivalent solution) to upload a file on the DM\u0027s machine.\n\u003c/p\u003e\n\u003cp\u003e\nThis operation covers this use case.\u003cbr\u003e\nIt will load an application from a file which was already uploaded\non the DM\u0027s machine.\n\u003c/p\u003e",
+        "operationId": "resource_ManagementResource_loadApplicationTemplate_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "local-file-path",
+            "in": "query",
+            "type": "string",
+            "description": "the local file path of the application directory"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "406": {
+            "description": "Invalid application template."
+          },
+          "403": {
+            "description": "An application template with this name already exists."
+          },
+          "401": {
+            "description": "The application template could not be registered (e.g. DM not ready)."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/applications/{name}/shutdown": {
+      "post": {
+        "tags": [
+          "ManagementResource"
+        ],
+        "summary": "Shutdowns an application.",
+        "description": "Shutdowns an application.\n\u003cp\u003e\nShutdown means removing everything Roboconf deployed or created.\nThis operation does not delete the application from the model. It only destroys\nruntime resources.\n\u003c/p\u003e",
+        "operationId": "resource_ManagementResource_shutdownApplication_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application was not found."
+          },
+          "403": {
+            "description": "The application could not be shutdown (e.g. messaging error)."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/applications/templates/{name}/{qualifier}": {
+      "delete": {
+        "tags": [
+          "ManagementResource"
+        ],
+        "summary": "Deletes an application template.",
+        "description": "Deletes an application template.",
+        "operationId": "resource_ManagementResource_deleteApplicationTemplate_DELETE",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application template\u0027s name"
+          },
+          {
+            "name": "qualifier",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the application template\u0027s qualifier"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "404": {
+            "description": "The application template was not found."
+          },
+          "403": {
+            "description": "There are still applications attached to this template."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/preferences": {
+      "get": {
+        "tags": [
+          "PreferencesResource"
+        ],
+        "summary": "Get a specific or all the preferences.",
+        "description": "Get a specific or all the preferences.",
+        "operationId": "resource_PreferencesResource_getPreferences_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "query",
+            "type": "string",
+            "description": "a specific key, or null to get all the properties"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_Preference"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PreferencesResource"
+        ],
+        "summary": "Changes a preference value.",
+        "description": "Changes a preference value.\n\u003cp\u003e\nNotice that preferences cannot be deleted (and created) through\nthe REST API.\n\u003c/p\u003e",
+        "operationId": "resource_PreferencesResource_savePreference_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "query",
+            "type": "string",
+            "description": "the preference name"
+          },
+          {
+            "name": "value",
+            "in": "query",
+            "type": "string",
+            "description": "the preference value"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/scheduler": {
+      "post": {
+        "tags": [
+          "SchedulerResource"
+        ],
+        "summary": "Saves a job.",
+        "description": "Saves a job.",
+        "operationId": "resource_SchedulerResource_saveJob_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "app-name",
+            "in": "query",
+            "type": "string",
+            "description": "the application\u0027s name"
+          },
+          {
+            "name": "cmd-name",
+            "in": "query",
+            "type": "string",
+            "description": "the name of the commands file to execute"
+          },
+          {
+            "name": "cron",
+            "in": "query",
+            "type": "string",
+            "description": "the CRON expression to trigger the job"
+          },
+          {
+            "name": "job-id",
+            "in": "query",
+            "type": "string",
+            "description": "the job\u0027s ID (null to create a new job)"
+          },
+          {
+            "name": "job-name",
+            "in": "query",
+            "type": "string",
+            "description": "the job\u0027s name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "403": {
+            "description": "If Roboconf\u0027s scheduler is not available."
+          },
+          "404": {
+            "description": "If the application or the command was not found."
+          },
+          "400": {
+            "description": "If a problem arose with the parameters."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "SchedulerResource"
+        ],
+        "summary": "Lists jobs.",
+        "description": "Lists jobs.\n\u003cp\u003e\nWhen no parameter is supplied, all the jobs are returned.\nWhen \u003ccode\u003eappName\u003c/code\u003e is supplied, only the jobs associated with\nthis application are returned.  When \u003ccode\u003ecmdName\u003c/code\u003e is also supplied,\nonly the jobs associated with this application and this command are returned.\n\u003c/p\u003e\n\u003cp\u003e\nWhen \u003ccode\u003ecmdName\u003c/code\u003e is supplied but not \u003ccode\u003eappName\u003c/code\u003e, then no job\nis returned.\n\u003c/p\u003e",
+        "operationId": "resource_SchedulerResource_listJobs_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "app-name",
+            "in": "query",
+            "type": "string",
+            "description": "an application name (optional)"
+          },
+          {
+            "name": "cmd-name",
+            "in": "query",
+            "type": "string",
+            "description": "a command name (optional, only makes sense when the application name is given)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_ScheduledJob"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/scheduler/{job-id}": {
+      "delete": {
+        "tags": [
+          "SchedulerResource"
+        ],
+        "summary": "Deletes a job.",
+        "description": "Deletes a job.",
+        "operationId": "resource_SchedulerResource_deleteJob_DELETE",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "job-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the job\u0027s ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "403": {
+            "description": "If Roboconf\u0027s scheduler is not available."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "SchedulerResource"
+        ],
+        "summary": "Gets the properties of a given job.",
+        "description": "Gets the properties of a given job.",
+        "operationId": "resource_SchedulerResource_findJobProperties_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "job-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "the job\u0027s ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "403": {
+            "description": "If Roboconf\u0027s scheduler is not available."
+          },
+          "404": {
+            "description": "If the job was not found."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/targets": {
+      "get": {
+        "tags": [
+          "TargetResource"
+        ],
+        "summary": "Lists targets.",
+        "description": "Lists targets.\n\u003cp\u003e\nThis method can be used to list all the targets, or to filter those\nassociated (as hints) with a given application or application template.\n\u003c/p\u003e",
+        "operationId": "resource_TargetResource_listTargets_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "type": "string",
+            "description": "an optional application name"
+          },
+          {
+            "name": "qualifier",
+            "in": "query",
+            "type": "string",
+            "description": "an optional qualifier, if we want to list targets for a given application template"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_TargetWrapperDescriptor"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TargetResource"
+        ],
+        "summary": "Creates or updates a target.",
+        "description": "Creates or updates a target.",
+        "operationId": "resource_TargetResource_createOrUpdateTarget_POST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "name": "target-id",
+            "in": "query",
+            "type": "string",
+            "description": "an optional target ID (not specified \u003d\u0026gt; will be created)"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "description": "",
+              "type": "string"
+            },
+            "description": "the target\u0027s properties"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "string"
+            },
+            "description": "Everything went fine."
+          },
+          "403": {
+            "description": "Invalid target ID or target still in use."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/targets/archive": {
+      "post": {
+        "tags": [
+          "TargetResource"
+        ],
+        "summary": "Loads target properties from a ZIP file.",
+        "description": "Loads target properties from a ZIP file.",
+        "operationId": "resource_TargetResource_loadTargetArchive_POST",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "fileDetail",
+            "in": "formData",
+            "description": "the file details"
+          },
+          {
+            "name": "uploadedInputStream",
+            "in": "formData",
+            "description": "the uploaded archive"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "403": {
+            "description": "Invalid target properties."
+          },
+          "406": {
+            "description": "The targets could not be registered."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/targets/{target-id}": {
+      "delete": {
+        "tags": [
+          "TargetResource"
+        ],
+        "summary": "Deletes a target.",
+        "description": "Deletes a target.",
+        "operationId": "resource_TargetResource_deleteTarget_DELETE",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "target-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "a non-null target ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "403": {
+            "description": "The target is still in use."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "TargetResource"
+        ],
+        "summary": "Gets the target properties.",
+        "description": "Gets the target properties.",
+        "operationId": "resource_TargetResource_getTargetProperties_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "target-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "a non-null target ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine (with the properties)."
+          },
+          "404": {
+            "description": "The target was not found."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/targets/{target-id}/associations": {
+      "post": {
+        "tags": [
+          "TargetResource"
+        ],
+        "summary": "Associates a target with an instance application.",
+        "description": "Associates a target with an instance application.",
+        "operationId": "resource_TargetResource_associateTarget_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "target-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "a target ID (useless when \u003ccode\u003ebind\u003c/code\u003e is false)"
+          },
+          {
+            "name": "bind",
+            "in": "query",
+            "type": "boolean",
+            "description": "true if we should create the association, false to delete it"
+          },
+          {
+            "name": "elt",
+            "in": "query",
+            "type": "string",
+            "description": "an instance path or a component name (can be null)"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "type": "string",
+            "description": "an application name"
+          },
+          {
+            "name": "qualifier",
+            "in": "query",
+            "type": "string",
+            "description": "a qualifier if the association implies an application template"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "400": {
+            "description": "No application or application template was found."
+          },
+          "403": {
+            "description": "The association could not be created."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/targets/{target-id}/details": {
+      "get": {
+        "tags": [
+          "TargetResource"
+        ],
+        "summary": "Gets general information about a target.",
+        "description": "Gets general information about a target.",
+        "operationId": "resource_TargetResource_findTargetById_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "target-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "a non-null target ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine (with a description of the target)."
+          },
+          "404": {
+            "description": "The target was not found."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/targets/{target-id}/hints": {
+      "post": {
+        "tags": [
+          "TargetResource"
+        ],
+        "summary": "Updates a target\u0027s hints.",
+        "description": "Updates a target\u0027s hints.",
+        "operationId": "resource_TargetResource_updateHint_POST",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "target-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "a target ID"
+          },
+          {
+            "name": "bind",
+            "in": "query",
+            "type": "boolean",
+            "description": "true if we should create the association, false to delete it"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "type": "string",
+            "description": "an application name"
+          },
+          {
+            "name": "qualifier",
+            "in": "query",
+            "type": "string",
+            "description": "a qualifier if the hint implies an application template"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/targets/{target-id}/usage": {
+      "get": {
+        "tags": [
+          "TargetResource"
+        ],
+        "summary": "Finds statistics about target usage.",
+        "description": "Finds statistics about target usage.",
+        "operationId": "resource_TargetResource_findUsageStatistics_GET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "target-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "a target ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "description": "",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/json_TargetUsageItem"
+              }
+            },
+            "description": "Everything went fine."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    }
+  }
+}

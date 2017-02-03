@@ -1,0 +1,172 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "The Web Socket API for Roboconf\u0027s Administration",
+    "version": "0.8",
+    "title": "Web Socket API",
+    "contact": {
+      "name": "the Roboconf team",
+      "url": "http://roboconf.net"
+    },
+    "license": {
+      "name": "The Apache Software License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+    }
+  },
+  "host": "localhost:8181",
+  "basePath": "/roboconf-dm-websocket",
+  "tags": [
+    {
+      "name": "FromServer"
+    }
+  ],
+  "paths": {
+    "application": {
+      "post": {
+        "tags": [
+          "FromServer"
+        ],
+        "summary": "Internal method invoked when an application is created, deleted or modified.",
+        "description": "Internal method invoked when an application is created, deleted or modified.",
+        "operationId": "application",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "default": {
+            "description": "The application that was created, deleted or modified, as well as the context.The context includes the event type: CREATED, DELETED, CHANGED.\n",
+            "schema": {
+              "$ref": "#/definitions/json_application"
+            }
+          }
+        }
+      }
+    },
+    "applicationTemplate": {
+      "post": {
+        "tags": [
+          "FromServer"
+        ],
+        "summary": "Internal method invoked when an application template is created, deleted or modified.",
+        "description": "Internal method invoked when an application template is created, deleted or modified.",
+        "operationId": "applicationTemplate",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "default": {
+            "description": "The application template that was created, deleted or modified, as well as the context.\nThe context includes the event type: CREATED, DELETED, CHANGED.\n",
+            "schema": {
+              "$ref": "#/definitions/json_applicationTemplate"
+            }
+          }
+        }
+      }
+    },
+    "instance": {
+      "post": {
+        "tags": [
+          "FromServer"
+        ],
+        "summary": "Internal method invoked when an instance is created, deleted or modified.",
+        "description": "Internal method invoked when an instance is created, deleted or modified.",
+        "operationId": "instance",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "default": {
+            "description": "The instance that was created, deleted or modified, as well as the context.\nThe context includes the application the instance belongs to.\nIt also includes the event type: CREATED, DELETED, CHANGED.\n",
+            "schema": {
+              "$ref": "#/definitions/json_instance"
+            }
+          }
+        }
+      }
+    },
+    "text": {
+      "post": {
+        "tags": [
+          "FromServer"
+        ],
+        "summary": "Internal method invoked when a raw text message must be propagated.",
+        "description": "Internal method invoked when a raw text message must be propagated.",
+        "operationId": "text",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "default": {
+            "description": "The message that was pushed directly from the DM.\n",
+            "schema": {
+              "$ref": "#/definitions/json_text"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "json_text": {
+      "type": "object",
+      "title": "text",
+      "example": {
+        "msg": "A text message."
+      }
+    },
+    "json_applicationTemplate": {
+      "type": "object",
+      "title": "applicationTemplate",
+      "example": {
+        "event": "DELETED",
+        "tpl": {
+          "name": "test-app",
+          "displayName": "test-app",
+          "qualifier": "test",
+          "apps": [
+            "test"
+          ]
+        }
+      }
+    },
+    "json_application": {
+      "type": "object",
+      "title": "application",
+      "example": {
+        "event": "CREATED",
+        "app": {
+          "name": "test",
+          "displayName": "test",
+          "tplName": "test-app",
+          "tplQualifier": "test"
+        }
+      }
+    },
+    "json_instance": {
+      "type": "object",
+      "title": "instance",
+      "example": {
+        "event": "CHANGED",
+        "app": {
+          "name": "test",
+          "displayName": "test",
+          "tplName": "test-app",
+          "tplQualifier": "test"
+        },
+        "inst": {
+          "name": "tomcat-server",
+          "path": "/tomcat-vm/tomcat-server",
+          "status": "NOT_DEPLOYED",
+          "component": {
+            "name": "tomcat",
+            "installer": "puppet"
+          }
+        }
+      }
+    }
+  }
+}
