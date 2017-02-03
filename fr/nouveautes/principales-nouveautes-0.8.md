@@ -6,7 +6,7 @@ id: "new-and-noteworthy-0.8"
 menus: [ "users", "download" ]
 ---
 
-Cette page liste les nouvelles fonctionnalités et améliorations apportées à Roboconf 0.7.
+Cette page liste les nouvelles fonctionnalités et améliorations apportées à Roboconf 0.8.
 
 <!-- FIXME: all the links should point to 0.8. --> 
 
