@@ -144,7 +144,7 @@ Now, these bounds can follow a 1-* relation.
 
 ## Object Storage Configuration in Openstack
 
-Roboconf can now create domain in Openstack's Swift component.
+Roboconf can now create domains in Openstack's Swift component.
 
 <img src="/resources/img/openstack.jpg" alt="Support of object storage in Openstack" class="gs" />
 <div><hr class="darker" /></div>
