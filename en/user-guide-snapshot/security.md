@@ -20,6 +20,8 @@ We discuss every of them on these pages.
 
 * [Web console over HTTPS](security-and-https-console.html)
 * [Cross-Origin Resource Sharing](security-and-cors.html) (CORS)
+* [Authentication in the web console](security-and-authentication-in-the-web-console.html)
+* [Auditing web accesses](security-and-web-access-audits.html)
 
 ## Karaf Distributions
 

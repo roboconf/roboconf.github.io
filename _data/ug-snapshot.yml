@@ -10,8 +10,14 @@ roboconf-preferences:
 security-and-jmx-configuration:
   en: user-guide-snapshot/security-and-jmx-configuration
 
+security-and-web-access-audits:
+  en: user-guide-snapshot/security-and-web-access-audits
+
 complete-machine-configurations-from-an-agent:
   en: user-guide-snapshot/complete-machine-configurations-from-an-agent
+
+security-and-authentication-in-the-web-console:
+  en: user-guide-snapshot/security-and-authentication-in-the-web-console
 
 complete-machine-configurations-from-the-dm:
   en: user-guide-snapshot/complete-machine-configurations-from-the-dm
