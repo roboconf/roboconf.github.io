@@ -6,7 +6,7 @@ id: "security-and-web-access-audits"
 menus: [ "users", "user-guide", "Snapshot" ]
 ---
 
-When [authentication for the web console is enabled](security-and-authentication-in-the-web-console.md),
+When [authentication for the web console is enabled](security-and-authentication-in-the-web-console.html),
 all the accesses to the REST API and connections to the web socket are registered in a file. This file
 can be used for audit purposes:
 
