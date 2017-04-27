@@ -15,21 +15,19 @@ The roadmap for the next months covers several aspects.
 -->
 
 
-* **For April 2017**
+* **For June 2017**
 
 	* Upgrade Roboconf's messaging with SSL support.
-	* Environment and secrets management.
+	* Environment and secrets management.   &nbsp; <span class="glyphicon glyphicon-time"></span>
 	* Complex conditions for the autonomic.
 	* Autonomic decision control (validation form).
-	* Add JMX probes in Roboconf.
-	* User authentication in the web console.
+	* Add JMX probes in Roboconf.   &nbsp; <span class="glyphicon glyphicon-time"></span>
+	* User authentication in the web console.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Promotion videos.
 
 
 * **Items for Later**
 
-	* Introduce user and role management in Roboconf.
-	* Test Roboconf over several days in production conditions (track memory leaks and other bugs).
 	* Improve agent measures for the autonomic (average measures, etc.).
 	* Support the live update of thresholds (in the agent's autonomic) through the web console.
 	* Smart placement.
@@ -46,4 +44,4 @@ The roadmap for the next months covers several aspects.
 	* Study TOSCA support.
 
 
-Roboconf 0.9 will be released in April 2017.
+Roboconf 0.9 will be released in June 2017.

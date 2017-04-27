@@ -40,6 +40,7 @@ menus: [ "developers", "developer-guide", "Snapshot" ]
 * [OCCI Model for Roboconf](occi-model.html)
 * [Database Support in Apache Karaf](database-support-in-karaf.html)
 * [Debugging Roboconf](debugging-roboconf.html)
+* [How Web Authentication Works](how-web-authentication-works.html)
 
 ## Documentation and Website
 

@@ -15,6 +15,7 @@ can be used for audit purposes:
 * Which resources?
 * Which parameters?
 * From which IP address?
+* From which user agent?
 
 The audit traces are managed by a logger.  
 It can be configured in the **etc/org.ops4j.pax.logging.cfg** file.  

@@ -9,6 +9,9 @@ index:
 syntax-highlighting:
   en: developer-guide/syntax-highlighting
 
+how-web-authentication-works:
+  en: developer-guide/how-web-authentication-works
+
 creating-a-new-web-extension:
   en: developer-guide/creating-a-new-web-extension
 

@@ -10,21 +10,19 @@ Roboconf a démarré en tant que prototype de recherche et est maintenant en cou
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
 
-* **Pour Avril 2017**
+* **Pour Juin 2017**
 
 	* Compléter la messagerie pour des échanges sécurisés avec SSL.
-	* Gestion des environnements et des « secrets ».
+	* Gestion des environnements et des « secrets ».   &nbsp; <span class="glyphicon glyphicon-time"></span>
 	* Conditions complexes pour l'autonomique.
 	* Contrôle des décisions automatisées (formulaire de validation).
-	* Ajouter des sondes JMX dans Roboconf.
-	* Authentification des utilisateurs dans la console web.
+	* Ajouter des sondes JMX dans Roboconf.   &nbsp; <span class="glyphicon glyphicon-time"></span>
+	* Authentification des utilisateurs dans la console web.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Vidéos de promotion.
 
 
 * **Pour Plus Tard**
 
-	* Définition d'utilisateurs et de rôles dans Roboconf.
-	* Tester Roboconf en conditions de production sur plusieurs jours (traque des fuites mémoires, etc).
 	* Améliorer les mesures côté agent pour l'autonomique (moyenne, etc).
 	* Permettre la modification des seuils (autonomique côté agent) dans la console web.
 	* Placement intelligent.
@@ -41,4 +39,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Etudier le support de TOSCA.
 
 
-Roboconf 0.9 devrait être disponible en avril 2017.
+Roboconf 0.9 devrait être disponible en juin 2017.
