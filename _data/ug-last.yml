@@ -34,11 +34,8 @@ security-and-authentication-with-a-database:
 security-rabbitmq-change-the-default-port:
   en: user-guide/security-rabbitmq-change-the-default-port
 
-security-rabbitmq-over-ssl:
-  en: user-guide/security-rabbitmq-over-ssl
-
-security-remote-access-to-karaf-s-console:
-  en: user-guide/security-remote-access-to-karaf-s-console
+security-and-remote-access-to-karaf-s-console:
+  en: user-guide/security-and-remote-access-to-karaf-s-console
 
 security-ssl-and-certificates:
   en: user-guide/security-ssl-and-certificates

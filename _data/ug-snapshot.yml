@@ -40,11 +40,11 @@ security-and-authentication-with-a-database:
 security-rabbitmq-change-the-default-port:
   en: user-guide-snapshot/security-rabbitmq-change-the-default-port
 
-security-rabbitmq-over-ssl:
-  en: user-guide-snapshot/security-rabbitmq-over-ssl
+security-and-rabbitmq-over-ssl:
+  en: user-guide-snapshot/security-and-rabbitmq-over-ssl
 
-security-remote-access-to-karaf-s-console:
-  en: user-guide-snapshot/security-remote-access-to-karaf-s-console
+security-and-remote-access-to-karaf-s-console:
+  en: user-guide-snapshot/security-and-remote-access-to-karaf-s-console
 
 security-ssl-and-certificates:
   en: user-guide-snapshot/security-ssl-and-certificates

@@ -17,7 +17,7 @@ The roadmap for the next months covers several aspects.
 
 * **For June 2017**
 
-	* Upgrade Roboconf's messaging with SSL support.
+	* Upgrade Roboconf's messaging with SSL support. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Environment and secrets management.   &nbsp; <span class="glyphicon glyphicon-time"></span>
 	* Complex conditions for the autonomic.
 	* Autonomic decision control (validation form).

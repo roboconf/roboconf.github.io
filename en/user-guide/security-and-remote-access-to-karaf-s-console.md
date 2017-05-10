@@ -1,9 +1,9 @@
 ---
 title: "Security :: Remote Access to Karaf's Console"
 layout: page
-cat: "ug-snapshot"
-id: "security-remote-access-to-karaf-s-console"
-menus: [ "users", "user-guide", "Snapshot" ]
+cat: "ug-last"
+id: "security-and-remote-access-to-karaf-s-console"
+menus: [ "users", "user-guide" ]
 ---
 
 Roboconf agents use the same basis than the DM: [Apache Karaf](http://karaf.apache.org).  

@@ -96,3 +96,5 @@ These pages may also help:
 
 * [Creating a KeyStore in JKS Format, by Oracle](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html)
 * [Enabling HTTPS with Karaf, by Jean-Baptiste Onofré](http://blog.nanthrax.net/2012/12/how-to-enable-https-certificate-client-auth-with-karaf/)
+* http://javarevisited.blogspot.fr/2012/09/difference-between-truststore-vs-keyStore-Java-SSL.html
+* https://www.javacodegeeks.com/2014/07/java-keystore-tutorial.html

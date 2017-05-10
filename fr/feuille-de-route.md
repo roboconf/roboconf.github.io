@@ -12,7 +12,7 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 
 * **Pour Juin 2017**
 
-	* Compléter la messagerie pour des échanges sécurisés avec SSL.
+	* Compléter la messagerie pour des échanges sécurisés avec SSL. &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Gestion des environnements et des « secrets ».   &nbsp; <span class="glyphicon glyphicon-time"></span>
 	* Conditions complexes pour l'autonomique.
 	* Contrôle des décisions automatisées (formulaire de validation).

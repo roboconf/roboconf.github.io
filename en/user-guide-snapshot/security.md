@@ -26,7 +26,7 @@ We discuss every of them on these pages.
 ## Karaf Distributions
 
 * [JMX Configuration](security-and-jmx-configuration.html)
-* [Remote access to Karaf's Console](security-remote-access-to-karaf-s-console.html)
+* [Remote access to Karaf's Console](security-and-remote-access-to-karaf-s-console.html)
 * [Roboconf agents](security-and-agents.html)
 
 <!-- -->
@@ -39,4 +39,4 @@ We discuss every of them on these pages.
 ## Secured Messaging
 
 * [Changing RabbitMQ's default port](security-rabbitmq-change-the-default-port.html)
-* [Using RabbitMQ over SSL](security-rabbitmq-over-ssl.html)
+* [Using RabbitMQ over SSL](security-and-rabbitmq-over-ssl.html)
