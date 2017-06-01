@@ -326,50 +326,6 @@ You can find the full syntax on [PAX URL's web site](https://ops4j1.jira.com/wik
 Roboconf relies on the Maven settings defined in Karaf's **etc** directory (in the **org.ops4j.pax.url.mvn.cfg** file).
 
 
-## Running Docker in a VM
-
-There are two options to manage Docker containers in a VM with Roboconf.  
-The first one relies on the idea that a Roboconf agent will manage them. This solution is not yet implemented.
-
-The other option relies on the DM.  
-It implies you have a hierarchy of instances that looks like...
-
-<pre><code class="language-roboconf">
-instance of VM {
-	instance of Docker {
-		instance of MyApp {
-			#...
-		}
-	}
-}
-</code></pre>
-
-Roboconf will create all these instances, the VM, the Docker container and the application.  
-The secret here relies on the fact that both **VM** and **Docker** are components associated with the **target** installer.
-From Roboconf's point of view, it is all about nested scoped instances (or nested containers).
-
-**VM** can match any target in general (including EC2, Openstack or even Docker).  
-Let's assume it is EC2 (Amazon Web Services).
-
-To have such a use case work, you must have Docker installed on the VM.  
-It means your virtual image (appliance or AMI) must have Docker installed. And your Docker properties
-(those you pass to Roboconf in the **target.properties** file) must reference the IP address of the VM.
-Since this IP address is not known at modeling time, you will use a variable that will be expanded by Roboconf at runtime.
-
-Here is a sample **target.properties** for Docker in this use case.
-
-```properties
-# Configuration file for Docker
-handler = docker
-
-{% raw %}docker.endpoint = http://{{ ip }}:4243{% endraw %}
-docker.image = gen
-docker.agent.package = http://maven.../roboonf-agent.tar.gz
-```
-
-The end-point will be completed with the right IP address when the container is created.  
-Only **ip** is supported at the moment.
-
 
 ## Preparing your own Docker image
 

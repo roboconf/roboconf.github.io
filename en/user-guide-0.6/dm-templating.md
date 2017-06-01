@@ -234,8 +234,8 @@ poll-interval = 1000
 Then, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.5
-bundle:install --start mvn:net.roboconf/roboconf-dm-templating/0.5
+# Here in version 0.6
+bundle:install --start mvn:net.roboconf/roboconf-dm-templating/0.6
 ```
 
 You should see something like...

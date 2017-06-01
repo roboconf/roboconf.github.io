@@ -13,18 +13,18 @@ them on [GitHub pages](https://pages.github.com/).
 
 ## Building the Web Site
 
-To build the web site locally, you must install [Jekyll](http://jekyllrb.com/).    
+To build the web site locally, you can use Docker...
+
+```
+cd roboconf.github.io/
+docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll -it -p 4000:4000 jekyll/jekyll jekyll serve
+```
+
+... or you can install [Jekyll](http://jekyllrb.com/) directly on your machine.  
 Then, use...
 
-	bundle exec jekyll serve -w
-
-... to run a web server locally, or... 
-
-	bundle exec jekyll build
-
-... to simply generate static HTML files.  
-When using Jekyll on your own machine, you may have errors about missing gems or dependencies.
-
-	sudo bundle install
+* `bundle exec jekyll serve -w` to run a web server locally.
+* `bundle exec jekyll build` to simply generate static HTML files.
+* `sudo bundle install` to resolve problems about missing gems or dependencies.
 
 You will find more information on [Github's web site](https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/).

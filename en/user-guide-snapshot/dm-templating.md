@@ -66,6 +66,35 @@ Files generated from global and specific templates are all located in a same dir
 being associated with an application.
 
 
+## Custom Output Location
+
+It is possible to specify a custom output location.  
+Simply add a comment at the beginning of your template file. It will be interpreted by Roboconf.
+
+{% raw %}
+```htmldjango
+{{! roboconf-output: /tmp/my-output.txt }}
+{{#all VM}}
+- {{name}}
+{{/all}}
+```
+{% endraw %}
+
+You can also inject the application name in the path.
+
+{% raw %}
+```htmldjango
+{{! roboconf-output: /tmp/${app}/${app}.txt }}
+{{#all VM}}
+- {{name}}
+{{/all}}
+```
+{% endraw %}
+
+Roboconf will try to create the directory if it does not exist.  
+Obviously, Roboconf should have the permissions to write in this location.
+
+
 ## Templates
 
 Templates are based on [Mustache](https://mustache.github.io/) and (a Java port of) [Handlebars](http://handlebarsjs.com/).  
@@ -234,8 +263,8 @@ poll-interval = 1000
 Then, open the DM's interactive mode and type in...
 
 ```properties
-# Here in version 0.5
-bundle:install --start mvn:net.roboconf/roboconf-dm-templating/0.5
+# Here in version %v_SNAP%
+bundle:install --start mvn:net.roboconf/roboconf-dm-templating/%v_SNAP%
 ```
 
 You should see something like...
