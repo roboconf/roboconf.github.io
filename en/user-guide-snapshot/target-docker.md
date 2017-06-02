@@ -48,7 +48,6 @@ description =
 # docker.password = 
 # docker.email = 
 # docker.version = 
-# docker.run.exec = 
 
 # Image Generation
 # docker.generate.image.from = ./img
@@ -64,12 +63,14 @@ Let's begin with general parameters.
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
 | docker.endpoint | The end-point URL of Docker (requires Docker to be setup to use a TCP port). Only 'tcp://' or 'unix://' URLs are supported. | tcp://localhost:4243 | no |
-| docker.image | The ID or tag (name) of the docker image used as a template for the VM (as shown by "docker images", for example). | roboconf/roboconf-agent:\<version\> where *version* is the same than the DM. | no |
+| docker.image | The ID or tag (name) of the docker image used as a template for the VM (as shown by "docker images", for example). | roboconf/roboconf-agent:\<version\> | no |
 | docker.user | The name of the user to connect. | none | no |
 | docker.password | The password of the user to connect. | none | no |
 | docker.email | The email of the user to connect. | none | no |
 | docker.version | The Docker version (for API compatibility). This version supports versions until Docker v1.23. | none | no |
-| docker.run.exec | The command line to run in the created Docker container. *Check the dedicated [docker.run.exec property](#the-docker.run.exec-property) section below* | *See the section below* | no |
+
+> `\<version\>` is the version of the DM.  
+> If the DM is a snapshot version, then `LATEST` is retained.
 
 If you use your own image, you should extend
 [the official one for Roboconf agents](https://hub.docker.com/r/roboconf/roboconf-agent/).  
@@ -209,7 +210,7 @@ RUN echo "mvn:org.apache.karaf.decanter/apache-karaf-decanter/LATEST/xml/feature
 	>> /opt/roboconf-karaf-dist-agent/etc/org.apache.karaf.features.repos.cfg
 
 # Add a list of features to enable / install at startup
-RUN sed -i /featuresBoot\s*=\s*\\/featuresBoot = management, decanter-collector-jmx, \/ \
+RUN sed -i /featuresBoot\s*=\s*/featuresBoot = management, decanter-collector-jmx, / \
 	/opt/roboconf-karaf-dist-agent/etc/org.apache.karaf.features.cfg
 ```
 
