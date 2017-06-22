@@ -486,6 +486,14 @@ table#apis-table td:nth-child(1) {
 	vertical-align: top;
 }
 
+
+/* The table for API */
+
+table.api-table td:nth-child(2) {
+	text-align: center;
+}
+
+
 /* Footer */
 
 #footer {

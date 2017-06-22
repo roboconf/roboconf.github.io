@@ -8,85 +8,97 @@ menus: [ "developers", "developer-guide", "Snapshot" ]
 
 There are several APIs within Roboconf:
 
-* The **target** API, or how to manage deployment infrastructures.
-* The **plugin** API, or how to manage the life cycle of Software components.
-* The **messaging** API, or how the DM and agents can interact together.
+* The **agent's monitoring API**, or how agents can monitor programs.
+* The **core**, with the helpers and the model classes.
 * The **manager** API, which is the DM's main class.
+* The **messaging** API, or how the DM and agents can interact together.
+* The **plugin** API, or how to manage the life cycle of Software components.
+* The **target** API, or how to manage deployment infrastructures.
+
+> These library will become API for real only when Roboconf reaches version 1.0.  
+> Also, notice that packages that contain **internal** cannot be considered as API.
+
 
 Most of these API are illustrated here and there in this developer guide.  
-Javadoc is not (yet) hosted on the web site. But you can find it on our Maven repository.
+Here is the documentation for version 0.8.
+
+<table class="api-table">
+	<tr>
+		<th>API</th>
+		<th>Online Javadoc</th>
+		<th>Javadoc JAR</th>
+	</tr>
+	<tr>
+		<td>Agent Monitoring API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-agent-monitoring-api/0.8">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-agent-monitoring-api/0.8/roboconf-agent-monitoring-api-0.8-javadoc.jar">Download</a></td>
+	</tr>
+	<tr>
+		<td>Core API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-core/0.8">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-core/0.8/roboconf-core-0.8-javadoc.jar">Download</a></td>
+	</tr>
+	<tr>
+		<td>Manager API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-dm/0.8">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-dm/0.8/roboconf-dm-0.8-javadoc.jar">Download</a></td>
+	</tr>
+	<tr>
+		<td>Messaging API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-messaging-api/0.8">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-messaging-api/0.8/roboconf-messaging-api-0.8-javadoc.jar">Download</a></td>
+	</tr>
+	<tr>
+		<td>Plugin API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-plugin-api/0.8">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-plugin-api/0.8/roboconf-plugin-api-0.8-javadoc.jar">Download</a></td>
+	</tr>
+	<tr>
+		<td>Target API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-target-api/0.8">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-target-api/0.8/roboconf-target-api-0.8-javadoc.jar">Download</a></td>
+	</tr>
+</table>
 
 
-<table id="apis-table">
+Here is the documentation for version 0.7.
+
+<table class="api-table">
 	<tr>
-		<th><span class="octicon octicon-pin"></span> Roboconf Version</th>
-		<th>API Javadoc</th>
+		<th>API</th>
+		<th>Online Javadoc</th>
+		<th>Javadoc JAR</th>
 	</tr>
-	
-	<!-- 0.7 -->
 	<tr>
-		<td>0.7</td>
-		<td>
-			<ul>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-target-api/0.7/roboconf-target-api-0.7-javadoc.jar">Target API</a>
-			</li>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-plugin-api/0.7/roboconf-plugin-api-0.7-javadoc.jar">Plugin API</a>
-			</li>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-messaging-api/0.7/roboconf-messaging-api-0.7-javadoc.jar">Messaging API</a>
-			</li>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-dm/0.7/roboconf-dm-0.7-javadoc.jar">Manager API</a>
-			</li>
-			</ul>
-		</td>
+		<td>Agent Monitoring API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-agent-monitoring-api/0.7">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-agent-monitoring-api/0.7/roboconf-agent-monitoring-api-0.7-javadoc.jar">Download</a></td>
 	</tr>
-	
-	<!-- 0.6 -->
 	<tr>
-		<td>0.6</td>
-		<td>
-			<ul>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-target-api/0.6/roboconf-target-api-0.6-javadoc.jar">Target API</a>
-			</li>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-plugin-api/0.6/roboconf-plugin-api-0.6-javadoc.jar">Plugin API</a>
-			</li>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-messaging-api/0.6/roboconf-messaging-api-0.6-javadoc.jar">Messaging API</a>
-			</li>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-dm/0.6/roboconf-dm-0.6-javadoc.jar">Manager API</a>
-			</li>
-			</ul>
-		</td>
+		<td>Core API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-core/0.7">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-core/0.7/roboconf-core-0.7-javadoc.jar">Download</a></td>
 	</tr>
-	
-	<!-- 0.5 -->
 	<tr>
-		<td>0.5</td>
-		<td>
-			<ul>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-target-api/0.5/roboconf-target-api-0.5-javadoc.jar">Target API</a>
-			</li>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-plugin-api/0.5/roboconf-plugin-api-0.5-javadoc.jar">Plugin API</a>
-			</li>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-messaging-api/0.5/roboconf-messaging-api-0.5-javadoc.jar">Messaging API</a>
-			</li>
-			<li>
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-dm/0.5/roboconf-dm-0.5-javadoc.jar">Manager API</a>
-			</li>
-			</ul>
-		</td>
+		<td>Manager API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-dm/0.7">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-dm/0.7/roboconf-dm-0.7-javadoc.jar">Download</a></td>
+	</tr>
+	<tr>
+		<td>Messaging API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-messaging-api/0.7">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-messaging-api/0.7/roboconf-messaging-api-0.7-javadoc.jar">Download</a></td>
+	</tr>
+	<tr>
+		<td>Plugin API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-plugin-api/0.7">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-plugin-api/0.7/roboconf-plugin-api-0.7-javadoc.jar">Download</a></td>
+	</tr>
+	<tr>
+		<td>Target API</td>
+		<td><a href="https://javadoc.io/doc/net.roboconf/roboconf-target-api/0.7">View</a></td>
+		<td><a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-target-api/0.7/roboconf-target-api-0.7-javadoc.jar">Download</a></td>
 	</tr>
 </table>
 
 Older versions are also available on our Maven repositories, but are not worth being mentioned here.
-
-> Javadoc will be put online on this web site as soon as Roboconf reaches version 1.0.
