@@ -106,7 +106,7 @@ the SSL configuration directly in the agent's configuration directory. If the ag
 a dedicated user for both the DM and agent distributions.
 
 
-## Available Example
+## Available Examples
 
 The main difficulties can be configuring the RabbitMQ server, and generating the certificates stuff
 (in particular the key store and the trust store). 

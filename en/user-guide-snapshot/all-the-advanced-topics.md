@@ -37,3 +37,10 @@ This page lists all the advanced topics related to Roboconf.
 * [Complete machine configurations from the DM](complete-machine-configurations-from-the-dm.html)
 * [Complete machine configurations from an agent](complete-machine-configurations-from-an-agent.html)
 * [Dynamic configuration files for agents](dynamic-configuration-files-for-agents.html)
+
+
+## Scripting with Roboconf APIs
+
+* [Using the DM's REST API](/en/developer-guide/rest-api.html)
+* Using Roboconf's Java API: please refer to our [programmer API](/en/developer-guide/programmers-api.html)
+and this [sample project](https://github.com/vincent-zurczak/roboconf-debug-sample).

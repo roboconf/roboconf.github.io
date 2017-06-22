@@ -27,7 +27,7 @@ specified in the agent's configuration. As an example, if the agent uses RabbitM
 will be **net.roboconf.messaging.rabbitmq**. Generally, messaging configurations should have PIDs
 that begin with **net.roboconf.messaging**.
 
-> If the agent's **target-id** property is set to one of the *iaas-...* values, then
+> If the agent's **parameters** property is set to one of the *@iaas-...* values, then
 > you do NOT have to configure other properties. They will be passed by the DM through cloud mechanisms (e.g. with CloudInit).
 
 There are 2 ways of updating the agent's configuration.  
@@ -53,19 +53,23 @@ The first one consists in editing (or creating) the **/etc/net.roboconf.agent.co
 A sample is given below.
 
 ```properties
-# The target ID.
+# How and where to retrieve agent's dynamic parameters.
 # Depending on its value, the following parameters may be read from
-# another location than this file. This is the case for Amazon Web Services
-# Microsoft Azure and Openstack.
+# another location than this file.
 #
-# Possible values are:
-# 	* iaas-ec2
-# 	* iaas-openstack
-# 	* iaas-vmware
-# 	* iaas-azure
-# 	* embedded
+# Known available values are:
+# 	* @iaas-ec2
+# 	* @iaas-openstack
+# 	* @iaas-vmware (Linux systems only)
+# 	* @iaas-azure
+# 	* Any "file:/" or "http:/" URL
 #
-target-id = 
+# "@iaas-" values mean all the parameters are passed by
+# the DM. They are mada available to the agent through cloud API
+# (such as Cloud Init).
+#
+# If left empty, the used parameters are those specified in this file.
+parameters = 
 
 # The application name.
 application-name = 
@@ -101,7 +105,7 @@ The following table summers up all the agent parameters.
 
 | Property | Description | Notice | Mandatory |
 | --- | --- | --- | --- |
-| target-id | The target ID. Some cloud infrastructures provide mechanisms to store information for the VM. On some IaaS, the DM passes information to the agent through these means. It implies that a part of the agent configuration is read from an external location. | See the next section. | yes |
+| parameters | It indicates where agent parameters should be retrieved. If empty, parameters are read from this file. If it is an URL, then parameters will be read from it (must have been written by Roboconf's DM). Otherwise, some cloud infrastructures provide mechanisms to store information for the VM. On some IaaS, the DM passes information to the agent through these means. It implies that a part of the agent configuration is read from an external location. | See the next section. | yes |
 | application-name | An agent is associated with a single application. | Depending on the target ID, its value can be retrieved from *user data*. | yes |
 | root-instance-name | Within an application, machines are represented by a root instance. This parameter is the name of the instance associated with this agent. | Depending on the target ID, its value can be retrieved from *user data*. | yes |
 | ip-address-of-the-agent | The IP address of the agent's machine. | This is useful if the machine has several network interfaces. | no |
@@ -113,9 +117,9 @@ These parameters are persisted and restored upon restart.
 However, depending on the target ID, some values may be overridden.
 
 
-## Target ID
+## Agent Parameters
 
-The target ID indicates on which target the agent runs.  
+The **parameters** property indicates if and where an agent should retrieve its configuration.  
 Normally, the agent parameters should be hard-written in configuration files. However, each agent has its own configuration.
 Some settings are the same for all the agents (such as the messaging parameters). And some others are specific.
 The couple **application name** and **root instance name** are unique. Two agents cannot have the same values for these 2 parameters.
@@ -124,7 +128,7 @@ Instead of hard-coding these parameters, it is possible to let them blank. And t
 This is only possible in cloud infrastructures, since they support, in one way or another, a mechanism of *user data*. When one
 creates a VM (virtual machine) from a virtual image, it is possible to pass data to the new VM. Once the VM is running, it can access these data and do whatever it needs with.  
 
-> To summer it up, when the **target-id** property is set to one of the *iaas-...* values, then
+> To summer it up, when the **parameters** property is set to one of the *@iaas-...* values, then
 > you do NOT have to configure other properties. The agent will retrieve its configuration from user data and overwrite its configuration.
 
 Let's take an example with Amazon Web Services.  
@@ -137,7 +141,7 @@ It is associated with a component that designates an EC2 VM.
 It calls the right API in EC2 and sets user data for the new VM 
 (application name = my app, root-instance-name = my-root, plus the messaging parameters).
 3. Once the VM is up, the agent starts, the OSGi configuration is injected in the agent.
-5. Since the target ID is **iaas-ec2**, the agent then reads the user data in EC2, thus completing its configuration.
+5. Since the target ID is **@iaas-ec2**, the agent then reads the user data in EC2, thus completing its configuration.
 
 User data override the following parameters.
 
@@ -154,6 +158,12 @@ The only IaaS it does not work with is the **embedded** one.
 
 Notice that if you stop the agent and restart it, and that its target ID involves user data, 
 the agent will once again read these user data.
+
+To summer it up:
+
+* Value is empty: all the parameters are read from the agent's configuration file (no dynamic parameter).
+* Value points to an URL. These (dynamic) parameters are read from this URL. The content must have been written by the DM.
+* Value starts with `@`. Dynamic parameters are retrieved through a cloud mechanism.
 
 
 ## Additional Plug-ins

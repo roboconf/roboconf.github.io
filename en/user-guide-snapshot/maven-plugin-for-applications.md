@@ -77,8 +77,8 @@ It means you can inject Maven properties in your resource files.
 Example with the **application.properties** file:
 
 ```properties
-application-name = Tomcat 8 cluster
-application-qualifier = ${project.artifactId}-${project.version}
+name = Tomcat 8 cluster
+version = ${project.version}
 
 # Etc.
 ```

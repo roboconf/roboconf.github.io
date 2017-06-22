@@ -9,6 +9,11 @@ menus: [ "developers", "developer-guide", "Snapshot" ]
 Roboconf's DM exposes a REST API and a web socket.  
 This page gathers links and documentation about them.
 
+> Notice that from version 0.9, the error messages sent from the server
+> are translated according to the user language specified in the DM preferences.
+> It allows to display some of them to users (e.g. why an application template is invalid).
+
+
 <table id="download-table">
 	<tr>
 		<th><span class="octicon octicon-pin"></span> &nbsp; Item</th>

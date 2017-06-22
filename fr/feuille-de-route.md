@@ -6,28 +6,35 @@ id: "roadmap"
 menus: [ "project", "roadmap" ]
 ---
 
-Roboconf a démarré en tant que prototype de recherche et est maintenant en cours d'industrialisation.  
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
 
 * **Pour Juin 2017**
 
 	* Compléter la messagerie pour des échanges sécurisés avec SSL. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Gestion des environnements et des « secrets ».   &nbsp; <span class="glyphicon glyphicon-time"></span>
-	* Conditions complexes pour l'autonomique.
-	* Contrôle des décisions automatisées (formulaire de validation).
-	* Ajouter des sondes JMX dans Roboconf.   &nbsp; <span class="glyphicon glyphicon-time"></span>
+	* Ajouter des sondes JMX dans Roboconf.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
 	* Authentification des utilisateurs dans la console web.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Vidéos de promotion.
+	* Générer des fichiers auditables pour les accès web.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
+	* Modifier la cible Docker pour qu'elle utiliser nos images.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
+
+
+* **Pour Octobre 2017**
+
+	* Gérer la migration d'applications (déploiement continu).
+	* Scinder les cibles de déploiements en profils et candidats.
+	* Travailler sur une cible de déploiement pour les serveurs statiques.
+	* Créer des vidéos de promotion.
 
 
 * **Pour Plus Tard**
 
+	* Gestion des environnements et des « secrets ».
+	* Conditions complexes pour l'autonomique.
+	* Contrôle des décisions automatisées (formulaire de validation).
 	* Améliorer les mesures côté agent pour l'autonomique (moyenne, etc).
 	* Permettre la modification des seuils (autonomique côté agent) dans la console web.
 	* Placement intelligent.
 	* Ajouter des quotas affinés pour l'autonomique côté DM.
-	* Gérer la migration d'applications (déploiement continu).
 	* Créer une extension pour Jenkins.
 
 

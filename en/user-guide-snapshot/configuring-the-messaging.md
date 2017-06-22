@@ -14,8 +14,8 @@ And each one has its own configuration. Generally, messaging configurations shou
 that begin with **net.roboconf.messaging**.
 
 > Configuration parameters can be changed at runtime, without rebooting.  
-> Besides, as a reminder, on the agent, you do NOT have to configure the messaging if its **target-id** property
-> was set to one of the *iaas-...* values.
+> As a reminder, on the agent, you do NOT have to configure the messaging if its **parameters** property
+> was set to one of the *@iaas-...* values.
 
 Here is a short overview of all the messaging implementations.
 
