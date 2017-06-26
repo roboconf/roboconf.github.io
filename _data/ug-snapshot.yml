@@ -7,6 +7,9 @@ customizing-the-web-administration-look-n-feel:
 roboconf-preferences:
   en: user-guide-snapshot/roboconf-preferences
 
+security-and-miscellaneous:
+  en: user-guide-snapshot/security-and-miscellaneous
+
 security-and-jmx-configuration:
   en: user-guide-snapshot/security-and-jmx-configuration
 

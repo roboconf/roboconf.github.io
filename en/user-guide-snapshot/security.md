@@ -28,6 +28,7 @@ We discuss every of them on these pages.
 * [JMX Configuration](security-and-jmx-configuration.html)
 * [Remote access to Karaf's Console](security-and-remote-access-to-karaf-s-console.html)
 * [Roboconf agents](security-and-agents.html)
+* [Miscellaneous](security-and-miscellaneous.html)
 
 <!-- -->
 
