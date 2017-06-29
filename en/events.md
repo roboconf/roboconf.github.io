@@ -10,6 +10,12 @@ Various events where Roboconf was shown.
 Slides can help to understand the project and its uses cases.
 
 
+## &laquo; JDEV 2017 &raquo;
+
+* July 4<sup>th</sup>-July 7<sup>th</sup>, 2017
+* The track's web page is [here](http://devlog.cnrs.fr/jdev2017/t5.a08)
+
+
 ## &laquo; Sophia Conf 2016 &raquo;
 
 * July 4<sup>th</sup>-July 7<sup>th</sup>, 2016

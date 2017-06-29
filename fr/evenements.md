@@ -10,6 +10,12 @@ Cette page liste les événements durant lesquels Roboconf a été présenté,
 ainsi que les publications dans lesquelles il a été mentionné.
 
 
+## &laquo; JDEV 2017 &raquo;
+
+* Du 4 juin au 7 juillet 2017
+* La page web de la session se trouve [ici](http://devlog.cnrs.fr/jdev2017/t5.a08)
+
+
 ## &laquo; Sophia Conf 2016 &raquo;
 
 * Du 4 juin au 7 juillet 2016
