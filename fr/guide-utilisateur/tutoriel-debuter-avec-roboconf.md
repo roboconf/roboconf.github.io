@@ -114,7 +114,7 @@ ce biais.
 ## Première Application Roboconf
 
 Nous allons maintenant nous intéresser à l'application que nous allons déployer.  
-Téléchargez-la [ici](https://bintray.com/artifact/download/roboconf/roboconf-tutorial-samples/lamp-webapp-bash-0.6.0-1.0.zip). Il s'agît d'une archive ZIP avec une structure particulière.
+Téléchargez-la [ici](https://bintray.com/artifact/download/roboconf/roboconf-tutorial-samples/lamp-webapp-bash-0.8.0-1.0.zip). Il s'agît d'une archive ZIP avec une structure particulière.
 Les répertoires que l'on retrouve à chaque fois sont **descriptor**, **graph** et **instances**.
 
 <img src="/resources/img/tutorial-sample-app-structure.jpg" alt="Structure de l'archive" />
