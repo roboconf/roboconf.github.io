@@ -6,7 +6,7 @@ id: "tutoriel-apache-storm-et-docker-5"
 menus: [ "users", "user-guide" ]
 ---
 
-Cette avant-dernière partie vous propose de créer [un fichier de commandes](/en/user-guide-snapshot/roboconf-commands.html)
+Cette avant-dernière partie vous propose de créer [un fichier de commandes](/en/user-guide/roboconf-commands.html)
 Roboconf. Un tel fichier équivaut à un script avec des commandes spécifiques
 à Roboconf.
 
