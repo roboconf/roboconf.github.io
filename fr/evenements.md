@@ -14,6 +14,9 @@ ainsi que les publications dans lesquelles il a été mentionné.
 
 * Du 4 juin au 7 juillet 2017
 * La page web de la session se trouve [ici](http://devlog.cnrs.fr/jdev2017/t5.a08)
+* Résumé : **déploiement d'une pile « Big Data » dockerisée avec Roboconf**
+* Présentation : [PDF](/slides/jdev-2017/JDEV-2017.pdf) / [ODP](/slides/jdev-2017/JDEV-2017.odp)
+* Atelier technique sur [le site web](/fr/guide-utilisateur/tutoriel-apache-storm-et-docker-1.html)
 
 
 ## &laquo; Sophia Conf 2016 &raquo;
@@ -21,6 +24,8 @@ ainsi que les publications dans lesquelles il a été mentionné.
 * Du 4 juin au 7 juillet 2016
 * Titre de la session : **Déploiement élastique dans le cloud par Roboconf**
 * Le site de l'événement se trouve [ici](http://www.telecom-valley.fr/sophiaconf2016-intelligence-artificielle-economie-collaborative-iot-devops/)
+* Présentation : [PDF](http://www.telecom-valley.fr/wp-content/uploads/2016/07/Deneux-SophiaConf-2016-DevOps.pdf)
+* Vidéo [sur Youtube](https://www.youtube.com/watch?v=8lswaoW2gCw)
 
 
 ## &laquo; IEEE Cloud 2015 &raquo;

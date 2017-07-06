@@ -14,6 +14,9 @@ Slides can help to understand the project and its uses cases.
 
 * July 4<sup>th</sup>-July 7<sup>th</sup>, 2017
 * The track's web page is [here](http://devlog.cnrs.fr/jdev2017/t5.a08)
+* In few words: **deploy a dockerized Big Data stack with Roboconf**
+* Slides: [PDF](/slides/jdev-2017/JDEV-2017.pdf) / [ODP](/slides/jdev-2017/JDEV-2017.odp)
+* The workshop is available on the web site as [a tutorial](/fr/guide-utilisateur/tutoriel-apache-storm-et-docker-1.html) (in French)
 
 
 ## &laquo; Sophia Conf 2016 &raquo;
@@ -21,6 +24,8 @@ Slides can help to understand the project and its uses cases.
 * July 4<sup>th</sup>-July 7<sup>th</sup>, 2016
 * Track's title: **Déploiement élastique dans le cloud par Roboconf**
 * The event's web site is [here](http://www.telecom-valley.fr/sophiaconf2016-intelligence-artificielle-economie-collaborative-iot-devops/)
+* Slides: [PDF](http://www.telecom-valley.fr/wp-content/uploads/2016/07/Deneux-SophiaConf-2016-DevOps.pdf)
+* Video is [on Youtube](https://www.youtube.com/watch?v=8lswaoW2gCw)
 
 
 ## &laquo; IEEE Cloud 2015 &raquo;

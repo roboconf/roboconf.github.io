@@ -20,5 +20,4 @@ Certaines sont redandantes avec d'autres tutoriels.
 3. [Storm par Roboconf, version 1](tutoriel-apache-storm-et-docker-4.html)
 4. [Création d'un fichier de commandes](tutoriel-apache-storm-et-docker-5.html)
 5. [Storm par Roboconf, version 2](tutoriel-apache-storm-et-docker-6.html)
-
-Un correctif global sera rajouté plus tard.
+6. [Éléments de solutions](tutoriel-apache-storm-et-docker-7.html)

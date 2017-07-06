@@ -71,29 +71,29 @@ Dans le cadre de cet exercice, vous allez d'abord déployer une topologie Storm 
 Commençons par l'installation d'un Zoo Keeper.
 
 ```
-docker run -d --rm --restart always --name zookeeper zookeeper:3.3
+docker run -d --restart always --name zookeeper zookeeper:3.3
 ```
 
 Poursuivons par l'installation d'un Nimbus.
 
 ```
-docker run -d --rm --restart always --name nimbus --link zookeeper:zookeeper storm:1.1 storm nimbus
+docker run -d --restart always --name nimbus --link zookeeper:zookeeper storm:1.1 storm nimbus
 ```
 
 Puis créeons des nœuds de travail.
 
 ```properties
-docker run -d --rm --restart always --name supervisor1 --link zookeeper:zookeeper --link nimbus:nimbus storm:1.1 storm supervisor
-docker run -d --rm --restart always --name supervisor2 --link zookeeper:zookeeper --link nimbus:nimbus storm:1.1 storm supervisor
+docker run -d --restart always --name supervisor1 --link zookeeper:zookeeper --link nimbus:nimbus storm:1.1 storm supervisor
+docker run -d --restart always --name supervisor2 --link zookeeper:zookeeper --link nimbus:nimbus storm:1.1 storm supervisor
 # ...
-docker run -d --rm --restart always --name supervisorN --link zookeeper:zookeeper --link nimbus:nimbus storm:1.1 storm supervisor
+docker run -d --restart always --name supervisorN --link zookeeper:zookeeper --link nimbus:nimbus storm:1.1 storm supervisor
 ```
 
 Nous pouvons également installer l'interface d'administration.
 
 ```properties
 # Disponible à l'adresse : http://localhost:9090/index.html
-docker run -d --rm -p 9090:8080 --restart always --name ui --link nimbus:nimbus storm:1.1 storm ui
+docker run -d -p 9090:8080 --restart always --name ui --link nimbus:nimbus storm:1.1 storm ui
 ```
 
 > Notez les différentes relations entre les conteneurs.  
