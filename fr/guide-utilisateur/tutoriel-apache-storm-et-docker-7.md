@@ -69,9 +69,10 @@ docker run -d \
        storm:${maven.storm.version} storm supervisor
 ```
 
-Notez que l'on utilise l'identifiant d'une instance Roboconf comme nom de conteneur.  
+Notez que l'on utilise ici l'identifiant d'une instance Roboconf comme nom de conteneur.  
 Cela simplifie la gestion par la suite, notamment pour retrouver le nom du conteneur
-lorsque l'on souhaite l'arrêter.
+lorsque l'on souhaite l'arrêter. Zoo Keeper et Nimbus peuvent avoir un nom en dur, puisque
+nous avons fait l'hypothèse que ces composants n'auraient qu'une seule instance (pour cette version 1).
 
 **stop.sh**
 
@@ -81,7 +82,7 @@ docker kill ${ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH}
 ```
 
 Pas besoin de **undeploy.sh** ou de **update.sh**, pour le moment.  
-Exception faîte du composant **testy_topology**, pour lequel on voudrait que la
+Exception faîte du composant **test_topology**, pour lequel on voudrait que la
 topologie soit redistribuée chaque fois qu'un nœud de travail apparaît ou disparaît. Cela
 passe par la fourniture d'un script **update.sh**, qu'il n'y avait pas pour les autres
 composants.
