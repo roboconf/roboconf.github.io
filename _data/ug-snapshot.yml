@@ -4,6 +4,10 @@
 customizing-the-web-administration-look-n-feel:
   en: user-guide-snapshot/customizing-the-web-administration-look-n-feel
 
+all-the-tutorials:
+  en: user-guide-snapshot/all-the-tutorials
+  fr: guide-utilisateur/tous-les-tutoriels
+
 roboconf-preferences:
   en: user-guide-snapshot/roboconf-preferences
 
@@ -219,6 +223,34 @@ tutorial-first-deployment-in-the-cloud-4:
   fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-4
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud-4
 
+tutoriel-apache-storm-et-docker-1:
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-1
+  en: user-guide-snapshot/tutorial-apache-storm-with-docker-1
+
+tutoriel-apache-storm-et-docker-2:
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-2
+  en: user-guide-snapshot/tutorial-apache-storm-with-docker-2
+
+tutoriel-apache-storm-et-docker-3:
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-3
+  en: user-guide-snapshot/tutorial-apache-storm-with-docker-3
+
+tutoriel-apache-storm-et-docker-4:
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-4
+  en: user-guide-snapshot/tutorial-apache-storm-with-docker-4
+
+tutoriel-apache-storm-et-docker-5:
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-5
+  en: user-guide-snapshot/tutorial-apache-storm-with-docker-5
+
+tutoriel-apache-storm-et-docker-6:
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-6
+  en: user-guide-snapshot/tutorial-apache-storm-with-docker-6
+
+tutoriel-apache-storm-et-docker-7:
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-7
+  en: user-guide-snapshot/tutorial-apache-storm-with-docker-7
+
 docker-tips:
   en: user-guide-snapshot/docker-tips
 
@@ -227,6 +259,7 @@ autonomic-management-with-roboconf:
 
 tutorial-apache-storm:
   en: user-guide-snapshot/tutorial-apache-storm
+  fr: guide-utilisateur/tutoriel-apache-storm
 
 inheritance-and-variables:
   en: user-guide-snapshot/inheritance-and-variables

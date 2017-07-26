@@ -8,7 +8,8 @@ menus: [ "users", "user-guide", "Snapshot" ]
 
 ## Introduction
 
-Apache Storm is generally used to perform real-time calculations related to big data (continuous calculation, involving unbounded data sources handled in a streaming manner).
+[Apache Storm](http://storm.apache.org/)
+is generally used to perform real-time calculations related to big data (continuous calculation, involving unbounded data sources handled in a streaming manner).
 
 Storm allows to run "topologies" (graphs of computation) on a "storm cluster".  
 A storm cluster is made of several nodes, including:
@@ -52,10 +53,10 @@ So, to sum up:
 
 In this tutorial, we decided to design the Roboconf graph as follows:
 
-- A "storm\_platform" component is a container for Nimbus and Worker: it provides the Storm + supervisord software stack, without configuration.
-- A "storm\_worker" component is an application to be deployed on a "storm\_platform" (here, mainly configuration files). It imports the IP address of the Nimbus node, and will be able to complete its configuration and start up as soon as the Nimbus IP is known.
-- A "storm\_nimbus" component is an application to be deployed on a "storm\_platform" (configuration files + additional software, including StormUI and ZooKeeper). It exports its IP address, so that other components may use it (here, "storm\_worker" instances).
-- A "VM" is the virtual machine where other components can be deployed (we'll use Docker containers, but switching to a IaaS is quite easy - just adapt the "target.properties" configuration file with adequate credentials).
+- A **storm\_platform** component is a container for Nimbus and Worker: it provides the Storm + supervisord software stack, without configuration.
+- A **storm\_worker** component is an application to be deployed on a "storm\_platform" (here, mainly configuration files). It imports the IP address of the Nimbus node, and will be able to complete its configuration and start up as soon as the Nimbus IP is known.
+- A **storm\_nimbus** component is an application to be deployed on a "storm\_platform" (configuration files + additional software, including StormUI and ZooKeeper). It exports its IP address, so that other components may use it (here, "storm\_worker" instances).
+- A **VM** is the virtual machine where other components can be deployed (we'll use Docker containers, but switching to a IaaS is quite easy - just adapt the "target.properties" configuration file with adequate credentials).
 
 <img src="/resources/img/tutorial-storm-model.png" alt="Roboconf graph for Apache Storm" class="gs" />
 
@@ -92,7 +93,7 @@ storm_worker {
 
 ## Download and build the tutorial
 
-The roboconf examples can be download from Github:
+The Roboconf examples can be download from Github:
 
 ```tcl
 git clone https://github.com/roboconf/roboconf-examples.git
@@ -107,46 +108,47 @@ mvn clean install
 
 The Roboconf deployment archive is the ZIP file located in the **target/** directory (e.g. storm-bash-%v_SNAP%.zip).
 
-### Project organization
+
+## Project organization
 
 ```
 src/main/model
 ├── descriptor
 │   └── application.properties
-├── graph (The application graph is what Roboconf deploys).
+├── graph (the application graph is what Roboconf deploys)
 │   ├── graph.graph
-│   ├── storm_platform (The Apache storm software platform, without configuration)
+│   ├── storm_platform (the Apache storm software platform, without configuration)
 │   │   ├── files
-│   │   └── scripts (Lifecycle scripts, to be called by Roboconf).
+│   │   └── scripts (life cycle scripts, to be called by Roboconf)
 │   │       ├── deploy.sh
 │   │       ├── start.sh
 │   │       ├── stop.sh
 │   │       ├── undeploy.sh
 │   │       └── update.sh
-│   ├── storm_nimbus (The Storm master node, to deploy on storm_platform: brings ZooKeeper and StormUI).
-│   │   ├── files (Configuration files for Storm and zookeeper).
+│   ├── storm_nimbus (the Storm master node, to deploy on storm_platform: brings ZooKeeper and StormUI)
+│   │   ├── files (configuration files for Storm and ZooKeeper)
 │   │   │   ├── nimbus.cfg
 │   │   │   ├── storm.yaml
 │   │   │   └── zoo.cfg
-│   │   └── scripts (Lifecycle scripts, to be called by Roboconf).
+│   │   └── scripts (life cycle scripts, to be called by Roboconf)
 │   │       ├── deploy.sh
 │   │       ├── start.sh
 │   │       ├── stop.sh
 │   │       ├── undeploy.sh
 │   │       └── update.sh
-│   ├── storm_worker (A Storm slave node, to deploy on storm_platform: mostly configuration).
-│   │   ├── files (Configuration files for Storm).
+│   ├── storm_worker (a Storm slave node, to deploy on storm_platform: mostly configuration)
+│   │   ├── files (configuration files for Storm)
 │   │   │   ├── storm.yaml
 │   │   │   └── worker.cfg
-│   │   └── scripts (Lifecycle scripts, to be called by Roboconf).
+│   │   └── scripts (life cycle scripts, to be called by Roboconf)
 │   │       ├── deploy.sh
 │   │       ├── start.sh
 │   │       ├── stop.sh
 │   │       ├── undeploy.sh
 │   │       └── update.sh
-│   └── VM (The VM where to deploy Storm: here, configured for Docker).
+│   └── VM (the VM where to deploy Storm: here, configured for Docker)
 │       └── target.properties
-└── instances (An initial set of instances, ready to deploy with Roboconf).
+└── instances (an initial set of instances, ready to deploy with Roboconf)
     └── initial.instances
 ```
 
@@ -167,15 +169,17 @@ bundle:install mvn:net.roboconf/roboconf-target-docker/%v_SNAP%
 bundle:start <bundle-id>
 ```
 
-Now, you can chech that everything is up and running by connecting to the Roboconf web admin:
+Now, you can check that everything is up and running by connecting to the Roboconf web admin:
 
 ```
 http://localhost:8181/roboconf-web-administration/index.html
 ```
+
 
 ## Deploy the Storm tutorial with Roboconf
 
 * Load the zip archive you build in storm-bash/target, as a new application.
 * Browse the instances to deploy, and deploy/start VMs and underlying components
 
-
+> From version 0.9, the Docker target relies on our official Docker images, based on Alpine.
+> Therefore, you may have to update the scripts that manage the life cycle of the components.

@@ -6,7 +6,7 @@ id: "tutoriel-apache-storm-et-docker-1"
 menus: [ "users", "user-guide" ]
 ---
 
-Ce tutoriel vous propose de déployer Apache Storm dans des conteneurs Docker via Roboconf.  
+Ce tutoriel vous propose de déployer [Apache Storm](http://storm.apache.org/) dans des conteneurs Docker via Roboconf.  
 L'approche se veut incrémentale afin de comprendre tout autant Storm que la création
 d'une application Roboconf dédiée.
 

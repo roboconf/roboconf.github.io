@@ -143,7 +143,7 @@ On peut s'aider pour cela de la manière dont l'image Docker pour Storm a été 
 Si l'on regarde [le Dockerfile](https://github.com/31z4/storm-docker/blob/e20c50c9704ed64765ba80e6964df4c0c189be3e/1.1.0/Dockerfile),
 on voit que [la commande par défaut](https://github.com/31z4/storm-docker/blob/e20c50c9704ed64765ba80e6964df4c0c189be3e/1.1.0/docker-entrypoint.sh)
 génère un fichier de configuration. On peut donc s'en inspirer pour nos recettes : il faut générer un tel fichier à partir
-des informations forunies par Roboconf, puis monter ce fichier en tant que volume au lancement du conteneur.
+des informations fournies par Roboconf, puis monter ce fichier en tant que volume au lancement du conteneur.
 
 
 ## Aller plus loin...

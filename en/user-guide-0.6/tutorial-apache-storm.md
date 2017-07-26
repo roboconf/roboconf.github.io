@@ -8,7 +8,8 @@ menus: [ "users", "user-guide", "0.6" ]
 
 ## Introduction
 
-Apache Storm is generally used to perform real-time calculations related to big data (continuous calculation, involving unbounded data sources handled in a streaming manner).
+[Apache Storm](http://storm.apache.org/)
+is generally used to perform real-time calculations related to big data (continuous calculation, involving unbounded data sources handled in a streaming manner).
 
 Storm allows to run "topologies" (graphs of computation) on a "storm cluster".  
 A storm cluster is made of several nodes, including:
@@ -107,7 +108,8 @@ mvn clean install
 
 The Roboconf deployment archive is the ZIP file located in the **target/** directory (e.g. storm-bash-0.6.zip).
 
-### Project organization
+
+## Project organization
 
 ```
 src/main/model
@@ -167,7 +169,7 @@ bundle:install mvn:net.roboconf/roboconf-target-docker/0.6
 bundle:start <bundle-id>
 ```
 
-Now, you can chech that everything is up and running by connecting to the Roboconf web admin:
+Now, you can check that everything is up and running by connecting to the Roboconf web admin:
 
 ```
 http://localhost:8181/roboconf-web-administration/index.html

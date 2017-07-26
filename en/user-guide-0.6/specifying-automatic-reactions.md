@@ -104,8 +104,8 @@ Notice the time unit is in seconds.
 It is optional. It means you can write `sleep period is 50s` or `sleep period is 50`.
 
 When not specified, there is no delay between execution.  
-Also, notice that a given combination of events only trigger a rule one. Then, only a new
-event can trigger this rule.
+Also, notice that a given combination of events only trigger a rule once. Then, only a new
+event can trigger this same rule.
 
 
 ## Attribute: time window is
@@ -140,4 +140,4 @@ Notice the time unit is in seconds.
 It is optional. It means you can write `time window is 120s` or `time window is 120`.
 
 When not specified, there is no timing window.  
-Any new event that trigger the rule will be considered.
+Any new event that triggers the rule will be considered.

@@ -234,6 +234,35 @@ Tomcat {
 It is not possible to define a value for a random variable.  
 At least, not in the graph. But it is possible to set one in [the instances model](instances-description.html).
 
+It is also possible to inject Roboconf values in the exported variables.
+
+<pre><code class="language-roboconf">
+Tomcat {
+	installer: script;
+
+	# Export the name of the Roboconf instance (e.g. tomcat).
+	exports: inst = $(ROBOCONF_INSTANCE_NAME);
+	
+	# Export the instance path (e.g. /vm/tomcat).
+	# This is a unique identifier in the application.
+	exports: path = $(ROBOCONF_INSTANCE_PATH);
+	
+	# Export the instance path with special characters being escaped (e.g. vm_tomcat).
+	# It is not mandatory unique, but most likely.
+	exports: clean_path = $(ROBOCONF_CLEAN_INSTANCE_PATH);
+	
+	# Export the cleaned instance path but in reversed order (e.g. tomcat_vm).
+	# It is not mandatory unique, but most likely.
+	exports: rev = $(ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH);
+	
+	# Export the component name
+	exports: comp = $(ROBOCONF_COMPONENT_NAME)
+	
+	# And obviously, we can mix...
+	exports: sentence = "$(ROBOCONF_INSTANCE_PATH) is an instance of $(ROBOCONF_COMPONENT_NAME)."
+}
+</code></pre>
+
 
 ## Imported Variables
 

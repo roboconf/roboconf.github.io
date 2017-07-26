@@ -104,8 +104,8 @@ Notice the time unit is in seconds.
 It is optional. It means you can write `sleep period is 50s` or `sleep period is 50`.
 
 When not specified, there is no delay between execution.  
-Also, notice that a given combination of events only trigger a rule one. Then, only a new
-event can trigger this rule.
+Also, notice that a given combination of events only trigger a rule once. Then, only a new
+event can trigger this same rule.
 
 
 ## Attribute: time window is
@@ -140,4 +140,28 @@ Notice the time unit is in seconds.
 It is optional. It means you can write `time window is 120s` or `time window is 120`.
 
 When not specified, there is no timing window.  
-Any new event that trigger the rule will be considered.
+Any new event that triggers the rule will be considered.
+
+
+## Attribute: occurrences is
+
+By default, a rule is activated when a given event is sent by an agent.  
+An event or a combination of events, that may come from a same or from different agents.
+
+This attribute indicates that the event or the combination must occur a certain number
+of times. Knowing the delay between each agent check is for the moment hard-coded (20 seconds),
+it is possible to evaluate over time that a same problem or situation arises.
+
+When **occurrences is** is used, then **time windows is** is required too.  
+It thus prevents old events from remaining considered. In the case of a combination of
+events, every time a combination is met, it is reset. If it occurs the expected number of times
+within the time window, then the rule will be activated.
+
+> This attribute does not come from Drools's ones.  
+> It may be replaced later if a better name is found.
+
+The unit is a positive integer.  
+It means you can write `occurrences is 5`.
+
+When not specified, the value is 1.  
+Any new event that triggers the rule will be considered.

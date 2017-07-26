@@ -143,8 +143,12 @@ function formatRoboconfCommandsSnippets() {
     result = result.replace( /(^write)\s+(.*)(\s*)(into)\s+(.*)/igm, '<span class="keyword">$1</span> $2$3<span class="keyword">$4</span> $5' );
     result = result.replace( /(^email)\s+(.*)(\s*)(with)\s+(.*)/igm, '<span class="keyword">$1</span> $2$3<span class="keyword">$4</span> $5' );
     result = result.replace( /(^execute)\s+(.*)/igm, '<span class="keyword">$1</span> $2' );
+    result = result.replace( /(^append)\s+(.*)\s+(into)\s+(.*)/igm, '<span class="keyword">$1</span> $2 <span class="keyword">$3</span> $4' );
+    result = result.replace( /(^append)\s+(into)\s+(.*)/igm, '<span class="keyword">$1</span> <span class="keyword">$2</span> $3' );
 
-    result = result.replace( /(\$\(INDEX\))/igm, '<i>$1</i>' );
+    result = result.replace( /(\$\(SMART_INDEX\))/igm, '<i>$1</i>' );
+    result = result.replace( /(\$\(EXISTING_INDEX\s+MIN)/igm, '<i>$1</i>' );
+    result = result.replace( /(\$\(EXISTING_INDEX\s+MAX)/igm, '<i>$1</i>' );
     result = result.replace( /(\$\(NANO_TIME\))/igm, '<i>$1</i>' );
     result = result.replace( /(\$\(MILLI_TIME\))/igm, '<i>$1</i>' );
     result = result.replace( /(\$\(UUID\))/igm, '<i>$1</i>' );

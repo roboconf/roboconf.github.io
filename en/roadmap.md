@@ -14,20 +14,11 @@ The roadmap for the next months covers several aspects.
 -->
 
 
-* **For June 2017**
-
-	* Upgrade Roboconf's messaging with SSL support. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Add JMX probes in Roboconf.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Handle user authentication in the web console.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Generate audit files for web accesses.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Make the Docker target use our Docker images.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	
-	
-* **For October 2017**
+* **For November 2017**
 
 	* Support application migrations and roll-backs (continuous deployment).
 	* Split deployment targets: profiles and candidates.
-	* Work on a deployment target for a pool of static servers.
+	* VM creation from dockerfiles.
 	* Create promotion videos.
 
 
@@ -51,4 +42,4 @@ The roadmap for the next months covers several aspects.
 	* Study TOSCA support.
 
 
-Roboconf 0.9 will be released in June 2017.
+Roboconf 0.10 will be released in November 2017.

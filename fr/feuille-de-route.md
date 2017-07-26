@@ -9,20 +9,11 @@ menus: [ "project", "roadmap" ]
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
 
-* **Pour Juin 2017**
-
-	* Compléter la messagerie pour des échanges sécurisés avec SSL. &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Ajouter des sondes JMX dans Roboconf.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Authentification des utilisateurs dans la console web.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Générer des fichiers auditables pour les accès web.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
-	* Modifier la cible Docker pour qu'elle utiliser nos images.   &nbsp; <span class="glyphicon glyphicon-ok"></span>
-
-
-* **Pour Octobre 2017**
+* **Pour Novembre 2017**
 
 	* Gérer la migration d'applications (déploiement continu).
 	* Scinder les cibles de déploiements en profils et candidats.
-	* Travailler sur une cible de déploiement pour les serveurs statiques.
+	* Création des VM à partir de dockerfiles.
 	* Créer des vidéos de promotion.
 
 
@@ -46,4 +37,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Etudier le support de TOSCA.
 
 
-Roboconf 0.9 devrait être disponible en juin 2017.
+Roboconf 0.10 devrait être disponible en novembre 2017.

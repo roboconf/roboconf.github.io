@@ -1,27 +1,6 @@
 #
 # User Guide Version 0.8
 #
-tutoriel-apache-storm-et-docker-1:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-1
-
-tutoriel-apache-storm-et-docker-2:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-2
-
-tutoriel-apache-storm-et-docker-3:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-3
-
-tutoriel-apache-storm-et-docker-4:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-4
-
-tutoriel-apache-storm-et-docker-5:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-5
-
-tutoriel-apache-storm-et-docker-6:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-6
-
-tutoriel-apache-storm-et-docker-7:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-7
-
 customizing-the-web-administration-look-n-feel:
   en: user-guide/customizing-the-web-administration-look-n-feel
 

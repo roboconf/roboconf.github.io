@@ -94,6 +94,21 @@ Delete all instances of VM
 Instance creation only impacts the runtime model.  
 Creating an instance and deploying or starting it are two different actions.
 
+
+> A command instruction is supposed to stand on a single line.  
+> However, it is possible to split a line by putting the '\' character before a line break.
+
+
+<pre><code class="language-roboconf-commands">
+Create component \
+       as myInstance $(smartIndex) \
+       under /myRoot
+</code></pre>
+
+
+
+## Generator Variables
+
 When naming instances, it is possible to inject some variables that Roboconf will replace.  
 And you can create your own ones.
 
@@ -144,15 +159,56 @@ Define mtime_bis = $(mtime)_bis
 Create component as myInstance $(mtime_bis) under /myRoot 
 </code></pre>
 
-> A command instruction is supposed to stand on a single line.  
-> However, it is possible to split a line by putting the '\' character before a line break.
 
+## Query Variables
 
-<pre><code class="language-roboconf-commands">
-Create component \
-       as myInstance $(smartIndex) \
-       under /myRoot
+Generator variables will **always** have a value.  
+However, there may be situations where we want to find an existing instance.  
+That can be useful, as an example, for scale down scenarios, when we want to stop and delete
+a given instances.
+
+Let's consider this set of commands.
+
+<pre><code class="language-roboconf-commands"># Replicate a template instance and start it
+Define NEW_VM = vm $(SMART_INDEX)
+Replicate /vm as $(NEW_VM)
+Deploy and start all /$(NEW_VM)
 </code></pre>
+
+This command script can be executed on demand, automatically when used with the autonomic,
+or by the Roboconf scheduler. So, it can be executed N times if we want. Now, how would we manage
+scaling down? Any situation of scaling down. Meaning we would have 50 VM and we want to delete one.
+Or we could have no VM and we would not like to get errors because there is no VM to kill.
+
+Well, we can use query variables.
+
+<pre><code class="language-roboconf-commands"># Find an existing VM
+Define VM_TO_KILL = vm $(EXISTING_INDEX MIN)
+
+# Undeploy it and delete it from our model
+Undeploy all /$(VM_TO_KILL)
+Delete /$(VM_TO_KILL)
+</code></pre>
+
+If there exist a VM named "vm &lt;some integer&gt;", then we will execute the instructions.
+However, if no such instance is found, then all the instructions that reference the **VM_TO_KILL**
+variable will be disabled. It means they will be parsed but not executed.
+
+Such command scripts can mix other instructions.  
+Only those that reference variables based on the **$(EXISTING_INDEX)** variable, directly or
+indirectly, will be disabled.
+
+Now, here is the syntax of this variable.  
+There are basically 4 scenarios.
+
+* **$(EXISTING_INDEX &nbsp;  MIN)** finds the matching instance with the smallest index.
+* **$(EXISTING_INDEX &nbsp;  MIN > 3)** finds (as an example) a matching instance with the smallest index but higher than 3.
+* **$(EXISTING_INDEX &nbsp;  MAX)** finds the matching instance with the highest index.
+* **$(EXISTING_INDEX &nbsp;  MAX < 10)** finds (as an example) a matching instance with the highest index but less than 10.
+
+It is obviously possible to use **MAX > 10** and **MIN < 3**, but it is somehow redundant. :)  
+As explained above, it is possible that no instance matches the criteria. That will not make the commands
+script fail or throw an error.
 
 
 ## Other Command Instructions

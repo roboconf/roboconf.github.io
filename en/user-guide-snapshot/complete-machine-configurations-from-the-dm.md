@@ -108,7 +108,7 @@ fi
 # Configuration
 PEM_LOC=~/.ssh/your.pem
 VERSION=%v_SNAP%-1.0-SNAPSHOT
-TARGET_ID=iaas-ec2
+PARAMETERS="@iaas-ec2"
 SSH_OPTIONS="-i $PEM_LOC -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 AGENT_DEB=~/.m2/repository/net/roboconf/roboconf-dist-debian-agent/$VERSION/roboconf-dist-debian-agent-$VERSION.deb
 
@@ -128,7 +128,7 @@ sudo apt-get install openjdk-7-jdk -y
 	
 # Install the agent
 export DEBIAN_FRONTEND="noninteractive"
-echo "roboconf-agent roboconf-agent/target select $TARGET_ID" | sudo debconf-set-selections
+echo "roboconf-agent roboconf-agent/target select $PARAMETERS" | sudo debconf-set-selections
 sudo dpkg -i roboconf*.deb
 
 ENDOFSCRIPT

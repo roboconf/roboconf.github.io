@@ -88,7 +88,7 @@ Dans un deuxième temps, rajoutez des recettes en bash, avec le cycle suivant :
 > Utilisez les *link* Docker. En résumé, pour l'instant, seuls les nœuds de travail
 > devraient avoir des noms dynamiques.
 
-Pour lmes noms dynamiques, vous pouvez utiliser `utilisez ${ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH}`.  
+Pour les noms dynamiques, vous pouvez utiliser `${ROBOCONF_CLEAN_REVERSED_INSTANCE_PATH}`.  
 Voir [cette page](/en/user-guide/using-docker-on-the-agent-side.html) (en anglais) pour de plus amples détails.
 
 Enfin, pour tester la validité de vos recettes, modifiez la cible de déploiement dans la console

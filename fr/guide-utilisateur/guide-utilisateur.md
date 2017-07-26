@@ -18,14 +18,13 @@ La seule exception concerne la présentation en ligne, ainsi que les tutoriaux.
  -->
  
 <div class="floated">
-	<h2>Resources</h2>
+	<h2>Tutoriels</h2>
 
 	<ul>
 	<li><a href="tutoriel-debuter-avec-roboconf.html">Débuter avec Roboconf</a></li>
 	<li><a href="tutoriel-deploiement-local-avec-docker.html">Déploiement local avec Docker</a></li>
 	<li><a href="tutoriel-premier-deploiement-dans-le-cloud.html">Premier déploiement dans le Cloud</a></li>
-	<li><a href="tutoriel-superviser-roboconf-avec-apache-decanter.html">Superviser Roboconf avec Apache Decanter</a></li>
-	<li><a href="tutoriel-apache-storm-et-docker-1.html">Gestion de Apache Storm avec Docker</a></li>
+	<li><a href="tous-les-tutoriels.html">Tous les Tutoriels</a></li>
 	</ul>
 </div>
 

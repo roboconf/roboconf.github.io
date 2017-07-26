@@ -27,7 +27,7 @@ pare-feu pour rediriger les requêtes vers le conteneur adéquat (SDN - *Softwar
 Cela fonctionne très bien en local. C'est un peu plus compliqué en distribué.  
 Certains outils, comme Docker Swarm, savent toutefois le gérer.
 
-Sur cet exemple, un tel lien docker signfie aussi que la configuration de Nimbus référence
+Sur cet exemple, un tel lien Docker signfie aussi que la configuration de Nimbus référence
 quelque part un hôte appelé **zookeeper**. En distribué, nous souhaiterions que cela soit une adresse
 IP qui a été allouée dynamiquement, a posteriori. Il faut modifier la manière dont on lance nos conteneurs
 afin de leur injecter les bonnes informations.
