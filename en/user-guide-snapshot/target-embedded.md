@@ -40,7 +40,7 @@ name =
 description = 
 ```
 
-Here is a complete description of the parameters for OpenStack.
+Here is a complete description of the parameters for Embedded.
 
 | Property | Description | Default | Mandatory |
 | --- | --- | --- | --- |
@@ -48,3 +48,8 @@ Here is a complete description of the parameters for OpenStack.
 | id | A unique identifier for the target properties. | - | yes |
 | name | A human-readable name for the target | - | no |
 | description | A description of the target. | - | no |
+| embedded.ip | A list of comma-separated IP addresses, that refer to hosts with roboconf agents installed (an IP will be automatically selected when needed, and user-data transferred there using scp). | - | no |
+| scp.user | A scp user name, to transfer user-data to a remote host referenced in the IP list (see embedded.ip). | ubuntu | no |
+| scp.keyfile | A scp key file (.pem or so), to transfer user-data to a remote host referenced in the IP list (see embedded.ip): when no key file is specified, ~/.ssh/id_rsa and ~/.ssh/id_dsa are used. | - | no |
+| scp.agent.configdir | The directory that contains agent configuration on the remote host. | /etc/roboconf-agent | no |
+
