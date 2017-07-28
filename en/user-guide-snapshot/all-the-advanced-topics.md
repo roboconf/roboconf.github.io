@@ -30,6 +30,7 @@ This page lists all the advanced topics related to Roboconf.
 * [Using domains with Roboconf](roboconf-domains.html)
 * [Testing an Application Locally](testing-an-application-locally.html)
 * [Graph Inheritance and Exported Variables](inheritance-and-variables.html)
+* [Commands History](commands-history.html)
 
 
 ## Advanced Configurations

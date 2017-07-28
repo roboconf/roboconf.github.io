@@ -33,6 +33,8 @@ menus: [ "users", "download" ]
 
 			<br /><br />
 			Eclipse <a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.8/">update site</a>
+			<br />
+			(Tested on Eclipse Mars and Neon)
 		</td>
 		<td>
 			<span class="octicon octicon-telescope"></span>

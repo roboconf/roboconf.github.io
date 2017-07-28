@@ -34,6 +34,8 @@ As a reminder, the last downloads are available [here](download.html).
 
 			<br /><br />
 			Eclipse <a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.8/">update site</a>
+			<br />
+			(Tested on Eclipse Mars and Neon)
 		</td>
 		<td>
 			<span class="octicon octicon-telescope"></span>
@@ -70,6 +72,8 @@ As a reminder, the last downloads are available [here](download.html).
 
 			<br /><br />
 			Eclipse <a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.7/">update site</a>
+			<br />
+			(Tested on Eclipse Mars and Neon)
 		</td>
 		<td>
 			<span class="octicon octicon-telescope"></span>

@@ -32,6 +32,8 @@ Pour rappel, les derniers liens sont disponibles [là](telecharger.html).
 
 			<br /><br />
 			<a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.8/">Site de mise à jour</a> pour Eclipse
+			<br />
+			(Testé avec Eclipse Mars et Neon)
 		</td>
 		<td>
 			<span class="octicon octicon-telescope"></span>
@@ -66,6 +68,8 @@ Pour rappel, les derniers liens sont disponibles [là](telecharger.html).
 
 			<br /><br />
 			<a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.7/">Site de mise à jour</a> pour Eclipse
+			<br />
+			(Testé avec Eclipse Mars et Neon)
 		</td>
 		<td>
 			<span class="octicon octicon-telescope"></span>
