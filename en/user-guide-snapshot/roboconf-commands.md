@@ -16,8 +16,7 @@ They allow to define complex behaviors with a simple syntax.
 They can be executed from the web console or triggered by [the autonomic manager](autonomic-management-with-roboconf.html).
 
 Commands are defined in \**.commands* files.  
-These files are either provided in application templates, under the **commands** directory, or created and edited
-through the web console.
+These files are either provided in application templates, under the **commands** directory.
 
 Commands are ALWAYS associated with applications.  
 Applications inherit commands from their templates, but then live independently of it.

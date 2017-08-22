@@ -185,8 +185,7 @@ public class TargetVSphere implements TargetHandler {
 	@Override
 	public void configureMachine( 
 		TargetHandlerParameters parameters,
-		String machineId,
-		Instance scopedInstance )
+		String machineId )
 	throws TargetException {
 
 		logger.info( "Configuring a machine." );
@@ -207,7 +206,8 @@ public class TargetVSphere implements TargetHandler {
 }
 ```
 
-For the description of the methods, please refer to the Javadoc of the **TargetHandler** interface.
+For the description of the methods, please refer to [the Javadoc](programmers-api.html)
+of the **TargetHandler** interface.
 
 The target ID matches the **target-id** property in **"target.properties** files (**target** installer).  
 If a Roboconf component references this target ID, then this bundle will be used.
