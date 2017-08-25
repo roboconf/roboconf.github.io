@@ -27,6 +27,7 @@ Roboconf's team is made up of the following persons.
 * [Pierre Bourret](https://github.com/bourretp) (Université Joseph Fourier)
 * [Graham Crosmarie](https://github.com/GrahamLinagora) (Linagora)
 * [Christophe Hamerling](https://github.com/chamerling) (Linagora) - [@chamerling](https://twitter.com/chamerling)
+* [Bastien Mennesson](https://github.com/BastienM) (Linagora)
+* [Flavien Peyre](https://github.com/fpeyre) (Université Joseph Fourier)
 * [Linh-Manh Pham](https://github.com/linkbutler) (Université Joseph Fourier)
 * [Thomas Sarboni](https://github.com/max-k) (Linagora)
-
