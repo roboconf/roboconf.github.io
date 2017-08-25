@@ -20,7 +20,74 @@ This page gathers links and documentation about them.
 		<th>Web</th>
 		<th>swagger.json</th>
 	</tr>
-
+	
+	<!--START
+	<tr>
+		<td colspan="3" style="text-align: left"><strong>
+			Version %v_SNAP%
+		</strong></td>
+	</tr>
+	
+	<tr>
+		<td>REST API</td>
+		<td>
+			<a href="/swagger/index.html?url=/resources/swagger.json/roboconf-swagger-%v_SNAP%-swagger-rest-api.json">
+				Swagger UI
+			</a>
+		</td>
+		<td>
+			<a href="https://oss.sonatype.org/content/repositories/releases/net/roboconf/roboconf-swagger/%v_SNAP%/roboconf-swagger-%v_SNAP%-swagger-rest-api.json">mirror 1</a>
+			/ <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-swagger/%v_SNAP%/roboconf-swagger-%v_SNAP%-swagger-rest-api.json">mirror 2</a>
+		</td>
+	</tr>
+	<tr>
+		<td>Web Socket</td>
+		<td>
+			<a href="/swagger/index.html?url=/resources/swagger.json/roboconf-swagger-%v_SNAP%-swagger-web-socket.json">
+				Swagger UI
+			</a>
+		</td>
+		<td>
+			<a href="https://oss.sonatype.org/content/repositories/releases/net/roboconf/roboconf-swagger/%v_SNAP%/roboconf-swagger-%v_SNAP%-swagger-web-socket.json">mirror 1</a>
+			/ <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-swagger/%v_SNAP%/roboconf-swagger-%v_SNAP%-swagger-web-socket.json">mirror 2</a>
+		</td>
+	</tr>
+	END-->
+	
+	<!-- RELEASE_MARKER -->
+	<!-- Version 0.9 -->
+	
+	<tr>
+		<td colspan="3" style="text-align: left"><strong>
+			Version 0.9
+		</strong></td>
+	</tr>
+	
+	<tr>
+		<td>REST API</td>
+		<td>
+			<a href="/swagger/index.html?url=/resources/swagger.json/roboconf-swagger-0.9-swagger-rest-api.json">
+				Swagger UI
+			</a>
+		</td>
+		<td>
+			<a href="https://oss.sonatype.org/content/repositories/releases/net/roboconf/roboconf-swagger/0.9/roboconf-swagger-0.9-swagger-rest-api.json">mirror 1</a>
+			/ <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-swagger/0.9/roboconf-swagger-0.9-swagger-rest-api.json">mirror 2</a>
+		</td>
+	</tr>
+	<tr>
+		<td>Web Socket</td>
+		<td>
+			<a href="/swagger/index.html?url=/resources/swagger.json/roboconf-swagger-0.9-swagger-web-socket.json">
+				Swagger UI
+			</a>
+		</td>
+		<td>
+			<a href="https://oss.sonatype.org/content/repositories/releases/net/roboconf/roboconf-swagger/0.9/roboconf-swagger-0.9-swagger-web-socket.json">mirror 1</a>
+			/ <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-swagger/0.9/roboconf-swagger-0.9-swagger-web-socket.json">mirror 2</a>
+		</td>
+	</tr>
+	
 	<!-- Version 0.8 -->
 		
 	<tr>

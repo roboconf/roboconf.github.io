@@ -216,7 +216,7 @@ Roboconf's Web administration can display shortcut links to access various dashb
 applications, and so on. Proceed as follows:
 
 * Get the Karaf console for the DM.
-* Type in `bundle:install --start mvn:net.roboconf/roboconf-web-extension-for-kibana/0.8`
+* Type in `bundle:install --start mvn:net.roboconf/roboconf-web-extension-for-kibana/0.9`
 * Refresh Roboconf's web console in your browser:
 [http://localhost:8181/roboconf-web-administration/index.html](http://localhost:8181/roboconf-web-administration/index.html)
 

@@ -207,52 +207,52 @@ tutorial-getting-started-with-roboconf:
   fr: guide-utilisateur/tutoriel-debuter-avec-roboconf
 
 tutorial-first-deployment-in-the-cloud:
-  fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud
+  fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud
 
 tutorial-first-deployment-in-the-cloud-1:
-  fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-1
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud-1
+  fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-1
 
 tutorial-first-deployment-in-the-cloud-2:
-  fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-2
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud-2
+  fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-2
 
 tutorial-first-deployment-in-the-cloud-3:
-  fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-3
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud-3
+  fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-3
 
 tutorial-first-deployment-in-the-cloud-4:
-  fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-4
   en: user-guide-snapshot/tutorial-first-deployment-in-the-cloud-4
+  fr: guide-utilisateur/tutoriel-premier-deploiement-dans-le-cloud-4
 
 tutoriel-apache-storm-et-docker-1:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-1
   en: user-guide-snapshot/tutorial-apache-storm-with-docker-1
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-1
 
 tutoriel-apache-storm-et-docker-2:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-2
   en: user-guide-snapshot/tutorial-apache-storm-with-docker-2
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-2
 
 tutoriel-apache-storm-et-docker-3:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-3
   en: user-guide-snapshot/tutorial-apache-storm-with-docker-3
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-3
 
 tutoriel-apache-storm-et-docker-4:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-4
   en: user-guide-snapshot/tutorial-apache-storm-with-docker-4
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-4
 
 tutoriel-apache-storm-et-docker-5:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-5
   en: user-guide-snapshot/tutorial-apache-storm-with-docker-5
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-5
 
 tutoriel-apache-storm-et-docker-6:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-6
   en: user-guide-snapshot/tutorial-apache-storm-with-docker-6
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-6
 
 tutoriel-apache-storm-et-docker-7:
-  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-7
   en: user-guide-snapshot/tutorial-apache-storm-with-docker-7
+  fr: guide-utilisateur/tutoriel-apache-storm-et-docker-7
 
 docker-tips:
   en: user-guide-snapshot/docker-tips

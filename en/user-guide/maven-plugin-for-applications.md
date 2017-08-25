@@ -31,7 +31,7 @@ Here is a sample **pom.xml** file for a Roboconf application project.
 			<plugin>
 				<groupId>net.roboconf</groupId>
 				<artifactId>roboconf-maven-plugin</artifactId>
-				<version>0.8</version>
+				<version>0.9</version>
 				<extensions>true</extensions>
 			</plugin>
 		</plugins>
@@ -77,8 +77,8 @@ It means you can inject Maven properties in your resource files.
 Example with the **application.properties** file:
 
 ```properties
-application-name = Tomcat 8 cluster
-application-qualifier = ${project.artifactId}-${project.version}
+name = Tomcat 8 cluster
+version = ${project.version}
 
 # Etc.
 ```

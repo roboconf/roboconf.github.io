@@ -48,6 +48,7 @@ In the next lines, the *current instance* means the one whose script is invoked.
 
 - ROBOCONF\_FILES\_DIR: the directory where instance files are located (if any).
 - ROBOCONF\_INSTANCE\_NAME: the name of the current instance.
+- ROBOCONF\_COMPONENT\_NAME: the component name of the current instance.
 - ROBOCONF\_INSTANCE\_PATH: the path of the current instance.
 - ROBOCONF\_CLEAN\_INSTANCE\_PATH: the path of the current instance but with the non-alphanumeric characters being replaced by an underscore.
 - ROBOCONF\_CLEAN\_REVERSED\_INSTANCE\_PATH: the reversed path of the current instance and with the non-alphanumeric characters being replaced by an underscore.

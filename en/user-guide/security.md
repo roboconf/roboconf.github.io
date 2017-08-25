@@ -20,12 +20,15 @@ We discuss every of them on these pages.
 
 * [Web console over HTTPS](security-and-https-console.html)
 * [Cross-Origin Resource Sharing](security-and-cors.html) (CORS)
+* [Authentication in the web console](security-and-authentication-in-the-web-console.html)
+* [Auditing web accesses](security-and-web-access-audits.html)
 
 ## Karaf Distributions
 
 * [JMX Configuration](security-and-jmx-configuration.html)
 * [Remote access to Karaf's Console](security-and-remote-access-to-karaf-s-console.html)
 * [Roboconf agents](security-and-agents.html)
+* [Miscellaneous](security-and-miscellaneous.html)
 
 <!-- -->
 
@@ -37,3 +40,4 @@ We discuss every of them on these pages.
 ## Secured Messaging
 
 * [Changing RabbitMQ's default port](security-rabbitmq-change-the-default-port.html)
+* [Using RabbitMQ over SSL](security-and-rabbitmq-over-ssl.html)

@@ -43,7 +43,7 @@ It imports the required Roboconf dependencies.
 	<version>1.0-SNAPSHOT</version>
 	
 	<properties>
-		<roboconf.version>0.8</roboconf.version>
+		<roboconf.version>0.9</roboconf.version>
 	</properties>
 
 	<dependencies>

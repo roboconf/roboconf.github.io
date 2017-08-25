@@ -28,11 +28,22 @@ It shows how to use [Logstash](http://logstash.net/), [ElasticSearch](http://www
 data collected from logs and JMX probes. A similar system should be feasible with Roboconf.
 
 
+## Roboconf MBeans
+
+There are 4 kinds of MBeans in Roboconf:
+
+* **net.roboconf:type=agent**: [MBean](https://github.com/roboconf/roboconf-platform/blob/master/core/roboconf-agent/src/main/java/net/roboconf/agent/jmx/PluginStatsMBean.java) with information from an agent.
+* **net.roboconf:type=dm**: [MBean](https://github.com/roboconf/roboconf-platform/blob/master/core/roboconf-dm/src/main/java/net/roboconf/dm/jmx/ManagerMBean.java) related to the DM.
+* **net.roboconf:type=messaging**: [MBean](https://github.com/roboconf/roboconf-platform/blob/master/core/roboconf-messaging-api/src/main/java/net/roboconf/messaging/api/jmx/MessagingApiMBean.java) related to a messaging client.
+* **net.roboconf:type=web**: [MBean](https://github.com/roboconf/roboconf-platform/blob/master/core/roboconf-dm-rest-services/src/main/java/net/roboconf/dm/rest/services/jmx/RestServicesMBean.java) related to the DM's REST API and web socket.
+
+
 ## Monitoring with Apache Karaf Decanter
 
 Apache [Karaf Decanter](http://karaf.apache.org/manual/decanter/latest-1/index.html) is a monitoring tool for Karaf solutions and applications running on it.  
 So The DM and the agent can be monitored using Decanter, it suffices to install it.  
 You can follow this [blog](http://blog.nanthrax.net/2015/07/monitoring-and-alerting-with-apache-karaf-decanter/) to install and configure Decanter.
+You can also take a look at [this Roboconf tutorial](tutorial-monitoring-roboconf-with-apache-decanter.html).
 
 
 ## Monitoring RabbitMQ

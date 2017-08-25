@@ -20,8 +20,8 @@ roboconf:target azure
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.8
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-azure/0.8
+# Here in version 0.9
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-azure/0.9
 ```
 
 Every new VM is associated with a public IP address.  

@@ -40,7 +40,7 @@ Pour rappel, les derniers liens sont disponibles [là](telecharger.html).
 			<a href="nouveautes/principales-nouveautes-0.8.html">Nouveautés</a>
 			&nbsp;
 			<span class="octicon octicon-person"></span>
-			<a href="guide-utilisateur/guide-utilisateur.html">Guide Utilisateur</a>
+			<a href="guide-utilisateur-0.8/guide-utilisateur.html">Guide Utilisateur</a>
 			
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Tickets: 

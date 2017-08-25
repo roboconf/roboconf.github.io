@@ -1,17 +1,32 @@
 #
-# User Guide Version 0.8
+# User Guide Version 0.9
 #
 customizing-the-web-administration-look-n-feel:
   en: user-guide/customizing-the-web-administration-look-n-feel
 
+commands-history:
+  en: user-guide/commands-history
+
+all-the-tutorials:
+  en: user-guide/all-the-tutorials
+
 roboconf-preferences:
   en: user-guide/roboconf-preferences
+
+security-and-miscellaneous:
+  en: user-guide/security-and-miscellaneous
 
 security-and-jmx-configuration:
   en: user-guide/security-and-jmx-configuration
 
+security-and-web-access-audits:
+  en: user-guide/security-and-web-access-audits
+
 complete-machine-configurations-from-an-agent:
   en: user-guide/complete-machine-configurations-from-an-agent
+
+security-and-authentication-in-the-web-console:
+  en: user-guide/security-and-authentication-in-the-web-console
 
 complete-machine-configurations-from-the-dm:
   en: user-guide/complete-machine-configurations-from-the-dm
@@ -33,6 +48,9 @@ security-and-authentication-with-a-database:
 
 security-rabbitmq-change-the-default-port:
   en: user-guide/security-rabbitmq-change-the-default-port
+
+security-and-rabbitmq-over-ssl:
+  en: user-guide/security-and-rabbitmq-over-ssl
 
 security-and-remote-access-to-karaf-s-console:
   en: user-guide/security-and-remote-access-to-karaf-s-console
@@ -198,6 +216,27 @@ tutorial-first-deployment-in-the-cloud-3:
 
 tutorial-first-deployment-in-the-cloud-4:
   en: user-guide/tutorial-first-deployment-in-the-cloud-4
+
+tutoriel-apache-storm-et-docker-1:
+  en: user-guide/tutorial-apache-storm-with-docker-1
+
+tutoriel-apache-storm-et-docker-2:
+  en: user-guide/tutorial-apache-storm-with-docker-2
+
+tutoriel-apache-storm-et-docker-3:
+  en: user-guide/tutorial-apache-storm-with-docker-3
+
+tutoriel-apache-storm-et-docker-4:
+  en: user-guide/tutorial-apache-storm-with-docker-4
+
+tutoriel-apache-storm-et-docker-5:
+  en: user-guide/tutorial-apache-storm-with-docker-5
+
+tutoriel-apache-storm-et-docker-6:
+  en: user-guide/tutorial-apache-storm-with-docker-6
+
+tutoriel-apache-storm-et-docker-7:
+  en: user-guide/tutorial-apache-storm-with-docker-7
 
 docker-tips:
   en: user-guide/docker-tips

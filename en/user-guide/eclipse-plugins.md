@@ -16,7 +16,7 @@ files and even modeling tools to visualize and generate graphs.
 In Eclipse, click **Help &gt; Install New Software...**.  
 Click **Add...** and complete the dialog that shows up.  
 Give it a name, like `Roboconf's update site` and this URL: 
-[http://dl.bintray.com/roboconf/roboconf-eclipse/0.8/](http://dl.bintray.com/roboconf/roboconf-eclipse/0.8/)
+[http://dl.bintray.com/roboconf/roboconf-eclipse/0.9/](http://dl.bintray.com/roboconf/roboconf-eclipse/0.9/)
 
 <img src="/resources/img/eclipse-install.jpg" alt="The update dialog" />
 

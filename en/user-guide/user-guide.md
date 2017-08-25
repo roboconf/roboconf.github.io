@@ -11,7 +11,7 @@ menus: [ "users", "user-guide" ]
 	Markdown does not support it.
  -->
 
-> This is the user guide for Roboconf 0.8.
+> This is the user guide for Roboconf 0.9.
 
 
 <div class="floated">
@@ -111,14 +111,13 @@ menus: [ "users", "user-guide" ]
 </div>
 
 <div class="floated">
-	<h2>Resources</h2>
+	<h2>Tutorials</h2>
 
 	<ul>
 	<li><a href="tutorial-getting-started-with-roboconf.html">Tutorial - Getting started with Roboconf</a></li>
 	<li><a href="tutorial-local-deployment-with-docker.html">Tutorial - Local deployment with Docker</a></li>
 	<li><a href="tutorial-first-deployment-in-the-cloud.html">Tutorial - First deployment in the cloud</a></li>
-	<li><a href="tutorial-apache-storm.html">Tutorial - Deploying Apache Storm</a></li>
-	<li><a href="tutorial-monitoring-roboconf-with-apache-decanter.html">Tutorial - Monitoring with Apache Decanter</a></li>
+	<li><a href="all-the-tutorials.html">All the Tutorials</a></li>
 	</ul>
 </div>
 

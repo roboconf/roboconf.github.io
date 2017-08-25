@@ -1,0 +1,339 @@
+#
+# User Guide Version 0.8
+#
+customizing-the-web-administration-look-n-feel:
+  en: user-guide-0.8/customizing-the-web-administration-look-n-feel
+
+roboconf-preferences:
+  en: user-guide-0.8/roboconf-preferences
+
+security-and-jmx-configuration:
+  en: user-guide-0.8/security-and-jmx-configuration
+
+complete-machine-configurations-from-an-agent:
+  en: user-guide-0.8/complete-machine-configurations-from-an-agent
+
+complete-machine-configurations-from-the-dm:
+  en: user-guide-0.8/complete-machine-configurations-from-the-dm
+
+dynamic-configuration-files-for-agents:
+  en: user-guide-0.8/dynamic-configuration-files-for-agents
+
+writing-validation-tests-with-junit:
+  en: user-guide-0.8/writing-validation-tests-with-junit
+
+security-and-authentication-with-a-ldap-server:
+  en: user-guide-0.8/security-and-authentication-with-a-ldap-server
+
+security-and-authentication-with-properties-files:
+  en: user-guide-0.8/security-and-authentication-with-properties-files
+
+security-and-authentication-with-a-database:
+  en: user-guide-0.8/security-and-authentication-with-a-database
+
+security-rabbitmq-change-the-default-port:
+  en: user-guide-0.8/security-rabbitmq-change-the-default-port
+
+security-and-remote-access-to-karaf-s-console:
+  en: user-guide-0.8/security-and-remote-access-to-karaf-s-console
+
+security-ssl-and-certificates:
+  en: user-guide-0.8/security-ssl-and-certificates
+
+security-and-authentication:
+  en: user-guide-0.8/security-and-authentication
+
+user-guide-older-versions:
+  en: user-guide-0.8/user-guide-older-versions
+
+clustered-rabbitmq:
+  en: user-guide-0.8/clustered-rabbitmq
+
+installation-tips:
+  en: user-guide-0.8/installation-tips
+
+writing-validation-tests-with-pax-exam:
+  en: user-guide-0.8/writing-validation-tests-with-pax-exam
+
+writing-validation-tests-with-scripts:
+  en: user-guide-0.8/writing-validation-tests-with-scripts
+
+maven-examples-documentation:
+  en: user-guide-0.8/maven-examples-documentation
+
+roboconf-architecture:
+  en: user-guide-0.8/roboconf-architecture
+
+using-docker-on-the-agent-side:
+  en: user-guide-0.8/using-docker-on-the-agent-side
+
+configuring-roboconf:
+  en: user-guide-0.8/configuring-roboconf
+
+karaf-commands-for-the-dm:
+  en: user-guide-0.8/karaf-commands-for-the-dm
+
+karaf-commands-for-the-agent:
+  en: user-guide-0.8/karaf-commands-for-the-agent
+
+all-the-tools:
+  en: user-guide-0.8/all-the-tools
+
+all-the-advanced-topics:
+  en: user-guide-0.8/all-the-advanced-topics
+
+roboconf-domains:
+  en: user-guide-0.8/roboconf-domains
+
+installing-roboconf-with-debian-packages:
+  en: user-guide-0.8/installing-roboconf-with-debian-packages
+
+installing-roboconf-with-rpm:
+  en: user-guide-0.8/installing-roboconf-with-rpm
+
+installing-roboconf-with-docker:
+  en: user-guide-0.8/installing-roboconf-with-docker
+
+using-docker-with-roboconf:
+  en: user-guide-0.8/using-docker-with-roboconf
+
+good-practices-for-recipes:
+  en: user-guide-0.8/good-practices-for-recipes
+
+security:
+  en: user-guide-0.8/security
+
+security-and-topologies:
+  en: user-guide-0.8/security-and-topologies
+
+security-and-software:
+  en: user-guide-0.8/security-and-software
+
+security-and-cors:
+  en: user-guide-0.8/security-and-cors
+
+security-and-https-console:
+  en: user-guide-0.8/security-and-https-console
+
+security-and-roboconf-messaging-ports:
+  en: user-guide-0.8/security-and-roboconf-messaging-ports
+
+security-and-agents:
+  en: user-guide-0.8/security-and-agents
+
+roboconf-commands:
+  en: user-guide-0.8/roboconf-commands
+
+roboconf-commands-scheduling:
+  en: user-guide-0.8/roboconf-commands-scheduling
+
+configuring-probes-for-the-autonomic:
+  en: user-guide-0.8/configuring-probes-for-the-autonomic
+
+specifying-automatic-reactions:
+  en: user-guide-0.8/specifying-automatic-reactions
+
+testing-an-application-locally:
+  en: user-guide-0.8/testing-an-application-locally
+
+m2r_lab:
+  en: user-guide-0.8/m2r_lab
+
+inter-application-dependencies:
+  en: user-guide-0.8/inter-application-dependencies
+
+configuring-the-web-consoles:
+  en: user-guide-0.8/configuring-the-web-consoles
+
+dm-templating:
+  en: user-guide-0.8/dm-templating
+
+eclipse-plugin:
+  en: user-guide-0.8/eclipse-plugin
+
+eclipse-plugins:
+  en: user-guide-0.8/eclipse-plugins
+
+eclipse-modeling-plugin:
+  en: user-guide-0.8/eclipse-modeling-plugin
+
+maven-plugin:
+  en: user-guide-0.8/maven-plugin
+
+maven-plugin-for-applications:
+  en: user-guide-0.8/maven-plugin-for-applications
+
+maven-plugin-for-targets:
+  en: user-guide-0.8/maven-plugin-for-targets
+
+reusability-in-models:
+  en: user-guide-0.8/reusability-in-models
+
+reusable-recipes-index:
+  en: user-guide-0.8/reusable-recipes-index
+
+how-to-write-reusable-recipes:
+  en: user-guide-0.8/how-to-write-reusable-recipes
+
+tutorial-local-deployment-with-docker:
+  en: user-guide-0.8/tutorial-local-deployment-with-docker
+
+tutorial-monitoring-roboconf-with-apache-decanter:
+  en: user-guide-0.8/tutorial-monitoring-roboconf-with-apache-decanter
+
+tutorial-getting-started-with-roboconf:
+  en: user-guide-0.8/tutorial-getting-started-with-roboconf
+
+tutorial-first-deployment-in-the-cloud:
+  en: user-guide-0.8/tutorial-first-deployment-in-the-cloud
+
+tutorial-first-deployment-in-the-cloud-1:
+  en: user-guide-0.8/tutorial-first-deployment-in-the-cloud-1
+
+tutorial-first-deployment-in-the-cloud-2:
+  en: user-guide-0.8/tutorial-first-deployment-in-the-cloud-2
+
+tutorial-first-deployment-in-the-cloud-3:
+  en: user-guide-0.8/tutorial-first-deployment-in-the-cloud-3
+
+tutorial-first-deployment-in-the-cloud-4:
+  en: user-guide-0.8/tutorial-first-deployment-in-the-cloud-4
+
+docker-tips:
+  en: user-guide-0.8/docker-tips
+
+autonomic-management-with-roboconf:
+  en: user-guide-0.8/autonomic-management-with-roboconf
+
+tutorial-apache-storm:
+  en: user-guide-0.8/tutorial-apache-storm
+
+inheritance-and-variables:
+  en: user-guide-0.8/inheritance-and-variables
+
+web-administration-screenshots:
+  en: user-guide-0.8/web-administration-screenshots
+
+configuring-the-loggers:
+  en: user-guide-0.8/configuring-the-loggers
+
+installing-roboconf:
+  en: user-guide-0.8/installing-roboconf
+
+installing-everything-with-scripts:
+  en: user-guide-0.8/installing-everything-with-scripts
+
+installing-the-deployment-manager:
+  en: user-guide-0.8/installing-the-deployment-manager
+
+installing-an-agent:
+  en: user-guide-0.8/installing-an-agent
+
+configuring-the-deployment-manager:
+  en: user-guide-0.8/configuring-the-deployment-manager
+
+configuring-an-agent:
+  en: user-guide-0.8/configuring-an-agent
+
+configuring-the-messaging:
+  en: user-guide-0.8/configuring-the-messaging
+
+installing-rabbit-mq:
+  en: user-guide-0.8/installing-rabbit-mq
+
+preparing-virtual-images-with-an-agent:
+  en: user-guide-0.8/preparing-virtual-images-with-an-agent
+
+about-target-support:
+  en: user-guide-0.8/about-target-support
+
+list-of-deployment-targets:
+  en: user-guide-0.8/list-of-deployment-targets
+
+target-iaas-openstack:
+  en: user-guide-0.8/target-iaas-openstack
+
+target-jclouds:
+  en: user-guide-0.8/target-jclouds
+
+target-docker:
+  en: user-guide-0.8/target-docker
+
+target-embedded:
+  en: user-guide-0.8/target-embedded
+
+target-iaas-occi:
+  en: user-guide-0.8/target-iaas-occi
+
+target-iaas-aws:
+  en: user-guide-0.8/target-iaas-aws
+
+target-iaas-vmware:
+  en: user-guide-0.8/target-iaas-vmware
+
+target-iaas-azure:
+  en: user-guide-0.8/target-iaas-azure
+
+target-in-memory:
+  en: user-guide-0.8/target-in-memory
+
+about-plugins:
+  en: user-guide-0.8/about-plugins
+
+list-of-plugins:
+  en: user-guide-0.8/list-of-plugins
+
+plugin-logger:
+  en: user-guide-0.8/plugin-logger
+
+plugin-file:
+  en: user-guide-0.8/plugin-file
+
+plugin-script:
+  en: user-guide-0.8/plugin-script
+
+plugin-puppet:
+  en: user-guide-0.8/plugin-puppet
+
+roboconf-dsl:
+  en: user-guide-0.8/roboconf-dsl
+
+monitoring-roboconf:
+  en: user-guide-0.8/monitoring-roboconf
+
+monitoring-applications-deployed-with-roboconf:
+  en: user-guide-0.8/monitoring-applications-deployed-with-roboconf
+
+editors:
+  en: user-guide-0.8/editors
+
+anatomy-of-a-roboconf-application:
+  en: user-guide-0.8/anatomy-of-a-roboconf-application
+
+faq:
+  en: user-guide-0.8/faq
+
+application-descriptor:
+  en: user-guide-0.8/application-descriptor
+
+instances-description:
+  en: user-guide-0.8/instances-description
+
+graph-definition:
+  en: user-guide-0.8/graph-definition
+
+graph-resources:
+  en: user-guide-0.8/graph-resources
+
+web-administration:
+  en: user-guide-0.8/web-administration
+
+lamp-example-part-1:
+  en: user-guide-0.8/lamp-example-part-1
+
+lamp-example-part-2:
+  en: user-guide-0.8/lamp-example-part-2
+
+index:
+  en: user-guide-0.8/user-guide
+  fr: guide-utilisateur-0.8/guide-utilisateur

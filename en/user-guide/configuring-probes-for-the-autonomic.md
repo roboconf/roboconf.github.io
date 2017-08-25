@@ -22,7 +22,7 @@ It must be located under the **probes** directory in the application (template)'
 ## Measures Files
 
 Measures files indicate measures an agent will have to perform regularly on its machine.  
-The delay between each check is for the moment hard-coded.
+The delay between each check is for the moment hard-coded (20 seconds).
 
 These files use a custom syntax.  
 Comments start with the sharp (#) character.

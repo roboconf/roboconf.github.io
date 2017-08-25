@@ -27,8 +27,8 @@ roboconf:target vmware
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.8
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-vmware/0.8
+# Here in version 0.9
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-vmware/0.9
 ```
 
 > VMWare support depends on your version.  

@@ -17,21 +17,31 @@ Here is a sample you can copy / paste and edit.
 
 # The application name (required)
 # It should be readable by a human.
-application-name = Your Application Name
+name = Your Application Name
 
-# The application qualifier (required)
-# It can be a version number, a build ID, whatever.
-# It should be readable by a human.
-application-qualifier = snapshot
+# The application version (required)
+# It must follow this convention:
+#
+# <major>.<minor>.<patch>.<qualifier>
+# or
+# <major>.<minor>.<patch>-<qualifier>
+#
+# Major, minor and patch must be numbers.
+# Qualifier can be any string.
+# The patch number and the qualifier are optional.
+version = snapshot
 
 # The application's description (optional)
-application-description = The description of \
+description = The description of \
 your application
+
+# Tags to describe the template (optional)
+tags = tag 1, tag 2, etc.
 
 # The DSL ID (optional)
 # For the moment, Roboconf only knows 1 DSL,
 # but it may support other standards or definitions later.
-application-dsl-id = roboconf-1.0
+dsl-id = roboconf-1.0
 
 # The main graph file (required)
 # A graph definition may contain several files. This property indicates
@@ -57,8 +67,8 @@ By using the [Roboconf Maven plug-in](maven-plugin.html), it is possible to inje
 Example:
 
 ```properties
-application-name = Tomcat 8 cluster
-application-qualifier = ${project.artifactId}-${project.version}
+name = Tomcat 8 cluster
+version = ${project.version}
 
 # Etc.
 ```

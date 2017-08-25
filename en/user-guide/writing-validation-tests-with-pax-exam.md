@@ -45,7 +45,7 @@ It imports the required dependencies.
 	<version>1.0-SNAPSHOT</version>
 	
 	<properties>
-		<roboconf.version>0.8</roboconf.version>
+		<roboconf.version>0.9</roboconf.version>
 		<pax.exam.version>4.7.0</pax.exam.version>
 		<pax.url.aether.version>2.4.1</pax.url.aether.version>
 	</properties>

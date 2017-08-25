@@ -54,6 +54,23 @@ sudo apt-get install roboconf-agent
 Snapshot packages are available on both Sonatype and Bintray.  
 On Bintray, use the **roboconf-debian-packages-unstable** repository instead of **roboconf-debian-packages**.
 
+```bash
+# If you do not have them installed...
+# Install https transport for APT and wget.
+apt-get install apt-transport-https wget
+
+# "jessie" is the Debian version we tested our package on (~ Ubuntu 14.04).
+echo "deb https://dl.bintray.com/v1/content/roboconf/roboconf-debian-packages-unstable jessie main" >> /etc/apt/sources.list
+
+# Add the SSH key.
+wget --quiet -O - "https://bintray.com/user/downloadSubjectPublicKey?username=bintray" | apt-key add -
+
+# Update the list of packages.
+apt-get update
+
+exit
+```
+
 You can also download them from 
 [our Maven snapshots repository](https://oss.sonatype.org/content/repositories/snapshots/net/roboconf/),
 which is hosted by Sonatype.  

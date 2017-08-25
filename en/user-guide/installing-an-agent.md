@@ -123,7 +123,7 @@ wrapper:install -n roboconf-agent
 logout
 
 # Install the service
-sudo ln -s /home/ubuntu/roboconf-karaf-dist-agent-0.8/bin/roboconf-agent-service /etc/init.d/
+sudo ln -s /home/ubuntu/roboconf-karaf-dist-agent-0.9/bin/roboconf-agent-service /etc/init.d/
 
 # Configure it to boot with the system
 sudo update-rc.d roboconf-agent-service defaults
@@ -168,7 +168,7 @@ Start your karaf and execute...
 
 ```properties
 # Add the feature URL
-feature:repo-add http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-feature-agent/0.8/roboconf-karaf-feature-agent-0.8-features.xml
+feature:repo-add http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-feature-agent/0.9/roboconf-karaf-feature-agent-0.9-features.xml
 
 # Install the feature 
 feature:install roboconf-agent

@@ -83,6 +83,76 @@ Then, you can verify your users are found...
 The client should prompt for the user password.  
 The password will be verified against the properties file.
 
-> Notice that you can configure this module to manage users and roles from the DM.  
+> Notice that you can configure this module to manage users and roles from the DM's CLI.  
 > You need to configure the properties back-end. Please, refer to 
 > [Karaf's web site](https://karaf.apache.org/manual/latest/#_available_realm_and_login_modules) for more details.
+
+
+## Encrypting Passwords
+
+If you do not want to let your passwords in clear, it is possible to encrypt them directly in Roboconf.  
+The following lines are borrowed from [Karaf's web site](https://karaf.apache.org/manual/latest/#_passwords_encryption).
+
+
+> By default, the passwords are stored in clear form in the **etc/users.properties** file.  
+> It is possible to enable encryption in the **etc/org.apache.karaf.jaas.cfg** configuration file:
+
+```properties
+#
+# Boolean enabling / disabling encrypted passwords
+#
+encryption.enabled = false
+
+#
+# Encryption Service name
+#   the default one is 'basic'
+#   a more powerful one named 'jasypt' is available
+#       when installing the encryption feature
+#
+encryption.name =
+
+#
+# Encryption prefix
+#
+encryption.prefix = {CRYPT}
+
+#
+# Encryption suffix
+#
+encryption.suffix = {CRYPT}
+
+#
+# Set the encryption algorithm to use in Karaf JAAS login module
+# Supported encryption algorithms follow:
+#   MD2
+#   MD5
+#   SHA-1
+#   SHA-256
+#   SHA-384
+#   SHA-512
+#
+encryption.algorithm = MD5
+
+#
+# Encoding of the encrypted password.
+# Can be:
+#   hexadecimal
+#   base64
+#
+encryption.encoding = hexadecimal
+```
+
+> If the encryption.enabled property is set to true, the password encryption is enabled.  
+> With encryption enabled, the password are encrypted at the first time an user logs in. 
+> The encrypted passwords are prefixed and suffixed with \{CRYPT\}. To re-encrypt the password, 
+> you can reset the password in clear (in **etc/users.properties** file), without the \{CRYPT\} prefix and suffix. 
+> Apache Karaf will detect that this password is in clear (because it’s not prefixed and suffixed with \{CRYPT\}) and encrypt it again.
+
+The **etc/org.apache.karaf.jaas.cfg** configuration file allows you to define advanced encryption behaviors.
+
+| Property | Description | Possible Values | Default Value |
+| -------- | ----------- | --------------- | ------------- |
+| encryption.prefix | Define the prefix to "flag" a password as encrypted. | - | \{CRYPT\} |
+| encryption.suffix | Define the suffix to "flag" a password as encrypted. | - | \{CRYPT\} |
+| encryption.algorithm | Define the algorithm to use for encryption (digest). | MD2, MD5, SHA-1, SHA-256, SHA-384, SHA-512 | MD5 |
+| encryption.encoding | Define the encoding of the encrypted password. | hexadecimal or base64 | hexadecimal |

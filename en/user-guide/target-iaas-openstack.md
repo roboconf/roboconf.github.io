@@ -20,9 +20,9 @@ roboconf:target openstack
 Or with the native Karaf commands:
 
 ```properties
-# Here in version 0.8
+# Here in version 0.9
 feature:install jclouds-for-roboconf
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.8
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.9
 ```
 
 The implementation can associate a public address to the created VM.  

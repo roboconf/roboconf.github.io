@@ -8,20 +8,18 @@ menus: [ "users", "download" ]
 
 Cette page liste les nouvelles fonctionnalités et améliorations apportées à Roboconf 0.8.
 
-<!-- FIXME: all the links should point to 0.8. --> 
-
 
 ## Securité
 
 Plusieurs travaux ont été menés concernant la sécurité.
 
-* Activer ou désactiver le support des « [CORS](../../en/user-guide/security-and-cors.html) » pour les clients REST.
-* Pouvoir spécifier [l'interface réseau](../../en/user-guide/security-and-agents.html) utilisée par les agents Roboconf.
+* Activer ou désactiver le support des « [CORS](../../en/user-guide-0.8/security-and-cors.html) » pour les clients REST.
+* Pouvoir spécifier [l'interface réseau](../../en/user-guide-0.8/security-and-agents.html) utilisée par les agents Roboconf.
 * Authentifier les utilisateurs en ligne de commande depuis diverses soruces
-([fichiers de propriétés](../../en/user-guide/security-and-authentication-with-properties-files.html),
-[annuaire LDAP](../../en/user-guide/security-and-authentication-with-a-ldap-server.html),
-[base de données](../../en/user-guide/security-and-authentication-with-a-database.html)).
-* [Configurer la console web en HTTPS](../../en/user-guide/security-and-https-console.html).
+([fichiers de propriétés](../../en/user-guide-0.8/security-and-authentication-with-properties-files.html),
+[annuaire LDAP](../../en/user-guide-0.8/security-and-authentication-with-a-ldap-server.html),
+[base de données](../../en/user-guide-0.8/security-and-authentication-with-a-database.html)).
+* [Configurer la console web en HTTPS](../../en/user-guide-0.8/security-and-https-console.html).
 
 <img src="/resources/img/nn-0.8-web-console-in-https.png" alt="Console web en HTTPS" class="gs" />
 
@@ -33,11 +31,11 @@ D'autres chantiers sont prévus sur la sécurité pour la prochaine version.
 ## Nouvelles Topologies de Déploiement
 
 De nouvelles topologies de déploiement sont désormais possibles avec Roboconf.  
-La notion de [domaines Roboconf](../../en/user-guide/roboconf-domains.html) en constitue l'un des ressorts.
+La notion de [domaines Roboconf](../../en/user-guide-0.8/roboconf-domains.html) en constitue l'un des ressorts.
 
 <img src="/resources/img/nn-0.8-fr-roboconf-domains--same-messaging.png" alt="Installation avec plusieurs DMs" class="gs" />
 
-Vous pouvez vous reporter sur cette [page](../../en/user-guide/roboconf-domains.html) pour de plus amples détails.
+Vous pouvez vous reporter sur cette [page](../../en/user-guide-0.8/roboconf-domains.html) pour de plus amples détails.
 <br />
 <div><hr class="darker" /></div>
 
@@ -48,7 +46,7 @@ La console web d'administration peut désormais être affichée en plusieurs lan
 
 <img src="/resources/img/nn-0.8-i18n.png" alt="Internationalisation de la console web" class="gs" />
 
-La langue utilisée peut être définie par les administrateurs dans [les préférences du DM](../../en/user-guide/roboconf-preferences.html).
+La langue utilisée peut être définie par les administrateurs dans [les préférences du DM](../../en/user-guide-0.8/roboconf-preferences.html).
 
 ```properties
 # The user language (e.g. for the web console).

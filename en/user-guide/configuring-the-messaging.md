@@ -14,8 +14,8 @@ And each one has its own configuration. Generally, messaging configurations shou
 that begin with **net.roboconf.messaging**.
 
 > Configuration parameters can be changed at runtime, without rebooting.  
-> Besides, as a reminder, on the agent, you do NOT have to configure the messaging if its **target-id** property
-> was set to one of the *iaas-...* values.
+> As a reminder, on the agent, you do NOT have to configure the messaging if its **parameters** property
+> was set to one of the *@iaas-...* values.
 
 Here is a short overview of all the messaging implementations.
 
@@ -24,8 +24,6 @@ Here is a short overview of all the messaging implementations.
 
 HTTP is a messaging implementation of the Roboconf messaging API.  
 It is associated with the messaging-type **http** (to use in the DM and agent's configuration files).
-
-> It is the default messaging type for the DM and agents.
 
 It was created to simplify the installation of Roboconf for new beginners.  
 With this messaging, the DM must be available on a public location. With this implementation, agents will connect to the DM
@@ -67,7 +65,19 @@ Here is a description of the various parameters.
 | message-server-username | The user name for the messaging server. | Left blank is interpreted as "guest". | yes |
 | message-server-password | The password for the messaging server. | Left blank is interpreted as "guest". | yes |
 
-All these properties are prefixed with **net.roboconf.messaging.rabbitmq.**.
+All these properties are prefixed with **net.roboconf.messaging.rabbitmq.**.  
+There are also properties related to the SSL configuration for RabbitMQ. These properties are documented [here](security-and-rabbitmq-over-ssl.html).
+
+
+## Idle
+
+This is a messaging implementation that does nothing.  
+It prevents configuration errors from a fresh DM or agent distribution.
+
+> It is the default messaging type for the DM and agents.  
+> **It has to be changed** in the DM's configuration (generally, agents retrieve their configuration from the DM).
+
+It is associated with the **idle** messaging type.
 
 
 ## In-Memory

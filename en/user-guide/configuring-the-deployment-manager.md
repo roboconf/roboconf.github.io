@@ -10,6 +10,9 @@ Once the Deployment Manager (DM) has been installed, it needs to be configured.
 The DM comes with a default configuration that needs to be updated. Even if the configuration is
 wrong, the DM will keep on running (in a degraded mode).
 
+> By default, the messaging is set to **idle**.  
+> You need to change it to use a real messaging, such as HTTP or RabbitMQ.
+
 The configuration is persisted by the OSGi container.  
 It is restored upon restart.
 
@@ -110,8 +113,8 @@ desired targets.
 cd bin
 ./karaf
 
-# Install the bundles you want (here in version 0.8)
-bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.8
+# Install the bundles you want (here in version 0.9)
+bundle:install --start mvn:net.roboconf/roboconf-target-iaas-openstack/0.9
 ```
 
 You can also use a specific Karaf command (**roboconf:target**) that will install predefined target handlers into the DM.  
