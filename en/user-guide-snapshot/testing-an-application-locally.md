@@ -99,10 +99,6 @@ the **172.17.0.1** IP address (172.17.42.1 in former Docker versions). So, if yo
 See [this page](http://docs.docker.com/engine/userguide/networking/) for more details about Docker network
 configuration.
 
-**Notice 1:** if you have several root/scoped instanced in your application,
-you may prefer to deploy them one by one instead of &laquo; deploying and starting &raquo; them all.
-That's because every agent executes recipes independently of the others. An agent execute ITS recipes
-sequentially. But an agent is not aware of others are doing at the moment.
-
-**Notice 2:** if you deployed instances with in-memory agents, and that you restart the DM, recipes
-will not be executed anymore after. There is [a bug issue](https://github.com/roboconf/roboconf-platform/issues/519) about this.
+**Notice:** when executing real recipes with in-memory agents, recipes are executed sequentially.  
+Usually, agents are located on different machines and thus run concurrently. When in memory, there
+a super agent that manages them all to orchestrate the recipes executions.

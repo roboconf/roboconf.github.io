@@ -38,6 +38,22 @@ handler = embedded
 id = a unique identifier
 name = 
 description = 
+
+# Options if remote machines should be used and configured by SSH.
+
+# A list/pool of IP addresses
+#embedded.ip = 
+
+# The SSH key file
+# (~/.ssh/id_rsa and ~/.ssh/id_dsa are used by default).
+#scp.keyfile =
+
+# The user name
+#scp.user = 
+
+# The directory that contains the agent''s configuration
+# (default is "/etc/roboconf-agent").
+#scp.agent.configdir = 
 ```
 
 Here is a complete description of the parameters for Embedded.

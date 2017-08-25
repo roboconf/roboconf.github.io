@@ -59,7 +59,7 @@ description =
 # Force an IP address for the in-memory agent.
 #in-memory.ip-address-of-the-agent = 
 
-# Write user data for an agent.
+# Write user data for an agent (default is false).
 #in-memory.write-user-data = 
 ```
 

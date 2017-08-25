@@ -25,8 +25,6 @@ Here is a short overview of all the messaging implementations.
 HTTP is a messaging implementation of the Roboconf messaging API.  
 It is associated with the messaging-type **http** (to use in the DM and agent's configuration files).
 
-> It is the default messaging type for the DM and agents.
-
 It was created to simplify the installation of Roboconf for new beginners.  
 With this messaging, the DM must be available on a public location. With this implementation, agents will connect to the DM
 with web-sockets. This bi-directional channel will be used to exchange messages. Exchanges between agents go through the DM.
@@ -69,6 +67,17 @@ Here is a description of the various parameters.
 
 All these properties are prefixed with **net.roboconf.messaging.rabbitmq.**.  
 There are also properties related to the SSL configuration for RabbitMQ. These properties are documented [here](security-and-rabbitmq-over-ssl.html).
+
+
+## Idle
+
+This is a messaging implementation that does nothing.  
+It prevents configuration errors from a fresh DM or agent distribution.
+
+> It is the default messaging type for the DM and agents.  
+> **It has to be changed** in the DM's configuration (generally, agents retrieve their configuration from the DM).
+
+It is associated with the **idle** messaging type.
 
 
 ## In-Memory
