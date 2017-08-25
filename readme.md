@@ -5,7 +5,7 @@
 [![Web site](https://img.shields.io/badge/website-roboconf.net-b23e4b.svg)](http://roboconf.net)
 
 This repository contains the sources for Roboconf's web site.  
-On every commit, a [routine](http://jekyllrb.com/) is executed. It generates static HTML files and host 
+On every commit, a [routine](http://jekyllrb.com/) is executed. It generates static HTML files and hosts 
 them on [GitHub pages](https://pages.github.com/).
 
 <img src="http://roboconf.net/resources/img/readme_website.png" alt="Roboconf's web site overview" />
