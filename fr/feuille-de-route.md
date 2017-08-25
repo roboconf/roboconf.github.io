@@ -9,7 +9,7 @@ menus: [ "project", "roadmap" ]
 La roadmap pour les prochains mois couvre plusieurs aspects.
 
 
-* **Pour Novembre 2017**
+* **Pour Décembre 2017**
 
 	* Gérer la migration d'applications (déploiement continu).
 	* Scinder les cibles de déploiements en profils et candidats.
@@ -37,4 +37,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Etudier le support de TOSCA.
 
 
-Roboconf 0.10 devrait être disponible en novembre 2017.
+Roboconf 0.10 devrait être disponible en décembre 2017.
