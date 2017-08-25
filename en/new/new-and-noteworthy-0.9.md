@@ -75,7 +75,7 @@ This can be used, as an example, with Elastic Search and Kibana dashboards.
 ## Commands History
 
 Roboconf commands can be executed on-demand, through the REST API, or automatically,
-be it by the autonomic or by the scheduler. Commands executions are not traced in a history,
+be it by the autonomic or by the scheduler. Commands executions are now traced in a history,
 giving details about the execution's result, what triggered the execution, when, etc.
 
 The history is global...
@@ -92,8 +92,8 @@ The history is global...
 The Docker target is a way to use Docker containers as a substitute for VMs.  
 It primarily serves for test purpose.
 
-This target was redesigned to rely on the official Docker images for Robocconf. All the image
-generation was replaced. Users can now provide a dockerfile that should extend the official agent image.
+This target was redesigned to rely on the official Docker images for Robocconf. The image
+generation process was replaced. Users can now provide a dockerfile that should extend the official agent image.
 
 <img src="/resources/img/nn-0.9-docker-target-v2.png" alt="Docker target was redesigned" class="gs" />
 
@@ -117,3 +117,4 @@ And many bugs were fixed too. Please, refer to the release notes for details.
 * [Platform](https://github.com/roboconf/roboconf-platform/issues?utf8=%E2%9C%93&q=milestone%3A0.9)
 * [Web Administration](https://github.com/roboconf/roboconf-web-administration/issues?utf8=%E2%9C%93&q=milestone%3A0.9)
 * [Eclipse](https://github.com/roboconf/roboconf-eclipse/issues?q=milestone%3A0.9)
+* [Dockerfile](https://github.com/roboconf/roboconf-dockerfile/issues?q=milestone%3A0.9)
