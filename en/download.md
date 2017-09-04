@@ -16,20 +16,20 @@ menus: [ "users", "download" ]
 		<th>Links</th>
 	</tr>
 	
-	<!-- Version 0.9 -->
+	<!-- Version 0.9.1 -->
 	<tr>
 		<td>
-			0.9
+			0.9.1
 		</td>
-		<td>August 25<sup>th</sup>, 2017</td>
+		<td>August 30<sup>th</sup>, 2017</td>
 		<td>
 			Deployment Manager: 
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.9/roboconf-karaf-dist-dm-0.9.tar.gz">Tar.gz</a>
-			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.9/roboconf-karaf-dist-dm-0.9.zip">Zip</a> (~ 36 MB)
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.9.1/roboconf-karaf-dist-dm-0.9.1.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.9.1/roboconf-karaf-dist-dm-0.9.1.zip">Zip</a> (~ 39 MB)
 			<br />
 			Agent: 
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.9/roboconf-karaf-dist-agent-0.9.tar.gz">Tar.gz</a>
-			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.9/roboconf-karaf-dist-agent-0.9.zip">Zip</a> (~ 26 MB)
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.9.1/roboconf-karaf-dist-agent-0.9.1.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.9.1/roboconf-karaf-dist-agent-0.9.1.zip">Zip</a> (~ 26 MB)
 
 			<br /><br />
 			Eclipse <a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.9/">update site</a>
@@ -46,7 +46,7 @@ menus: [ "users", "download" ]
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Issues: 
 			
-			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.9">Platform</a>
+			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.9.1">Platform</a>
 			-
 			<a href="https://github.com/roboconf/roboconf-web-administration/issues?q=milestone%3A0.9">Web administration</a>
 			-

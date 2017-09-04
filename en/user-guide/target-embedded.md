@@ -46,14 +46,25 @@ description =
 
 # The SSH key file
 # (~/.ssh/id_rsa and ~/.ssh/id_dsa are used by default).
-#scp.keyfile =
+#scp.keyfile = 
 
-# The user name
-#scp.user = 
+# The file that lists known hosts
+# (~/.ssh/known_hosts by default).
+#scp.known.hosts.file = ~/.ssh/known_hosts
+
+# The user name (ubuntu by default)
+#scp.user = ubuntu
+
+# Disable hosts validation.
+#scp.disable.host.validation = false
+
+# Specify fingerprint for hosts validation.
+#hostkey.host1 = 
+#hostkey.host2 = 
 
 # The directory that contains the agent''s configuration
 # (default is "/etc/roboconf-agent").
-#scp.agent.configdir = 
+#scp.agent.configdir = /etc/roboconf-agent
 ```
 
 Here is a complete description of the parameters for Embedded.
@@ -66,7 +77,10 @@ Here is a complete description of the parameters for Embedded.
 | description | A description of the target. | - | no |
 | embedded.ip | A list of comma-separated IP addresses, that refer to hosts with Roboconf agents installed (an IP will be automatically selected when needed, and user-data transferred there using SCP). | - | no |
 | scp.user | A SCP user name, to transfer user-data to a remote host referenced in the IP list (see embedded.ip). | ubuntu | no |
-| scp.keyfile | A SCP key file (.pem or so), to transfer user-data to a remote host referenced in the IP list (see embedded.ip): when no key file is specified, ~/.ssh/id_rsa and ~/.ssh/id_dsa are used. | - | no |
+| scp.keyfile | A SCP key file (.pem or so), to transfer user-data to a remote host referenced in the IP list (see the **embedded.ip** section). | ~/.ssh/id_rsa and ~/.ssh/id_dsa | no |
+| scp.known.hosts.file | A file that lists known hosts. | ~/.ssh/known_hosts | no |
+| scp.disable.host.validation | True to disable hosts validation (e.g. known hosts and unknown hosts will be accepted and trusted without verification). | false | no |
+| hostkey.&lt;host&gt; | A template property to specify the fingerprint for a given host. This is an alternative to known hosts. See an example below. | - | no |
 | scp.agent.configdir | The directory that contains agent configuration on the remote host. | /etc/roboconf-agent | no |
 
 <br /><br />
@@ -103,4 +117,31 @@ chmod 744 net.roboconf.agent.configuration.cfg
 touch roboconf-agent-parameters.properties
 chown ubuntu roboconf-agent-parameters.properties
 chmod 744 roboconf-agent-parameters.properties
+```
+
+
+## Host Verification
+
+When a SSH connection is established to configure a remote machine (see the **embedded.ip** section),
+it needs to verify the machine is what it pretends to be.
+
+There are three possible strategies:
+
+* Indicate the path of a **known_hosts** file (**scp.known.hosts.file** property).
+* Disable host verification (not safe, but possible - **scp.disable.host.validation** property).
+* Eventually, you can specify, for each IP address or host name, the expected fingerprint (properties prefixed with **hostkey.**).
+
+The following snippet shows how host verification can be done with hosts finger prints directly in the target properties.
+
+```properties
+# ...
+
+# A list/pool of IP addresses
+embedded.ip = host1, host2
+
+# ...
+
+# Specify fingerprints for hosts validation.
+hostkey.host1 = fe:0a:4b:7b:77:67:0e:63:b0:0b:a2:3b:a1:73:38:64
+hostkey.host2 = 04:0a:1b:7b:7b:cc:0a:61:b0:0b:a2:55:a2:43:98:61
 ```

@@ -16,23 +16,23 @@ menus: [ "users", "download" ]
 		<th>Liens</th>
 	</tr>
 	
-	<!-- Version 0.9 -->
+	<!-- Version 0.9.1 -->
 	<tr>
 		<td>0.9</td>
-		<td>25 Août 2017</td>
+		<td>30 Août 2017</td>
 		<td>
 			Deployment Manager: 
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.9/roboconf-karaf-dist-dm-0.9.tar.gz">Tar.gz</a>
-			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.9/roboconf-karaf-dist-dm-0.9.zip">Zip</a> (~ 36 MB)
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.9.1/roboconf-karaf-dist-dm-0.9.1.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.9.1/roboconf-karaf-dist-dm-0.9.1.zip">Zip</a> (~ 39 MB)
 			<br />
 			Agent: 
-			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.9/roboconf-karaf-dist-agent-0.9.tar.gz">Tar.gz</a>
-			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.9/roboconf-karaf-dist-agent-0.9.zip">Zip</a> (~ 26 MB)
+			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.9.1/roboconf-karaf-dist-agent-0.9.1.tar.gz">Tar.gz</a>
+			- <a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-agent/0.9.1/roboconf-karaf-dist-agent-0.9.1.zip">Zip</a> (~ 26 MB)
 
 			<br /><br />
 			<a href="https://dl.bintray.com/roboconf/roboconf-eclipse/0.9/">Site de mise à jour</a> pour Eclipse
 			<br />
-			(Testé avec Eclipse Mars et Neon)
+			(Testé avec Eclipse Photon)
 		</td>
 		<td>
 			<span class="octicon octicon-telescope"></span>
@@ -44,7 +44,7 @@ menus: [ "users", "download" ]
 			<br /><br />
 			<span class="octicon octicon-mark-github"></span> Tickets: 
 			
-			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.9">Plate-forme</a>
+			<a href="https://github.com/roboconf/roboconf-platform/issues?q=milestone%3A0.9.1">Plate-forme</a>
 			-
 			<a href="https://github.com/roboconf/roboconf-web-administration/issues?q=milestone%3A0.9">Administration web</a>
 			-

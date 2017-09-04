@@ -2,7 +2,7 @@
 title: "Tutoriel - Gestion de Apache Storm avec Docker - 5/5"
 layout: page
 cat: "ug-last"
-id: "tutoriel-apache-storm-et-docker-6"
+id: "tutorial-apache-storm-with-docker-6"
 menus: [ "users", "user-guide" ]
 ---
 
