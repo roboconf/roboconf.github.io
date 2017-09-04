@@ -186,3 +186,30 @@ $( window ).ready( function() {
   formatRoboconfCommandsSnippets();
   formatRoboconfRulesSnippets();
 });
+
+/**
+ * Displays the slogan extension as a periodically-updated text.
+ */
+function displaySloganExtension(vindex) {
+  
+  var ext = $( '#slogan-ext' );
+  if (ext) {
+    
+    // Fix the text's position
+    ext.css({position: 'absolute'});
+    
+    // Show the separator
+    $( '#slogan-sep' ).css({display: 'inline'});
+    
+    // Update the text
+    var values = ext.data('r-values');
+    vindex = !vindex ? 0 : vindex;
+    ext.text(values[vindex]);
+    
+    // Schedule the next update
+    var nextVindex = (vindex + 1) % values.length;
+    setTimeout( function() {
+      displaySloganExtension(nextVindex)
+    }, 1000);
+  }
+}

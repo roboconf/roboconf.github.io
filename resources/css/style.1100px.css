@@ -2,6 +2,10 @@
 	padding-bottom: 20px;
 }
 
+#slogan-wrapper {
+	display: inline;
+}
+
 .menu {
 	position: absolute;
 }

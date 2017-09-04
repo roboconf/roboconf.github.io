@@ -34,6 +34,19 @@ hr.darker {
 
 /* Index */
 
+#slogan-wrapper {
+	display: none;
+}
+
+#slogan-sep {
+	display: none;
+	white-space: pre;
+}
+
+#slogan-ext {
+	color: #b03e4d;
+}
+
 #top-logo {
 	float: left;
 }

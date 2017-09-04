@@ -9,7 +9,8 @@
 	<meta name="description" content="{{ page.description }}" />
   
   	<link type="text/css" rel="stylesheet" media="all" href="/resources/css/style.css" />
-	<link type="text/css" rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/octicons/3.2.0/octicons.css" />
+  	<link type="text/css" rel="stylesheet" media="all and (min-width: 1200px)" href="/resources/css/style.1100px.css" />
+  	<link type="text/css" rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/octicons/3.2.0/octicons.css" />
 	<link type="text/css" rel="stylesheet" media="all" href="/resources/css/bootstrap.min.css" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 
@@ -36,6 +37,12 @@
 	<div id="footer">
 		Copyright &copy; 2013-{{ site.time | date: '%Y' }}, Linagora
 	</div>
+	
+	<script>
+	$( window ).ready( function() {
+	  displaySloganExtension();
+	});
+	</script>
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

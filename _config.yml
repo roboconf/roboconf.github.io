@@ -60,6 +60,7 @@ locales:
     s-menu-graphics: Graphics
     s-menu-links: Links
     s-menu-dev-guide: Developer Guide
+    sep: ": "
 
   fr:
     icon: fr.png
@@ -84,6 +85,7 @@ locales:
     s-menu-graphics: Ressources Graphiques
     s-menu-links: Liens
     s-menu-dev-guide: Guide Développeur
+    sep: " : "
 
 # Note that user and developer guides data have been externalized under "_data".
   
