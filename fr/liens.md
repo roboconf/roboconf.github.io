@@ -34,6 +34,7 @@ menus: [ "users", "links" ]
 ## Présentations
 
 * [Présentations réutilisables](presentations-reutilisables.html)
+* [Vidéos](videos.html)
 
 ## Projets Liés
 

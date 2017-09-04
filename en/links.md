@@ -34,6 +34,7 @@ menus: [ "users", "links" ]
 ## Slides and Presentations
 
 * [Reusable slides](reusable-slides.html)
+* [Videos](videos.html)
 
 ## Related Projects
 

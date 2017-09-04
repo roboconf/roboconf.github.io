@@ -56,6 +56,7 @@ Slides can help to understand the project and its uses cases.
 * Roboconf is mentioned in [the slides](http://lig-membres.imag.fr/donsez/pub/publi/cal2014-keynote.pdf).
 * Here is the [event's page](http://cal2014.enseeiht.fr/programme.html).
 
+
 ## &laquo; Eclipse IoT 2014 &raquo;
 
 * February 19<sup>th</sup>, 2014

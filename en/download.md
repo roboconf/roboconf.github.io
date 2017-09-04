@@ -21,7 +21,7 @@ menus: [ "users", "download" ]
 		<td>
 			0.9.1
 		</td>
-		<td>August 30<sup>th</sup>, 2017</td>
+		<td>September 4<sup>th</sup>, 2017</td>
 		<td>
 			Deployment Manager: 
 			<a href="http://repo1.maven.org/maven2/net/roboconf/roboconf-karaf-dist-dm/0.9.1/roboconf-karaf-dist-dm-0.9.1.tar.gz">Tar.gz</a>

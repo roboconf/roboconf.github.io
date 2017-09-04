@@ -5,6 +5,10 @@ events:
   en: events
   fr: evenements
 
+videos:
+  en: videos
+  fr: videos
+
 projects:
   en: projects
   fr: projets
