@@ -83,12 +83,13 @@ CheckStyle is also in charge of checking license headers in Java and XML files.
 They must contain the headers for the Apache license. The copyright years are also checked.
 
 
-## FindBugs
+## SpotBugs
 
-There is no default configuration for [FindBugs](http://findbugs.sourceforge.net/) in Roboconf's **pom.xml**.  
+[SpotBugs](https://spotbugs.github.io/) is the successor of [FindBugs](http://findbugs.sourceforge.net/).  
+There is no default configuration for SpotBug in Roboconf's **pom.xml**.  
 However, it is a good practice for developers to run this tool locally from time to time.
 
-Using it with your IDE (such as Eclipse) makes it quite easy to use.
+Using it with your IDE (such as Eclipse) makes it quite easy to use
 
 
 ## Check Code Coverage
