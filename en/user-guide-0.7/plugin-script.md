@@ -139,10 +139,11 @@ So, the naming convention for imports is < componentName >\_< index >\_< exportN
 Here is an example of how such variables can be used (in bash).
 
 ```bash
-for (( c=0; c<${tomcat_size}; c++ ))
+#!/bin/bash
+for c in `seq 0 ${tomcat_size}`;
 do
  IP_ADDRESS=tomcat_${c}_ip
- echo $IP_ADDRESS
+ echo ${!IP_ADDRESS}
 done
 ```
 
