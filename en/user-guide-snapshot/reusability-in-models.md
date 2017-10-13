@@ -179,6 +179,110 @@ lots of integration here and there.
 
 An import thing to highlight is that remote imports are resolved and copied in the application
 **at build time**. So, a packaged application contains all the definitions and the recipes it needs.
-
 This guarantees that if you release your Roboconf configuration, you will be able to take it in 10 years
 and it will still be working. No matter if the repositories of remote imports disappeared.
+
+Here is a sample POM for a reusable recipe.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project 
+		xmlns="http://maven.apache.org/POM/4.0.0" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>net.roboconf.recipes</groupId>
+	<artifactId>cassandra-cluster</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>roboconf-app</packaging>
+
+	<name>Roboconf Recipe :: Cassandra Cluster</name>
+	<description>A Dockerized Cassandra cluster for Roboconf applications</description>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<roboconf.version>%v_SNAP%</roboconf.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>net.roboconf</groupId>
+				<artifactId>roboconf-maven-plugin</artifactId>
+				<version>${roboconf.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+
+					<recipe>true</recipe>
+					<official>true</official>
+					<renderers>
+						<renderer>html</renderer>
+						<renderer>markdown</renderer>
+					</renderers>
+					<locales>
+						<locale>fr_FR</locale>
+						<locale>en_US</locale>
+					</locales>
+
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+```
+
+And here is an example of a project that consumes this recipe.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project 
+		xmlns="http://maven.apache.org/POM/4.0.0" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>net.roboconf.examples</groupId>
+	<artifactId>cassandra-cluster</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>roboconf-app</packaging>
+	<name>Roboconf Example :: Cassandra Cluster</name>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<roboconf.version>%v_SNAP%</roboconf.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>net.roboconf.recipes</groupId>
+			<artifactId>cassandra-cluster</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>zip</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>net.roboconf</groupId>
+				<artifactId>roboconf-maven-plugin</artifactId>
+				<version>${roboconf.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+```
+
+The graph in the consumer project will import the grapgh from the reusable recipe with...
+
+<pre><code class="language-roboconf">
+import cassandra-cluster/main.graph;
+</code></pre>
