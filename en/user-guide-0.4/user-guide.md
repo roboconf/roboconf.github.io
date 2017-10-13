@@ -61,7 +61,7 @@ menus: [ "users", "user-guide", "0.4" ]
 
 	<ul>
 	<li><a href="reusability-in-models.html">Reusability in Models</a></li>
-	<li><a href="reusable-recipes-index.html">Index of Reusable Recipes</a></li>
+	<li><a href="../reusable-recipes-index.html">Index of Reusable Recipes</a></li>
 	<li><a href="how-to-write-reusable-recipes.html">How to write reusable recipes?</a></li>
 	</ul>
 </div>

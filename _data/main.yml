@@ -65,6 +65,9 @@ support:
   en: support
   fr: support
 
+reusable-recipes-index:
+  en: reusable-recipes-index
+
 user-guide:
   en: user-guide/user-guide
   fr: guide-utilisateur/guide-utilisateur

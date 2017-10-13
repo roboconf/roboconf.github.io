@@ -31,9 +31,6 @@ maven-plugin:
 reusability-in-models:
   en: user-guide-0.5/reusability-in-models
 
-reusable-recipes-index:
-  en: user-guide-0.5/reusable-recipes-index
-
 how-to-write-reusable-recipes:
   en: user-guide-0.5/how-to-write-reusable-recipes
 

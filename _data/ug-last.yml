@@ -187,9 +187,6 @@ maven-plugin-for-targets:
 reusability-in-models:
   en: user-guide/reusability-in-models
 
-reusable-recipes-index:
-  en: user-guide/reusable-recipes-index
-
 how-to-write-reusable-recipes:
   en: user-guide/how-to-write-reusable-recipes
 
