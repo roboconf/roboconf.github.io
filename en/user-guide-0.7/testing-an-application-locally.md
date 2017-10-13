@@ -59,6 +59,16 @@ This scenario is a mix of the two previous ones.
 It relies on the [in-memory target handler](target-in-memory.html). It works in fact the same way than
 simulated deployments, except we ask the in-memory agents to execute the real recipes.
 
+> Notice you will need to install agent plug-ins in the DM so that recipes are correctly executed.
+
+```properties
+# Install the in-memory handler
+roboconf:target in-memory
+
+# Install the agent plug-ins you need. Example below.
+bundle:install mvn:net/roboconf/roboconf-plugin-script/0.7
+```
+
 Be careful, since all the in-memory agents are located on the same machine, all the installed software
 will be deployed on it too.
 
