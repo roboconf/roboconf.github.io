@@ -93,8 +93,8 @@ import dir1/dir2/file-name;
 Remote imports are only handled through the Roboconf Maven plug-in.
 
 <pre><code class="language-roboconf">
-import application-artifact-id/file-name;
-import application-artifact-id/dir1/dir2/file-name;
+import application-group-id/application-artifact-id/file-name;
+import application-group-id/application-artifact-id/dir1/dir2/file-name;
 </code></pre>
 
 
@@ -281,8 +281,8 @@ And here is an example of a project that consumes this recipe.
 </project>
 ```
 
-The graph in the consumer project will import the grapgh from the reusable recipe with...
+The graph in the consumer project will import the graph from the reusable recipe with...
 
 <pre><code class="language-roboconf">
-import cassandra-cluster/main.graph;
+import net.roboconf.examples/cassandra-cluster/main.graph;
 </code></pre>

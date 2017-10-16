@@ -133,7 +133,7 @@ instance of vm {
 
 ## Version 2
 
-Overall, the grapgh and the instances tree do not need to be modified.  
+Overall, the graph and the instances tree do not need to be modified.  
 Changes focus on the recipes. Docker links must be deleted. And dependency IP addresses must be
 injected when **storm_worker** and **storm_ui** components are started.
 
