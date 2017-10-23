@@ -120,14 +120,13 @@ However, it is good sometimes to run it locally to get feedback and warnings abo
 Sonar brings information some other tools, like FindBugs and CheckStyle, do not have.
 
 1. First, make sure you have [Sonar](http://www.sonarqube.org/downloads/) installed on your machine.  
-No need to install a database. You can use an in-memory database, such as H2.
-2. Start Sonar.  
+The easiest solution is Docker: `docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:lts-alpine`
 3. Go to Roboconf's directory and execute the following commands.
 
 ```tcl
-mvn clean install
-mvn sonar:sonar
+mvn clean
+mvn sonar:sonar -P sonar
 ```
 
-See [Sonar's web site](http://mojo.codehaus.org/sonar-maven-plugin/) for more information.  
+See [Sonar's web site](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Maven) for more information.  
 You can now check out results on **http://localhost:9000** 
