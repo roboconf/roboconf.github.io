@@ -6,7 +6,8 @@ id: "roadmap"
 menus: [ "project", "roadmap" ]
 ---
 
-The roadmap for the next months covers several aspects.
+Unfortunately, Roboconf is no more under active development.  
+The last roadmap included the following features.
 
 <!-- 
 	 &nbsp; <span class="glyphicon glyphicon-ok"></span>
@@ -14,7 +15,7 @@ The roadmap for the next months covers several aspects.
 -->
 
 
-* **For December 2017**
+* **Milestone 1**
 
 	* Support application migrations and roll-backs (continuous deployment).
 	* Split deployment targets: profiles and candidates.
@@ -42,4 +43,4 @@ The roadmap for the next months covers several aspects.
 	* Study TOSCA support.
 
 
-Roboconf 0.10 will be released in December 2017.
+Roboconf 0.10 was planned to be released in December 2017.

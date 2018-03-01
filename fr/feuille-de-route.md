@@ -6,10 +6,14 @@ id: "roadmap"
 menus: [ "project", "roadmap" ]
 ---
 
-La roadmap pour les prochains mois couvre plusieurs aspects.
+Malheureusement, le développement de nouvelles fonctionnalités en mis en attente,
+peut-être indéfiniement. Les versions actuelles fonctionnent, mais elles n'évoluent
+plus pour le moment.
+
+La feuille de route prévue comprenait les jalons suivants.
 
 
-* **Pour Décembre 2017**
+* **Jalon Court-Terme**
 
 	* Gérer la migration d'applications (déploiement continu).
 	* Scinder les cibles de déploiements en profils et candidats.
@@ -37,4 +41,4 @@ La roadmap pour les prochains mois couvre plusieurs aspects.
 	* Etudier le support de TOSCA.
 
 
-Roboconf 0.10 devrait être disponible en décembre 2017.
+Roboconf 0.10 était prévu à l'origine pour décembre 2017.
