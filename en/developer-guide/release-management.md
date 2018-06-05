@@ -13,9 +13,26 @@ We do not release a single Maven module, but a set of coherent projects. A Git r
 
 ## Prerequisites
 
+> It is assumed releases are performed from a secured machine.
+
 1. You must have an account at [Sonatype.org](https://oss.sonatype.org/).
 2. You must have been added as a manager on Roboconf @ Sonatype. See [this ticket](https://issues.sonatype.org/browse/OSSRH-11576).
 3. You must have a signing key, generated with PGP. See [these instructions](http://central.sonatype.org/pages/working-with-pgp-signatures.html).
+4. You must have [declared the server and your Sonatype credentials](http://maven.apache.org/plugins/maven-deploy-plugin/usage.html) in your `~/.m2/settings.xml` file.
+
+```xml
+<servers>
+	<server>
+		<id>sonatype-release-staging</id>
+		<!--
+		    You can also reference environment variables
+		    for your credentials (e.g. ${MY_USER_NAME})
+		-->
+		<username>your username @ Sonatype</username>
+		<password>your password @ Sonatype</password>
+	</server>
+</servers>
+```
 
 
 ## Release Scripts
