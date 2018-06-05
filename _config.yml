@@ -6,7 +6,7 @@ kramdown:
   hard_wrap: false
   syntax_highlighter: rouge
 
-gems: [ "jemoji" ]
+plugins: [ "jemoji" ]
 safe: true
 lsi: false
 
