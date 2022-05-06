@@ -3,7 +3,7 @@
   "info": {
     "description": "The REST API for Roboconf\u0027s Administration",
     "contact": {
-      "url": "http://roboconf.net",
+      "url": "https://roboconf.github.io",
       "name": "the Roboconf team"
     },
     "license": {

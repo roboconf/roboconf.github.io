@@ -31,7 +31,7 @@ plusieurs nœuds, à savoir :
 
 tutorial-storm-cluster.png
 
-![alt](http://roboconf.net/resources/img/tutorial-storm-cluster.png)
+![alt](https://roboconf.github.io/resources/img/tutorial-storm-cluster.png)
 
 Une topologie Storm est un type de calcul temps réel en streaming. Des *tuple* de données sont échangés entre les unités
 de calcul, appelées *spouts* et *bolts*:
@@ -39,12 +39,12 @@ de calcul, appelées *spouts* et *bolts*:
 - Les *spouts* sont les sources de tuples de données,
 - Les *bolts* des transformateurs de tuples de données, qui effectuent les calculs proprement dits.
 
-![alt](http://roboconf.net/resources/img/tutorial-storm-topology.png)
+![alt](https://roboconf.github.io/resources/img/tutorial-storm-topology.png)
 
 Les topologies Storm sont empaquetées dans un fichier JAR, qui est ensuite soumis au noeud Nimbus. Puis, le Nimbus 
 distribue les unités de calcul (*spouts* et *bolts*) sur le cluster de nœuds esclaves.
 
-![alt](http://roboconf.net/resources/img/tutorial-storm-submit.png)
+![alt](https://roboconf.github.io/resources/img/tutorial-storm-submit.png)
 
 Dans ce tutoriel nous allons utiliser Roboconf pour déployer un Cluster Storm sur plusieurs machines:
 
@@ -52,7 +52,7 @@ Dans ce tutoriel nous allons utiliser Roboconf pour déployer un Cluster Storm s
 - dans l'étape suivance nous déploierons les nœeuds Storm en local, dans des contenurs Docker
 - enfin nous passerons dans le Cloud, en deployant sur Amazon Web services.
 
-![alt](http://roboconf.net/resources/img/tutorial-storm-multivm.png)
+![alt](https://roboconf.github.io/resources/img/tutorial-storm-multivm.png)
 
 
 ### Présentation de Roboconf
@@ -185,7 +185,7 @@ A "storm_nimbus" component is an application to be deployed on a "storm_platform
 A "VM" is the virtual machine where other components can be deployed (we'll use Docker containers, but switching to a IaaS is quite easy - just adapt the "target.properties" configuration file with adequate credentials).
 ```
 
-![alt](http://roboconf.net/resources/img/tutorial-storm-model.png)
+![alt](https://roboconf.github.io/resources/img/tutorial-storm-model.png)
 
 ```
 Which is equivalent to this graph definition:
@@ -343,8 +343,8 @@ Blablabla…
 
 [storm]: http://storm.apache.org
 [zookeeper]: https://zookeeper.apache.org/
-[roboconf]: http://roboconf.net
-[roboconf-download]: http://roboconf.net/fr/telecharger.html
+[roboconf]: https://roboconf.github.io
+[roboconf-download]: https://roboconf.github.io/fr/telecharger.html
 [osgi]: http://www.osgi.org
 [karaf]: http://karaf.apache.org
 [roboconf-webadmin]: http://localhost:8181/roboconf-web-administration/

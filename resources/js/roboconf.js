@@ -32,7 +32,7 @@ function openSearchPage(e) {
     e.preventDefault();
     var query = $( '#search-bar' ).val();
     query = encodeURIComponent( query ).replace( /%20/g, '+' );
-    window.location = 'https://duckduckgo.com/?q=' + query + '+site%3Aroboconf.net&t=hs&ia=web', '_blank';
+    window.location = 'https://duckduckgo.com/?q=' + query + '+site%3Aroboconf.github.io&t=hs&ia=web', '_blank';
   }
 
   return false;
@@ -126,7 +126,7 @@ function formatRoboconfCommandsSnippets() {
       // Update the result
       result += before + after + '\n';
     });
-    
+
     // Highlight keywords (as global replacements - commands can include line breaks anywhere)
     result = result.replace( /(^deploy and start all)/igm, '<span class="keyword">$1</span>' );
     result = result.replace( /(^stop all)/igm, '<span class="keyword">$1</span>' );
@@ -191,21 +191,21 @@ $( window ).ready( function() {
  * Displays the slogan extension as a periodically-updated text.
  */
 function displaySloganExtension(vindex) {
-  
+
   var ext = $( '#slogan-ext' );
   if (ext) {
-    
+
     // Fix the text's position
     ext.css({position: 'absolute'});
-    
+
     // Show the separator
     $( '#slogan-sep' ).css({display: 'inline'});
-    
+
     // Update the text
     var values = ext.data('r-values');
     vindex = !vindex ? 0 : vindex;
     ext.text(values[vindex]);
-    
+
     // Schedule the next update
     var nextVindex = (vindex + 1) % values.length;
     setTimeout( function() {

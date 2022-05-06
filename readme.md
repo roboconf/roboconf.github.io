@@ -2,13 +2,13 @@
 [![Build Status](https://travis-ci.org/roboconf/roboconf.github.io.svg?branch=master)](https://travis-ci.org/roboconf/roboconf.github.io)
 [![License](https://img.shields.io/badge/license-Creative%20Commons-blue.svg)](http://creativecommons.org/licenses/by/3.0/)
 [![Join us on Gitter.im](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg)](https://gitter.im/roboconf/roboconf)
-[![Web site](https://img.shields.io/badge/website-roboconf.net-b23e4b.svg)](http://roboconf.net)
+[![Web site](https://img.shields.io/badge/website-roboconf.github.io-b23e4b.svg)](https://roboconf.github.io)
 
 This repository contains the sources for Roboconf's web site.  
 On every commit, a [routine](http://jekyllrb.com/) is executed. It generates static HTML files and hosts 
 them on [GitHub pages](https://pages.github.com/).
 
-<img src="http://roboconf.net/resources/img/readme_website.png" alt="Roboconf's web site overview" />
+<img src="https://roboconf.github.io/resources/img/readme_website.png" alt="Roboconf's web site overview" />
 
 
 ## Building the Web Site
